@@ -352,6 +352,20 @@
       opacity: 1;
       transform: translateX(-50%) translateY(0);
     }
+
+    @media (max-width: 600px) {
+      html, body { height: auto; overflow: auto; }
+      #app { height: auto; padding-bottom: 20px; }
+      .form-row { flex-direction: column; }
+      .form-group { width: 100%; }
+      .form-group input, .form-group select { width: 100% !important; }
+      select#procedimiento { width: 100%; }
+      .panels-grid { grid-template-columns: 1fr; flex: none; }
+      .panel { flex-direction: column; }
+      .panel-header { order: 2; border-bottom: none; border-top: 2px solid var(--accent); }
+      .panel.panel-green .panel-header { border-top-color: var(--green); border-bottom: none; }
+      .panel textarea { order: 1; min-height: 200px; }
+    }
   </style>
 </head>
 <body>
