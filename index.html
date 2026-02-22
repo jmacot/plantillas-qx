@@ -52,6 +52,24 @@
     }
 
     /* ── HEADER ── */
+    .back-home {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-family: 'SF Mono', 'Consolas', monospace;
+      font-size: 11px;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      text-decoration: none;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1.5px solid var(--border);
+      background: var(--surface);
+      transition: border-color 0.2s, color 0.2s;
+      flex-shrink: 0;
+    }
+    .back-home:hover { border-color: var(--accent); color: var(--accent); }
+
     .app-header {
       text-align: center;
       flex-shrink: 0;
@@ -336,6 +354,8 @@
   <div id="toast" class="toast-banner"></div>
 
   <!-- CABECERA -->
+  <a class="back-home" href="https://jmacot.github.io/" title="Volver al inicio">← Inicio</a>
+
   <div class="app-header">
     <h1>
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7.5 3.5L20 16l-3.5 3.5L3 6.5 7.5 3.5z"/><path d="M3 20l4-1 1-4"/><path d="M7 17l-4 3"/></svg>
