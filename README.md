@@ -1,11 +1,19 @@
-# Plantillas Quirúrgicas COT
+# 📋 Plantillas Quirurgicas COT
 
-Aplicación web de archivo único para generar **notas operatorias** y **tratamientos al alta** en Cirugía Ortopédica y Traumatología (COT). Diseñada para agilizar la documentación clínica en el día a día del quirófano.
+Aplicacion web de archivo unico para generar **notas operatorias** y **tratamientos al alta** en Cirugia Ortopedica y Traumatologia (COT). Disenada para agilizar la documentacion clinica en el dia a dia del quirofano.
 
 ![HTML5](https://img.shields.io/badge/HTML5-single--file-E34F26?logo=html5&logoColor=white)
 ![Plantillas](https://img.shields.io/badge/plantillas-60-1a3a5c)
-![Categorías](https://img.shields.io/badge/categorías-8-16a34a)
+![Categorias](https://img.shields.io/badge/categorías-8-16a34a)
 ![Sin dependencias](https://img.shields.io/badge/dependencias-ninguna-grey)
+
+---
+
+## Acceso directo
+
+[Abrir la aplicacion](https://jmacot.github.io/plantillas-qx/)
+
+No requiere instalacion. Funciona en cualquier navegador, incluyendo movil y tablet.
 
 ---
 
@@ -138,13 +146,16 @@ Aplicación web de archivo único para generar **notas operatorias** y **tratami
 ## Estructura del proyecto
 
 ```
-plantillas/
-  notas_operatorias.html   ← aplicación completa (archivo único)
-  README.md                ← este archivo
+plantillas-qx/
+├── index.html        ← aplicacion completa (archivo unico)
+├── icon.png          ← icono de la app
+├── .gitignore
+├── LICENSE           ← MIT
+└── README.md         ← este archivo
 ```
 
 ---
 
 ## Licencia
 
-Uso interno hospitalario. Contenido clínico basado en protocolos del servicio de COT.
+MIT — Uso interno hospitalario. Contenido clinico basado en protocolos del servicio de COT.
