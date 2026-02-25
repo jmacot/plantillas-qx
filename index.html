@@ -32,6 +32,26 @@
       --radius-sm: 8px;
       --radius: 16px;
       --radius-lg: 24px;
+      --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    [data-theme="dark"] {
+      --bg: #111827;
+      --surface: #1f2937;
+      --surface2: #283244;
+      --border: #374151;
+      --border-light: #4b5563;
+      --text: #f1f5f9;
+      --text-muted: #a8b8cc;
+      --text-light: #64748b;
+      --accent: #93c5fd;
+      --accent-hover: #bae0ff;
+      --accent-light: #1e3a5f;
+      --green: #4ade80;
+      --green-light: #14352a;
+      --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.15);
+      --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.2);
+      --shadow-hover: 0 20px 25px -5px rgb(0 0 0 / 0.3);
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -42,6 +62,7 @@
       font-family: 'Inter', Arial, sans-serif;
       background: var(--bg);
       color: var(--text);
+      -webkit-tap-highlight-color: transparent;
     }
 
     #app {
@@ -54,7 +75,17 @@
       margin: 0 auto;
     }
 
-    /* ── HEADER ── */
+    /* ── ANIMATIONS ── */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes textFlash {
+      0%, 100% { background-color: var(--surface2); }
+      50% { background-color: var(--accent-light); }
+    }
+
+    /* ── BACK HOME ── */
     .back-home {
       position: fixed;
       top: 10px;
@@ -76,45 +107,164 @@
       z-index: 100;
     }
     .back-home:hover { border-color: var(--accent); color: var(--accent); }
-    @media (max-width: 600px) {
-      .back-home { padding: 4px 8px; font-size: 10px; top: 6px; left: 6px; }
-    }
 
+    /* ── HEADER PREMIUM ── */
     .app-header {
-      text-align: center;
+      background: linear-gradient(135deg, #0f2240 0%, #1a3a5c 50%, #234e77 100%);
+      color: white;
+      padding: 36px 32px 28px;
+      border-radius: var(--radius-lg);
+      position: relative;
+      overflow: hidden;
       flex-shrink: 0;
+      box-shadow: 0 8px 32px rgba(15,34,64,0.25);
+      animation: fadeInUp 0.6s ease-out;
+    }
+    .app-header::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      right: -40px;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(14, 165, 233, 0.15) 0%, transparent 70%);
+      filter: blur(40px);
+      pointer-events: none;
+    }
+    .app-header::after {
+      content: '';
+      position: absolute;
+      bottom: -80px;
+      left: 15%;
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(139, 92, 246, 0.10) 0%, transparent 70%);
+      filter: blur(40px);
+      pointer-events: none;
+    }
+    [data-theme="dark"] .app-header {
+      background: linear-gradient(135deg, #0a1628 0%, #111827 50%, #1a2744 100%);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
     }
     .app-header h1 {
       font-family: 'Lora', serif;
       font-size: clamp(1.3rem, 3vw, 1.7rem);
       font-weight: 700;
-      color: var(--accent);
+      color: white;
       letter-spacing: -0.02em;
       display: inline-flex;
       align-items: center;
       gap: 10px;
+      position: relative;
+      z-index: 1;
     }
     .app-header h1 svg {
       width: 28px;
       height: 28px;
-      opacity: 0.7;
+      opacity: 0.85;
+    }
+    .app-header .subtitle {
+      font-size: 13px;
+      color: rgba(255,255,255,0.55);
+      font-weight: 300;
+      margin-top: 6px;
+      position: relative;
+      z-index: 1;
     }
 
-    /* ── CARD ── */
+    /* ── THEME TOGGLE ── */
+    .theme-toggle {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(255,255,255,0.12);
+      border: 1.5px solid rgba(255,255,255,0.2);
+      border-radius: 50%;
+      width: 38px;
+      height: 38px;
+      font-size: 1.15rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: border-color 0.2s, background 0.2s;
+      z-index: 2;
+      color: white;
+    }
+    .theme-toggle:hover {
+      border-color: rgba(255,255,255,0.5);
+      background: rgba(255,255,255,0.2);
+    }
+
+    /* ── CATEGORY PILLS ── */
+    .cat-nav {
+      flex-shrink: 0;
+      animation: fadeInUp 0.6s ease-out 0.05s both;
+    }
+    .cat-pills {
+      display: flex;
+      gap: 6px;
+      overflow-x: auto;
+      padding: 4px 0;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    .cat-pills::-webkit-scrollbar { display: none; }
+    .cat-pill {
+      flex-shrink: 0;
+      padding: 7px 16px;
+      border-radius: 999px;
+      border: 1.5px solid var(--border);
+      background: var(--surface);
+      font-family: 'Inter', Arial, sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: var(--transition);
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .cat-pill:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateY(-1px);
+    }
+    .cat-pill.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: white;
+      box-shadow: var(--shadow-sm);
+    }
+    [data-theme="dark"] .cat-pill.active {
+      background: var(--accent-light);
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+    .cat-pill .cat-count {
+      font-size: 10px;
+      opacity: 0.6;
+      font-weight: 400;
+    }
+
+    /* ── CARD / FORM ── */
     .card {
       background: var(--surface);
       border: 1px solid var(--border-light);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
-      padding: 16px 20px;
+      padding: 20px 24px;
       flex-shrink: 0;
+      animation: fadeInUp 0.6s ease-out 0.1s both;
     }
-
-    /* ── FORM ROW ── */
     .form-row {
       display: flex;
       gap: 16px;
-      align-items: center;
+      align-items: flex-end;
       flex-wrap: wrap;
     }
     .form-group {
@@ -133,8 +283,8 @@
     .form-group select {
       border: 1.5px solid var(--border);
       border-radius: 8px;
-      padding: 14px 18px;
-      font-size: 16px;
+      padding: 12px 16px;
+      font-size: 14px;
       font-family: 'Inter', Arial, sans-serif;
       color: var(--text);
       background: var(--surface);
@@ -146,8 +296,12 @@
       border-color: var(--accent);
       box-shadow: 0 0 0 3px rgba(26,58,92,0.10);
     }
+    [data-theme="dark"] .form-group input:focus,
+    [data-theme="dark"] .form-group select:focus {
+      box-shadow: 0 0 0 3px rgba(147,197,253,0.15);
+    }
 
-    /* ── SELECT (desplegable) ── */
+    /* ── SELECT ── */
     select#procedimiento {
       background: var(--accent);
       color: white;
@@ -155,57 +309,28 @@
       cursor: pointer;
       border-radius: 8px;
       transition: background 0.2s, box-shadow 0.2s;
+      padding-right: 32px;
     }
     select#procedimiento:hover {
       background: var(--accent-hover);
       box-shadow: var(--shadow-hover);
     }
-    select#procedimiento optgroup {
-      background: #0f2240;
-      color: #7db8f0;
-      font-weight: 800;
-      font-size: 0.85rem;
-      letter-spacing: 0.06em;
-      padding: 8px 0 4px;
-      border-top: 2px solid #334155;
+    select#procedimiento:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+    [data-theme="dark"] select#procedimiento {
+      background: var(--accent-light);
+      color: var(--accent);
+      border-color: var(--accent);
     }
     select#procedimiento option {
-      background: #1e293b;
-      color: #e2e8f0;
+      background: var(--surface);
+      color: var(--text);
       padding: 4px 16px;
     }
 
-    /* ── BOTONES ── */
-    .btn-primary {
-      background: var(--accent);
-      color: white;
-      border: none;
-      border-radius: 8px;
-      padding: 8px 24px;
-      font-size: 13px;
-      font-weight: 700;
-      cursor: pointer;
-      transition: all 0.2s;
-      font-family: 'Inter', Arial, sans-serif;
-    }
-    .btn-primary:hover { background: var(--accent-hover); box-shadow: var(--shadow-hover); transform: translateY(-1px); }
-    .btn-primary:active { transform: translateY(0); }
-
-    .btn-green {
-      background: var(--green);
-      color: white;
-      border: none;
-      border-radius: 8px;
-      padding: 8px 24px;
-      font-size: 13px;
-      font-weight: 700;
-      cursor: pointer;
-      transition: all 0.2s;
-      font-family: 'Inter', Arial, sans-serif;
-    }
-    .btn-green:hover { background: #15803d; transform: translateY(-1px); }
-    .btn-green:active { transform: translateY(0); }
-
+    /* ── BUTTONS ── */
     .btn-danger {
       background: transparent;
       color: #dc2626;
@@ -220,49 +345,72 @@
     }
     .btn-danger:hover { background: #dc2626; color: white; }
 
-    /* ── PANELES DE TEXTO ── */
+    .btn-copy {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: transparent;
+      border: 1.5px solid currentColor;
+      border-radius: 8px;
+      padding: 5px 14px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: 'Inter', Arial, sans-serif;
+    }
+    .btn-copy svg { width: 14px; height: 14px; }
+    .btn-copy:hover { transform: translateY(-1px); }
+    .btn-copy.blue { color: var(--accent); }
+    .btn-copy.blue:hover { background: var(--accent); color: white; }
+    .btn-copy.green { color: var(--green); }
+    .btn-copy.green:hover { background: var(--green); color: white; }
+
+    /* ── PANELS ── */
     .panels-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 14px;
       flex: 1;
       min-height: 0;
+      animation: fadeInUp 0.6s ease-out 0.15s both;
     }
-
     .panel {
       background: var(--surface);
-      border: 2px solid var(--accent);
+      border: 1px solid var(--border);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
       display: flex;
       flex-direction: column;
       overflow: hidden;
-      transition: box-shadow 0.3s;
+      transition: box-shadow 0.3s, transform 0.3s;
     }
     .panel:hover {
       box-shadow: var(--shadow-hover);
+      transform: translateY(-2px);
     }
-    .panel.panel-green {
-      border-color: var(--green);
-    }
-
     .panel-header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 10px 16px;
-      background: var(--accent-light);
-      border-bottom: 2px solid var(--accent);
+      padding: 12px 18px;
+      background: rgba(26,58,92,0.04);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(10px);
       flex-shrink: 0;
     }
     .panel.panel-green .panel-header {
-      background: var(--green-light);
-      border-bottom-color: var(--green);
+      background: rgba(22,163,74,0.04);
     }
-
+    [data-theme="dark"] .panel-header {
+      background: rgba(147,197,253,0.06);
+    }
+    [data-theme="dark"] .panel.panel-green .panel-header {
+      background: rgba(74,222,128,0.06);
+    }
     .panel-title {
       font-family: 'Lora', serif;
-      font-size: 1.05rem;
+      font-size: 1rem;
       font-weight: 700;
       color: var(--accent);
       letter-spacing: 0.02em;
@@ -270,31 +418,47 @@
       align-items: center;
       gap: 8px;
     }
-    .panel-title .icon {
-      font-size: 1.1rem;
+    .panel-title svg {
+      width: 18px;
+      height: 18px;
+      opacity: 0.75;
+      flex-shrink: 0;
     }
     .panel.panel-green .panel-title {
       color: var(--green);
     }
-
     .panel textarea {
       flex: 1;
       border: none;
       outline: none;
       background: var(--surface2);
-      padding: 12px 16px;
-      font-family: 'Courier New', monospace;
-      font-size: 0.92rem;
-      line-height: 1.6;
+      padding: 14px 18px;
+      font-family: 'SF Mono', 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+      font-size: 0.88rem;
+      line-height: 1.65;
       color: var(--text);
       resize: none;
       overflow-y: auto;
+      transition: background-color 0.3s;
     }
     .panel textarea::selection {
       background: rgba(26,58,92,0.15);
     }
+    [data-theme="dark"] .panel textarea::selection {
+      background: rgba(147,197,253,0.2);
+    }
+    .panel textarea.flash {
+      animation: textFlash 0.5s ease-out;
+    }
+    .panel textarea::-webkit-scrollbar { width: 6px; }
+    .panel textarea::-webkit-scrollbar-track { background: transparent; }
+    .panel textarea::-webkit-scrollbar-thumb {
+      background: var(--border);
+      border-radius: 3px;
+    }
+    .panel textarea::-webkit-scrollbar-thumb:hover { background: var(--text-light); }
 
-    /* ── TOOLTIP COPIAR ── */
+    /* ── COPY TOOLTIP ── */
     .copy-wrap { position: relative; }
     .copy-tooltip {
       position: absolute;
@@ -329,7 +493,7 @@
       letter-spacing: 0.03em;
     }
 
-    /* ── TOAST BANNER ── */
+    /* ── TOAST ── */
     .toast-banner {
       position: fixed;
       bottom: 24px;
@@ -356,15 +520,20 @@
       transform: translateX(-50%) translateY(0);
     }
 
+    /* ── RESPONSIVE ── */
     @media (max-width: 600px) {
       html, body { height: auto; overflow: auto; }
-      #app { height: auto; padding-bottom: 20px; }
+      #app { height: auto; padding: 10px 14px 20px; }
+      .app-header { padding: 28px 20px 22px; border-radius: var(--radius); }
+      .app-header::before, .app-header::after { display: none; }
+      .back-home { padding: 4px 8px; font-size: 10px; top: 6px; left: 6px; }
       .form-row { flex-direction: column; }
       .form-group { width: 100%; }
       .form-group input, .form-group select { width: 100% !important; }
       select#procedimiento { width: 100%; }
       .panels-grid { grid-template-columns: 1fr; flex: none; }
       .panel textarea { min-height: 200px; }
+      .theme-toggle { width: 34px; height: 34px; font-size: 1rem; top: 8px; right: 8px; }
     }
   </style>
 </head>
@@ -374,108 +543,42 @@
   <!-- TOAST -->
   <div id="toast" class="toast-banner"></div>
 
-  <!-- CABECERA -->
+  <!-- BACK HOME -->
   <a class="back-home" href="https://jmacot.github.io/" title="Volver al inicio">← Inicio</a>
 
+  <!-- HEADER PREMIUM -->
   <div class="app-header">
+    <button class="theme-toggle" id="btn-theme" title="Cambiar tema"></button>
     <h1>
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7.5 3.5L20 16l-3.5 3.5L3 6.5 7.5 3.5z"/><path d="M3 20l4-1 1-4"/><path d="M7 17l-4 3"/></svg>
       Plantillas Quirúrgicas COT
     </h1>
+    <p class="subtitle">Selecciona la categoría, intervención y genera la hoja operatoria y tratamiento al alta</p>
   </div>
+
+  <!-- CATEGORY PILLS -->
+  <nav class="cat-nav">
+    <div id="catPills" class="cat-pills"></div>
+  </nav>
 
   <!-- FORMULARIO -->
   <div class="card">
     <div class="form-row">
-      <div class="form-group">
+      <div class="form-group" style="flex:1">
         <label>Cirujano</label>
-        <input id="doctor" type="text" placeholder="Apellido cirujano" oninput="cargarPlantilla()" style="width:280px" />
-      </div>
-      <div class="form-group">
-        <label>Ayudante</label>
-        <input id="ayudante" type="text" placeholder="Apellido ayudante" oninput="cargarPlantilla()" style="width:280px" />
+        <input id="doctor" type="text" placeholder="Apellido cirujano" oninput="cargarPlantilla()" />
       </div>
       <div class="form-group" style="flex:1">
+        <label>Ayudante</label>
+        <input id="ayudante" type="text" placeholder="Apellido ayudante" oninput="cargarPlantilla()" />
+      </div>
+      <div class="form-group" style="flex:2">
         <label>Intervención</label>
-        <select id="procedimiento" onchange="cargarPlantilla()">
-          <option value="">— Seleccione un procedimiento —</option>
-          <optgroup label="━━━ TRAUMA ━━━">
-            <option value="canulados_cadera">Canulados cadera — tornillos canulados (Stryker)</option>
-            <option value="gamma3">Clavo Gamma3 — Fr pertrocantérea cadera (Stryker)</option>
-            <option value="ptc_exeter">PPC Exeter (Stryker)</option>
-            <option value="rafi_periprotesica">RAFI Fr periprotésica cadera — Placa NCB (Zimmer)</option>
-            <option value="rafi_supracondilea">RAFI Fr supracondílea fémur — Placa AXSOS (Stryker)</option>
-            <option value="rafi_rotula_cerclaje">RAFI Fr rótula — cerclaje obenque (agujas K + alambre)</option>
-            <option value="clavo_tibia_t2_stryker">Clavo T2 tibia — fresado (Stryker)</option>
-            <option value="rafi_tobillo">RAFI Tobillo — placa baja energía peroné distal (Stryker)</option>
-            <option value="aquiles">Sutura tendón Aquiles (mini-open, Ma-Griffith)</option>
-            <option value="rafi_edr_aculoc2">RAFI Fr distal radio — Placa Aculoc-2 (Acumed)</option>
-            <option value="rafi_humero_axsos">RAFI Húmero proximal/diafisario — Placa AxSOS (Stryker)</option>
-            <option value="rafi_clavicula">RAFI Clavícula — Placa Variax (Stryker)</option>
-            <option value="monteggia">Fr Monteggia / olécranon — Placa Peri-Loc (S&amp;N)</option>
-          </optgroup>
-            <optgroup label="━━━ CAR — ARTROSCOPIA RODILLA ━━━">
-            <option value="car_mosaicoplastia">CAR Mosaicoplastia</option>
-            <option value="car_fr_meseta">CAR + Fr meseta tibial</option>
-            <option value="car_reinsercion_espina">CAR Reinserción avulsión espina tibial LCA</option>
-            <option value="car_lrr_ficat_plicatura">CAR Ficat + plicatura ARI (Lanny Johnson)</option>
-            <option value="car_sher_plicatura">CAR SHER plicatura ARI + Ficat</option>
-            <option value="car_otv_adiccion">CAR + OTV adicción</option>
-            <option value="car_otv_sustraccion">CAR + OTV sustracción (Coventry)</option>
-            <option value="car_otv_varizante_femur">CAR + Osteotomía varizante fémur</option>
-            <option value="car_otv_tomofix">OTV placa Tomofix (sin CAR)</option>
-            <option value="car_meniscectomia">CAR Meniscectomía parcial</option>
-            <option value="car_sutura_meniscal">CAR Sutura meniscal</option>
-            <option value="car_artrolisis">CAR Artrolisis + movilización bajo anestesia</option>
-            <option value="car_diagnostica">CAR Diagnóstica</option>
-            <option value="car_cuerpo_libre">CAR Extracción cuerpo libre</option>
-            <option value="car_ficat">CAR Ficat</option>
-            <option value="car_toilette">CAR Toilette</option>
-            <option value="car_sinovectomia">CAR Sinovectomía total</option>
-          </optgroup>
-            <optgroup label="━━━ PRÓTESIS DE CADERA (PTC) ━━━">
-            <option value="ptc_summit">PTC Summit (DePuy)</option>
-            <option value="ptc_zimmer">PTC Zimmer (G7 + Taperloc)</option>
-          </optgroup>
-            <optgroup label="━━━ PRÓTESIS DE RODILLA ━━━">
-            <option value="ptr_triathlon">PTR Triathlon (Stryker)</option>            <option value="puc_pkr">PUC PKR (Stryker)</option>
-            <option value="rpuc">Revisión PUC (RPUC)</option>
-          </optgroup>
-            <optgroup label="━━━ LCA — Stryker ━━━">
-            <option value="lca_procinch">LCA ProCinch anatómico ST-RI</option>
-            <option value="lca_procinch_allinside">LCA ProCinch anatómico ALL-INSIDE</option>
-            <option value="lca_procinch_lemaire">LCA ProCinch + Lemaire</option>
-            <option value="lca_procinch_sutura">LCA ProCinch + sutura meniscal</option>
-            <option value="lca_procinch_reinsercion">LCA ProCinch + reinserción raíz meniscal posterior</option>          </optgroup>
-            <optgroup label="━━━ LCA — Otros / Revisión ━━━">
-            <option value="lca_allinside_arthrex">LCA ALL-INSIDE (Arthrex)</option>
-            <option value="lca_hth">LCA Hueso-Tendón-Hueso (HTH)</option>
-            <option value="lca_aum_am">LCA Aumentación AM</option>
-            <option value="lca_aum_pl">LCA Aumentación PL</option>
-            <option value="lca_rescate">LCA Rescate — revisión</option>
-            <option value="lca_rescate_hth_lemaire">LCA Rescate — HTH banco + Lemaire</option>
-          </optgroup>
-            <optgroup label="━━━ ARTROSCOPIA CADERA (CAC) ━━━">
-            <option value="cac_labrum">Reinserción labrum acetabular</option>
-          </optgroup>
-            <optgroup label="━━━ MIEMBRO SUPERIOR ━━━">
-            <option value="ms_stc">Síndrome del túnel carpiano (STC)</option>
-            <option value="ms_tcg">TCG Mano (quiste sinovial)</option>
-            <option value="ms_dedo_resorte">Dedo en resorte — apertura polea A1</option>
-            <option value="ms_dedo_resorte_tenolisis">Dedo en resorte — tenolisis</option>
-            <option value="ms_fedr_dvr">RAFI Fr distal radio — Placa DVR</option>
-            <option value="ms_fedr_acumed">RAFI Fr distal radio — Placa ACUMED</option>
-            <option value="ms_fr_radio">Fr radio diafisario — placa</option>
-            <option value="ms_fr_cubito_radio">Fr cúbito + radio — doble placa</option>
-            <option value="ms_fr_humero">Fr húmero diafisario — placa</option>
-            <option value="ms_fr_olecranon_placa">Fr olécranon — placa</option>
-            <option value="ms_fr_olecranon_cerclaje">Fr olécranon — cerclaje</option>
-            <option value="ms_seccion_tendon">Sección tendón flexor mano</option>
-            <option value="ms_clavo_humero">Clavo T2 húmero retrógrado</option>
-          </optgroup>
+        <select id="procedimiento" onchange="cargarPlantilla()" disabled>
+          <option value="">— Seleccione categoría primero —</option>
         </select>
       </div>
-      <div style="align-self:flex-end">
+      <div>
         <button onclick="limpiar()" class="btn-danger">Limpiar</button>
       </div>
     </div>
@@ -487,22 +590,34 @@
     <!-- Hoja Operatoria -->
     <div class="panel">
       <div class="panel-header">
-        <span class="panel-title"><span class="icon">📋</span> Hoja Operatoria</span>
+        <span class="panel-title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M9 12h6"/><path d="M9 16h6"/></svg>
+          Hoja Operatoria
+        </span>
         <div class="copy-wrap">
-          <button onclick="copiarTexto('hojaOperatoria')" class="btn-primary" style="padding:5px 16px; font-size:12px;">Copiar</button>
+          <button onclick="copiarTexto('hojaOperatoria')" class="btn-copy blue">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            Copiar
+          </button>
           <span class="copy-tooltip">✓ Copiado</span>
         </div>
       </div>
       <textarea id="hojaOperatoria"
-        placeholder="Seleccione un procedimiento y complete los datos del cirujano..."></textarea>
+        placeholder="Seleccione una categoría y procedimiento para generar la hoja operatoria..."></textarea>
     </div>
 
     <!-- Tratamiento al Alta -->
     <div class="panel panel-green">
       <div class="panel-header">
-        <span class="panel-title"><span class="icon">💊</span> Tratamiento al Alta</span>
+        <span class="panel-title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M12 5 9.04 7.96a2.17 2.17 0 0 0 0 3.08c.82.82 2.13.85 3 .07l2.07-1.9a2.82 2.82 0 0 1 3.79 0l2.96 2.66"/><path d="m18 15-2-2"/><path d="m15 18-2-2"/></svg>
+          Tratamiento al Alta
+        </span>
         <div class="copy-wrap">
-          <button onclick="copiarTexto('tratamientoAlta')" class="btn-green" style="padding:5px 16px; font-size:12px;">Copiar</button>
+          <button onclick="copiarTexto('tratamientoAlta')" class="btn-copy green">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            Copiar
+          </button>
           <span class="copy-tooltip">✓ Copiado</span>
         </div>
       </div>
@@ -514,12 +629,96 @@
 
   <!-- FOOTER -->
   <div class="app-footer">
-    <span>COT — Plantillas Quirúrgicas v2.0</span>
+    <span>COT — Plantillas Quirúrgicas v3.0</span>
   </div>
 
 </div>
 
   <script>
+  // ─────────────────────────────────────────────
+  //  CATEGORIAS Y PROCEDIMIENTOS
+  // ─────────────────────────────────────────────
+  const CATEGORIAS = [
+    { id: 'trauma', label: 'Trauma', procs: [
+      { value: 'canulados_cadera', label: 'Canulados cadera — tornillos canulados (Stryker)' },
+      { value: 'gamma3', label: 'Clavo Gamma3 — Fr pertrocantérea cadera (Stryker)' },
+      { value: 'ptc_exeter', label: 'PPC Exeter (Stryker)' },
+      { value: 'rafi_periprotesica', label: 'RAFI Fr periprotésica cadera — Placa NCB (Zimmer)' },
+      { value: 'rafi_supracondilea', label: 'RAFI Fr supracondílea fémur — Placa AXSOS (Stryker)' },
+      { value: 'rafi_rotula_cerclaje', label: 'RAFI Fr rótula — cerclaje obenque (agujas K + alambre)' },
+      { value: 'clavo_tibia_t2_stryker', label: 'Clavo T2 tibia — fresado (Stryker)' },
+      { value: 'rafi_tobillo', label: 'RAFI Tobillo — placa baja energía peroné distal (Stryker)' },
+      { value: 'aquiles', label: 'Sutura tendón Aquiles (mini-open, Ma-Griffith)' },
+      { value: 'rafi_edr_aculoc2', label: 'RAFI Fr distal radio — Placa Aculoc-2 (Acumed)' },
+      { value: 'rafi_humero_axsos', label: 'RAFI Húmero proximal/diafisario — Placa AxSOS (Stryker)' },
+      { value: 'rafi_clavicula', label: 'RAFI Clavícula — Placa Variax (Stryker)' },
+      { value: 'monteggia', label: 'Fr Monteggia / olécranon — Placa Peri-Loc (S&N)' },
+    ]},
+    { id: 'car', label: 'Artroscopia Rodilla', procs: [
+      { value: 'car_mosaicoplastia', label: 'CAR Mosaicoplastia' },
+      { value: 'car_fr_meseta', label: 'CAR + Fr meseta tibial' },
+      { value: 'car_reinsercion_espina', label: 'CAR Reinserción avulsión espina tibial LCA' },
+      { value: 'car_lrr_ficat_plicatura', label: 'CAR Ficat + plicatura ARI (Lanny Johnson)' },
+      { value: 'car_sher_plicatura', label: 'CAR SHER plicatura ARI + Ficat' },
+      { value: 'car_otv_adiccion', label: 'CAR + OTV adicción' },
+      { value: 'car_otv_sustraccion', label: 'CAR + OTV sustracción (Coventry)' },
+      { value: 'car_otv_varizante_femur', label: 'CAR + Osteotomía varizante fémur' },
+      { value: 'car_otv_tomofix', label: 'OTV placa Tomofix (sin CAR)' },
+      { value: 'car_meniscectomia', label: 'CAR Meniscectomía parcial' },
+      { value: 'car_sutura_meniscal', label: 'CAR Sutura meniscal' },
+      { value: 'car_artrolisis', label: 'CAR Artrolisis + movilización bajo anestesia' },
+      { value: 'car_diagnostica', label: 'CAR Diagnóstica' },
+      { value: 'car_cuerpo_libre', label: 'CAR Extracción cuerpo libre' },
+      { value: 'car_ficat', label: 'CAR Ficat' },
+      { value: 'car_toilette', label: 'CAR Toilette' },
+      { value: 'car_sinovectomia', label: 'CAR Sinovectomía total' },
+    ]},
+    { id: 'ptc', label: 'Prótesis Cadera', procs: [
+      { value: 'ptc_summit', label: 'PTC Summit (DePuy)' },
+      { value: 'ptc_zimmer', label: 'PTC Zimmer (G7 + Taperloc)' },
+    ]},
+    { id: 'ptr', label: 'Prótesis Rodilla', procs: [
+      { value: 'ptr_triathlon', label: 'PTR Triathlon (Stryker)' },
+      { value: 'puc_pkr', label: 'PUC PKR (Stryker)' },
+      { value: 'rpuc', label: 'Revisión PUC (RPUC)' },
+    ]},
+    { id: 'lca_stryker', label: 'LCA Stryker', procs: [
+      { value: 'lca_procinch', label: 'LCA ProCinch anatómico ST-RI' },
+      { value: 'lca_procinch_allinside', label: 'LCA ProCinch anatómico ALL-INSIDE' },
+      { value: 'lca_procinch_lemaire', label: 'LCA ProCinch + Lemaire' },
+      { value: 'lca_procinch_sutura', label: 'LCA ProCinch + sutura meniscal' },
+      { value: 'lca_procinch_reinsercion', label: 'LCA ProCinch + reinserción raíz meniscal posterior' },
+    ]},
+    { id: 'lca_otros', label: 'LCA Otros', procs: [
+      { value: 'lca_allinside_arthrex', label: 'LCA ALL-INSIDE (Arthrex)' },
+      { value: 'lca_hth', label: 'LCA Hueso-Tendón-Hueso (HTH)' },
+      { value: 'lca_aum_am', label: 'LCA Aumentación AM' },
+      { value: 'lca_aum_pl', label: 'LCA Aumentación PL' },
+      { value: 'lca_rescate', label: 'LCA Rescate — revisión' },
+      { value: 'lca_rescate_hth_lemaire', label: 'LCA Rescate — HTH banco + Lemaire' },
+    ]},
+    { id: 'cac', label: 'Artroscopia Cadera', procs: [
+      { value: 'cac_labrum', label: 'Reinserción labrum acetabular' },
+    ]},
+    { id: 'ms', label: 'Miembro Superior', procs: [
+      { value: 'ms_stc', label: 'Síndrome del túnel carpiano (STC)' },
+      { value: 'ms_tcg', label: 'TCG Mano (quiste sinovial)' },
+      { value: 'ms_dedo_resorte', label: 'Dedo en resorte — apertura polea A1' },
+      { value: 'ms_dedo_resorte_tenolisis', label: 'Dedo en resorte — tenolisis' },
+      { value: 'ms_fedr_dvr', label: 'RAFI Fr distal radio — Placa DVR' },
+      { value: 'ms_fedr_acumed', label: 'RAFI Fr distal radio — Placa ACUMED' },
+      { value: 'ms_fr_radio', label: 'Fr radio diafisario — placa' },
+      { value: 'ms_fr_cubito_radio', label: 'Fr cúbito + radio — doble placa' },
+      { value: 'ms_fr_humero', label: 'Fr húmero diafisario — placa' },
+      { value: 'ms_fr_olecranon_placa', label: 'Fr olécranon — placa' },
+      { value: 'ms_fr_olecranon_cerclaje', label: 'Fr olécranon — cerclaje' },
+      { value: 'ms_seccion_tendon', label: 'Sección tendón flexor mano' },
+      { value: 'ms_clavo_humero', label: 'Clavo T2 húmero retrógrado' },
+    ]},
+  ];
+
+  let activeCat = null;
+
   // ─────────────────────────────────────────────
   //  UTILIDADES
   // ─────────────────────────────────────────────
@@ -539,8 +738,16 @@
     const t = obtenerPlantillas(doc, ayu);
     const datos = t[proc];
     if (!datos) return;
-    document.getElementById('hojaOperatoria').value   = datos.hoja;
-    document.getElementById('tratamientoAlta').value  = datos.tratamiento;
+    const hojaEl = document.getElementById('hojaOperatoria');
+    const trataEl = document.getElementById('tratamientoAlta');
+    hojaEl.value = datos.hoja;
+    trataEl.value = datos.tratamiento;
+    // Flash animation
+    hojaEl.classList.remove('flash');
+    trataEl.classList.remove('flash');
+    void hojaEl.offsetWidth;
+    hojaEl.classList.add('flash');
+    trataEl.classList.add('flash');
   }
 
   function limpiar() {
@@ -549,14 +756,20 @@
     document.getElementById('ayudante').value = '';
     document.getElementById('hojaOperatoria').value = '';
     document.getElementById('tratamientoAlta').value = '';
+    activeCat = null;
+    document.querySelectorAll('.cat-pill').forEach(p => p.classList.remove('active'));
+    const sel = document.getElementById('procedimiento');
+    sel.disabled = true;
+    sel.innerHTML = '<option value="">— Seleccione categoría primero —</option>';
   }
 
   function copiarTexto(id) {
-    const el = document.getElementById(id);
-    el.select();
-    document.execCommand('copy');
-    const label = id === 'tratamientoAlta' ? 'Tratamiento' : 'Hoja Operatoria';
-    mostrarToast('✓  ' + label + ' copiado al portapapeles');
+    const text = document.getElementById(id).value;
+    if (!text) return;
+    navigator.clipboard.writeText(text).then(() => {
+      const label = id === 'tratamientoAlta' ? 'Tratamiento' : 'Hoja Operatoria';
+      mostrarToast('✓  ' + label + ' copiado al portapapeles');
+    });
   }
 
   function mostrarToast(msg) {
@@ -568,6 +781,88 @@
     clearTimeout(t._timer);
     t._timer = setTimeout(() => { t.classList.remove('show'); }, 2200);
   }
+
+  // ─────────────────────────────────────────────
+  //  CATEGORY NAVIGATION
+  // ─────────────────────────────────────────────
+  function renderCategoryPills() {
+    const container = document.getElementById('catPills');
+    container.innerHTML = CATEGORIAS.map(cat =>
+      `<button class="cat-pill" data-cat="${cat.id}" onclick="selectCategoria('${cat.id}')">
+        ${cat.label} <span class="cat-count">${cat.procs.length}</span>
+      </button>`
+    ).join('');
+  }
+
+  function selectCategoria(catId) {
+    activeCat = catId;
+    document.querySelectorAll('.cat-pill').forEach(p => {
+      p.classList.toggle('active', p.dataset.cat === catId);
+    });
+    const cat = CATEGORIAS.find(c => c.id === catId);
+    if (!cat) return;
+    const sel = document.getElementById('procedimiento');
+    sel.disabled = false;
+    sel.innerHTML = '<option value="">— Seleccione procedimiento —</option>' +
+      cat.procs.map(p => `<option value="${p.value}">${p.label}</option>`).join('');
+    sel.value = '';
+    cargarPlantilla();
+  }
+
+  // ─────────────────────────────────────────────
+  //  DARK MODE
+  // ─────────────────────────────────────────────
+  const btnTheme = document.getElementById('btn-theme');
+
+  function applyTheme(dark) {
+    if (dark) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      btnTheme.textContent = '☀️';
+    } else {
+      document.documentElement.removeAttribute('data-theme');
+      btnTheme.textContent = '🌙';
+    }
+  }
+
+  function getAutoTheme() {
+    const hour = new Date().getHours();
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    return (hour >= 21 || hour < 7 || prefersDark) ? 'dark' : 'light';
+  }
+
+  function initTheme() {
+    const saved = localStorage.getItem('pqx-theme');
+    const savedDate = localStorage.getItem('pqx-theme-date');
+    const today = new Date().toDateString();
+    if (saved && savedDate === today) {
+      applyTheme(saved === 'dark');
+    } else {
+      localStorage.removeItem('pqx-theme');
+      localStorage.removeItem('pqx-theme-date');
+      applyTheme(getAutoTheme() === 'dark');
+    }
+  }
+
+  btnTheme.addEventListener('click', () => {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    applyTheme(!isDark);
+    localStorage.setItem('pqx-theme', isDark ? 'light' : 'dark');
+    localStorage.setItem('pqx-theme-date', new Date().toDateString());
+  });
+
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+    const saved = localStorage.getItem('pqx-theme');
+    const savedDate = localStorage.getItem('pqx-theme-date');
+    if (!saved || savedDate !== new Date().toDateString()) {
+      applyTheme(getAutoTheme() === 'dark');
+    }
+  });
+
+  // ─────────────────────────────────────────────
+  //  INIT
+  // ─────────────────────────────────────────────
+  initTheme();
+  renderCategoryPills();
 
   // ─────────────────────────────────────────────
   //  PLANTILLAS
