@@ -259,6 +259,23 @@
       font-weight: 400;
     }
 
+    /* ── SUB-CATEGORY PILLS (segunda fila) ── */
+    .sub-pills {
+      margin-top: 4px;
+      padding-top: 2px;
+    }
+    .sub-pills.animate-in {
+      animation: fadeInUp 0.3s ease-out both;
+    }
+    .sub-pills .cat-pill {
+      font-size: 11px;
+      padding: 5px 12px;
+      border-style: dashed;
+    }
+    .sub-pills .cat-pill.active {
+      border-style: solid;
+    }
+
     /* ── CARD / FORM ── */
     .card {
       background: var(--surface);
@@ -566,7 +583,8 @@
 
   <!-- CATEGORY PILLS -->
   <nav class="cat-nav">
-    <div id="catPills" class="cat-pills"></div>
+    <div id="regionPills" class="cat-pills"></div>
+    <div id="subCatPills" class="cat-pills sub-pills" style="display:none;"></div>
   </nav>
 
   <!-- FORMULARIO -->
@@ -723,8 +741,24 @@
       { value: 'ms_seccion_tendon', label: 'Sección tendón flexor mano' },
       { value: 'ms_clavo_humero', label: 'Clavo T2 húmero retrógrado' },
     ]},
+    { id: 'pt', label: 'Pie y Tobillo', procs: [
+      { value: 'pt_antepie', label: 'Antepié — SCARF/AKIN/Weil (Stryker)' },
+      { value: 'pt_pie_plano_osteo', label: 'Pie Plano — Osteotomía (Koustogiannis + Evans + Cotton)' },
+      { value: 'pt_pie_plano_artrodesis', label: 'Pie Plano — Artrodesis subastragalina + talonavicular' },
+      { value: 'pt_pie_cavo_osteo', label: 'Pie Cavo Varo — Osteotomía (Dwyer + Jones)' },
+      { value: 'pt_pie_cavo_artrodesis', label: 'Pie Cavo Varo — Artrodesis triple' },
+    ]},
   ];
 
+  const REGIONES = [
+    { id: 'trauma',  label: 'Trauma',           catIds: ['trauma'] },
+    { id: 'rodilla', label: 'Rodilla',          catIds: ['car', 'ptr', 'lca_stryker', 'lca_otros'] },
+    { id: 'cadera',  label: 'Cadera',           catIds: ['ptc', 'cac'] },
+    { id: 'ms',      label: 'Miembro Superior', catIds: ['ms'] },
+    { id: 'pt',      label: 'Pie y Tobillo',    catIds: ['pt'] },
+  ];
+
+  let activeRegion = null;
   let activeCat = null;
 
   // ─────────────────────────────────────────────
@@ -765,7 +799,11 @@
     document.getElementById('hojaOperatoria').value = '';
     document.getElementById('tratamientoAlta').value = '';
     activeCat = null;
-    document.querySelectorAll('.cat-pill').forEach(p => p.classList.remove('active'));
+    activeRegion = null;
+    document.querySelectorAll('#regionPills .cat-pill').forEach(p => p.classList.remove('active'));
+    const subContainer = document.getElementById('subCatPills');
+    subContainer.style.display = 'none';
+    subContainer.innerHTML = '';
     const sel = document.getElementById('procedimiento');
     sel.disabled = true;
     sel.innerHTML = '<option value="">— Seleccione categoría primero —</option>';
@@ -793,18 +831,55 @@
   // ─────────────────────────────────────────────
   //  CATEGORY NAVIGATION
   // ─────────────────────────────────────────────
-  function renderCategoryPills() {
-    const container = document.getElementById('catPills');
-    container.innerHTML = CATEGORIAS.map(cat =>
-      `<button class="cat-pill" data-cat="${cat.id}" onclick="selectCategoria('${cat.id}')">
-        ${cat.label} <span class="cat-count">${cat.procs.length}</span>
-      </button>`
-    ).join('');
+  function renderRegionPills() {
+    const container = document.getElementById('regionPills');
+    container.innerHTML = REGIONES.map(region => {
+      const total = region.catIds.reduce((sum, catId) => {
+        const cat = CATEGORIAS.find(c => c.id === catId);
+        return sum + (cat ? cat.procs.length : 0);
+      }, 0);
+      return `<button class="cat-pill" data-region="${region.id}" onclick="selectRegion('${region.id}')">
+        ${region.label} <span class="cat-count">${total}</span>
+      </button>`;
+    }).join('');
+  }
+
+  function selectRegion(regionId) {
+    const region = REGIONES.find(r => r.id === regionId);
+    if (!region) return;
+    activeRegion = regionId;
+    document.querySelectorAll('#regionPills .cat-pill').forEach(p => {
+      p.classList.toggle('active', p.dataset.region === regionId);
+    });
+    const subContainer = document.getElementById('subCatPills');
+    if (region.catIds.length === 1) {
+      subContainer.style.display = 'none';
+      subContainer.innerHTML = '';
+      selectCategoria(region.catIds[0]);
+    } else {
+      subContainer.innerHTML = region.catIds.map(catId => {
+        const cat = CATEGORIAS.find(c => c.id === catId);
+        if (!cat) return '';
+        return `<button class="cat-pill" data-cat="${cat.id}" onclick="selectCategoria('${cat.id}')">
+          ${cat.label} <span class="cat-count">${cat.procs.length}</span>
+        </button>`;
+      }).join('');
+      subContainer.style.display = 'flex';
+      subContainer.classList.remove('animate-in');
+      void subContainer.offsetWidth;
+      subContainer.classList.add('animate-in');
+      activeCat = null;
+      const sel = document.getElementById('procedimiento');
+      sel.disabled = true;
+      sel.innerHTML = '<option value="">— Seleccione subcategoría —</option>';
+      document.getElementById('hojaOperatoria').value = '';
+      document.getElementById('tratamientoAlta').value = '';
+    }
   }
 
   function selectCategoria(catId) {
     activeCat = catId;
-    document.querySelectorAll('.cat-pill').forEach(p => {
+    document.querySelectorAll('#subCatPills .cat-pill').forEach(p => {
       p.classList.toggle('active', p.dataset.cat === catId);
     });
     const cat = CATEGORIAS.find(c => c.id === catId);
@@ -870,7 +945,7 @@
   //  INIT
   // ─────────────────────────────────────────────
   initTheme();
-  renderCategoryPills();
+  renderRegionPills();
 
   // ─────────────────────────────────────────────
   //  PLANTILLAS
@@ -2962,6 +3037,175 @@ tratamiento: `- Mantener el mano  elevada en  cabestrillo.
 - Revisión  de  herida  qca en  Centro  Salud  cada  72 horas  para  curas  locales.
 - Revisión en CCEE de COT (${DOCTOR}) el próximo día 08/03/07 a las 11:26 horas para control Rx,  retirada sutura y seguimiento.
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.`
+},
+
+    // ─────────────────────────────────────────────
+    //  PIE Y TOBILLO
+    // ─────────────────────────────────────────────
+
+    pt_antepie: {
+hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+
+ANTEPIÉ — SCARF / AKIN / WEIL (STRYKER)
+- Profilaxis antibiótica
+- Isquemia preventiva de miembro inferior
+- Abordaje medial sobre 1º radio
+- Disección cuidadosa por planos, liberación de rama dorsal de nervio
+- Osteotomía SCARF sobre M1, AKIN sobre F1, fijados con sendos tornillos FIXOS STRYKER
+- Lavado profuso
+- Comprobación adecuada colocación implantes y balance articular completo
+- Cierre por planos
+- Piel con reabsorbible/grapas
+- Abordaje longitudinal intermetatarsiano para osteotomía de Weil triplanar sobre M2 fijado con tornillo TWISTOFF STRYKER`,
+
+tratamiento: `- Mantener el pie elevado siempre que esté sentado
+- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos
+- Caminar apoyando TODO EL PIE. Para ello, recomendamos comprar un zapato de postoperatorio (para apoyar todo el pie), de venta libre en ortopedias. Puede solicitar bastones en préstamo
+- Estiramientos de gemelos e isquiotibiales
+- Mantener vendaje 4-6 semanas
+- Puede requerir ayuda domiciliaria
+- Paracetamol 325 mg / Tramadol 37,5 mg cada 8h vía oral
+- Metamizol 575 mg cada 8h alterno con lo anterior si precisa
+- Omeprazol cada 24h
+- Enoxaparina sc 40 mg cada 24h
+- CITA EN SALA DE CURAS DE COT (Gabinete 7) en unos 3-5 días para valorar herida
+- No es preciso retirar sutura. Puede ayudar a su caída frotando la herida durante el lavado a partir de la 3ª semana de la intervención
+- Una vez retirados los puntos, deberá masajear la zona de la cicatriz en círculos de forma enérgica, para evitar adherencias de la misma
+- Debe evitar fumar hasta que la herida esté cicatrizada, no obstante, aconsejamos el abandono definitivo del tabaco si es usted fumador
+- Solicitar cita para revisión con ${DOCTOR} en 4 semanas
+- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con su Centro de Salud en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario`
+},
+
+    pt_pie_plano_osteo: {
+hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+
+PIE PLANO — OSTEOTOMÍA (KOUSTOGIANNIS + EVANS + COTTON)
+- Profilaxis antibiótica
+- Anestesia raquimedular
+- Isquemia preventiva de miembro inferior
+- Decúbito supino, abordaje lateral sobre calcáneo
+- Osteotomía tipo Koustogiannis fijada con 2 tornillos ASNIS STRYKER de 6,5 mm / AUTOFIX STRYKER 6,5 mm
+- Osteotomía de alargamiento de columna externa tipo Evans con cuña de aloinjerto fijada con tornillos ASNIS de 4 mm
+- Osteotomía de apertura dorsal tipo Cotton sobre la base del 1º MTT con aloinjerto fijada con placa VARIAX STRYKER
+- Comprobación por escopia adecuada colocación implantes y realineación del pie
+- Lavado profuso
+- Cierre por planos
+- Piel con reabsorbible
+- Vendaje algodonado`,
+
+tratamiento: `- Mantener pierna en alto y moviendo dedos y tobillo como se explica
+- Puede ponerse frío local, nunca directamente sobre la piel, para el control de la inflamación
+- Descarga de la pierna intervenida hasta la revisión en consulta. Puede solicitar muletas/silla de ruedas en préstamo
+- Ibuprofeno 600 mg 1 comprimido cada 8 horas durante 5-7 días
+- Paracetamol-Tramadol 325/37,5 mg 1 comprimido cada 8 horas alterno con lo anterior si precisa
+- Enoxaparina 40 mg 1 inyección cada 24h durante 30 días
+- Omeprazol 20 mg 1 comprimido cada 24 horas durante 30 días
+- Precisa cuidados domiciliarios
+- CITA EN SALA DE CURAS DE COT (Gabinete 7) en unos 3-5 días para valorar herida
+- Debe evitar fumar hasta que la herida esté cicatrizada, no obstante, aconsejamos el abandono definitivo del tabaco si es usted fumador
+- Solicitar cita para revisión con ${DOCTOR} en 4 semanas
+- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con su Centro de Salud en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario
+- No es preciso retirar sutura. Puede ayudar a su caída frotando la herida durante el lavado a partir de la 3ª semana de la intervención
+- Una vez retirados los puntos, deberá masajear la zona de la cicatriz en círculos de forma enérgica, para evitar adherencias de la misma`
+},
+
+    pt_pie_plano_artrodesis: {
+hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+
+PIE PLANO — ARTRODESIS SUBASTRAGALINA + TALONAVICULAR
+- Profilaxis antibiótica
+- Anestesia raquimedular
+- Isquemia preventiva de miembro inferior
+- Decúbito supino, abordaje medial
+- Denudación de superficies articulares y artrodesis subastragalina + talonavicular
+- Corrección de eje del retropié en el plano coronal y sagital
+- Fijación con tornillos AUTOFIX 6,5 mm / ASNIS STRYKER 6,5 mm + tornillos AUTOFIX / ASNIS STRYKER 4 mm en "X"
+- Comprobación por escopia adecuada colocación implantes y realineación del pie
+- Lavado profuso
+- Cierre por planos
+- Piel con reabsorbible
+- Vendaje algodonado`,
+
+tratamiento: `- Mantener pierna en alto y moviendo dedos y tobillo como se explica
+- Puede ponerse frío local, nunca directamente sobre la piel, para el control de la inflamación
+- Descarga de la pierna intervenida hasta la revisión en consulta. Puede solicitar muletas/silla de ruedas en préstamo
+- Ibuprofeno 600 mg 1 comprimido cada 8 horas durante 5-7 días
+- Paracetamol-Tramadol 325/37,5 mg 1 comprimido cada 8 horas alterno con lo anterior si precisa
+- Enoxaparina 40 mg 1 inyección cada 24h durante 30 días
+- Omeprazol 20 mg 1 comprimido cada 24 horas durante 30 días
+- Precisa cuidados domiciliarios
+- CITA EN SALA DE CURAS DE COT (Gabinete 7) en unos 3-5 días para valorar herida
+- Debe evitar fumar hasta que la herida esté cicatrizada, no obstante, aconsejamos el abandono definitivo del tabaco si es usted fumador
+- Solicitar cita para revisión con ${DOCTOR} en 4 semanas
+- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con su Centro de Salud en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario
+- No es preciso retirar sutura. Puede ayudar a su caída frotando la herida durante el lavado a partir de la 3ª semana de la intervención
+- Una vez retirados los puntos, deberá masajear la zona de la cicatriz en círculos de forma enérgica, para evitar adherencias de la misma`
+},
+
+    pt_pie_cavo_osteo: {
+hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+
+PIE CAVO VARO — OSTEOTOMÍA (DWYER + JONES)
+- Profilaxis antibiótica
+- Anestesia raquimedular
+- Isquemia preventiva de miembro inferior
+- Decúbito supino, abordaje lateral sobre calcáneo
+- Osteotomía tipo Dwyer + Koustogiannis inverso fijada con 2 tornillos ASNIS STRYKER de 6,5 mm / AUTOFIX STRYKER 6,5 mm
+- Abordaje dorsomedial sobre primer radio
+- Osteotomía de cierre dorsal tipo Jones sobre 1º MTT fijada con placa VARIAX STRYKER
+- Comprobación por escopia adecuada colocación implantes y realineación del pie
+- Lavado profuso
+- Cierre por planos
+- Piel con reabsorbible
+- Vendaje algodonado`,
+
+tratamiento: `- Mantener pierna en alto y moviendo dedos y tobillo como se explica
+- Puede ponerse frío local, nunca directamente sobre la piel, para el control de la inflamación
+- Descarga de la pierna intervenida hasta la revisión en consulta. Puede solicitar muletas/silla de ruedas en préstamo
+- Ibuprofeno 600 mg 1 comprimido cada 8 horas durante 5-7 días
+- Paracetamol-Tramadol 325/37,5 mg 1 comprimido cada 8 horas alterno con lo anterior si precisa
+- Enoxaparina 40 mg 1 inyección cada 24h durante 30 días
+- Omeprazol 20 mg 1 comprimido cada 24 horas durante 30 días
+- Precisa cuidados domiciliarios
+- CITA EN SALA DE CURAS DE COT (Gabinete 7) en unos 3-5 días para valorar herida
+- Debe evitar fumar hasta que la herida esté cicatrizada, no obstante, aconsejamos el abandono definitivo del tabaco si es usted fumador
+- Solicitar cita para revisión con ${DOCTOR} en 4 semanas
+- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con su Centro de Salud en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario
+- No es preciso retirar sutura. Puede ayudar a su caída frotando la herida durante el lavado a partir de la 3ª semana de la intervención
+- Una vez retirados los puntos, deberá masajear la zona de la cicatriz en círculos de forma enérgica, para evitar adherencias de la misma`
+},
+
+    pt_pie_cavo_artrodesis: {
+hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+
+PIE CAVO VARO — ARTRODESIS TRIPLE (SUBASTRAGALINA + TALONAVICULAR + CALCANEOCUBOIDEA)
+- Profilaxis antibiótica
+- Anestesia raquimedular
+- Isquemia preventiva de miembro inferior
+- Decúbito supino, abordaje medial y lateral
+- Denudación de superficies articulares y artrodesis subastragalina + talonavicular + calcaneocuboidea
+- Corrección de eje del retropié en el plano coronal y sagital
+- Fijación con tornillos AUTOFIX 6,5 mm / ASNIS STRYKER 6,5 mm + tornillos AUTOFIX / ASNIS STRYKER 4 mm en "X" + placa VARIAX STRYKER / tornillos ASNIS / AUTOFIX 4 mm en calcaneocuboidea respectivamente
+- Comprobación por escopia adecuada colocación implantes y realineación del pie
+- Lavado profuso
+- Cierre por planos
+- Piel con reabsorbible
+- Vendaje algodonado`,
+
+tratamiento: `- Mantener pierna en alto y moviendo dedos y tobillo como se explica
+- Puede ponerse frío local, nunca directamente sobre la piel, para el control de la inflamación
+- Descarga de la pierna intervenida hasta la revisión en consulta. Puede solicitar muletas/silla de ruedas en préstamo
+- Ibuprofeno 600 mg 1 comprimido cada 8 horas durante 5-7 días
+- Paracetamol-Tramadol 325/37,5 mg 1 comprimido cada 8 horas alterno con lo anterior si precisa
+- Enoxaparina 40 mg 1 inyección cada 24h durante 30 días
+- Omeprazol 20 mg 1 comprimido cada 24 horas durante 30 días
+- Precisa cuidados domiciliarios
+- CITA EN SALA DE CURAS DE COT (Gabinete 7) en unos 3-5 días para valorar herida
+- Debe evitar fumar hasta que la herida esté cicatrizada, no obstante, aconsejamos el abandono definitivo del tabaco si es usted fumador
+- Solicitar cita para revisión con ${DOCTOR} en 4 semanas
+- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con su Centro de Salud en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario
+- No es preciso retirar sutura. Puede ayudar a su caída frotando la herida durante el lavado a partir de la 3ª semana de la intervención
+- Una vez retirados los puntos, deberá masajear la zona de la cicatriz en círculos de forma enérgica, para evitar adherencias de la misma`
 },
 
     }; // fin del return
