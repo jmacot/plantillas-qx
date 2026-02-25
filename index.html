@@ -726,7 +726,7 @@
     { id: 'cac', label: 'Artroscopia Cadera', procs: [
       { value: 'cac_labrum', label: 'Reinserción labrum acetabular' },
     ]},
-    { id: 'ms', label: 'Miembro Superior', procs: [
+    { id: 'ms', label: 'Mano y Antebrazo', procs: [
       { value: 'ms_stc', label: 'Síndrome del túnel carpiano (STC)' },
       { value: 'ms_tcg', label: 'TCG Mano (quiste sinovial)' },
       { value: 'ms_dedo_resorte', label: 'Dedo en resorte — apertura polea A1' },
@@ -778,11 +778,10 @@
 
   const REGIONES = [
     { id: 'trauma',  label: 'Trauma',           catIds: ['trauma'] },
-    { id: 'rodilla', label: 'Rodilla',          catIds: ['car', 'ptr', 'lca_stryker', 'lca_otros', 'rodilla_osteo'] },
+    { id: 'rodilla', label: 'Rodilla',          catIds: ['car', 'ptr', 'rodilla_osteo'] },
+    { id: 'lca',     label: 'LCA',              catIds: ['lca_stryker', 'lca_otros'] },
     { id: 'cadera',  label: 'Cadera',           catIds: ['ptc', 'cac'] },
-    { id: 'hombro',  label: 'Hombro',           catIds: ['hombro_mr', 'hombro_pthi', 'hombro_tumor'] },
-    { id: 'codo',    label: 'Codo',             catIds: ['codo'] },
-    { id: 'ms',      label: 'Miembro Superior', catIds: ['ms'] },
+    { id: 'ms',      label: 'Miembro Superior', catIds: ['hombro_mr', 'hombro_pthi', 'hombro_tumor', 'codo', 'ms'] },
     { id: 'pt',      label: 'Pie y Tobillo',    catIds: ['pt'] },
   ];
 
