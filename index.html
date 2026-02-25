@@ -708,14 +708,12 @@
       { value: 'puc_pkr', label: 'PUC PKR (Stryker)' },
       { value: 'rpuc', label: 'Revisión PUC (RPUC)' },
     ]},
-    { id: 'lca_stryker', label: 'LCA Stryker', procs: [
+    { id: 'lca', label: 'LCA', procs: [
       { value: 'lca_procinch', label: 'LCA ProCinch anatómico ST-RI' },
       { value: 'lca_procinch_allinside', label: 'LCA ProCinch anatómico ALL-INSIDE' },
       { value: 'lca_procinch_lemaire', label: 'LCA ProCinch + Lemaire' },
       { value: 'lca_procinch_sutura', label: 'LCA ProCinch + sutura meniscal' },
       { value: 'lca_procinch_reinsercion', label: 'LCA ProCinch + reinserción raíz meniscal posterior' },
-    ]},
-    { id: 'lca_otros', label: 'LCA Otros', procs: [
       { value: 'lca_allinside_arthrex', label: 'LCA ALL-INSIDE (Arthrex)' },
       { value: 'lca_hth', label: 'LCA Hueso-Tendón-Hueso (HTH)' },
       { value: 'lca_aum_am', label: 'LCA Aumentación AM' },
@@ -778,7 +776,7 @@
 
   const REGIONES = [
     { id: 'trauma',  label: 'Trauma',           catIds: ['trauma'] },
-    { id: 'rodilla', label: 'Rodilla',          catIds: ['car', 'ptr', 'lca_stryker', 'lca_otros', 'rodilla_osteo'] },
+    { id: 'rodilla', label: 'Rodilla',          catIds: ['car', 'ptr', 'lca', 'rodilla_osteo'] },
     { id: 'cadera',  label: 'Cadera',           catIds: ['ptc', 'cac'] },
     { id: 'ms',      label: 'Miembro Superior', catIds: ['hombro_mr', 'hombro_pthi', 'hombro_tumor', 'codo', 'ms'] },
     { id: 'pt',      label: 'Pie y Tobillo',    catIds: ['pt'] },
