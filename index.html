@@ -748,12 +748,40 @@
       { value: 'pt_pie_cavo_osteo', label: 'Pie Cavo Varo — Osteotomía (Dwyer + Jones)' },
       { value: 'pt_pie_cavo_artrodesis', label: 'Pie Cavo Varo — Artrodesis triple' },
     ]},
+    { id: 'hombro_mr', label: 'Manguito Rotador', procs: [
+      { value: 'hombro_cah', label: 'CAH — Reparación artroscópica manguito rotador' },
+      { value: 'hombro_cah_subescapular', label: 'CAH — Con subescapular y doble hilera' },
+      { value: 'hombro_balon', label: 'CAH — Rotura masiva + balón subacromial' },
+    ]},
+    { id: 'hombro_pthi', label: 'Prótesis Hombro', procs: [
+      { value: 'hombro_pthi_aequalis', label: 'PTHI inversa Aequalis (fracturas)' },
+      { value: 'hombro_pthi_ascend', label: 'PTHI inversa Ascend Flex (omartrosis)' },
+      { value: 'hombro_pthi_biorsa', label: 'PTHI inversa Perform 2+ con BioRSA' },
+      { value: 'hombro_pthi_revive', label: 'Revisión PTHI — vástago Flex Revive' },
+    ]},
+    { id: 'hombro_tumor', label: 'Tumores / Partes Blandas', procs: [
+      { value: 'hombro_elastofibroma', label: 'Exéresis de elastofibroma dorsii' },
+    ]},
+    { id: 'codo', label: 'Codo', procs: [
+      { value: 'codo_biceps_agudo', label: 'Reinserción bíceps distal agudo (Arthrex)' },
+      { value: 'codo_biceps_cronico', label: 'Reinserción bíceps distal crónico con plastia ST' },
+      { value: 'codo_epicondilitis', label: 'Cirugía de Nirschl (epicondilitis)' },
+    ]},
+    { id: 'rodilla_osteo', label: 'Osteotomías y Cartílago', procs: [
+      { value: 'rodilla_ovt', label: 'Osteotomía valguizante de tibia (apertura medial)' },
+      { value: 'rodilla_ovt_slope', label: 'OVT + corrección pendiente posterior' },
+      { value: 'rodilla_fulkerson', label: 'Osteotomía TTA tipo Fulkerson' },
+      { value: 'rodilla_mosaico_ovt', label: 'Mosaicoplastia + OVT' },
+      { value: 'rodilla_lfpm_tta', label: 'Reconstrucción LFPM + osteotomía TTA (luxación rótula)' },
+    ]},
   ];
 
   const REGIONES = [
     { id: 'trauma',  label: 'Trauma',           catIds: ['trauma'] },
-    { id: 'rodilla', label: 'Rodilla',          catIds: ['car', 'ptr', 'lca_stryker', 'lca_otros'] },
+    { id: 'rodilla', label: 'Rodilla',          catIds: ['car', 'ptr', 'lca_stryker', 'lca_otros', 'rodilla_osteo'] },
     { id: 'cadera',  label: 'Cadera',           catIds: ['ptc', 'cac'] },
+    { id: 'hombro',  label: 'Hombro',           catIds: ['hombro_mr', 'hombro_pthi', 'hombro_tumor'] },
+    { id: 'codo',    label: 'Codo',             catIds: ['codo'] },
     { id: 'ms',      label: 'Miembro Superior', catIds: ['ms'] },
     { id: 'pt',      label: 'Pie y Tobillo',    catIds: ['pt'] },
   ];
@@ -3206,6 +3234,473 @@ tratamiento: `- Mantener pierna en alto y moviendo dedos y tobillo como se expli
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con su Centro de Salud en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario
 - No es preciso retirar sutura. Puede ayudar a su caída frotando la herida durante el lavado a partir de la 3ª semana de la intervención
 - Una vez retirados los puntos, deberá masajear la zona de la cicatriz en círculos de forma enérgica, para evitar adherencias de la misma`
+},
+
+// ── HOMBRO — MANGUITO ROTADOR ──────────────────────
+    hombro_cah: {
+hoja: `INTERVENCIÓN (DRS. ${DOCTOR}/${AYUDANTE})
+Diag. Sd. subacromial hombro ---.
+Anestesia gral. + locorregional. Profilaxis ATB. Decúbito lateral --.
+CAH ---.
+Portales habituales
+Glenohumeral: PLB, labrum y subescapular ok. Rotura supraespinoso grado  de Patte (porción anterolateral).
+Subacromial: bursectomía, se localiza rotura supraespinoso. Preparación footprint y reinserción supraespinoso con  Iconix Speed 2,3 (2 suturas). Acromioplastia anterior.
+Lavado articular, cierre de portales con agrafes e inmovilización con cabestrillo.`,
+
+tratamiento: `- Mantener el miembro superior operado en cabestrillo durante 4-5 semanas. Puede retirarlo para aseo personal y para realizar ejercicios de flexo-extensión de codo así como pendulares (se adjunta hoja de cuidados de cabestrillo)
+- Mover activamente los dedos de la extremidad operada
+- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos
+- Analgesia por elastómero prescrito por Servicio de Anestesia durante las primeras 24-48h. Continuar una vez retirado con Dexketoprofeno 25 mg v.o. 1/8 horas vía oral durante 4-5 días. Puede alternar con Metamizol caps. 1 c/8h si más dolor
+- Omeprazol 20 mg v.o. 1 c/24h
+- Curas locales c/72h y retirada de puntos por ATS DE ZONA en 12-14 días
+- Puede requerir reposo / ayuda domiciliaria
+- Pedir cita con Servicio de RHB antes de marcharse de alta
+- Solicitar cita para revisión en 3 semanas para ${DOCTOR}
+- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con su Centro de Salud en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario`
+},
+
+    hombro_cah_subescapular: {
+hoja: `INTERVENCIÓN (DRS. ${DOCTOR}/${AYUDANTE})
+Diag. Rotura supraespinoso hombro ---.
+Anestesia gral. + locorregional. Profilaxis ATB. Decúbito lateral ---.
+CAH ---.
+Portales habituales
+Glenohumeral: PLB y labrum ok, subescapular con rotura tipo II de Lafosse. Se realiza reparación tendón hueso con 1 Iconix 2,3 (2 cintas). Rotura supraespinoso grado II de Patte con mala calidad tisular e infiltración grasa.
+Subacromial: bursectomía, se localiza rotura supraespinoso. Preparación footprint (se fresa osteofito de tuberosidad mayor) y reinserción supraespinoso en doble hilera con 1 Iconix 2,3 medial (2 suturas) y 1 ReelX lateral con 4 hilos.
+Lavado articular, cierre de portales con agrafes e inmovilización con cabestrillo.`,
+
+tratamiento: `- Mantener el miembro superior operado en cabestrillo durante 4-5 semanas. Puede retirarlo para aseo personal y para realizar ejercicios de flexo-extensión de codo así como pendulares (se adjunta hoja de cuidados de cabestrillo)
+- Mover activamente los dedos de la extremidad operada
+- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos
+- Analgesia por elastómero prescrito por Servicio de Anestesia durante las primeras 24-48h. Continuar una vez retirado con Dexketoprofeno 25 mg v.o. 1/8 horas vía oral durante 4-5 días. Puede alternar con Metamizol caps. 1 c/8h si más dolor
+- Omeprazol 20 mg v.o. 1 c/24h
+- Curas locales c/72h y retirada de puntos por ATS DE ZONA en 12-14 días
+- Puede requerir reposo / ayuda domiciliaria
+- Pedir cita con Servicio de RHB antes de marcharse de alta
+- Solicitar cita para revisión en 3 semanas para ${DOCTOR}
+- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con su Centro de Salud en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario`
+},
+
+    hombro_balon: {
+hoja: `INTERVENCIÓN (DRS. ${DOCTOR}/${AYUDANTE})
+Diag. Rotura masiva supraespinoso hombro.
+Anestesia gral. + locorregional. Profilaxis ATB. Decúbito lateral ---.
+CAH ---.
+Portales habituales
+Glenohumeral: PLB degenerado y deshilachado por lo que se realiza tenotomía, labrum bien, rotura subescapular tipo 2 de Lafosse. Se realiza reparación con 1 Iconix 2,3 (2 suturas tendón-hueso). Rotura supraespinoso grado 3 de Patte que se extiende a infraespinoso (rotura masiva).
+Subacromial: bursectomía, se localiza rotura supraespinoso. Tendón retraído hasta reborde glenoideo. Se realiza reparación infraespinoso con 1 arpón Peek-Zip 5,5 (2 suturas). Supraespinoso no reparable por lo que se coloca balón subacromial InSpace talla M.
+Lavado articular, cierre de portales con agrafes e inmovilización con cabestrillo.`,
+
+tratamiento: `- Mantener el miembro superior operado en cabestrillo durante 4-5 semanas. Puede retirarlo para aseo personal y para realizar ejercicios de flexo-extensión de codo así como pendulares (se adjunta hoja de cuidados de cabestrillo)
+- Mover activamente los dedos de la extremidad operada
+- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos
+- Analgesia por elastómero prescrito por Servicio de Anestesia durante las primeras 24-48h. Continuar una vez retirado con Dexketoprofeno 25 mg v.o. 1/8 horas vía oral durante 4-5 días. Puede alternar con Metamizol caps. 1 c/8h si más dolor
+- Omeprazol 20 mg v.o. 1 c/24h
+- Curas locales c/72h y retirada de puntos por ATS DE ZONA en 12-14 días
+- Puede requerir reposo / ayuda domiciliaria
+- Pedir cita con Servicio de RHB antes de marcharse de alta
+- Solicitar cita para revisión en 3 semanas para ${DOCTOR}
+- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con su Centro de Salud en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario`
+},
+
+// ── HOMBRO — PRÓTESIS ──────────────────────
+    hombro_pthi_aequalis: {
+hoja: `INTERVENCIÓN (DRS. ${DOCTOR}/${AYUDANTE})
+Fractura Neer IV EPH ---.
+Anestesia gral. + bloqueo locorregional. Profilaxis ATB.
+Silla de playa. Abordaje deltopectoral.
+Colocación PTHI --- Aequalis Reversed (Tornier) de fracturas:
+- Metaglena 25 + tornillos
+- Glenosfera 36
+- Vástago 11 cementado por déficit consola medial
+- Bandeja humeral 6 mm
+Reducción comprobando adecuada estabilidad protésica y balance articular.
+Reinserción de tuberosidades según técnica descrita por Boileau aportando injerto autólogo de cabeza humeral a metáfisis.
+Lavado, hemostasia, drenaje aspirativo, cierre por planos, inmovilización con cabestrillo.
+Pido Rx y hemograma`,
+
+tratamiento: `- Mantener el miembro superior operado en cabestrillo durante 4 semanas. Puede retirar cabestrillo eventualmente para aseo personal y para realizar ejercicios de flexoextensión de codo y pendulares
+- Mover activamente los dedos de la extremidad operada
+- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos
+- Enanplus 1 c/12h vía oral si dolor
+- Nolotil caps. 1 c/8h si más dolor
+- Omeprazol 20 mg v.o. 1 c/24h
+- Tratamiento domiciliario habitual
+- Puede requerir ayuda domiciliaria
+- Curas locales c/72h y retirada de puntos por ATS DE ZONA en 14-15 días
+- Gestionar cita con Servicio de RHB antes de marcharse de alta
+- Solicitar cita para revisión en 3 semanas para ${DOCTOR}
+- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con su Centro de Salud en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario`
+},
+
+    hombro_pthi_ascend: {
+hoja: `INTERVENCIÓN (DRS. ${DOCTOR}/${AYUDANTE})
+OMARTROSIS PRIMARIA HOMBRO ---.
+Anestesia gral. + bloqueo locorregional. Profilaxis ATB.
+Silla de playa. Abordaje deltopectoral. Tenodesis PLB a pectoral mayor. Desinserción subescapular con pastilla ósea.
+Colocación PTHI --- Ascend Flex (Stryker/Tornier):
+- Metaglena 25 + tornillos
+- Glenosfera 36
+- Vástago 5B no cementado, bandeja humeral centrada
+- Inserto humeral 6 mm
+Reducción comprobando adecuada estabilidad protésica y balance articular.
+Reinserción de subescapular.
+Lavado, hemostasia, drenaje aspirativo, cierre por planos, inmovilización con cabestrillo.
+Pido Rx y hemograma`,
+
+tratamiento: `- Mantener el miembro superior operado en cabestrillo durante 4 semanas. Puede retirar cabestrillo eventualmente para aseo personal y para realizar ejercicios de flexoextensión de codo y pendulares
+- Mover activamente los dedos de la extremidad operada
+- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos
+- Enanplus 1 c/12h vía oral si dolor
+- Nolotil caps. 1 c/8h si más dolor
+- Omeprazol 20 mg v.o. 1 c/24h
+- Tratamiento domiciliario habitual
+- Puede requerir ayuda domiciliaria
+- Curas locales c/72h y retirada de puntos por ATS DE ZONA en 14-15 días
+- Gestionar cita con Servicio de RHB antes de marcharse de alta
+- Solicitar cita para revisión en 3 semanas para ${DOCTOR}
+- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con su Centro de Salud en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario`
+},
+
+    hombro_pthi_biorsa: {
+hoja: `INTERVENCIÓN (DRS. ${DOCTOR}/${AYUDANTE})
+OMARTROSIS PRIMARIA HOMBRO ---.
+Anestesia gral. + bloqueo locorregional. Profilaxis ATB.
+Silla de playa. Abordaje deltopectoral. Tenotomía PLB. Desinserción subescapular.
+Extracción BioRSA 36 10 mm.
+Colocación PTHI --- (Stryker/Tornier):
+- Metaglena 25 + tornillos 38 + injerto BioRSA
+- Glenosfera 36
+- Vástago Perform 2+ no cementado
+- Inserto humeral 0
+Reducción comprobando adecuada estabilidad protésica y balance articular.
+Reinserción de subescapular transósea.
+Lavado, hemostasia, drenaje aspirativo, cierre por planos, inmovilización con cabestrillo.
+Pido Rx y hemograma`,
+
+tratamiento: `- Mantener el miembro superior operado en cabestrillo durante 4 semanas. Puede retirar cabestrillo eventualmente para aseo personal y para realizar ejercicios de flexoextensión de codo y pendulares
+- Mover activamente los dedos de la extremidad operada
+- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos
+- Enanplus 1 c/12h vía oral si dolor
+- Nolotil caps. 1 c/8h si más dolor
+- Omeprazol 20 mg v.o. 1 c/24h
+- Tratamiento domiciliario habitual
+- Puede requerir ayuda domiciliaria
+- Curas locales c/72h y retirada de puntos por ATS DE ZONA en 14-15 días
+- Gestionar cita con Servicio de RHB antes de marcharse de alta
+- Solicitar cita para revisión en 3 semanas para ${DOCTOR}
+- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con su Centro de Salud en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario`
+},
+
+    hombro_pthi_revive: {
+hoja: `INTERVENCIÓN (DRS. ${DOCTOR}/${AYUDANTE})
+Anestesia gral. + bloqueo locorregional. Profilaxis ATB.
+Silla de playa. Incisión sobre cicatriz previa. Abordaje deltopectoral. Desinserción subescapular y troquíter. Se libera subescapular y supraespinoso. Exéresis de tejido fibrótico previo que se manda a microbiología, así como muestras de interfase de cemento, y tejido blando de glena y canal endomedular.
+Colocación PTHI --- Glena Reversed 2 y vástago Flex Revive (Stryker/Tornier):
+- Metaglena 29 + tornillos
+- Glenosfera 39
+- Fresado del canal hasta 15 y eliminación de osteofito en calcar. Colocación de Vástago Flex Revive nº 15 (vástago y cuerpo metafisario) no cementado (queda estable), bandeja humeral centrada 1,5
+- Inserto humeral 9 mm
+Reducción comprobando adecuada estabilidad protésica y balance articular.
+Reinserción de subescapular y troquíter a prótesis y diáfisis con PDS 1.
+Lavado, hemostasia, drenaje aspirativo, cierre por planos, inmovilización con cabestrillo.
+Pido Rx y hemograma`,
+
+tratamiento: `- Mantener el miembro superior operado en cabestrillo durante 4 semanas. Puede retirar cabestrillo eventualmente para aseo personal y para realizar ejercicios de flexoextensión de codo y pendulares
+- Mover activamente los dedos de la extremidad operada
+- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos
+- Enanplus 1 c/12h vía oral si dolor
+- Nolotil caps. 1 c/8h si más dolor
+- Omeprazol 20 mg v.o. 1 c/24h
+- Tratamiento domiciliario habitual
+- Puede requerir ayuda domiciliaria
+- Curas locales c/72h y retirada de puntos por ATS DE ZONA en 14-15 días
+- Gestionar cita con Servicio de RHB antes de marcharse de alta
+- Solicitar cita para revisión en 3 semanas para ${DOCTOR}
+- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con su Centro de Salud en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario`
+},
+
+// ── HOMBRO — TUMORES / PARTES BLANDAS ──────────────
+    hombro_elastofibroma: {
+hoja: `INTERVENCIÓN (DRS. ${DOCTOR}/${AYUDANTE})
+Diag. Elastofibroma dorsii escápula ---.
+Anestesia gral. Decúbito prono.
+Abordaje paraescapular oblicuo.
+Apertura dorsal ancho, disección profunda, exéresis elastofibroma dorsii.
+Se envía pieza a AP.
+Hemostasia cuidadosa, lavado, drenaje aspirativo, cierre por planos.
+Apósito compresivo.
+No es CMA`,
+
+tratamiento: `- Mantener el miembro superior operado en cabestrillo 1 semana. Puede retirar cabestrillo eventualmente para aseo personal y para realizar ejercicios de flexoextensión de codo y pendulares
+- Mover activamente los dedos de la extremidad operada
+- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos
+- Paracetamol 1 g v.o. /8h vía oral
+- Nolotil caps. 1 c/8h si más dolor
+- Omeprazol 20 mg v.o. 1 c/24h
+- Tratamiento domiciliario habitual
+- Puede requerir ayuda domiciliaria
+- Curas locales c/72h y retirada de puntos por ATS DE ZONA en 14-15 días
+- Pedir cita para Sala de Curas en 5-7 días
+- Solicitar cita para revisión en 3 semanas para ${DOCTOR}
+- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con su Centro de Salud en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario`
+},
+
+// ── CODO ──────────────────────────────────
+    codo_biceps_agudo: {
+hoja: `INTERVENCIÓN (DRS. ${DOCTOR}/${AYUDANTE})
+Diag. Rotura bíceps distal MS ---.
+Anestesia gral. + locorregional. Profilaxis ATB. Isquemia preventiva. Mesa de mano.
+Abordaje anterior. Localización cabo tendinoso. Se referencia con cintas de alta resistencia (Arthrex).
+Reinserción en tuberosidad bicipital con sistema Biceps Button de Arthrex + tornillo interferencial (túnel ciego de 7 mm).
+Se retira isquemia, hemostasia, lavado y cierre por planos.
+Inmovilización con férula braquial.
+Alta CMA esta tarde si buena evolución.
+Pido Rx`,
+
+tratamiento: `- FÉRULA BRAQUIAL 3 semanas. Mantener brazo elevado en cabestrillo
+- Mover activamente los dedos de la extremidad operada
+- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos
+- Analgesia por elastómero prescrito por Servicio de Anestesia durante las primeras 24-48h. Continuar una vez retirado con Dexketoprofeno 25 mg v.o. 1/8 horas vía oral durante 4-5 días. Puede alternar con Metamizol caps. 1 c/8h si más dolor
+- Omeprazol 20 mg v.o. 1 c/24h
+- NO CURAR HASTA REVISIÓN EN SALA DE CURAS TRAUMATOLOGÍA EN 12-14 DÍAS SALVO INCIDENCIA CLÍNICA, debiendo recolocar férula (PEDIR CITA PARA SALA DE CURAS TRAUMATOLOGÍA)
+- Pedir cita con Servicio de RHB antes de marcharse de alta
+- Solicitar cita para revisión en 3 semanas para ${DOCTOR}
+- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con su Centro de Salud en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario`
+},
+
+    codo_biceps_cronico: {
+hoja: `INTERVENCIÓN (DRS. ${DOCTOR}/${AYUDANTE})
+Diag. Rotura crónica bíceps distal MS ---.
+Anestesia gral. Profilaxis ATB. Mesa de mano.
+1ºT Extracción ST autólogo por posterior de MI. Grosor plastia 7 mm.
+2ºT Abordaje anterior. Se referencia rama cutánea antebraquial. Reinserción de plastia en tuberosidad bicipital con sistema Biceps Button de Arthrex + tornillo interferencial (túnel ciego de 7 mm).
+Localización de muñón bicipital proximal, disección y movilización del mismo.
+Sutura T-T de plastia a muñón con suturas de alta resistencia Fiber-Wire.
+Hemostasia, lavado y cierre por planos.
+Inmovilización con férula braquial.`,
+
+tratamiento: `- FÉRULA BRAQUIAL 3 semanas. Mantener brazo elevado en cabestrillo
+- Mover activamente los dedos de la extremidad operada
+- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos
+- Enanplus 75 mg v.o. 1/12 horas vía oral durante 4-5 días. Puede alternar con Metamizol caps. 1 c/8h si más dolor
+- Omeprazol 20 mg v.o. 1 c/24h
+- Enoxaparina Rovi 40 mg 1 iny. s.c c/24h 10 días
+- NO CURAR HERIDA DEL BRAZO INTERVENIDO HASTA REVISIÓN EN SALA DE CURAS TRAUMATOLOGÍA EN 12-14 DÍAS SALVO INCIDENCIA CLÍNICA, debiendo recolocar férula (PEDIR CITA PARA SALA DE CURAS TRAUMATOLOGÍA)
+- Curar pequeña herida de la pierna c/72h y retirar puntos en 10 días
+- Requiere ayuda y reposo domiciliario
+- Pedir cita con Servicio de RHB antes de marcharse de alta
+- Solicitar cita para revisión en 3 semanas para ${DOCTOR}
+- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con su Centro de Salud en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario`
+},
+
+    codo_epicondilitis: {
+hoja: `INTERVENCIÓN (DRS. ${DOCTOR}/${AYUDANTE})
+Diag. EPICONDILITIS CODO ---.
+Anestesia gral. Supino. Isquemia preventiva. Mesa de mano.
+Técnica de Nirschl. Perforaciones con AK en epicóndilo.
+Lavado profuso y cierre por planos.
+Vendaje.`,
+
+tratamiento: `- Mantener brazo elevado las primeras 24-48h. Puede mover codo libremente sin realizar esfuerzos ni coger peso durante 3 semanas al menos
+- Mover activamente los dedos de la extremidad operada
+- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos
+- Dexketoprofeno 25 mg v.o. 1/8 horas vía oral durante 4-5 días. Puede alternar con Metamizol caps. 1 c/8h si más dolor
+- Omeprazol 20 mg v.o. 1 c/24h
+- Curas locales c/3-4 días y retirada de puntos por ATS-DUE de zona en 12-14 días según evolución
+- Solicitar cita para revisión en 4 semanas para ${DOCTOR}
+- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con su Centro de Salud en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario`
+},
+
+// ── RODILLA — OSTEOTOMÍAS Y CARTÍLAGO ──────────────
+    rodilla_ovt: {
+hoja: `OSTEOTOMÍA VALGUIZANTE TIBIA --- DE APERTURA
+Decúbito supino con pernera en pierna ---.
+Isquemia en raíz del muslo (105 min).
+Control por escopia.
+- Abordaje medial oblicuo anterior a los isquiotibiales. Localización de pata de ganso y LLI
+- Sección de tercio anterior y distal de LLI
+- Osteotomía transversa medial de apertura de tibia tras control por Rx (3-3,5 cm distal a línea articular) y corte con sierra parando 1 cm antes de la cortical lateral
+- Osteotomía vertical (110º con respecto a la osteotomía horizontal) tras la TTA separando el tendón rotuliano hasta proximal
+- Con pinza reguladora vamos ampliando los grados lentamente (15-20 min mientras realizamos la extracción de cresta) hasta conseguir 12º (hipercorrección de los 11,5º previstos)
+- Extracción de cresta ilíaca --- a escoplo: 2 cuñas de 1,3 cm + esponjosa. Lavado, drenaje y cierre
+- Introducción de las dos cuñas de base de 1,3 cm y esponjosa
+- Colocación de placa TOMOFIX de Synthes tamaño Small, según técnica quirúrgica (tornillos bloqueados proximales bicorticales, tornillo de compresión para aproximación de la placa y sustitución por tornillo bloqueado, tornillos bloqueados distales bicorticales)
+- Control por escopia comprobando el eje mecánico pasando por el punto Fujisawa con barra
+- Lavado, drenaje y cierre por planos`,
+
+tratamiento: `- Mantener el pie elevado siempre que esté sentado
+- Aplicar hielo sobre la rodilla operada 2-3 veces al día durante 20 minutos
+- Mover activamente los dedos de la extremidad operada
+- Realizar los ejercicios que su médico le ha explicado, permitiendo la flexoextensión libre de la rodilla
+- NO APOYO DE LA PIERNA INTERVENIDA DURANTE 3 SEMANAS, después comenzará carga parcial otras 3 semanas y tras ello inicio de carga completa
+- Paracetamol 1 g / 8 horas vía oral
+- Metamizol 575 mg 1 caps / 8 horas, alterno con anterior cada 4 horas si dolor intenso
+- Omeprazol 20 mg / 24 horas
+- Bemiparina 3500 UI / 24 horas vía subcutánea / 6 semanas
+- Hierro proteinsuccinilato 40 mg sol oral en ayunas cada día durante un mes
+- Solicitar cita para revisión en 3 semanas para ${DOCTOR}
+- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias`
+},
+
+    rodilla_ovt_slope: {
+hoja: `OSTEOTOMÍA VALGUIZANTE TIBIA --- DE APERTURA + CORRECCIÓN PENDIENTE POSTERIOR
+Decúbito supino.
+Isquemia en raíz del muslo (120 min).
+
+1º TIEMPO CAR:
+- Portales tradicionales anteromedial y anterolateral
+- Articulación femoropatelar y fondos de saco cuadricipitales: condropatía II en surco troclear
+- Compartimento interno: rotura en flap desde el cuerno posterior al cuerpo del menisco interno y rotura de la región más anterior del mismo menisco que se reseca y regulariza con pinzas y motor
+- Pivote central: rotura del LCA con signo del cíclope en fémur. Se reseca
+- Compartimento externo: condropatía II, rotura del borde del cuerpo del ME
+
+2º TIEMPO OSTEOTOMÍA:
+Control por escopia.
+- Abordaje medial oblicuo. Localización del LLI
+- Despegamos con periostótomo parte del LLI para dejar libre la zona de osteotomía. Localizamos borde posterior del LLI y desperiostizamos la cortical posteromedial de la tibia
+- Retirada de los hilos de la plastia por el túnel tibial
+- Osteotomía transversa medial de apertura de tibia tras control por Rx (3-3,5 cm distal a línea articular) y corte con sierra parando 1 cm antes de la cortical lateral
+- Osteotomía vertical (110º con respecto a la osteotomía horizontal) tras la TTA separando el tendón rotuliano hasta proximal
+- Introducción de los escoplos gradualmente introduciendo cada uno 1 cm menos que el anterior. La introducción de los mismos toma dirección de posterior a lateral y más anterior para poder disminuir la pendiente sin alterar la altura de la patela
+- Colocación de placa ACTIVMOTION DE MEDCOMTECH tamaño Small (tornillos bloqueados proximales bicorticales, tornillo de compresión de cortical en diáfisis y los otros dos bloqueados)
+- Control por escopia comprobando disminución de la pendiente y corrección del varo
+- Lavado, drenaje y cierre por planos`,
+
+tratamiento: `- Mantener el pie elevado siempre que esté sentado
+- Aplicar hielo sobre la rodilla operada 2-3 veces al día durante 20 minutos
+- Mover activamente los dedos de la extremidad operada
+- Realizar los ejercicios que su médico le ha explicado, permitiendo la flexoextensión libre de la rodilla
+- NO APOYO DE LA PIERNA INTERVENIDA DURANTE 3 SEMANAS, después comenzará carga parcial otras 3 semanas y tras ello inicio de carga completa
+- Paracetamol 1 g / 8 horas vía oral
+- Metamizol 575 mg 1 caps / 8 horas, alterno con anterior cada 4 horas si dolor intenso
+- Omeprazol 20 mg / 24 horas
+- Bemiparina 3500 UI / 24 horas vía subcutánea / 6 semanas
+- Hierro proteinsuccinilato 40 mg sol oral en ayunas cada día durante un mes
+- Solicitar cita para revisión en 3 semanas para ${DOCTOR}
+- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias`
+},
+
+    rodilla_fulkerson: {
+hoja: `OSTEOTOMÍA TTA TIPO FULKERSON RODILLA ---
+Manguito de isquemia en raíz del muslo (70 min).
+Profilaxis antibiótica con 2 g cefazolina iv.
+
+1º TIEMPO (CAR):
+- Condropatía faceta medial patela grado III, subluxación lateral, tróclea displásica, con tracking alterado
+- Compartimento medial: condropatía tibial grado II-III
+- Pivote central: LCA competente
+- Compartimento lateral: meniscectomía cuerpo y cuerno anterior de ME, condropatía tibial grado II-III
+
+2º TIEMPO:
+- Incisión longitudinal rodilla anterior desde polo inferior de la rótula hasta 6-7 cm distales a TTA
+- Desperiostizamos al borde lateral de la cresta tibial y marcamos la entrada de osteotomía por medial. Desperiostizamos 6-7 cm distal a TTA
+- Con AK marcamos la entrada por anteromedial (1 cm de grosor desde TTA) y salida por posterolateral con cuidado de no dar con estructuras vasculonerviosas. Acabamos en apex distal de 2-3 mm
+- Con sierra iniciamos cortical medial y continuamos con escoplo
+- Visualizamos tendón rotuliano y marcamos por proximal el nivel de osteotomía y con escoplo lo hacemos
+- Medializamos 1 cm, descenso de 2-3 mm y fijamos con dos tornillos de 4,5 cm hasta cortical posterior, divergentes
+- Realizamos de nuevo CAR para visualizar el tracking y realizamos FICAT del alerón externo con tijera
+- Se comprueba flexión a 90º con buen tracking y fijación
+- Drenaje, cierre por planos. Vendaje`,
+
+tratamiento: `- Mantener el pie elevado siempre que esté sentado
+- Aplicar hielo sobre la rodilla operada 2-3 veces al día durante 20 minutos
+- Mover activamente los dedos de la extremidad operada
+- Realizar los ejercicios que su médico le ha explicado: isométricos de cuádriceps, movilización de rótula horizontal y vertical y elevación con pierna extendida
+- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos
+- Puede caminar con ayuda de bastones con apoyo PARCIAL de la pierna intervenida
+- Mantener ortesis de inmovilización con balance articular limitado de 0º a 45º durante 3 semanas y después movilidad libre
+- Metamizol 1 cápsula / 8 horas vía oral
+- Ibuprofeno 600 mg / 8 horas, alterno con anterior cada 4 horas si dolor intenso
+- Omeprazol 20 mg / 24 horas
+- Bemiparina 3500 UI 1 jeringa / 24 horas vía subcutánea / 6 semanas
+- Solicitar cita con RHB al alta
+- Revisión en CCEE de COT (${DOCTOR}) en 3 semanas para ampliar arco movilidad y seguimiento
+- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias`
+},
+
+    rodilla_mosaico_ovt: {
+hoja: `MOSAICOPLASTIA + OVT
+INTERVENCIÓN (${DOCTOR}/${AYUDANTE})
+Decúbito supino con pernera en pierna ---.
+Isquemia en raíz del muslo (125 min).
+Control por escopia.
+
+1º TIEMPO CAR:
+Portales habituales AM y AL.
+Compartimento FP: condropatía II en patela.
+Compartimento FTM: lesión OC en zona de carga de 25 mm × 20 mm aprox. Rotura en flap de cuerpo de ML que se regulariza con pinzas y motor.
+Pivote central: LCA íntegro y competente.
+Compartimento FTL: sin hallazgos.
+
+2º TIEMPO OSTEOTOMÍA VALGUIZANTE DE TIBIA DE APERTURA MEDIAL:
+Incisión medial.
+Osteotomía de apertura de 8º sin invadir cortical lateral.
+Placa ActivMotion de NewClip talla 2.
+Control por escopia.
+
+3º TIEMPO MOSAICOPLASTIA:
+Toma de 3 autoinjertos osteocondrales de 10, 8 y 8 mm (dos se toman de zona medial del CFM y uno de CFL) según técnica habitual con sistema Arthrex.
+Implantación de dichos injertos en zona defectuosa con puentes de 1-2 mm entre ellos quedando a ras de su cartílago sano. Profundidad de los injertos de 15 mm.
+Lavado con SF. Cierre.`,
+
+tratamiento: `- Aplicar hielo sobre la articulación operada 2-3 veces al día durante 20 minutos
+- Mover activamente los dedos de la extremidad operada
+- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos
+- Puede caminar con ayuda de 2 muletas SIN APOYO de la pierna intervenida hasta nueva orden
+  * Semana 0-6: NO PUEDE APOYAR. Descarga completa
+  * Semana 6-12: inicio parcial y progresivo de la carga
+- Realizar ejercicios isométricos de cuádriceps
+- MOVILIDAD LIBRE DE RODILLA SIN APOYO
+- Enanplus 1 comp / 8 horas vía oral alternando con Metamizol si persistencia del dolor
+- Enoxaparina Rovi 40 mg / 24 horas vía subcutánea durante 4 semanas
+- Retirada de puntos por ATS DE ZONA en 12-15 días
+- Revisión en CCEE de COT (${DOCTOR}) en 3 semanas para ver evolución
+- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario`
+},
+
+    rodilla_lfpm_tta: {
+hoja: `HOJA OPERATORIA LFPM + DESCENSO Y MEDIALIZACIÓN DE TTA
+LRR RÓTULA ---
+- Profilaxis antibiótica con 2 g de cefazolina
+- Isquemia en raíz de muslo (115 min)
+
+1º TIEMPO (CAR):
+Portal AL y accesorio suprapatelar medial.
+Compartimento externo y medial sin alteraciones.
+Pivote central con LCA competente e íntegro.
+Rótula con condropatía II-III faceta lateral y II-III surco. Fragmentos mediales que intentamos retirar por artroscopia siendo imposible y necesitando artrotomía medial para su exéresis.
+
+2º TIEMPO:
+Incisión medial a la TTA para extracción de recto interno con tenótomo.
+Osteotomía de 6 cm descendiendo 0,5 cm y ligera medialización. Fijación con dos tornillos canulados proximales, placa de tercio de caña en región de osteotomía distal transversa con dos tornillos.
+
+3º TIEMPO:
+Abordaje medial y superior a la rótula disecando espacio bajo la capa 1.
+Abordaje sobre epicóndilo y tubérculo del aductor. Se diseca espacio bajo la capa 1 haciéndolo comunicar con el anterior.
+Reconstrucción del LFPM usando sistema de fijación de Arthrex en rótula y fijación con tornillo interferencial del mismo sistema de 6×23 mm en CFI (en zona entre tubérculo del aductor y epicóndilo comprobado por escopia y con referencia el punto de Schöttle) previa comprobación de la tensión e isometría del mismo. Fijación a 30º.
+Comprobación de lateralización <1 cm.
+Cierre por planos de las heridas. Piel con grapas. Vendaje compresivo.`,
+
+tratamiento: `- Mantener el pie elevado siempre que esté sentado
+- Crioterapia: aplicar hielo sobre la rodilla operada 3 veces al día durante 20-25 minutos
+- Mover activamente los dedos de la extremidad operada
+- Realizar los ejercicios isométricos que su médico le ha explicado
+- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos
+- Retirada de puntos de sutura una vez cicatrizada la herida quirúrgica (12-14 días aproximadamente)
+- MOVILIDAD:
+  * 0-2 semana: ejercicios pasivos de movilidad de rodilla con ortesis bloqueada a 0-30º
+  * 2-3ª semana: aumento del balance articular a 0-60º
+  * 3-6ª semana: aumento del balance articular a 0-90º
+  * A partir de la 6ª semana: retirada de ortesis y movilidad libre
+- CARGA:
+  * 0-3 semanas: descarga completa
+  * 3-8 semanas: inicio de carga muy parcial y progresiva
+  * A partir de semana 8: carga completa
+- INICIO ACTIVIDAD DEPORTIVA:
+  * Bicicleta: 2º mes
+  * Natación: 3º mes
+  * Retorno actividad deportiva: 6º mes`
 },
 
     }; // fin del return
