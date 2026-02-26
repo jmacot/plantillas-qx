@@ -3,8 +3,8 @@
 Aplicacion web de archivo unico para generar **notas operatorias** y **tratamientos al alta** en Cirugia Ortopedica y Traumatologia (COT). Disenada para agilizar la documentacion clinica en el dia a dia del quirofano.
 
 ![HTML5](https://img.shields.io/badge/HTML5-single--file-E34F26?logo=html5&logoColor=white)
-![Plantillas](https://img.shields.io/badge/plantillas-60-1a3a5c)
-![Categorias](https://img.shields.io/badge/categorías-8-16a34a)
+![Plantillas](https://img.shields.io/badge/plantillas-78-1a3a5c)
+![Regiones](https://img.shields.io/badge/regiones-5-16a34a)
 ![Sin dependencias](https://img.shields.io/badge/dependencias-ninguna-grey)
 
 ---
@@ -19,18 +19,21 @@ No requiere instalacion. Funciona en cualquier navegador, incluyendo movil y tab
 
 ## Funcionalidades
 
-- **60 plantillas quirúrgicas** organizadas en 8 categorías, fieles a los documentos originales del servicio.
-- **Campos dinámicos**: fecha del día, cirujano y ayudante se insertan automáticamente en cada plantilla.
-- **Dos paneles simultáneos**: hoja operatoria (izquierda) y tratamiento al alta (derecha).
-- **Copia rápida** al portapapeles con un clic y confirmación visual mediante banner animado.
-- **Archivo único** (`notas_operatorias.html`): sin instalación, sin servidor, sin dependencias. Se abre en cualquier navegador.
+- **78 plantillas quirurgicas** organizadas en 13 categorias y 5 regiones anatomicas (Trauma, Rodilla, Cadera, Miembro Superior, Pie y Tobillo)
+- **Navegacion por regiones**: pills horizontales para filtrar por region anatomica
+- **Campos dinamicos**: fecha del dia, cirujano y ayudante se insertan automaticamente en cada plantilla
+- **Dos paneles simultaneos**: hoja operatoria (izquierda) y tratamiento al alta (derecha) con estilo glass y iconos SVG
+- **Copia rapida** al portapapeles con un clic y confirmacion visual mediante toast animado
+- **Diseno premium**: header con degradado, animaciones fadeInUp escalonadas y scrollbar personalizado
+- **Modo oscuro / modo claro**: deteccion automatica por hora y sistema, con toggle manual
+- **Archivo unico** (`index.html`): sin instalacion, sin servidor, sin dependencias
 
 ---
 
 ## Cómo usar
 
 1. Descarga o clona el repositorio.
-2. Abre `notas_operatorias.html` en tu navegador.
+2. Abre `index.html` en tu navegador.
 3. Escribe el **apellido del cirujano** y del **ayudante**.
 4. Selecciona el **procedimiento** en el desplegable.
 5. La hoja operatoria y el tratamiento al alta se generan automáticamente.
@@ -38,99 +41,39 @@ No requiere instalacion. Funciona en cualquier navegador, incluyendo movil y tab
 
 ---
 
-## Catálogo de procedimientos
+## Catalogo de procedimientos
 
-### Trauma (13)
-| Procedimiento |
-|---|
-| Canulados cadera — tornillos canulados (Stryker) |
-| Clavo Gamma3 — Fr pertrocantérea cadera (Stryker) |
-| PPC Exeter (Stryker) |
-| RAFI Fr periprotésica cadera — Placa NCB (Zimmer) |
-| RAFI Fr supracondílea fémur — Placa AXSOS (Stryker) |
-| RAFI Fr rótula — cerclaje obenque (agujas K + alambre) |
-| Clavo T2 tibia — fresado (Stryker) |
-| RAFI Tobillo — placa baja energía peroné distal (Stryker) |
-| Sutura tendón Aquiles (mini-open, Ma-Griffith) |
-| RAFI Fr distal radio — Placa Aculoc-2 (Acumed) |
-| RAFI Húmero proximal/diafisario — Placa AxSOS (Stryker) |
-| RAFI Clavícula — Placa Variax (Stryker) |
-| Fr Monteggia / olécranon — Placa Peri-Loc (S&N) |
+### Region: Trauma (12)
 
-### Artroscopia de Rodilla — CAR (17)
-| Procedimiento |
-|---|
-| CAR Mosaicoplastia |
-| CAR + Fr meseta tibial |
-| CAR Reinserción avulsión espina tibial LCA |
-| CAR Ficat + plicatura ARI (Lanny Johnson) |
-| CAR SHER plicatura ARI + Ficat |
-| CAR + OTV adicción |
-| CAR + OTV sustracción (Coventry) |
-| CAR + Osteotomía varizante fémur |
-| OTV placa Tomofix (sin CAR) |
-| CAR Meniscectomía parcial |
-| CAR Sutura meniscal |
-| CAR Artrolisis + movilización bajo anestesia |
-| CAR Diagnóstica |
-| CAR Extracción cuerpo libre |
-| CAR Ficat |
-| CAR Toilette |
-| CAR Sinovectomía total |
+Canulados cadera, Gamma3, PPC Exeter, RAFI periprotesica NCB, RAFI supracondilea AXSOS, RAFI rotula cerclaje, Clavo T2 tibia, RAFI tobillo, Sutura Aquiles, RAFI EDR Aculoc-2, RAFI humero AxSOS, RAFI clavicula Variax, Monteggia Peri-Loc
 
-### Prótesis de Cadera — PTC (2)
-| Procedimiento |
-|---|
-| PTC Summit (DePuy) |
-| PTC Zimmer (G7 + Taperloc) |
+### Region: Rodilla (35)
 
-### Prótesis de Rodilla (3)
-| Procedimiento |
-|---|
-| PTR Triathlon (Stryker) |
-| PUC PKR (Stryker) |
-| Revisión PUC (RPUC) |
+**Artroscopia (CAR)** — Mosaicoplastia, Fr meseta tibial, Reinsercion espina tibial, Ficat + plicatura ARI, SHER plicatura, Meniscectomia, Sutura meniscal, Artrolisis, Diagnostica, Cuerpo libre, Ficat, Toilette, Sinovectomia
 
-### LCA — Stryker (5)
-| Procedimiento |
-|---|
-| LCA ProCinch anatómico ST-RI |
-| LCA ProCinch anatómico ALL-INSIDE |
-| LCA ProCinch + Lemaire |
-| LCA ProCinch + sutura meniscal |
-| LCA ProCinch + reinserción raíz meniscal posterior |
+**Protesis (PTR)** — Triathlon, PUC PKR, Revision PUC
 
-### LCA — Otros / Revisión (6)
-| Procedimiento |
-|---|
-| LCA ALL-INSIDE (Arthrex) |
-| LCA Hueso-Tendón-Hueso (HTH) |
-| LCA Aumentación AM |
-| LCA Aumentación PL |
-| LCA Rescate — revisión |
-| LCA Rescate — HTH banco + Lemaire |
+**LCA** — ProCinch ST-RI, ProCinch ALL-INSIDE, ProCinch + Lemaire, ProCinch + sutura meniscal, ProCinch + reinsercion raiz, ALL-INSIDE Arthrex, HTH, Aumentacion AM, Aumentacion PL, Rescate revision, Rescate HTH banco + Lemaire
 
-### Artroscopia de Cadera — CAC (1)
-| Procedimiento |
-|---|
-| Reinserción labrum acetabular |
+**Osteotomias y Cartilago** — OTV adiccion, OTV sustraccion Coventry, OTV varizante femur, OTV Tomofix, Fulkerson, Mosaico + OTV, LFPM + TTA
 
-### Miembro Superior (13)
-| Procedimiento |
-|---|
-| Síndrome del túnel carpiano (STC) |
-| TCG Mano (quiste sinovial) |
-| Dedo en resorte — apertura polea A1 |
-| Dedo en resorte — tenolisis |
-| RAFI Fr distal radio — Placa DVR |
-| RAFI Fr distal radio — Placa ACUMED |
-| Fr radio diafisario — placa |
-| Fr cúbito + radio — doble placa |
-| Fr húmero diafisario — placa |
-| Fr olécranon — placa |
-| Fr olécranon — cerclaje |
-| Sección tendón flexor mano |
-| Clavo T2 húmero retrógrado |
+### Region: Cadera (3)
+
+**Protesis (PTC)** — Summit DePuy, Zimmer G7 + Taperloc
+
+**Artroscopia (CAC)** — Reinsercion labrum acetabular
+
+### Region: Miembro Superior (24)
+
+**Mano y Antebrazo** — STC, TCG mano, Dedo resorte A1, Dedo resorte tenolisis, RAFI EDR DVR, RAFI EDR ACUMED, Fr radio placa, Fr cubito + radio doble placa, Fr humero placa, Fr olecranon placa, Fr olecranon cerclaje, Seccion tendon flexor, Clavo T2 humero
+
+**Hombro** — CAH manguito rotador, CAH subescapular, Balon subacromial, PTHI Aequalis, PTHI Ascend, PTHI Biorsa, PTHI Revive, Elastofibroma dorsi
+
+**Codo** — Biceps agudo, Biceps cronico, Epicondilitis
+
+### Region: Pie y Tobillo (5)
+
+Antepie, Pie plano osteotomia, Pie plano artrodesis, Pie cavo osteotomia, Pie cavo artrodesis
 
 ---
 
