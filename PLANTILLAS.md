@@ -2481,7 +2481,25 @@ PROTESIS TOTAL  DE CADERA ZIMMER
 ```
 IQ {FECHA} ({DOCTOR}/{AYUDANTE})
 
-CAC REINSERCIÓN  LABRUM
+CAC REINSERCIÓN LABRUM CADERA {LADO_F}
+- Decúbito supino.
+- Profilaxis ATB.
+- Mesa de tracción.
+- Anestesia general.
+- Control escopia.
+- Portales ALP, ALD y anterior.
+
+- Compartimento Central:
+- SOLO APERTURA LONGITUDINAL.
+- Labrum ___________.
+- OSTEOPLASTIA ACETABULAR y REINSERCIÓN DE LABRUM CON 4 ANCLAJES.
+- OSTEOPLASTIA CABEZA FEMORAL con control de escopia.
+- Comprobación de maniobra de Choque.
+- SUTURA CAPSULAR CON ___________.
+- Tiempo de tracción ___ min.
+- Cierre de piel con prolene y grapa.
+- Infiltración anestésica.
+- Apósito compresivo.
 ```
 
 **Tratamiento al Alta:**
