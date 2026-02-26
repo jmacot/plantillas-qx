@@ -807,13 +807,20 @@
 
     <div class="card">
       <div class="form-row">
-        <div class="form-group" style="flex:1">
+        <div class="form-group" style="flex:none; width:120px">
           <label>Cirujano</label>
-          <input id="doctor" type="text" placeholder="Apellido cirujano" oninput="cargarPlantilla()" />
+          <input id="doctor" type="text" placeholder="Apellido" oninput="cargarPlantilla()" />
         </div>
-        <div class="form-group" style="flex:1">
+        <div class="form-group" style="flex:none; width:120px">
           <label>Ayudante</label>
-          <input id="ayudante" type="text" placeholder="Apellido ayudante" oninput="cargarPlantilla()" />
+          <input id="ayudante" type="text" placeholder="Apellido" oninput="cargarPlantilla()" />
+        </div>
+        <div class="form-group" style="flex:none">
+          <label>Lateralidad</label>
+          <select id="lateralidad" onchange="cargarPlantilla()">
+            <option value="D">Derecho</option>
+            <option value="I">Izquierdo</option>
+          </select>
         </div>
         <div class="form-group" style="flex:2">
           <label>Intervención</label>
@@ -1139,14 +1146,22 @@
     const proc = document.getElementById('procedimiento').value;
     const doc  = (document.getElementById('doctor').value.trim() || 'DOCTOR').toUpperCase();
     const ayu  = (document.getElementById('ayudante').value.trim() || 'AYUDANTE').toUpperCase();
+    const lado = document.getElementById('lateralidad').value;
     if (!proc) return;
-    const t = obtenerPlantillas(doc, ayu);
+    const t = obtenerPlantillas(doc, ayu, lado);
     const datos = t[proc];
     if (!datos) return;
     const hojaEl = document.getElementById('hojaOperatoria');
     const trataEl = document.getElementById('tratamientoAlta');
-    hojaEl.value = datos.hoja;
-    trataEl.value = datos.tratamiento;
+    // Reemplazar --- residuales con lateralidad abreviada
+    // Reemplazar "---." → "derecho." y "---" sueltos → "derecho"
+    const ladoStr = lado === 'D' ? 'derecho' : lado === 'I' ? 'izquierdo' : '';
+    function reemplazarLado(txt) {
+      if (!ladoStr) return txt;
+      return txt.replace(/---\./g, ladoStr + '.').replace(/---/g, ladoStr);
+    }
+    hojaEl.value = reemplazarLado(datos.hoja);
+    trataEl.value = reemplazarLado(datos.tratamiento);
     // Flash animation
     hojaEl.classList.remove('flash');
     trataEl.classList.remove('flash');
@@ -1159,6 +1174,7 @@
     document.getElementById('procedimiento').value = '';
     document.getElementById('doctor').value = '';
     document.getElementById('ayudante').value = '';
+    document.getElementById('lateralidad').value = '';
     document.getElementById('hojaOperatoria').value = '';
     document.getElementById('tratamientoAlta').value = '';
     activeCat = null;
@@ -1527,8 +1543,14 @@
   // ─────────────────────────────────────────────
   //  PLANTILLAS
   // ─────────────────────────────────────────────
-  function obtenerPlantillas(DOCTOR, AYUDANTE) {
+  function obtenerPlantillas(DOCTOR, AYUDANTE, LADO) {
     const FECHA = hoy();
+    // Lateralidad — formas completas para PPC/PTC
+    const LADO_M = LADO === 'D' ? 'derecho' : LADO === 'I' ? 'izquierdo' : '---';
+    const LADO_ABR_F = LADO === 'D' ? 'DCHA' : LADO === 'I' ? 'IZDA' : '---';
+    // Decúbito contrario (PPC/PTC)
+    const DECUBITO = LADO === 'D' ? 'izquierdo' : LADO === 'I' ? 'derecho' : '---';
+    const DECUBITO_UPPER = DECUBITO.toUpperCase();
 
     return {
 // ── TRAUMA ──────────────────────────────
@@ -1644,10 +1666,10 @@ tratamiento: `- Mantener pie elevado cuando esté sentada, moviendo el pie como 
 hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 PRÓTESIS PARCIAL DE CADERA
-- Fractura subcapital fémur izquierdo
+- Fractura subcapital fémur ${LADO_M}
 - Anestesia regional.
 - Profilaxis antibiótica con 2g de cefazolina.
-- Decúbito lateral derecho.
+- Decúbito lateral ${DECUBITO}.
 - Incisión longitudinal sobre región trocantérica y vía de abordaje según Bauer.
 - Capsulotomía en “T” y osteotomía de cuello femoral. Resección de cabeza femoral.
 - Artroplastia parcial de cadera cementada modelo Exeter (Stryker) vástago nº 35.5, cuello 0x26mm, cúpula bipolar 43mm.
@@ -2587,12 +2609,12 @@ tratamiento: `- Aplicar hielo sobre la articulación operada 3 - 4 veces al día
 hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 PROTESIS TOTAL  DE CADERA SUMMIT
-- COXARTROSIS  CADERA DCHA:
-- PROFILAXIS  ANTIBIÓTICA CON  2 GRAMOS  DE CEFAZOLINA  Y  1  GRAMO IV DE TRANEXÁMICO.  
-- DECUBITO  LATERAL  IZQUIERDO.
+- COXARTROSIS  CADERA ${LADO_ABR_F}:
+- PROFILAXIS  ANTIBIÓTICA CON  2 GRAMOS  DE CEFAZOLINA  Y  1  GRAMO IV DE TRANEXÁMICO.
+- DECUBITO  LATERAL  ${DECUBITO_UPPER}.
 - INCISIÓN  LOGITUDINAL SOBRE REGIÓN  TROCANTERICA Y  VIA ABORDAJE  BAUER.
 - CAPSULECTOMÍA,  LUXACION  DE  CABEZA  FEMORAL   Y  OSTEOTOMIA DEL  CUELLO.
-- ARTROPLASTIA TOTAL CADERA IZQ  MODELO  SUMMIT CON  COTILO  PINACLE  SECTOR GRIPTION NO  CEMENTADO Nº  50, POLIETILENO  MARATHON Nº 50 +10º, VASTAGO  Nº 6 NO  CEMENTADO ESTÁNDAR CON  CABEZA DE  28 MM +5 DE CERÁMICA .
+- ARTROPLASTIA TOTAL CADERA ${LADO_ABR_F}  MODELO  SUMMIT CON  COTILO  PINACLE  SECTOR GRIPTION NO  CEMENTADO Nº  50, POLIETILENO  MARATHON Nº 50 +10º, VASTAGO  Nº 6 NO  CEMENTADO ESTÁNDAR CON  CABEZA DE  28 MM +5 DE CERÁMICA .
 - SE COMPRUEBA ESTABILIDAD DE LA  ARTROPLASTIA  TRAS REDUCCIÓN EN  TODOS LOS PLANOS.
 - CIERRE POR  PLANOS CON REINSERCIÓN  DE  MUSCULATURA  GLÚTEA.
 - SE ADMINISTRA   1   GRAMO  DE TRANEXÁMICO  EN  50 CC DE SF A  NIVEL  LOCAL.
@@ -2620,12 +2642,12 @@ tratamiento: `- Mantener el pie elevado siempre que esté sentado con  movimient
 hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 PROTESIS TOTAL  DE CADERA ZIMMER
-- COXARTROSIS  CADERA   DCHA:
+- COXARTROSIS  CADERA   ${LADO_ABR_F}:
 - PROFILAXIS  ANTIBIÓTICA CON  2 GRAMOS  DE CEFAZOLINA.
-- DECUBITO  LATERAL  IZQUIERDO.
+- DECUBITO  LATERAL  ${DECUBITO_UPPER}.
 - INCISIÓN  LOGITUDINAL SOBRE REGIÓN  TROCANTERICA Y  VIA ABORDAJE  HARDINGE..
 - CAPSULECTOMÍA,  LUXACION  DE  CABEZA  FEMORAL   Y  OSTEOTOMIA DEL  CUELLO.
-- ARTROPLASTIA TOTAL CADERA IZDA ( ZIMMER): COTILO G7 Nº 48 PRESS-FIT, VÁSTAGO TAPERLOC Nº 7.5, INSERTO POLIETILENO  CON  CEJA 10º Y CABEZA CERÁMICA 32  +0 MM.
+- ARTROPLASTIA TOTAL CADERA ${LADO_ABR_F} ( ZIMMER): COTILO G7 Nº 48 PRESS-FIT, VÁSTAGO TAPERLOC Nº 7.5, INSERTO POLIETILENO  CON  CEJA 10º Y CABEZA CERÁMICA 32  +0 MM.
 - SE COMPRUEBA ESTABILIDAD DE LA  ARTROPLASTIA  TRAS REDUCCIÓN EN  TODOS LOS PLANOS.
 - CIERRE POR  PLANOS CON REINSERCIÓN  DE  MUSCULATURA  GLÚTEA.
 - DRENAJE ASPIRATIVO.
@@ -3976,7 +3998,7 @@ tratamiento: `- Mantener brazo en cabestrillo, moviendo mano y codo como se le h
 hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 Diag. Sd. subacromial hombro ---.
-- Anestesia gral. + locorregional. Profilaxis ATB. Decúbito lateral --.
+- Anestesia gral. + locorregional. Profilaxis ATB. Decúbito lateral ${DECUBITO}.
 - CAH ---.
 - Portales habituales
 - Glenohumeral: PLB, labrum y subescapular ok. Rotura supraespinoso grado  de Patte (porción anterolateral).
@@ -3999,7 +4021,7 @@ tratamiento: `- Mantener el miembro superior operado en cabestrillo durante 4-5 
 hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 Diag. Rotura supraespinoso hombro ---.
-- Anestesia gral. + locorregional. Profilaxis ATB. Decúbito lateral ---.
+- Anestesia gral. + locorregional. Profilaxis ATB. Decúbito lateral ${DECUBITO}.
 - CAH ---.
 - Portales habituales
 - Glenohumeral: PLB y labrum ok, subescapular con rotura tipo II de Lafosse. Se realiza reparación tendón hueso con 1 Iconix 2,3 (2 cintas). Rotura supraespinoso grado II de Patte con mala calidad tisular e infiltración grasa.
@@ -4022,7 +4044,7 @@ tratamiento: `- Mantener el miembro superior operado en cabestrillo durante 4-5 
 hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 Diag. Rotura masiva supraespinoso hombro.
-- Anestesia gral. + locorregional. Profilaxis ATB. Decúbito lateral ---.
+- Anestesia gral. + locorregional. Profilaxis ATB. Decúbito lateral ${DECUBITO}.
 - CAH ---.
 - Portales habituales
 - Glenohumeral: PLB degenerado y deshilachado por lo que se realiza tenotomía, labrum bien, rotura subescapular tipo 2 de Lafosse. Se realiza reparación con 1 Iconix 2,3 (2 suturas tendón-hueso). Rotura supraespinoso grado 3 de Patte que se extiende a infraespinoso (rotura masiva).
