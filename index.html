@@ -127,6 +127,7 @@
       flex-shrink: 0;
       box-shadow: 0 8px 32px rgba(15,34,64,0.25);
       animation: fadeInUp 0.6s ease-out;
+      text-align: center;
     }
     .app-header::before {
       content: '';
@@ -326,33 +327,49 @@
       box-shadow: 0 0 0 3px rgba(147,197,253,0.15);
     }
 
-    /* ── SELECT ── */
+    /* ── SELECT DESTACADO ── */
     select#procedimiento {
-      background: var(--accent);
-      color: white;
+      background: #d6e4f0;
+      color: #1a3a5c;
       font-weight: 600;
       cursor: pointer;
       border-radius: 8px;
+      border-color: #b8cfdf;
       transition: background 0.2s, box-shadow 0.2s;
       padding-right: 32px;
     }
     select#procedimiento:hover {
-      background: var(--accent-hover);
-      box-shadow: var(--shadow-hover);
+      background: #c5d9ec;
+      box-shadow: var(--shadow);
     }
     select#procedimiento:disabled {
       opacity: 0.5;
       cursor: not-allowed;
     }
     [data-theme="dark"] select#procedimiento {
-      background: var(--accent-light);
-      color: var(--accent);
-      border-color: var(--accent);
+      background: #1e3a5f;
+      color: #93c5fd;
+      border-color: #2d5a8a;
     }
     select#procedimiento option {
       background: var(--surface);
       color: var(--text);
       padding: 4px 16px;
+    }
+    select#urgDiagnostico {
+      background: #f5ddd5;
+      color: #8b4532;
+      font-weight: 600;
+      border-color: #e8c4b8;
+    }
+    select#urgDiagnostico:hover {
+      background: #f0cfc5;
+      box-shadow: var(--shadow);
+    }
+    [data-theme="dark"] select#urgDiagnostico {
+      background: #2d1f1a;
+      color: #e8977f;
+      border-color: #4a2f24;
     }
 
     /* ── BUTTONS ── */
@@ -544,6 +561,10 @@
       opacity: 1;
       transform: translateX(-50%) translateY(0);
     }
+    .toast-banner.toast-green {
+      background: #16a34a;
+      box-shadow: 0 8px 32px rgba(22,163,74,0.30);
+    }
 
     /* ── MODULE NAV ── */
     .modulo-nav {
@@ -584,10 +605,10 @@
       box-shadow: 0 4px 16px rgba(26,58,92,0.25);
     }
     .modulo-pill.active[data-modulo="urgencias"] {
-      background: #dc2626;
-      border-color: #dc2626;
+      background: #e07a5f;
+      border-color: #e07a5f;
       color: white;
-      box-shadow: 0 4px 16px rgba(220,38,38,0.25);
+      box-shadow: 0 4px 16px rgba(224,122,95,0.25);
     }
     .modulo-pill.active[data-modulo="recomendaciones"] {
       background: var(--green);
@@ -601,9 +622,9 @@
       color: var(--accent);
     }
     [data-theme="dark"] .modulo-pill.active[data-modulo="urgencias"] {
-      background: #3b1010;
-      border-color: #f87171;
-      color: #f87171;
+      background: #2d1f1a;
+      border-color: #e8977f;
+      color: #e8977f;
     }
     [data-theme="dark"] .modulo-pill.active[data-modulo="recomendaciones"] {
       background: #14352a;
@@ -612,34 +633,86 @@
     }
     .modulo-pill.active svg { opacity: 1; }
 
-    /* ── URGENCIAS ACCENT OVERRIDES ── */
-    .urg-accent select { background: #dc2626 !important; border-color: #dc2626 !important; }
-    .urg-accent select:hover { background: #b91c1c !important; }
-    [data-theme="dark"] .urg-accent select {
-      background: #3b1010 !important;
-      color: #f87171 !important;
-      border-color: #f87171 !important;
+    /* ── URGENCIAS COMPACT FORM ── */
+    #seccion-urgencias .card { padding: 10px 14px; }
+    #seccion-urgencias .form-row { gap: 10px; align-items: end; }
+    #seccion-urgencias .form-group label {
+      font-size: 10px; margin-bottom: 2px;
     }
-    .panel.panel-urg .panel-header { background: rgba(220,38,38,0.04); }
-    .panel.panel-urg .panel-title { color: #dc2626; }
-    [data-theme="dark"] .panel.panel-urg .panel-header { background: rgba(248,113,113,0.06); }
-    [data-theme="dark"] .panel.panel-urg .panel-title { color: #f87171; }
+    #seccion-urgencias .form-group input,
+    #seccion-urgencias .form-group select {
+      padding: 7px 10px; font-size: 13px;
+    }
+    #seccion-urgencias .urg-sexo-toggle { padding: 2px; }
+    #seccion-urgencias .urg-sexo-btn { padding: 7px 10px; font-size: 12px; gap: 4px; }
+    #seccion-urgencias .urg-sexo-btn svg { width: 14px; height: 14px; }
+    #seccion-urgencias .btn-danger { padding: 7px 14px; font-size: 12px; }
+
+    /* ── URGENCIAS ACCENT OVERRIDES ── */
+    .panels-grid-3 .panel textarea {
+      flex: none;
+      min-height: 80px;
+      overflow-y: hidden;
+    }
+    .panel.panel-urg .panel-header { background: rgba(224,122,95,0.05); }
+    .panel.panel-urg .panel-title { color: #e07a5f; }
+    [data-theme="dark"] .panel.panel-urg .panel-header { background: rgba(232,151,127,0.06); }
+    [data-theme="dark"] .panel.panel-urg .panel-title { color: #e8977f; }
     .panel.panel-amber .panel-header { background: rgba(192,84,10,0.04); }
     .panel.panel-amber .panel-title { color: var(--amber); }
     [data-theme="dark"] .panel.panel-amber .panel-header { background: rgba(251,191,36,0.06); }
     [data-theme="dark"] .panel.panel-amber .panel-title { color: #fbbf24; }
-    .btn-copy.red { color: #dc2626; }
-    .btn-copy.red:hover { background: #dc2626; color: white; }
-    .btn-copy.amber { color: var(--amber); }
-    .btn-copy.amber:hover { background: var(--amber); color: white; }
+
+    /* ── URGENCIAS SEXO TOGGLE ── */
+    .urg-sexo-toggle {
+      display: flex;
+      background: var(--surface2);
+      border-radius: 10px;
+      padding: 3px;
+      gap: 2px;
+    }
+    .urg-sexo-btn {
+      flex: 1;
+      padding: 10px 14px;
+      border: none;
+      border-radius: 8px;
+      background: transparent;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+    }
+    .urg-sexo-btn.active {
+      background: var(--surface);
+      color: var(--text);
+      box-shadow: var(--shadow-sm);
+    }
+    .urg-sexo-btn svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 2; }
+
+    /* ── URGENCIAS COPY ROW ── */
+    .urg-copy-row {
+      display: flex;
+      justify-content: center;
+      padding: 8px 0;
+      animation: fadeInUp 0.6s ease-out 0.25s both;
+    }
+    .btn-copy.urg { color: #e07a5f; border-color: #e07a5f; padding: 8px 24px; font-size: 13px; }
+    .btn-copy.urg:hover { background: #e07a5f; color: white; }
+    [data-theme="dark"] .btn-copy.urg { color: #e8977f; border-color: #e8977f; }
+    [data-theme="dark"] .btn-copy.urg:hover { background: #e8977f; color: #1f2937; }
 
     /* ── 3-COLUMN PANELS GRID ── */
     .panels-grid-3 {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       gap: 14px;
-      flex: 1;
-      min-height: 0;
+      align-items: start;
       animation: fadeInUp 0.6s ease-out 0.2s both;
     }
 
@@ -679,6 +752,11 @@
       .modulo-nav { gap: 6px; }
       .modulo-pill { padding: 10px 12px; font-size: 12px; }
       .modulo-pill svg { width: 16px; height: 16px; }
+      #seccion-urgencias .form-group { width: 100% !important; flex: none !important; }
+      #seccion-urgencias .form-group input,
+      #seccion-urgencias .form-group select { width: 100% !important; }
+      .urg-sexo-toggle { min-width: 100%; }
+      .urg-sexo-btn { padding: 8px 10px; font-size: 12px; }
     }
   </style>
 </head>
@@ -707,13 +785,13 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.5 3.5L20 16l-3.5 3.5L3 6.5 7.5 3.5z"/><path d="M3 20l4-1 1-4"/><path d="M7 17l-4 3"/></svg>
       Quirófano
     </button>
-    <button class="modulo-pill" data-modulo="urgencias" onclick="selectModulo('urgencias')">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 19H5c-1 0-2-1-2-2V7c0-1 1-2 2-2h3"/><path d="M16 19h3c1 0 2-1 2-2V7c0-1-1-2-2-2h-3"/><line x1="12" y1="4" x2="12" y2="20"/><line x1="4" y1="12" x2="20" y2="12"/></svg>
-      Urgencias
-    </button>
     <button class="modulo-pill" data-modulo="recomendaciones" onclick="selectModulo('recomendaciones')">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
       Recomendaciones
+    </button>
+    <button class="modulo-pill" data-modulo="urgencias" onclick="selectModulo('urgencias')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 19H5c-1 0-2-1-2-2V7c0-1 1-2 2-2h3"/><path d="M16 19h3c1 0 2-1 2-2V7c0-1-1-2-2-2h-3"/><line x1="12" y1="4" x2="12" y2="20"/><line x1="4" y1="12" x2="20" y2="12"/></svg>
+      Urgencias
     </button>
   </nav>
 
@@ -793,25 +871,34 @@
   <!-- ═══════════════════════════════════════════ -->
   <div id="seccion-urgencias" class="seccion">
 
-    <nav class="cat-nav">
-      <div id="urgCatPills" class="cat-pills"></div>
-    </nav>
-
-    <div class="card urg-accent">
+    <div class="card">
       <div class="form-row">
-        <div class="form-group" style="flex:1">
-          <label>Sexo</label>
-          <select id="urgSexo" onchange="cargarPlantillaUrg()">
-            <option value="">—</option>
-            <option value="H">Hombre</option>
-            <option value="M">Mujer</option>
-          </select>
+        <div class="form-group" style="flex:none; width:90px">
+          <label>COT 1</label>
+          <input id="urgCot1" type="text" placeholder="Apellido" oninput="cargarPlantillaUrg()" />
         </div>
-        <div class="form-group" style="flex:0.7">
+        <div class="form-group" style="flex:none; width:90px">
+          <label>COT 2</label>
+          <input id="urgCot2" type="text" placeholder="Apellido" oninput="cargarPlantillaUrg()" />
+        </div>
+        <div class="form-group" style="flex:none">
+          <label>Sexo</label>
+          <div class="urg-sexo-toggle">
+            <button type="button" class="urg-sexo-btn" data-sexo="H" onclick="selectSexo(this)">
+              <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="8" r="5"/><path d="M15 3h5v5"/><path d="M20 3l-6.5 6.5"/></svg>
+              Hombre
+            </button>
+            <button type="button" class="urg-sexo-btn" data-sexo="M" onclick="selectSexo(this)">
+              <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M12 13v8"/><path d="M9 18h6"/></svg>
+              Mujer
+            </button>
+          </div>
+        </div>
+        <div class="form-group" style="flex:none; width:60px">
           <label>Edad</label>
           <input id="urgEdad" type="number" min="0" max="120" placeholder="Años" oninput="cargarPlantillaUrg()" />
         </div>
-        <div class="form-group" style="flex:1">
+        <div class="form-group" id="urgLadoGroup" style="flex:none">
           <label>Lateralidad</label>
           <select id="urgLado" onchange="cargarPlantillaUrg()">
             <option value="">—</option>
@@ -819,18 +906,24 @@
             <option value="I">Izquierdo</option>
           </select>
         </div>
-        <div class="form-group" style="flex:1">
-          <label>Tratamiento</label>
-          <select id="urgTipo" onchange="cargarPlantillaUrg()">
-            <option value="">—</option>
-            <option value="C">Conservador</option>
-            <option value="Q">Quirúrgico</option>
-          </select>
-        </div>
         <div class="form-group" style="flex:2">
           <label>Diagnóstico</label>
-          <select id="urgDiagnostico" onchange="cargarPlantillaUrg()" disabled>
-            <option value="">— Seleccione categoría primero —</option>
+          <select id="urgDiagnostico" onchange="onUrgDiagnosticoChange()">
+            <option value="">— Seleccione diagnóstico —</option>
+            <option value="urg_fx_edr">Fx EDR (radio distal)</option>
+            <option value="urg_fx_5mtc">Fx 5ºMTC (5º metacarpiano)</option>
+            <option value="urg_fx_eph">Fx EPH (húmero proximal)</option>
+            <option value="urg_fx_cadera">Fx Cadera</option>
+            <option value="urg_fx_tobillo">Fx Tobillo</option>
+            <option value="urg_fx_vertebral">Fx Vertebral</option>
+            <option value="urg_lux_hombro">Luxación Hombro</option>
+          </select>
+        </div>
+        <div class="form-group" id="urgTipoGroup" style="flex:none; display:none">
+          <label>Tratamiento</label>
+          <select id="urgTipo" onchange="cargarPlantillaUrg()">
+            <option value="C">Conservador</option>
+            <option value="Q">Quirúrgico</option>
           </select>
         </div>
         <div>
@@ -847,16 +940,9 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
             Anamnesis
           </span>
-          <div class="copy-wrap">
-            <button onclick="copiarTexto('urgAnamnesis')" class="btn-copy red">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-              Copiar
-            </button>
-            <span class="copy-tooltip">✓ Copiado</span>
-          </div>
         </div>
         <textarea id="urgAnamnesis"
-          placeholder="Seleccione categoría, diagnóstico y complete los campos..."></textarea>
+          placeholder="Seleccione diagnóstico y complete los campos..."></textarea>
       </div>
       <!-- Exploración -->
       <div class="panel panel-amber">
@@ -865,13 +951,6 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
             Exploración
           </span>
-          <div class="copy-wrap">
-            <button onclick="copiarTexto('urgExploracion')" class="btn-copy amber">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-              Copiar
-            </button>
-            <span class="copy-tooltip">✓ Copiado</span>
-          </div>
         </div>
         <textarea id="urgExploracion"
           placeholder="Aquí aparecerá la exploración física..."></textarea>
@@ -883,17 +962,17 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
             Plan
           </span>
-          <div class="copy-wrap">
-            <button onclick="copiarTexto('urgPlan')" class="btn-copy green">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-              Copiar
-            </button>
-            <span class="copy-tooltip">✓ Copiado</span>
-          </div>
         </div>
         <textarea id="urgPlan"
           placeholder="Aquí aparecerá el plan de actuación..."></textarea>
       </div>
+    </div>
+
+    <div class="urg-copy-row">
+      <button onclick="copiarTodoUrg()" class="btn-copy urg">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        Copiar Todo
+      </button>
     </div>
 
   </div>
@@ -1096,16 +1175,26 @@
   function copiarTexto(id) {
     const text = document.getElementById(id).value;
     if (!text) return;
+    const msg = id === 'tratamientoAlta'
+      ? '✓  Tratamiento copiado al portapapeles'
+      : '✓  Hoja operatoria copiada al portapapeles';
     navigator.clipboard.writeText(text).then(() => {
-      const label = id === 'tratamientoAlta' ? 'Tratamiento' : 'Hoja Operatoria';
-      mostrarToast('✓  ' + label + ' copiado al portapapeles');
+      mostrarToast(msg, 'green');
+    }).catch(() => {
+      const ta = Object.assign(document.createElement('textarea'), { value: text });
+      ta.style.cssText = 'position:fixed;opacity:0';
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+      mostrarToast(msg, 'green');
     });
   }
 
-  function mostrarToast(msg) {
+  function mostrarToast(msg, variant) {
     const t = document.getElementById('toast');
     t.textContent = msg;
-    t.className = 'toast-banner';
+    t.className = 'toast-banner' + (variant ? ' toast-' + variant : '');
     void t.offsetWidth;
     t.classList.add('show');
     clearTimeout(t._timer);
@@ -1249,180 +1338,184 @@
   }
 
   // ─────────────────────────────────────────────
-  //  URGENCIAS — CATEGORÍAS Y DATOS
+  //  URGENCIAS — DATOS Y FUNCIONES
   // ─────────────────────────────────────────────
-  const URG_CATEGORIAS = [
-    { id: 'urg_cadera', label: 'Cadera', procs: [
-      { value: 'urg_fr_subcapital', label: 'Fr subcapital cadera' },
-      { value: 'urg_fr_pertro', label: 'Fr pertrocantérea cadera' },
-    ]},
-    { id: 'urg_rodilla', label: 'Rodilla', procs: [
-      { value: 'urg_rotura_lca', label: 'Rotura LCA' },
-      { value: 'urg_lesion_meniscal', label: 'Lesión meniscal' },
-    ]},
-    { id: 'urg_tobillo', label: 'Tobillo', procs: [
-      { value: 'urg_fr_tobillo', label: 'Fr tobillo' },
-      { value: 'urg_esguince_tobillo', label: 'Esguince tobillo' },
-    ]},
-    { id: 'urg_muneca', label: 'Muñeca', procs: [
-      { value: 'urg_fr_radio_distal', label: 'Fr radio distal' },
-      { value: 'urg_fr_escafoides', label: 'Fr escafoides' },
-    ]},
-    { id: 'urg_hombro', label: 'Hombro', procs: [
-      { value: 'urg_lux_hombro', label: 'Luxación de hombro' },
-      { value: 'urg_fr_humero_prox', label: 'Fr húmero proximal' },
-    ]},
-  ];
-  // Plantillas de ejemplo — se ampliarán cuando subas los archivos
-  // Cada plantilla usa funciones que reciben (sexo, edad, lado) y devuelven texto
+
+  // Helpers de género, lateralidad y COT
   function urgGenero(sexo) { return sexo === 'H' ? 'Varón' : 'Mujer'; }
-  function urgPaciente(sexo) { return sexo === 'H' ? 'varón' : 'mujer'; }
-  function urgLado(lado) { return lado === 'D' ? 'derecho/a' : 'izquierdo/a'; }
-  function urgLadoAdj(lado) { return lado === 'D' ? 'derecha' : 'izquierda'; }
-  function urgMiembro(lado) { return lado === 'D' ? 'derecho' : 'izquierdo'; }
+  function urgLadoF(lado) { return lado === 'D' ? 'derecha' : 'izquierda'; }
+  function urgLadoM(lado) { return lado === 'D' ? 'derecho' : 'izquierdo'; }
+  function urgCotLabel(c1, c2) {
+    const a = c1.trim(), b = c2.trim();
+    if (a && b && a !== b) return `COT (${a}/${b})`;
+    if (a) return `COT (${a})`;
+    return 'COT';
+  }
+  function urgAcudo(c1, c2) {
+    const a = c1.trim(), b = c2.trim();
+    return (a && b && a !== b) ? 'Acudimos a valorar' : 'Acudo a valorar';
+  }
+  function urgParte(c1, c2) {
+    const a = c1.trim(), b = c2.trim();
+    return (a && b && a !== b) ? 'por nuestra parte' : 'por mi parte';
+  }
+
+  // Diagnósticos que permiten elegir conservador/quirúrgico
+  const URG_CON_TIPO = ['urg_fx_edr', 'urg_fx_eph', 'urg_fx_tobillo'];
+  // Diagnósticos que siempre son quirúrgicos (no muestran selector)
+  const URG_SIEMPRE_QX = ['urg_fx_cadera'];
+  // Diagnóstico sin lateralidad
+  const URG_SIN_LADO = ['urg_fx_vertebral'];
 
   const URG_PLANTILLAS = {
-    urg_fr_subcapital: {
-      anamnesis: (s,e,l) => `${urgGenero(s)} de ${e} años que acude a Urgencias por dolor en cadera ${urgLadoAdj(l)} e impotencia funcional tras caída casual desde su propia altura.\nNo refiere traumatismo de alta energía.\nAntecedentes personales: (completar).`,
-      exploracion: (s,e,l) => `Exploración física:\n- Impotencia funcional de miembro inferior ${urgMiembro(l)}.\n- Acortamiento y rotación externa de la extremidad inferior ${urgLadoAdj(l)}.\n- Dolor a la palpación y movilización de cadera ${urgLadoAdj(l)}.\n- Pulsos distales presentes. Sensibilidad y movilidad distal conservadas.\n- NV distal: sin déficit.`,
-      plan_conservador: (s,e,l) => `Plan conservador:\n- Tracción cutánea / blanda del miembro inferior ${urgMiembro(l)}.\n- Reposo en cama.\n- Analgesia pautada: Paracetamol 1g/8h + Metamizol 575mg/8h alterno.\n- Tromboprofilaxis: Enoxaparina 40mg/24h sc.\n- Control radiológico evolutivo.\n- Valorar estado general y comorbilidades para decisión terapéutica definitiva.\n- Interconsulta a COT para seguimiento.`,
-      plan_quirurgico: (s,e,l) => `Plan quirúrgico:\n- Ingreso a cargo de COT.\n- Dieta absoluta / ayunas desde las 00:00h.\n- Pruebas preoperatorias: analítica completa, Rx tórax, ECG, pruebas cruzadas.\n- Tromboprofilaxis: Enoxaparina 40mg/24h sc.\n- Analgesia: Paracetamol 1g/8h + Metamizol 575mg/8h alterno.\n- Programar para IQ: osteosíntesis / artroplastia cadera ${urgLadoAdj(l)} (según tipo de fractura y perfil del paciente).\n- Interconsulta a Anestesia.\n- Consentimientos informados.`,
+    urg_fx_edr: {
+      anamnesis: (cot,ac,p,s,e,l) => `CONSULTA URGENCIAS COT\n${hoy()}\n${cot}\n\n${ac} a paciente remitido desde puerta de urgencias para valoración y tratamiento de fractura de EDR ${urgLadoM(l)} ${p}.\n\nAP:\n- NAMC\n- No AP de interés\n\nEA:\n${urgGenero(s)} de ${e} años que acude a urgencias por dolor e impotencia funcional de muñeca ${urgLadoF(l)} tras traumatismo.`,
+      exploracion: (cot,ac,p,s,e,l) => `EF:\n- Tumefacción y deformidad en muñeca ${urgLadoF(l)} sin signos de sufrimiento de partes blandas. No equimosis ni flictenas.\n- Dolor a la palpación y movilización de extremo distal de radio.\n- Movilidad digital correcta dificultada por dolor sin signos de alteraciones NV.\n\nRx:\n- Fx EDR ${urgLadoM(l)}.`,
+      plan_conservador: (cot,ac,p,s,e,l) => `PLAN:\n- Bajo bloqueo intrafocal con mepivacaína al 2%, procedo a reducción cerrada de fractura e inmovilización con yeso antebraquial cerrado.\n- Rx de control ok.\n- Explico plan terapéutico.\n\nRECOMENDACIONES:\n- Mantener mano en alto moviendo dedos.\n- Ibuprofeno 400 mg/8 horas alternando con metamizol 575 mg/8h si dolor.\n- Revisión en CCEE de COT (RUCOT) en 2 semanas con Rx previa.`,
+      plan_quirurgico: (cot,ac,p,s,e,l) => `PLAN:\n- Curso analítica con perfil preoperatorio.\n- Entrego CI que entiende, acepta, firma y traerá firmado el día de la intervención.\n- Solicitará cita para consultas de Preanestesia en Admisión.\n- Su caso se presentará en Sesión Clínica de Traumatología. Contactaremos con usted telefónicamente para comentar decisión tomada.\n\nRECOMENDACIONES:\n- Mantener mano en alto moviendo dedos.\n- Ibuprofeno 400 mg/8 horas alternando con metamizol 575 mg/8h si dolor.`,
     },
-    urg_fr_pertro: {
-      anamnesis: (s,e,l) => `${urgGenero(s)} de ${e} años que acude a Urgencias por dolor en cadera ${urgLadoAdj(l)} e impotencia funcional tras caída casual.\nMecanismo de baja energía.\nAntecedentes personales: (completar).`,
-      exploracion: (s,e,l) => `Exploración física:\n- Impotencia funcional de miembro inferior ${urgMiembro(l)}.\n- Acortamiento y rotación externa de la extremidad.\n- Dolor a la palpación del trocánter mayor ${urgMiembro(l)}.\n- Equimosis en cara lateral de muslo ${urgMiembro(l)}.\n- Pulsos distales presentes. NV distal: sin déficit.`,
-      plan_conservador: (s,e,l) => `Plan conservador:\n- Tracción cutánea del miembro inferior ${urgMiembro(l)}.\n- Reposo en cama.\n- Analgesia: Paracetamol 1g/8h + Metamizol 575mg/8h alterno.\n- Tromboprofilaxis: Enoxaparina 40mg/24h sc.\n- Valorar estado general del paciente.\n- Seguimiento por COT.`,
-      plan_quirurgico: (s,e,l) => `Plan quirúrgico:\n- Ingreso a cargo de COT.\n- Ayunas desde las 00:00h.\n- Preoperatorio completo: analítica, Rx tórax, ECG, pruebas cruzadas.\n- Tromboprofilaxis: Enoxaparina 40mg/24h sc.\n- Analgesia pautada.\n- Programar para IQ: enclavado endomedular cadera ${urgLadoAdj(l)} (clavo Gamma / clavo cefalomedular).\n- IC Anestesia. Consentimientos informados.`,
+    urg_fx_5mtc: {
+      anamnesis: (cot,ac,p,s,e,l) => `CONSULTA URGENCIAS COT\n${hoy()}\n${cot}\n\n${ac} a paciente remitido desde puerta de urgencias para valoración y tratamiento de fractura de 5ºMTC ${urgLadoM(l)} ${p}.\n\nAP:\n- NAMC\n- No AP de interés\n\nEA:\n${urgGenero(s)} de ${e} años que acude a urgencias por dolor e impotencia funcional de mano ${urgLadoF(l)} tras traumatismo.`,
+      exploracion: (cot,ac,p,s,e,l) => `EF:\n- Tumefacción y deformidad en mano ${urgLadoF(l)} sin signos de sufrimiento de partes blandas.\n- Dolor a la palpación del 5ºMTC.\n- No signos de rotación del 5º dedo.\n- Movilidad digital correcta.\n\nRx:\n- Fx 5ºMTC ${urgLadoM(l)}.`,
+      plan_conservador: (cot,ac,p,s,e,l) => `PLAN:\n- Bajo bloqueo intrafocal con mepivacaína al 2%, procedo a reducción cerrada e inmovilización con yeso antebraquial cerrado incluyendo 4º-5º dedos.\n- Rx de control ok.\n- Explico plan terapéutico.\n\nRECOMENDACIONES:\n- Mantener mano en alto moviendo dedos libres.\n- Ibuprofeno 400 mg/8 horas alternando con metamizol 575 mg/8h si dolor.\n- Revisión en CCEE de COT (RUCOT) en 2 semanas con Rx previa.`,
     },
-    urg_rotura_lca: {
-      anamnesis: (s,e,l) => `${urgGenero(s)} de ${e} años que acude a Urgencias por dolor e inestabilidad en rodilla ${urgLadoAdj(l)} tras mecanismo de torsión durante actividad deportiva.\nRefiere sensación de chasquido audible en el momento de la lesión y tumefacción progresiva.\nAntecedentes personales: (completar).`,
-      exploracion: (s,e,l) => `Exploración física:\n- Derrame articular en rodilla ${urgLadoAdj(l)}.\n- Lachman positivo. Cajón anterior positivo.\n- Pivot shift positivo.\n- Meniscos: dolor en interlínea (completar medial/lateral).\n- Ligamentos colaterales estables.\n- NV distal: sin déficit.`,
-      plan_conservador: (s,e,l) => `Plan conservador:\n- Inmovilización con férula de rodilla / rodillera articulada.\n- Descarga con muletas.\n- Crioterapia local.\n- Analgesia: Ibuprofeno 600mg/8h + Paracetamol 1g/8h.\n- Derivar a CCEE de COT para valoración y RMN de rodilla ${urgLadoAdj(l)}.\n- Inicio de rehabilitación precoz para recuperación muscular.`,
-      plan_quirurgico: (s,e,l) => `Plan quirúrgico:\n- Solicitar RMN rodilla ${urgLadoAdj(l)} preferente.\n- Derivar a CCEE de COT para valoración quirúrgica.\n- Inmovilización temporal con rodillera articulada.\n- Descarga parcial con muletas.\n- Crioterapia + analgesia.\n- Inicio de rehabilitación preoperatoria (fortalecimiento cuádriceps).\n- Programar para ligamentoplastia LCA (diferida, no urgente).`,
+    urg_fx_eph: {
+      anamnesis: (cot,ac,p,s,e,l) => `CONSULTA URGENCIAS COT\n${hoy()}\n${cot}\n\n${ac} a paciente remitido desde puerta de urgencias para valoración y tratamiento de fractura de húmero proximal ${urgLadoM(l)} ${p}.\n\nAP:\n- NAMC\n- No AP de interés\n\nEA:\n${urgGenero(s)} de ${e} años que acude a urgencias por dolor e impotencia funcional de hombro ${urgLadoM(l)} tras traumatismo.`,
+      exploracion: (cot,ac,p,s,e,l) => `EF:\n- Tumefacción en hombro ${urgLadoM(l)}.\n- Dolor a la palpación y movilización.\n- No signos de afectación neurovascular distal.\n\nRx:\n- Fractura húmero proximal ${urgLadoM(l)}.`,
+      plan_conservador: (cot,ac,p,s,e,l) => `PLAN:\n- Inmovilización con cabestrillo interno + cinturón antirrotación.\n- Explico plan terapéutico.\n\nRECOMENDACIONES:\n- Dormir semiincorporado.\n- No apoyar codo en superficies.\n- Mover activamente dedos y muñeca.\n- Ibuprofeno 400 mg/8 horas alternando con metamizol 575 mg/8h si dolor.\n- Revisión en CCEE de COT (RUCOT) en 2 semanas con Rx previa.`,
+      plan_quirurgico: (cot,ac,p,s,e,l) => `PLAN:\n- Curso analítica con perfil preoperatorio.\n- Entrego CI que entiende, acepta, firma y traerá firmado el día de la intervención.\n- Solicitará cita para consultas de Preanestesia en Admisión.\n- Su caso se presentará en Sesión Clínica de Traumatología. Contactaremos con usted telefónicamente para comentar decisión tomada.\n\nRECOMENDACIONES:\n- Inmovilización con cabestrillo interno + cinturón antirrotación.\n- Dormir semiincorporado.\n- No apoyar codo en superficies.\n- Ibuprofeno 400 mg/8 horas alternando con metamizol 575 mg/8h si dolor.`,
     },
-    urg_lesion_meniscal: {
-      anamnesis: (s,e,l) => `${urgGenero(s)} de ${e} años que acude a Urgencias por dolor en rodilla ${urgLadoAdj(l)} y bloqueo articular tras mecanismo de torsión/flexión forzada.\nRefiere episodios de bloqueo y/o derrame articular.\nAntecedentes personales: (completar).`,
-      exploracion: (s,e,l) => `Exploración física:\n- Derrame articular moderado en rodilla ${urgLadoAdj(l)}.\n- Dolor a la palpación de interlínea articular (completar medial/lateral).\n- McMurray positivo.\n- Apley positivo.\n- Ligamentos colaterales y cruzados estables.\n- NV distal: sin déficit.`,
-      plan_conservador: (s,e,l) => `Plan conservador:\n- Descarga parcial con muletas.\n- Crioterapia local.\n- Analgesia: Ibuprofeno 600mg/8h + Paracetamol 1g/8h.\n- Solicitar RMN rodilla ${urgLadoAdj(l)}.\n- Derivar a CCEE de COT para seguimiento.\n- Rehabilitación: ejercicios isométricos de cuádriceps.`,
-      plan_quirurgico: (s,e,l) => `Plan quirúrgico:\n- Solicitar RMN rodilla ${urgLadoAdj(l)} preferente.\n- Derivar a CCEE de COT para valoración artroscópica.\n- Descarga parcial con muletas + analgesia.\n- Programar para artroscopia de rodilla ${urgLadoAdj(l)} (meniscectomía parcial / sutura meniscal).`,
+    urg_fx_cadera: {
+      anamnesis: (cot,ac,p,s,e,l) => `CONSULTA URGENCIAS COT\n${hoy()}\n${cot}\n\n${ac} a paciente remitido desde puerta de urgencias para valoración y tratamiento de fractura de cadera ${urgLadoF(l)} ${p}.\n\nAP:\n- NAMC\n- AP: ___\n\nEA:\n${urgGenero(s)} de ${e} años que acude a urgencias por dolor inguinal e impotencia funcional de miembro inferior ${urgLadoM(l)} tras caída casual.`,
+      exploracion: (cot,ac,p,s,e,l) => `EF:\n- Acortamiento y rotación externa de miembro inferior ${urgLadoM(l)}.\n- Buen estado de partes blandas.\n- Pulsos distales presentes. NV distal sin déficit.\n\nRx:\n- Fractura de cadera ${urgLadoF(l)}.`,
+      plan_quirurgico: (cot,ac,p,s,e,l) => `PLAN:\n- Entrego CI que entiende, acepta y firma.\n- Curso analítica con perfil preoperatorio y pruebas cruzadas para reserva de 2 CH.\n- Ingreso en observación a cargo de COT.\n- Pendiente de programar para IQ.`,
     },
-    urg_fr_tobillo: {
-      anamnesis: (s,e,l) => `${urgGenero(s)} de ${e} años que acude a Urgencias por dolor, tumefacción e impotencia funcional en tobillo ${urgMiembro(l)} tras mecanismo de inversión/eversión forzada.\nNo refiere traumatismo abierto.\nAntecedentes personales: (completar).`,
-      exploracion: (s,e,l) => `Exploración física:\n- Tumefacción y equimosis en tobillo ${urgMiembro(l)}.\n- Dolor a la palpación de maléolo (completar medial/lateral/ambos).\n- Impotencia funcional para la marcha.\n- Deformidad (completar si presente).\n- Pulsos distales presentes. NV distal: sin déficit.`,
-      plan_conservador: (s,e,l) => `Plan conservador:\n- Inmovilización con férula suropédica posterior.\n- Descarga completa con muletas.\n- Crioterapia + elevación de la extremidad.\n- Analgesia: Paracetamol 1g/8h + Metamizol 575mg/8h alterno.\n- Tromboprofilaxis si inmovilización prolongada.\n- Control en CCEE de COT en 7-10 días con Rx de control.`,
-      plan_quirurgico: (s,e,l) => `Plan quirúrgico:\n- Ingreso / programar IQ preferente.\n- Inmovilización provisional con férula suropédica.\n- Crioterapia + elevación.\n- Analgesia pautada.\n- Tromboprofilaxis: Enoxaparina 40mg/24h sc.\n- Programar para RAFI tobillo ${urgMiembro(l)}.\n- Preoperatorio: analítica, ECG.\n- Consentimientos informados.`,
+    urg_fx_tobillo: {
+      anamnesis: (cot,ac,p,s,e,l) => `CONSULTA URGENCIAS COT\n${hoy()}\n${cot}\n\n${ac} a paciente remitido desde puerta de urgencias para valoración y tratamiento de fractura de tobillo ${urgLadoM(l)} ${p}.\n\nAP:\n- NAMC\n- AP: ___\n\nEA:\n${urgGenero(s)} de ${e} años que acude a urgencias por dolor e impotencia funcional de tobillo ${urgLadoM(l)} tras traumatismo.`,
+      exploracion: (cot,ac,p,s,e,l) => `EF:\n- Tumefacción moderada en tobillo ${urgLadoM(l)}.\n- Posible deformidad.\n- Deltoideo: ___\n- Sindesmosis: ___\n- Pulsos distales presentes. NV distal sin déficit.\n\nRx:\n- Fractura de tobillo ${urgLadoM(l)}.`,
+      plan_conservador: (cot,ac,p,s,e,l) => `RECOMENDACIONES:\n- Pie en alto, mover activamente los dedos.\n- NO apoyar.\n- Paracetamol 1g/8h + Metamizol 575 mg/8h alterno si dolor.\n- Enoxaparina 40 mg/24h sc.\n- Omeprazol 20 mg/24h.\n- Puede requerir ayuda domiciliaria.\n- Revisión urgente en CCEE de COT en 1 semana (acudir media hora antes de cita para realizar Rx).`,
+      plan_quirurgico: (cot,ac,p,s,e,l) => `PLAN:\n- Inmovilización con férula suropédica posterior.\n- Entrego CI que entiende, acepta y firma.\n- Curso analítica con perfil preoperatorio y pruebas cruzadas.\n- Se cursa ingreso en planta.`,
     },
-    urg_esguince_tobillo: {
-      anamnesis: (s,e,l) => `${urgGenero(s)} de ${e} años que acude a Urgencias por dolor en tobillo ${urgMiembro(l)} tras mecanismo de inversión forzada.\nRefiere tumefacción progresiva e impotencia funcional parcial.\nNo refiere episodios previos (o completar si recidivante).\nAntecedentes personales: (completar).`,
-      exploracion: (s,e,l) => `Exploración física:\n- Tumefacción perimaleolar lateral en tobillo ${urgMiembro(l)}.\n- Dolor a la palpación de LPAA y LPC.\n- Cajón anterior del tobillo (completar positivo/negativo).\n- Test de estrés en inversión (completar).\n- No dolor óseo en maléolos (regla de Ottawa).\n- NV distal: sin déficit.`,
-      plan_conservador: (s,e,l) => `Plan conservador:\n- Protocolo RICE: reposo, hielo, compresión, elevación.\n- Tobillera funcional / vendaje compresivo.\n- Carga parcial según tolerancia con muletas si precisa.\n- Analgesia: Ibuprofeno 600mg/8h durante 5-7 días.\n- Ejercicios propioceptivos desde las 48-72h.\n- Control en Atención Primaria si no mejora en 10-14 días.\n- Derivar a COT si inestabilidad residual.`,
-      plan_quirurgico: (s,e,l) => `Plan quirúrgico:\n- Raramente indicado en fase aguda.\n- Solicitar RMN tobillo ${urgMiembro(l)} si sospecha de lesión grave (grado III bilateral, asociación con fractura osteocondral).\n- Derivar a CCEE de COT para valoración.\n- Inmovilización temporal + descarga con muletas.\n- Analgesia + crioterapia.`,
-    },
-    urg_fr_radio_distal: {
-      anamnesis: (s,e,l) => `${urgGenero(s)} de ${e} años que acude a Urgencias por dolor e impotencia funcional en muñeca ${urgLadoAdj(l)} tras caída con apoyo de la mano.\nMecanismo: caída sobre mano extendida (FOOSH).\nAntecedentes personales: (completar).`,
-      exploracion: (s,e,l) => `Exploración física:\n- Tumefacción y deformidad en dorso de muñeca ${urgLadoAdj(l)} (deformidad en dorso de tenedor).\n- Dolor a la palpación del radio distal.\n- Movilidad activa limitada por dolor.\n- Pulsos radial y cubital presentes.\n- Sensibilidad: nervio mediano íntegro (completar).\n- NV distal: sin déficit.`,
-      plan_conservador: (s,e,l) => `Plan conservador:\n- Reducción cerrada bajo anestesia local (bloqueo de foco + hematoma).\n- Inmovilización con férula antebraquial / yeso cerrado.\n- Rx post-reducción de control.\n- Analgesia: Paracetamol 1g/8h + Metamizol 575mg/8h.\n- Crioterapia + elevación.\n- Control en CCEE de COT en 7 días con Rx de control.\n- Vigilar signos de compresión: parestesias, dolor intenso, tumefacción excesiva.`,
-      plan_quirurgico: (s,e,l) => `Plan quirúrgico:\n- Inmovilización provisional con férula antebraquial.\n- Analgesia + crioterapia + elevación.\n- Programar para RAFI radio distal ${urgMiembro(l)} (placa volar).\n- Preoperatorio: analítica, ECG.\n- Consentimientos informados.\n- Control postquirúrgico en CCEE de COT en 2 semanas.`,
-    },
-    urg_fr_escafoides: {
-      anamnesis: (s,e,l) => `${urgGenero(s)} de ${e} años que acude a Urgencias por dolor en muñeca ${urgLadoAdj(l)} en tabaquera anatómica tras caída sobre mano extendida.\nMecanismo: FOOSH.\nAntecedentes personales: (completar).`,
-      exploracion: (s,e,l) => `Exploración física:\n- Dolor a la palpación en tabaquera anatómica ${urgLadoAdj(l)}.\n- Dolor a la compresión axial del primer dedo.\n- Dolor a la palpación del tubérculo del escafoides.\n- Tumefacción moderada en muñeca.\n- Movilidad limitada por dolor.\n- NV distal: sin déficit.`,
-      plan_conservador: (s,e,l) => `Plan conservador:\n- Inmovilización con férula de escafoides (incluyendo pulgar).\n- Analgesia: Paracetamol 1g/8h.\n- Si Rx inicial normal pero alta sospecha clínica: inmovilizar y control en 10-14 días con nueva Rx / solicitar TAC o RMN.\n- Control en CCEE de COT en 10-14 días.\n- Vigilar consolidación (riesgo de pseudoartrosis y necrosis avascular).`,
-      plan_quirurgico: (s,e,l) => `Plan quirúrgico:\n- Solicitar TAC de escafoides para clasificación y planificación.\n- Inmovilización provisional con férula de escafoides.\n- Derivar a CCEE de COT para valoración quirúrgica.\n- Indicación: fracturas desplazadas, inestables o del polo proximal.\n- Programar para osteosíntesis con tornillo de Herbert.`,
+    urg_fx_vertebral: {
+      anamnesis: (cot,ac,p,s,e,l) => `CONSULTA URGENCIAS COT\n${hoy()}\n${cot}\n\n${ac} a paciente remitido desde puerta de urgencias para valoración y tratamiento de fractura vertebral ${p}.\n\nAP:\n- NAMC\n- AP: ___\n\nEA:\n${urgGenero(s)} de ${e} años que acude a urgencias por dolor dorsolumbar de nueva aparición tras traumatismo.`,
+      exploracion: (cot,ac,p,s,e,l) => `EF:\n- Dolor a la palpación de línea media con irradiación paravertebral.\n- Balance muscular 5/5 en MMII bilateral.\n- Sensibilidad conservada. Reflejos normales.\n- Control de esfínteres conservado.\n\nRx / TAC:\n- Fractura vertebral ___.`,
+      plan_conservador: (cot,ac,p,s,e,l) => `PLAN (conservadora):\n- Tratamiento conservador: reposo.\n- Explico plan terapéutico y signos de alarma.\n\nRECOMENDACIONES:\n- Reposo absoluto en cama 2 semanas (puede ir al baño y a comer con el corsé prescrito).\n- Pasadas las 2 semanas: cama-sillón con apoyo de corsé.\n- Enoxaparina 40 mg/24h sc hasta revisión.\n- Analgesia pautada si dolor.\n- SIGNOS DE ALARMA: pérdida de fuerza en extremidades, alteraciones de sensibilidad, pérdida de control de esfínteres → acudir a Urgencias.\n- Revisión en CCEE de COT en 1 mes con Rx control.`,
     },
     urg_lux_hombro: {
-      anamnesis: (s,e,l) => `${urgGenero(s)} de ${e} años que acude a Urgencias por dolor intenso e impotencia funcional en hombro ${urgMiembro(l)} tras traumatismo / mecanismo de abducción y rotación externa forzada.\nRefiere (primer episodio / recidiva nº...) de luxación.\nAntecedentes personales: (completar).`,
-      exploracion: (s,e,l) => `Exploración física:\n- Actitud antiálgica con brazo ${urgMiembro(l)} en ligera abducción y rotación externa.\n- Signo de la charretera: pérdida del contorno deltoides.\n- Vacío subacromial a la palpación.\n- Impotencia funcional completa del hombro.\n- Exploración neurovascular:\n  - Nervio axilar: sensibilidad en zona del deltoides (completar).\n  - Pulsos distales presentes. NV distal: sin déficit.`,
-      plan_conservador: (s,e,l) => `Plan (tras reducción):\n- Reducción cerrada bajo sedación (técnica de Kocher / tracción-contratracción / Stimson).\n- Rx post-reducción confirmatoria.\n- Inmovilización con cabestrillo tipo Sling durante 3 semanas.\n- Analgesia: Paracetamol 1g/8h + Ibuprofeno 600mg/8h.\n- Crioterapia.\n- Ejercicios pendulares de Codman a partir de la semana 1.\n- Control en CCEE de COT en 2-3 semanas.\n- Valorar RMN si primer episodio en paciente joven (< 30 años).`,
-      plan_quirurgico: (s,e,l) => `Plan quirúrgico:\n- Reducción cerrada urgente bajo sedación.\n- Rx post-reducción.\n- Inmovilización con cabestrillo.\n- Solicitar RMN hombro ${urgMiembro(l)} (valorar lesión de Bankart / Hill-Sachs).\n- Derivar a CCEE de COT para valoración artroscópica.\n- Indicación quirúrgica: luxaciones recidivantes, pacientes jóvenes deportistas, lesiones óseas significativas.`,
-    },
-    urg_fr_humero_prox: {
-      anamnesis: (s,e,l) => `${urgGenero(s)} de ${e} años que acude a Urgencias por dolor e impotencia funcional en hombro ${urgMiembro(l)} tras caída.\nMecanismo: caída sobre el brazo extendido / impacto directo.\nAntecedentes personales: (completar).`,
-      exploracion: (s,e,l) => `Exploración física:\n- Tumefacción y equimosis en hombro ${urgMiembro(l)} (equimosis de Hennequin).\n- Dolor a la palpación del húmero proximal.\n- Impotencia funcional para la elevación activa del brazo.\n- Crepitación ósea (completar si presente).\n- Exploración neurovascular:\n  - Nervio axilar: sensibilidad deltoidea (completar).\n  - Nervio radial: extensión activa de muñeca y dedos (completar).\n  - Pulsos distales presentes. NV distal: sin déficit.`,
-      plan_conservador: (s,e,l) => `Plan conservador:\n- Inmovilización con cabestrillo tipo Sling / vendaje de Velpeau.\n- Analgesia: Paracetamol 1g/8h + Metamizol 575mg/8h.\n- Crioterapia local.\n- Ejercicios pendulares de Codman precoces según tolerancia.\n- Control en CCEE de COT en 7-10 días con Rx de control.\n- Rehabilitación progresiva.`,
-      plan_quirurgico: (s,e,l) => `Plan quirúrgico:\n- Inmovilización provisional con cabestrillo.\n- Analgesia pautada.\n- Solicitar TAC hombro ${urgMiembro(l)} para clasificación (Neer).\n- Ingreso / programar IQ preferente.\n- Preoperatorio completo.\n- Programar para RAFI húmero proximal / artroplastia (según tipo de fractura y perfil del paciente).\n- IC Anestesia. Consentimientos informados.`,
+      anamnesis: (cot,ac,p,s,e,l) => `CONSULTA URGENCIAS COT\n${hoy()}\n${cot}\n\n${ac} a paciente remitido desde puerta de urgencias para valoración y tratamiento de luxación de hombro ${urgLadoM(l)} ${p}.\n\nAP:\n- NAMC\n- Episodios previos de luxación: ___\n\nEA:\n${urgGenero(s)} de ${e} años que acude a urgencias por dolor e impotencia funcional de hombro ${urgLadoM(l)} tras traumatismo.`,
+      exploracion: (cot,ac,p,s,e,l) => `EF:\n- Tumefacción y deformidad en hombro ${urgLadoM(l)} con aspecto en "charretera".\n- Bloqueo de la rotación interna.\n- Sensibilidad axilar conservada.\n- Pulsos distales presentes. NV distal sin déficit.\n\nRx:\n- Luxación glenohumeral ${urgLadoF(l)}.`,
+      plan_conservador: (cot,ac,p,s,e,l) => `PLAN:\n- Bajo analgesia iv, se procede a reducción cerrada mediante maniobra de tracción-contratracción.\n- Rx post-reducción confirmatoria ok.\n- Explico plan terapéutico.\n\nRECOMENDACIONES:\n- Cabestrillo tipo Sling: NO retirar.\n- Ibuprofeno 400 mg/8 horas alternando con metamizol 575 mg/8h si dolor.\n- Vigilar signos y síntomas.\n- Revisión urgente en CCEE de COT en 3 semanas.`,
     },
   };
 
-  let urgActiveCat = null;
+  // ─── Funciones de UI urgencias ───
 
-  function renderUrgCatPills() {
-    const container = document.getElementById('urgCatPills');
-    container.innerHTML = URG_CATEGORIAS.map(cat => {
-      return `<button class="cat-pill" data-urgcat="${cat.id}" onclick="selectUrgCategoria('${cat.id}')">
-        ${cat.label} <span class="cat-count">${cat.procs.length}</span>
-      </button>`;
-    }).join('');
+  function selectSexo(btn) {
+    document.querySelectorAll('.urg-sexo-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    cargarPlantillaUrg();
   }
 
-  function selectUrgCategoria(catId) {
-    urgActiveCat = catId;
-    document.querySelectorAll('#urgCatPills .cat-pill').forEach(p => {
-      p.classList.toggle('active', p.dataset.urgcat === catId);
-    });
-    const cat = URG_CATEGORIAS.find(c => c.id === catId);
-    if (!cat) return;
-    const sel = document.getElementById('urgDiagnostico');
-    sel.disabled = false;
-    sel.innerHTML = '<option value="">— Seleccione diagnóstico —</option>' +
-      [...cat.procs].sort((a, b) => a.label.localeCompare(b.label, 'es')).map(p => `<option value="${p.value}">${p.label}</option>`).join('');
-    sel.value = '';
+  function onUrgDiagnosticoChange() {
+    const diag = document.getElementById('urgDiagnostico').value;
+    // Mostrar/ocultar selector Tipo
+    const tipoGroup = document.getElementById('urgTipoGroup');
+    tipoGroup.style.display = URG_CON_TIPO.includes(diag) ? '' : 'none';
+    if (!URG_CON_TIPO.includes(diag)) document.getElementById('urgTipo').value = 'C';
+    // Activar/desactivar lateralidad
+    const ladoGroup = document.getElementById('urgLadoGroup');
+    const sinLado = URG_SIN_LADO.includes(diag);
+    ladoGroup.style.opacity = sinLado ? '0.4' : '1';
+    ladoGroup.style.pointerEvents = sinLado ? 'none' : '';
     cargarPlantillaUrg();
   }
 
   function cargarPlantillaUrg() {
     const diag = document.getElementById('urgDiagnostico').value;
-    const sexo = document.getElementById('urgSexo').value;
+    const sexoBtn = document.querySelector('.urg-sexo-btn.active');
+    const sexo = sexoBtn ? sexoBtn.dataset.sexo : '';
     const edad = document.getElementById('urgEdad').value;
     const lado = document.getElementById('urgLado').value;
     const tipo = document.getElementById('urgTipo').value;
+    const raw1 = document.getElementById('urgCot1').value.trim();
+    const raw2 = document.getElementById('urgCot2').value.trim();
+    const cot = urgCotLabel(raw1 || 'COT', raw2);
+    const acudo = urgAcudo(raw1, raw2);
+    const parte = urgParte(raw1, raw2);
 
     const anamEl = document.getElementById('urgAnamnesis');
     const expoEl = document.getElementById('urgExploracion');
     const planEl = document.getElementById('urgPlan');
 
-    if (!diag || !sexo || !edad || !lado) {
-      anamEl.value = '';
-      expoEl.value = '';
-      planEl.value = '';
-      return;
+    function resetUrg() {
+      [anamEl, expoEl, planEl].forEach(el => { el.value = ''; el.style.height = ''; });
     }
+    if (!diag || !sexo || !edad) { resetUrg(); return; }
+    // Fx vertebral no requiere lateralidad
+    if (!URG_SIN_LADO.includes(diag) && !lado) { resetUrg(); return; }
 
     const t = URG_PLANTILLAS[diag];
     if (!t) return;
 
-    anamEl.value = t.anamnesis(sexo, edad, lado);
-    expoEl.value = t.exploracion(sexo, edad, lado);
+    anamEl.value = t.anamnesis(cot, acudo, parte, sexo, edad, lado);
+    expoEl.value = t.exploracion(cot, acudo, parte, sexo, edad, lado);
 
-    if (tipo === 'C') {
-      planEl.value = t.plan_conservador(sexo, edad, lado);
-    } else if (tipo === 'Q') {
-      planEl.value = t.plan_quirurgico(sexo, edad, lado);
+    // Determinar plan según tipo
+    if (URG_SIEMPRE_QX.includes(diag)) {
+      planEl.value = t.plan_quirurgico(cot, acudo, parte, sexo, edad, lado);
+    } else if (URG_CON_TIPO.includes(diag) && tipo === 'Q') {
+      planEl.value = t.plan_quirurgico(cot, acudo, parte, sexo, edad, lado);
     } else {
-      planEl.value = '';
+      planEl.value = t.plan_conservador(cot, acudo, parte, sexo, edad, lado);
     }
 
     [anamEl, expoEl, planEl].forEach(el => {
+      el.style.height = 'auto';
+      el.style.height = el.scrollHeight + 'px';
       el.classList.remove('flash');
       void el.offsetWidth;
       el.classList.add('flash');
     });
   }
 
+  function copiarTodoUrg() {
+    const a = document.getElementById('urgAnamnesis').value;
+    const e = document.getElementById('urgExploracion').value;
+    const p = document.getElementById('urgPlan').value;
+    const todo = [a, e, p].filter(Boolean).join('\n\n');
+    if (!todo) return;
+    navigator.clipboard.writeText(todo).then(() => {
+      mostrarToast('✓  Informe urgencias copiado al portapapeles', 'green');
+    }).catch(() => {
+      // Fallback para contextos sin permisos de clipboard
+      const ta = Object.assign(document.createElement('textarea'), { value: todo });
+      ta.style.cssText = 'position:fixed;opacity:0';
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+      mostrarToast('✓  Informe urgencias copiado al portapapeles', 'green');
+    });
+  }
+
   function limpiarUrg() {
-    document.getElementById('urgSexo').value = '';
+    document.getElementById('urgCot1').value = '';
+    document.getElementById('urgCot2').value = '';
+    document.querySelectorAll('.urg-sexo-btn').forEach(b => b.classList.remove('active'));
     document.getElementById('urgEdad').value = '';
     document.getElementById('urgLado').value = '';
-    document.getElementById('urgTipo').value = '';
+    document.getElementById('urgTipo').value = 'C';
+    document.getElementById('urgTipoGroup').style.display = 'none';
     document.getElementById('urgDiagnostico').value = '';
-    document.getElementById('urgAnamnesis').value = '';
-    document.getElementById('urgExploracion').value = '';
-    document.getElementById('urgPlan').value = '';
-    urgActiveCat = null;
-    document.querySelectorAll('#urgCatPills .cat-pill').forEach(p => p.classList.remove('active'));
-    const sel = document.getElementById('urgDiagnostico');
-    sel.disabled = true;
-    sel.innerHTML = '<option value="">— Seleccione categoría primero —</option>';
+    ['urgAnamnesis', 'urgExploracion', 'urgPlan'].forEach(id => {
+      const el = document.getElementById(id);
+      el.value = '';
+      el.style.height = '';
+    });
+    // Restaurar lateralidad
+    const ladoGroup = document.getElementById('urgLadoGroup');
+    ladoGroup.style.opacity = '1';
+    ladoGroup.style.pointerEvents = '';
   }
 
   // ─────────────────────────────────────────────
@@ -1430,7 +1523,6 @@
   // ─────────────────────────────────────────────
   initTheme();
   renderRegionPills();
-  renderUrgCatPills();
   selectModulo('quirofano');
 
   // ─────────────────────────────────────────────
