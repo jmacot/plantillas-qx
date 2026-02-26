@@ -911,7 +911,7 @@
     const sel = document.getElementById('procedimiento');
     sel.disabled = false;
     sel.innerHTML = '<option value="">— Seleccione procedimiento —</option>' +
-      cat.procs.map(p => `<option value="${p.value}">${p.label}</option>`).join('');
+      [...cat.procs].sort((a, b) => a.label.localeCompare(b.label, 'es')).map(p => `<option value="${p.value}">${p.label}</option>`).join('');
     sel.value = '';
     cargarPlantilla();
   }
