@@ -1273,16 +1273,35 @@ CAR DERECHA:
 ```
 IQ {FECHA} ({DOCTOR}/{AYUDANTE})
 
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
-
-Pendiente de completar
+CIRUGIA ARTROSCÓPICA DE RODILLA: EXTRACCIÓN CUERPO LIBRE
+CAR DERECHA:
+- ISQUEMIA EN RAÍZ DE MUSLO ( 35 MINUTOS).
+- PORTALES TRADICIONALES ANTEROMEDIAL Y ANTEROLATERAL.
+- ARTICULACIÓN FEMOROPATELAR Y FONDOS DE SACO CUADRICIPITALES: SIN ALTERACIONES.
+- COMPARTIMENTO INTERNO: SIN ALTERACIONES.
+- PIVOTE CENTRAL: LCA Y LCP INTEGROS Y COMPETENTES.
+- COMPARTIMENTO EXTERNO: SIN ALTERACIONES.
+- SE LOCALIZA Y EXTRAE CUERPO LIBRE INTRAARTICULAR DE APROXIMADAMENTE 1 CM DE DIÁMETRO EN FONDO DE SACO SUBCUADRICIPITAL.
+- LAVADO ARTICULAR ABUNDANTE.
+- SE INFILTRA PORTALES Y REGION INTRAARTICULAR CON ROPIVACAINA Y ACIDO HIALURÓNICO.
+- CIERRE PORTALES CON SEDA.
+- VENDAJE COMPRESIVO.
 ```
 
 **Tratamiento al Alta:**
 
 ```
+- Aplicar hielo sobre la articulación operada 2 - 3 veces al día durante 20 minutos.
+- Mover activamente los dedos de la extremidad operada.
+- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
+- Puede caminar con ayuda de 2 muletas con apoyo de la pierna intervenida.
+- Realizar ejercicios isométricos de cuádriceps y movilidad libre de la rodilla.
 - Puede requerir ayuda domiciliaria
-- Pendiente de completar
+- METAMIZOL 575 mg /8 horas vía oral.
+- BEMIPARINA 3500 UI /24 horas vía subcutánea durante 10 días.
+- Retirada de puntos por ATS DE ZONA en 12/15 días.
+- Revisión en CC EE de COT ({DOCTOR}) en unas 4-5 semanas para ver evolución.
+- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
 ```
 
 ---
@@ -1904,16 +1923,45 @@ LIGAMENTOPLASTIA LCA  ANATÓMICO 4 ST-RI AUTOLOGO POR  INESTABILIDAD ANTERIOR DE
 ```
 IQ {FECHA} ({DOCTOR}/{AYUDANTE})
 
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
-
-Pendiente de completar
+LIGAMENTOPLASTIA LCA ALL-INSIDE (ARTHREX)
+ROTURA CRÓNICA LCA RODILLA DERECHA:
+- ANESTESIA RAQUÍDEA.
+- PROFILAXIS ANTIBIÓTICA CON 2 GR DE CEFAZOLINA.
+- ISQUEMIA EN RAÍZ DE MUSLO 250 MMHG (85 MINUTOS).
+- ABORDAJE LONGITUDINAL SOBRE PATA DE GANSO. DISECCIÓN POR PLANOS. FASCIOTOMÍA SARTORIO Y OBTENCIÓN DE PLASTIA ST.
+- PREPARACIÓN DE PLASTIA CUÁDRUPLE DE ST CON 2 TIGHTROPE (Arthrex) DE 7 CM LONGITUD * 9 MM DIÁMETRO.
+- TIEMPO ARTROSCÓPICO: PORTALES ARTROSCÓPICOS HABITUALES: AL, AM Y AM ACCESORIO.
+- NO LESIONES MENISCALES NI CONDRALES.
+- REALIZACIÓN DE TÚNEL FEMORAL FUERA DENTRO CON BROCA RETRÓGRADA FLIPCUTTER (Arthrex) DE 9 MM * 25 MM.
+- REALIZACIÓN DE TÚNEL TIBIAL FUERA DENTRO CON BROCA RETRÓGRADA FLIPCUTTER (Arthrex) DE 9 MM * 30 MM.
+- AMPLIACIÓN PORTAL AM ACCESORIO E INTRODUCCIÓN DE LA PLASTIA POR EL MISMO HACIA TF PRIMERO Y TT POSTERIORMENTE.
+- SE INTRODUCE 20 MM DE PLASTIA EN CADA TÚNEL Y SE TENSIONA BIDIRECCIONALMENTE A 20º FLEXIÓN Y CAJÓN POSTERIOR.
+- FIJACIÓN FEMORAL Y TIBIAL CON TIGHTROPE (Arthrex).
+- LAVADO ARTICULAR ABUNDANTE.
+- SE DEJA DRENAJE INTRAARTICULAR.
+- RETIRADA DE ISQUEMIA Y CIERRE POR PLANOS.
+- SE INFILTRA ZONA DONANTE Y PORTALES CON CÓCTEL ANALGÉSICO CON 5 MG CLORURO MÓRFICO Y 10 CC ROPIVACAÍNA.
+- VENDAJE COMPRESIVO.
 ```
 
 **Tratamiento al Alta:**
 
 ```
+- Recomendaciones:
+- Mover activamente los dedos de la extremidad operada.
+- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
+- Aplicar hielo sobre vendaje 4 veces al día durante 30 minutos.
+- Puede caminar con ayuda de 2 muletas apoyo parcial de la pierna intervenida y movilidad libre según tolerancia.
+- Realizar ejercicios de cuádriceps y movilidad de la rodilla.
+- Movilizaciones pasivas de rótula 4/5 veces al día durante 15 minutos.
 - Puede requerir ayuda domiciliaria
-- Pendiente de completar
+- Medicación:
+- ENANPLUS 75 mg/25 mg / 8 horas vía oral.
+- INHIXA 40 mg /24 horas vía subcutánea durante 3 semanas.
+- Antes de irse de alta del hospital:
+- Solicitar cita en Admisión de Consultas Externas para revisión en CC EE de COT ({DOCTOR}) en 3 semanas para ver evolución.
+- Solicitar cita en Servicio de Rehabilitación para seguimiento postoperatorio.
+- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
 ```
 
 ---

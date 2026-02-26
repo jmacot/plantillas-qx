@@ -3,7 +3,7 @@
 Aplicacion web de archivo unico para generar **notas operatorias** y **tratamientos al alta** en Cirugia Ortopedica y Traumatologia (COT). Disenada para agilizar la documentacion clinica en el dia a dia del quirofano.
 
 ![HTML5](https://img.shields.io/badge/HTML5-single--file-E34F26?logo=html5&logoColor=white)
-![Plantillas](https://img.shields.io/badge/plantillas-78-1a3a5c)
+![Plantillas](https://img.shields.io/badge/plantillas-87-1a3a5c)
 ![Regiones](https://img.shields.io/badge/regiones-5-16a34a)
 ![Sin dependencias](https://img.shields.io/badge/dependencias-ninguna-grey)
 
@@ -19,7 +19,7 @@ No requiere instalacion. Funciona en cualquier navegador, incluyendo movil y tab
 
 ## Funcionalidades
 
-- **78 plantillas quirurgicas** organizadas en 13 categorias y 5 regiones anatomicas (Trauma, Rodilla, Cadera, Miembro Superior, Pie y Tobillo)
+- **87 plantillas quirurgicas** organizadas en 13 categorias y 5 regiones anatomicas (Trauma, Rodilla, Cadera, Miembro Superior, Pie y Tobillo)
 - **Navegacion por regiones**: pills horizontales para filtrar por region anatomica
 - **Campos dinamicos**: fecha del dia, cirujano y ayudante se insertan automaticamente en cada plantilla
 - **Dos paneles simultaneos**: hoja operatoria (izquierda) y tratamiento al alta (derecha) con estilo glass y iconos SVG
@@ -43,11 +43,11 @@ No requiere instalacion. Funciona en cualquier navegador, incluyendo movil y tab
 
 ## Catalogo de procedimientos
 
-### Region: Trauma (12)
+### Region: Trauma (13)
 
 Canulados cadera, Gamma3, PPC Exeter, RAFI periprotesica NCB, RAFI supracondilea AXSOS, RAFI rotula cerclaje, Clavo T2 tibia, RAFI tobillo, Sutura Aquiles, RAFI EDR Aculoc-2, RAFI humero AxSOS, RAFI clavicula Variax, Monteggia Peri-Loc
 
-### Region: Rodilla (35)
+### Region: Rodilla (36)
 
 **Artroscopia (CAR)** — Mosaicoplastia, Fr meseta tibial, Reinsercion espina tibial, Ficat + plicatura ARI, SHER plicatura, Meniscectomia, Sutura meniscal, Artrolisis, Diagnostica, Cuerpo libre, Ficat, Toilette, Sinovectomia
 
@@ -55,7 +55,7 @@ Canulados cadera, Gamma3, PPC Exeter, RAFI periprotesica NCB, RAFI supracondilea
 
 **LCA** — ProCinch ST-RI, ProCinch ALL-INSIDE, ProCinch + Lemaire, ProCinch + sutura meniscal, ProCinch + reinsercion raiz, ALL-INSIDE Arthrex, HTH, Aumentacion AM, Aumentacion PL, Rescate revision, Rescate HTH banco + Lemaire
 
-**Osteotomias y Cartilago** — OTV adiccion, OTV sustraccion Coventry, OTV varizante femur, OTV Tomofix, Fulkerson, Mosaico + OTV, LFPM + TTA
+**Osteotomias y Cartilago** — CAR + OTV adiccion, CAR + OTV sustraccion Coventry, CAR + OTV varizante femur, OTV Tomofix, OVT apertura medial, OVT + correccion pendiente posterior, Fulkerson, Mosaico + OTV, LFPM + TTA
 
 ### Region: Cadera (3)
 
@@ -63,11 +63,11 @@ Canulados cadera, Gamma3, PPC Exeter, RAFI periprotesica NCB, RAFI supracondilea
 
 **Artroscopia (CAC)** — Reinsercion labrum acetabular
 
-### Region: Miembro Superior (24)
+### Region: Miembro Superior (30)
 
-**Mano y Antebrazo** — STC, TCG mano, Dedo resorte A1, Dedo resorte tenolisis, RAFI EDR DVR, RAFI EDR ACUMED, Fr radio placa, Fr cubito + radio doble placa, Fr humero placa, Fr olecranon placa, Fr olecranon cerclaje, Seccion tendon flexor, Clavo T2 humero
+**Mano y Antebrazo** — STC, TCG mano, Dedo resorte A1, Dedo resorte tenolisis, RAFI EDR DVR, RAFI EDR ACUMED, Fr radio placa, Fr cubito + radio doble placa, Fr humero placa, Fr olecranon placa, Fr olecranon cerclaje, Seccion tendon flexor, Clavo T2 humero, Weaver-Dunn clavicula distal, Dupuytren, Ganglion mano, Infiltracion TMTC-STT, Rizartrosis trapeciectomia Welby
 
-**Hombro** — CAH manguito rotador, CAH subescapular, Balon subacromial, PTHI Aequalis, PTHI Ascend, PTHI Biorsa, PTHI Revive, Elastofibroma dorsi
+**Hombro** — CAH manguito rotador, CAH subescapular, Balon subacromial, CAH luxacion AC TwinBridge, PTHI Aequalis, PTHI Ascend, PTHI Biorsa, PTHI Revive, Elastofibroma dorsi
 
 **Codo** — Biceps agudo, Biceps cronico, Epicondilitis
 
