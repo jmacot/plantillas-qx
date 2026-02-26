@@ -3,7 +3,7 @@
 > Catálogo de todas las plantillas quirúrgicas del proyecto `plantillas-qx`,
 > organizadas por región y categoría, con su nota operatoria y tratamiento al alta completos.
 
-> **Total: 81 plantillas** en 13 categorías y 5 regiones anatómicas.
+> **Total: 87 plantillas** en 13 categorías y 5 regiones anatómicas.
 
 > **Variables dinámicas:** `{FECHA}` (fecha DD/MM/YY), `{DOCTOR}` (cirujano), `{AYUDANTE}` (ayudante).
 
@@ -22,11 +22,11 @@
   - [Prótesis Cadera (2)](#categoría-ptc)
   - [Artroscopia Cadera (1)](#categoría-cac)
 - [Miembro Superior](#región-ms)
-  - [Manguito Rotador (3)](#categoría-hombro_mr)
+  - [Manguito Rotador (4)](#categoría-hombro_mr)
   - [Prótesis Hombro (4)](#categoría-hombro_pthi)
   - [Tumores / Partes Blandas (1)](#categoría-hombro_tumor)
   - [Codo (3)](#categoría-codo)
-  - [Mano y Antebrazo (13)](#categoría-ms)
+  - [Mano y Antebrazo (18)](#categoría-ms)
 - [Pie y Tobillo](#región-pt)
   - [Pie y Tobillo (5)](#categoría-pt)
 - [Reglas Generales](#reglas-generales)
@@ -2598,7 +2598,44 @@ CAC REINSERCIÓN  LABRUM
 
 <a id="categoría-hombro_mr"></a>
 
-#### Manguito Rotador (3 plantillas)
+#### Manguito Rotador (4 plantillas)
+
+##### `hombro_cah_luxac` — CAH — Luxación AC + TwinBridge (S&N)
+
+**Nota Operatoria:**
+
+```
+INTERVENCIÓN (DRS. {DOCTOR}/{AYUDANTE})
+Luxación acromioclavicular ---.
+Anestesia general e IOT. Profilaxis antibiótica con 2g de cefazolina.
+En posición de silla de playa.
+Portales artroscópicos AL + AM. Localizamos tendón conjunto, apófisis coracoides y disecamos hasta base.
+Miniabordaje longitudinal sobre tercio medio de clavícula.
+Fijación interna sistema TwinBridge (Smith and Nephew).
+Comprobamos adecuada reducción y colocación de material.
+Lavado abundante con suero fisiológico.
+Cierre por planos con sutura reabsorbible, y piel con grapas.
+Apósito y cabestrillo.
+```
+
+**Tratamiento al Alta:**
+
+```
+- Mantener brazo en cabestrillo, moviendo mano y codo como se le ha explicado.
+- Realizar los ejercicios que su médico le ha explicado.
+- Vigilar coloración y sensibilidad de la mano y los dedos.
+- Evitar cargar peso sobre brazo intervenido hasta nuevo aviso y según plazos marcados.
+- Se adjunta RECOMENDACIONES AL ALTA DE CIRUGÍA ARTROSCÓPICA DE HOMBRO
+- Medicación incluida en su tarjeta sanitaria:
+- METAMIZOL 575mg cada 8 horas vía oral, que puede alternar con PARACETAMOL 1g/8h vía oral si precisa por dolor.
+- IBUPROFENO 400 mg cada 8 horas vía oral añadido a lo anterior si precisa por dolor.
+- OMEPRAZOL 20mg cada 24 horas.
+- Curas locales en centro de salud cada 48-72 horas, retirando grapas en 15-17 días, salvo mejor criterio de enfermería de zona.
+- Solicitar cita para revisión en 3-4 semanas para {DOCTOR}, para control evolutivo y radiológico.
+- Si aparece fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
+```
+
+---
 
 ##### `hombro_cah` — CAH — Reparación artroscópica manguito rotador
 
@@ -2996,7 +3033,7 @@ Vendaje.
 
 <a id="categoría-ms"></a>
 
-#### Mano y Antebrazo (13 plantillas)
+#### Mano y Antebrazo (18 plantillas)
 
 ##### `ms_stc` — Síndrome del túnel carpiano (STC)
 
@@ -3073,16 +3110,24 @@ REALIZAR MASAJES SOBRE CICATRIZ UNA VEZ RETIRADOS LOS PUNTOS
 ```
 IQ {FECHA} ({DOCTOR}/{AYUDANTE})
 
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
-
-Pendiente de completar
+DEDO EN RESORTE --- :
+Bajo anestesia local y sedación, en decúbito supino, con manguito de isquemia en raíz de MS---. Se realiza poleotomía tras incisión en cara volar base --- dedo. Lavado, hemostasia y cierre. Vendaje.
 ```
 
 **Tratamiento al Alta:**
 
 ```
-- Puede requerir ayuda domiciliaria
-- Pendiente de completar
+- Mantener la mano elevada el mayor tiempo posible durante las primeras 48 horas.
+- Mover activamente los dedos de la extremidad operada, según se le ha explicado.
+- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
+- Medicación incluida en su tarjeta sanitaria:
+- METAMIZOL 575mg cada 8 horas vía oral durante 5 días, que puede alternar con PARACETAMOL 1g/8h vía oral si precisa por dolor.
+- OMEPRAZOL 20mg cada 24 horas durante 5 días.
+- Curas locales en centro de salud cada 24-48 horas, retirando puntos de sutura en 12-15 días, salvo mejor criterio de enfermería de zona.
+- Una vez retirados los puntos, deberá masajear la zona de la cicatriz en círculos de forma enérgica, para evitar adherencias de la misma.
+- Evitar coger peso y hacer fuerza con la mano intervenida durante 4 semanas desde la fecha de la intervención.
+- Solicitar cita para revisión en 3-4 semanas para {DOCTOR}
+- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
 ```
 
 ---
@@ -3445,6 +3490,160 @@ FRACTURA DIAFISARIA TRANSVERSAL  DE TERCIO  MEDIO DE  HUMERO DERCHO:
 - IBUPROFENO 600 mg / 8 horas vía oral.
 - Revisión  de  herida  qca en  Centro  Salud  cada  72 horas  para  curas  locales.
 - Revisión en CCEE de COT ({DOCTOR}) el próximo día 08/03/07 a las 11:26 horas para control Rx,  retirada sutura y seguimiento.
+- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
+```
+
+---
+
+##### `ms_cerclaje_clavicula` — Weaver-Dunn / Fr clavícula distal — cerclaje
+
+**Nota Operatoria:**
+
+```
+IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+
+WEAVER-DUNN / FRACTURA CLAVÍCULA DISTAL ---:
+Luxación acromioclavicular / fractura distal clavícula ---.
+Anestesia general e IOT. Profilaxis antibiótica con 2g de cefazolina.
+En posición de silla de playa.
+Abordaje directo sobre trazo de fractura, longitudinal a clavícula, reducción abierta.
+Lazada de PDS a través de dos orificios en clavícula y bajo base de coracoides.
+Lazada en 8 a través de orificios reduciendo fractura.
+Plastia con pastilla ósea de hemiligamento coracoacromial a clavícula distal.
+Comprobamos adecuada reducción.
+Lavado abundante con suero fisiológico.
+Cierre por planos con sutura reabsorbible, y piel con sutura intradérmica.
+Apósito y cabestrillo.
+```
+
+**Tratamiento al Alta:**
+
+```
+- Mantener brazo en cabestrillo, moviendo mano y codo como se le ha explicado.
+- Realizar los ejercicios que su médico le ha explicado.
+- Vigilar coloración y sensibilidad de la mano y los dedos.
+- Evitar cargar peso sobre brazo intervenido hasta nuevo aviso y según plazos marcados.
+- Medicación incluida en su tarjeta sanitaria:
+- METAMIZOL 575mg cada 8 horas vía oral, que puede alternar con PARACETAMOL 1g/8h vía oral si precisa por dolor.
+- IBUPROFENO 400 mg cada 8 horas vía oral añadido a lo anterior si precisa por dolor.
+- OMEPRAZOL 20mg cada 24 horas.
+- Curas locales en centro de salud cada 48-72 horas, retirando grapas en 15-17 días, salvo mejor criterio de enfermería de zona.
+- Solicitar cita para revisión en 3-4 semanas para {DOCTOR}, para control evolutivo y radiológico.
+- Si aparece fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
+```
+
+---
+
+##### `ms_dupuytren` — Dupuytren — fasciectomía
+
+**Nota Operatoria:**
+
+```
+IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+
+DUPUYTREN --- :
+Bajo anestesia regional y sedación, en decúbito supino, con manguito de isquemia en raíz de MS---. Se realiza abordaje en zigzag sobre cordón fibroso --- radio. Escisión del mismo, comprobando extensión completa de articulaciones metacarpofalángica e interfalángicas. Lavado, hemostasia y cierre. Vendaje.
+```
+
+**Tratamiento al Alta:**
+
+```
+- Mantener la mano elevada el mayor tiempo posible durante las primeras 48 horas.
+- Mover activamente los dedos de la extremidad operada, según se le ha explicado.
+- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
+- Medicación incluida en su tarjeta sanitaria:
+- METAMIZOL 575mg cada 8 horas vía oral durante 5 días, que puede alternar con PARACETAMOL 1g/8h vía oral si precisa por dolor.
+- OMEPRAZOL 20mg cada 24 horas durante 5 días.
+- Curas locales en centro de salud cada 24-48 horas, retirando puntos de sutura en 12-15 días, salvo mejor criterio de enfermería de zona.
+- Una vez retirados los puntos, deberá masajear la zona de la cicatriz en círculos de forma enérgica, para evitar adherencias de la misma.
+- Evitar coger peso y hacer fuerza con la mano intervenida durante 4 semanas desde la fecha de la intervención.
+- Solicitar cita para revisión en 3-4 semanas para {DOCTOR}
+- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
+```
+
+---
+
+##### `ms_ganglion` — Ganglión mano — resección
+
+**Nota Operatoria:**
+
+```
+IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+
+GANGLIÓN MANO --- :
+Bajo anestesia local y sedación, en decúbito supino, con manguito de isquemia en raíz de MS---. Tras incisión en cara dorsal de mano, se realiza resección de la lesión hasta punto de comunicación con articulación, y electrocoagulación del mismo. Lavado, hemostasia y cierre. Vendaje.
+```
+
+**Tratamiento al Alta:**
+
+```
+- Mantener la mano elevada el mayor tiempo posible durante las primeras 48 horas.
+- Mover activamente los dedos de la extremidad operada, según se le ha explicado.
+- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
+- METAMIZOL 575mg cada 8 horas vía oral durante 5 días, que puede alternar con PARACETAMOL 1g/8h vía oral si precisa por dolor.
+- OMEPRAZOL 20mg cada 24 horas durante 5 días.
+- Curas locales en centro de salud cada 48-72 horas, retirando puntos de sutura en 12-15 días, salvo mejor criterio de enfermería de zona.
+- Una vez retirados los puntos, deberá masajear la zona de la cicatriz en círculos de forma enérgica, para evitar adherencias de la misma.
+- Solicitar cita para revisión en 3-4 semanas para {DOCTOR}
+- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
+```
+
+---
+
+##### `ms_infiltracion_tmct` — Infiltración TMTC-STT bajo escopia
+
+**Nota Operatoria:**
+
+```
+IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+
+INFILTRACIÓN TMTC-STT MANO --- :
+Infiltración bajo escopia TMTC-STT mano --- con AL+CE.
+Inmediata mejoría del dolor.
+```
+
+**Tratamiento al Alta:**
+
+```
+- Reposo mano --- 24-48 horas.
+- Mover activamente los dedos de la extremidad operada, según se le ha explicado.
+- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
+- Retirar apósito pasadas las 6-8 horas de la intervención.
+- Solicitar cita para revisión en 3-4 semanas para {DOCTOR}
+- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
+```
+
+---
+
+##### `ms_rizartrosis` — Rizartrosis — trapeciectomía + plastia Welby
+
+**Nota Operatoria:**
+
+```
+IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+
+RIZARTROSIS — TRAPECIECTOMÍA + PLASTIA WELBY MODIFICADA:
+Bajo anestesia locorregional + sedación, decúbito supino, isquemia de MS---.
+Abordaje dorsal de TMC primer dedo y técnica de Welby modificada.
+Identificación de rama sensitiva dorsal del nervio radial.
+Exéresis de trapecio, comprobando buen estado de superficie articular de escafoides y trapezoide e integridad de arteria radial.
+Se obtiene el hemitendón radial del FCR.
+Plastia con hemiFCR sobre APL y hemiFCR anclado en 2º MTC.
+Se quita la isquemia comprobando que no hay sangrado activo.
+Cierre por planos.
+```
+
+**Tratamiento al Alta:**
+
+```
+- Mantener la extremidad en alto (brazo en cabestrillo) durante las primeras 48 horas.
+- Mover activamente los dedos de la extremidad operada.
+- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
+- ELASTÓMERO 48H. Acudir al centro de salud o al hospital para retirada pasadas las 48h. A partir de entonces comenzar con tratamiento oral:
+- METAMIZOL 575mg/vo/8h/5 días
+- PARACETAMOL 1g/vo/8h/5 días
+- Curas locales cada 48-72h. Retirada de puntos a partir de los 12-15 días.
+- Solicitar cita para revisión en 4 semanas para {DOCTOR}
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
 ```
 
