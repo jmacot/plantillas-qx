@@ -1342,9 +1342,9 @@
   // ─────────────────────────────────────────────
 
   // Helpers de género, lateralidad y COT
-  function urgGenero(sexo) { return sexo === 'H' ? 'Varón' : 'Mujer'; }
-  function urgLadoF(lado) { return lado === 'D' ? 'derecha' : 'izquierda'; }
-  function urgLadoM(lado) { return lado === 'D' ? 'derecho' : 'izquierdo'; }
+  function urgGenero(sexo) { return sexo === 'H' ? 'Varón' : sexo === 'M' ? 'Mujer' : '___'; }
+  function urgLadoF(lado) { return lado === 'D' ? 'derecha' : lado === 'I' ? 'izquierda' : '___'; }
+  function urgLadoM(lado) { return lado === 'D' ? 'derecho' : lado === 'I' ? 'izquierdo' : '___'; }
   function urgCotLabel(c1, c2) {
     const a = c1.trim(), b = c2.trim();
     if (a && b && a !== b) return `COT (${a}/${b})`;
@@ -1450,23 +1450,22 @@
     function resetUrg() {
       [anamEl, expoEl, planEl].forEach(el => { el.value = ''; el.style.height = ''; });
     }
-    if (!diag || !sexo || !edad) { resetUrg(); return; }
-    // Fx vertebral no requiere lateralidad
-    if (!URG_SIN_LADO.includes(diag) && !lado) { resetUrg(); return; }
+    if (!diag) { resetUrg(); return; }
 
     const t = URG_PLANTILLAS[diag];
     if (!t) return;
 
-    anamEl.value = t.anamnesis(cot, acudo, parte, sexo, edad, lado);
-    expoEl.value = t.exploracion(cot, acudo, parte, sexo, edad, lado);
+    const e = edad || '___';
+    anamEl.value = t.anamnesis(cot, acudo, parte, sexo, e, lado);
+    expoEl.value = t.exploracion(cot, acudo, parte, sexo, e, lado);
 
     // Determinar plan según tipo
     if (URG_SIEMPRE_QX.includes(diag)) {
-      planEl.value = t.plan_quirurgico(cot, acudo, parte, sexo, edad, lado);
+      planEl.value = t.plan_quirurgico(cot, acudo, parte, sexo, e, lado);
     } else if (URG_CON_TIPO.includes(diag) && tipo === 'Q') {
-      planEl.value = t.plan_quirurgico(cot, acudo, parte, sexo, edad, lado);
+      planEl.value = t.plan_quirurgico(cot, acudo, parte, sexo, e, lado);
     } else {
-      planEl.value = t.plan_conservador(cot, acudo, parte, sexo, edad, lado);
+      planEl.value = t.plan_conservador(cot, acudo, parte, sexo, e, lado);
     }
 
     [anamEl, expoEl, planEl].forEach(el => {
