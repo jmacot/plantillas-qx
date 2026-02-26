@@ -67,7 +67,7 @@ CANULADOS CADERA (STRYKER)
 **Tratamiento al Alta:**
 
 ```
-- Cuidados Postoperatorios:
+
 - Mantener pie elevado cuando esté sentada, moviendo el pie según las indicaciones.
 - Realizar ejercicios de rehabilitación tal como se le ha explicado.
 - Vigilar coloración y sensibilidad del pie y los dedos.
@@ -79,7 +79,8 @@ CANULADOS CADERA (STRYKER)
 - ENOXAPARINA 40 mg cada 24 horas vía subcutánea.
 - VITAMINA D3: 4.000-6.000 UI/día durante 8-12 semanas, seguido de 2.000 UI/día de mantenimiento.
 - Adecuada ingesta de calcio y proteínas en la dieta.
-- Curas locales:
+
+Curas locales:
 - Realizar curas locales en el centro de salud cada 48-72 horas.
 - Retiro de grapas en 15-20 días, salvo mejor criterio de enfermería.
 - Revisión:
@@ -91,7 +92,8 @@ CANULADOS CADERA (STRYKER)
 - Mala evolución de la herida (enrojecimiento, inflamación, supuración).
 - Alteraciones en la sensibilidad o coloración de la extremidad intervenida.
 - Dolor en el pecho, dificultad para respirar, o hinchazón excesiva en las piernas (posibles signos de trombosis venosa profunda).
-- 🟢 Ejercicios Recomendados:
+
+ Ejercicios Recomendados:
 - 1. Flexión y extensión de tobillo:
 - Sentado en una silla, mueva el pie hacia arriba y hacia abajo (flexión y extensión del tobillo).
 - Realice 3 series de 10 repeticiones por cada pierna.
@@ -110,7 +112,8 @@ CANULADOS CADERA (STRYKER)
 - 5. Movimientos de dedos y tobillo:
 - Sentado o acostado, mueva los dedos de los pies y realice movimientos circulares con el tobillo para mejorar la circulación.
 - Realice 3 series de 10 repeticiones.
-- Recomendaciones para los Cuidadores en el Hogar:
+
+Recomendaciones para los Cuidadores en el Hogar:
 - Movilización segura:
 - Ayudar al paciente a mantener la pierna elevada y evitar movimientos bruscos.
 - Evitar que el paciente realice esfuerzos excesivos o cargue peso sobre la pierna operada.
@@ -125,9 +128,11 @@ CANULADOS CADERA (STRYKER)
 - Estimulación de la movilidad:
 - Anime al paciente a realizar los ejercicios de rehabilitación que se le han enseñado, siempre con ayuda si es necesario, para evitar la atrofia muscular y mejorar la circulación.
 - Ayude con la movilización pasiva si el paciente tiene dificultades para hacerlo por sí mismo.
-- Prevención de complicaciones:
+Prevención de complicaciones:
 - Vigile signos de trombosis venosa profunda (dolor en la pierna, hinchazón, enrojecimiento, y calor) y ayude a que el paciente se mueva para mejorar la circulación.
 - Asegúrese de que el paciente mantenga la pierna elevada siempre que sea posible para reducir la hinchazón.
+
+- Antes de marcharse, solicitará cita para revisión en CCEE COT {DOCTOR} en 3-4 semanas, para control evolutivo y radiológico.
 ```
 
 ##### `gamma3` — Clavo Gamma3 — Fr pertrocantérea cadera (Stryker)
@@ -137,7 +142,7 @@ CANULADOS CADERA (STRYKER)
 ```
 IQ {FECHA} ({DOCTOR}/{AYUDANTE})
 
-CLAVO TROCANTÉRICO GAMMA3
+
 - Fractura pertrocantérea fémur derecho.
 - Anestesia regional.
 - Profilaxis antibiótica con 2g de cefazolina.
@@ -198,7 +203,8 @@ PRÓTESIS PARCIAL DE CADERA
 - Vigilar coloración y sensibilidad del pie y los dedos.
 - Puede caminar con ayuda de andador, que solicitará en préstamo si precisa.
 - Requiere ayuda domiciliaria
-- Medicación incluida en su tarjeta sanitaria:
+
+Medicación incluida en su tarjeta sanitaria:
 - METAMIZOL 575mg cada 8 horas vía oral, que puede alternar con PARACETAMOL 1g/8h vía oral si precisa por dolor.
 - OMEPRAZOL 20mg cada 24 horas.
 - ENOXAPARINA 40mg cada 24 horas vía subcutánea.
@@ -216,7 +222,7 @@ PRÓTESIS PARCIAL DE CADERA
 ```
 IQ {FECHA} ({DOCTOR}/{AYUDANTE})
 
-FR PERIPROTESICA CADERA : OSTEOSINTESIS  CON PLACA NCB DE ZIMMER
+
 - FRACTURA  PERIPROTESICA DE  FEMUR  IZQUIERDO EN  PACIENTE  CON  PROTESIS  CADERA:
 - PROFILAXIS  ANTIBIÓTICA CON  2 GR DE  CEFAZOLINA.
 - DECUBITO  SUPINO
@@ -258,7 +264,7 @@ FR PERIPROTESICA CADERA : OSTEOSINTESIS  CON PLACA NCB DE ZIMMER
 ```
 IQ {FECHA} ({DOCTOR}/{AYUDANTE})
 
-FR SUPRAINTERCONDILEA DE   FÉMUR: OSTEOSINTESIS  CON  PLACA  AXSOS
+
 - FRACTURA  SUPRAINTERCONDILEA DE FEMUR DERECHO:
 - PROFILAXIS  ANTIBIÓTICA CON  2 GR DE  CEFAZOLINA.
 - DECUBITO  SUPINO
