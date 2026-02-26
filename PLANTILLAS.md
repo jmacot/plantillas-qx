@@ -3,7 +3,7 @@
 > Catálogo de todas las plantillas quirúrgicas del proyecto `plantillas-qx`,
 > organizadas por región y categoría, con su nota operatoria y tratamiento al alta completos.
 
-> **Total: 87 plantillas** en 13 categorías y 5 regiones anatómicas.
+> **Total: 85 plantillas** en 13 categorías y 5 regiones anatómicas.
 
 > **Variables dinámicas:** `{FECHA}` (fecha DD/MM/YY), `{DOCTOR}` (cirujano), `{AYUDANTE}` (ayudante).
 
@@ -14,15 +14,15 @@
 - [Trauma](#región-trauma)
   - [Trauma (13)](#categoría-trauma)
 - [Rodilla](#región-rodilla)
-  - [Artroscopia Rodilla (17)](#categoría-car)
+  - [Artroscopia Rodilla (16)](#categoría-car)
   - [Prótesis Rodilla (3)](#categoría-ptr)
-  - [LCA (11)](#categoría-lca)
+  - [LCA (10)](#categoría-lca)
   - [Osteotomías y Cartílago (5)](#categoría-rodilla_osteo)
 - [Cadera](#región-cadera)
   - [Prótesis Cadera (2)](#categoría-ptc)
   - [Artroscopia Cadera (1)](#categoría-cac)
 - [Miembro Superior](#región-ms)
-  - [Manguito Rotador (4)](#categoría-hombro_mr)
+  - [Artroscopia Hombro (4)](#categoría-hombro_mr)
   - [Prótesis Hombro (4)](#categoría-hombro_pthi)
   - [Tumores / Partes Blandas (1)](#categoría-hombro_tumor)
   - [Codo (3)](#categoría-codo)
@@ -51,18 +51,17 @@
 IQ {FECHA} ({DOCTOR}/{AYUDANTE})
 
 CANULADOS CADERA (STRYKER)
-Procedimiento Quirúrgico:
-Anestesia: Regional.
-Profilaxis antibiótica: 2g de cefazolina intravenosa.
-Posición: Decúbito supino en mesa de tracción con control por escopia.
-Técnica quirúrgica: Reducción cerrada de la fractura.
-Fijación interna: Tres tornillos canulados en disposición de triángulo invertido:
-Tornillo inferior: 100 mm con arandela.
-Tornillos anterosuperior y posterosuperior: 100 mm y 95 mm respectivamente, sin arandela.
-Verificación: Comprobación de adecuada reducción y correcta colocación del material de osteosíntesis.
-Lavado: Abundante con suero fisiológico.
-Cierre: Por planos con sutura reabsorbible y piel con grapas.
-Apósito: Compresivo.
+- Anestesia: Regional.
+- Profilaxis antibiótica: 2g de cefazolina intravenosa.
+- Posición: Decúbito supino en mesa de tracción con control por escopia.
+- Técnica quirúrgica: Reducción cerrada de la fractura.
+- Fijación interna: Tres tornillos canulados en disposición de triángulo invertido:
+- Tornillo inferior: 100 mm con arandela.
+- Tornillos anterosuperior y posterosuperior: 100 mm y 95 mm respectivamente, sin arandela.
+- Verificación: Comprobación de adecuada reducción y correcta colocación del material de osteosíntesis.
+- Lavado: Abundante con suero fisiológico.
+- Cierre: Por planos con sutura reabsorbible y piel con grapas.
+- Apósito: Compresivo.
 ```
 
 **Tratamiento al Alta:**
@@ -131,8 +130,6 @@ Apósito: Compresivo.
 - Asegúrese de que el paciente mantenga la pierna elevada siempre que sea posible para reducir la hinchazón.
 ```
 
----
-
 ##### `gamma3` — Clavo Gamma3 — Fr pertrocantérea cadera (Stryker)
 
 **Nota Operatoria:**
@@ -141,15 +138,15 @@ Apósito: Compresivo.
 IQ {FECHA} ({DOCTOR}/{AYUDANTE})
 
 CLAVO TROCANTÉRICO GAMMA3
-Fractura pertrocantérea fémur derecho.
-Anestesia regional.
-Profilaxis antibiótica con 2g de cefazolina.
-Decúbito supino, en mesa de tracción y con control por escopia. Reducción cerrada.
-Fijación interna con clavo Gamma 3 (Stryker) 125º x 10mm x 170mm, tornillo cefálico 90mm, tornillo de bloqueo distal 40mm.
-Comprobamos adecuada reducción y colocación de material de osteosíntesis. 
-Lavado abundante con suero fisiológico.
-Cierre por planos con sutura reabsorbible, y piel con grapas.
-Apósito compresivo.
+- Fractura pertrocantérea fémur derecho.
+- Anestesia regional.
+- Profilaxis antibiótica con 2g de cefazolina.
+- Decúbito supino, en mesa de tracción y con control por escopia. Reducción cerrada.
+- Fijación interna con clavo Gamma 3 (Stryker) 125º x 10mm x 170mm, tornillo cefálico 90mm, tornillo de bloqueo distal 40mm.
+- Comprobamos adecuada reducción y colocación de material de osteosíntesis.
+- Lavado abundante con suero fisiológico.
+- Cierre por planos con sutura reabsorbible, y piel con grapas.
+- Apósito compresivo.
 ```
 
 **Tratamiento al Alta:**
@@ -172,8 +169,6 @@ Apósito compresivo.
 - Si aparece fiebre (>38º), dolor intenso que no se alivia con analgésicos, mala evolución de la herida, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
 ```
 
----
-
 ##### `ptc_exeter` — PPC Exeter (Stryker)
 
 **Nota Operatoria:**
@@ -182,17 +177,17 @@ Apósito compresivo.
 IQ {FECHA} ({DOCTOR}/{AYUDANTE})
 
 PRÓTESIS PARCIAL DE CADERA
-Fractura subcapital fémur izquierdo
-Anestesia regional.
-Profilaxis antibiótica con 2g de cefazolina.
-Decúbito lateral derecho.
-Incisión longitudinal sobre región trocantérica y vía de abordaje según Bauer.
-Capsulotomía en “T” y osteotomía de cuello femoral. Resección de cabeza femoral.
-Artroplastia parcial de cadera cementada modelo Exeter (Stryker) vástago nº 35.5, cuello 0x26mm, cúpula bipolar 43mm.
-Comprobamos estabilidad en todos los planos.
-Sutura capsular y cierre por planos.
-Piel con grapas.
-Apósito compresivo.
+- Fractura subcapital fémur izquierdo
+- Anestesia regional.
+- Profilaxis antibiótica con 2g de cefazolina.
+- Decúbito lateral derecho.
+- Incisión longitudinal sobre región trocantérica y vía de abordaje según Bauer.
+- Capsulotomía en “T” y osteotomía de cuello femoral. Resección de cabeza femoral.
+- Artroplastia parcial de cadera cementada modelo Exeter (Stryker) vástago nº 35.5, cuello 0x26mm, cúpula bipolar 43mm.
+- Comprobamos estabilidad en todos los planos.
+- Sutura capsular y cierre por planos.
+- Piel con grapas.
+- Apósito compresivo.
 ```
 
 **Tratamiento al Alta:**
@@ -214,8 +209,6 @@ Apósito compresivo.
 - Si aparece fiebre (>38º), dolor intenso que no se alivia con analgésicos, mala evolución de la herida, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
 ```
 
----
-
 ##### `rafi_periprotesica` — RAFI Fr periprotésica cadera — Placa NCB (Zimmer)
 
 **Nota Operatoria:**
@@ -224,7 +217,7 @@ Apósito compresivo.
 IQ {FECHA} ({DOCTOR}/{AYUDANTE})
 
 FR PERIPROTESICA CADERA : OSTEOSINTESIS  CON PLACA NCB DE ZIMMER
-FRACTURA  PERIPROTESICA DE  FEMUR  IZQUIERDO EN  PACIENTE  CON  PROTESIS  CADERA: 
+- FRACTURA  PERIPROTESICA DE  FEMUR  IZQUIERDO EN  PACIENTE  CON  PROTESIS  CADERA:
 - PROFILAXIS  ANTIBIÓTICA CON  2 GR DE  CEFAZOLINA.
 - DECUBITO  SUPINO
 - INCISIÓN LONGITUDINAL LATERAL  DEL  FEMUR
@@ -258,8 +251,6 @@ FRACTURA  PERIPROTESICA DE  FEMUR  IZQUIERDO EN  PACIENTE  CON  PROTESIS  CADERA
 - Si aparece fiebre (>38º), dolor intenso que no se alivia con analgésicos, mala evolución de la herida o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
 ```
 
----
-
 ##### `rafi_supracondilea` — RAFI Fr supracondílea fémur — Placa AXSOS (Stryker)
 
 **Nota Operatoria:**
@@ -268,7 +259,7 @@ FRACTURA  PERIPROTESICA DE  FEMUR  IZQUIERDO EN  PACIENTE  CON  PROTESIS  CADERA
 IQ {FECHA} ({DOCTOR}/{AYUDANTE})
 
 FR SUPRAINTERCONDILEA DE   FÉMUR: OSTEOSINTESIS  CON  PLACA  AXSOS
-FRACTURA  SUPRAINTERCONDILEA DE FEMUR DERECHO: 
+- FRACTURA  SUPRAINTERCONDILEA DE FEMUR DERECHO:
 - PROFILAXIS  ANTIBIÓTICA CON  2 GR DE  CEFAZOLINA.
 - DECUBITO  SUPINO
 - INCISIÓN LONGITUDINAL LATERAL  DEL TERCIO  DISTAL  DEL  FEMUR
@@ -301,8 +292,6 @@ FRACTURA  SUPRAINTERCONDILEA DE FEMUR DERECHO:
 - Si aparece fiebre (>38º), dolor intenso que no se alivia con analgésicos, mala evolución de la herida o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
 ```
 
----
-
 ##### `rafi_rotula_cerclaje` — RAFI Fr rótula — cerclaje obenque (agujas K + alambre)
 
 **Nota Operatoria:**
@@ -311,7 +300,7 @@ FRACTURA  SUPRAINTERCONDILEA DE FEMUR DERECHO:
 IQ {FECHA} ({DOCTOR}/{AYUDANTE})
 
 FRACTURA  ROTULA
-FRACTURA TRANVERSAL   ROTULA IZQUIERDA: 
+- FRACTURA TRANVERSAL   ROTULA IZQUIERDA:
 - PROFILAXIS  ANTIBIÓTICA CON  2 GR DE  CEFAZOLINA.
 - ISQUEMIA EN  RAÍZ  DE  MUSLO (40 MINUTOS).
 - INCISIÓN LONGITUDINAL ANTERIOR DE RODILLA.
@@ -344,8 +333,6 @@ FRACTURA TRANVERSAL   ROTULA IZQUIERDA:
 - Si aparece fiebre (>38º), dolor intenso que no se alivia con analgésicos, mala evolución de la herida o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
 ```
 
----
-
 ##### `clavo_tibia_t2_stryker` — Clavo T2 tibia — fresado (Stryker)
 
 **Nota Operatoria:**
@@ -354,17 +341,17 @@ FRACTURA TRANVERSAL   ROTULA IZQUIERDA:
 IQ {FECHA} ({DOCTOR}/{AYUDANTE})
 
 CLAVO TIBIA TRIGEN META-NAIL (S&N)
-Fractura diafisaria multifragmentaria tibia izquierda.
-Anestesia regional.
-Profilaxis antibiótica con 2g de cefazolina.
-Decúbito supino, en mesa de tracción de tibia y con control por escopia. 
-Reducción cerrada, abordaje transrotuliano y fresado progresivo.
-Tornillos interfragmentarios (26mm y 38mm).
-OSTEOSINTESIS CON  CLAVO  INTRAMEDULAR  FRESADO T2 DE  330*9 MM. BLOQUEO  PROXIMAL ESTÁTICO  CON TORNILLO  DE  40  MM. BLOQUEO  DISTAL  CON  2 TORNILLOS MEDIO-LATERAL DE  40 Y 45 MM. SE  COLOCA TAPÓN  EN  EXTREMO  PROXIMAL  DEL  CLAVO.
-Comprobamos adecuada reducción y colocación de material de osteosíntesis. 
-Lavado abundante con suero fisiológico.
-Cierre por planos con sutura reabsorbible, y piel con grapas.
-Vendaje.
+- Fractura diafisaria multifragmentaria tibia izquierda.
+- Anestesia regional.
+- Profilaxis antibiótica con 2g de cefazolina.
+- Decúbito supino, en mesa de tracción de tibia y con control por escopia.
+- Reducción cerrada, abordaje transrotuliano y fresado progresivo.
+- Tornillos interfragmentarios (26mm y 38mm).
+- Osteosíntesis con clavo intramedular fresado T2 de 330x9 mm. Bloqueo proximal estático con tornillo de 40 mm. Bloqueo distal con 2 tornillos medio-lateral de 40 y 45 mm. Se coloca tapón en extremo proximal del clavo.
+- Comprobamos adecuada reducción y colocación de material de osteosíntesis.
+- Lavado abundante con suero fisiológico.
+- Cierre por planos con sutura reabsorbible, y piel con grapas.
+- Vendaje.
 ```
 
 **Tratamiento al Alta:**
@@ -385,8 +372,6 @@ Vendaje.
 - Si aparece fiebre (>38º), dolor intenso que no se alivia con analgésicos, mala evolución de heridas, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
 ```
 
----
-
 ##### `rafi_tobillo` — RAFI Tobillo — placa baja energía peroné distal (Stryker)
 
 **Nota Operatoria:**
@@ -395,17 +380,17 @@ Vendaje.
 IQ {FECHA} ({DOCTOR}/{AYUDANTE})
 
 RAFI FRACTURA TOBILLO PLACA BAJA ENERGÍA (STRYKER)
-Fractura transindesmal peroné izquierdo.
-Anestesia raquídea.
-Profilaxis antibiótica con 2g de cefazolina.
-Isquemia profiláctica sobre miembro inferior izquierdo
-En decúbito supino y con control por escopia. 
-Abordaje longitudinal sobre peroné distal, reducción abierta y fijación con tornillo interfragmentario.
-Fijación interna con placa baja energía 5 orificios, tornillos bloqueados distales y a compresión proximales.
-Comprobamos adecuada reducción y colocación de material de osteosíntesis. 
-Lavado abundante con suero fisiológico.
-Cierre por planos con sutura reabsorbible, y piel con grapas.
-Apósito y férula suropédica.
+- Fractura transindesmal peroné izquierdo.
+- Anestesia raquídea.
+- Profilaxis antibiótica con 2g de cefazolina.
+- Isquemia profiláctica sobre miembro inferior izquierdo.
+- En decúbito supino y con control por escopia.
+- Abordaje longitudinal sobre peroné distal, reducción abierta y fijación con tornillo interfragmentario.
+- Fijación interna con placa baja energía 5 orificios, tornillos bloqueados distales y a compresión proximales.
+- Comprobamos adecuada reducción y colocación de material de osteosíntesis.
+- Lavado abundante con suero fisiológico.
+- Cierre por planos con sutura reabsorbible, y piel con grapas.
+- Apósito y férula suropédica.
 ```
 
 **Tratamiento al Alta:**
@@ -426,8 +411,6 @@ Apósito y férula suropédica.
 - Si aparece fiebre (>38º), dolor intenso que no se alivia con analgésicos, mala evolución de la herida o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
 ```
 
----
-
 ##### `aquiles` — Sutura tendón Aquiles (mini-open, Ma-Griffith)
 
 **Nota Operatoria:**
@@ -436,10 +419,10 @@ Apósito y férula suropédica.
 IQ {FECHA} ({DOCTOR}/{AYUDANTE})
 
 AQUILES
-Intervenido por el {DOCTOR}
-Tipo de anestesia: Raquídea
-Antibiótico profiláctico: Cefazolina 2 g IV
-Procedimiento:
+- Intervenido por el {DOCTOR}
+- Tipo de anestesia: Raquídea
+- Antibiótico profiláctico: Cefazolina 2 g IV
+- Procedimiento:
 - Abordaje mini-open
 - Sutura según técnica de Ma-Griffith con hilo PDS 1
 - Isquemia profiláctica en pierna izquierda
@@ -484,8 +467,6 @@ Procedimiento:
 - Si necesita ayuda para dejar de fumar, consulte con su médico o farmacéutico.
 ```
 
----
-
 ##### `rafi_edr_aculoc2` — RAFI Fr distal radio — Placa Aculoc-2 (Acumed)
 
 **Nota Operatoria:**
@@ -494,7 +475,11 @@ Procedimiento:
 IQ {FECHA} ({DOCTOR}/{AYUDANTE})
 
 FRACTURA DEL EXTREMO DISTAL DEL RADIO LAT
-Bajo anestesia local y sedación, en decúbito supino, con manguito de isquemia en raíz de MSD, y con control por escopia. Abordaje de Henry sobre radio distal. Localización de fractura, reducción abierta y fijación interna con placa Aculoc-2 (Acumed). Lavado, hemostasia y cierre. Férula antebraquial.
+- Bajo anestesia local y sedación, en decúbito supino, con manguito de isquemia en raíz de MSD, y con control por escopia.
+- Abordaje de Henry sobre radio distal.
+- Localización de fractura, reducción abierta y fijación interna con placa Aculoc-2 (Acumed).
+- Lavado, hemostasia y cierre.
+- Férula antebraquial.
 ```
 
 **Tratamiento al Alta:**
@@ -515,8 +500,6 @@ Bajo anestesia local y sedación, en decúbito supino, con manguito de isquemia 
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, mala evolución de la herida o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
 ```
 
----
-
 ##### `rafi_humero_axsos` — RAFI Húmero proximal/diafisario — Placa AxSOS (Stryker)
 
 **Nota Operatoria:**
@@ -525,17 +508,17 @@ Bajo anestesia local y sedación, en decúbito supino, con manguito de isquemia 
 IQ {FECHA} ({DOCTOR}/{AYUDANTE})
 
 RAFI EPH O DIAFISARIA PLACA AXSOS (STRYKER)
-Fractura extremo próximal / diafisaria húmero izquierdo.
-Anestesia general e IOT.
-Profilaxis antibiótica con 2g de cefazolina.
-En posición de silla de playa y con control por escopia. 
-Abordaje deltopectoral ampliado a distal, reducción abierta.
-Tornillos interfragmentarios (24mm, 24mm y 26mm).
-Fijación interna con placa AxSOS (Stryker) 14 orificios.
-Comprobamos adecuada reducción y colocación de material de osteosíntesis. 
-Lavado abundante con suero fisiológico.
-Cierre por planos con sutura reabsorbible, y piel con grapas.
-Apósito y cabestrillo.
+- Fractura extremo proximal / diafisaria húmero izquierdo.
+- Anestesia general e IOT.
+- Profilaxis antibiótica con 2g de cefazolina.
+- En posición de silla de playa y con control por escopia.
+- Abordaje deltopectoral ampliado a distal, reducción abierta.
+- Tornillos interfragmentarios (24mm, 24mm y 26mm).
+- Fijación interna con placa AxSOS (Stryker) 14 orificios.
+- Comprobamos adecuada reducción y colocación de material de osteosíntesis.
+- Lavado abundante con suero fisiológico.
+- Cierre por planos con sutura reabsorbible, y piel con grapas.
+- Apósito y cabestrillo.
 ```
 
 **Tratamiento al Alta:**
@@ -554,8 +537,6 @@ Apósito y cabestrillo.
 - Si aparece fiebre (>38º), dolor intenso que no se alivia con analgésicos, mala evolución de la herida o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
 ```
 
----
-
 ##### `rafi_clavicula` — RAFI Clavícula — Placa Variax (Stryker)
 
 **Nota Operatoria:**
@@ -564,17 +545,17 @@ Apósito y cabestrillo.
 IQ {FECHA} ({DOCTOR}/{AYUDANTE})
 
 RAFI EPH O DIAFISARIA PLACA AXSOS (STRYKER)
-Fractura diafisaria desplazada y con acortamiento clavícula derecha.
-Anestesia general e IOT.
-Profilaxis antibiótica con 2g de cefazolina.
-En posición de silla de playa y con control por escopia. 
-Abordaje directo sobre trazo, longitudinal a clavícula, reducción abierta.
-Tornillos interfragmentarios (24mm, 24mm y 26mm).
-Fijación interna con placa Variax (Stryker) 7 orificios. 6 tornillos no bloqueados 6x14mm.
-Comprobamos adecuada reducción y colocación de material de osteosíntesis. 
-Lavado abundante con suero fisiológico.
-Cierre por planos con sutura reabsorbible, y piel con grapas.
-Apósito y cabestrillo.
+- Fractura diafisaria desplazada y con acortamiento clavícula derecha.
+- Anestesia general e IOT.
+- Profilaxis antibiótica con 2g de cefazolina.
+- En posición de silla de playa y con control por escopia.
+- Abordaje directo sobre trazo, longitudinal a clavícula, reducción abierta.
+- Tornillos interfragmentarios (24mm, 24mm y 26mm).
+- Fijación interna con placa Variax (Stryker) 7 orificios. 6 tornillos no bloqueados 6x14mm.
+- Comprobamos adecuada reducción y colocación de material de osteosíntesis.
+- Lavado abundante con suero fisiológico.
+- Cierre por planos con sutura reabsorbible, y piel con grapas.
+- Apósito y cabestrillo.
 ```
 
 **Tratamiento al Alta:**
@@ -593,8 +574,6 @@ Apósito y cabestrillo.
 - Si aparece fiebre (>38º), dolor intenso que no se alivia con analgésicos, mala evolución de la herida o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
 ```
 
----
-
 ##### `monteggia` — Fr Monteggia / olécranon — Placa Peri-Loc (S&N)
 
 **Nota Operatoria:**
@@ -603,18 +582,18 @@ Apósito y cabestrillo.
 IQ {FECHA} ({DOCTOR}/{AYUDANTE})
 
 FRACTURA OLÉCRANON O MONTEGGIA
-Fractura luxación Monteggia codo izquierdo.
-Anestesia regional.
-Profilaxis antibiótica con 2g de cefazolina.
-En decúbito supino y con control por escopia.
-Abordaje directo sobre cresta cubital y olécranon, reducción abierta.
-Tornillo interfragmentario (26mm).
-Fijación interna con placa Peri-Loc (Smith & Nephew) 7 orificios. 2 tornillos no bloqueados, 2 tornillos bloqueados. 2 bloqueados longitudinal.
-Comprobamos adecuada reducción y colocación de material de osteosíntesis.
-Cabeza radial reducida, no bloqueo en pronosupinación ni flexoextensión.
-Lavado abundante con suero fisiológico.
-Cierre por planos con sutura reabsorbible, y piel con grapas.
-Apósito y cabestrillo.
+- Fractura luxación Monteggia codo izquierdo.
+- Anestesia regional.
+- Profilaxis antibiótica con 2g de cefazolina.
+- En decúbito supino y con control por escopia.
+- Abordaje directo sobre cresta cubital y olécranon, reducción abierta.
+- Tornillo interfragmentario (26mm).
+- Fijación interna con placa Peri-Loc (Smith & Nephew) 7 orificios. 2 tornillos no bloqueados, 2 tornillos bloqueados. 2 bloqueados longitudinal.
+- Comprobamos adecuada reducción y colocación de material de osteosíntesis.
+- Cabeza radial reducida, no bloqueo en pronosupinación ni flexoextensión.
+- Lavado abundante con suero fisiológico.
+- Cierre por planos con sutura reabsorbible, y piel con grapas.
+- Apósito y cabestrillo.
 ```
 
 **Tratamiento al Alta:**
@@ -635,15 +614,13 @@ Apósito y cabestrillo.
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, mala evolución de la herida, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
 ```
 
----
-
 <a id="región-rodilla"></a>
 
 ### Región: Rodilla
 
 <a id="categoría-car"></a>
 
-#### Artroscopia Rodilla (17 plantillas)
+#### Artroscopia Rodilla (16 plantillas)
 
 ##### `car_mosaicoplastia` — CAR Mosaicoplastia
 
@@ -653,7 +630,7 @@ Apósito y cabestrillo.
 IQ {FECHA} ({DOCTOR}/{AYUDANTE})
 
 CIRUGIA ARTROSCÓPICA DE RODILLA:  MOSAICOPLASTIA
-CAR IZQ:
+- CAR IZQ:
 - ISQUEMIA EN  RAÍZ  DE  MUSLO ( 89 MINUTOS).
 - PORTALES TRADICIONALES ANTEROMEDIAL  Y  ANTEROLATERAL. 
 - PORTALES  ACCESORIOS ANTEROMEDIAL  PARA  ZONA RECEPTORA Y  PARAPATELAR   MEDIAL  PARA ZONA DONANTE.
@@ -683,8 +660,6 @@ CAR IZQ:
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
 ```
 
----
-
 ##### `car_fr_meseta` — CAR + Fr meseta tibial
 
 **Nota Operatoria:**
@@ -692,8 +667,8 @@ CAR IZQ:
 ```
 IQ {FECHA} ({DOCTOR}/{AYUDANTE})
 
-CIRUGIA ARTROSCÓPICA DE RODILLA:  FRACTURA  MESETA TIBIAL 
-CAR DERECHA:
+CIRUGIA ARTROSCÓPICA DE RODILLA:  FRACTURA  MESETA TIBIAL
+- CAR DERECHA:
 - ISQUEMIA EN  RAÍZ  DE  MUSLO ( 123 MINUTOS).
 - PORTALES TRADICIONALES ANTEROMEDIAL  Y  ANTEROLATERAL.
 - ARTICULACIÓN  FEMOROPATELAR Y  FONDOS DE SACO  CUADRICIPITALES:  SIN  ALTERACIONES.
@@ -726,8 +701,6 @@ CAR DERECHA:
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
 ```
 
----
-
 ##### `car_reinsercion_espina` — CAR Reinserción avulsión espina tibial LCA
 
 **Nota Operatoria:**
@@ -736,7 +709,7 @@ CAR DERECHA:
 IQ {FECHA} ({DOCTOR}/{AYUDANTE})
 
 CIRUGIA ARTROSCÓPICA DE RODILLA:  CAR REINSERCIÓN DE AVULSIÓN DE LA ESPINA LCA
-CAR DERECHA:
+- CAR DERECHA:
 - ISQUEMIA EN  RAÍZ  DE  MUSLO (102 MINUTOS).
 - PORTALES TRADICIONALES ANTEROMEDIAL  Y  ANTEROLATERAL. PORTAL  MEDIAL  ACCESORIO.
 - ARTICULACIÓN  FEMOROPATELAR Y  FONDOS DE SACO  CUADRICIPITALES:  SIN  ALTERACIONES.
@@ -785,8 +758,6 @@ CAR DERECHA:
 - Running  y  retorno  a actividades deportivas.
 ```
 
----
-
 ##### `car_lrr_ficat_plicatura` — CAR Ficat + plicatura ARI (Lanny Johnson)
 
 **Nota Operatoria:**
@@ -794,8 +765,8 @@ CAR DERECHA:
 ```
 IQ {FECHA} ({DOCTOR}/{AYUDANTE})
 
-CIRUGIA ARTROSCÓPICA DE RODILLA:  FICAT + PLICATURA ARI (LANNY  JHONSON) 
-CAR IZQ:
+CIRUGIA ARTROSCÓPICA DE RODILLA:  FICAT + PLICATURA ARI (LANNY  JHONSON)
+- CAR IZQ:
 - ISQUEMIA EN  RAÍZ  DE  MUSLO (  55 MINUTOS).
 - PORTALES TRADICIONALES ANTEROMEDIAL  Y  ANTEROLATERAL.
 -  NO  SE APRECIA LESIONES  MENISCALES  NI LIGAMENTOSAS.  
@@ -828,8 +799,6 @@ CAR IZQ:
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias. Mover activamente los dedos de la extremidad operada.
 ```
 
----
-
 ##### `car_sher_plicatura` — CAR SHER plicatura ARI + Ficat
 
 **Nota Operatoria:**
@@ -838,7 +807,7 @@ CAR IZQ:
 IQ {FECHA} ({DOCTOR}/{AYUDANTE})
 
 CAR POR SHER: PLICATURA DEL  ARI +/- FICAT
-CAR DCHA:
+- CAR DCHA:
 - ISQUEMIA EN  RAÍZ  DE  MUSLO ( 114 MINUTOS).
 - PORTALES TRADICIONALES ANTEROMEDIAL  Y  ANTEROLATERAL.
 - PORTAL  SUPEROEXTERNO ACCESORIO.
@@ -882,8 +851,6 @@ CAR DCHA:
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias. Mover activamente los dedos de la extremidad operada.
 ```
 
----
-
 ##### `car_otv_adiccion` — CAR + OTV adicción
 
 **Nota Operatoria:**
@@ -891,8 +858,8 @@ CAR DCHA:
 ```
 IQ {FECHA} ({DOCTOR}/{AYUDANTE})
 
-CAR  +  OSTEOTOMIA VALGUIZANTE DE TIBIA DE ADICCIÓN 
-CAR DCHA + OSTEOTOMIA DE ADICCIÓN VALGUIZANTE DE TIBIA DCHA: 
+CAR  +  OSTEOTOMIA VALGUIZANTE DE TIBIA DE ADICCIÓN
+- CAR DCHA + OSTEOTOMIA DE ADICCIÓN VALGUIZANTE DE TIBIA DCHA:
 - ISQUEMIA EN  MUSLO  DCHO  (16 MIN DE CAR   Y  118  MIN  DE   OTV)
 - PORTALES TRADICIONALES ANTEROMEDIAL  Y  ANTEROLATERAL.
 - ARTICULACIÓN  FEMOROPATELAR Y  FONDOS DE SACO  CUADRICIPITALES:  CONDROPATIA DE LA TROCLEA FEMORAL  GRADO 4.
@@ -928,8 +895,6 @@ CAR DCHA + OSTEOTOMIA DE ADICCIÓN VALGUIZANTE DE TIBIA DCHA:
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
 ```
 
----
-
 ##### `car_otv_sustraccion` — CAR + OTV sustracción (Coventry)
 
 **Nota Operatoria:**
@@ -938,7 +903,7 @@ CAR DCHA + OSTEOTOMIA DE ADICCIÓN VALGUIZANTE DE TIBIA DCHA:
 IQ {FECHA} ({DOCTOR}/{AYUDANTE})
 
 CAR  +  OSTEOTOMIA VALGUIZANTE DE TIBIA
-CAR DCHA + OSTEOTOMIA DE SUSTRACCION  VALGUIZANTE DE TIBIA IZQ TIPO  COVENTRY: 
+- CAR DCHA + OSTEOTOMIA DE SUSTRACCION  VALGUIZANTE DE TIBIA IZQ TIPO  COVENTRY:
 - ISQUEMIA EN  MUSLO  DCHO  (126 MIN)
 - PORTALES TRADICIONALES ANTEROMEDIAL  Y  ANTEROLATERAL.
 - ARTICULACIÓN  FEMOROPATELAR Y  FONDOS DE SACO  CUADRICIPITALES:  CONDROPATIA  TROCLE A FEMORAL  GRADO 4.
@@ -978,8 +943,6 @@ CAR DCHA + OSTEOTOMIA DE SUSTRACCION  VALGUIZANTE DE TIBIA IZQ TIPO  COVENTRY:
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
 ```
 
----
-
 ##### `car_otv_varizante_femur` — CAR + Osteotomía varizante fémur
 
 **Nota Operatoria:**
@@ -988,7 +951,7 @@ CAR DCHA + OSTEOTOMIA DE SUSTRACCION  VALGUIZANTE DE TIBIA IZQ TIPO  COVENTRY:
 IQ {FECHA} ({DOCTOR}/{AYUDANTE})
 
 CAR  +  OSTEOTOMIA VARIZANTE DE   FÉMUR
-CAR DCHA + OSTEOTOMIA SUPRACONDILEA DE SUSTRACCION  VALRIZANTE DE FEMUR DCHO: 
+- CAR DCHA + OSTEOTOMIA SUPRACONDILEA DE SUSTRACCION  VALRIZANTE DE FEMUR DCHO:
 - NO  SE   REALIZA  ISQUEMIA.
 - PORTALES TRADICIONALES ANTEROMEDIAL  Y  ANTEROLATERAL.
 - ARTICULACIÓN  FEMOROPATELAR Y  FONDOS DE SACO  CUADRICIPITALES:  CONDROPATIA  GRADO  3 CON  RESECCIÓN  PROTUBERANCIA  DE PARTES   BLANDAS A  NIVEL TROCLEA FEMORAL.
@@ -1027,8 +990,6 @@ CAR DCHA + OSTEOTOMIA SUPRACONDILEA DE SUSTRACCION  VALRIZANTE DE FEMUR DCHO:
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
 ```
 
----
-
 ##### `car_otv_tomofix` — OTV placa Tomofix (sin CAR)
 
 **Nota Operatoria:**
@@ -1036,8 +997,8 @@ CAR DCHA + OSTEOTOMIA SUPRACONDILEA DE SUSTRACCION  VALRIZANTE DE FEMUR DCHO:
 ```
 IQ {FECHA} ({DOCTOR}/{AYUDANTE})
 
-OSTEOTOMIA VALGUIZANTE DE TIBIA DE ADICCIÓN 
-OSTEOTOMIA DE ADICCIÓN VALGUIZANTE DE TIBIA DCHA: 
+OSTEOTOMIA VALGUIZANTE DE TIBIA DE ADICCIÓN
+- OSTEOTOMIA DE ADICCIÓN VALGUIZANTE DE TIBIA DCHA:
 - ISQUEMIA EN  MUSLO  IZQ  (102  MIN).
 - INCISIÓN  OBLICUA  EN  TERCIO  PROXIMAL  Y  MEDIAL  DE TIBIA   SIGUIENDO  DIRECCION  DE LOS TENDONES ISQUIOTIALES EN SU  BORDE   ANTERIOR.  
 - DESINSERCION  PARCIAL  DE  LA INSERCIÓN  DISTAL  DEL  FASCICULO  SUPERFICIAL  DEL  LLI. 
@@ -1068,8 +1029,6 @@ OSTEOTOMIA DE ADICCIÓN VALGUIZANTE DE TIBIA DCHA:
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
 ```
 
----
-
 ##### `car_meniscectomia` — CAR Meniscectomía parcial
 
 **Nota Operatoria:**
@@ -1077,8 +1036,8 @@ OSTEOTOMIA DE ADICCIÓN VALGUIZANTE DE TIBIA DCHA:
 ```
 IQ {FECHA} ({DOCTOR}/{AYUDANTE})
 
-CIRUGIA ARTROSCÓPICA DE RODILLA:  MENISCECTOMIA PARCIAL 
-CAR DERECHA:
+CIRUGIA ARTROSCÓPICA DE RODILLA:  MENISCECTOMIA PARCIAL
+- CAR DERECHA:
 - ISQUEMIA EN  RAÍZ  DE  MUSLO ( 40 MINUTOS).
 - PORTALES TRADICIONALES ANTEROMEDIAL  Y  ANTEROLATERAL.
 - ARTICULACIÓN  FEMOROPATELAR Y  FONDOS DE SACO  CUADRICIPITALES:  SIN  ALTERACIONES.
@@ -1089,9 +1048,8 @@ CAR DERECHA:
 - SE  INFILTRA PORTALES  Y  REGION  INTRAARTICULAR  CON  ROPIVACAINA  Y  ACIDO  HIALURONICO.
 -  CIERRE PORTALES CON  SEDA.
 - VENDAJE COMPRESIVO.
-EVOLUCIÓN 
-Durante el postoperatorio el paciente se ha mantenido afebril y hemodinámicamente estable. Ha presentado buen control del dolor con la analgesia pautada, sin evidenciarse deficits vasculonerviosos ni signos de TVP en el miembro intervenido. Ha tolerado correctamente la sedestación y la deambulación asistida. La herida quirúrgica no ha presentado signos de complicación local. 
-Dada la evolución favorable la paciente es alta a domicilio.
+- EVOLUCIÓN: Durante el postoperatorio el paciente se ha mantenido afebril y hemodinámicamente estable. Ha presentado buen control del dolor con la analgesia pautada, sin evidenciarse deficits vasculonerviosos ni signos de TVP en el miembro intervenido. Ha tolerado correctamente la sedestación y la deambulación asistida. La herida quirúrgica no ha presentado signos de complicación local.
+- Dada la evolución favorable la paciente es alta a domicilio.
 ```
 
 **Tratamiento al Alta:**
@@ -1134,8 +1092,6 @@ Dada la evolución favorable la paciente es alta a domicilio.
 - Retorno al deporte: según evaluación clínica (aprox. 6 semanas)
 ```
 
----
-
 ##### `car_sutura_meniscal` — CAR Sutura meniscal
 
 **Nota Operatoria:**
@@ -1143,8 +1099,8 @@ Dada la evolución favorable la paciente es alta a domicilio.
 ```
 IQ {FECHA} ({DOCTOR}/{AYUDANTE})
 
-CIRUGIA ARTROSCÓPICA DE RODILLA:  SUTURA  MENISCAL 
-CAR DCHA:
+CIRUGIA ARTROSCÓPICA DE RODILLA:  SUTURA  MENISCAL
+- CAR DCHA:
 - ISQUEMIA EN  RAÍZ  DE  MUSLO ( 64 MINUTOS).
 - PORTALES TRADICIONALES ANTEROMEDIAL  Y  ANTEROLATERAL.
 - ARTICULACIÓN  FEMOROPATELAR Y  FONDOS DE SACO  CUADRICIPITALES:  SIN  ALTERACIONES.
@@ -1186,8 +1142,6 @@ CAR DCHA:
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
 ```
 
----
-
 ##### `car_artrolisis` — CAR Artrolisis + movilización bajo anestesia
 
 **Nota Operatoria:**
@@ -1195,8 +1149,8 @@ CAR DCHA:
 ```
 IQ {FECHA} ({DOCTOR}/{AYUDANTE})
 
-CIRUGIA ARTROSCÓPICA DE RODILLA:  ARTROLISIS Y  MOVILIZACIÓN BAJO  ANESTESIA  
-CAR IZQ EN PACIENTE CON RIGUIDEZ  POSTOPERATORIA TRAS  ARTROPLASTIA RODILLA: 
+CIRUGIA ARTROSCÓPICA DE RODILLA:  ARTROLISIS Y  MOVILIZACIÓN BAJO  ANESTESIA
+- CAR IZQ EN PACIENTE CON RIGUIDEZ  POSTOPERATORIA TRAS  ARTROPLASTIA RODILLA:
 - ISQUEMIA EN RAÍZ DE MUSLO ( 41 MINUTOS). 
 - PORTALES TRADICIONALES ANTEROMEDIAL Y ANTEROLATERAL. 
 - SE APRECIA MÚLTIPLES ADHERENCIAS Y  FIBROSIS A  NIVEL  DE FONDOS  DE SACO  SUBCUADRICIPITALES Y  DEL  HOFFA QUE SE RESECA  CON   SINOVIOTOMO. 
@@ -1225,8 +1179,6 @@ CAR IZQ EN PACIENTE CON RIGUIDEZ  POSTOPERATORIA TRAS  ARTROPLASTIA RODILLA:
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
 ```
 
----
-
 ##### `car_diagnostica` — CAR Diagnóstica
 
 **Nota Operatoria:**
@@ -1235,7 +1187,7 @@ CAR IZQ EN PACIENTE CON RIGUIDEZ  POSTOPERATORIA TRAS  ARTROPLASTIA RODILLA:
 IQ {FECHA} ({DOCTOR}/{AYUDANTE})
 
 CIRUGIA ARTROSCÓPICA DE RODILLA:  DIAGNÓSTICA
-CAR DERECHA:
+- CAR DERECHA:
 - ISQUEMIA EN  RAÍZ  DE  MUSLO ( 40 MINUTOS).
 - PORTALES TRADICIONALES ANTEROMEDIAL  Y  ANTEROLATERAL.
 - ARTICULACIÓN  FEMOROPATELAR Y  FONDOS DE SACO  CUADRICIPITALES:  SIN  ALTERACIONES.
@@ -1264,29 +1216,6 @@ CAR DERECHA:
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
 ```
 
----
-
-##### `car_cuerpo_libre` — CAR Extracción cuerpo libre
-
-**Nota Operatoria:**
-
-```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
-
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
-
-Pendiente de completar
-```
-
-**Tratamiento al Alta:**
-
-```
-- Puede requerir ayuda domiciliaria
-- Pendiente de completar
-```
-
----
-
 ##### `car_ficat` — CAR Ficat
 
 **Nota Operatoria:**
@@ -1294,8 +1223,8 @@ Pendiente de completar
 ```
 IQ {FECHA} ({DOCTOR}/{AYUDANTE})
 
-CIRUGIA ARTROSCÓPICA DE RODILLA:  FICAT 
-CAR DERECHA:
+CIRUGIA ARTROSCÓPICA DE RODILLA:  FICAT
+- CAR DERECHA:
 - ISQUEMIA EN  RAÍZ  DE  MUSLO (  53 MINUTOS).
 - PORTALES TRADICIONALES ANTEROMEDIAL  Y  ANTEROLATERAL.
 - ARTICULACIÓN  FEMOROPATELAR Y  FONDOS DE SACO  CUADRICIPITALES:  SINDROME  DE  HIPERPRESIÓN  ROTULIANA EXTERNA SIN  CONDROPATIA. SE REALIZA  SECCIÓN  ALERÓN  ROTULIANO  EXTERNO ARTROSCÓPICO (FICAT) CON  VAPORIZADOR
@@ -1321,11 +1250,9 @@ CAR DERECHA:
 - IBUPROFENO 600 mg / 8 horas vía oral.
 - ENOXAPARINA 40 mg /24 horas vía subcutánea  durante 15 días.
 - Retirada de puntos por ATS DE ZONA en 12/15 días.
-- Revisión en CC EE  de  COT ({DOCTOR})  el  próximo  día 10/10/09   a  las  12:01 horas para ver evolución.
+- Revisión en CC EE  de  COT ({DOCTOR})  en  3 semanas  para ver evolución.
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
 ```
-
----
 
 ##### `car_toilette` — CAR Toilette
 
@@ -1335,7 +1262,7 @@ CAR DERECHA:
 IQ {FECHA} ({DOCTOR}/{AYUDANTE})
 
 CIRUGIA ARTROSCÓPICA DE RODILLA:  TOILETTE
-CAR DERECHA:
+- CAR DERECHA:
 - ISQUEMIA EN  RAÍZ  DE  MUSLO ( 45 MINUTOS).
 - PORTALES TRADICIONALES ANTEROMEDIAL  Y  ANTEROLATERAL.
 - ARTICULACIÓN  FEMOROPATELAR Y  FONDOS DE SACO  CUADRICIPITALES:  CONDROPATIA   FP  GRADO  4. 
@@ -1364,8 +1291,6 @@ CAR DERECHA:
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
 ```
 
----
-
 ##### `car_sinovectomia` — CAR Sinovectomía total
 
 **Nota Operatoria:**
@@ -1373,15 +1298,15 @@ CAR DERECHA:
 ```
 IQ {FECHA} ({DOCTOR}/{AYUDANTE})
 
-CIRUGIA ARTROSCÓPICA DE RODILLA:  SINOVECTOMIATOTAL  
-CAR IZQ EN PACIENTE CON DERRAME DE REPETICIÓN POR SOSPECHA  DE SINOVITIS VILLONODULAR  PIGMENTADA: 
+CIRUGIA ARTROSCÓPICA DE RODILLA:  SINOVECTOMIA TOTAL
+- CAR IZQ EN PACIENTE CON DERRAME DE REPETICIÓN POR SOSPECHA  DE SINOVITIS VILLONODULAR  PIGMENTADA:
 - ISQUEMIA EN RAÍZ DE MUSLO ( 91 MINUTOS). 
 - PORTALES TRADICIONALES ANTEROMEDIAL Y ANTEROLATERAL. 
 - PORTAL ACCESORIO SUPEROLATERAL Y  SUPEROMEDIAL.
 - SE APRECIA SINOVIAL HIPERÉMICA E HIPERTRÓFICA EN TODA LA RODILLA FORMANDO VELLOSIDADES Y  CON TINCIÓN PARDUZCA POR HEMARTROS DE REPETICIÓN.
 - SE TOMA MUESTRA DE SINOVIAL PARA ANATOMIA PATOLOGICA.
 - SINOVECTOMIA RADICAL  A TRAVÉS DE TODOS LOS PORTALES
--NO LESIONES MENISCALES, CONDRALES NI LIGAMENTOSAS.
+- NO LESIONES MENISCALES, CONDRALES NI LIGAMENTOSAS.
 - LAVADO ARTICULAR ABUNDANTE. 
 - SE INFILTRA PORTALES Y REGION INTRAARTICULAR CON ROPIVACAINA + CORTICOIDES. 
 - CIERRE PORTALES CON GRAPAS. 
@@ -1405,8 +1330,6 @@ CAR IZQ EN PACIENTE CON DERRAME DE REPETICIÓN POR SOSPECHA  DE SINOVITIS VILLON
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
 ```
 
----
-
 <a id="categoría-ptr"></a>
 
 #### Prótesis Rodilla (3 plantillas)
@@ -1418,28 +1341,19 @@ CAR IZQ EN PACIENTE CON DERRAME DE REPETICIÓN POR SOSPECHA  DE SINOVITIS VILLON
 ```
 IQ {FECHA} ({DOCTOR}/{AYUDANTE})
 
-Gonartrosis derecha
-Profilaxis antibiótica con 2g de Cefazolina.
-La intervención se realiza sin isquemia
-Abordaje longitudinal anterior y artrotomía pararrotuliana medial.
-Prótesis total rodilla modelo Triathlon (STRYKER): 
-Componente femoral CR no cementado nº 4.
-Componente tibial cementado nº4
-Inserto tibial CR 9mm.
-Rótula:
-Se comprueba adecuado balance mediolateral en flexión y extensión, y adecuado tracking rotuliano.
-Cierre por planos.
-Piel con grapas.
-Vendaje compresivo.
-COT (MARTIN)
-PTR
-PLAN:
-Rx control hoy
-Hemograma mañana
-Iniciar sedestación y deambulación según tolerancia mañana
-EVOLUCIÓN
-Durante el postoperatorio el paciente se ha mantenido afebril y hemodinámicamente estable. Ha presentado buen control del dolor con la analgesia pautada, sin evidenciarse deficits vasculonerviosos ni signos de TVP en el miembro intervenido. Ha tolerado correctamente la sedestación y la deambulación asistida. La herida quirúrgica no ha presentado signos de complicación local. 
-Dada la evolución favorable la paciente es alta a domicilio.
+PTR TRIATHLON (STRYKER) RODILLA ---
+- Gonartrosis rodilla ---.
+- Profilaxis antibiótica con 2g de Cefazolina.
+- La intervención se realiza sin isquemia.
+- Abordaje longitudinal anterior y artrotomía pararrotuliana medial.
+- Prótesis total rodilla modelo Triathlon (STRYKER):
+- Componente femoral CR no cementado nº 4.
+- Componente tibial cementado nº 4.
+- Inserto tibial CR 9mm.
+- Se comprueba adecuado balance mediolateral en flexión y extensión, y adecuado tracking rotuliano.
+- Cierre por planos.
+- Piel con grapas.
+- Vendaje compresivo.
 ```
 
 **Tratamiento al Alta:**
@@ -1539,8 +1453,6 @@ Dada la evolución favorable la paciente es alta a domicilio.
 - Ante complicaciones en la herida: NO tomar antibióticos por cuenta propia. Acuda a urgencias para valoración médica.
 ```
 
----
-
 ##### `puc_pkr` — PUC PKR (Stryker)
 
 **Nota Operatoria:**
@@ -1549,11 +1461,11 @@ Dada la evolución favorable la paciente es alta a domicilio.
 IQ {FECHA} ({DOCTOR}/{AYUDANTE})
 
 PUC PKR   DE STRYKER
-GENU  VARO  ARTROSICO   RODILLA DCHA: 
+- GENU  VARO  ARTROSICO   RODILLA DCHA:
 - PROFILAXIS  ANTIBIÓTICA CON  2 GR DE  CEFAZOLINA.
 - ISQUEMIA EN  RAÍZ  DE  MUSLO (71 MINUTOS).
 - INCISIÓN LONGITUDINAL ANTERIOR DE RODILLA Y ARTROTOMIA PARARROTULIANA MEDIAL CON PROLONGACIÓN  SUBVASTO INT.
-ARTROPLASTIA UNICOMPARTIMENTAL  DE  RODILLA MODELO PKR DE STRYKER:
+- ARTROPLASTIA UNICOMPARTIMENTAL  DE  RODILLA MODELO PKR DE STRYKER:
 - COMPONENTE FEMORAL CEMENTADO Nº 2.
 - COMPONENTE TIBIAL  CEMENTADO  Nº 2 E INSERTO DE  8  MM. 
 - CORRECTO  BALANCE  MEDIOLATERAL  EN  FLEXIÓN  Y  EXTENSIÓN Y ADECUADO TRACKING ROTULIANO.
@@ -1562,9 +1474,8 @@ ARTROPLASTIA UNICOMPARTIMENTAL  DE  RODILLA MODELO PKR DE STRYKER:
 - DRENAJE  ASPIRATIVO.
 - PIEL  CON  GRAPAS.
 - VENDAJE  COMPRESIVO.
-EVOLUCIÓN
-Durante el postoperatorio el paciente se ha mantenido afebril y hemodinámicamente estable. Ha presentado buen control del dolor con la analgesia pautada, sin evidenciarse deficits vasculonerviosos ni signos de TVP en el miembro intervenido. Ha tolerado correctamente la sedestación y la deambulación asistida. La herida quirúrgica no ha presentado signos de complicación local. 
-Dada la evolución favorable la paciente es alta a domicilio.
+- EVOLUCIÓN: Durante el postoperatorio el paciente se ha mantenido afebril y hemodinámicamente estable. Ha presentado buen control del dolor con la analgesia pautada, sin evidenciarse deficits vasculonerviosos ni signos de TVP en el miembro intervenido. Ha tolerado correctamente la sedestación y la deambulación asistida. La herida quirúrgica no ha presentado signos de complicación local.
+- Dada la evolución favorable la paciente es alta a domicilio.
 ```
 
 **Tratamiento al Alta:**
@@ -1588,8 +1499,6 @@ Dada la evolución favorable la paciente es alta a domicilio.
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
 ```
 
----
-
 ##### `rpuc` — Revisión PUC (RPUC)
 
 **Nota Operatoria:**
@@ -1598,7 +1507,7 @@ Dada la evolución favorable la paciente es alta a domicilio.
 IQ {FECHA} ({DOCTOR}/{AYUDANTE})
 
 RESCATE PRÓTESIS  UNICOMPARTIMENTAL
-RESCATE PUC IZQ POR  PROTESIS  DOLOROSA: 
+- RESCATE PUC IZQ POR  PROTESIS  DOLOROSA:
 - PROFILAXIS  ANTIBIÓTICA CON  2 GR DE  CEFAZOLINA.
 - ISQUEMIA EN  RAÍZ  DE  MUSLO (65 MINUTOS).
 - INCISIÓN LONGITUDINAL ANTERIOR DE RODILLA  SOBRE CICATRIZ ANTERIOR Y ARTROTOMIA PARARROTULIANA MEDIAL.
@@ -1636,11 +1545,9 @@ RESCATE PUC IZQ POR  PROTESIS  DOLOROSA:
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias. Mover activamente los dedos de la extremidad operada.
 ```
 
----
-
 <a id="categoría-lca"></a>
 
-#### LCA (11 plantillas)
+#### LCA (10 plantillas)
 
 ##### `lca_procinch` — LCA ProCinch anatómico ST-RI
 
@@ -1685,8 +1592,6 @@ LIGAMENTOPLASTIA LCA  ANATÓMICO 4 ST-RI AUTOLOGO POR  INESTABILIDAD ANTERIOR DE
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
 ```
 
----
-
 ##### `lca_procinch_allinside` — LCA ProCinch anatómico ALL-INSIDE
 
 **Nota Operatoria:**
@@ -1695,23 +1600,23 @@ LIGAMENTOPLASTIA LCA  ANATÓMICO 4 ST-RI AUTOLOGO POR  INESTABILIDAD ANTERIOR DE
 IQ {FECHA} ({DOCTOR}/{AYUDANTE})
 
 LIGAMENTOPLASTIA LCA ANATÓMICO ALL-INSIDE
-ROTURA CRÓNICA LCA RD:  
-ANESTESIA RAQUIDEA
-PROFILAXIS CON  2   GR CEFAZOLINA.
-ISQUEMIA MUSLO 250 MMHG (80 MIN).
-ABORDAJE  LONGITUDINAL SOBRE PATA DE GANSO. DISECCIÓN  POR  PLANOS.  FASCIOTOMIA  SARTORIO Y  OBTENCIÓN DE  PLASTIA  ST.
-PREPARACIÓN  DE   PLASTIA  CUADRUPLE DE ST CON  2  PROCINCH (Stryker) DE  7  CM  LONGITUD   * 9 MM DIÁMETRO. 
-TIEMPO  ARTROSCÓPICO:  PORTALES ARTROSCÓPICOS HABITUALES:  AL, AM Y  AM ACCESORIO.  
-NO  LESIONES  MENISCALES  NI  CONDRALES.
-REALIZACIÓN DE  TF  FUERA DENTRO  CON  BROCA RETRÓGRADA  VERSITOMIC RR DE  9 MM*25 MM.
-REALIZACIÓN DE  TT  FUERA DENTRO  CON  BROCA RETRÓGRADA  VERSITOMIC RR DE  9 MM*30 MM.
-AMPLIACIÓN PORTAL AM ACCESORIO E  INTRODUCCIÓN DE  LA PLASTIA POR  EL MISMO  HACIA  TF  PRIMERO Y  TT POSTERIORMENTE  
-SE INTRODUCE 20 MM  DE PLASTIA EN CADA TÚNEL  Y  SE TENSIONA  BIDIRECCIONALMENTE A  20º FLEXIÓN  Y  CAJÓN POST. 
-LAVADO  ARTICULAR  ABUNDANTE. 
-SE DEJA DRENAJE INTRAARTICULAR.
-RETIRADA DE ISQUEMIA Y CIERRE  POR  PLANOS.
-SE INFILTRA ZONA  DONANTE  Y PORTELES  CON COCTEL  ANALGÉSICO  CON  5  MG  CLORURO MÓRFICO Y  10 C ROPIVACAINA.
-VENDAJE COMPRESIVO.
+- Rotura crónica LCA RD.
+- Anestesia raquídea.
+- Profilaxis con 2 gr cefazolina.
+- Isquemia muslo 250 mmHg (80 min).
+- Abordaje longitudinal sobre pata de ganso. Disección por planos. Fasciotomía sartorio y obtención de plastia ST.
+- Preparación de plastia cuádruple de ST con 2 ProCinch (Stryker) de 7 cm longitud x 9 mm diámetro.
+- Tiempo artroscópico: portales artroscópicos habituales: AL, AM y AM accesorio.
+- No lesiones meniscales ni condrales.
+- Realización de TF fuera-dentro con broca retrógrada Versitomic RR de 9 mm x 25 mm.
+- Realización de TT fuera-dentro con broca retrógrada Versitomic RR de 9 mm x 30 mm.
+- Ampliación portal AM accesorio e introducción de la plastia por el mismo hacia TF primero y TT posteriormente.
+- Se introduce 20 mm de plastia en cada túnel y se tensiona bidireccionalmente a 20º flexión y cajón posterior.
+- Lavado articular abundante.
+- Se deja drenaje intraarticular.
+- Retirada de isquemia y cierre por planos.
+- Se infiltra zona donante y portales con cóctel analgésico con 5 mg cloruro mórfico y 10 cc ropivacaína.
+- Vendaje compresivo.
 ```
 
 **Tratamiento al Alta:**
@@ -1734,8 +1639,6 @@ VENDAJE COMPRESIVO.
 - Solicitar  cita en  Servicio de  Rehabilitación  para  seguimiento  postoperatorio.
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
 ```
-
----
 
 ##### `lca_procinch_lemaire` — LCA ProCinch + Lemaire
 
@@ -1794,8 +1697,6 @@ PLASTIA DE REFUERZO  EXTRAARTICULAR CON  TÉCNICA DE LEMAIRE MODIFICADA   MANTEN
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
 ```
 
----
-
 ##### `lca_procinch_sutura` — LCA ProCinch + sutura meniscal
 
 **Nota Operatoria:**
@@ -1843,8 +1744,6 @@ LIGAMENTOPLASTIA LCA  ANATÓMICO 4 ST-RI AUTOLOGO POR  INESTABILIDAD ANTERIOR DE
 - Solicitar  cita en  Servicio de  Rehabilitación  para  seguimiento  postoperatorio.
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
 ```
-
----
 
 ##### `lca_procinch_reinsercion` — LCA ProCinch + reinserción raíz meniscal posterior
 
@@ -1894,29 +1793,6 @@ LIGAMENTOPLASTIA LCA  ANATÓMICO 4 ST-RI AUTOLOGO POR  INESTABILIDAD ANTERIOR DE
 - Solicitar  cita en  Servicio de  Rehabilitación  para inicio  de la fisioterapia lo  antes posible a fin  de trabajar la movilidad pasiva de la rodilla intervenida y  seguimiento  postoperatorio.
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
 ```
-
----
-
-##### `lca_allinside_arthrex` — LCA ALL-INSIDE (Arthrex)
-
-**Nota Operatoria:**
-
-```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
-
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
-
-Pendiente de completar
-```
-
-**Tratamiento al Alta:**
-
-```
-- Puede requerir ayuda domiciliaria
-- Pendiente de completar
-```
-
----
 
 ##### `lca_hth` — LCA Hueso-Tendón-Hueso (HTH)
 
@@ -1968,8 +1844,6 @@ INESTABILIDAD ANTEROMEDIAL DE RODILLA DERECHA:
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
 ```
 
----
-
 ##### `lca_aum_am` — LCA Aumentación AM
 
 **Nota Operatoria:**
@@ -2014,8 +1888,6 @@ LIGAMENTOPLASTIA ARTROSCOPICA DE LCA CON TÉCNICA ANATÓMICA  UTILIZANDO TENDONE
 - Solicitar  cita en Servicio  de  Rehabilitación de su  área de referencia para inicio de fisioterapia.
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
 ```
-
----
 
 ##### `lca_aum_pl` — LCA Aumentación PL
 
@@ -2062,8 +1934,6 @@ LIGAMENTOPLASTIA ARTROSCOPICA DE LA RODILLA IZQ POR ROTURA PARCIAL  DEL FASCÍCU
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
 ```
 
----
-
 ##### `lca_rescate` — LCA Rescate — revisión
 
 **Nota Operatoria:**
@@ -2109,8 +1979,6 @@ RESCATE DE LIGAMENTOPLASTIA LCA ENDO-BUTTON ANATÓMICO
 - Al  alta solicitar  cita en  Servicio de  Rehabilitación  para  seguimiento  postoperatorio.
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
 ```
-
----
 
 ##### `lca_rescate_hth_lemaire` — LCA Rescate — HTH banco + Lemaire
 
@@ -2167,8 +2035,6 @@ RLCA con  HTH de  banco  de   tejidos
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
 ```
 
----
-
 <a id="categoría-rodilla_osteo"></a>
 
 #### Osteotomías y Cartílago (5 plantillas)
@@ -2178,6 +2044,8 @@ RLCA con  HTH de  banco  de   tejidos
 **Nota Operatoria:**
 
 ```
+IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+
 OSTEOTOMÍA VALGUIZANTE TIBIA --- DE APERTURA
 Decúbito supino con pernera en pierna ---.
 Isquemia en raíz del muslo (105 min).
@@ -2211,26 +2079,26 @@ Control por escopia.
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias
 ```
 
----
-
 ##### `rodilla_ovt_slope` — OVT + corrección pendiente posterior
 
 **Nota Operatoria:**
 
 ```
-OSTEOTOMÍA VALGUIZANTE TIBIA --- DE APERTURA + CORRECCIÓN PENDIENTE POSTERIOR
-Decúbito supino.
-Isquemia en raíz del muslo (120 min).
+IQ {FECHA} ({DOCTOR}/{AYUDANTE})
 
-1º TIEMPO CAR:
+OSTEOTOMÍA VALGUIZANTE TIBIA --- DE APERTURA + CORRECCIÓN PENDIENTE POSTERIOR
+- Decúbito supino.
+- Isquemia en raíz del muslo (120 min).
+
+- 1º TIEMPO CAR:
 - Portales tradicionales anteromedial y anterolateral
 - Articulación femoropatelar y fondos de saco cuadricipitales: condropatía II en surco troclear
 - Compartimento interno: rotura en flap desde el cuerno posterior al cuerpo del menisco interno y rotura de la región más anterior del mismo menisco que se reseca y regulariza con pinzas y motor
 - Pivote central: rotura del LCA con signo del cíclope en fémur. Se reseca
 - Compartimento externo: condropatía II, rotura del borde del cuerpo del ME
 
-2º TIEMPO OSTEOTOMÍA:
-Control por escopia.
+- 2º TIEMPO OSTEOTOMÍA:
+- Control por escopia.
 - Abordaje medial oblicuo. Localización del LLI
 - Despegamos con periostótomo parte del LLI para dejar libre la zona de osteotomía. Localizamos borde posterior del LLI y desperiostizamos la cortical posteromedial de la tibia
 - Retirada de los hilos de la plastia por el túnel tibial
@@ -2259,24 +2127,24 @@ Control por escopia.
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias
 ```
 
----
-
 ##### `rodilla_fulkerson` — Osteotomía TTA tipo Fulkerson
 
 **Nota Operatoria:**
 
 ```
-OSTEOTOMÍA TTA TIPO FULKERSON RODILLA ---
-Manguito de isquemia en raíz del muslo (70 min).
-Profilaxis antibiótica con 2 g cefazolina iv.
+IQ {FECHA} ({DOCTOR}/{AYUDANTE})
 
-1º TIEMPO (CAR):
+OSTEOTOMÍA TTA TIPO FULKERSON RODILLA ---
+- Manguito de isquemia en raíz del muslo (70 min).
+- Profilaxis antibiótica con 2 g cefazolina iv.
+
+- 1º TIEMPO (CAR):
 - Condropatía faceta medial patela grado III, subluxación lateral, tróclea displásica, con tracking alterado
 - Compartimento medial: condropatía tibial grado II-III
 - Pivote central: LCA competente
 - Compartimento lateral: meniscectomía cuerpo y cuerno anterior de ME, condropatía tibial grado II-III
 
-2º TIEMPO:
+- 2º TIEMPO:
 - Incisión longitudinal rodilla anterior desde polo inferior de la rótula hasta 6-7 cm distales a TTA
 - Desperiostizamos al borde lateral de la cresta tibial y marcamos la entrada de osteotomía por medial. Desperiostizamos 6-7 cm distal a TTA
 - Con AK marcamos la entrada por anteromedial (1 cm de grosor desde TTA) y salida por posterolateral con cuidado de no dar con estructuras vasculonerviosas. Acabamos en apex distal de 2-3 mm
@@ -2307,36 +2175,35 @@ Profilaxis antibiótica con 2 g cefazolina iv.
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias
 ```
 
----
-
 ##### `rodilla_mosaico_ovt` — Mosaicoplastia + OVT
 
 **Nota Operatoria:**
 
 ```
+IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+
 MOSAICOPLASTIA + OVT
-INTERVENCIÓN ({DOCTOR}/{AYUDANTE})
-Decúbito supino con pernera en pierna ---.
-Isquemia en raíz del muslo (125 min).
-Control por escopia.
+- Decúbito supino con pernera en pierna ---.
+- Isquemia en raíz del muslo (125 min).
+- Control por escopia.
 
-1º TIEMPO CAR:
-Portales habituales AM y AL.
-Compartimento FP: condropatía II en patela.
-Compartimento FTM: lesión OC en zona de carga de 25 mm × 20 mm aprox. Rotura en flap de cuerpo de ML que se regulariza con pinzas y motor.
-Pivote central: LCA íntegro y competente.
-Compartimento FTL: sin hallazgos.
+- 1º TIEMPO CAR:
+- Portales habituales AM y AL.
+- Compartimento FP: condropatía II en patela.
+- Compartimento FTM: lesión OC en zona de carga de 25 mm × 20 mm aprox. Rotura en flap de cuerpo de ML que se regulariza con pinzas y motor.
+- Pivote central: LCA íntegro y competente.
+- Compartimento FTL: sin hallazgos.
 
-2º TIEMPO OSTEOTOMÍA VALGUIZANTE DE TIBIA DE APERTURA MEDIAL:
-Incisión medial.
-Osteotomía de apertura de 8º sin invadir cortical lateral.
-Placa ActivMotion de NewClip talla 2.
-Control por escopia.
+- 2º TIEMPO OSTEOTOMÍA VALGUIZANTE DE TIBIA DE APERTURA MEDIAL:
+- Incisión medial.
+- Osteotomía de apertura de 8º sin invadir cortical lateral.
+- Placa ActivMotion de NewClip talla 2.
+- Control por escopia.
 
-3º TIEMPO MOSAICOPLASTIA:
-Toma de 3 autoinjertos osteocondrales de 10, 8 y 8 mm (dos se toman de zona medial del CFM y uno de CFL) según técnica habitual con sistema Arthrex.
-Implantación de dichos injertos en zona defectuosa con puentes de 1-2 mm entre ellos quedando a ras de su cartílago sano. Profundidad de los injertos de 15 mm.
-Lavado con SF. Cierre.
+- 3º TIEMPO MOSAICOPLASTIA:
+- Toma de 3 autoinjertos osteocondrales de 10, 8 y 8 mm (dos se toman de zona medial del CFM y uno de CFL) según técnica habitual con sistema Arthrex.
+- Implantación de dichos injertos en zona defectuosa con puentes de 1-2 mm entre ellos quedando a ras de su cartílago sano. Profundidad de los injertos de 15 mm.
+- Lavado con SF. Cierre.
 ```
 
 **Tratamiento al Alta:**
@@ -2357,34 +2224,34 @@ Lavado con SF. Cierre.
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario
 ```
 
----
-
 ##### `rodilla_lfpm_tta` — Reconstrucción LFPM + osteotomía TTA (luxación rótula)
 
 **Nota Operatoria:**
 
 ```
-HOJA OPERATORIA LFPM + DESCENSO Y MEDIALIZACIÓN DE TTA
-LRR RÓTULA ---
+IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+
+LFPM + DESCENSO Y MEDIALIZACIÓN DE TTA
+- LRR RÓTULA ---
 - Profilaxis antibiótica con 2 g de cefazolina
 - Isquemia en raíz de muslo (115 min)
 
-1º TIEMPO (CAR):
-Portal AL y accesorio suprapatelar medial.
-Compartimento externo y medial sin alteraciones.
-Pivote central con LCA competente e íntegro.
-Rótula con condropatía II-III faceta lateral y II-III surco. Fragmentos mediales que intentamos retirar por artroscopia siendo imposible y necesitando artrotomía medial para su exéresis.
+- 1º TIEMPO (CAR):
+- Portal AL y accesorio suprapatelar medial.
+- Compartimento externo y medial sin alteraciones.
+- Pivote central con LCA competente e íntegro.
+- Rótula con condropatía II-III faceta lateral y II-III surco. Fragmentos mediales que intentamos retirar por artroscopia siendo imposible y necesitando artrotomía medial para su exéresis.
 
-2º TIEMPO:
-Incisión medial a la TTA para extracción de recto interno con tenótomo.
-Osteotomía de 6 cm descendiendo 0,5 cm y ligera medialización. Fijación con dos tornillos canulados proximales, placa de tercio de caña en región de osteotomía distal transversa con dos tornillos.
+- 2º TIEMPO:
+- Incisión medial a la TTA para extracción de recto interno con tenótomo.
+- Osteotomía de 6 cm descendiendo 0,5 cm y ligera medialización. Fijación con dos tornillos canulados proximales, placa de tercio de caña en región de osteotomía distal transversa con dos tornillos.
 
-3º TIEMPO:
-Abordaje medial y superior a la rótula disecando espacio bajo la capa 1.
-Abordaje sobre epicóndilo y tubérculo del aductor. Se diseca espacio bajo la capa 1 haciéndolo comunicar con el anterior.
-Reconstrucción del LFPM usando sistema de fijación de Arthrex en rótula y fijación con tornillo interferencial del mismo sistema de 6×23 mm en CFI (en zona entre tubérculo del aductor y epicóndilo comprobado por escopia y con referencia el punto de Schöttle) previa comprobación de la tensión e isometría del mismo. Fijación a 30º.
-Comprobación de lateralización <1 cm.
-Cierre por planos de las heridas. Piel con grapas. Vendaje compresivo.
+- 3º TIEMPO:
+- Abordaje medial y superior a la rótula disecando espacio bajo la capa 1.
+- Abordaje sobre epicóndilo y tubérculo del aductor. Se diseca espacio bajo la capa 1 haciéndolo comunicar con el anterior.
+- Reconstrucción del LFPM usando sistema de fijación de Arthrex en rótula y fijación con tornillo interferencial del mismo sistema de 6×23 mm en CFI (en zona entre tubérculo del aductor y epicóndilo comprobado por escopia y con referencia el punto de Schöttle) previa comprobación de la tensión e isometría del mismo. Fijación a 30º.
+- Comprobación de lateralización <1 cm.
+- Cierre por planos de las heridas. Piel con grapas. Vendaje compresivo.
 ```
 
 **Tratamiento al Alta:**
@@ -2411,8 +2278,6 @@ Cierre por planos de las heridas. Piel con grapas. Vendaje compresivo.
   * Retorno actividad deportiva: 6º mes
 ```
 
----
-
 <a id="región-cadera"></a>
 
 ### Región: Cadera
@@ -2429,7 +2294,7 @@ Cierre por planos de las heridas. Piel con grapas. Vendaje compresivo.
 IQ {FECHA} ({DOCTOR}/{AYUDANTE})
 
 PROTESIS TOTAL  DE CADERA SUMMIT
-COXARTROSIS  CADERA DCHA: 
+- COXARTROSIS  CADERA DCHA:
 - PROFILAXIS  ANTIBIÓTICA CON  2 GRAMOS  DE CEFAZOLINA  Y  1  GRAMO IV DE TRANEXÁMICO.  
 - DECUBITO  LATERAL  IZQUIERDO.
 - INCISIÓN  LOGITUDINAL SOBRE REGIÓN  TROCANTERICA Y  VIA ABORDAJE  BAUER.
@@ -2463,8 +2328,6 @@ COXARTROSIS  CADERA DCHA:
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
 ```
 
----
-
 ##### `ptc_zimmer` — PTC Zimmer (G7 + Taperloc)
 
 **Nota Operatoria:**
@@ -2473,7 +2336,7 @@ COXARTROSIS  CADERA DCHA:
 IQ {FECHA} ({DOCTOR}/{AYUDANTE})
 
 PROTESIS TOTAL  DE CADERA ZIMMER
-COXARTROSIS  CADERA   DCHA: 
+- COXARTROSIS  CADERA   DCHA:
 - PROFILAXIS  ANTIBIÓTICA CON  2 GRAMOS  DE CEFAZOLINA.
 - DECUBITO  LATERAL  IZQUIERDO.
 - INCISIÓN  LOGITUDINAL SOBRE REGIÓN  TROCANTERICA Y  VIA ABORDAJE  HARDINGE..
@@ -2503,11 +2366,9 @@ COXARTROSIS  CADERA   DCHA:
 - HIERRO PROTEINSUCCINILATO 40 mg sol oral en ayunas cada día durante un mes.
 - Puede requerir ayuda domiciliaria.
 - Curas y retirada de puntos de sutura/agrafes según informe de Enfermería.
-- Antes de irse de alta, el paciente deberá solicitar revisión en Admisión del Hospital para CCEE Revisión Hospitalaria de COT(PROGRAMA DE PRÓTESIS) en 4 semanas.
+- Antes de irse de alta, el paciente deberá solicitar revisión en Admisión del Hospital para CCEE Revisión Hospitalaria de COT ({DOCTOR}) en 4 semanas.
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
 ```
-
----
 
 <a id="categoría-cac"></a>
 
@@ -2590,32 +2451,124 @@ CAC REINSERCIÓN  LABRUM
 - Rotación externa en flexión : 90 grados.
 ```
 
----
-
 <a id="región-ms"></a>
 
 ### Región: Miembro Superior
 
 <a id="categoría-hombro_mr"></a>
 
-#### Manguito Rotador (4 plantillas)
+#### Artroscopia Hombro (4 plantillas)
+
+##### `hombro_cah` — CAH — Reparación artroscópica manguito rotador
+
+**Nota Operatoria:**
+
+```
+IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+
+Diag. Sd. subacromial hombro ---.
+- Anestesia gral. + locorregional. Profilaxis ATB. Decúbito lateral --.
+- CAH ---.
+- Portales habituales
+- Glenohumeral: PLB, labrum y subescapular ok. Rotura supraespinoso grado  de Patte (porción anterolateral).
+- Subacromial: bursectomía, se localiza rotura supraespinoso. Preparación footprint y reinserción supraespinoso con  Iconix Speed 2,3 (2 suturas). Acromioplastia anterior.
+- Lavado articular, cierre de portales con agrafes e inmovilización con cabestrillo.
+```
+
+**Tratamiento al Alta:**
+
+```
+- Mantener el miembro superior operado en cabestrillo durante 4-5 semanas. Puede retirarlo para aseo personal y para realizar ejercicios de flexo-extensión de codo así como pendulares (se adjunta hoja de cuidados de cabestrillo)
+- Mover activamente los dedos de la extremidad operada
+- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos
+- Analgesia por elastómero prescrito por Servicio de Anestesia durante las primeras 24-48h. Continuar una vez retirado con Dexketoprofeno 25 mg v.o. 1/8 horas vía oral durante 4-5 días. Puede alternar con Metamizol caps. 1 c/8h si más dolor
+- Omeprazol 20 mg v.o. 1 c/24h
+- Curas locales c/72h y retirada de puntos por ATS DE ZONA en 12-14 días
+- Puede requerir reposo / ayuda domiciliaria
+- Pedir cita con Servicio de RHB antes de marcharse de alta
+- Solicitar cita para revisión en 3 semanas para {DOCTOR}
+- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con su Centro de Salud en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario
+```
+
+##### `hombro_cah_subescapular` — CAH — Con subescapular y doble hilera
+
+**Nota Operatoria:**
+
+```
+IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+
+Diag. Rotura supraespinoso hombro ---.
+- Anestesia gral. + locorregional. Profilaxis ATB. Decúbito lateral ---.
+- CAH ---.
+- Portales habituales
+- Glenohumeral: PLB y labrum ok, subescapular con rotura tipo II de Lafosse. Se realiza reparación tendón hueso con 1 Iconix 2,3 (2 cintas). Rotura supraespinoso grado II de Patte con mala calidad tisular e infiltración grasa.
+- Subacromial: bursectomía, se localiza rotura supraespinoso. Preparación footprint (se fresa osteofito de tuberosidad mayor) y reinserción supraespinoso en doble hilera con 1 Iconix 2,3 medial (2 suturas) y 1 ReelX lateral con 4 hilos.
+- Lavado articular, cierre de portales con agrafes e inmovilización con cabestrillo.
+```
+
+**Tratamiento al Alta:**
+
+```
+- Mantener el miembro superior operado en cabestrillo durante 4-5 semanas. Puede retirarlo para aseo personal y para realizar ejercicios de flexo-extensión de codo así como pendulares (se adjunta hoja de cuidados de cabestrillo)
+- Mover activamente los dedos de la extremidad operada
+- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos
+- Analgesia por elastómero prescrito por Servicio de Anestesia durante las primeras 24-48h. Continuar una vez retirado con Dexketoprofeno 25 mg v.o. 1/8 horas vía oral durante 4-5 días. Puede alternar con Metamizol caps. 1 c/8h si más dolor
+- Omeprazol 20 mg v.o. 1 c/24h
+- Curas locales c/72h y retirada de puntos por ATS DE ZONA en 12-14 días
+- Puede requerir reposo / ayuda domiciliaria
+- Pedir cita con Servicio de RHB antes de marcharse de alta
+- Solicitar cita para revisión en 3 semanas para {DOCTOR}
+- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con su Centro de Salud en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario
+```
+
+##### `hombro_balon` — CAH — Rotura masiva + balón subacromial
+
+**Nota Operatoria:**
+
+```
+IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+
+Diag. Rotura masiva supraespinoso hombro.
+- Anestesia gral. + locorregional. Profilaxis ATB. Decúbito lateral ---.
+- CAH ---.
+- Portales habituales
+- Glenohumeral: PLB degenerado y deshilachado por lo que se realiza tenotomía, labrum bien, rotura subescapular tipo 2 de Lafosse. Se realiza reparación con 1 Iconix 2,3 (2 suturas tendón-hueso). Rotura supraespinoso grado 3 de Patte que se extiende a infraespinoso (rotura masiva).
+- Subacromial: bursectomía, se localiza rotura supraespinoso. Tendón retraído hasta reborde glenoideo. Se realiza reparación infraespinoso con 1 arpón Peek-Zip 5,5 (2 suturas). Supraespinoso no reparable por lo que se coloca balón subacromial InSpace talla M.
+- Lavado articular, cierre de portales con agrafes e inmovilización con cabestrillo.
+```
+
+**Tratamiento al Alta:**
+
+```
+- Mantener el miembro superior operado en cabestrillo durante 4-5 semanas. Puede retirarlo para aseo personal y para realizar ejercicios de flexo-extensión de codo así como pendulares (se adjunta hoja de cuidados de cabestrillo)
+- Mover activamente los dedos de la extremidad operada
+- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos
+- Analgesia por elastómero prescrito por Servicio de Anestesia durante las primeras 24-48h. Continuar una vez retirado con Dexketoprofeno 25 mg v.o. 1/8 horas vía oral durante 4-5 días. Puede alternar con Metamizol caps. 1 c/8h si más dolor
+- Omeprazol 20 mg v.o. 1 c/24h
+- Curas locales c/72h y retirada de puntos por ATS DE ZONA en 12-14 días
+- Puede requerir reposo / ayuda domiciliaria
+- Pedir cita con Servicio de RHB antes de marcharse de alta
+- Solicitar cita para revisión en 3 semanas para {DOCTOR}
+- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con su Centro de Salud en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario
+```
 
 ##### `hombro_cah_luxac` — CAH — Luxación AC + TwinBridge (S&N)
 
 **Nota Operatoria:**
 
 ```
-INTERVENCIÓN (DRS. {DOCTOR}/{AYUDANTE})
+IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+
 Luxación acromioclavicular ---.
-Anestesia general e IOT. Profilaxis antibiótica con 2g de cefazolina.
-En posición de silla de playa.
-Portales artroscópicos AL + AM. Localizamos tendón conjunto, apófisis coracoides y disecamos hasta base.
-Miniabordaje longitudinal sobre tercio medio de clavícula.
-Fijación interna sistema TwinBridge (Smith and Nephew).
-Comprobamos adecuada reducción y colocación de material.
-Lavado abundante con suero fisiológico.
-Cierre por planos con sutura reabsorbible, y piel con grapas.
-Apósito y cabestrillo.
+- Anestesia general e IOT. Profilaxis antibiótica con 2g de cefazolina.
+- En posición de silla de playa.
+- Portales artroscópicos AL + AM. Localizamos tendón conjunto, apófisis coracoides y disecamos hasta base.
+- Miniabordaje longitudinal sobre tercio medio de clavícula.
+- Fijación interna sistema TwinBridge (Smith and Nephew).
+- Comprobamos adecuada reducción y colocación de material.
+- Lavado abundante con suero fisiológico.
+- Cierre por planos con sutura reabsorbible, y piel con grapas.
+- Apósito y cabestrillo.
 ```
 
 **Tratamiento al Alta:**
@@ -2635,104 +2588,6 @@ Apósito y cabestrillo.
 - Si aparece fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
 ```
 
----
-
-##### `hombro_cah` — CAH — Reparación artroscópica manguito rotador
-
-**Nota Operatoria:**
-
-```
-INTERVENCIÓN (DRS. {DOCTOR}/{AYUDANTE})
-Diag. Sd. subacromial hombro ---.
-Anestesia gral. + locorregional. Profilaxis ATB. Decúbito lateral --.
-CAH ---.
-Portales habituales
-Glenohumeral: PLB, labrum y subescapular ok. Rotura supraespinoso grado  de Patte (porción anterolateral).
-Subacromial: bursectomía, se localiza rotura supraespinoso. Preparación footprint y reinserción supraespinoso con  Iconix Speed 2,3 (2 suturas). Acromioplastia anterior.
-Lavado articular, cierre de portales con agrafes e inmovilización con cabestrillo.
-```
-
-**Tratamiento al Alta:**
-
-```
-- Mantener el miembro superior operado en cabestrillo durante 4-5 semanas. Puede retirarlo para aseo personal y para realizar ejercicios de flexo-extensión de codo así como pendulares (se adjunta hoja de cuidados de cabestrillo)
-- Mover activamente los dedos de la extremidad operada
-- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos
-- Analgesia por elastómero prescrito por Servicio de Anestesia durante las primeras 24-48h. Continuar una vez retirado con Dexketoprofeno 25 mg v.o. 1/8 horas vía oral durante 4-5 días. Puede alternar con Metamizol caps. 1 c/8h si más dolor
-- Omeprazol 20 mg v.o. 1 c/24h
-- Curas locales c/72h y retirada de puntos por ATS DE ZONA en 12-14 días
-- Puede requerir reposo / ayuda domiciliaria
-- Pedir cita con Servicio de RHB antes de marcharse de alta
-- Solicitar cita para revisión en 3 semanas para {DOCTOR}
-- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con su Centro de Salud en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario
-```
-
----
-
-##### `hombro_cah_subescapular` — CAH — Con subescapular y doble hilera
-
-**Nota Operatoria:**
-
-```
-INTERVENCIÓN (DRS. {DOCTOR}/{AYUDANTE})
-Diag. Rotura supraespinoso hombro ---.
-Anestesia gral. + locorregional. Profilaxis ATB. Decúbito lateral ---.
-CAH ---.
-Portales habituales
-Glenohumeral: PLB y labrum ok, subescapular con rotura tipo II de Lafosse. Se realiza reparación tendón hueso con 1 Iconix 2,3 (2 cintas). Rotura supraespinoso grado II de Patte con mala calidad tisular e infiltración grasa.
-Subacromial: bursectomía, se localiza rotura supraespinoso. Preparación footprint (se fresa osteofito de tuberosidad mayor) y reinserción supraespinoso en doble hilera con 1 Iconix 2,3 medial (2 suturas) y 1 ReelX lateral con 4 hilos.
-Lavado articular, cierre de portales con agrafes e inmovilización con cabestrillo.
-```
-
-**Tratamiento al Alta:**
-
-```
-- Mantener el miembro superior operado en cabestrillo durante 4-5 semanas. Puede retirarlo para aseo personal y para realizar ejercicios de flexo-extensión de codo así como pendulares (se adjunta hoja de cuidados de cabestrillo)
-- Mover activamente los dedos de la extremidad operada
-- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos
-- Analgesia por elastómero prescrito por Servicio de Anestesia durante las primeras 24-48h. Continuar una vez retirado con Dexketoprofeno 25 mg v.o. 1/8 horas vía oral durante 4-5 días. Puede alternar con Metamizol caps. 1 c/8h si más dolor
-- Omeprazol 20 mg v.o. 1 c/24h
-- Curas locales c/72h y retirada de puntos por ATS DE ZONA en 12-14 días
-- Puede requerir reposo / ayuda domiciliaria
-- Pedir cita con Servicio de RHB antes de marcharse de alta
-- Solicitar cita para revisión en 3 semanas para {DOCTOR}
-- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con su Centro de Salud en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario
-```
-
----
-
-##### `hombro_balon` — CAH — Rotura masiva + balón subacromial
-
-**Nota Operatoria:**
-
-```
-INTERVENCIÓN (DRS. {DOCTOR}/{AYUDANTE})
-Diag. Rotura masiva supraespinoso hombro.
-Anestesia gral. + locorregional. Profilaxis ATB. Decúbito lateral ---.
-CAH ---.
-Portales habituales
-Glenohumeral: PLB degenerado y deshilachado por lo que se realiza tenotomía, labrum bien, rotura subescapular tipo 2 de Lafosse. Se realiza reparación con 1 Iconix 2,3 (2 suturas tendón-hueso). Rotura supraespinoso grado 3 de Patte que se extiende a infraespinoso (rotura masiva).
-Subacromial: bursectomía, se localiza rotura supraespinoso. Tendón retraído hasta reborde glenoideo. Se realiza reparación infraespinoso con 1 arpón Peek-Zip 5,5 (2 suturas). Supraespinoso no reparable por lo que se coloca balón subacromial InSpace talla M.
-Lavado articular, cierre de portales con agrafes e inmovilización con cabestrillo.
-```
-
-**Tratamiento al Alta:**
-
-```
-- Mantener el miembro superior operado en cabestrillo durante 4-5 semanas. Puede retirarlo para aseo personal y para realizar ejercicios de flexo-extensión de codo así como pendulares (se adjunta hoja de cuidados de cabestrillo)
-- Mover activamente los dedos de la extremidad operada
-- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos
-- Analgesia por elastómero prescrito por Servicio de Anestesia durante las primeras 24-48h. Continuar una vez retirado con Dexketoprofeno 25 mg v.o. 1/8 horas vía oral durante 4-5 días. Puede alternar con Metamizol caps. 1 c/8h si más dolor
-- Omeprazol 20 mg v.o. 1 c/24h
-- Curas locales c/72h y retirada de puntos por ATS DE ZONA en 12-14 días
-- Puede requerir reposo / ayuda domiciliaria
-- Pedir cita con Servicio de RHB antes de marcharse de alta
-- Solicitar cita para revisión en 3 semanas para {DOCTOR}
-- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con su Centro de Salud en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario
-```
-
----
-
 <a id="categoría-hombro_pthi"></a>
 
 #### Prótesis Hombro (4 plantillas)
@@ -2742,19 +2597,20 @@ Lavado articular, cierre de portales con agrafes e inmovilización con cabestril
 **Nota Operatoria:**
 
 ```
-INTERVENCIÓN (DRS. {DOCTOR}/{AYUDANTE})
+IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+
 Fractura Neer IV EPH ---.
-Anestesia gral. + bloqueo locorregional. Profilaxis ATB.
-Silla de playa. Abordaje deltopectoral.
-Colocación PTHI --- Aequalis Reversed (Tornier) de fracturas:
+- Anestesia gral. + bloqueo locorregional. Profilaxis ATB.
+- Silla de playa. Abordaje deltopectoral.
+- Colocación PTHI --- Aequalis Reversed (Tornier) de fracturas:
 - Metaglena 25 + tornillos
 - Glenosfera 36
 - Vástago 11 cementado por déficit consola medial
 - Bandeja humeral 6 mm
-Reducción comprobando adecuada estabilidad protésica y balance articular.
-Reinserción de tuberosidades según técnica descrita por Boileau aportando injerto autólogo de cabeza humeral a metáfisis.
-Lavado, hemostasia, drenaje aspirativo, cierre por planos, inmovilización con cabestrillo.
-Pido Rx y hemograma
+- Reducción comprobando adecuada estabilidad protésica y balance articular.
+- Reinserción de tuberosidades según técnica descrita por Boileau aportando injerto autólogo de cabeza humeral a metáfisis.
+- Lavado, hemostasia, drenaje aspirativo, cierre por planos, inmovilización con cabestrillo.
+- Pido Rx y hemograma
 ```
 
 **Tratamiento al Alta:**
@@ -2773,27 +2629,26 @@ Pido Rx y hemograma
 - Solicitar cita para revisión en 3 semanas para {DOCTOR}
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con su Centro de Salud en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario
 ```
-
----
 
 ##### `hombro_pthi_ascend` — PTHI inversa Ascend Flex (omartrosis)
 
 **Nota Operatoria:**
 
 ```
-INTERVENCIÓN (DRS. {DOCTOR}/{AYUDANTE})
+IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+
 OMARTROSIS PRIMARIA HOMBRO ---.
-Anestesia gral. + bloqueo locorregional. Profilaxis ATB.
-Silla de playa. Abordaje deltopectoral. Tenodesis PLB a pectoral mayor. Desinserción subescapular con pastilla ósea.
-Colocación PTHI --- Ascend Flex (Stryker/Tornier):
+- Anestesia gral. + bloqueo locorregional. Profilaxis ATB.
+- Silla de playa. Abordaje deltopectoral. Tenodesis PLB a pectoral mayor. Desinserción subescapular con pastilla ósea.
+- Colocación PTHI --- Ascend Flex (Stryker/Tornier):
 - Metaglena 25 + tornillos
 - Glenosfera 36
 - Vástago 5B no cementado, bandeja humeral centrada
 - Inserto humeral 6 mm
-Reducción comprobando adecuada estabilidad protésica y balance articular.
-Reinserción de subescapular.
-Lavado, hemostasia, drenaje aspirativo, cierre por planos, inmovilización con cabestrillo.
-Pido Rx y hemograma
+- Reducción comprobando adecuada estabilidad protésica y balance articular.
+- Reinserción de subescapular.
+- Lavado, hemostasia, drenaje aspirativo, cierre por planos, inmovilización con cabestrillo.
+- Pido Rx y hemograma
 ```
 
 **Tratamiento al Alta:**
@@ -2812,28 +2667,27 @@ Pido Rx y hemograma
 - Solicitar cita para revisión en 3 semanas para {DOCTOR}
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con su Centro de Salud en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario
 ```
-
----
 
 ##### `hombro_pthi_biorsa` — PTHI inversa Perform 2+ con BioRSA
 
 **Nota Operatoria:**
 
 ```
-INTERVENCIÓN (DRS. {DOCTOR}/{AYUDANTE})
+IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+
 OMARTROSIS PRIMARIA HOMBRO ---.
-Anestesia gral. + bloqueo locorregional. Profilaxis ATB.
-Silla de playa. Abordaje deltopectoral. Tenotomía PLB. Desinserción subescapular.
-Extracción BioRSA 36 10 mm.
-Colocación PTHI --- (Stryker/Tornier):
+- Anestesia gral. + bloqueo locorregional. Profilaxis ATB.
+- Silla de playa. Abordaje deltopectoral. Tenotomía PLB. Desinserción subescapular.
+- Extracción BioRSA 36 10 mm.
+- Colocación PTHI --- (Stryker/Tornier):
 - Metaglena 25 + tornillos 38 + injerto BioRSA
 - Glenosfera 36
 - Vástago Perform 2+ no cementado
 - Inserto humeral 0
-Reducción comprobando adecuada estabilidad protésica y balance articular.
-Reinserción de subescapular transósea.
-Lavado, hemostasia, drenaje aspirativo, cierre por planos, inmovilización con cabestrillo.
-Pido Rx y hemograma
+- Reducción comprobando adecuada estabilidad protésica y balance articular.
+- Reinserción de subescapular transósea.
+- Lavado, hemostasia, drenaje aspirativo, cierre por planos, inmovilización con cabestrillo.
+- Pido Rx y hemograma
 ```
 
 **Tratamiento al Alta:**
@@ -2852,26 +2706,25 @@ Pido Rx y hemograma
 - Solicitar cita para revisión en 3 semanas para {DOCTOR}
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con su Centro de Salud en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario
 ```
-
----
 
 ##### `hombro_pthi_revive` — Revisión PTHI — vástago Flex Revive
 
 **Nota Operatoria:**
 
 ```
-INTERVENCIÓN (DRS. {DOCTOR}/{AYUDANTE})
-Anestesia gral. + bloqueo locorregional. Profilaxis ATB.
-Silla de playa. Incisión sobre cicatriz previa. Abordaje deltopectoral. Desinserción subescapular y troquíter. Se libera subescapular y supraespinoso. Exéresis de tejido fibrótico previo que se manda a microbiología, así como muestras de interfase de cemento, y tejido blando de glena y canal endomedular.
-Colocación PTHI --- Glena Reversed 2 y vástago Flex Revive (Stryker/Tornier):
+IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+
+- Anestesia gral. + bloqueo locorregional. Profilaxis ATB.
+- Silla de playa. Incisión sobre cicatriz previa. Abordaje deltopectoral. Desinserción subescapular y troquíter. Se libera subescapular y supraespinoso. Exéresis de tejido fibrótico previo que se manda a microbiología, así como muestras de interfase de cemento, y tejido blando de glena y canal endomedular.
+- Colocación PTHI --- Glena Reversed 2 y vástago Flex Revive (Stryker/Tornier):
 - Metaglena 29 + tornillos
 - Glenosfera 39
 - Fresado del canal hasta 15 y eliminación de osteofito en calcar. Colocación de Vástago Flex Revive nº 15 (vástago y cuerpo metafisario) no cementado (queda estable), bandeja humeral centrada 1,5
 - Inserto humeral 9 mm
-Reducción comprobando adecuada estabilidad protésica y balance articular.
-Reinserción de subescapular y troquíter a prótesis y diáfisis con PDS 1.
-Lavado, hemostasia, drenaje aspirativo, cierre por planos, inmovilización con cabestrillo.
-Pido Rx y hemograma
+- Reducción comprobando adecuada estabilidad protésica y balance articular.
+- Reinserción de subescapular y troquíter a prótesis y diáfisis con PDS 1.
+- Lavado, hemostasia, drenaje aspirativo, cierre por planos, inmovilización con cabestrillo.
+- Pido Rx y hemograma
 ```
 
 **Tratamiento al Alta:**
@@ -2890,8 +2743,6 @@ Pido Rx y hemograma
 - Solicitar cita para revisión en 3 semanas para {DOCTOR}
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con su Centro de Salud en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario
 ```
-
----
 
 <a id="categoría-hombro_tumor"></a>
 
@@ -2902,15 +2753,16 @@ Pido Rx y hemograma
 **Nota Operatoria:**
 
 ```
-INTERVENCIÓN (DRS. {DOCTOR}/{AYUDANTE})
+IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+
 Diag. Elastofibroma dorsii escápula ---.
-Anestesia gral. Decúbito prono.
-Abordaje paraescapular oblicuo.
-Apertura dorsal ancho, disección profunda, exéresis elastofibroma dorsii.
-Se envía pieza a AP.
-Hemostasia cuidadosa, lavado, drenaje aspirativo, cierre por planos.
-Apósito compresivo.
-No es CMA
+- Anestesia gral. Decúbito prono.
+- Abordaje paraescapular oblicuo.
+- Apertura dorsal ancho, disección profunda, exéresis elastofibroma dorsii.
+- Se envía pieza a AP.
+- Hemostasia cuidadosa, lavado, drenaje aspirativo, cierre por planos.
+- Apósito compresivo.
+- No es CMA
 ```
 
 **Tratamiento al Alta:**
@@ -2930,8 +2782,6 @@ No es CMA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con su Centro de Salud en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario
 ```
 
----
-
 <a id="categoría-codo"></a>
 
 #### Codo (3 plantillas)
@@ -2941,15 +2791,16 @@ No es CMA
 **Nota Operatoria:**
 
 ```
-INTERVENCIÓN (DRS. {DOCTOR}/{AYUDANTE})
+IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+
 Diag. Rotura bíceps distal MS ---.
-Anestesia gral. + locorregional. Profilaxis ATB. Isquemia preventiva. Mesa de mano.
-Abordaje anterior. Localización cabo tendinoso. Se referencia con cintas de alta resistencia (Arthrex).
-Reinserción en tuberosidad bicipital con sistema Biceps Button de Arthrex + tornillo interferencial (túnel ciego de 7 mm).
-Se retira isquemia, hemostasia, lavado y cierre por planos.
-Inmovilización con férula braquial.
-Alta CMA esta tarde si buena evolución.
-Pido Rx
+- Anestesia gral. + locorregional. Profilaxis ATB. Isquemia preventiva. Mesa de mano.
+- Abordaje anterior. Localización cabo tendinoso. Se referencia con cintas de alta resistencia (Arthrex).
+- Reinserción en tuberosidad bicipital con sistema Biceps Button de Arthrex + tornillo interferencial (túnel ciego de 7 mm).
+- Se retira isquemia, hemostasia, lavado y cierre por planos.
+- Inmovilización con férula braquial.
+- Alta CMA esta tarde si buena evolución.
+- Pido Rx
 ```
 
 **Tratamiento al Alta:**
@@ -2966,22 +2817,21 @@ Pido Rx
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con su Centro de Salud en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario
 ```
 
----
-
 ##### `codo_biceps_cronico` — Reinserción bíceps distal crónico con plastia ST
 
 **Nota Operatoria:**
 
 ```
-INTERVENCIÓN (DRS. {DOCTOR}/{AYUDANTE})
+IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+
 Diag. Rotura crónica bíceps distal MS ---.
-Anestesia gral. Profilaxis ATB. Mesa de mano.
-1ºT Extracción ST autólogo por posterior de MI. Grosor plastia 7 mm.
-2ºT Abordaje anterior. Se referencia rama cutánea antebraquial. Reinserción de plastia en tuberosidad bicipital con sistema Biceps Button de Arthrex + tornillo interferencial (túnel ciego de 7 mm).
-Localización de muñón bicipital proximal, disección y movilización del mismo.
-Sutura T-T de plastia a muñón con suturas de alta resistencia Fiber-Wire.
-Hemostasia, lavado y cierre por planos.
-Inmovilización con férula braquial.
+- Anestesia gral. Profilaxis ATB. Mesa de mano.
+- 1ºT Extracción ST autólogo por posterior de MI. Grosor plastia 7 mm.
+- 2ºT Abordaje anterior. Se referencia rama cutánea antebraquial. Reinserción de plastia en tuberosidad bicipital con sistema Biceps Button de Arthrex + tornillo interferencial (túnel ciego de 7 mm).
+- Localización de muñón bicipital proximal, disección y movilización del mismo.
+- Sutura T-T de plastia a muñón con suturas de alta resistencia Fiber-Wire.
+- Hemostasia, lavado y cierre por planos.
+- Inmovilización con férula braquial.
 ```
 
 **Tratamiento al Alta:**
@@ -3001,19 +2851,18 @@ Inmovilización con férula braquial.
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con su Centro de Salud en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario
 ```
 
----
-
 ##### `codo_epicondilitis` — Cirugía de Nirschl (epicondilitis)
 
 **Nota Operatoria:**
 
 ```
-INTERVENCIÓN (DRS. {DOCTOR}/{AYUDANTE})
+IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+
 Diag. EPICONDILITIS CODO ---.
-Anestesia gral. Supino. Isquemia preventiva. Mesa de mano.
-Técnica de Nirschl. Perforaciones con AK en epicóndilo.
-Lavado profuso y cierre por planos.
-Vendaje.
+- Anestesia gral. Supino. Isquemia preventiva. Mesa de mano.
+- Técnica de Nirschl. Perforaciones con AK en epicóndilo.
+- Lavado profuso y cierre por planos.
+- Vendaje.
 ```
 
 **Tratamiento al Alta:**
@@ -3028,8 +2877,6 @@ Vendaje.
 - Solicitar cita para revisión en 4 semanas para {DOCTOR}
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con su Centro de Salud en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario
 ```
-
----
 
 <a id="categoría-ms"></a>
 
@@ -3070,8 +2917,6 @@ SINDROME TÚNEL  CARPIANO  IZQ:
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
 ```
 
----
-
 ##### `ms_tcg` — TCG Mano (quiste sinovial)
 
 **Nota Operatoria:**
@@ -3079,29 +2924,27 @@ SINDROME TÚNEL  CARPIANO  IZQ:
 ```
 IQ {FECHA} ({DOCTOR}/{AYUDANTE})
 
-TUMOR   DE  PARTES  BLANDAS   EN  REGIÓN VOLAR DE LA MANO  IZQ  A  NIVEL  2º PLIEGUE INTERDIGITAL: 
-Bajo anestesia general  , decubito supino, isquemia de MSI se realiza abordaje  sobre tumoración.  
-Exéresis de tumoración  de  diámetro  aprox de   2  cm,  consistencia gomosa,  color  parduzco y  no  adherido  a  planos  profundos,  compatible con  tumor de células gigantes.  Se  manda   muestra  para estudio  Anatomia Patológica. 
-Lavado, hemostasia y cierre
-ALTA
-Mantener la extremidad en alto (brazo en cabestrillo y/o pie en alto) durante las primeras 48 horas.
-Mover activamente los dedos de la extremidad operada.
-Vigilar la coloración y la sensibilidad de la extremidad y sus dedos. 
-PARACETAMOL 600MG/VO/8H/5 DIAS
-METAMIZOL 575MG/VO/8H/5 DIAS
-REALIZAR MASAJES SOBRE CICATRIZ UNA VEZ RETIRADOS LOS PUNTOS
--Retirada de puntos por su enfermero/a de referencia en el centro de salud en 12-15 días. Curas locales en su Centro de Salud cada 48h
--Solicitar cita para revisión en 4 semanas para {DOCTOR}
--Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
+TUMOR DE PARTES BLANDAS EN REGIÓN VOLAR DE LA MANO --- A NIVEL 2º PLIEGUE INTERDIGITAL
+- Bajo anestesia general, decúbito supino, isquemia de MS---.
+- Se realiza abordaje sobre tumoración.
+- Exéresis de tumoración de diámetro aprox de 2 cm, consistencia gomosa, color parduzco y no adherido a planos profundos, compatible con tumor de células gigantes.
+- Se manda muestra para estudio Anatomía Patológica.
+- Lavado, hemostasia y cierre.
 ```
 
 **Tratamiento al Alta:**
 
 ```
-- Puede requerir ayuda domiciliaria
+- Mantener la extremidad en alto (brazo en cabestrillo) durante las primeras 48 horas.
+- Mover activamente los dedos de la extremidad operada.
+- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
+- Paracetamol 600 mg v.o. cada 8 horas durante 5 días.
+- Metamizol 575 mg v.o. cada 8 horas durante 5 días.
+- Realizar masajes sobre cicatriz una vez retirados los puntos.
+- Retirada de puntos por su enfermero/a de referencia en el centro de salud en 12-15 días. Curas locales en su Centro de Salud cada 48h.
+- Solicitar cita para revisión en 4 semanas para {DOCTOR}
+- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
 ```
-
----
 
 ##### `ms_dedo_resorte` — Dedo en resorte — apertura polea A1
 
@@ -3110,8 +2953,11 @@ REALIZAR MASAJES SOBRE CICATRIZ UNA VEZ RETIRADOS LOS PUNTOS
 ```
 IQ {FECHA} ({DOCTOR}/{AYUDANTE})
 
-DEDO EN RESORTE --- :
-Bajo anestesia local y sedación, en decúbito supino, con manguito de isquemia en raíz de MS---. Se realiza poleotomía tras incisión en cara volar base --- dedo. Lavado, hemostasia y cierre. Vendaje.
+DEDO EN RESORTE ---
+- Bajo anestesia local y sedación, en decúbito supino, con manguito de isquemia en raíz de MS---.
+- Se realiza poleotomía tras incisión en cara volar base --- dedo.
+- Lavado, hemostasia y cierre.
+- Vendaje.
 ```
 
 **Tratamiento al Alta:**
@@ -3130,8 +2976,6 @@ Bajo anestesia local y sedación, en decúbito supino, con manguito de isquemia 
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
 ```
 
----
-
 ##### `ms_dedo_resorte_tenolisis` — Dedo en resorte — tenolisis
 
 **Nota Operatoria:**
@@ -3139,16 +2983,11 @@ Bajo anestesia local y sedación, en decúbito supino, con manguito de isquemia 
 ```
 IQ {FECHA} ({DOCTOR}/{AYUDANTE})
 
-Bajo anestesia local, decubito supino, isquemia de MSI se realiza abordaje transversal sobre pliegue proximal de articulacion MCF 1º dedo mano D
-Apertura polea A1 comprobandose liberacion completa de tendon FPL
-Lavado, hemostasia y cierre
-Alta dedo resorte
-Mantener la extremidad en alto (brazo en cabestrillo y/o pie en alto) durante las primeras 48 horas.
-Mover activamente los dedos de la extremidad operada.
-Vigilar la coloración y la sensibilidad de la extremidad y sus dedos. 
-PARACETAMOL 600MG/VO/8H/5 DIAS
-METAMIZOL 575MG/VO/8H/5 DIAS
-REALIZAR MASAJES SOBRE CICATRIZ UNA VEZ RETIRADOS LOS PUNTOS
+DEDO EN RESORTE + TENOLISIS ---
+- Bajo anestesia local, decúbito supino, isquemia de MS---.
+- Abordaje transversal sobre pliegue proximal de articulación MCF --- dedo mano ---.
+- Apertura polea A1 comprobándose liberación completa de tendón FPL.
+- Lavado, hemostasia y cierre.
 Retirada de puntos por su enfermero/a de referencia en el centro de salud en 12-15 días. Curas locales en su Centro de Salud cada 48h
 Solicitar cita para revisión en 4 semanas para {DOCTOR}
 Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
@@ -3159,8 +2998,6 @@ Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o
 ```
 - Puede requerir ayuda domiciliaria
 ```
-
----
 
 ##### `ms_fedr_dvr` — RAFI Fr distal radio — Placa DVR
 
@@ -3196,8 +3033,6 @@ FRACTURA  EXTREMIDAD DISTAL  DE  RADIO DERECHO:
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias. Mover activamente los dedos de la extremidad operada.
 ```
 
----
-
 ##### `ms_fedr_acumed` — RAFI Fr distal radio — Placa ACUMED
 
 **Nota Operatoria:**
@@ -3231,8 +3066,6 @@ FRACTURA  EXTREMIDAD DISTAL  DE  RADIO DERECHO:
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias. Mover activamente los dedos de la extremidad operada.
 ```
 
----
-
 ##### `ms_fr_radio` — Fr radio diafisario — placa
 
 **Nota Operatoria:**
@@ -3262,11 +3095,9 @@ FRACTURA  DIAFISARIA DE  TERCIO  MEDIO  DE  RADIO  IZQ:
 - Puede requerir ayuda domiciliaria
 - NOLOTIL 1 cápsula / 8 horas vía oral.
 - OMEPRAZOL 20 mg/ 24  horas.
-- Revisión  en  CC EE de COT ({DOCTOR}) el próximo día 29/01/09 a las 11:11 horas para Rx, valoración y  seguimiento.
+- Revisión en CCEE de COT ({DOCTOR}) en 3-4 semanas para Rx, valoración y seguimiento.
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias. Mover activamente los dedos de la extremidad operada.
 ```
-
----
 
 ##### `ms_fr_cubito_radio` — Fr cúbito + radio — doble placa
 
@@ -3300,8 +3131,6 @@ FRACTURA  DIAFISARIA DE  TERCIO  MEDIO  DE CÚBITO Y  RADIO  IZQ:
 - Revisión  en  CC EE de COT ({DOCTOR}) e   3   semanas   aprox.  para Rx, valoración y  seguimiento.
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias. Mover activamente los dedos de la extremidad operada.
 ```
-
----
 
 ##### `ms_fr_humero` — Fr húmero diafisario — placa
 
@@ -3338,8 +3167,6 @@ FRACTURA ESPIROIDEA CON TERCER  FRAGMENTO DE LA UNIÓN TERCIO MEDIO-DISTAL DEL  
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
 ```
 
----
-
 ##### `ms_fr_olecranon_placa` — Fr olécranon — placa
 
 **Nota Operatoria:**
@@ -3374,8 +3201,6 @@ FRACTURA  CONMINUTA OLECRANON  CODO  DERECHO:
 - Revisión  en  CC EE de COT ({DOCTOR}) en  3   semanas para Rx, valoración y  seguimiento.
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias. Mover activamente los dedos de la extremidad operada.
 ```
-
----
 
 ##### `ms_fr_olecranon_cerclaje` — Fr olécranon — cerclaje
 
@@ -3412,8 +3237,6 @@ FRACTURA  OLECRANON  CODO  IZQ:
 - Revisión  en  CC EE de COT ({DOCTOR}) en  2 semanas para Rx, cura herida qca y  seguimiento.
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias. Mover activamente los dedos de la extremidad operada.
 ```
-
----
 
 ##### `ms_seccion_tendon` — Sección tendón flexor mano
 
@@ -3452,8 +3275,6 @@ SECCIÓN  DEL  FLEXOR  PROFUNDO  DEL  3º DEDO  MANO  DERECHA:
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
 ```
 
----
-
 ##### `ms_clavo_humero` — Clavo T2 húmero retrógrado
 
 **Nota Operatoria:**
@@ -3489,11 +3310,9 @@ FRACTURA DIAFISARIA TRANSVERSAL  DE TERCIO  MEDIO DE  HUMERO DERCHO:
 - Puede requerir ayuda domiciliaria
 - IBUPROFENO 600 mg / 8 horas vía oral.
 - Revisión  de  herida  qca en  Centro  Salud  cada  72 horas  para  curas  locales.
-- Revisión en CCEE de COT ({DOCTOR}) el próximo día 08/03/07 a las 11:26 horas para control Rx,  retirada sutura y seguimiento.
+- Revisión en CCEE de COT ({DOCTOR}) en 3-4 semanas para control Rx, retirada sutura y seguimiento.
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
 ```
-
----
 
 ##### `ms_cerclaje_clavicula` — Weaver-Dunn / Fr clavícula distal — cerclaje
 
@@ -3502,18 +3321,18 @@ FRACTURA DIAFISARIA TRANSVERSAL  DE TERCIO  MEDIO DE  HUMERO DERCHO:
 ```
 IQ {FECHA} ({DOCTOR}/{AYUDANTE})
 
-WEAVER-DUNN / FRACTURA CLAVÍCULA DISTAL ---:
-Luxación acromioclavicular / fractura distal clavícula ---.
-Anestesia general e IOT. Profilaxis antibiótica con 2g de cefazolina.
-En posición de silla de playa.
-Abordaje directo sobre trazo de fractura, longitudinal a clavícula, reducción abierta.
-Lazada de PDS a través de dos orificios en clavícula y bajo base de coracoides.
-Lazada en 8 a través de orificios reduciendo fractura.
-Plastia con pastilla ósea de hemiligamento coracoacromial a clavícula distal.
-Comprobamos adecuada reducción.
-Lavado abundante con suero fisiológico.
-Cierre por planos con sutura reabsorbible, y piel con sutura intradérmica.
-Apósito y cabestrillo.
+WEAVER-DUNN / FRACTURA CLAVÍCULA DISTAL ---
+- Luxación acromioclavicular / fractura distal clavícula ---.
+- Anestesia general e IOT. Profilaxis antibiótica con 2g de cefazolina.
+- En posición de silla de playa.
+- Abordaje directo sobre trazo de fractura, longitudinal a clavícula, reducción abierta.
+- Lazada de PDS a través de dos orificios en clavícula y bajo base de coracoides.
+- Lazada en 8 a través de orificios reduciendo fractura.
+- Plastia con pastilla ósea de hemiligamento coracoacromial a clavícula distal.
+- Comprobamos adecuada reducción.
+- Lavado abundante con suero fisiológico.
+- Cierre por planos con sutura reabsorbible, y piel con sutura intradérmica.
+- Apósito y cabestrillo.
 ```
 
 **Tratamiento al Alta:**
@@ -3532,8 +3351,6 @@ Apósito y cabestrillo.
 - Si aparece fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
 ```
 
----
-
 ##### `ms_dupuytren` — Dupuytren — fasciectomía
 
 **Nota Operatoria:**
@@ -3541,8 +3358,12 @@ Apósito y cabestrillo.
 ```
 IQ {FECHA} ({DOCTOR}/{AYUDANTE})
 
-DUPUYTREN --- :
-Bajo anestesia regional y sedación, en decúbito supino, con manguito de isquemia en raíz de MS---. Se realiza abordaje en zigzag sobre cordón fibroso --- radio. Escisión del mismo, comprobando extensión completa de articulaciones metacarpofalángica e interfalángicas. Lavado, hemostasia y cierre. Vendaje.
+DUPUYTREN ---
+- Bajo anestesia regional y sedación, en decúbito supino, con manguito de isquemia en raíz de MS---.
+- Abordaje en zigzag sobre cordón fibroso --- radio.
+- Escisión del mismo, comprobando extensión completa de articulaciones metacarpofalángica e interfalángicas.
+- Lavado, hemostasia y cierre.
+- Vendaje.
 ```
 
 **Tratamiento al Alta:**
@@ -3561,8 +3382,6 @@ Bajo anestesia regional y sedación, en decúbito supino, con manguito de isquem
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
 ```
 
----
-
 ##### `ms_ganglion` — Ganglión mano — resección
 
 **Nota Operatoria:**
@@ -3570,8 +3389,12 @@ Bajo anestesia regional y sedación, en decúbito supino, con manguito de isquem
 ```
 IQ {FECHA} ({DOCTOR}/{AYUDANTE})
 
-GANGLIÓN MANO --- :
-Bajo anestesia local y sedación, en decúbito supino, con manguito de isquemia en raíz de MS---. Tras incisión en cara dorsal de mano, se realiza resección de la lesión hasta punto de comunicación con articulación, y electrocoagulación del mismo. Lavado, hemostasia y cierre. Vendaje.
+GANGLIÓN MANO ---
+- Bajo anestesia local y sedación, en decúbito supino, con manguito de isquemia en raíz de MS---.
+- Incisión en cara dorsal de mano.
+- Resección de la lesión hasta punto de comunicación con articulación, y electrocoagulación del mismo.
+- Lavado, hemostasia y cierre.
+- Vendaje.
 ```
 
 **Tratamiento al Alta:**
@@ -3588,8 +3411,6 @@ Bajo anestesia local y sedación, en decúbito supino, con manguito de isquemia 
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
 ```
 
----
-
 ##### `ms_infiltracion_tmct` — Infiltración TMTC-STT bajo escopia
 
 **Nota Operatoria:**
@@ -3597,9 +3418,9 @@ Bajo anestesia local y sedación, en decúbito supino, con manguito de isquemia 
 ```
 IQ {FECHA} ({DOCTOR}/{AYUDANTE})
 
-INFILTRACIÓN TMTC-STT MANO --- :
-Infiltración bajo escopia TMTC-STT mano --- con AL+CE.
-Inmediata mejoría del dolor.
+INFILTRACIÓN TMTC-STT MANO ---
+- Infiltración bajo escopia TMTC-STT mano --- con AL+CE.
+- Inmediata mejoría del dolor.
 ```
 
 **Tratamiento al Alta:**
@@ -3613,8 +3434,6 @@ Inmediata mejoría del dolor.
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
 ```
 
----
-
 ##### `ms_rizartrosis` — Rizartrosis — trapeciectomía + plastia Welby
 
 **Nota Operatoria:**
@@ -3622,15 +3441,15 @@ Inmediata mejoría del dolor.
 ```
 IQ {FECHA} ({DOCTOR}/{AYUDANTE})
 
-RIZARTROSIS — TRAPECIECTOMÍA + PLASTIA WELBY MODIFICADA:
-Bajo anestesia locorregional + sedación, decúbito supino, isquemia de MS---.
-Abordaje dorsal de TMC primer dedo y técnica de Welby modificada.
-Identificación de rama sensitiva dorsal del nervio radial.
-Exéresis de trapecio, comprobando buen estado de superficie articular de escafoides y trapezoide e integridad de arteria radial.
-Se obtiene el hemitendón radial del FCR.
-Plastia con hemiFCR sobre APL y hemiFCR anclado en 2º MTC.
-Se quita la isquemia comprobando que no hay sangrado activo.
-Cierre por planos.
+RIZARTROSIS — TRAPECIECTOMÍA + PLASTIA WELBY MODIFICADA
+- Bajo anestesia locorregional + sedación, decúbito supino, isquemia de MS---.
+- Abordaje dorsal de TMC primer dedo y técnica de Welby modificada.
+- Identificación de rama sensitiva dorsal del nervio radial.
+- Exéresis de trapecio, comprobando buen estado de superficie articular de escafoides y trapezoide e integridad de arteria radial.
+- Se obtiene el hemitendón radial del FCR.
+- Plastia con hemiFCR sobre APL y hemiFCR anclado en 2º MTC.
+- Se quita la isquemia comprobando que no hay sangrado activo.
+- Cierre por planos.
 ```
 
 **Tratamiento al Alta:**
@@ -3646,8 +3465,6 @@ Cierre por planos.
 - Solicitar cita para revisión en 4 semanas para {DOCTOR}
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
 ```
-
----
 
 <a id="región-pt"></a>
 
@@ -3698,8 +3515,6 @@ ANTEPIÉ — SCARF / AKIN / WEIL (STRYKER)
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con su Centro de Salud en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario
 ```
 
----
-
 ##### `pt_pie_plano_osteo` — Pie Plano — Osteotomía (Koustogiannis + Evans + Cotton)
 
 **Nota Operatoria:**
@@ -3740,8 +3555,6 @@ PIE PLANO — OSTEOTOMÍA (KOUSTOGIANNIS + EVANS + COTTON)
 - No es preciso retirar sutura. Puede ayudar a su caída frotando la herida durante el lavado a partir de la 3ª semana de la intervención
 - Una vez retirados los puntos, deberá masajear la zona de la cicatriz en círculos de forma enérgica, para evitar adherencias de la misma
 ```
-
----
 
 ##### `pt_pie_plano_artrodesis` — Pie Plano — Artrodesis subastragalina + talonavicular
 
@@ -3784,8 +3597,6 @@ PIE PLANO — ARTRODESIS SUBASTRAGALINA + TALONAVICULAR
 - Una vez retirados los puntos, deberá masajear la zona de la cicatriz en círculos de forma enérgica, para evitar adherencias de la misma
 ```
 
----
-
 ##### `pt_pie_cavo_osteo` — Pie Cavo Varo — Osteotomía (Dwyer + Jones)
 
 **Nota Operatoria:**
@@ -3826,8 +3637,6 @@ PIE CAVO VARO — OSTEOTOMÍA (DWYER + JONES)
 - No es preciso retirar sutura. Puede ayudar a su caída frotando la herida durante el lavado a partir de la 3ª semana de la intervención
 - Una vez retirados los puntos, deberá masajear la zona de la cicatriz en círculos de forma enérgica, para evitar adherencias de la misma
 ```
-
----
 
 ##### `pt_pie_cavo_artrodesis` — Pie Cavo Varo — Artrodesis triple
 
@@ -3872,111 +3681,11 @@ PIE CAVO VARO — ARTRODESIS TRIPLE (SUBASTRAGALINA + TALONAVICULAR + CALCANEOCU
 
 ---
 
-<a id="reglas-generales"></a>
+## Reglas Generales
 
-## Reglas Generales para Futuros Proyectos
-
-### 1. Estructura de plantillas
-
-Cada plantilla es un objeto JavaScript dentro de `obtenerPlantillas(DOCTOR, AYUDANTE)` en `index.html`:
-
-```javascript
-nombre_plantilla: {
-  hoja: `IQ {FECHA} ({DOCTOR}/{AYUDANTE})
-
-  TÍTULO DEL PROCEDIMIENTO
-  Contenido de la nota operatoria...`,
-
-  tratamiento: `- Instrucciones de tratamiento al alta...
-  - Medicación...
-  - Revisión en CCEE COT ({DOCTOR}) en X semanas...`
-}
-```
-
-**Campos obligatorios:**
-- `hoja` — Nota operatoria completa (template literal)
-- `tratamiento` — Tratamiento al alta completo (template literal)
-
-**Variables dinámicas:**
-- `${FECHA}` — Fecha actual en formato DD/MM/YY (generada por `hoy()`)
-- `${DOCTOR}` — Nombre del cirujano (seleccionado en la app)
-- `${AYUDANTE}` — Nombre del ayudante (seleccionado en la app)
-
-**Convención de nombrado:**
-- Keys en `snake_case`
-- Prefijo de categoría: `car_` (artroscopia rodilla), `lca_` (ligamentoplastia), `ms_` (miembro superior), `pt_` (pie/tobillo), `ptc_` (prótesis cadera), `ptr_` (prótesis rodilla), `hombro_` (hombro), `codo_` (codo), `rodilla_` (osteotomías rodilla)
-- Sin prefijo para trauma genérico
-
-**Cómo añadir una nueva plantilla:**
-1. Añadir la entrada en `CATEGORIAS` con `value` (key) y `label` (nombre visible)
-2. Añadir el objeto con `hoja` y `tratamiento` dentro de `obtenerPlantillas()`
-3. Si es una nueva categoría, añadirla a `CATEGORIAS` y asignarla a una región en `REGIONES`
-
-### 2. Organización: Categorías y Regiones
-
-```javascript
-// 14 categorías agrupadas en 5 regiones anatómicas
-const REGIONES = [
-  { id: 'trauma', label: 'Trauma', catIds: ['trauma'] },
-  { id: 'rodilla', label: 'Rodilla', catIds: ['car', 'ptr', 'lca', 'rodilla_osteo'] },
-  { id: 'cadera', label: 'Cadera', catIds: ['ptc', 'cac'] },
-  { id: 'ms', label: 'Miembro Superior', catIds: ['hombro_mr', 'hombro_pthi', 'hombro_tumor', 'codo', 'ms'] },
-  { id: 'pt', label: 'Pie y Tobillo', catIds: ['pt'] },
-];
-```
-
-| Región | Categorías |
-|--------|-----------|
-| Trauma | Trauma (13) |
-| Rodilla | Artroscopia Rodilla (17), Prótesis Rodilla (3), LCA (11), Osteotomías y Cartílago (5) |
-| Cadera | Prótesis Cadera (2), Artroscopia Cadera (1) |
-| Miembro Superior | Manguito Rotador (3), Prótesis Hombro (4), Tumores / Partes Blandas (1), Codo (3), Mano y Antebrazo (13) |
-| Pie y Tobillo | Pie y Tobillo (5) |
-
-### 3. Sistema de Diseño
-
-El proyecto `plantillas-qx` usa **Sistema B Premium** (ver `CLAUDE.md` para detalles completos):
-
-- **Fuentes:** Inter (cuerpo) + Lora (títulos)
-- **Header:** degradado premium `#0f2240 → #1a3a5c → #234e77` con glows
-- **Panels:** variante glass con `backdrop-filter: blur(10px)`, iconos SVG inline
-- **Category pills:** navegación horizontal scrollable con badge de conteo
-- **Dark mode:** auto-detección horaria + toggle manual, variables CSS `[data-theme="dark"]`
-- **Textarea:** fuente monoespaciada `SF Mono, JetBrains Mono, Fira Code, Consolas`
-- **Toast:** purple `#7c3aed`, slide-up animado
-- **Animaciones:** `fadeInUp` escalonada, `textFlash` al cargar contenido
-
-**Tres sistemas disponibles para nuevos proyectos:**
-
-| Sistema | Uso | Fuentes | Ejemplo |
-|---------|-----|---------|---------|
-| A (Editorial) | Navegación, índices, documentos | DM Serif Display + DM Sans + DM Mono | landing page, consentimientos |
-| B (Clínico) | Calculadoras, formularios, datos | Inter + Lora | calculadora-guardias, planning-cot |
-| B Premium | Herramientas clínicas con estética premium | Inter + Lora + glass effects | plantillas-qx |
-
-### 4. Patrones JavaScript
-
-- **Vanilla JS obligatorio** — sin frameworks, sin build tools
-- **Single-file HTML** — CSS en `<style>`, JS en `<script>`
-- **Clipboard:** `navigator.clipboard.writeText()` (API moderna)
-- **Toast:** `mostrarToast(msg)` con banner purple fixed bottom
-- **localStorage con expiración diaria** — guardar con `Date.toDateString()`
-- **Normalización Unicode:** `str.normalize('NFD').replace(/[\u0300-\u036f]/g, '')`
-- **D3.js** preferido sobre Chart.js para gráficas
-- **Fecha:** función `hoy()` devuelve `DD/MM/YY`
-
-### 5. Checklist de Despliegue
-
-```
-{repo-name}/
-├── index.html          # App completa (single file)
-├── icon.png / icon.svg # Icono de la app
-├── .gitignore
-├── LICENSE             # MIT
-└── README.md
-```
-
-- **Hosting:** GitHub Pages (`https://jmacot.github.io/{repo}/`)
-- **Idioma:** siempre `lang="es"`
-- **PWA meta tags:** `apple-mobile-web-app-capable`, `theme-color: #1a3a5c`
-- **Al publicar:** actualizar landing page `jmacot.github.io/index.html` con nueva card
+1. **Header IQ**: Toda plantilla comienza con `IQ {FECHA} ({DOCTOR}/{AYUDANTE})`. Nunca incluir línea `INTERVENCIÓN (DRS. ...)`.
+2. **Formato con guiones**: La primera línea tras la línea en blanco es el título del procedimiento (sin guión). Todas las líneas de contenido siguientes llevan prefijo `- `.
+3. **Revisión en consulta**: Incluir siempre `{DOCTOR}` en la línea de revisión. Nunca hardcodear nombres ni fechas.
+4. **Variables dinámicas**: Usar `{FECHA}`, `{DOCTOR}`, `{AYUDANTE}` — nunca valores fijos.
+5. **Lateralidad**: Usar `---` como placeholder editable (derecha/izquierda).
+6. **Key de plantilla**: `snake_case` con prefijo de categoría (`hombro_`, `codo_`, `ms_`, `rodilla_`, `pt_`, etc.).
