@@ -9,7 +9,9 @@ Aplicacion web de archivo unico para **Cirugia Ortopedica y Traumatologia (COT)*
 
 ---
 
-## Acceso directo
+## Acceso
+
+> Acceso protegido — requiere autenticacion previa desde el [portal principal](https://jmacot.github.io/).
 
 [Abrir la aplicacion](https://jmacot.github.io/plantillas-qx/)
 
