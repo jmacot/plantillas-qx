@@ -109,4 +109,4 @@ Antepie, Pie plano osteotomia, Pie plano artrodesis, Pie cavo osteotomia, Pie ca
 
 ## Licencia
 
-MIT — Uso interno hospitalario. Contenido clinico basado en protocolos del servicio de COT.
+All Rights Reserved — Uso interno hospitalario. Contenido clinico basado en protocolos del servicio de COT.
