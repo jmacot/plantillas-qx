@@ -743,9 +743,22 @@
       .app-header::before, .app-header::after { display: none; }
       .back-home { padding: 4px 8px; font-size: 10px; top: 6px; left: 6px; }
       .form-row { flex-direction: column; }
-      .form-group { width: 100%; }
+      .form-group { width: 100% !important; flex: 1 !important; }
       .form-group input, .form-group select { width: 100% !important; }
       select#procedimiento { width: 100%; }
+      /* Quirófano: Cirujano + Ayudante lado a lado */
+      #seccion-quirofano .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+      #seccion-quirofano .form-group:nth-child(n+3) { grid-column: 1 / -1; }
+      #seccion-quirofano .form-row > div:last-child {
+        grid-column: 1 / -1;
+        display: flex;
+        justify-content: center;
+      }
+      #seccion-quirofano .form-row > div:last-child .btn-danger { width: 100%; }
       .panels-grid, .panels-grid-3 { grid-template-columns: 1fr; flex: none; }
       .panel textarea { min-height: 200px; }
       .theme-toggle { width: 34px; height: 34px; font-size: 1rem; top: 8px; right: 8px; }
