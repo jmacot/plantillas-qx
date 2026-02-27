@@ -3,7 +3,7 @@
 > Catálogo de todas las plantillas quirúrgicas del proyecto `plantillas-qx`,
 > organizadas por región y categoría, con su nota operatoria y tratamiento al alta completos.
 
-> **Total: 87 plantillas** en 13 categorías y 5 regiones anatómicas.
+> **Total: 84 plantillas** en 13 categorías y 5 regiones anatómicas.
 
 > **Variables dinámicas:** `${FECHA}` (fecha DD/MM/YY), `${DOCTOR}` (cirujano), `${AYUDANTE}` (ayudante). **Lateralidad:** `${LADO_M}` (derecho/izquierdo), `${LADO_F}` (derecha/izquierda), `${LADO_M_UPPER}` (DERECHO/IZQUIERDO), `${LADO_F_UPPER}` (DERECHA/IZQUIERDA), `${LADO_ABR_F}` (DCHA/IZDA), `${LADO_ABR_M}` (DCHO/IZDO), `${DECUBITO}` (decúbito lateral contrario, minúscula), `${DECUBITO_UPPER}` (DECÚBITO LATERAL contrario, mayúscula).
 
@@ -12,7 +12,7 @@
 ## Índice
 
 - [Trauma](#región-trauma)
-  - [Trauma (13)](#categoría-trauma)
+  - [Trauma (18)](#categoría-trauma)
 - [Rodilla](#región-rodilla)
   - [Artroscopia Rodilla (17)](#categoría-car)
   - [Prótesis Rodilla (3)](#categoría-ptr)
@@ -26,7 +26,7 @@
   - [Prótesis Hombro (4)](#categoría-hombro_pthi)
   - [Tumores / Partes Blandas (1)](#categoría-hombro_tumor)
   - [Codo (3)](#categoría-codo)
-  - [Mano y Antebrazo (18)](#categoría-ms)
+  - [Mano y Antebrazo (10)](#categoría-ms)
 - [Pie y Tobillo](#región-pt)
   - [Pie y Tobillo (5)](#categoría-pt)
 - [Reglas Generales](#reglas-generales)
@@ -41,7 +41,7 @@
 
 <a id="categoría-trauma"></a>
 
-#### Trauma (13 plantillas)
+#### Trauma (18 plantillas)
 
 ##### `canulados_cadera` — Canulados cadera — tornillos canulados (Stryker)
 
@@ -679,6 +679,185 @@ REVISIÓN
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, mala evolución de la herida, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
+```
+
+##### `ms_fr_radio` — Fr radio diafisario — placa
+
+**Nota Operatoria:**
+
+```
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+
+- PROFILAXIS  ANTIBIÓTICA CON  2 GR DE  CEFAZOLINA.
+- ISQUEMIA EN  RAÍZ  DE  MUSLO ( 51 MINUTOS).
+- VIA  ABORDAJE DE  HENRY  EN  CARA  ANTERIOR  ANTABRAZO.
+-  SE IDENTIFICA  FRACTURA  CONMINUTA DE  4  FRAGMENTOS.
+-  REDUCCIÓN  ABIERTA  Y  OSTEOSINTESIS  CON  PLACA  DCP-LC  DE  8  ORIFICIOS (4  TORNILLOS  PROXIMALES  Y  3  DISTALES).
+- CIERRE  DE  TCS Y  PIEL  CON  GRAPAS
+- SE LIBERA ISQUEMIA  Y  COAGULA  VASOS SANGRANTES.
+- FÉRULA  BRAQUIAL.
+```
+
+**Tratamiento al Alta:**
+
+```
+CUIDADOS POSTOPERATORIOS
+- Mantener el brazo  elevado  en cabestrillo
+- Mover activamente los dedos de la extremidad operada.
+- Realizar los ejercicios que su médico le ha explicado.
+- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
+- Puede requerir ayuda domiciliaria
+- NOLOTIL 1 cápsula / 8 horas vía oral.
+- OMEPRAZOL 20 mg/ 24  horas.
+
+REVISIÓN
+- Revisión en CCEE de COT (${DOCTOR}) en 3-4 semanas para Rx, valoración y seguimiento.
+
+SÍNTOMAS DE ALERTA
+- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias. Mover activamente los dedos de la extremidad operada.
+```
+
+##### `ms_fr_cubito_radio` — Fr cúbito + radio — doble placa
+
+**Nota Operatoria:**
+
+```
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+
+- PROFILAXIS  ANTIBIÓTICA CON  2 GR DE  CEFAZOLINA.
+- ISQUEMIA EN  RAÍZ  DE  MUSLO ( 70 MINUTOS).
+- VIA  ABORDAJE DE  HENRY  EN  CARA  ANTERIOR  ANTEBRAZO: RAFI CON  PLACA  DCP-LC  DE  8  ORIFICIOS.
+-  VIA ABORDAJE  DORSAL  SOBRE   FRACTURA DE   CÚBITO:  RAFI  CON  PLACA  DCP-LC DE 8  ORIFICIOS (4 TORNILLOS PROXIMALES  Y  3   DISTALES).
+- SE COMPRUEBA   CON ESCOPIA REDUCCIÓN  DE LAS  FRACTURAS Y  LONGITUDES DE   TORNILLOS.
+- LAVADO  CON  SUERO  FISIOLÓGICO.
+- SE LIBERA ISQUEMIA  Y  COAGULA  VASOS SANGRANTES.
+- CIERRE  DE  TCS Y  PIEL  CON  GRAPAS
+- FÉRULA  BRAQUIAL.
+```
+
+**Tratamiento al Alta:**
+
+```
+CUIDADOS POSTOPERATORIOS
+- Mantener el brazo  elevado  en cabestrillo
+- Mover activamente los dedos de la extremidad operada.
+- Realizar los ejercicios que su médico le ha explicado.
+- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
+- Puede requerir ayuda domiciliaria
+- NOLOTIL 1 cápsula / 8 horas vía oral,  alternar cada  4  horas  con PARACETAMOL 1 gr/8h si  dolor intenso.
+- Revisión  en  CC EE de COT (${DOCTOR}) e   3   semanas   aprox.  para Rx, valoración y  seguimiento.
+
+SÍNTOMAS DE ALERTA
+- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias. Mover activamente los dedos de la extremidad operada.
+```
+
+##### `ms_fr_humero` — Fr húmero diafisario — placa
+
+**Nota Operatoria:**
+
+```
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+
+- PROFILAXIS  ANTIBIÓTICA CON  2 GR DE  CEFAZOLINA.
+- NO  SE REALIZA  ISQUEMIA.
+- INCISIÓN  LINEA MEDIA  POSTERIOR CON VIA   DE ABORDAJE TRANSTRICIPITAL.
+-  SE IDENTIFICA  FRACTURA  CON TERCER FRAGMENTO  Y  SE   REALIZA  LIMPIEZA   FOCO.
+-  REDUCCIÓN  ABIERTA  Y  OSTEOSINTESIS  CON DOS  TORNILLOS  INTERFRAGMENTARIOS SOLIDARIZANDO  LOS   DOS  FRAGMENTOS MÁS   DISTALES  Y  LUEGO  PLACA  DE  NEUTRALIZACIÓN  DCP-LC DE   12   ORIFICIOS  CON  11 TORILLOS (5  PROXIMALES  Y  6  DISTALES)
+-  LAVADO  ABUNDANTE.
+- CIERRE POR  PLANOS Y  PIEL  CON  GRAPAS
+- VENDAJE   COMPRESIVO.
+```
+
+**Tratamiento al Alta:**
+
+```
+CUIDADOS POSTOPERATORIOS
+- Mantener el brazo  elevado  en cabestrillo
+- Mover activamente los dedos de la extremidad operada  y  flexoextensión  del  codo
+- Realizar los ejercicios que su médico le ha explicado.
+- Prohibido hacer   ejercicios de   rotación  del  brazo, coger peso  y  realizar   actividades   de riesgo.
+- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
+- Puede requerir ayuda domiciliaria
+- METAMIZOL  575 mg / 8 horas vía oral.
+- IBUPROFENO  600 mg/8  horas  via  oral  alterno  con  anterior   si  dolor  intenso
+- OMEPRAZOL 20 mg/ 24  horas.
+- Revisión  en  CC EE de COT (${DOCTOR}) en  3   semanas para Rx, valoración y  seguimiento.
+
+SÍNTOMAS DE ALERTA
+- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
+```
+
+##### `ms_fr_olecranon_placa` — Fr olécranon — placa
+
+**Nota Operatoria:**
+
+```
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+
+- PROFILAXIS  ANTIBIÓTICA CON  2 GR DE  CEFAZOLINA.
+- ISQUEMIA EN  RAÍZ  DE  MUSLO ( 68 MINUTOS).
+- VIA  ABORDAJE DE  POSTERIOR   CODO.
+-  SE IDENTIFICA  FRACTURA  CONMINUTA  Y  SE   REALIZA  LIMPIEZA   FOCO.
+-  REDUCCIÓN  ABIERTA  Y  OSTEOSINTESIS  CON  PLACA  DE OLECRANON  PREFORMADA  PERI-LOC DE   8  ORIFICIOS
+-  LAVADO  ABUNDANTE..
+- CIERRE  DE  TCS Y  PIEL  CON  GRAPAS
+- SE LIBERA ISQUEMIA.
+- FÉRULA  BRAQUIAL.
+```
+
+**Tratamiento al Alta:**
+
+```
+CUIDADOS POSTOPERATORIOS
+- Mantener el brazo  elevado  en cabestrillo
+- Mover activamente los dedos de la extremidad operada.
+- Realizar los ejercicios que su médico le ha explicado.
+- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
+- Puede requerir ayuda domiciliaria
+- METAMIZOL  575 mg / 8 horas vía oral.
+- IBUPROFENO  600 mg/8  horas  via  oral  alterno  con  anterior   si  dolor  intenso
+- OMEPRAZOL 20 mg/ 24  horas.
+- Revisión  en  CC EE de COT (${DOCTOR}) en  3   semanas para Rx, valoración y  seguimiento.
+
+SÍNTOMAS DE ALERTA
+- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias. Mover activamente los dedos de la extremidad operada.
+```
+
+##### `ms_fr_olecranon_cerclaje` — Fr olécranon — cerclaje
+
+**Nota Operatoria:**
+
+```
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+
+- PROFILAXIS  ANTIBIÓTICA CON  2 GR DE  CEFAZOLINA.
+- ISQUEMIA EN  RAÍZ  DE  MUSLO ( 29 MINUTOS).
+- VIA  ABORDAJE DE  POSTERIOR   CODO.
+-  SE IDENTIFICA  FRACTURA  Y  SE   REALIZA  LIMPIEZA   FOCO.
+-  REDUCCIÓN  ABIERTA  Y  OSTEOSINTESIS  CON 2  AGUJAS  DE  KIRSCHNER DEL  Nº 2 Y  CERCLAJE EN  OBENQUE CON ALAMBRE DEL  1.
+- SE COMPRUEBA CON  ESCOPIA LA CORRECTA REDUCCIÓN  DE  LA   FRACTURA  Y  COLOCACIÓN DE  LAS AGUJAS.
+-  LAVADO  ABUNDANTE..
+- CIERRE  POR   PLANOS Y  PIEL  CON  GRAPAS.
+- SE LIBERA ISQUEMIA.
+- FÉRULA  BRAQUIAL.
+```
+
+**Tratamiento al Alta:**
+
+```
+CUIDADOS POSTOPERATORIOS
+- Mantener el brazo  elevado  en cabestrillo
+- Mover activamente los dedos de la extremidad operada.
+- Realizar los ejercicios que su médico le ha explicado.
+- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
+- Puede requerir ayuda domiciliaria
+- METAMIZOL 575 mg / 8 horas vía oral.
+- IBUPROFENO  600 mg/8  horas  via  oral  alterno  con  anterior cada  4  horas,  si  dolor  intenso
+- OMEPRAZOL 20 mg/ 24  horas.
+- Revisión  en  CC EE de COT (${DOCTOR}) en  2 semanas para Rx, cura herida qca y  seguimiento.
+
+SÍNTOMAS DE ALERTA
+- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias. Mover activamente los dedos de la extremidad operada.
 ```
 
 <a id="región-rodilla"></a>
@@ -3217,7 +3396,7 @@ SÍNTOMAS DE ALERTA
 
 <a id="categoría-ms"></a>
 
-#### Mano y Antebrazo (18 plantillas)
+#### Mano y Antebrazo (10 plantillas)
 
 ##### `ms_stc` — Síndrome del túnel carpiano (STC)
 
@@ -3350,254 +3529,6 @@ CUIDADOS POSTOPERATORIOS
 - Puede requerir ayuda domiciliaria
 ```
 
-##### `ms_fedr_dvr` — RAFI Fr distal radio — Placa DVR
-
-**Nota Operatoria:**
-
-```
-IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
-
-- PROFILAXIS  ANTIBIÓTICA CON  2 GR DE  CEFAZOLINA.
-- ISQUEMIA EN  BRAZO ( 28 MINUTOS).
-- VIA  ABORDAJE ANTERIOR  MUÑECA.
--  SE IDENTIFICA  FRACTURA 
--  REDUCCIÓN  ABIERTA  Y  OSTEOSINTESIS  CON  PLACA  DVR   DE  3  ORIFICIOS  DIAFISARIOS.
-- CIERRE  DE  TCS 
-- PIEL  CON  GRAPAS
-- VENDAJE   COMPRESIVO.
-```
-
-**Tratamiento al Alta:**
-
-```
-CUIDADOS POSTOPERATORIOS
-- Mantener el brazo  elevado  en cabestrillo
-- Mover activamente los dedos de la extremidad operada.
-- Realizar los ejercicios que su médico le ha explicado.
-- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
-- Puede requerir ayuda domiciliaria
-- NOLOTIL 1 cápsula / 8 horas vía oral.
-- PARACETAMOL  1 gr/  8 horas alterno  con  anterior  cada  4  horas   si  dolor intenso.
-- OMEPRAZOL 20 mg/ 24  horas.
-- Revisión  en  CC EE de COT (${DOCTOR}) en  3   semanas para Rx, valoración y  seguimiento.
-
-SÍNTOMAS DE ALERTA
-- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias. Mover activamente los dedos de la extremidad operada.
-```
-
-##### `ms_fedr_acumed` — RAFI Fr distal radio — Placa ACUMED
-
-**Nota Operatoria:**
-
-```
-IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
-
-- PROFILAXIS  ANTIBIÓTICA CON  2 GR DE  CEFAZOLINA.
-- ISQUEMIA EN  BRAZO (55 MINUTOS).
-- VIA  ABORDAJE ANTERIOR  MUÑECA.
--  SE IDENTIFICA  FRACTURA 
--  REDUCCIÓN  ABIERTA  Y  OSTEOSINTESIS  CON  PLACA  ACUMED  DE  3  ORIFICIOS  DIAFISARIOS.
-- CIERRE  DE  TCS 
-- PIEL  CON  GRAPAS
-- FÉRULA DE YESO.
-```
-
-**Tratamiento al Alta:**
-
-```
-CUIDADOS POSTOPERATORIOS
-- Mantener el brazo  elevado  en cabestrillo
-- Mover activamente los dedos de la extremidad operada.
-- Realizar los ejercicios que su médico le ha explicado.
-- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
-- Puede requerir ayuda domiciliaria
-- ENANPLUS  1  comp /  8 horas
-- OMEPRAZOL 20 mg/ 24  horas.
-- Revisión  en  CC EE de COT (${DOCTOR}) en  4   semanas para Rx, valoración y  seguimiento.
-
-SÍNTOMAS DE ALERTA
-- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias. Mover activamente los dedos de la extremidad operada.
-```
-
-##### `ms_fr_radio` — Fr radio diafisario — placa
-
-**Nota Operatoria:**
-
-```
-IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
-
-- PROFILAXIS  ANTIBIÓTICA CON  2 GR DE  CEFAZOLINA.
-- ISQUEMIA EN  RAÍZ  DE  MUSLO ( 51 MINUTOS).
-- VIA  ABORDAJE DE  HENRY  EN  CARA  ANTERIOR  ANTABRAZO.
--  SE IDENTIFICA  FRACTURA  CONMINUTA DE  4  FRAGMENTOS.
--  REDUCCIÓN  ABIERTA  Y  OSTEOSINTESIS  CON  PLACA  DCP-LC  DE  8  ORIFICIOS (4  TORNILLOS  PROXIMALES  Y  3  DISTALES).
-- CIERRE  DE  TCS Y  PIEL  CON  GRAPAS
-- SE LIBERA ISQUEMIA  Y  COAGULA  VASOS SANGRANTES.
-- FÉRULA  BRAQUIAL.
-```
-
-**Tratamiento al Alta:**
-
-```
-CUIDADOS POSTOPERATORIOS
-- Mantener el brazo  elevado  en cabestrillo
-- Mover activamente los dedos de la extremidad operada.
-- Realizar los ejercicios que su médico le ha explicado.
-- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
-- Puede requerir ayuda domiciliaria
-- NOLOTIL 1 cápsula / 8 horas vía oral.
-- OMEPRAZOL 20 mg/ 24  horas.
-
-REVISIÓN
-- Revisión en CCEE de COT (${DOCTOR}) en 3-4 semanas para Rx, valoración y seguimiento.
-
-SÍNTOMAS DE ALERTA
-- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias. Mover activamente los dedos de la extremidad operada.
-```
-
-##### `ms_fr_cubito_radio` — Fr cúbito + radio — doble placa
-
-**Nota Operatoria:**
-
-```
-IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
-
-- PROFILAXIS  ANTIBIÓTICA CON  2 GR DE  CEFAZOLINA.
-- ISQUEMIA EN  RAÍZ  DE  MUSLO ( 70 MINUTOS).
-- VIA  ABORDAJE DE  HENRY  EN  CARA  ANTERIOR  ANTEBRAZO: RAFI CON  PLACA  DCP-LC  DE  8  ORIFICIOS.
--  VIA ABORDAJE  DORSAL  SOBRE   FRACTURA DE   CÚBITO:  RAFI  CON  PLACA  DCP-LC DE 8  ORIFICIOS (4 TORNILLOS PROXIMALES  Y  3   DISTALES).
-- SE COMPRUEBA   CON ESCOPIA REDUCCIÓN  DE LAS  FRACTURAS Y  LONGITUDES DE   TORNILLOS.
-- LAVADO  CON  SUERO  FISIOLÓGICO.
-- SE LIBERA ISQUEMIA  Y  COAGULA  VASOS SANGRANTES.
-- CIERRE  DE  TCS Y  PIEL  CON  GRAPAS
-- FÉRULA  BRAQUIAL.
-```
-
-**Tratamiento al Alta:**
-
-```
-CUIDADOS POSTOPERATORIOS
-- Mantener el brazo  elevado  en cabestrillo
-- Mover activamente los dedos de la extremidad operada.
-- Realizar los ejercicios que su médico le ha explicado.
-- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
-- Puede requerir ayuda domiciliaria
-- NOLOTIL 1 cápsula / 8 horas vía oral,  alternar cada  4  horas  con PARACETAMOL 1 gr/8h si  dolor intenso.
-- Revisión  en  CC EE de COT (${DOCTOR}) e   3   semanas   aprox.  para Rx, valoración y  seguimiento.
-
-SÍNTOMAS DE ALERTA
-- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias. Mover activamente los dedos de la extremidad operada.
-```
-
-##### `ms_fr_humero` — Fr húmero diafisario — placa
-
-**Nota Operatoria:**
-
-```
-IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
-
-- PROFILAXIS  ANTIBIÓTICA CON  2 GR DE  CEFAZOLINA.
-- NO  SE REALIZA  ISQUEMIA.
-- INCISIÓN  LINEA MEDIA  POSTERIOR CON VIA   DE ABORDAJE TRANSTRICIPITAL. 
--  SE IDENTIFICA  FRACTURA  CON TERCER FRAGMENTO  Y  SE   REALIZA  LIMPIEZA   FOCO.
--  REDUCCIÓN  ABIERTA  Y  OSTEOSINTESIS  CON DOS  TORNILLOS  INTERFRAGMENTARIOS SOLIDARIZANDO  LOS   DOS  FRAGMENTOS MÁS   DISTALES  Y  LUEGO  PLACA  DE  NEUTRALIZACIÓN  DCP-LC DE   12   ORIFICIOS  CON  11 TORILLOS (5  PROXIMALES  Y  6  DISTALES)
--  LAVADO  ABUNDANTE.
-- CIERRE POR  PLANOS Y  PIEL  CON  GRAPAS
-- VENDAJE   COMPRESIVO.
-```
-
-**Tratamiento al Alta:**
-
-```
-CUIDADOS POSTOPERATORIOS
-- Mantener el brazo  elevado  en cabestrillo
-- Mover activamente los dedos de la extremidad operada  y  flexoextensión  del  codo
-- Realizar los ejercicios que su médico le ha explicado.
-- Prohibido hacer   ejercicios de   rotación  del  brazo, coger peso  y  realizar   actividades   de riesgo.
-- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
-- Puede requerir ayuda domiciliaria
-- METAMIZOL  575 mg / 8 horas vía oral.
-- IBUPROFENO  600 mg/8  horas  via  oral  alterno  con  anterior   si  dolor  intenso
-- OMEPRAZOL 20 mg/ 24  horas.
-- Revisión  en  CC EE de COT (${DOCTOR}) en  3   semanas para Rx, valoración y  seguimiento.
-
-SÍNTOMAS DE ALERTA
-- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
-```
-
-##### `ms_fr_olecranon_placa` — Fr olécranon — placa
-
-**Nota Operatoria:**
-
-```
-IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
-
-- PROFILAXIS  ANTIBIÓTICA CON  2 GR DE  CEFAZOLINA.
-- ISQUEMIA EN  RAÍZ  DE  MUSLO ( 68 MINUTOS).
-- VIA  ABORDAJE DE  POSTERIOR   CODO.
--  SE IDENTIFICA  FRACTURA  CONMINUTA  Y  SE   REALIZA  LIMPIEZA   FOCO.
--  REDUCCIÓN  ABIERTA  Y  OSTEOSINTESIS  CON  PLACA  DE OLECRANON  PREFORMADA  PERI-LOC DE   8  ORIFICIOS
--  LAVADO  ABUNDANTE..
-- CIERRE  DE  TCS Y  PIEL  CON  GRAPAS
-- SE LIBERA ISQUEMIA.
-- FÉRULA  BRAQUIAL.
-```
-
-**Tratamiento al Alta:**
-
-```
-CUIDADOS POSTOPERATORIOS
-- Mantener el brazo  elevado  en cabestrillo
-- Mover activamente los dedos de la extremidad operada.
-- Realizar los ejercicios que su médico le ha explicado.
-- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
-- Puede requerir ayuda domiciliaria
-- METAMIZOL  575 mg / 8 horas vía oral.
-- IBUPROFENO  600 mg/8  horas  via  oral  alterno  con  anterior   si  dolor  intenso
-- OMEPRAZOL 20 mg/ 24  horas.
-- Revisión  en  CC EE de COT (${DOCTOR}) en  3   semanas para Rx, valoración y  seguimiento.
-
-SÍNTOMAS DE ALERTA
-- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias. Mover activamente los dedos de la extremidad operada.
-```
-
-##### `ms_fr_olecranon_cerclaje` — Fr olécranon — cerclaje
-
-**Nota Operatoria:**
-
-```
-IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
-
-- PROFILAXIS  ANTIBIÓTICA CON  2 GR DE  CEFAZOLINA.
-- ISQUEMIA EN  RAÍZ  DE  MUSLO ( 29 MINUTOS).
-- VIA  ABORDAJE DE  POSTERIOR   CODO.
--  SE IDENTIFICA  FRACTURA  Y  SE   REALIZA  LIMPIEZA   FOCO.
--  REDUCCIÓN  ABIERTA  Y  OSTEOSINTESIS  CON 2  AGUJAS  DE  KIRSCHNER DEL  Nº 2 Y  CERCLAJE EN  OBENQUE CON ALAMBRE DEL  1.
-- SE COMPRUEBA CON  ESCOPIA LA CORRECTA REDUCCIÓN  DE  LA   FRACTURA  Y  COLOCACIÓN DE  LAS AGUJAS.
--  LAVADO  ABUNDANTE..
-- CIERRE  POR   PLANOS Y  PIEL  CON  GRAPAS.
-- SE LIBERA ISQUEMIA.
-- FÉRULA  BRAQUIAL.
-```
-
-**Tratamiento al Alta:**
-
-```
-CUIDADOS POSTOPERATORIOS
-- Mantener el brazo  elevado  en cabestrillo
-- Mover activamente los dedos de la extremidad operada.
-- Realizar los ejercicios que su médico le ha explicado.
-- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
-- Puede requerir ayuda domiciliaria
-- METAMIZOL 575 mg / 8 horas vía oral.
-- IBUPROFENO  600 mg/8  horas  via  oral  alterno  con  anterior cada  4  horas,  si  dolor  intenso
-- OMEPRAZOL 20 mg/ 24  horas.
-- Revisión  en  CC EE de COT (${DOCTOR}) en  2 semanas para Rx, cura herida qca y  seguimiento.
-
-SÍNTOMAS DE ALERTA
-- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias. Mover activamente los dedos de la extremidad operada.
-```
-
 ##### `ms_seccion_tendon` — Sección tendón flexor mano
 
 **Nota Operatoria:**
@@ -3633,48 +3564,6 @@ REVISIÓN
 - Solicitar cita para revisión en 3 semanas  para ${DOCTOR}
 - UNA VEZ RETIRADOS LOS PUNTOS MASAJEAR ZONA DE CICATRIZ DE MANERA ENERGICA Y EN CIRCULOS
 - EVITAR COGER PESO Y HACER FUERZA CON LA MANO INTERVENIDA DURANTE 8 SEMANAS
-
-SÍNTOMAS DE ALERTA
-- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
-```
-
-##### `ms_clavo_humero` — Clavo T2 húmero retrógrado
-
-**Nota Operatoria:**
-
-```
-IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
-
-- PROFILAXIS ANTIBIÓTICA CON VANCOMICINA  1 G.
-- DECUBITO  PRONO CON  MIEMBRO  SUPERIOR ${LADO_M_UPPER} SOBRE TABLA E  FLEXIÓN  DEL  CODO  DE  90º.
--  CONTROL  DE ESCOPIA.
-- INCISIÓN  LONGITUDINAL DE  UNOS  6/8 CMEN LINEA  MEDIA EN  CARA  POSTERIOR DE  TERCIO  DISTAL  DE  BRAZO  ${LADO_M_UPPER}  CON ABORDAJE  TRANSTRICIPITAL.
-- OSTEOSINTESIS CON  CLAVO  INTRAMEDULAR  FRESADO T2 RETROGRADO  DE  HUMERO DE  190 * 7 MM. 
-- BLOQUEO  PROXIMAL  CON  1  TORNILLO DE  30 MM.
--  BLOQUEO  DISTAL  DINÁMICO  CON  TORNILLO  DE  25 MM.
-- COMPRESIÓN  AVANZADA  CON  TORNILLO  DE COMPRESIÓN.
--  BLOQUEO  DISTAL ESTÁTICO  CON  1 TORNILLO DE  25 MM.
-- LAVADO  HERIDA QUIRÚRGICA ABUNDANTE.
--  DRENAJE ASPIRATIVO.
-- CIERRE  POR  PLANOS .
-- PIEL  CON  SUTURA INTRADÉRMICA.
-- VENDAJE  COMPRESIVO.
-```
-
-**Tratamiento al Alta:**
-
-```
-CUIDADOS POSTOPERATORIOS
-- Mantener el mano  elevada en  cabestrillo.
-- Mover activamente los dedos de la extremidad operada.
-- Movilidad libre del  codo  sin  realizar movimientos bruscos  ni  coger  peso.
-- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
-- Puede requerir ayuda domiciliaria
-- IBUPROFENO 600 mg / 8 horas vía oral.
-- Revisión  de  herida  qca en  Centro  Salud  cada  72 horas  para  curas  locales.
-
-REVISIÓN
-- Revisión en CCEE de COT (${DOCTOR}) en 3-4 semanas para control Rx, retirada sutura y seguimiento.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.

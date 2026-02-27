@@ -1034,6 +1034,11 @@
       { value: 'rafi_humero_axsos', label: 'RAFI Húmero proximal/diafisario — Placa AxSOS (Stryker)' },
       { value: 'rafi_clavicula', label: 'RAFI Clavícula — Placa Variax (Stryker)' },
       { value: 'monteggia', label: 'Fr Monteggia / olécranon — Placa Peri-Loc (S&N)' },
+      { value: 'ms_fr_radio', label: 'Fr radio diafisario — placa' },
+      { value: 'ms_fr_cubito_radio', label: 'Fr cúbito + radio — doble placa' },
+      { value: 'ms_fr_humero', label: 'Fr húmero diafisario — placa' },
+      { value: 'ms_fr_olecranon_placa', label: 'Fr olécranon — placa' },
+      { value: 'ms_fr_olecranon_cerclaje', label: 'Fr olécranon — cerclaje' },
     ]},
     { id: 'car', label: 'Artroscopia Rodilla', procs: [
       { value: 'car_mosaicoplastia', label: 'CAR Mosaicoplastia' },
@@ -1082,15 +1087,7 @@
       { value: 'ms_tcg', label: 'TCG Mano (quiste sinovial)' },
       { value: 'ms_dedo_resorte', label: 'Dedo en resorte — apertura polea A1' },
       { value: 'ms_dedo_resorte_tenolisis', label: 'Dedo en resorte — tenolisis' },
-      { value: 'ms_fedr_dvr', label: 'RAFI Fr distal radio — Placa DVR' },
-      { value: 'ms_fedr_acumed', label: 'RAFI Fr distal radio — Placa ACUMED' },
-      { value: 'ms_fr_radio', label: 'Fr radio diafisario — placa' },
-      { value: 'ms_fr_cubito_radio', label: 'Fr cúbito + radio — doble placa' },
-      { value: 'ms_fr_humero', label: 'Fr húmero diafisario — placa' },
-      { value: 'ms_fr_olecranon_placa', label: 'Fr olécranon — placa' },
-      { value: 'ms_fr_olecranon_cerclaje', label: 'Fr olécranon — cerclaje' },
       { value: 'ms_seccion_tendon', label: 'Sección tendón flexor mano' },
-      { value: 'ms_clavo_humero', label: 'Clavo T2 húmero retrógrado' },
       { value: 'ms_cerclaje_clavicula', label: 'Weaver-Dunn / Fr clavícula distal — cerclaje' },
       { value: 'ms_dupuytren', label: 'Dupuytren — fasciectomía' },
       { value: 'ms_ganglion', label: 'Ganglión mano — resección' },
@@ -3666,57 +3663,6 @@ Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o
 tratamiento: `CUIDADOS POSTOPERATORIOS
 - Puede requerir ayuda domiciliaria`
 },
-    ms_fedr_dvr: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
-
-- PROFILAXIS  ANTIBIÓTICA CON  2 GR DE  CEFAZOLINA.
-- ISQUEMIA EN  BRAZO ( 28 MINUTOS).
-- VIA  ABORDAJE ANTERIOR  MUÑECA.
--  SE IDENTIFICA  FRACTURA 
--  REDUCCIÓN  ABIERTA  Y  OSTEOSINTESIS  CON  PLACA  DVR   DE  3  ORIFICIOS  DIAFISARIOS.
-- CIERRE  DE  TCS 
-- PIEL  CON  GRAPAS
-- VENDAJE   COMPRESIVO.`,
-
-tratamiento: `CUIDADOS POSTOPERATORIOS
-- Mantener el brazo  elevado  en cabestrillo
-- Mover activamente los dedos de la extremidad operada.
-- Realizar los ejercicios que su médico le ha explicado.
-- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
-- Puede requerir ayuda domiciliaria
-- NOLOTIL 1 cápsula / 8 horas vía oral.
-- PARACETAMOL  1 gr/  8 horas alterno  con  anterior  cada  4  horas   si  dolor intenso.
-- OMEPRAZOL 20 mg/ 24  horas.
-- Revisión  en  CC EE de COT (${DOCTOR}) en  3   semanas para Rx, valoración y  seguimiento.
-
-SÍNTOMAS DE ALERTA
-- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias. Mover activamente los dedos de la extremidad operada.`
-},
-    ms_fedr_acumed: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
-
-- PROFILAXIS  ANTIBIÓTICA CON  2 GR DE  CEFAZOLINA.
-- ISQUEMIA EN  BRAZO (55 MINUTOS).
-- VIA  ABORDAJE ANTERIOR  MUÑECA.
--  SE IDENTIFICA  FRACTURA 
--  REDUCCIÓN  ABIERTA  Y  OSTEOSINTESIS  CON  PLACA  ACUMED  DE  3  ORIFICIOS  DIAFISARIOS.
-- CIERRE  DE  TCS 
-- PIEL  CON  GRAPAS
-- FÉRULA DE YESO.`,
-
-tratamiento: `CUIDADOS POSTOPERATORIOS
-- Mantener el brazo  elevado  en cabestrillo
-- Mover activamente los dedos de la extremidad operada.
-- Realizar los ejercicios que su médico le ha explicado.
-- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
-- Puede requerir ayuda domiciliaria
-- ENANPLUS  1  comp /  8 horas
-- OMEPRAZOL 20 mg/ 24  horas.
-- Revisión  en  CC EE de COT (${DOCTOR}) en  4   semanas para Rx, valoración y  seguimiento.
-
-SÍNTOMAS DE ALERTA
-- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias. Mover activamente los dedos de la extremidad operada.`
-},
     ms_fr_radio: {
 hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
@@ -3878,39 +3824,6 @@ REVISIÓN
 - Solicitar cita para revisión en 3 semanas  para ${DOCTOR}
 - UNA VEZ RETIRADOS LOS PUNTOS MASAJEAR ZONA DE CICATRIZ DE MANERA ENERGICA Y EN CIRCULOS
 - EVITAR COGER PESO Y HACER FUERZA CON LA MANO INTERVENIDA DURANTE 8 SEMANAS
-
-SÍNTOMAS DE ALERTA
-- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.`
-},
-    ms_clavo_humero: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
-
-- PROFILAXIS ANTIBIÓTICA CON VANCOMICINA  1 G.
-- DECUBITO  PRONO CON  MIEMBRO  SUPERIOR ${LADO_M_UPPER} SOBRE TABLA E  FLEXIÓN  DEL  CODO  DE  90º.
--  CONTROL  DE ESCOPIA.
-- INCISIÓN  LONGITUDINAL DE  UNOS  6/8 CMEN LINEA  MEDIA EN  CARA  POSTERIOR DE  TERCIO  DISTAL  DE  BRAZO  ${LADO_M_UPPER}  CON ABORDAJE  TRANSTRICIPITAL.
-- OSTEOSINTESIS CON  CLAVO  INTRAMEDULAR  FRESADO T2 RETROGRADO  DE  HUMERO DE  190 * 7 MM. 
-- BLOQUEO  PROXIMAL  CON  1  TORNILLO DE  30 MM.
--  BLOQUEO  DISTAL  DINÁMICO  CON  TORNILLO  DE  25 MM.
-- COMPRESIÓN  AVANZADA  CON  TORNILLO  DE COMPRESIÓN.
--  BLOQUEO  DISTAL ESTÁTICO  CON  1 TORNILLO DE  25 MM.
-- LAVADO  HERIDA QUIRÚRGICA ABUNDANTE.
--  DRENAJE ASPIRATIVO.
-- CIERRE  POR  PLANOS .
-- PIEL  CON  SUTURA INTRADÉRMICA.
-- VENDAJE  COMPRESIVO.`,
-
-tratamiento: `CUIDADOS POSTOPERATORIOS
-- Mantener el mano  elevada en  cabestrillo.
-- Mover activamente los dedos de la extremidad operada.
-- Movilidad libre del  codo  sin  realizar movimientos bruscos  ni  coger  peso.
-- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
-- Puede requerir ayuda domiciliaria
-- IBUPROFENO 600 mg / 8 horas vía oral.
-- Revisión  de  herida  qca en  Centro  Salud  cada  72 horas  para  curas  locales.
-
-REVISIÓN
-- Revisión en CCEE de COT (${DOCTOR}) en 3-4 semanas para control Rx, retirada sutura y seguimiento.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.`
