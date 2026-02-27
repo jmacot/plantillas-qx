@@ -3,9 +3,9 @@
 > Catálogo de todas las plantillas quirúrgicas del proyecto `plantillas-qx`,
 > organizadas por región y categoría, con su nota operatoria y tratamiento al alta completos.
 
-> **Total: 85 plantillas** en 13 categorías y 5 regiones anatómicas.
+> **Total: 87 plantillas** en 13 categorías y 5 regiones anatómicas.
 
-> **Variables dinámicas:** `{FECHA}` (fecha DD/MM/YY), `{DOCTOR}` (cirujano), `{AYUDANTE}` (ayudante). **Lateralidad:** `{LADO_M}` (derecho/izquierdo), `{LADO_F}` (derecha/izquierda), `{LADO_M_UPPER}` (DERECHO/IZQUIERDO), `{LADO_F_UPPER}` (DERECHA/IZQUIERDA), `{LADO_ABR_F}` (DCHA/IZDA), `{LADO_ABR_M}` (DCHO/IZDO), `{DECUBITO}` (decúbito lateral contrario, minúscula), `{DECUBITO_UPPER}` (DECÚBITO LATERAL contrario, mayúscula).
+> **Variables dinámicas:** `${FECHA}` (fecha DD/MM/YY), `${DOCTOR}` (cirujano), `${AYUDANTE}` (ayudante). **Lateralidad:** `${LADO_M}` (derecho/izquierdo), `${LADO_F}` (derecha/izquierda), `${LADO_M_UPPER}` (DERECHO/IZQUIERDO), `${LADO_F_UPPER}` (DERECHA/IZQUIERDA), `${LADO_ABR_F}` (DCHA/IZDA), `${LADO_ABR_M}` (DCHO/IZDO), `${DECUBITO}` (decúbito lateral contrario, minúscula), `${DECUBITO_UPPER}` (DECÚBITO LATERAL contrario, mayúscula).
 
 ---
 
@@ -14,9 +14,9 @@
 - [Trauma](#región-trauma)
   - [Trauma (13)](#categoría-trauma)
 - [Rodilla](#región-rodilla)
-  - [Artroscopia Rodilla (16)](#categoría-car)
+  - [Artroscopia Rodilla (17)](#categoría-car)
   - [Prótesis Rodilla (3)](#categoría-ptr)
-  - [LCA (10)](#categoría-lca)
+  - [LCA (11)](#categoría-lca)
   - [Osteotomías y Cartílago (5)](#categoría-rodilla_osteo)
 - [Cadera](#región-cadera)
   - [Prótesis Cadera (2)](#categoría-ptc)
@@ -48,12 +48,12 @@
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 - Anestesia: Regional.
 - Profilaxis antibiótica: 2g de cefazolina intravenosa.
 - Posición: Decúbito supino en mesa de tracción con control por escopia.
-- Técnica quirúrgica: Reducción cerrada de la fractura de cadera {LADO_F}.
+- Técnica quirúrgica: Reducción cerrada de la fractura de cadera ${LADO_F}.
 - Fijación interna: Tres tornillos canulados en disposición de triángulo invertido:
 - Tornillo inferior: 100 mm con arandela.
 - Tornillos anterosuperior y posterosuperior: 100 mm y 95 mm respectivamente, sin arandela.
@@ -85,7 +85,7 @@ CURAS LOCALES
 - Retiro de grapas en 15-20 días, salvo mejor criterio de enfermería.
 
 REVISIÓN
-- Solicitar cita para revisión en consultas externas ({DOCTOR}) en 2-3 semanas para control evolutivo y radiológico.
+- Solicitar cita para revisión en consultas externas (${DOCTOR}) en 2-3 semanas para control evolutivo y radiológico.
 
 SÍNTOMAS DE ALERTA
 Acuda a Urgencias si presenta alguno de los siguientes síntomas:
@@ -125,10 +125,9 @@ Prevención de complicaciones:
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-
-- Fractura pertrocantérea fémur {LADO_M}.
+- Fractura pertrocantérea fémur ${LADO_M}.
 - Anestesia regional.
 - Profilaxis antibiótica con 2g de cefazolina.
 - Decúbito supino, en mesa de tracción y con control por escopia. Reducción cerrada.
@@ -142,20 +141,28 @@ IQ {FECHA} ({DOCTOR}/{AYUDANTE})
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Mantener pie elevado cuando esté sentada, moviendo el pie como se le ha explicado.
 - Realizar los ejercicios que su médico le ha explicado.
 - Vigilar coloración y sensibilidad del pie y los dedos.
 - Puede caminar con ayuda de andador, que solicitará en préstamo si precisa.
 - Evitar cargar peso sobre pierna intervenida hasta nuevo aviso, puede solicitar silla de ruedas en préstamo.
 - Puede requerir ayuda domiciliaria
-- Medicación incluida en su tarjeta sanitaria:
+
+MEDICACIÓN (según tarjeta sanitaria)
 - METAMIZOL 575mg cada 8 horas vía oral, que puede alternar con PARACETAMOL 1g/8h vía oral si precisa por dolor.
 - OMEPRAZOL 20mg cada 24 horas.
 - ENOXAPARINA 40mg cada 24 horas vía subcutánea.
 - HIERRO ORAL 1 comprimido vía oral en ayunas cada día durante un mes.
 - DEMILOS 600mg/2000 UI 1 comprimido al día
-- Curas locales en centro de salud cada 24-48 horas, retirando grapas en 15-20 días, salvo mejor criterio de enfermería de zona.
-- Antes de marcharse, solicitará cita para revisión en CCEE COT {DOCTOR} en 3-4 semanas, para control evolutivo y radiológico.
+
+CURAS LOCALES
+- Realizar curas locales en el centro de salud cada 24-48 horas, retirando grapas en 15-20 días, salvo mejor criterio de enfermería de zona.
+
+REVISIÓN
+- Solicitar cita para revisión en CCEE COT ${DOCTOR} en 3-4 semanas, para control evolutivo y radiológico.
+
+SÍNTOMAS DE ALERTA
 - Si aparece fiebre (>38º), dolor intenso que no se alivia con analgésicos, mala evolución de la herida, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
 ```
 
@@ -164,13 +171,12 @@ IQ {FECHA} ({DOCTOR}/{AYUDANTE})
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-PRÓTESIS PARCIAL DE CADERA
-- Fractura subcapital fémur {LADO_M}
+- Fractura subcapital fémur ${LADO_M}
 - Anestesia regional.
 - Profilaxis antibiótica con 2g de cefazolina.
-- Decúbito lateral {DECUBITO}.
+- Decúbito lateral ${DECUBITO}.
 - Incisión longitudinal sobre región trocantérica y vía de abordaje según Bauer.
 - Capsulotomía en “T” y osteotomía de cuello femoral. Resección de cabeza femoral.
 - Artroplastia parcial de cadera cementada modelo Exeter (Stryker) vástago nº 35.5, cuello 0x26mm, cúpula bipolar 43mm.
@@ -183,20 +189,27 @@ PRÓTESIS PARCIAL DE CADERA
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Mantener pie elevado cuando esté sentada, moviendo el pie como se le ha explicado.
 - Realizar los ejercicios que su médico le ha explicado, y seguir hoja de recomendaciones de pacientes con prótesis de cadera.
 - Vigilar coloración y sensibilidad del pie y los dedos.
 - Puede caminar con ayuda de andador, que solicitará en préstamo si precisa.
 - Requiere ayuda domiciliaria
 
-Medicación incluida en su tarjeta sanitaria:
+MEDICACIÓN (según tarjeta sanitaria)
 - METAMIZOL 575mg cada 8 horas vía oral, que puede alternar con PARACETAMOL 1g/8h vía oral si precisa por dolor.
 - OMEPRAZOL 20mg cada 24 horas.
 - ENOXAPARINA 40mg cada 24 horas vía subcutánea.
 - DELTIUS 10.000UI/ML 1 FRASCO 10ML 4 GOTAS cada 24 horas vía oral.
 - HIERRO ORAL 1 comprimido vía oral en ayunas cada día durante un mes.
-- Curas locales en centro de salud cada 24-48 horas, retirando grapas en 15-20 días, salvo mejor criterio de enfermería de zona.
-- Antes de marcharse, solicitará cita para revisión en CCEE COT {DOCTOR} en un mes, para control evolutivo y radiológico (ACUDIR MEDIA HORA ANTES DE CITA PARA REALIZAR RX)
+
+CURAS LOCALES
+- Realizar curas locales en el centro de salud cada 24-48 horas, retirando grapas en 15-20 días, salvo mejor criterio de enfermería de zona.
+
+REVISIÓN
+- Solicitar cita para revisión en CCEE COT ${DOCTOR} en un mes, para control evolutivo y radiológico (ACUDIR MEDIA HORA ANTES DE CITA PARA REALIZAR RX)
+
+SÍNTOMAS DE ALERTA
 - Si aparece fiebre (>38º), dolor intenso que no se alivia con analgésicos, mala evolución de la herida, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
 ```
 
@@ -205,10 +218,9 @@ Medicación incluida en su tarjeta sanitaria:
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-
-- FRACTURA  PERIPROTESICA DE  FEMUR  {LADO_M_UPPER} EN  PACIENTE  CON  PROTESIS  CADERA:
+- FRACTURA  PERIPROTESICA DE  FEMUR  ${LADO_M_UPPER} EN  PACIENTE  CON  PROTESIS  CADERA:
 - PROFILAXIS  ANTIBIÓTICA CON  2 GR DE  CEFAZOLINA.
 - DECUBITO  SUPINO
 - INCISIÓN LONGITUDINAL LATERAL  DEL  FEMUR
@@ -225,6 +237,7 @@ IQ {FECHA} ({DOCTOR}/{AYUDANTE})
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Mantener el pie elevado siempre que esté sentado.
 - Mover activamente los dedos de la extremidad operada.
 - Realizar los ejercicios que su médico le ha explicado.
@@ -232,13 +245,20 @@ IQ {FECHA} ({DOCTOR}/{AYUDANTE})
 - Reposo relativo  SIN APOYO de  la pierna  intervenida.
 - Puede requerir ayuda domiciliaria
 - Movilización en silla de ruedas que se entregará a préstamo
-- Medicación incluida en su tarjeta sanitaria:
+
+MEDICACIÓN (según tarjeta sanitaria)
 - PARACETAMOL 1 gr cada 8 horas alternando con METAMIZOL 575 mg cada 8 horas si dolor
 - OMEPRAZOL 20 mg cada 24 horas vía oral
 - ENOXAPARINA 40 mg cada 24 horas vía subcutánea
 - DEMILOS 600 mg / 1000 UI 1 comprimido cada 24 horas
-- Curas locales en centro de salud cada 24-48 horas, retirando grapas en 15-17 días, salvo mejor criterio de enfermería de zona.
-- Antes de marcharse, solicitará cita para revisión en CCEE COT {DOCTOR} en 3-4 semanas, para control evolutivo y radiológico.
+
+CURAS LOCALES
+- Realizar curas locales en el centro de salud cada 24-48 horas, retirando grapas en 15-17 días, salvo mejor criterio de enfermería de zona.
+
+REVISIÓN
+- Solicitar cita para revisión en CCEE COT ${DOCTOR} en 3-4 semanas, para control evolutivo y radiológico.
+
+SÍNTOMAS DE ALERTA
 - Si aparece fiebre (>38º), dolor intenso que no se alivia con analgésicos, mala evolución de la herida o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
 ```
 
@@ -247,10 +267,9 @@ IQ {FECHA} ({DOCTOR}/{AYUDANTE})
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-
-- FRACTURA  SUPRAINTERCONDILEA DE FEMUR {LADO_M_UPPER}:
+- FRACTURA  SUPRAINTERCONDILEA DE FEMUR ${LADO_M_UPPER}:
 - PROFILAXIS  ANTIBIÓTICA CON  2 GR DE  CEFAZOLINA.
 - DECUBITO  SUPINO
 - INCISIÓN LONGITUDINAL LATERAL  DEL TERCIO  DISTAL  DEL  FEMUR
@@ -266,6 +285,7 @@ IQ {FECHA} ({DOCTOR}/{AYUDANTE})
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Mantener el pie elevado siempre que esté sentado.
 - Mover activamente los dedos de la extremidad operada.
 - Realizar los ejercicios que su médico le ha explicado.
@@ -273,13 +293,20 @@ IQ {FECHA} ({DOCTOR}/{AYUDANTE})
 - Reposo relativo  SIN APOYO de  la pierna  intervenida.
 - Puede requerir ayuda domiciliaria
 - Movilización en silla de ruedas que se entregará a préstamo
-- Medicación incluida en su tarjeta sanitaria:
+
+MEDICACIÓN (según tarjeta sanitaria)
 - PARACETAMOL 1 gr cada 8 horas alternando con METAMIZOL 575 mg cada 8 horas si dolor
 - OMEPRAZOL 20 mg cada 24 horas vía oral
 - ENOXAPARINA 40 mg cada 24 horas vía subcutánea
 - DEMILOS 600 mg / 1000 UI 1 comprimido cada 24 horas
-- Curas locales en centro de salud cada 24-48 horas, retirando grapas en 15-17 días, salvo mejor criterio de enfermería de zona.
-- Antes de marcharse, solicitará cita para revisión en CCEE COT {DOCTOR} en 3-4 semanas, para control evolutivo y radiológico.
+
+CURAS LOCALES
+- Realizar curas locales en el centro de salud cada 24-48 horas, retirando grapas en 15-17 días, salvo mejor criterio de enfermería de zona.
+
+REVISIÓN
+- Solicitar cita para revisión en CCEE COT ${DOCTOR} en 3-4 semanas, para control evolutivo y radiológico.
+
+SÍNTOMAS DE ALERTA
 - Si aparece fiebre (>38º), dolor intenso que no se alivia con analgésicos, mala evolución de la herida o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
 ```
 
@@ -288,10 +315,9 @@ IQ {FECHA} ({DOCTOR}/{AYUDANTE})
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-FRACTURA  ROTULA
-- FRACTURA TRANVERSAL   ROTULA {LADO_F_UPPER}:
+- FRACTURA TRANVERSAL   ROTULA ${LADO_F_UPPER}:
 - PROFILAXIS  ANTIBIÓTICA CON  2 GR DE  CEFAZOLINA.
 - ISQUEMIA EN  RAÍZ  DE  MUSLO (40 MINUTOS).
 - INCISIÓN LONGITUDINAL ANTERIOR DE RODILLA.
@@ -307,6 +333,7 @@ FRACTURA  ROTULA
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Mantener el pie elevado siempre que esté sentado.
 - Mover activamente los dedos de la extremidad operada.
 - Realizar los ejercicios que su médico le ha explicado.
@@ -314,13 +341,20 @@ FRACTURA  ROTULA
 - Reposo relativo  SIN APOYO de  la pierna  intervenida.
 - Puede requerir ayuda domiciliaria
 - Movilización en silla de ruedas que se entregará a préstamo
-- Medicación incluida en su tarjeta sanitaria:
+
+MEDICACIÓN (según tarjeta sanitaria)
 - PARACETAMOL 1 gr cada 8 horas alternando con METAMIZOL 575 mg cada 8 horas si dolor
 - OMEPRAZOL 20 mg cada 24 horas vía oral
 - ENOXAPARINA 40 mg cada 24 horas vía subcutánea
 - DEMILOS 600 mg / 1000 UI 1 comprimido cada 24 horas
-- Curas locales en centro de salud cada 24-48 horas, retirando grapas en 15-17 días, salvo mejor criterio de enfermería de zona.
-- Antes de marcharse, solicitará cita para revisión en CCEE COT {DOCTOR} en 3-4 semanas, para control evolutivo y radiológico.
+
+CURAS LOCALES
+- Realizar curas locales en el centro de salud cada 24-48 horas, retirando grapas en 15-17 días, salvo mejor criterio de enfermería de zona.
+
+REVISIÓN
+- Solicitar cita para revisión en CCEE COT ${DOCTOR} en 3-4 semanas, para control evolutivo y radiológico.
+
+SÍNTOMAS DE ALERTA
 - Si aparece fiebre (>38º), dolor intenso que no se alivia con analgésicos, mala evolución de la herida o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
 ```
 
@@ -329,10 +363,9 @@ FRACTURA  ROTULA
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-CLAVO TIBIA TRIGEN META-NAIL (S&N)
-- Fractura diafisaria multifragmentaria tibia {LADO_F}.
+- Fractura diafisaria multifragmentaria tibia ${LADO_F}.
 - Anestesia regional.
 - Profilaxis antibiótica con 2g de cefazolina.
 - Decúbito supino, en mesa de tracción de tibia y con control por escopia.
@@ -348,18 +381,26 @@ CLAVO TIBIA TRIGEN META-NAIL (S&N)
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Mantener pie elevado cuando esté sentado, moviendo el pie como se le ha explicado.
 - Realizar los ejercicios que su médico le ha explicado, haciendo flexión-extensión activa-asistida de rodilla frecuentemente.
 - Vigilar coloración y sensibilidad del pie y los dedos.
 - Evitar cargar peso sobre pierna intervenida hasta nuevo aviso y según plazos marcados, puede solicitar silla de ruedas en préstamo.
 - Puede caminar con ayuda de muletas con carga parcial progresiva según le ha explicado su médico, que podrá solicitar en préstamo si precisa.
 - Puede requerir ayuda domiciliaria
-- Medicación incluida en su tarjeta sanitaria:
+
+MEDICACIÓN (según tarjeta sanitaria)
 - METAMIZOL 575mg cada 8 horas vía oral, que puede alternar con PARACETAMOL 1g/8h vía oral si precisa por dolor.
 - NAPROXENO 500 / ESOMEPRAZOL 20 mg cada 12 horas vía oral añadido a lo anterior si precisa por dolor.
 - ENOXAPARINA 40 mg cada 24 horas vía subcutánea.
-- Curas locales en centro de salud cada 24-48 horas, retirando grapas en 15-20 días, salvo mejor criterio de enfermería de zona.
-- Antes de marcharse, solicitará cita para revisión en CCEE COT {DOCTOR} en 3-4 semanas, para control evolutivo y radiológico.
+
+CURAS LOCALES
+- Realizar curas locales en el centro de salud cada 24-48 horas, retirando grapas en 15-20 días, salvo mejor criterio de enfermería de zona.
+
+REVISIÓN
+- Solicitar cita para revisión en CCEE COT ${DOCTOR} en 3-4 semanas, para control evolutivo y radiológico.
+
+SÍNTOMAS DE ALERTA
 - Si aparece fiebre (>38º), dolor intenso que no se alivia con analgésicos, mala evolución de heridas, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
 ```
 
@@ -368,13 +409,12 @@ CLAVO TIBIA TRIGEN META-NAIL (S&N)
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-RAFI FRACTURA TOBILLO PLACA BAJA ENERGÍA (STRYKER)
-- Fractura transindesmal peroné {LADO_M}.
+- Fractura transindesmal peroné ${LADO_M}.
 - Anestesia raquídea.
 - Profilaxis antibiótica con 2g de cefazolina.
-- Isquemia profiláctica sobre miembro inferior {LADO_M}.
+- Isquemia profiláctica sobre miembro inferior ${LADO_M}.
 - En decúbito supino y con control por escopia.
 - Abordaje longitudinal sobre peroné distal, reducción abierta y fijación con tornillo interfragmentario.
 - Fijación interna con placa baja energía 5 orificios, tornillos bloqueados distales y a compresión proximales.
@@ -387,18 +427,26 @@ RAFI FRACTURA TOBILLO PLACA BAJA ENERGÍA (STRYKER)
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Mantener pie elevado el mayor tiempo posible, moviendo dedos como se le ha explicado.
 - Realizar los ejercicios que su médico le ha explicado.
 - Vigilar coloración y sensibilidad de los dedos.
 - Descarga de pie intervenido hasta nuevo aviso en consultas.
 - Puede requerir ayuda domiciliaria
-- Medicación incluida en su tarjeta sanitaria:
+
+MEDICACIÓN (según tarjeta sanitaria)
 - ENOXAPARINA 40 mg cada 24 horas vía subcutánea.
 - METAMIZOL 575mg cada 8 horas vía oral, que puede alternar con PARACETAMOL 1g/8h vía oral si precisa por dolor.
 - OMEPRAZOL 20 mg cada 24h vía oral
 - Vit D3 2000UI cada 24h vo
-- Curas locales en centro de salud cada 24-48 horas, retirando grapas en 15-17 días, salvo mejor criterio de enfermería de zona.
-- Antes de marcharse, solicitará cita para revisión en CCEE COT {DOCTOR} en 3-4 semanas, para control evolutivo y radiológico.
+
+CURAS LOCALES
+- Realizar curas locales en el centro de salud cada 24-48 horas, retirando grapas en 15-17 días, salvo mejor criterio de enfermería de zona.
+
+REVISIÓN
+- Solicitar cita para revisión en CCEE COT ${DOCTOR} en 3-4 semanas, para control evolutivo y radiológico.
+
+SÍNTOMAS DE ALERTA
 - Si aparece fiebre (>38º), dolor intenso que no se alivia con analgésicos, mala evolución de la herida o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
 ```
 
@@ -407,16 +455,15 @@ RAFI FRACTURA TOBILLO PLACA BAJA ENERGÍA (STRYKER)
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-AQUILES
-- Intervenido por el {DOCTOR}
+- Intervenido por el ${DOCTOR}
 - Tipo de anestesia: Raquídea
 - Antibiótico profiláctico: Cefazolina 2 g IV
 - Procedimiento:
 - Abordaje mini-open
 - Sutura según técnica de Ma-Griffith con hilo PDS 1
-- Isquemia profiláctica en pierna {LADO_F}
+- Isquemia profiláctica en pierna ${LADO_F}
 - Cierre por planos
 - Inmovilización con férula anterior en equino
 ```
@@ -424,6 +471,7 @@ AQUILES
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Tratamiento pautado
 - Puede requerir ayuda domiciliaria
 - Paracetamol 1 g cada 8 horas
@@ -450,7 +498,7 @@ AQUILES
 - Dolor intenso no controlado con medicación
 - Falta de aire, dolor en el pecho o hinchazón excesiva en las piernas
 - Revisión en consultas externas
-- Solicitar cita con el {DOCTOR} en 4 semanas.
+- Solicitar cita con el ${DOCTOR} en 4 semanas.
 - Curas
 - Solicite cita en sala de curas dentro de una semana.
 - No realizar curas en casa hasta entonces.
@@ -463,9 +511,8 @@ AQUILES
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-FRACTURA DEL EXTREMO DISTAL DEL RADIO LAT
 - Bajo anestesia local y sedación, en decúbito supino, con manguito de isquemia en raíz de MSD, y con control por escopia.
 - Abordaje de Henry sobre radio distal.
 - Localización de fractura, reducción abierta y fijación interna con placa Aculoc-2 (Acumed).
@@ -476,18 +523,26 @@ FRACTURA DEL EXTREMO DISTAL DEL RADIO LAT
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Mantener la mano elevada, con el brazo en cabestrillo. Puede retirarlo cuando esté sentado y con la mano apoyada. Evitar declive.
 - Mover activamente los dedos de la extremidad operada, según se le ha explicado.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
 - Puede requerir ayuda domiciliaria
-- Medicación incluida en su tarjeta sanitaria:
+
+MEDICACIÓN (según tarjeta sanitaria)
 - METAMIZOL 575mg cada 8 horas vía oral, que puede alternar con PARACETAMOL 1g/8h vía oral si precisa por dolor.
 - Si no control del dolor añadir DEXKETOPROFENO 25 mg cada 8 horas
 - OMEPRAZOL 20mg cada 24 horas mientras precise medicación analgésica de forma continuada.
 - VITAMINA C 500 mg cada 24 horas vía oral
-- Curas locales en centro de salud cada 48-72 horas, retirando puntos de sutura en 12-15 días, salvo mejor criterio de enfermería de zona.
+
+CURAS LOCALES
+- Realizar curas locales en el centro de salud cada 48-72 horas, retirando puntos de sutura en 12-15 días, salvo mejor criterio de enfermería de zona.
 - Una vez retirados los puntos, deberá masajear la zona de la cicatriz en círculos de forma enérgica, para evitar adherencias de la misma.
-- Antes de marcharse, solicitará cita para revisión en CCEE COT {DOCTOR} en 3-4 semanas, para control evolutivo.
+
+REVISIÓN
+- Solicitar cita para revisión en CCEE COT ${DOCTOR} en 3-4 semanas, para control evolutivo.
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, mala evolución de la herida o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
 ```
 
@@ -496,10 +551,9 @@ FRACTURA DEL EXTREMO DISTAL DEL RADIO LAT
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-RAFI EPH O DIAFISARIA PLACA AXSOS (STRYKER)
-- Fractura extremo proximal / diafisaria húmero {LADO_M}.
+- Fractura extremo proximal / diafisaria húmero ${LADO_M}.
 - Anestesia general e IOT.
 - Profilaxis antibiótica con 2g de cefazolina.
 - En posición de silla de playa y con control por escopia.
@@ -515,16 +569,24 @@ RAFI EPH O DIAFISARIA PLACA AXSOS (STRYKER)
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Mantener brazo en cabestrillo, moviendo mano y codo como se le ha explicado.
 - Realizar los ejercicios que su médico le ha explicado.
 - Vigilar coloración y sensibilidad de la mano y los dedos.
 - Evitar cargar peso sobre brazo intervenido hasta nuevo aviso y según plazos marcados.
 - Puede requerir ayuda domiciliaria
-- Medicación incluida en su tarjeta sanitaria:
+
+MEDICACIÓN (según tarjeta sanitaria)
 - METAMIZOL 575mg cada 8 horas vía oral, que puede alternar con PARACETAMOL 1g/8h vía oral si precisa por dolor.
 - NAPROXENO 500/ ESOMEPRAZOL 20 mg cada 12 horas vía oral añadido a lo anterior si precisa por dolor.
-- Curas locales en centro de salud cada 24-48 horas, retirando grapas en 15-17 días, salvo mejor criterio de enfermería de zona.
-- Antes de marcharse, solicitará cita para revisión en CCEE COT {DOCTOR} en 3-4 semanas, para control evolutivo y radiológico.
+
+CURAS LOCALES
+- Realizar curas locales en el centro de salud cada 24-48 horas, retirando grapas en 15-17 días, salvo mejor criterio de enfermería de zona.
+
+REVISIÓN
+- Solicitar cita para revisión en CCEE COT ${DOCTOR} en 3-4 semanas, para control evolutivo y radiológico.
+
+SÍNTOMAS DE ALERTA
 - Si aparece fiebre (>38º), dolor intenso que no se alivia con analgésicos, mala evolución de la herida o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
 ```
 
@@ -533,10 +595,9 @@ RAFI EPH O DIAFISARIA PLACA AXSOS (STRYKER)
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-RAFI EPH O DIAFISARIA PLACA AXSOS (STRYKER)
-- Fractura diafisaria desplazada y con acortamiento clavícula {LADO_F}.
+- Fractura diafisaria desplazada y con acortamiento clavícula ${LADO_F}.
 - Anestesia general e IOT.
 - Profilaxis antibiótica con 2g de cefazolina.
 - En posición de silla de playa y con control por escopia.
@@ -552,16 +613,24 @@ RAFI EPH O DIAFISARIA PLACA AXSOS (STRYKER)
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Mantener brazo en cabestrillo sobre ropa, moviendo mano y codo como se le ha explicado.
 - Realizar los ejercicios que su médico le ha explicado.
 - Vigilar coloración y sensibilidad de la mano y los dedos.
 - Evitar cargar peso sobre brazo intervenido hasta nuevo aviso y según plazos marcados.
 - Puede requerir ayuda domiciliaria
-- Medicación incluida en su tarjeta sanitaria:
+
+MEDICACIÓN (según tarjeta sanitaria)
 - METAMIZOL 575mg cada 8 horas vía oral, que puede alternar con PARACETAMOL 1g/8h vía oral si precisa por dolor.
 - NAPROXENO 500 / ESOMEPRAZOL 20 mg cada 12 horas vía oral añadido a lo anterior si precisa por dolor.
-- Curas locales en centro de salud cada 48-72 horas, retirando grapas en 15-17 días, salvo mejor criterio de enfermería de zona.
-- Antes de marcharse, solicitará cita para revisión en CCEE COT {DOCTOR} en 3-4 semanas, para control evolutivo y radiológico.
+
+CURAS LOCALES
+- Realizar curas locales en el centro de salud cada 48-72 horas, retirando grapas en 15-17 días, salvo mejor criterio de enfermería de zona.
+
+REVISIÓN
+- Solicitar cita para revisión en CCEE COT ${DOCTOR} en 3-4 semanas, para control evolutivo y radiológico.
+
+SÍNTOMAS DE ALERTA
 - Si aparece fiebre (>38º), dolor intenso que no se alivia con analgésicos, mala evolución de la herida o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
 ```
 
@@ -570,10 +639,9 @@ RAFI EPH O DIAFISARIA PLACA AXSOS (STRYKER)
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-FRACTURA OLÉCRANON O MONTEGGIA
-- Fractura luxación Monteggia codo {LADO_M}.
+- Fractura luxación Monteggia codo ${LADO_M}.
 - Anestesia regional.
 - Profilaxis antibiótica con 2g de cefazolina.
 - En decúbito supino y con control por escopia.
@@ -590,18 +658,26 @@ FRACTURA OLÉCRANON O MONTEGGIA
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Mantener el brazo en cabestrillo, retirarlo cuando esté en reposo con brazo apoyado.
 - Mover activamente los dedos de la extremidad operada, según se le ha explicado.
 - Realizar frecuentemente ejercicios de pronosupinación y flexoextensión, según se le ha explicado y tolerancia.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
 - Puede requerir ayuda domiciliaria
-- Medicación incluida en su tarjeta sanitaria:
+
+MEDICACIÓN (según tarjeta sanitaria)
 - METAMIZOL 575mg cada 8 horas vía oral durante 5 días, que puede alternar con PARACETAMOL 1g/8h vía oral si precisa por dolor.
 - OMEPRAZOL 20mg cada 24 horas durante 5 días.
-- Curas locales en centro de salud cada 48-72 horas, retirando puntos de sutura en 15-18 días, salvo mejor criterio de enfermería de zona.
+
+CURAS LOCALES
+- Realizar curas locales en el centro de salud cada 48-72 horas, retirando puntos de sutura en 15-18 días, salvo mejor criterio de enfermería de zona.
 - Una vez retirados los puntos, deberá masajear la zona de la cicatriz en círculos de forma enérgica, para evitar adherencias de la misma.
 - Evitar coger peso y hacer fuerza con el brazo intervenido hasta nuevo aviso.
-- Antes de marcharse, solicitará cita para revisión en CCEE COT {DOCTOR} en 2-3 semanas, para control evolutivo.
+
+REVISIÓN
+- Solicitar cita para revisión en CCEE COT ${DOCTOR} en 2-3 semanas, para control evolutivo.
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, mala evolución de la herida, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
 ```
 
@@ -611,17 +687,16 @@ FRACTURA OLÉCRANON O MONTEGGIA
 
 <a id="categoría-car"></a>
 
-#### Artroscopia Rodilla (16 plantillas)
+#### Artroscopia Rodilla (17 plantillas)
 
 ##### `car_mosaicoplastia` — CAR Mosaicoplastia
 
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-CIRUGIA ARTROSCÓPICA DE RODILLA:  MOSAICOPLASTIA
-- CAR {LADO_F_UPPER}:
+- CAR ${LADO_F_UPPER}:
 - ISQUEMIA EN  RAÍZ  DE  MUSLO ( 89 MINUTOS).
 - PORTALES TRADICIONALES ANTEROMEDIAL  Y  ANTEROLATERAL. 
 - PORTALES  ACCESORIOS ANTEROMEDIAL  PARA  ZONA RECEPTORA Y  PARAPATELAR   MEDIAL  PARA ZONA DONANTE.
@@ -638,6 +713,7 @@ CIRUGIA ARTROSCÓPICA DE RODILLA:  MOSAICOPLASTIA
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Aplicar hielo sobre la articulación operada 2 - 3 veces al día durante 20 minutos.
 - Mover activamente los dedos de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
@@ -647,7 +723,9 @@ CIRUGIA ARTROSCÓPICA DE RODILLA:  MOSAICOPLASTIA
 - IBUPROFENO 600 mg / 8 horas vía oral.
 - ENOXAPARINA  40 mg /24 horas vía subcutánea
 - Retirada de puntos por ATS DE ZONA en 12/15 días.
-- Revisión en CC EE  de  COT ({DOCTOR})  en  3 semanas  para ver evolución.
+- Revisión en CC EE  de  COT (${DOCTOR})  en  3 semanas  para ver evolución.
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
 ```
 
@@ -656,10 +734,9 @@ CIRUGIA ARTROSCÓPICA DE RODILLA:  MOSAICOPLASTIA
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-CIRUGIA ARTROSCÓPICA DE RODILLA:  FRACTURA  MESETA TIBIAL
-- CAR {LADO_F_UPPER}:
+- CAR ${LADO_F_UPPER}:
 - ISQUEMIA EN  RAÍZ  DE  MUSLO ( 123 MINUTOS).
 - PORTALES TRADICIONALES ANTEROMEDIAL  Y  ANTEROLATERAL.
 - ARTICULACIÓN  FEMOROPATELAR Y  FONDOS DE SACO  CUADRICIPITALES:  SIN  ALTERACIONES.
@@ -678,6 +755,7 @@ CIRUGIA ARTROSCÓPICA DE RODILLA:  FRACTURA  MESETA TIBIAL
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Aplicar hielo sobre la articulación operada 2 - 3 veces al día durante 20 minutos.
 - Mover activamente los dedos de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
@@ -688,7 +766,9 @@ CIRUGIA ARTROSCÓPICA DE RODILLA:  FRACTURA  MESETA TIBIAL
 - PARACETAMOL  1  mg   /  8 horas (alterno  con anterior cada 4  horas,  si  dolor intenso)
 - ENOXAPARINA  40 mg/24 horas - vía subcutánea
 - Retirada de puntos por ATS DE ZONA en 12/15 días.
-- Revisión en CC EE  de  COT ({DOCTOR})  en  3/4 semanas  para ver evolución.
+- Revisión en CC EE  de  COT (${DOCTOR})  en  3/4 semanas  para ver evolución.
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
 ```
 
@@ -697,10 +777,9 @@ CIRUGIA ARTROSCÓPICA DE RODILLA:  FRACTURA  MESETA TIBIAL
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-CIRUGIA ARTROSCÓPICA DE RODILLA:  CAR REINSERCIÓN DE AVULSIÓN DE LA ESPINA LCA
-- CAR {LADO_F_UPPER}:
+- CAR ${LADO_F_UPPER}:
 - ISQUEMIA EN  RAÍZ  DE  MUSLO (102 MINUTOS).
 - PORTALES TRADICIONALES ANTEROMEDIAL  Y  ANTEROLATERAL. PORTAL  MEDIAL  ACCESORIO.
 - ARTICULACIÓN  FEMOROPATELAR Y  FONDOS DE SACO  CUADRICIPITALES:  SIN  ALTERACIONES.
@@ -718,6 +797,7 @@ CIRUGIA ARTROSCÓPICA DE RODILLA:  CAR REINSERCIÓN DE AVULSIÓN DE LA ESPINA LC
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Aplicar hielo sobre la articulación operada 2 - 3 veces al día durante 20 minutos.
 - Mover activamente los dedos de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
@@ -728,7 +808,9 @@ CIRUGIA ARTROSCÓPICA DE RODILLA:  CAR REINSERCIÓN DE AVULSIÓN DE LA ESPINA LC
 - METAMIZOL 575  mg   /  8 horas (alterno  con anterior cada 4  horas,  si  dolor intenso)
 - ENOXAPARINA  40 mg/24 horas - vía subcutánea
 - Retirada de puntos por ATS DE ZONA en 12/15 días.
-- Revisión en CC EE  de  COT ({DOCTOR})  en  3 semanas  para ver evolución(Forzar si  es preciso!!!)
+- Revisión en CC EE  de  COT (${DOCTOR})  en  3 semanas  para ver evolución(Forzar si  es preciso!!!)
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
 - Postoperatorio:
 - 0-2 semanas:
@@ -754,10 +836,9 @@ CIRUGIA ARTROSCÓPICA DE RODILLA:  CAR REINSERCIÓN DE AVULSIÓN DE LA ESPINA LC
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-CIRUGIA ARTROSCÓPICA DE RODILLA:  FICAT + PLICATURA ARI (LANNY  JHONSON)
-- CAR {LADO_F_UPPER}:
+- CAR ${LADO_F_UPPER}:
 - ISQUEMIA EN  RAÍZ  DE  MUSLO (  55 MINUTOS).
 - PORTALES TRADICIONALES ANTEROMEDIAL  Y  ANTEROLATERAL.
 -  NO  SE APRECIA LESIONES  MENISCALES  NI LIGAMENTOSAS.  
@@ -774,6 +855,7 @@ CIRUGIA ARTROSCÓPICA DE RODILLA:  FICAT + PLICATURA ARI (LANNY  JHONSON)
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Mantener el pie elevado siempre que esté sentado.
 - Aplicar hielo sobre la rodilla operada 2-3 veces al día durante 20 minutos.
 - Mover activamente los dedos de la extremidad operada.
@@ -785,8 +867,10 @@ CIRUGIA ARTROSCÓPICA DE RODILLA:  FICAT + PLICATURA ARI (LANNY  JHONSON)
 - Si  dolor  intenso  alternar cada  4  horas con  IBUPROFENO  600 mg/ 8  horas
 - OMEPRAZOL 20 mg/ 24 horas.
 - BEMIPARINA  3500 UI / 24 horas vía subcutánea / 3 semanas.
-- Revisión en CC EE de COT ({DOCTOR}) en  2/3 semanas para retirar férula y seguimiento.
+- Revisión en CC EE de COT (${DOCTOR}) en  2/3 semanas para retirar férula y seguimiento.
 - Al  alta  solicitar cita en  SERVICIO  DE  REHABILITACIÓN  para inicio  de fisioterapia tras retirada de   férula  de yeso
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias. Mover activamente los dedos de la extremidad operada.
 ```
 
@@ -795,10 +879,9 @@ CIRUGIA ARTROSCÓPICA DE RODILLA:  FICAT + PLICATURA ARI (LANNY  JHONSON)
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-CAR POR SHER: PLICATURA DEL  ARI +/- FICAT
-- CAR {LADO_F_UPPER}:
+- CAR ${LADO_F_UPPER}:
 - ISQUEMIA EN  RAÍZ  DE  MUSLO ( 114 MINUTOS).
 - PORTALES TRADICIONALES ANTEROMEDIAL  Y  ANTEROLATERAL.
 - PORTAL  SUPEROEXTERNO ACCESORIO.
@@ -818,6 +901,7 @@ CAR POR SHER: PLICATURA DEL  ARI +/- FICAT
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Mantener el pie elevado siempre que esté sentado.
 - Aplicar hielo sobre la rodilla operada 2-3 veces al día durante 20 minutos.
 - Mover activamente los dedos de la extremidad operada.
@@ -837,8 +921,10 @@ CAR POR SHER: PLICATURA DEL  ARI +/- FICAT
 - Si  dolor  intenso  alternar cada  4  horas con  IBUPROFENO  600 mg/ 8  horas.
 - OMEPRAZOL 20 mg/ 24 horas.
 - BEMIPARINA  3500 UI / 24 horas vía subcutánea / 3 semanas.
-- Revisión en CC EE de COT ({DOCTOR}) en  2/3 semanas para seguimiento.
+- Revisión en CC EE de COT (${DOCTOR}) en  2/3 semanas para seguimiento.
 - Al  alta  solicitar cita en  SERVICIO  DE  REHABILITACIÓN  para inicio  de fisioterapia tras retirada de   férula  de yeso
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias. Mover activamente los dedos de la extremidad operada.
 ```
 
@@ -847,11 +933,10 @@ CAR POR SHER: PLICATURA DEL  ARI +/- FICAT
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-CAR  +  OSTEOTOMIA VALGUIZANTE DE TIBIA DE ADICCIÓN
-- CAR {LADO_F_UPPER} + OSTEOTOMIA DE ADICCIÓN VALGUIZANTE DE TIBIA {LADO_F_UPPER}:
-- ISQUEMIA EN  MUSLO  {LADO_ABR_M}  (16 MIN DE CAR   Y  118  MIN  DE   OTV)
+- CAR ${LADO_F_UPPER} + OSTEOTOMIA DE ADICCIÓN VALGUIZANTE DE TIBIA ${LADO_F_UPPER}:
+- ISQUEMIA EN  MUSLO  ${LADO_ABR_M}  (16 MIN DE CAR   Y  118  MIN  DE   OTV)
 - PORTALES TRADICIONALES ANTEROMEDIAL  Y  ANTEROLATERAL.
 - ARTICULACIÓN  FEMOROPATELAR Y  FONDOS DE SACO  CUADRICIPITALES:  CONDROPATIA DE LA TROCLEA FEMORAL  GRADO 4.
 - COMPARTIMENTO  INTERNO: ROTURA DEGANERATIVA DEL  CUERPO   Y CUERNO  POSTERIOR DEL  MENISCO  INTERNO QUE SE RESECA  Y  REGULARIZA  CON  PINZAS  Y  MOTOR. CONDROPATIA  GRADO 4 DE  TODA ZONA CARGA DE  CONDILO  FEMORAL  INT  Y  MESETA TIBIAL  INT
@@ -871,6 +956,7 @@ CAR  +  OSTEOTOMIA VALGUIZANTE DE TIBIA DE ADICCIÓN
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Aplicar hielo sobre la articulación operada 2 - 3 veces al día durante 20 minutos.
 - Mover activamente los dedos,  tobillo y  rodilla  de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
@@ -882,7 +968,9 @@ CAR  +  OSTEOTOMIA VALGUIZANTE DE TIBIA DE ADICCIÓN
 - OMEPRAZOL  20 mg/ 24  horas
 - BEMIPARINA 3500 UI /24 horas vía subcutánea
 - Curas por  ATS DE  ZONA con  Betadine  cada  48/72 horas.
-- Revisión en CC EE  de  COT ({DOCTOR})  en  3 semanas  para ver evolución.
+- Revisión en CC EE  de  COT (${DOCTOR})  en  3 semanas  para ver evolución.
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
 ```
 
@@ -891,11 +979,10 @@ CAR  +  OSTEOTOMIA VALGUIZANTE DE TIBIA DE ADICCIÓN
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-CAR  +  OSTEOTOMIA VALGUIZANTE DE TIBIA
-- CAR {LADO_F_UPPER} + OSTEOTOMIA DE SUSTRACCION  VALGUIZANTE DE TIBIA {LADO_F_UPPER} TIPO  COVENTRY:
-- ISQUEMIA EN  MUSLO  {LADO_ABR_M}  (126 MIN)
+- CAR ${LADO_F_UPPER} + OSTEOTOMIA DE SUSTRACCION  VALGUIZANTE DE TIBIA ${LADO_F_UPPER} TIPO  COVENTRY:
+- ISQUEMIA EN  MUSLO  ${LADO_ABR_M}  (126 MIN)
 - PORTALES TRADICIONALES ANTEROMEDIAL  Y  ANTEROLATERAL.
 - ARTICULACIÓN  FEMOROPATELAR Y  FONDOS DE SACO  CUADRICIPITALES:  CONDROPATIA  TROCLE A FEMORAL  GRADO 4.
 - COMPARTIMENTO  INTERNO: ROTURA DEGANERATIVA DEL  CUERPO   Y CUERNO  POSTERIOR DEL  MENISCO  INTERNO QUE SE RESECA  Y  REGULARIZA  CON  PINZAS  Y  MOTOR. CONDROPATIA  GRADO  III  DE  TODA ZONA CARGA DE  CONDILO  FEMORAL  INT  Y  MESETA TIBIAL  INT
@@ -919,6 +1006,7 @@ CAR  +  OSTEOTOMIA VALGUIZANTE DE TIBIA
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Aplicar hielo sobre la articulación operada 2 - 3 veces al día durante 20 minutos.
 - Mover activamente los dedos,  tobillo y  rodilla  de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
@@ -930,7 +1018,9 @@ CAR  +  OSTEOTOMIA VALGUIZANTE DE TIBIA
 - OMEPRAZOL  20 mg/ 24  horas
 - ENOXAPARINA 60 mg /24 horas vía subcutánea
 - Curas por  ATS DE  ZONA con  Betadine  cada  48/72 horas.
-- Revisión en CC EE  de  COT ({DOCTOR})  en  3 semanas  para ver evolución.
+- Revisión en CC EE  de  COT (${DOCTOR})  en  3 semanas  para ver evolución.
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
 ```
 
@@ -939,10 +1029,9 @@ CAR  +  OSTEOTOMIA VALGUIZANTE DE TIBIA
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-CAR  +  OSTEOTOMIA VARIZANTE DE   FÉMUR
-- CAR {LADO_F_UPPER} + OSTEOTOMIA SUPRACONDILEA DE SUSTRACCION  VALRIZANTE DE FEMUR {LADO_ABR_M}:
+- CAR ${LADO_F_UPPER} + OSTEOTOMIA SUPRACONDILEA DE SUSTRACCION  VALRIZANTE DE FEMUR ${LADO_ABR_M}:
 - NO  SE   REALIZA  ISQUEMIA.
 - PORTALES TRADICIONALES ANTEROMEDIAL  Y  ANTEROLATERAL.
 - ARTICULACIÓN  FEMOROPATELAR Y  FONDOS DE SACO  CUADRICIPITALES:  CONDROPATIA  GRADO  3 CON  RESECCIÓN  PROTUBERANCIA  DE PARTES   BLANDAS A  NIVEL TROCLEA FEMORAL.
@@ -951,9 +1040,9 @@ CAR  +  OSTEOTOMIA VARIZANTE DE   FÉMUR
 -  COMPARTIMENTO EXTERNO: ROTURA DEGENERATIVA DEL  CUERPO   Y CUERNO ANTERIOR  DEL  MENISCO EXT QUE SE RESECA  Y  REGULARIZA  CON  PINZAS  Y  MOTOR. CONDROPATIA  GRADO 2/3 DE  CONDILO  FEMORAL EXT.
 - LAVADO  ARTICULAR ABUNDANTE.
 - CIERRE PORTALES CON  GRAPAS.
-- INCISIÓN  ANTEROMEDIAL  DE TERCIO  DISTAL  DE  FEMUR  {LADO_ABR_M}  Y  ABORDAJE   SUBVASTO INT.
+- INCISIÓN  ANTEROMEDIAL  DE TERCIO  DISTAL  DE  FEMUR  ${LADO_ABR_M}  Y  ABORDAJE   SUBVASTO INT.
 - OSTEOTOMIA SUPRACONDILE  OBLICUA  BIPLANAR DE SUSTRACCIÓN  DE BASE INTERNA  DE  12º.
-- CIERRE DE LA CUÑA  MEDIANTE  OSTEOCLASIA  LATERAL  PROGRESIVA  Y  OSTEOSINTESIS  CON  PLACA TOMOFIX DE FEMUR DISTAL  MEDIAL  {LADO_ABR_M} CON  4   TORNILLOS EPIFISARIOS DISTALES  Y  4  TORNILLOS PROXIMALES TODOS CON  BLOQUEO  EN PLACA. 
+- CIERRE DE LA CUÑA  MEDIANTE  OSTEOCLASIA  LATERAL  PROGRESIVA  Y  OSTEOSINTESIS  CON  PLACA TOMOFIX DE FEMUR DISTAL  MEDIAL  ${LADO_ABR_M} CON  4   TORNILLOS EPIFISARIOS DISTALES  Y  4  TORNILLOS PROXIMALES TODOS CON  BLOQUEO  EN PLACA. 
 -  SE COMPRUEBA CON ESCOPIA  CIERRE  OSTEOTOMIA Y  LONGITUD Y SITUACIÓN  DE   LOS TORNILLOS.
 - LAVADO  HERIDA   QUIRURGICO  ABUNDANTE.
 - SUTURA DE  LA FASCIA DEL  VASTO INT.
@@ -966,6 +1055,7 @@ CAR  +  OSTEOTOMIA VARIZANTE DE   FÉMUR
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Aplicar hielo sobre la articulación operada 2 - 3 veces al día durante 20 minutos.
 - Mover activamente los dedos,  tobillo y  rodilla  de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
@@ -977,7 +1067,9 @@ CAR  +  OSTEOTOMIA VARIZANTE DE   FÉMUR
 - OMEPRAZOL  20 mg/ 24  horas
 - ENOXAPARINA 60 mg /24 horas vía subcutánea
 - Curas por  ATS DE  ZONA con  Betadine  cada  48/72 horas.
-- Revisión en CC EE  de  COT ({DOCTOR})  en  3 semanas  para ver evolución.
+- Revisión en CC EE  de  COT (${DOCTOR})  en  3 semanas  para ver evolución.
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
 ```
 
@@ -986,11 +1078,10 @@ CAR  +  OSTEOTOMIA VARIZANTE DE   FÉMUR
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-OSTEOTOMIA VALGUIZANTE DE TIBIA DE ADICCIÓN
-- OSTEOTOMIA DE ADICCIÓN VALGUIZANTE DE TIBIA {LADO_F_UPPER}:
-- ISQUEMIA EN  MUSLO  {LADO_ABR_M}  (102  MIN).
+- OSTEOTOMIA DE ADICCIÓN VALGUIZANTE DE TIBIA ${LADO_F_UPPER}:
+- ISQUEMIA EN  MUSLO  ${LADO_ABR_M}  (102  MIN).
 - INCISIÓN  OBLICUA  EN  TERCIO  PROXIMAL  Y  MEDIAL  DE TIBIA   SIGUIENDO  DIRECCION  DE LOS TENDONES ISQUIOTIALES EN SU  BORDE   ANTERIOR.  
 - DESINSERCION  PARCIAL  DE  LA INSERCIÓN  DISTAL  DEL  FASCICULO  SUPERFICIAL  DEL  LLI. 
 - OSTEOTOMIA BIPLANAR DE TIBIA  RESPETANDO LA TTA  CON  SIERRA Y  COMPLETADA CON ESCOPLO .
@@ -1005,6 +1096,7 @@ OSTEOTOMIA VALGUIZANTE DE TIBIA DE ADICCIÓN
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Aplicar hielo sobre la articulación operada 2 - 3 veces al día durante 20 minutos.
 - Mover activamente los dedos,  tobillo y  rodilla  de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
@@ -1016,7 +1108,9 @@ OSTEOTOMIA VALGUIZANTE DE TIBIA DE ADICCIÓN
 - OMEPRAZOL  20 mg/ 24  horas
 - CLEXANE 40 mg /24 horas vía subcutánea hasta deambulación  normal con carga completa.
 - Curas por  ATS DE  ZONA cada  48/72 horas.
-- Revisión en CC EE  de  COT ({DOCTOR})  en  3 semanas  para ver evolución.
+- Revisión en CC EE  de  COT (${DOCTOR})  en  3 semanas  para ver evolución.
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
 ```
 
@@ -1025,10 +1119,9 @@ OSTEOTOMIA VALGUIZANTE DE TIBIA DE ADICCIÓN
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-CIRUGIA ARTROSCÓPICA DE RODILLA:  MENISCECTOMIA PARCIAL
-- CAR {LADO_F_UPPER}:
+- CAR ${LADO_F_UPPER}:
 - ISQUEMIA EN  RAÍZ  DE  MUSLO ( 40 MINUTOS).
 - PORTALES TRADICIONALES ANTEROMEDIAL  Y  ANTEROLATERAL.
 - ARTICULACIÓN  FEMOROPATELAR Y  FONDOS DE SACO  CUADRICIPITALES:  SIN  ALTERACIONES.
@@ -1046,6 +1139,7 @@ CIRUGIA ARTROSCÓPICA DE RODILLA:  MENISCECTOMIA PARCIAL
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Aplicar hielo sobre la articulación operada 3 - 4 veces al día durante 20 minutos.
 - Mover activamente los dedos de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
@@ -1057,7 +1151,11 @@ CIRUGIA ARTROSCÓPICA DE RODILLA:  MENISCECTOMIA PARCIAL
 - -PARACETAMOL 1 g/8h oral alterno con combinación de Dexketoprofeno 25 mg y Tramadol 75 mg (Enanplus) cada 8 horas oral durante 3 días.
 - Mientras dure el tratamiento con AINE: Omeprazol 20 mg/24h oral
 - -ANALGESIA DE RESCATE: Metamizol 575 mg/8h oral.
-- Antes de irse de alta  del  hospital  solicitar  en  Admisión  de  Consultas  revisión en CC EE  de  COT ({DOCTOR})  en   unas  3/4 semanas  para ver evolución.
+
+REVISIÓN
+- Antes de irse de alta  del  hospital  solicitar  en  Admisión  de  Consultas  revisión en CC EE  de  COT (${DOCTOR})  en   unas  3/4 semanas  para ver evolución.
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
 - Objetivo: recuperar movilidad, fuerza y reincorporarse progresivamente a las actividades habituales sin dolor ni inflamación.
 - Indicaciones generales:
@@ -1088,10 +1186,9 @@ CIRUGIA ARTROSCÓPICA DE RODILLA:  MENISCECTOMIA PARCIAL
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-CIRUGIA ARTROSCÓPICA DE RODILLA:  SUTURA  MENISCAL
-- CAR {LADO_F_UPPER}:
+- CAR ${LADO_F_UPPER}:
 - ISQUEMIA EN  RAÍZ  DE  MUSLO ( 64 MINUTOS).
 - PORTALES TRADICIONALES ANTEROMEDIAL  Y  ANTEROLATERAL.
 - ARTICULACIÓN  FEMOROPATELAR Y  FONDOS DE SACO  CUADRICIPITALES:  SIN  ALTERACIONES.
@@ -1107,6 +1204,7 @@ CIRUGIA ARTROSCÓPICA DE RODILLA:  SUTURA  MENISCAL
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Mover activamente los dedos de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
 - Aplicar  hielo  sobre  vendaje  4 veces al  día  durante 30 minutos.
@@ -1129,7 +1227,11 @@ CIRUGIA ARTROSCÓPICA DE RODILLA:  SUTURA  MENISCAL
 - Mientras dure el tratamiento con AINE: Omeprazol 20 mg/24h oral
 - Si náuseas: Ondansetrón 4 mg/8h oral
 - -ANALGESIA DE RESCATE: Metamizol 575 mg/8h oral.
-- Revisión en CCEE de COT ({DOCTOR}) a  las  2 semanas  para ver evolución y ampliar  rango  de movilidad.
+
+REVISIÓN
+- Revisión en CCEE de COT (${DOCTOR}) a  las  2 semanas  para ver evolución y ampliar  rango  de movilidad.
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
 ```
 
@@ -1138,10 +1240,9 @@ CIRUGIA ARTROSCÓPICA DE RODILLA:  SUTURA  MENISCAL
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-CIRUGIA ARTROSCÓPICA DE RODILLA:  ARTROLISIS Y  MOVILIZACIÓN BAJO  ANESTESIA
-- CAR {LADO_F_UPPER} EN PACIENTE CON RIGUIDEZ  POSTOPERATORIA TRAS  ARTROPLASTIA RODILLA:
+- CAR ${LADO_F_UPPER} EN PACIENTE CON RIGUIDEZ  POSTOPERATORIA TRAS  ARTROPLASTIA RODILLA:
 - ISQUEMIA EN RAÍZ DE MUSLO ( 41 MINUTOS). 
 - PORTALES TRADICIONALES ANTEROMEDIAL Y ANTEROLATERAL. 
 - SE APRECIA MÚLTIPLES ADHERENCIAS Y  FIBROSIS A  NIVEL  DE FONDOS  DE SACO  SUBCUADRICIPITALES Y  DEL  HOFFA QUE SE RESECA  CON   SINOVIOTOMO. 
@@ -1157,6 +1258,7 @@ CIRUGIA ARTROSCÓPICA DE RODILLA:  ARTROLISIS Y  MOVILIZACIÓN BAJO  ANESTESIA
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Aplicar hielo sobre la articulación operada 3 - 4 veces al día durante 20 minutos.
 - Mover activamente los dedos de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
@@ -1165,8 +1267,12 @@ CIRUGIA ARTROSCÓPICA DE RODILLA:  ARTROLISIS Y  MOVILIZACIÓN BAJO  ANESTESIA
 - Puede requerir ayuda domiciliaria
 - ENANPLUS 1   comp/ 8  h
 - INHIXA 40 / 24 horas vía subcutánea durante  10  días
-- Revisión en CCEE de COT ({DOCTOR}) en 3/4 semanas  para seguir  evolución.
+
+REVISIÓN
+- Revisión en CCEE de COT (${DOCTOR}) en 3/4 semanas  para seguir  evolución.
 - Continuar  con sesiones de Rehabilitación  para tratar de   mantener  la  movilidad (SOLICITAR CITA  ANTES DEL  ALTA)
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
 ```
 
@@ -1175,10 +1281,9 @@ CIRUGIA ARTROSCÓPICA DE RODILLA:  ARTROLISIS Y  MOVILIZACIÓN BAJO  ANESTESIA
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-CIRUGIA ARTROSCÓPICA DE RODILLA:  DIAGNÓSTICA
-- CAR {LADO_F_UPPER}:
+- CAR ${LADO_F_UPPER}:
 - ISQUEMIA EN  RAÍZ  DE  MUSLO ( 40 MINUTOS).
 - PORTALES TRADICIONALES ANTEROMEDIAL  Y  ANTEROLATERAL.
 - ARTICULACIÓN  FEMOROPATELAR Y  FONDOS DE SACO  CUADRICIPITALES:  SIN  ALTERACIONES.
@@ -1194,6 +1299,7 @@ CIRUGIA ARTROSCÓPICA DE RODILLA:  DIAGNÓSTICA
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Aplicar hielo sobre la articulación operada 2 - 3 veces al día durante 20 minutos.
 - Mover activamente los dedos de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
@@ -1203,21 +1309,19 @@ CIRUGIA ARTROSCÓPICA DE RODILLA:  DIAGNÓSTICA
 - METAMIZOL  575 mg /8 horas vía oral.
 - BEMIPARINA  3500 UI /24 horas vía subcutánea  durante 10 días.
 - Retirada de puntos por ATS DE ZONA en 12/15 días.
-- Revisión en CC EE  de  COT ({DOCTOR})  en unas  4-5   semanas  para ver evolución.
+- Revisión en CC EE  de  COT (${DOCTOR})  en unas  4-5   semanas  para ver evolución.
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
 ```
 
----
-
-##### `car_cuerpo_libre` — CAR Extracción cuerpo libre
+##### `car_cuerpo_libre` — CAR Extraccion cuerpo libre (no registrada en UI)
 
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-CIRUGIA ARTROSCÓPICA DE RODILLA: EXTRACCIÓN CUERPO LIBRE
-CAR {LADO_F_UPPER}:
 - ISQUEMIA EN RAÍZ DE MUSLO ( 35 MINUTOS).
 - PORTALES TRADICIONALES ANTEROMEDIAL Y ANTEROLATERAL.
 - ARTICULACIÓN FEMOROPATELAR Y FONDOS DE SACO CUADRICIPITALES: SIN ALTERACIONES.
@@ -1234,6 +1338,7 @@ CAR {LADO_F_UPPER}:
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Aplicar hielo sobre la articulación operada 2 - 3 veces al día durante 20 minutos.
 - Mover activamente los dedos de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
@@ -1243,21 +1348,20 @@ CAR {LADO_F_UPPER}:
 - METAMIZOL 575 mg /8 horas vía oral.
 - BEMIPARINA 3500 UI /24 horas vía subcutánea durante 10 días.
 - Retirada de puntos por ATS DE ZONA en 12/15 días.
-- Revisión en CC EE de COT ({DOCTOR}) en unas 4-5 semanas para ver evolución.
+- Revisión en CC EE de COT (${DOCTOR}) en unas 4-5 semanas para ver evolución.
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
 ```
-
----
 
 ##### `car_ficat` — CAR Ficat
 
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-CIRUGIA ARTROSCÓPICA DE RODILLA:  FICAT
-- CAR {LADO_F_UPPER}:
+- CAR ${LADO_F_UPPER}:
 - ISQUEMIA EN  RAÍZ  DE  MUSLO (  53 MINUTOS).
 - PORTALES TRADICIONALES ANTEROMEDIAL  Y  ANTEROLATERAL.
 - ARTICULACIÓN  FEMOROPATELAR Y  FONDOS DE SACO  CUADRICIPITALES:  SINDROME  DE  HIPERPRESIÓN  ROTULIANA EXTERNA SIN  CONDROPATIA. SE REALIZA  SECCIÓN  ALERÓN  ROTULIANO  EXTERNO ARTROSCÓPICO (FICAT) CON  VAPORIZADOR
@@ -1274,6 +1378,7 @@ CIRUGIA ARTROSCÓPICA DE RODILLA:  FICAT
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Aplicar hielo sobre la articulación operada 2 - 3 veces al día durante 20 minutos.
 - Mover activamente los dedos de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
@@ -1283,7 +1388,9 @@ CIRUGIA ARTROSCÓPICA DE RODILLA:  FICAT
 - IBUPROFENO 600 mg / 8 horas vía oral.
 - ENOXAPARINA 40 mg /24 horas vía subcutánea  durante 15 días.
 - Retirada de puntos por ATS DE ZONA en 12/15 días.
-- Revisión en CC EE  de  COT ({DOCTOR})  en  3 semanas  para ver evolución.
+- Revisión en CC EE  de  COT (${DOCTOR})  en  3 semanas  para ver evolución.
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
 ```
 
@@ -1292,10 +1399,9 @@ CIRUGIA ARTROSCÓPICA DE RODILLA:  FICAT
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-CIRUGIA ARTROSCÓPICA DE RODILLA:  TOILETTE
-- CAR {LADO_F_UPPER}:
+- CAR ${LADO_F_UPPER}:
 - ISQUEMIA EN  RAÍZ  DE  MUSLO ( 45 MINUTOS).
 - PORTALES TRADICIONALES ANTEROMEDIAL  Y  ANTEROLATERAL.
 - ARTICULACIÓN  FEMOROPATELAR Y  FONDOS DE SACO  CUADRICIPITALES:  CONDROPATIA   FP  GRADO  4. 
@@ -1312,6 +1418,7 @@ CIRUGIA ARTROSCÓPICA DE RODILLA:  TOILETTE
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Aplicar hielo sobre la articulación operada 3 - 4 veces al día durante 20 minutos.
 - Mover activamente los dedos de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
@@ -1320,7 +1427,11 @@ CIRUGIA ARTROSCÓPICA DE RODILLA:  TOILETTE
 - Puede requerir ayuda domiciliaria
 - ENANPLUS  75 mg/25 mg  / 8 horas vía oral durante  una semana.
 - ENOXAPARINA 40 mg /24 horas vía subcutánea  durante 10 días.
-- Antes de irse de alta  del  hospital  solicitar  en  Admisión  de  Consultas  revisión en CC EE  de  COT ({DOCTOR})  en   unas  3/4 semanas  para ver evolución.
+
+REVISIÓN
+- Antes de irse de alta  del  hospital  solicitar  en  Admisión  de  Consultas  revisión en CC EE  de  COT (${DOCTOR})  en   unas  3/4 semanas  para ver evolución.
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
 ```
 
@@ -1329,10 +1440,9 @@ CIRUGIA ARTROSCÓPICA DE RODILLA:  TOILETTE
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-CIRUGIA ARTROSCÓPICA DE RODILLA:  SINOVECTOMIA TOTAL
-- CAR {LADO_F_UPPER} EN PACIENTE CON DERRAME DE REPETICIÓN POR SOSPECHA  DE SINOVITIS VILLONODULAR  PIGMENTADA:
+- CAR ${LADO_F_UPPER} EN PACIENTE CON DERRAME DE REPETICIÓN POR SOSPECHA  DE SINOVITIS VILLONODULAR  PIGMENTADA:
 - ISQUEMIA EN RAÍZ DE MUSLO ( 91 MINUTOS). 
 - PORTALES TRADICIONALES ANTEROMEDIAL Y ANTEROLATERAL. 
 - PORTAL ACCESORIO SUPEROLATERAL Y  SUPEROMEDIAL.
@@ -1350,6 +1460,7 @@ CIRUGIA ARTROSCÓPICA DE RODILLA:  SINOVECTOMIA TOTAL
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Aplicar hielo sobre la articulación operada 3 - 4 veces al día durante 20 minutos.
 - Mover activamente los dedos de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
@@ -1359,7 +1470,11 @@ CIRUGIA ARTROSCÓPICA DE RODILLA:  SINOVECTOMIA TOTAL
 - IBUPROFENO  600 mg / 8 horas vía oral.
 - Alternar cada 4  horas con METAMIZOL 575 mg/8  horas si  dolor intenso
 - ENOXAPARINA  40 mg  / 24 horas vía subcutánea.
-- Revisión en CCEE de COT ({DOCTOR}) en 3 semanas  para seguir  evolución.
+
+REVISIÓN
+- Revisión en CCEE de COT (${DOCTOR}) en 3 semanas  para seguir  evolución.
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
 ```
 
@@ -1372,10 +1487,9 @@ CIRUGIA ARTROSCÓPICA DE RODILLA:  SINOVECTOMIA TOTAL
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-PTR TRIATHLON (STRYKER) RODILLA {LADO_F}
-- Gonartrosis rodilla {LADO_F}.
+- Gonartrosis rodilla ${LADO_F}.
 - Profilaxis antibiótica con 2g de Cefazolina.
 - La intervención se realiza sin isquemia.
 - Abordaje longitudinal anterior y artrotomía pararrotuliana medial.
@@ -1392,6 +1506,7 @@ PTR TRIATHLON (STRYKER) RODILLA {LADO_F}
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Aplicar hielo sobre la rodilla 3-4 veces al día durante  10-15 minutos.
 - Mover activamente los dedos de la extremidad operada.
 - Puede requerir ayuda domiciliaria
@@ -1414,7 +1529,7 @@ PTR TRIATHLON (STRYKER) RODILLA {LADO_F}
 - Dolor torácico repentino
 - Dolor localizado en el pecho al toser
 - Informa a tu médico de inmediato si presentas alguno de estos síntomas.
-- Con este informe solicitará cita en consultas del {DOCTOR} en 4 semanas. La primera revisión se realizará sin Rx control salvo petición por su Doctor.
+- Con este informe solicitará cita en consultas del ${DOCTOR} en 4 semanas. La primera revisión se realizará sin Rx control salvo petición por su Doctor.
 - EJERCICIOS POSTOPERATORIOS
 - Encamado (primeros días tras intervención)
 - Mover el tobillo
@@ -1491,10 +1606,9 @@ PTR TRIATHLON (STRYKER) RODILLA {LADO_F}
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-PUC PKR   DE STRYKER
-- GENU  VARO  ARTROSICO   RODILLA {LADO_F_UPPER}:
+- GENU  VARO  ARTROSICO   RODILLA ${LADO_F_UPPER}:
 - PROFILAXIS  ANTIBIÓTICA CON  2 GR DE  CEFAZOLINA.
 - ISQUEMIA EN  RAÍZ  DE  MUSLO (71 MINUTOS).
 - INCISIÓN LONGITUDINAL ANTERIOR DE RODILLA Y ARTROTOMIA PARARROTULIANA MEDIAL CON PROLONGACIÓN  SUBVASTO INT.
@@ -1514,6 +1628,7 @@ PUC PKR   DE STRYKER
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Mantener el pie elevado siempre que esté sentado.
 - Aplicar hielo sobre la rodilla operada 2-3 veces al día durante 20 minutos.
 - Mover activamente los dedos de la extremidad operada.
@@ -1522,13 +1637,18 @@ PUC PKR   DE STRYKER
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
 - Puede  caminar con ayuda de un andador.
 - Puede requerir ayuda domiciliaria
-- Medicación añadida en su tarjeta:
+
+MEDICACIÓN (según tarjeta sanitaria)
 - NAPROXENO 550 mg / 8 horas vía oral.
 - PARACETAMOL 1 gr/  8  horas, alterno  con anterior cada   4   horas si  dolor  intenso.
 - OMEPRAZOL 20 mg/ 24  horas.
 - ENOXAPARINA 40 mg  / 24 horas vía oral / 4 semanas
 - HIERRO (II), SULFATO 256, 30 en ayunas cada día durante un mes.
-- Antes de irse de alta el paciente deberá solicitar revisión en Admisión del  Hospital  para  CCEE Revisión Hospitalaria de COT ({DOCTOR}) en 4 semanas.
+
+REVISIÓN
+- Solicitar revisión en Admisión del  Hospital  para  CCEE Revisión Hospitalaria de COT (${DOCTOR}) en 4 semanas.
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
 ```
 
@@ -1537,10 +1657,9 @@ PUC PKR   DE STRYKER
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-RESCATE PRÓTESIS  UNICOMPARTIMENTAL
-- RESCATE PUC {LADO_F_UPPER} POR  PROTESIS  DOLOROSA:
+- RESCATE PUC ${LADO_F_UPPER} POR  PROTESIS  DOLOROSA:
 - PROFILAXIS  ANTIBIÓTICA CON  2 GR DE  CEFAZOLINA.
 - ISQUEMIA EN  RAÍZ  DE  MUSLO (65 MINUTOS).
 - INCISIÓN LONGITUDINAL ANTERIOR DE RODILLA  SOBRE CICATRIZ ANTERIOR Y ARTROTOMIA PARARROTULIANA MEDIAL.
@@ -1561,6 +1680,7 @@ RESCATE PRÓTESIS  UNICOMPARTIMENTAL
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Mantener el pie elevado siempre que esté sentada.
 - Aplicar hielo sobre la rodilla operada 2-3 veces al día durante 20 minutos.
 - Mover activamente los dedos de la extremidad operada.
@@ -1573,24 +1693,24 @@ RESCATE PRÓTESIS  UNICOMPARTIMENTAL
 - OMEPRAZOL 20 mg/ 24  horas.
 - ENOXAPARINA 40 mg  / 24 horas vía oral / 4 semanas
 - HIERRO PROTEINSUCCINILATO 40 mg sol  oral  en ayunas cada día durante un mes.
-- Revisión  en  CC EE de COT ({DOCTOR} ) en 4 semanas  para valoración y  seguimiento.
+- Revisión  en  CC EE de COT (${DOCTOR} ) en 4 semanas  para valoración y  seguimiento.
 - Solicitar cita en  CCEE  del  Servicio  de  Rehabilitación  para inicio fisioterapia
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias. Mover activamente los dedos de la extremidad operada.
 ```
 
 <a id="categoría-lca"></a>
 
-#### LCA (10 plantillas)
+#### LCA (11 plantillas)
 
 ##### `lca_procinch` — LCA ProCinch anatómico ST-RI
 
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-LIGAMENTOPLASTIA LCA ANATÓMICO PROCINCH
-LIGAMENTOPLASTIA LCA  ANATÓMICO 4 ST-RI AUTOLOGO POR  INESTABILIDAD ANTERIOR DE LA RODILLA {LADO_F_UPPER}:
 - PROFILAXIS ANTIBIÓTICA CON  2  GR  DE CEFAZOLINA.
 - ISQUEMIA EN RAÍZ DE MUSLO (55 MINUTOS).
 - SE REALIZA EXPLORACIÓN  BAJO  ANESTESIA PREVIA QUE  CONFIRMA  LA LESIÓN  DE  LCA.
@@ -1607,6 +1727,7 @@ LIGAMENTOPLASTIA LCA  ANATÓMICO 4 ST-RI AUTOLOGO POR  INESTABILIDAD ANTERIOR DE
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Recomendaciones:
 - Mover activamente los dedos de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
@@ -1616,12 +1737,17 @@ LIGAMENTOPLASTIA LCA  ANATÓMICO 4 ST-RI AUTOLOGO POR  INESTABILIDAD ANTERIOR DE
 - Movilizaciones pasivas de  rótula 4/5 veces al  día  durante  15 minutos.
 - Puede  bajarse en  su  móvil/Tablet/PC  la aplicación gratuita “LCA” donde podrá encontrar  información  acerca de esta patología  y  procedimiento  quirúrgico  realizado,  así  como  recomendaciones  y  ejercicios  que  puede realizar.
 - Puede requerir ayuda domiciliaria
-- Medicación:
+
+MEDICACIÓN (según tarjeta sanitaria)
 - ENANPLUS  75 mg/25 mg  / 8 horas vía oral.
 - INHIXA 40 mg /24 horas vía subcutánea  durante 3 semanas.
+
+REVISIÓN
 - Antes de irse de alta  del  hospital:
-- Solicitar  cita en  Admisión  de  Consultas Externas para revisión en CC EE  de  COT ({DOCTOR})  en  2/3   semanas  para ver evolución.
+- Solicitar  cita en  Admisión  de  Consultas Externas para revisión en CC EE  de  COT (${DOCTOR})  en  2/3   semanas  para ver evolución.
 - Solicitar  cita en  Servicio de  Rehabilitación  para  seguimiento  postoperatorio.
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
 ```
 
@@ -1630,9 +1756,8 @@ LIGAMENTOPLASTIA LCA  ANATÓMICO 4 ST-RI AUTOLOGO POR  INESTABILIDAD ANTERIOR DE
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-LIGAMENTOPLASTIA LCA ANATÓMICO ALL-INSIDE
 - Rotura crónica LCA RD.
 - Anestesia raquídea.
 - Profilaxis con 2 gr cefazolina.
@@ -1655,6 +1780,7 @@ LIGAMENTOPLASTIA LCA ANATÓMICO ALL-INSIDE
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Recomendaciones:
 - Mover activamente los dedos de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
@@ -1664,12 +1790,17 @@ LIGAMENTOPLASTIA LCA ANATÓMICO ALL-INSIDE
 - Movilizaciones pasivas de  rótula 4/5 veces al  día  durante  15 minutos.
 - Puede  bajarse en  su  móvil/Tablet/PC  la aplicación gratuita “LCA” donde podrá encontrar  información  acerca de esta patología  y  procedimiento  quirúrgico  realizado,  así  como  recomendaciones  y  ejercicios  que  puede realizar.
 - Puede requerir ayuda domiciliaria
-- Medicación:
+
+MEDICACIÓN (según tarjeta sanitaria)
 - ENANPLUS  75 mg/25 mg  / 8 horas vía oral.
 - INHIXA 40 mg /24 horas vía subcutánea  durante 3 semanas.
+
+REVISIÓN
 - Antes de irse de alta  del  hospital:
-- Solicitar  cita en  Admisión  de  Consultas Externas para revisión en CC EE  de  COT ({DOCTOR})  en  3   semanas  para ver evolución.
+- Solicitar  cita en  Admisión  de  Consultas Externas para revisión en CC EE  de  COT (${DOCTOR})  en  3   semanas  para ver evolución.
 - Solicitar  cita en  Servicio de  Rehabilitación  para  seguimiento  postoperatorio.
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
 ```
 
@@ -1678,10 +1809,8 @@ LIGAMENTOPLASTIA LCA ANATÓMICO ALL-INSIDE
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-LIGAMENTOPLASTIA LCA PROCINCH + LEMEIRE
-LIGAMENTOPLASTIA LCA  ANATÓMICO 4 ST-RI AUTOLOGO POR  INESTABILIDAD ANTERIOR DE LA RODILLA {LADO_F_UPPER}:
 - PROFILAXIS ANTIBIÓTICA CON  2  GR  DE CEFAZOLINA.
 - ISQUEMIA EN RAÍZ DE MUSLO (148 MINUTOS).
 - OBTENCIÓN DE PLASTIA AUTOLOGA  ST-RI.
@@ -1699,6 +1828,7 @@ PLASTIA DE REFUERZO  EXTRAARTICULAR CON  TÉCNICA DE LEMAIRE MODIFICADA   MANTEN
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Semana 0º-2ª:
 - Mover activamente los dedos de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
@@ -1724,9 +1854,13 @@ PLASTIA DE REFUERZO  EXTRAARTICULAR CON  TÉCNICA DE LEMAIRE MODIFICADA   MANTEN
 - Puede requerir ayuda domiciliaria
 - ENANPLUS  75 mg/25 mg  / 8 horas vía oral.
 - ENOXAPARINA 40 mg /24 horas vía subcutánea  durante 3 semanas.
+
+REVISIÓN
 - Antes de irse de alta  del  hospital:
-- Solicitar  cita en  Admisión  de  Consultas Externas para revisión en CC EE  de  COT ({DOCTOR})  en  2/3   semanas  para ver evolución.
+- Solicitar  cita en  Admisión  de  Consultas Externas para revisión en CC EE  de  COT (${DOCTOR})  en  2/3   semanas  para ver evolución.
 - Solicitar  cita en  Servicio de  Rehabilitación  para  seguimiento  postoperatorio.
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
 ```
 
@@ -1735,10 +1869,8 @@ PLASTIA DE REFUERZO  EXTRAARTICULAR CON  TÉCNICA DE LEMAIRE MODIFICADA   MANTEN
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-LIGAMENTOPLASTIA LCA ANATÓMIC PROCINCH +  SUTURA MENISCAL
-LIGAMENTOPLASTIA LCA  ANATÓMICO 4 ST-RI AUTOLOGO POR  INESTABILIDAD ANTERIOR DE LA RODILLA {LADO_F_UPPER}:
 - PROFILAXIS ANTIBIÓTICA CON  2  GR  DE CEFAZOLINA.
 - ISQUEMIA EN RAÍZ DE MUSLO (55 MINUTOS).
 - SE REALIZA EXPLORACIÓN  BAJO  ANESTESIA PREVIA QUE  CONFIRMA  LA LESIÓN  DE  LCA.
@@ -1755,6 +1887,7 @@ LIGAMENTOPLASTIA LCA  ANATÓMICO 4 ST-RI AUTOLOGO POR  INESTABILIDAD ANTERIOR DE
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Mover activamente los dedos de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
 - Aplicar  hielo  sobre  vendaje  4 veces al  día  durante 30 minutos.
@@ -1772,9 +1905,13 @@ LIGAMENTOPLASTIA LCA  ANATÓMICO 4 ST-RI AUTOLOGO POR  INESTABILIDAD ANTERIOR DE
 - Puede requerir ayuda domiciliaria
 - ENANPLUS  75 mg/25 mg  / 8 horas vía oral.
 - ENOXAPARINA 40 mg /24 horas vía subcutánea  durante 3 semanas.
+
+REVISIÓN
 - Antes de irse de alta  del  hospital:
-- Solicitar  cita en  Admisión  de  Consultas Externas para revisión en CC EE  de  COT ({DOCTOR})  en  2/3   semanas  para ver evolución.
+- Solicitar  cita en  Admisión  de  Consultas Externas para revisión en CC EE  de  COT (${DOCTOR})  en  2/3   semanas  para ver evolución.
 - Solicitar  cita en  Servicio de  Rehabilitación  para  seguimiento  postoperatorio.
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
 ```
 
@@ -1783,10 +1920,8 @@ LIGAMENTOPLASTIA LCA  ANATÓMICO 4 ST-RI AUTOLOGO POR  INESTABILIDAD ANTERIOR DE
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-LIGAMENTOPLASTIA LCA ANATÓMIC PROCINCH +  REINSERCIÓN RAÍZ MENISCAL  POST 
-LIGAMENTOPLASTIA LCA  ANATÓMICO 4 ST-RI AUTOLOGO POR  INESTABILIDAD ANTERIOR DE LA RODILLA {LADO_F_UPPER}:
 - PROFILAXIS ANTIBIÓTICA CON  2  GR  DE CEFAZOLINA.
 - ISQUEMIA EN RAÍZ DE MUSLO (120 MINUTOS).
 - SE REALIZA CAR PREVIA BAJO QUE  CONFIRMA  LA LESIÓN  DE  LCA.
@@ -1803,6 +1938,7 @@ LIGAMENTOPLASTIA LCA  ANATÓMICO 4 ST-RI AUTOLOGO POR  INESTABILIDAD ANTERIOR DE
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Mover activamente los dedos de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
 - Aplicar  hielo  sobre  vendaje  4 veces al  día  durante 30 minutos.
@@ -1821,73 +1957,23 @@ LIGAMENTOPLASTIA LCA  ANATÓMICO 4 ST-RI AUTOLOGO POR  INESTABILIDAD ANTERIOR DE
 - Puede requerir ayuda domiciliaria
 - ENANPLUS  75 mg/25 mg  / 8 horas vía oral.
 - ENOXAPARINA 40 mg /24 horas vía subcutánea  durante 3 semanas.
+
+REVISIÓN
 - Antes de irse de alta  del  hospital:
-- Solicitar  cita en  Admisión  de  Consultas Externas para revisión en CC EE  de  COT ({DOCTOR})  en  2/3   semanas  para ver evolución.
+- Solicitar  cita en  Admisión  de  Consultas Externas para revisión en CC EE  de  COT (${DOCTOR})  en  2/3   semanas  para ver evolución.
 - Solicitar  cita en  Servicio de  Rehabilitación  para inicio  de la fisioterapia lo  antes posible a fin  de trabajar la movilidad pasiva de la rodilla intervenida y  seguimiento  postoperatorio.
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
 ```
-
----
-
-##### `lca_allinside_arthrex` — LCA ALL-INSIDE (Arthrex)
-
-**Nota Operatoria:**
-
-```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
-
-LIGAMENTOPLASTIA LCA ALL-INSIDE (ARTHREX)
-ROTURA CRÓNICA LCA RODILLA {LADO_F_UPPER}:
-- ANESTESIA RAQUÍDEA.
-- PROFILAXIS ANTIBIÓTICA CON 2 GR DE CEFAZOLINA.
-- ISQUEMIA EN RAÍZ DE MUSLO 250 MMHG (85 MINUTOS).
-- ABORDAJE LONGITUDINAL SOBRE PATA DE GANSO. DISECCIÓN POR PLANOS. FASCIOTOMÍA SARTORIO Y OBTENCIÓN DE PLASTIA ST.
-- PREPARACIÓN DE PLASTIA CUÁDRUPLE DE ST CON 2 TIGHTROPE (Arthrex) DE 7 CM LONGITUD * 9 MM DIÁMETRO.
-- TIEMPO ARTROSCÓPICO: PORTALES ARTROSCÓPICOS HABITUALES: AL, AM Y AM ACCESORIO.
-- NO LESIONES MENISCALES NI CONDRALES.
-- REALIZACIÓN DE TÚNEL FEMORAL FUERA DENTRO CON BROCA RETRÓGRADA FLIPCUTTER (Arthrex) DE 9 MM * 25 MM.
-- REALIZACIÓN DE TÚNEL TIBIAL FUERA DENTRO CON BROCA RETRÓGRADA FLIPCUTTER (Arthrex) DE 9 MM * 30 MM.
-- AMPLIACIÓN PORTAL AM ACCESORIO E INTRODUCCIÓN DE LA PLASTIA POR EL MISMO HACIA TF PRIMERO Y TT POSTERIORMENTE.
-- SE INTRODUCE 20 MM DE PLASTIA EN CADA TÚNEL Y SE TENSIONA BIDIRECCIONALMENTE A 20º FLEXIÓN Y CAJÓN POSTERIOR.
-- FIJACIÓN FEMORAL Y TIBIAL CON TIGHTROPE (Arthrex).
-- LAVADO ARTICULAR ABUNDANTE.
-- SE DEJA DRENAJE INTRAARTICULAR.
-- RETIRADA DE ISQUEMIA Y CIERRE POR PLANOS.
-- SE INFILTRA ZONA DONANTE Y PORTALES CON CÓCTEL ANALGÉSICO CON 5 MG CLORURO MÓRFICO Y 10 CC ROPIVACAÍNA.
-- VENDAJE COMPRESIVO.
-```
-
-**Tratamiento al Alta:**
-
-```
-- Recomendaciones:
-- Mover activamente los dedos de la extremidad operada.
-- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
-- Aplicar hielo sobre vendaje 4 veces al día durante 30 minutos.
-- Puede caminar con ayuda de 2 muletas apoyo parcial de la pierna intervenida y movilidad libre según tolerancia.
-- Realizar ejercicios de cuádriceps y movilidad de la rodilla.
-- Movilizaciones pasivas de rótula 4/5 veces al día durante 15 minutos.
-- Puede requerir ayuda domiciliaria
-- Medicación:
-- ENANPLUS 75 mg/25 mg / 8 horas vía oral.
-- INHIXA 40 mg /24 horas vía subcutánea durante 3 semanas.
-- Antes de irse de alta del hospital:
-- Solicitar cita en Admisión de Consultas Externas para revisión en CC EE de COT ({DOCTOR}) en 3 semanas para ver evolución.
-- Solicitar cita en Servicio de Rehabilitación para seguimiento postoperatorio.
-- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
-```
-
----
 
 ##### `lca_hth` — LCA Hueso-Tendón-Hueso (HTH)
 
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-LIGAMENTOPLASTIA LCA HTH 
-INESTABILIDAD ANTEROMEDIAL DE RODILLA {LADO_F_UPPER}:
 - PROFILAXIS ANTIBIÓTICA CON 2 GR DE CAFAZOLINA. 
 - ISQUEMIA EN RAIZ DE MUSLO (100 MINUTOS).
 - CAR  DIAGNOSTICA QUE  CONFIRMA  ROTURA  COMPLETA DE  LCA. 
@@ -1906,6 +1992,7 @@ INESTABILIDAD ANTEROMEDIAL DE RODILLA {LADO_F_UPPER}:
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Mover activamente los dedos de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
 - Aplicar  hielo  sobre  vendaje  4 veces al  día  durante 30 minutos.
@@ -1923,9 +2010,13 @@ INESTABILIDAD ANTEROMEDIAL DE RODILLA {LADO_F_UPPER}:
 - Puede requerir ayuda domiciliaria
 - ENANPLUS  75 mg/25 mg  / 8 horas vía oral.
 - ENOXAPARINA 40 mg /24 horas vía subcutánea  durante 3 semanas.
+
+REVISIÓN
 - Antes de irse de alta  del  hospital:
-- Solicitar  cita en  Admisión  de  Consultas Externas para revisión en CC EE  de  COT ({DOCTOR})  en  2/3   semanas  para ver evolución.
+- Solicitar  cita en  Admisión  de  Consultas Externas para revisión en CC EE  de  COT (${DOCTOR})  en  2/3   semanas  para ver evolución.
 - Solicitar  cita en  Servicio de  Rehabilitación  para  seguimiento  postoperatorio.
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
 ```
 
@@ -1934,10 +2025,8 @@ INESTABILIDAD ANTEROMEDIAL DE RODILLA {LADO_F_UPPER}:
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-LIGAMENTOPLASTIA LCA ENDO-BUTTON AUMENTACIÓN FASCÍCULO AM
-LIGAMENTOPLASTIA ARTROSCOPICA DE LCA CON TÉCNICA ANATÓMICA  UTILIZANDO TENDONES ISQUITIBIALES 2 ST AUTOLOGO  HOMOLAT POR  INESTABILIDAD ANTERIOR DE LA RODILLA {LADO_F_UPPER}:
 - PROFILAXIS ANTIBIÓTICA CON  2  GR  DE CEFAZOLINA.
 - ISQUEMIA EN RAÍZ DE MUSLO (65 MINUTOS).
 - SE REALIZA  CAR DIAGNÓSTICA BAJO  ANESTESIA PREVIA APRECIÁNDOSE  ROTURA  DEL  FASCÍCULO  AM  DEL  LCA ,  CON  INTEGRIDAD DEL  FASCÍCULO  PL.
@@ -1959,6 +2048,7 @@ LIGAMENTOPLASTIA ARTROSCOPICA DE LCA CON TÉCNICA ANATÓMICA  UTILIZANDO TENDONE
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Mover activamente los dedos de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
 - Aplicar  hielo  sobre  vendaje  4 veces al  día  durante 30 minutos.
@@ -1969,8 +2059,12 @@ LIGAMENTOPLASTIA ARTROSCOPICA DE LCA CON TÉCNICA ANATÓMICA  UTILIZANDO TENDONE
 - IBUPROFENO 600 mg / 8 horas vía oral.
 - METAMIZOL  575 mg/ 8  horas  (alterno  con  anterior  cada  4   horas),  si dolor intenso.
 - BEMIPARINA 3500 UI/24 horas vía subcutánea.
+
+REVISIÓN
 - Revisión en CCEE de COT (TRAP) a  las  2 semanas,  6  semanas  y  4  meses  desde la cirugía   para seguimiento.
 - Solicitar  cita en Servicio  de  Rehabilitación de su  área de referencia para inicio de fisioterapia.
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
 ```
 
@@ -1979,10 +2073,8 @@ LIGAMENTOPLASTIA ARTROSCOPICA DE LCA CON TÉCNICA ANATÓMICA  UTILIZANDO TENDONE
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-LIGAMENTOPLASTIA LCA AUMENTACIÓN FASCÍCULO PL CON  HTH
-LIGAMENTOPLASTIA ARTROSCOPICA DE LA RODILLA {LADO_F_UPPER} POR ROTURA PARCIAL  DEL FASCÍCULO POSTEROLATERAL DEL LCA CON TÉCNICA ANATÓMICA  UTILIZANDO HTH  AUTÓLOGO: 
 - PROFILAXIS ANTIBIÓTICA CON  2  GR  DE CEFAZOLINA.
 - ISQUEMIA EN RAÍZ DE MUSLO (106 MINUTOS).
 - SE REALIZA  CAR DIAGNÓSTICA BAJO  ANESTESIA PREVIA APRECIÁNDOSE  ROTURA  DEL  FASCÍCULO  PL  DEL  LCA ,  CON  INTEGRIDAD DEL  FASCÍCULO  AM.
@@ -2004,6 +2096,7 @@ LIGAMENTOPLASTIA ARTROSCOPICA DE LA RODILLA {LADO_F_UPPER} POR ROTURA PARCIAL  D
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Mover activamente los dedos de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
 - Aplicar  hielo  sobre  vendaje  4 veces al  día  durante 30 minutos.
@@ -2014,8 +2107,12 @@ LIGAMENTOPLASTIA ARTROSCOPICA DE LA RODILLA {LADO_F_UPPER} POR ROTURA PARCIAL  D
 - IBUPROFENO 600 mg / 8 horas vía oral.
 - METAMIZOL  575 mg/ 8  horas  (alterno  con  anterior  cada  4   horas),  si dolor intenso.
 - BEMIPARINA 3500 UI/24 horas vía subcutánea.
+
+REVISIÓN
 - Revisión en CCEE de COT (TRAP) a  las  2 semanas,  6  semanas  y  4  meses  desde la cirugía   para seguimiento.
 - Solicitar  cita en Servicio  de  Rehabilitación de su  área de referencia para inicio de fisioterapia.
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
 ```
 
@@ -2024,10 +2121,8 @@ LIGAMENTOPLASTIA ARTROSCOPICA DE LA RODILLA {LADO_F_UPPER} POR ROTURA PARCIAL  D
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-RESCATE DE LIGAMENTOPLASTIA LCA ENDO-BUTTON ANATÓMICO
-2º TIEMPO  DE  RESCATE  DE LIGAMENTOPLASTIA ARTROSCOPICA DE LCA CON TÉCNICA ANATÓMICA  UTILIZANDO TENDONES  HTH  DE BANO  DE TEJIDOS POR  INESTABILIDAD ANTERIOR DE LA RODILLA {LADO_F_UPPER}:
 - PROFILAXIS ANTIBIÓTICA CON  2  GR  DE CEFAZOLINA.
 - ISQUEMIA EN RAÍZ DE MUSLO (105 MINUTOS).
 -  SE  PREPARA  PLASTIA DE  BANCO  DE TEJIDOS  HTH  CON  PASTILLA  ÓSEA PARA  FÉMUR DE 9*25 MM Y  PARA TIBIA DE  11*30 MM. 
@@ -2050,6 +2145,7 @@ RESCATE DE LIGAMENTOPLASTIA LCA ENDO-BUTTON ANATÓMICO
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Mover activamente los dedos de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
 - Aplicar  hielo  sobre  vendaje  4 veces al  día  durante 30 minutos.
@@ -2060,8 +2156,12 @@ RESCATE DE LIGAMENTOPLASTIA LCA ENDO-BUTTON ANATÓMICO
 - IBUPROFENO 600 mg / 8 horas vía oral.
 - METAMIZOL  575 mg/ 8  horas  (alterno  con  anterior  cada  4   horas),  si dolor intenso.
 - BEMIPARINA 3500 UI/24 horas vía subcutánea.
-- Revisión en CCEE de COT ({DOCTOR}) en  2/3 semanas  para ver evolución y retirar puntos.
+
+REVISIÓN
+- Revisión en CCEE de COT (${DOCTOR}) en  2/3 semanas  para ver evolución y retirar puntos.
 - Al  alta solicitar  cita en  Servicio de  Rehabilitación  para  seguimiento  postoperatorio.
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
 ```
 
@@ -2070,10 +2170,9 @@ RESCATE DE LIGAMENTOPLASTIA LCA ENDO-BUTTON ANATÓMICO
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-RLCA con  HTH de  banco  de   tejidos 
-- RESCATE DE  LIGAMENTOPLASTIA DE   LCA DE LA RODILLA {LADO_F_UPPER}: 
+- RESCATE DE  LIGAMENTOPLASTIA DE   LCA DE LA RODILLA ${LADO_F_UPPER}:
 - PROFILAXIS ANTIBIÓTICA CON 2 GR DE CAFAZOLINA. 
 - ISQUEMIA EN RAIZ DE MUSLO (130 + 40 MINUTOS).
 - EXPLORACIÓN  BAJO  ANESTESIA  QUE  CONFIRMA  ROTURA  COMPLETA  DE  LA  PLASTIA AUTOLOGA PREVIA DE LCA.
@@ -2089,6 +2188,7 @@ RLCA con  HTH de  banco  de   tejidos
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Semana 0º-2ª:
 - Mover activamente los dedos de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
@@ -2114,9 +2214,65 @@ RLCA con  HTH de  banco  de   tejidos
 - Puede requerir ayuda domiciliaria
 - ENANPLUS  75 mg/25 mg  / 8 horas vía oral.
 - ENOXAPARINA 40 mg /24 horas vía subcutánea  durante 3 semanas.
+
+REVISIÓN
 - Antes de irse de alta  del  hospital:
-- Solicitar  cita en  Admisión  de  Consultas Externas para revisión en CC EE  de  COT ({DOCTOR})  en  2/3   semanas  para ver evolución.
+- Solicitar  cita en  Admisión  de  Consultas Externas para revisión en CC EE  de  COT (${DOCTOR})  en  2/3   semanas  para ver evolución.
 - Solicitar  cita en  Servicio de  Rehabilitación  para  seguimiento  postoperatorio.
+
+SÍNTOMAS DE ALERTA
+- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
+```
+
+##### `lca_allinside_arthrex` — LCA All-Inside ST Arthrex (no registrada en UI)
+
+**Nota Operatoria:**
+
+```
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+
+- ANESTESIA RAQUÍDEA.
+- PROFILAXIS ANTIBIÓTICA CON 2 GR DE CEFAZOLINA.
+- ISQUEMIA EN RAÍZ DE MUSLO 250 MMHG (85 MINUTOS).
+- ABORDAJE LONGITUDINAL SOBRE PATA DE GANSO. DISECCIÓN POR PLANOS. FASCIOTOMÍA SARTORIO Y OBTENCIÓN DE PLASTIA ST.
+- PREPARACIÓN DE PLASTIA CUÁDRUPLE DE ST CON 2 TIGHTROPE (Arthrex) DE 7 CM LONGITUD * 9 MM DIÁMETRO.
+- TIEMPO ARTROSCÓPICO: PORTALES ARTROSCÓPICOS HABITUALES: AL, AM Y AM ACCESORIO.
+- NO LESIONES MENISCALES NI CONDRALES.
+- REALIZACIÓN DE TÚNEL FEMORAL FUERA DENTRO CON BROCA RETRÓGRADA FLIPCUTTER (Arthrex) DE 9 MM * 25 MM.
+- REALIZACIÓN DE TÚNEL TIBIAL FUERA DENTRO CON BROCA RETRÓGRADA FLIPCUTTER (Arthrex) DE 9 MM * 30 MM.
+- AMPLIACIÓN PORTAL AM ACCESORIO E INTRODUCCIÓN DE LA PLASTIA POR EL MISMO HACIA TF PRIMERO Y TT POSTERIORMENTE.
+- SE INTRODUCE 20 MM DE PLASTIA EN CADA TÚNEL Y SE TENSIONA BIDIRECCIONALMENTE A 20º FLEXIÓN Y CAJÓN POSTERIOR.
+- FIJACIÓN FEMORAL Y TIBIAL CON TIGHTROPE (Arthrex).
+- LAVADO ARTICULAR ABUNDANTE.
+- SE DEJA DRENAJE INTRAARTICULAR.
+- RETIRADA DE ISQUEMIA Y CIERRE POR PLANOS.
+- SE INFILTRA ZONA DONANTE Y PORTALES CON CÓCTEL ANALGÉSICO CON 5 MG CLORURO MÓRFICO Y 10 CC ROPIVACAÍNA.
+- VENDAJE COMPRESIVO.
+```
+
+**Tratamiento al Alta:**
+
+```
+CUIDADOS POSTOPERATORIOS
+- Recomendaciones:
+- Mover activamente los dedos de la extremidad operada.
+- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
+- Aplicar hielo sobre vendaje 4 veces al día durante 30 minutos.
+- Puede caminar con ayuda de 2 muletas apoyo parcial de la pierna intervenida y movilidad libre según tolerancia.
+- Realizar ejercicios de cuádriceps y movilidad de la rodilla.
+- Movilizaciones pasivas de rótula 4/5 veces al día durante 15 minutos.
+- Puede requerir ayuda domiciliaria
+
+MEDICACIÓN (según tarjeta sanitaria)
+- ENANPLUS 75 mg/25 mg / 8 horas vía oral.
+- INHIXA 40 mg /24 horas vía subcutánea durante 3 semanas.
+
+REVISIÓN
+- Antes de irse de alta del hospital:
+- Solicitar cita en Admisión de Consultas Externas para revisión en CC EE de COT (${DOCTOR}) en 3 semanas para ver evolución.
+- Solicitar cita en Servicio de Rehabilitación para seguimiento postoperatorio.
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
 ```
 
@@ -2129,18 +2285,14 @@ RLCA con  HTH de  banco  de   tejidos
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-OSTEOTOMÍA VALGUIZANTE TIBIA {LADO_F} DE APERTURA
-Decúbito supino con pernera en pierna {LADO_F}.
-Isquemia en raíz del muslo (105 min).
-Control por escopia.
 - Abordaje medial oblicuo anterior a los isquiotibiales. Localización de pata de ganso y LLI
 - Sección de tercio anterior y distal de LLI
 - Osteotomía transversa medial de apertura de tibia tras control por Rx (3-3,5 cm distal a línea articular) y corte con sierra parando 1 cm antes de la cortical lateral
 - Osteotomía vertical (110º con respecto a la osteotomía horizontal) tras la TTA separando el tendón rotuliano hasta proximal
 - Con pinza reguladora vamos ampliando los grados lentamente (15-20 min mientras realizamos la extracción de cresta) hasta conseguir 12º (hipercorrección de los 11,5º previstos)
-- Extracción de cresta ilíaca {LADO_F} a escoplo: 2 cuñas de 1,3 cm + esponjosa. Lavado, drenaje y cierre
+- Extracción de cresta ilíaca ${LADO_F} a escoplo: 2 cuñas de 1,3 cm + esponjosa. Lavado, drenaje y cierre
 - Introducción de las dos cuñas de base de 1,3 cm y esponjosa
 - Colocación de placa TOMOFIX de Synthes tamaño Small, según técnica quirúrgica (tornillos bloqueados proximales bicorticales, tornillo de compresión para aproximación de la placa y sustitución por tornillo bloqueado, tornillos bloqueados distales bicorticales)
 - Control por escopia comprobando el eje mecánico pasando por el punto Fujisawa con barra
@@ -2150,6 +2302,7 @@ Control por escopia.
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Mantener el pie elevado siempre que esté sentado
 - Aplicar hielo sobre la rodilla operada 2-3 veces al día durante 20 minutos
 - Mover activamente los dedos de la extremidad operada
@@ -2160,7 +2313,11 @@ Control por escopia.
 - Omeprazol 20 mg / 24 horas
 - Bemiparina 3500 UI / 24 horas vía subcutánea / 6 semanas
 - Hierro proteinsuccinilato 40 mg sol oral en ayunas cada día durante un mes
-- Solicitar cita para revisión en 3 semanas para {DOCTOR}
+
+REVISIÓN
+- Solicitar cita para revisión en 3 semanas para ${DOCTOR}
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias
 ```
 
@@ -2169,9 +2326,8 @@ Control por escopia.
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-OSTEOTOMÍA VALGUIZANTE TIBIA {LADO_F} DE APERTURA + CORRECCIÓN PENDIENTE POSTERIOR
 - Decúbito supino.
 - Isquemia en raíz del muslo (120 min).
 
@@ -2198,6 +2354,7 @@ OSTEOTOMÍA VALGUIZANTE TIBIA {LADO_F} DE APERTURA + CORRECCIÓN PENDIENTE POSTE
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Mantener el pie elevado siempre que esté sentado
 - Aplicar hielo sobre la rodilla operada 2-3 veces al día durante 20 minutos
 - Mover activamente los dedos de la extremidad operada
@@ -2208,7 +2365,11 @@ OSTEOTOMÍA VALGUIZANTE TIBIA {LADO_F} DE APERTURA + CORRECCIÓN PENDIENTE POSTE
 - Omeprazol 20 mg / 24 horas
 - Bemiparina 3500 UI / 24 horas vía subcutánea / 6 semanas
 - Hierro proteinsuccinilato 40 mg sol oral en ayunas cada día durante un mes
-- Solicitar cita para revisión en 3 semanas para {DOCTOR}
+
+REVISIÓN
+- Solicitar cita para revisión en 3 semanas para ${DOCTOR}
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias
 ```
 
@@ -2217,9 +2378,8 @@ OSTEOTOMÍA VALGUIZANTE TIBIA {LADO_F} DE APERTURA + CORRECCIÓN PENDIENTE POSTE
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-OSTEOTOMÍA TTA TIPO FULKERSON RODILLA {LADO_F}
 - Manguito de isquemia en raíz del muslo (70 min).
 - Profilaxis antibiótica con 2 g cefazolina iv.
 
@@ -2244,6 +2404,7 @@ OSTEOTOMÍA TTA TIPO FULKERSON RODILLA {LADO_F}
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Mantener el pie elevado siempre que esté sentado
 - Aplicar hielo sobre la rodilla operada 2-3 veces al día durante 20 minutos
 - Mover activamente los dedos de la extremidad operada
@@ -2256,7 +2417,11 @@ OSTEOTOMÍA TTA TIPO FULKERSON RODILLA {LADO_F}
 - Omeprazol 20 mg / 24 horas
 - Bemiparina 3500 UI 1 jeringa / 24 horas vía subcutánea / 6 semanas
 - Solicitar cita con RHB al alta
-- Revisión en CCEE de COT ({DOCTOR}) en 3 semanas para ampliar arco movilidad y seguimiento
+
+REVISIÓN
+- Revisión en CCEE de COT (${DOCTOR}) en 3 semanas para ampliar arco movilidad y seguimiento
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias
 ```
 
@@ -2265,10 +2430,9 @@ OSTEOTOMÍA TTA TIPO FULKERSON RODILLA {LADO_F}
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-MOSAICOPLASTIA + OVT
-- Decúbito supino con pernera en pierna {LADO_F}.
+- Decúbito supino con pernera en pierna ${LADO_F}.
 - Isquemia en raíz del muslo (125 min).
 - Control por escopia.
 
@@ -2294,6 +2458,7 @@ MOSAICOPLASTIA + OVT
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Aplicar hielo sobre la articulación operada 2-3 veces al día durante 20 minutos
 - Mover activamente los dedos de la extremidad operada
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos
@@ -2305,7 +2470,11 @@ MOSAICOPLASTIA + OVT
 - Enanplus 1 comp / 8 horas vía oral alternando con Metamizol si persistencia del dolor
 - Enoxaparina Rovi 40 mg / 24 horas vía subcutánea durante 4 semanas
 - Retirada de puntos por ATS DE ZONA en 12-15 días
-- Revisión en CCEE de COT ({DOCTOR}) en 3 semanas para ver evolución
+
+REVISIÓN
+- Revisión en CCEE de COT (${DOCTOR}) en 3 semanas para ver evolución
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario
 ```
 
@@ -2314,10 +2483,9 @@ MOSAICOPLASTIA + OVT
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-LFPM + DESCENSO Y MEDIALIZACIÓN DE TTA
-- LRR RÓTULA {LADO_F}
+- LRR RÓTULA ${LADO_F}
 - Profilaxis antibiótica con 2 g de cefazolina
 - Isquemia en raíz de muslo (115 min)
 
@@ -2342,6 +2510,7 @@ LFPM + DESCENSO Y MEDIALIZACIÓN DE TTA
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Mantener el pie elevado siempre que esté sentado
 - Crioterapia: aplicar hielo sobre la rodilla operada 3 veces al día durante 20-25 minutos
 - Mover activamente los dedos de la extremidad operada
@@ -2376,15 +2545,14 @@ LFPM + DESCENSO Y MEDIALIZACIÓN DE TTA
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-PROTESIS TOTAL  DE CADERA SUMMIT
-- COXARTROSIS  CADERA {LADO_ABR_F}:
-- PROFILAXIS  ANTIBIÓTICA CON  2 GRAMOS  DE CEFAZOLINA  Y  1  GRAMO IV DE TRANEXÁMICO.  
-- DECUBITO  LATERAL  {DECUBITO_UPPER}.
+- COXARTROSIS  CADERA ${LADO_ABR_F}:
+- PROFILAXIS  ANTIBIÓTICA CON  2 GRAMOS  DE CEFAZOLINA  Y  1  GRAMO IV DE TRANEXÁMICO.
+- DECUBITO  LATERAL  ${DECUBITO_UPPER}.
 - INCISIÓN  LOGITUDINAL SOBRE REGIÓN  TROCANTERICA Y  VIA ABORDAJE  BAUER.
 - CAPSULECTOMÍA,  LUXACION  DE  CABEZA  FEMORAL   Y  OSTEOTOMIA DEL  CUELLO.
-- ARTROPLASTIA TOTAL CADERA {LADO_ABR_F}  MODELO  SUMMIT CON  COTILO  PINACLE  SECTOR GRIPTION NO  CEMENTADO Nº  50, POLIETILENO  MARATHON Nº 50 +10º, VASTAGO  Nº 6 NO  CEMENTADO ESTÁNDAR CON  CABEZA DE  28 MM +5 DE CERÁMICA .
+- ARTROPLASTIA TOTAL CADERA ${LADO_ABR_F}  MODELO  SUMMIT CON  COTILO  PINACLE  SECTOR GRIPTION NO  CEMENTADO Nº  50, POLIETILENO  MARATHON Nº 50 +10º, VASTAGO  Nº 6 NO  CEMENTADO ESTÁNDAR CON  CABEZA DE  28 MM +5 DE CERÁMICA .
 - SE COMPRUEBA ESTABILIDAD DE LA  ARTROPLASTIA  TRAS REDUCCIÓN EN  TODOS LOS PLANOS.
 - CIERRE POR  PLANOS CON REINSERCIÓN  DE  MUSCULATURA  GLÚTEA.
 - SE ADMINISTRA   1   GRAMO  DE TRANEXÁMICO  EN  50 CC DE SF A  NIVEL  LOCAL.
@@ -2395,6 +2563,7 @@ PROTESIS TOTAL  DE CADERA SUMMIT
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Mantener el pie elevado siempre que esté sentado con  movimientos de  flexoextensión  de  la rodilla.
 - Aplicar hielo sobre la rodilla operada 2-3 veces al día durante 20 minutos.
 - Mover activamente los dedos de la extremidad operada.
@@ -2403,13 +2572,18 @@ PROTESIS TOTAL  DE CADERA SUMMIT
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
 - Puede  caminar con ayuda de un andador.
 - Puede requerir ayuda domiciliaria
-- Medicación añadida en su tarjeta:
+
+MEDICACIÓN (según tarjeta sanitaria)
 - METAMIZOL 575 mg / 8 horas vía oral.
 - PARACETAMOL 1 gr/  8  horas, alterno  con anterior cada   4   horas si  dolor  intenso.
 - OMEPRAZOL 20 mg/ 24  horas.
 - ENOXAPARINA 40 mg  / 24 horas vía oral / 4 semanas
 - HIERRO (II), SULFATO 256, 30 en ayunas cada día durante un mes.
-- Antes de irse de alta el paciente deberá solicitar revisión en Admisión del  Hospital  para  CCEE Revisión Hospitalaria de COT ({DOCTOR}) en 4 semanas.
+
+REVISIÓN
+- Solicitar revisión en Admisión del  Hospital  para  CCEE Revisión Hospitalaria de COT (${DOCTOR}) en 4 semanas.
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
 ```
 
@@ -2418,15 +2592,14 @@ PROTESIS TOTAL  DE CADERA SUMMIT
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-PROTESIS TOTAL  DE CADERA ZIMMER
-- COXARTROSIS  CADERA   {LADO_ABR_F}:
+- COXARTROSIS  CADERA   ${LADO_ABR_F}:
 - PROFILAXIS  ANTIBIÓTICA CON  2 GRAMOS  DE CEFAZOLINA.
-- DECUBITO  LATERAL  {DECUBITO_UPPER}.
+- DECUBITO  LATERAL  ${DECUBITO_UPPER}.
 - INCISIÓN  LOGITUDINAL SOBRE REGIÓN  TROCANTERICA Y  VIA ABORDAJE  HARDINGE..
 - CAPSULECTOMÍA,  LUXACION  DE  CABEZA  FEMORAL   Y  OSTEOTOMIA DEL  CUELLO.
-- ARTROPLASTIA TOTAL CADERA {LADO_ABR_F} ( ZIMMER): COTILO G7 Nº 48 PRESS-FIT, VÁSTAGO TAPERLOC Nº 7.5, INSERTO POLIETILENO  CON  CEJA 10º Y CABEZA CERÁMICA 32  +0 MM.
+- ARTROPLASTIA TOTAL CADERA ${LADO_ABR_F} ( ZIMMER): COTILO G7 Nº 48 PRESS-FIT, VÁSTAGO TAPERLOC Nº 7.5, INSERTO POLIETILENO  CON  CEJA 10º Y CABEZA CERÁMICA 32  +0 MM.
 - SE COMPRUEBA ESTABILIDAD DE LA  ARTROPLASTIA  TRAS REDUCCIÓN EN  TODOS LOS PLANOS.
 - CIERRE POR  PLANOS CON REINSERCIÓN  DE  MUSCULATURA  GLÚTEA.
 - DRENAJE ASPIRATIVO.
@@ -2437,6 +2610,7 @@ PROTESIS TOTAL  DE CADERA ZIMMER
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Se entrega hoja de cuidados PTC.
 - Puede descargarse la aplicación gratuita "Mi PTC" para recomendaciones.
 - Mantener el pie elevado siempre que esté sentado.
@@ -2451,7 +2625,11 @@ PROTESIS TOTAL  DE CADERA ZIMMER
 - HIERRO PROTEINSUCCINILATO 40 mg sol oral en ayunas cada día durante un mes.
 - Puede requerir ayuda domiciliaria.
 - Curas y retirada de puntos de sutura/agrafes según informe de Enfermería.
-- Antes de irse de alta, el paciente deberá solicitar revisión en Admisión del Hospital para CCEE Revisión Hospitalaria de COT ({DOCTOR}) en 4 semanas.
+
+REVISIÓN
+- Antes de irse de alta, el paciente deberá solicitar revisión en Admisión del Hospital para CCEE Revisión Hospitalaria de COT (${DOCTOR}) en 4 semanas.
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
 ```
 
@@ -2464,9 +2642,8 @@ PROTESIS TOTAL  DE CADERA ZIMMER
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-CAC REINSERCIÓN LABRUM CADERA {LADO_F}
 - Decúbito supino.
 - Profilaxis ATB.
 - Mesa de tracción.
@@ -2490,6 +2667,7 @@ CAC REINSERCIÓN LABRUM CADERA {LADO_F}
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Mantener la extremidad en alto durante las primeras 48 horas.
 - Mover activamente los dedos de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
@@ -2497,7 +2675,11 @@ CAC REINSERCIÓN LABRUM CADERA {LADO_F}
 - IBUPROFENO 600 mg alternando con PARACETAMOL 1gr/ 8 horas vía oral según dolor.
 - ENOXAPARINA 40 mg 1 jeringa / 24 horas vía subcutánea / 3 semanas.
 - Retirada de puntos por su enfermero/a de referencia en el centro de salud en 7-10 días.
-- Solicitar cita para revisión en 3 semanas para {DOCTOR}  y  en  Servicio de  REHABILITACIÓN
+
+REVISIÓN
+- Solicitar cita para revisión en 3 semanas para ${DOCTOR}  y  en  Servicio de  REHABILITACIÓN
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
 - SIGA LAS SIGUIENTES RECOMENDACIONES DOMICILIARIAS:
 - 1ª y 2ª SEMANAS
@@ -2567,10 +2749,9 @@ CAC REINSERCIÓN LABRUM CADERA {LADO_F}
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-Diag. Sd. subacromial hombro {LADO_M}.
-- Anestesia gral. + locorregional. Profilaxis ATB. Decúbito lateral --.
+- Anestesia gral. + locorregional. Profilaxis ATB. Decúbito lateral ${DECUBITO}.
 - CAH ---.
 - Portales habituales
 - Glenohumeral: PLB, labrum y subescapular ok. Rotura supraespinoso grado  de Patte (porción anterolateral).
@@ -2581,6 +2762,7 @@ Diag. Sd. subacromial hombro {LADO_M}.
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Mantener el miembro superior operado en cabestrillo durante 4-5 semanas. Puede retirarlo para aseo personal y para realizar ejercicios de flexo-extensión de codo así como pendulares (se adjunta hoja de cuidados de cabestrillo)
 - Mover activamente los dedos de la extremidad operada
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos
@@ -2589,7 +2771,11 @@ Diag. Sd. subacromial hombro {LADO_M}.
 - Curas locales c/72h y retirada de puntos por ATS DE ZONA en 12-14 días
 - Puede requerir reposo / ayuda domiciliaria
 - Pedir cita con Servicio de RHB antes de marcharse de alta
-- Solicitar cita para revisión en 3 semanas para {DOCTOR}
+
+REVISIÓN
+- Solicitar cita para revisión en 3 semanas para ${DOCTOR}
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con su Centro de Salud en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario
 ```
 
@@ -2598,10 +2784,9 @@ Diag. Sd. subacromial hombro {LADO_M}.
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-Diag. Rotura supraespinoso hombro {LADO_M}.
-- Anestesia gral. + locorregional. Profilaxis ATB. Decúbito lateral {DECUBITO}.
+- Anestesia gral. + locorregional. Profilaxis ATB. Decúbito lateral ${DECUBITO}.
 - CAH ---.
 - Portales habituales
 - Glenohumeral: PLB y labrum ok, subescapular con rotura tipo II de Lafosse. Se realiza reparación tendón hueso con 1 Iconix 2,3 (2 cintas). Rotura supraespinoso grado II de Patte con mala calidad tisular e infiltración grasa.
@@ -2612,6 +2797,7 @@ Diag. Rotura supraespinoso hombro {LADO_M}.
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Mantener el miembro superior operado en cabestrillo durante 4-5 semanas. Puede retirarlo para aseo personal y para realizar ejercicios de flexo-extensión de codo así como pendulares (se adjunta hoja de cuidados de cabestrillo)
 - Mover activamente los dedos de la extremidad operada
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos
@@ -2620,7 +2806,11 @@ Diag. Rotura supraespinoso hombro {LADO_M}.
 - Curas locales c/72h y retirada de puntos por ATS DE ZONA en 12-14 días
 - Puede requerir reposo / ayuda domiciliaria
 - Pedir cita con Servicio de RHB antes de marcharse de alta
-- Solicitar cita para revisión en 3 semanas para {DOCTOR}
+
+REVISIÓN
+- Solicitar cita para revisión en 3 semanas para ${DOCTOR}
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con su Centro de Salud en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario
 ```
 
@@ -2629,10 +2819,9 @@ Diag. Rotura supraespinoso hombro {LADO_M}.
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-Diag. Rotura masiva supraespinoso hombro.
-- Anestesia gral. + locorregional. Profilaxis ATB. Decúbito lateral {DECUBITO}.
+- Anestesia gral. + locorregional. Profilaxis ATB. Decúbito lateral ${DECUBITO}.
 - CAH ---.
 - Portales habituales
 - Glenohumeral: PLB degenerado y deshilachado por lo que se realiza tenotomía, labrum bien, rotura subescapular tipo 2 de Lafosse. Se realiza reparación con 1 Iconix 2,3 (2 suturas tendón-hueso). Rotura supraespinoso grado 3 de Patte que se extiende a infraespinoso (rotura masiva).
@@ -2643,6 +2832,7 @@ Diag. Rotura masiva supraespinoso hombro.
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Mantener el miembro superior operado en cabestrillo durante 4-5 semanas. Puede retirarlo para aseo personal y para realizar ejercicios de flexo-extensión de codo así como pendulares (se adjunta hoja de cuidados de cabestrillo)
 - Mover activamente los dedos de la extremidad operada
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos
@@ -2651,7 +2841,11 @@ Diag. Rotura masiva supraespinoso hombro.
 - Curas locales c/72h y retirada de puntos por ATS DE ZONA en 12-14 días
 - Puede requerir reposo / ayuda domiciliaria
 - Pedir cita con Servicio de RHB antes de marcharse de alta
-- Solicitar cita para revisión en 3 semanas para {DOCTOR}
+
+REVISIÓN
+- Solicitar cita para revisión en 3 semanas para ${DOCTOR}
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con su Centro de Salud en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario
 ```
 
@@ -2660,9 +2854,8 @@ Diag. Rotura masiva supraespinoso hombro.
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-Luxación acromioclavicular ---.
 - Anestesia general e IOT. Profilaxis antibiótica con 2g de cefazolina.
 - En posición de silla de playa.
 - Portales artroscópicos AL + AM. Localizamos tendón conjunto, apófisis coracoides y disecamos hasta base.
@@ -2677,17 +2870,25 @@ Luxación acromioclavicular ---.
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Mantener brazo en cabestrillo, moviendo mano y codo como se le ha explicado.
 - Realizar los ejercicios que su médico le ha explicado.
 - Vigilar coloración y sensibilidad de la mano y los dedos.
 - Evitar cargar peso sobre brazo intervenido hasta nuevo aviso y según plazos marcados.
 - Se adjunta RECOMENDACIONES AL ALTA DE CIRUGÍA ARTROSCÓPICA DE HOMBRO
-- Medicación incluida en su tarjeta sanitaria:
+
+MEDICACIÓN (según tarjeta sanitaria)
 - METAMIZOL 575mg cada 8 horas vía oral, que puede alternar con PARACETAMOL 1g/8h vía oral si precisa por dolor.
 - IBUPROFENO 400 mg cada 8 horas vía oral añadido a lo anterior si precisa por dolor.
 - OMEPRAZOL 20mg cada 24 horas.
-- Curas locales en centro de salud cada 48-72 horas, retirando grapas en 15-17 días, salvo mejor criterio de enfermería de zona.
-- Solicitar cita para revisión en 3-4 semanas para {DOCTOR}, para control evolutivo y radiológico.
+
+CURAS LOCALES
+- Realizar curas locales en el centro de salud cada 48-72 horas, retirando grapas en 15-17 días, salvo mejor criterio de enfermería de zona.
+
+REVISIÓN
+- Solicitar cita para revisión en 3-4 semanas para ${DOCTOR}, para control evolutivo y radiológico.
+
+SÍNTOMAS DE ALERTA
 - Si aparece fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
 ```
 
@@ -2700,9 +2901,8 @@ Luxación acromioclavicular ---.
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-Fractura Neer IV EPH ---.
 - Anestesia gral. + bloqueo locorregional. Profilaxis ATB.
 - Silla de playa. Abordaje deltopectoral.
 - Colocación PTHI --- Aequalis Reversed (Tornier) de fracturas:
@@ -2719,6 +2919,7 @@ Fractura Neer IV EPH ---.
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Mantener el miembro superior operado en cabestrillo durante 4 semanas. Puede retirar cabestrillo eventualmente para aseo personal y para realizar ejercicios de flexoextensión de codo y pendulares
 - Mover activamente los dedos de la extremidad operada
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos
@@ -2729,7 +2930,11 @@ Fractura Neer IV EPH ---.
 - Puede requerir ayuda domiciliaria
 - Curas locales c/72h y retirada de puntos por ATS DE ZONA en 14-15 días
 - Gestionar cita con Servicio de RHB antes de marcharse de alta
-- Solicitar cita para revisión en 3 semanas para {DOCTOR}
+
+REVISIÓN
+- Solicitar cita para revisión en 3 semanas para ${DOCTOR}
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con su Centro de Salud en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario
 ```
 
@@ -2738,9 +2943,8 @@ Fractura Neer IV EPH ---.
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-OMARTROSIS PRIMARIA HOMBRO ---.
 - Anestesia gral. + bloqueo locorregional. Profilaxis ATB.
 - Silla de playa. Abordaje deltopectoral. Tenodesis PLB a pectoral mayor. Desinserción subescapular con pastilla ósea.
 - Colocación PTHI --- Ascend Flex (Stryker/Tornier):
@@ -2757,6 +2961,7 @@ OMARTROSIS PRIMARIA HOMBRO ---.
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Mantener el miembro superior operado en cabestrillo durante 4 semanas. Puede retirar cabestrillo eventualmente para aseo personal y para realizar ejercicios de flexoextensión de codo y pendulares
 - Mover activamente los dedos de la extremidad operada
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos
@@ -2767,7 +2972,11 @@ OMARTROSIS PRIMARIA HOMBRO ---.
 - Puede requerir ayuda domiciliaria
 - Curas locales c/72h y retirada de puntos por ATS DE ZONA en 14-15 días
 - Gestionar cita con Servicio de RHB antes de marcharse de alta
-- Solicitar cita para revisión en 3 semanas para {DOCTOR}
+
+REVISIÓN
+- Solicitar cita para revisión en 3 semanas para ${DOCTOR}
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con su Centro de Salud en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario
 ```
 
@@ -2776,9 +2985,8 @@ OMARTROSIS PRIMARIA HOMBRO ---.
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-OMARTROSIS PRIMARIA HOMBRO ---.
 - Anestesia gral. + bloqueo locorregional. Profilaxis ATB.
 - Silla de playa. Abordaje deltopectoral. Tenotomía PLB. Desinserción subescapular.
 - Extracción BioRSA 36 10 mm.
@@ -2796,6 +3004,7 @@ OMARTROSIS PRIMARIA HOMBRO ---.
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Mantener el miembro superior operado en cabestrillo durante 4 semanas. Puede retirar cabestrillo eventualmente para aseo personal y para realizar ejercicios de flexoextensión de codo y pendulares
 - Mover activamente los dedos de la extremidad operada
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos
@@ -2806,7 +3015,11 @@ OMARTROSIS PRIMARIA HOMBRO ---.
 - Puede requerir ayuda domiciliaria
 - Curas locales c/72h y retirada de puntos por ATS DE ZONA en 14-15 días
 - Gestionar cita con Servicio de RHB antes de marcharse de alta
-- Solicitar cita para revisión en 3 semanas para {DOCTOR}
+
+REVISIÓN
+- Solicitar cita para revisión en 3 semanas para ${DOCTOR}
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con su Centro de Salud en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario
 ```
 
@@ -2815,7 +3028,7 @@ OMARTROSIS PRIMARIA HOMBRO ---.
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 - Anestesia gral. + bloqueo locorregional. Profilaxis ATB.
 - Silla de playa. Incisión sobre cicatriz previa. Abordaje deltopectoral. Desinserción subescapular y troquíter. Se libera subescapular y supraespinoso. Exéresis de tejido fibrótico previo que se manda a microbiología, así como muestras de interfase de cemento, y tejido blando de glena y canal endomedular.
@@ -2833,6 +3046,7 @@ IQ {FECHA} ({DOCTOR}/{AYUDANTE})
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Mantener el miembro superior operado en cabestrillo durante 4 semanas. Puede retirar cabestrillo eventualmente para aseo personal y para realizar ejercicios de flexoextensión de codo y pendulares
 - Mover activamente los dedos de la extremidad operada
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos
@@ -2843,7 +3057,11 @@ IQ {FECHA} ({DOCTOR}/{AYUDANTE})
 - Puede requerir ayuda domiciliaria
 - Curas locales c/72h y retirada de puntos por ATS DE ZONA en 14-15 días
 - Gestionar cita con Servicio de RHB antes de marcharse de alta
-- Solicitar cita para revisión en 3 semanas para {DOCTOR}
+
+REVISIÓN
+- Solicitar cita para revisión en 3 semanas para ${DOCTOR}
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con su Centro de Salud en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario
 ```
 
@@ -2856,9 +3074,8 @@ IQ {FECHA} ({DOCTOR}/{AYUDANTE})
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-Diag. Elastofibroma dorsii escápula ---.
 - Anestesia gral. Decúbito prono.
 - Abordaje paraescapular oblicuo.
 - Apertura dorsal ancho, disección profunda, exéresis elastofibroma dorsii.
@@ -2871,6 +3088,7 @@ Diag. Elastofibroma dorsii escápula ---.
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Mantener el miembro superior operado en cabestrillo 1 semana. Puede retirar cabestrillo eventualmente para aseo personal y para realizar ejercicios de flexoextensión de codo y pendulares
 - Mover activamente los dedos de la extremidad operada
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos
@@ -2881,7 +3099,11 @@ Diag. Elastofibroma dorsii escápula ---.
 - Puede requerir ayuda domiciliaria
 - Curas locales c/72h y retirada de puntos por ATS DE ZONA en 14-15 días
 - Pedir cita para Sala de Curas en 5-7 días
-- Solicitar cita para revisión en 3 semanas para {DOCTOR}
+
+REVISIÓN
+- Solicitar cita para revisión en 3 semanas para ${DOCTOR}
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con su Centro de Salud en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario
 ```
 
@@ -2894,9 +3116,8 @@ Diag. Elastofibroma dorsii escápula ---.
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-Diag. Rotura bíceps distal MS ---.
 - Anestesia gral. + locorregional. Profilaxis ATB. Isquemia preventiva. Mesa de mano.
 - Abordaje anterior. Localización cabo tendinoso. Se referencia con cintas de alta resistencia (Arthrex).
 - Reinserción en tuberosidad bicipital con sistema Biceps Button de Arthrex + tornillo interferencial (túnel ciego de 7 mm).
@@ -2909,6 +3130,7 @@ Diag. Rotura bíceps distal MS ---.
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - FÉRULA BRAQUIAL 3 semanas. Mantener brazo elevado en cabestrillo
 - Mover activamente los dedos de la extremidad operada
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos
@@ -2916,7 +3138,11 @@ Diag. Rotura bíceps distal MS ---.
 - Omeprazol 20 mg v.o. 1 c/24h
 - NO CURAR HASTA REVISIÓN EN SALA DE CURAS TRAUMATOLOGÍA EN 12-14 DÍAS SALVO INCIDENCIA CLÍNICA, debiendo recolocar férula (PEDIR CITA PARA SALA DE CURAS TRAUMATOLOGÍA)
 - Pedir cita con Servicio de RHB antes de marcharse de alta
-- Solicitar cita para revisión en 3 semanas para {DOCTOR}
+
+REVISIÓN
+- Solicitar cita para revisión en 3 semanas para ${DOCTOR}
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con su Centro de Salud en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario
 ```
 
@@ -2925,9 +3151,8 @@ Diag. Rotura bíceps distal MS ---.
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-Diag. Rotura crónica bíceps distal MS ---.
 - Anestesia gral. Profilaxis ATB. Mesa de mano.
 - 1ºT Extracción ST autólogo por posterior de MI. Grosor plastia 7 mm.
 - 2ºT Abordaje anterior. Se referencia rama cutánea antebraquial. Reinserción de plastia en tuberosidad bicipital con sistema Biceps Button de Arthrex + tornillo interferencial (túnel ciego de 7 mm).
@@ -2940,6 +3165,7 @@ Diag. Rotura crónica bíceps distal MS ---.
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - FÉRULA BRAQUIAL 3 semanas. Mantener brazo elevado en cabestrillo
 - Mover activamente los dedos de la extremidad operada
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos
@@ -2950,7 +3176,11 @@ Diag. Rotura crónica bíceps distal MS ---.
 - Curar pequeña herida de la pierna c/72h y retirar puntos en 10 días
 - Requiere ayuda y reposo domiciliario
 - Pedir cita con Servicio de RHB antes de marcharse de alta
-- Solicitar cita para revisión en 3 semanas para {DOCTOR}
+
+REVISIÓN
+- Solicitar cita para revisión en 3 semanas para ${DOCTOR}
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con su Centro de Salud en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario
 ```
 
@@ -2959,9 +3189,8 @@ Diag. Rotura crónica bíceps distal MS ---.
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-Diag. EPICONDILITIS CODO ---.
 - Anestesia gral. Supino. Isquemia preventiva. Mesa de mano.
 - Técnica de Nirschl. Perforaciones con AK en epicóndilo.
 - Lavado profuso y cierre por planos.
@@ -2971,13 +3200,18 @@ Diag. EPICONDILITIS CODO ---.
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Mantener brazo elevado las primeras 24-48h. Puede mover codo libremente sin realizar esfuerzos ni coger peso durante 3 semanas al menos
 - Mover activamente los dedos de la extremidad operada
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos
 - Dexketoprofeno 25 mg v.o. 1/8 horas vía oral durante 4-5 días. Puede alternar con Metamizol caps. 1 c/8h si más dolor
 - Omeprazol 20 mg v.o. 1 c/24h
 - Curas locales c/3-4 días y retirada de puntos por ATS-DUE de zona en 12-14 días según evolución
-- Solicitar cita para revisión en 4 semanas para {DOCTOR}
+
+REVISIÓN
+- Solicitar cita para revisión en 4 semanas para ${DOCTOR}
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con su Centro de Salud en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario
 ```
 
@@ -2990,10 +3224,8 @@ Diag. EPICONDILITIS CODO ---.
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-STC
-SINDROME TÚNEL  CARPIANO  {LADO_M_UPPER}:
 - ISQUEMIA POR ELEVACIÓN EN RAÍZ BRAZO (5 MINUTOS).
 - ANESTESIA  LOCAL Y  SEDACIÓN.
 - MINIINCISIÓN  LONGITUDINAL EN  EJE DEL  4º DE  UNOS 2 CM
@@ -3006,6 +3238,7 @@ SINDROME TÚNEL  CARPIANO  {LADO_M_UPPER}:
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Mantener la extremidad en alto (brazo en cabestrillo y/o pie en alto) durante las primeras 48 horas.
 - Mover activamente los dedos de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
@@ -3016,7 +3249,11 @@ SINDROME TÚNEL  CARPIANO  {LADO_M_UPPER}:
 - Curas locales cada 48h en su Centro de Salud
 - UNA VEZ RETIRADOS LOS PUNTOS MASAJEAR ZONA DE CICATRIZ DE MANERA ENERGICA Y EN CIRCULOS
 - EVITAR COGER PESO Y HACER FUERZA CON LA MANO INTERVENIDA DURANTE 8 SEMANAS
-- Solicitar cita para revisión en 4/6 semanas para {DOCTOR}
+
+REVISIÓN
+- Solicitar cita para revisión en 4/6 semanas para ${DOCTOR}
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
 ```
 
@@ -3025,10 +3262,9 @@ SINDROME TÚNEL  CARPIANO  {LADO_M_UPPER}:
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-TUMOR DE PARTES BLANDAS EN REGIÓN VOLAR DE LA MANO {LADO_F} A NIVEL 2º PLIEGUE INTERDIGITAL
-- Bajo anestesia general, decúbito supino, isquemia de MS {LADO_M}.
+- Bajo anestesia general, decúbito supino, isquemia de MS ${LADO_M}.
 - Se realiza abordaje sobre tumoración.
 - Exéresis de tumoración de diámetro aprox de 2 cm, consistencia gomosa, color parduzco y no adherido a planos profundos, compatible con tumor de células gigantes.
 - Se manda muestra para estudio Anatomía Patológica.
@@ -3038,6 +3274,7 @@ TUMOR DE PARTES BLANDAS EN REGIÓN VOLAR DE LA MANO {LADO_F} A NIVEL 2º PLIEGUE
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Mantener la extremidad en alto (brazo en cabestrillo) durante las primeras 48 horas.
 - Mover activamente los dedos de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
@@ -3045,7 +3282,11 @@ TUMOR DE PARTES BLANDAS EN REGIÓN VOLAR DE LA MANO {LADO_F} A NIVEL 2º PLIEGUE
 - Metamizol 575 mg v.o. cada 8 horas durante 5 días.
 - Realizar masajes sobre cicatriz una vez retirados los puntos.
 - Retirada de puntos por su enfermero/a de referencia en el centro de salud en 12-15 días. Curas locales en su Centro de Salud cada 48h.
-- Solicitar cita para revisión en 4 semanas para {DOCTOR}
+
+REVISIÓN
+- Solicitar cita para revisión en 4 semanas para ${DOCTOR}
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
 ```
 
@@ -3054,10 +3295,9 @@ TUMOR DE PARTES BLANDAS EN REGIÓN VOLAR DE LA MANO {LADO_F} A NIVEL 2º PLIEGUE
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-DEDO EN RESORTE ---
-- Bajo anestesia local y sedación, en decúbito supino, con manguito de isquemia en raíz de MS {LADO_M}.
+- Bajo anestesia local y sedación, en decúbito supino, con manguito de isquemia en raíz de MS ${LADO_M}.
 - Se realiza poleotomía tras incisión en cara volar base --- dedo.
 - Lavado, hemostasia y cierre.
 - Vendaje.
@@ -3066,16 +3306,24 @@ DEDO EN RESORTE ---
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Mantener la mano elevada el mayor tiempo posible durante las primeras 48 horas.
 - Mover activamente los dedos de la extremidad operada, según se le ha explicado.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
-- Medicación incluida en su tarjeta sanitaria:
+
+MEDICACIÓN (según tarjeta sanitaria)
 - METAMIZOL 575mg cada 8 horas vía oral durante 5 días, que puede alternar con PARACETAMOL 1g/8h vía oral si precisa por dolor.
 - OMEPRAZOL 20mg cada 24 horas durante 5 días.
-- Curas locales en centro de salud cada 24-48 horas, retirando puntos de sutura en 12-15 días, salvo mejor criterio de enfermería de zona.
+
+CURAS LOCALES
+- Realizar curas locales en el centro de salud cada 24-48 horas, retirando puntos de sutura en 12-15 días, salvo mejor criterio de enfermería de zona.
 - Una vez retirados los puntos, deberá masajear la zona de la cicatriz en círculos de forma enérgica, para evitar adherencias de la misma.
 - Evitar coger peso y hacer fuerza con la mano intervenida durante 4 semanas desde la fecha de la intervención.
-- Solicitar cita para revisión en 3-4 semanas para {DOCTOR}
+
+REVISIÓN
+- Solicitar cita para revisión en 3-4 semanas para ${DOCTOR}
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
 ```
 
@@ -3084,21 +3332,21 @@ DEDO EN RESORTE ---
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-DEDO EN RESORTE + TENOLISIS ---
-- Bajo anestesia local, decúbito supino, isquemia de MS {LADO_M}.
-- Abordaje transversal sobre pliegue proximal de articulación MCF --- dedo mano {LADO_F}.
+- Bajo anestesia local, decúbito supino, isquemia de MS ${LADO_M}.
+- Abordaje transversal sobre pliegue proximal de articulación MCF --- dedo mano ${LADO_F}.
 - Apertura polea A1 comprobándose liberación completa de tendón FPL.
 - Lavado, hemostasia y cierre.
 Retirada de puntos por su enfermero/a de referencia en el centro de salud en 12-15 días. Curas locales en su Centro de Salud cada 48h
-Solicitar cita para revisión en 4 semanas para {DOCTOR}
+Solicitar cita para revisión en 4 semanas para ${DOCTOR}
 Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
 ```
 
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Puede requerir ayuda domiciliaria
 ```
 
@@ -3107,10 +3355,8 @@ Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-FR EXTREMIDAD DISTAL  DE  RADIO: REDUCCIÓN  ABIERTA Y OSTEOSINTESIS CON  PLACA  DVR
-FRACTURA  EXTREMIDAD DISTAL  DE  RADIO {LADO_M_UPPER}:
 - PROFILAXIS  ANTIBIÓTICA CON  2 GR DE  CEFAZOLINA.
 - ISQUEMIA EN  BRAZO ( 28 MINUTOS).
 - VIA  ABORDAJE ANTERIOR  MUÑECA.
@@ -3124,6 +3370,7 @@ FRACTURA  EXTREMIDAD DISTAL  DE  RADIO {LADO_M_UPPER}:
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Mantener el brazo  elevado  en cabestrillo
 - Mover activamente los dedos de la extremidad operada.
 - Realizar los ejercicios que su médico le ha explicado.
@@ -3132,7 +3379,9 @@ FRACTURA  EXTREMIDAD DISTAL  DE  RADIO {LADO_M_UPPER}:
 - NOLOTIL 1 cápsula / 8 horas vía oral.
 - PARACETAMOL  1 gr/  8 horas alterno  con  anterior  cada  4  horas   si  dolor intenso.
 - OMEPRAZOL 20 mg/ 24  horas.
-- Revisión  en  CC EE de COT ({DOCTOR}) en  3   semanas para Rx, valoración y  seguimiento.
+- Revisión  en  CC EE de COT (${DOCTOR}) en  3   semanas para Rx, valoración y  seguimiento.
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias. Mover activamente los dedos de la extremidad operada.
 ```
 
@@ -3141,10 +3390,8 @@ FRACTURA  EXTREMIDAD DISTAL  DE  RADIO {LADO_M_UPPER}:
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-FR EXTREMIDAD DISTAL  DE  RADIO: RAFI CON PLACA ACUMED
-FRACTURA  EXTREMIDAD DISTAL  DE  RADIO {LADO_M_UPPER}:
 - PROFILAXIS  ANTIBIÓTICA CON  2 GR DE  CEFAZOLINA.
 - ISQUEMIA EN  BRAZO (55 MINUTOS).
 - VIA  ABORDAJE ANTERIOR  MUÑECA.
@@ -3158,6 +3405,7 @@ FRACTURA  EXTREMIDAD DISTAL  DE  RADIO {LADO_M_UPPER}:
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Mantener el brazo  elevado  en cabestrillo
 - Mover activamente los dedos de la extremidad operada.
 - Realizar los ejercicios que su médico le ha explicado.
@@ -3165,7 +3413,9 @@ FRACTURA  EXTREMIDAD DISTAL  DE  RADIO {LADO_M_UPPER}:
 - Puede requerir ayuda domiciliaria
 - ENANPLUS  1  comp /  8 horas
 - OMEPRAZOL 20 mg/ 24  horas.
-- Revisión  en  CC EE de COT ({DOCTOR}) en  4   semanas para Rx, valoración y  seguimiento.
+- Revisión  en  CC EE de COT (${DOCTOR}) en  4   semanas para Rx, valoración y  seguimiento.
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias. Mover activamente los dedos de la extremidad operada.
 ```
 
@@ -3174,10 +3424,8 @@ FRACTURA  EXTREMIDAD DISTAL  DE  RADIO {LADO_M_UPPER}:
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-FR DIAFISARIA RADIO: REDUCCIÓN  ABIERTA  Y  OSTEOSINTESIS  CON  PLACA  Y  TORNILLOS 
-FRACTURA  DIAFISARIA DE  TERCIO  MEDIO  DE  RADIO  {LADO_M_UPPER}: 
 - PROFILAXIS  ANTIBIÓTICA CON  2 GR DE  CEFAZOLINA.
 - ISQUEMIA EN  RAÍZ  DE  MUSLO ( 51 MINUTOS).
 - VIA  ABORDAJE DE  HENRY  EN  CARA  ANTERIOR  ANTABRAZO.
@@ -3191,6 +3439,7 @@ FRACTURA  DIAFISARIA DE  TERCIO  MEDIO  DE  RADIO  {LADO_M_UPPER}:
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Mantener el brazo  elevado  en cabestrillo
 - Mover activamente los dedos de la extremidad operada.
 - Realizar los ejercicios que su médico le ha explicado.
@@ -3198,7 +3447,11 @@ FRACTURA  DIAFISARIA DE  TERCIO  MEDIO  DE  RADIO  {LADO_M_UPPER}:
 - Puede requerir ayuda domiciliaria
 - NOLOTIL 1 cápsula / 8 horas vía oral.
 - OMEPRAZOL 20 mg/ 24  horas.
-- Revisión en CCEE de COT ({DOCTOR}) en 3-4 semanas para Rx, valoración y seguimiento.
+
+REVISIÓN
+- Revisión en CCEE de COT (${DOCTOR}) en 3-4 semanas para Rx, valoración y seguimiento.
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias. Mover activamente los dedos de la extremidad operada.
 ```
 
@@ -3207,10 +3460,8 @@ FRACTURA  DIAFISARIA DE  TERCIO  MEDIO  DE  RADIO  {LADO_M_UPPER}:
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-FR DIAFISARIA CÚBITO Y RADIO: RAFI  CON  PLACA  Y  TORNILLOS 
-FRACTURA  DIAFISARIA DE  TERCIO  MEDIO  DE CÚBITO Y  RADIO  {LADO_M_UPPER}: 
 - PROFILAXIS  ANTIBIÓTICA CON  2 GR DE  CEFAZOLINA.
 - ISQUEMIA EN  RAÍZ  DE  MUSLO ( 70 MINUTOS).
 - VIA  ABORDAJE DE  HENRY  EN  CARA  ANTERIOR  ANTEBRAZO: RAFI CON  PLACA  DCP-LC  DE  8  ORIFICIOS.
@@ -3225,13 +3476,16 @@ FRACTURA  DIAFISARIA DE  TERCIO  MEDIO  DE CÚBITO Y  RADIO  {LADO_M_UPPER}:
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Mantener el brazo  elevado  en cabestrillo
 - Mover activamente los dedos de la extremidad operada.
 - Realizar los ejercicios que su médico le ha explicado.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
 - Puede requerir ayuda domiciliaria
 - NOLOTIL 1 cápsula / 8 horas vía oral,  alternar cada  4  horas  con PARACETAMOL 1 gr/8h si  dolor intenso.
-- Revisión  en  CC EE de COT ({DOCTOR}) e   3   semanas   aprox.  para Rx, valoración y  seguimiento.
+- Revisión  en  CC EE de COT (${DOCTOR}) e   3   semanas   aprox.  para Rx, valoración y  seguimiento.
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias. Mover activamente los dedos de la extremidad operada.
 ```
 
@@ -3240,10 +3494,8 @@ FRACTURA  DIAFISARIA DE  TERCIO  MEDIO  DE CÚBITO Y  RADIO  {LADO_M_UPPER}:
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-FR DIAFISARIA   DE HÚMERO: RAFI  CON  PLACA  Y  TORNILLOS 
-FRACTURA ESPIROIDEA CON TERCER  FRAGMENTO DE LA UNIÓN TERCIO MEDIO-DISTAL DEL  HÚMERO  {LADO_M_UPPER}: 
 - PROFILAXIS  ANTIBIÓTICA CON  2 GR DE  CEFAZOLINA.
 - NO  SE REALIZA  ISQUEMIA.
 - INCISIÓN  LINEA MEDIA  POSTERIOR CON VIA   DE ABORDAJE TRANSTRICIPITAL. 
@@ -3257,6 +3509,7 @@ FRACTURA ESPIROIDEA CON TERCER  FRAGMENTO DE LA UNIÓN TERCIO MEDIO-DISTAL DEL  
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Mantener el brazo  elevado  en cabestrillo
 - Mover activamente los dedos de la extremidad operada  y  flexoextensión  del  codo
 - Realizar los ejercicios que su médico le ha explicado.
@@ -3266,7 +3519,9 @@ FRACTURA ESPIROIDEA CON TERCER  FRAGMENTO DE LA UNIÓN TERCIO MEDIO-DISTAL DEL  
 - METAMIZOL  575 mg / 8 horas vía oral.
 - IBUPROFENO  600 mg/8  horas  via  oral  alterno  con  anterior   si  dolor  intenso
 - OMEPRAZOL 20 mg/ 24  horas.
-- Revisión  en  CC EE de COT ({DOCTOR}) en  3   semanas para Rx, valoración y  seguimiento.
+- Revisión  en  CC EE de COT (${DOCTOR}) en  3   semanas para Rx, valoración y  seguimiento.
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
 ```
 
@@ -3275,10 +3530,8 @@ FRACTURA ESPIROIDEA CON TERCER  FRAGMENTO DE LA UNIÓN TERCIO MEDIO-DISTAL DEL  
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-FR OLECRANON: REDUCCIÓN  ABIERTA  Y  OSTEOSINTESIS  CON  PLACA  Y  TORNILLOS 
-FRACTURA  CONMINUTA OLECRANON  CODO  {LADO_M_UPPER}:
 - PROFILAXIS  ANTIBIÓTICA CON  2 GR DE  CEFAZOLINA.
 - ISQUEMIA EN  RAÍZ  DE  MUSLO ( 68 MINUTOS).
 - VIA  ABORDAJE DE  POSTERIOR   CODO.
@@ -3293,6 +3546,7 @@ FRACTURA  CONMINUTA OLECRANON  CODO  {LADO_M_UPPER}:
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Mantener el brazo  elevado  en cabestrillo
 - Mover activamente los dedos de la extremidad operada.
 - Realizar los ejercicios que su médico le ha explicado.
@@ -3301,7 +3555,9 @@ FRACTURA  CONMINUTA OLECRANON  CODO  {LADO_M_UPPER}:
 - METAMIZOL  575 mg / 8 horas vía oral.
 - IBUPROFENO  600 mg/8  horas  via  oral  alterno  con  anterior   si  dolor  intenso
 - OMEPRAZOL 20 mg/ 24  horas.
-- Revisión  en  CC EE de COT ({DOCTOR}) en  3   semanas para Rx, valoración y  seguimiento.
+- Revisión  en  CC EE de COT (${DOCTOR}) en  3   semanas para Rx, valoración y  seguimiento.
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias. Mover activamente los dedos de la extremidad operada.
 ```
 
@@ -3310,10 +3566,8 @@ FRACTURA  CONMINUTA OLECRANON  CODO  {LADO_M_UPPER}:
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-FR OLECRANON: REDUCCIÓN  ABIERTA  Y  OSTEOSINTESIS  CON  AGUJAS  Y  CERCLAJE 
-FRACTURA  OLECRANON  CODO  {LADO_M_UPPER}: 
 - PROFILAXIS  ANTIBIÓTICA CON  2 GR DE  CEFAZOLINA.
 - ISQUEMIA EN  RAÍZ  DE  MUSLO ( 29 MINUTOS).
 - VIA  ABORDAJE DE  POSTERIOR   CODO.
@@ -3329,6 +3583,7 @@ FRACTURA  OLECRANON  CODO  {LADO_M_UPPER}:
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Mantener el brazo  elevado  en cabestrillo
 - Mover activamente los dedos de la extremidad operada.
 - Realizar los ejercicios que su médico le ha explicado.
@@ -3337,7 +3592,9 @@ FRACTURA  OLECRANON  CODO  {LADO_M_UPPER}:
 - METAMIZOL 575 mg / 8 horas vía oral.
 - IBUPROFENO  600 mg/8  horas  via  oral  alterno  con  anterior cada  4  horas,  si  dolor  intenso
 - OMEPRAZOL 20 mg/ 24  horas.
-- Revisión  en  CC EE de COT ({DOCTOR}) en  2 semanas para Rx, cura herida qca y  seguimiento.
+- Revisión  en  CC EE de COT (${DOCTOR}) en  2 semanas para Rx, cura herida qca y  seguimiento.
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias. Mover activamente los dedos de la extremidad operada.
 ```
 
@@ -3346,10 +3603,8 @@ FRACTURA  OLECRANON  CODO  {LADO_M_UPPER}:
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-SECCIÓN  TENDÓN  MANO
-SECCIÓN  DEL  FLEXOR  PROFUNDO  DEL  3º DEDO  MANO  {LADO_F_UPPER}:
 - ISQUEMIA EN RAÍZ BRAZO.
 - ANESTESIA  GENERAL  CON MASCARILLA  LARÍNGEA.
 - AMPLIACIÓN  DE  LA HERIDA INICIAL A  NIVEL  DEL  PLIEGUE FLEXOR   DEL  LA  IFP DEL  DEDO.
@@ -3364,6 +3619,7 @@ SECCIÓN  DEL  FLEXOR  PROFUNDO  DEL  3º DEDO  MANO  {LADO_F_UPPER}:
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Mantener la extremidad en alto (brazo en cabestrillo y/o pie en alto) durante las primeras 48 horas.
 - Mover activamente los dedos de la mano  libres.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
@@ -3372,9 +3628,13 @@ SECCIÓN  DEL  FLEXOR  PROFUNDO  DEL  3º DEDO  MANO  {LADO_F_UPPER}:
 - METAMIZOL 575mg/ 8 horas vía oral
 - PARACETAMOL 1 g/vo/8h
 - Acudir a SALA DE CURAS DE  COT (GABINETA 7) el próximo  lunes 1 Abril  para ver estado de herida  y  recitar  en  función  de la  misma.
-- Solicitar cita para revisión en 3 semanas  para {DOCTOR}
+
+REVISIÓN
+- Solicitar cita para revisión en 3 semanas  para ${DOCTOR}
 - UNA VEZ RETIRADOS LOS PUNTOS MASAJEAR ZONA DE CICATRIZ DE MANERA ENERGICA Y EN CIRCULOS
 - EVITAR COGER PESO Y HACER FUERZA CON LA MANO INTERVENIDA DURANTE 8 SEMANAS
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
 ```
 
@@ -3383,14 +3643,12 @@ SECCIÓN  DEL  FLEXOR  PROFUNDO  DEL  3º DEDO  MANO  {LADO_F_UPPER}:
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-CLAVO  T2  DE HUMERO RETRÓGRADO
-FRACTURA DIAFISARIA TRANSVERSAL  DE TERCIO  MEDIO DE  HUMERO {LADO_M_UPPER}: 
 - PROFILAXIS ANTIBIÓTICA CON VANCOMICINA  1 G.
-- DECUBITO  PRONO CON  MIEMBRO  SUPERIOR {LADO_M_UPPER} SOBRE TABLA E  FLEXIÓN  DEL  CODO  DE  90º.
+- DECUBITO  PRONO CON  MIEMBRO  SUPERIOR ${LADO_M_UPPER} SOBRE TABLA E  FLEXIÓN  DEL  CODO  DE  90º.
 -  CONTROL  DE ESCOPIA.
-- INCISIÓN  LONGITUDINAL DE  UNOS  6/8 CMEN LINEA  MEDIA EN  CARA  POSTERIOR DE  TERCIO  DISTAL  DE  BRAZO  {LADO_M_UPPER}  CON ABORDAJE  TRANSTRICIPITAL.
+- INCISIÓN  LONGITUDINAL DE  UNOS  6/8 CMEN LINEA  MEDIA EN  CARA  POSTERIOR DE  TERCIO  DISTAL  DE  BRAZO  ${LADO_M_UPPER}  CON ABORDAJE  TRANSTRICIPITAL.
 - OSTEOSINTESIS CON  CLAVO  INTRAMEDULAR  FRESADO T2 RETROGRADO  DE  HUMERO DE  190 * 7 MM. 
 - BLOQUEO  PROXIMAL  CON  1  TORNILLO DE  30 MM.
 -  BLOQUEO  DISTAL  DINÁMICO  CON  TORNILLO  DE  25 MM.
@@ -3406,6 +3664,7 @@ FRACTURA DIAFISARIA TRANSVERSAL  DE TERCIO  MEDIO DE  HUMERO {LADO_M_UPPER}:
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Mantener el mano  elevada en  cabestrillo.
 - Mover activamente los dedos de la extremidad operada.
 - Movilidad libre del  codo  sin  realizar movimientos bruscos  ni  coger  peso.
@@ -3413,7 +3672,11 @@ FRACTURA DIAFISARIA TRANSVERSAL  DE TERCIO  MEDIO DE  HUMERO {LADO_M_UPPER}:
 - Puede requerir ayuda domiciliaria
 - IBUPROFENO 600 mg / 8 horas vía oral.
 - Revisión  de  herida  qca en  Centro  Salud  cada  72 horas  para  curas  locales.
-- Revisión en CCEE de COT ({DOCTOR}) en 3-4 semanas para control Rx, retirada sutura y seguimiento.
+
+REVISIÓN
+- Revisión en CCEE de COT (${DOCTOR}) en 3-4 semanas para control Rx, retirada sutura y seguimiento.
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
 ```
 
@@ -3422,10 +3685,9 @@ FRACTURA DIAFISARIA TRANSVERSAL  DE TERCIO  MEDIO DE  HUMERO {LADO_M_UPPER}:
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-WEAVER-DUNN / FRACTURA CLAVÍCULA DISTAL ---
-- Luxación acromioclavicular / fractura distal clavícula {LADO_F}.
+- Luxación acromioclavicular / fractura distal clavícula ${LADO_F}.
 - Anestesia general e IOT. Profilaxis antibiótica con 2g de cefazolina.
 - En posición de silla de playa.
 - Abordaje directo sobre trazo de fractura, longitudinal a clavícula, reducción abierta.
@@ -3441,16 +3703,24 @@ WEAVER-DUNN / FRACTURA CLAVÍCULA DISTAL ---
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Mantener brazo en cabestrillo, moviendo mano y codo como se le ha explicado.
 - Realizar los ejercicios que su médico le ha explicado.
 - Vigilar coloración y sensibilidad de la mano y los dedos.
 - Evitar cargar peso sobre brazo intervenido hasta nuevo aviso y según plazos marcados.
-- Medicación incluida en su tarjeta sanitaria:
+
+MEDICACIÓN (según tarjeta sanitaria)
 - METAMIZOL 575mg cada 8 horas vía oral, que puede alternar con PARACETAMOL 1g/8h vía oral si precisa por dolor.
 - IBUPROFENO 400 mg cada 8 horas vía oral añadido a lo anterior si precisa por dolor.
 - OMEPRAZOL 20mg cada 24 horas.
-- Curas locales en centro de salud cada 48-72 horas, retirando grapas en 15-17 días, salvo mejor criterio de enfermería de zona.
-- Solicitar cita para revisión en 3-4 semanas para {DOCTOR}, para control evolutivo y radiológico.
+
+CURAS LOCALES
+- Realizar curas locales en el centro de salud cada 48-72 horas, retirando grapas en 15-17 días, salvo mejor criterio de enfermería de zona.
+
+REVISIÓN
+- Solicitar cita para revisión en 3-4 semanas para ${DOCTOR}, para control evolutivo y radiológico.
+
+SÍNTOMAS DE ALERTA
 - Si aparece fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
 ```
 
@@ -3459,10 +3729,9 @@ WEAVER-DUNN / FRACTURA CLAVÍCULA DISTAL ---
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-DUPUYTREN ---
-- Bajo anestesia regional y sedación, en decúbito supino, con manguito de isquemia en raíz de MS {LADO_M}.
+- Bajo anestesia regional y sedación, en decúbito supino, con manguito de isquemia en raíz de MS ${LADO_M}.
 - Abordaje en zigzag sobre cordón fibroso --- radio.
 - Escisión del mismo, comprobando extensión completa de articulaciones metacarpofalángica e interfalángicas.
 - Lavado, hemostasia y cierre.
@@ -3472,16 +3741,24 @@ DUPUYTREN ---
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Mantener la mano elevada el mayor tiempo posible durante las primeras 48 horas.
 - Mover activamente los dedos de la extremidad operada, según se le ha explicado.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
-- Medicación incluida en su tarjeta sanitaria:
+
+MEDICACIÓN (según tarjeta sanitaria)
 - METAMIZOL 575mg cada 8 horas vía oral durante 5 días, que puede alternar con PARACETAMOL 1g/8h vía oral si precisa por dolor.
 - OMEPRAZOL 20mg cada 24 horas durante 5 días.
-- Curas locales en centro de salud cada 24-48 horas, retirando puntos de sutura en 12-15 días, salvo mejor criterio de enfermería de zona.
+
+CURAS LOCALES
+- Realizar curas locales en el centro de salud cada 24-48 horas, retirando puntos de sutura en 12-15 días, salvo mejor criterio de enfermería de zona.
 - Una vez retirados los puntos, deberá masajear la zona de la cicatriz en círculos de forma enérgica, para evitar adherencias de la misma.
 - Evitar coger peso y hacer fuerza con la mano intervenida durante 4 semanas desde la fecha de la intervención.
-- Solicitar cita para revisión en 3-4 semanas para {DOCTOR}
+
+REVISIÓN
+- Solicitar cita para revisión en 3-4 semanas para ${DOCTOR}
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
 ```
 
@@ -3490,10 +3767,9 @@ DUPUYTREN ---
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-GANGLIÓN MANO {LADO_F}
-- Bajo anestesia local y sedación, en decúbito supino, con manguito de isquemia en raíz de MS {LADO_M}.
+- Bajo anestesia local y sedación, en decúbito supino, con manguito de isquemia en raíz de MS ${LADO_M}.
 - Incisión en cara dorsal de mano.
 - Resección de la lesión hasta punto de comunicación con articulación, y electrocoagulación del mismo.
 - Lavado, hemostasia y cierre.
@@ -3503,14 +3779,21 @@ GANGLIÓN MANO {LADO_F}
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Mantener la mano elevada el mayor tiempo posible durante las primeras 48 horas.
 - Mover activamente los dedos de la extremidad operada, según se le ha explicado.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
 - METAMIZOL 575mg cada 8 horas vía oral durante 5 días, que puede alternar con PARACETAMOL 1g/8h vía oral si precisa por dolor.
 - OMEPRAZOL 20mg cada 24 horas durante 5 días.
-- Curas locales en centro de salud cada 48-72 horas, retirando puntos de sutura en 12-15 días, salvo mejor criterio de enfermería de zona.
+
+CURAS LOCALES
+- Realizar curas locales en el centro de salud cada 48-72 horas, retirando puntos de sutura en 12-15 días, salvo mejor criterio de enfermería de zona.
 - Una vez retirados los puntos, deberá masajear la zona de la cicatriz en círculos de forma enérgica, para evitar adherencias de la misma.
-- Solicitar cita para revisión en 3-4 semanas para {DOCTOR}
+
+REVISIÓN
+- Solicitar cita para revisión en 3-4 semanas para ${DOCTOR}
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
 ```
 
@@ -3519,21 +3802,25 @@ GANGLIÓN MANO {LADO_F}
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-INFILTRACIÓN TMTC-STT MANO {LADO_F}
-- Infiltración bajo escopia TMTC-STT mano {LADO_F} con AL+CE.
+- Infiltración bajo escopia TMTC-STT mano ${LADO_F} con AL+CE.
 - Inmediata mejoría del dolor.
 ```
 
 **Tratamiento al Alta:**
 
 ```
-- Reposo mano {LADO_F} 24-48 horas.
+CUIDADOS POSTOPERATORIOS
+- Reposo mano ${LADO_F} 24-48 horas.
 - Mover activamente los dedos de la extremidad operada, según se le ha explicado.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
 - Retirar apósito pasadas las 6-8 horas de la intervención.
-- Solicitar cita para revisión en 3-4 semanas para {DOCTOR}
+
+REVISIÓN
+- Solicitar cita para revisión en 3-4 semanas para ${DOCTOR}
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
 ```
 
@@ -3542,10 +3829,9 @@ INFILTRACIÓN TMTC-STT MANO {LADO_F}
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-RIZARTROSIS — TRAPECIECTOMÍA + PLASTIA WELBY MODIFICADA
-- Bajo anestesia locorregional + sedación, decúbito supino, isquemia de MS {LADO_M}.
+- Bajo anestesia locorregional + sedación, decúbito supino, isquemia de MS ${LADO_M}.
 - Abordaje dorsal de TMC primer dedo y técnica de Welby modificada.
 - Identificación de rama sensitiva dorsal del nervio radial.
 - Exéresis de trapecio, comprobando buen estado de superficie articular de escafoides y trapezoide e integridad de arteria radial.
@@ -3558,6 +3844,7 @@ RIZARTROSIS — TRAPECIECTOMÍA + PLASTIA WELBY MODIFICADA
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Mantener la extremidad en alto (brazo en cabestrillo) durante las primeras 48 horas.
 - Mover activamente los dedos de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
@@ -3565,7 +3852,11 @@ RIZARTROSIS — TRAPECIECTOMÍA + PLASTIA WELBY MODIFICADA
 - METAMIZOL 575mg/vo/8h/5 días
 - PARACETAMOL 1g/vo/8h/5 días
 - Curas locales cada 48-72h. Retirada de puntos a partir de los 12-15 días.
-- Solicitar cita para revisión en 4 semanas para {DOCTOR}
+
+REVISIÓN
+- Solicitar cita para revisión en 4 semanas para ${DOCTOR}
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
 ```
 
@@ -3582,11 +3873,10 @@ RIZARTROSIS — TRAPECIECTOMÍA + PLASTIA WELBY MODIFICADA
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-ANTEPIÉ — SCARF / AKIN / WEIL (STRYKER)
 - Profilaxis antibiótica
-- Isquemia preventiva de miembro inferior
+- Isquemia preventiva de miembro inferior ${LADO_M}
 - Abordaje medial sobre 1º radio
 - Disección cuidadosa por planos, liberación de rama dorsal de nervio
 - Osteotomía SCARF sobre M1, AKIN sobre F1, fijados con sendos tornillos FIXOS STRYKER
@@ -3600,6 +3890,7 @@ ANTEPIÉ — SCARF / AKIN / WEIL (STRYKER)
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Mantener el pie elevado siempre que esté sentado
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos
 - Caminar apoyando TODO EL PIE. Para ello, recomendamos comprar un zapato de postoperatorio (para apoyar todo el pie), de venta libre en ortopedias. Puede solicitar bastones en préstamo
@@ -3614,7 +3905,11 @@ ANTEPIÉ — SCARF / AKIN / WEIL (STRYKER)
 - No es preciso retirar sutura. Puede ayudar a su caída frotando la herida durante el lavado a partir de la 3ª semana de la intervención
 - Una vez retirados los puntos, deberá masajear la zona de la cicatriz en círculos de forma enérgica, para evitar adherencias de la misma
 - Debe evitar fumar hasta que la herida esté cicatrizada, no obstante, aconsejamos el abandono definitivo del tabaco si es usted fumador
-- Solicitar cita para revisión con {DOCTOR} en 4 semanas
+
+REVISIÓN
+- Solicitar cita para revisión con ${DOCTOR} en 4 semanas
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con su Centro de Salud en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario
 ```
 
@@ -3623,12 +3918,11 @@ ANTEPIÉ — SCARF / AKIN / WEIL (STRYKER)
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-PIE PLANO — OSTEOTOMÍA (KOUSTOGIANNIS + EVANS + COTTON)
 - Profilaxis antibiótica
 - Anestesia raquimedular
-- Isquemia preventiva de miembro inferior
+- Isquemia preventiva de miembro inferior ${LADO_M}
 - Decúbito supino, abordaje lateral sobre calcáneo
 - Osteotomía tipo Koustogiannis fijada con 2 tornillos ASNIS STRYKER de 6,5 mm / AUTOFIX STRYKER 6,5 mm
 - Osteotomía de alargamiento de columna externa tipo Evans con cuña de aloinjerto fijada con tornillos ASNIS de 4 mm
@@ -3643,6 +3937,7 @@ PIE PLANO — OSTEOTOMÍA (KOUSTOGIANNIS + EVANS + COTTON)
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Mantener pierna en alto y moviendo dedos y tobillo como se explica
 - Puede ponerse frío local, nunca directamente sobre la piel, para el control de la inflamación
 - Descarga de la pierna intervenida hasta la revisión en consulta. Puede solicitar muletas/silla de ruedas en préstamo
@@ -3653,7 +3948,11 @@ PIE PLANO — OSTEOTOMÍA (KOUSTOGIANNIS + EVANS + COTTON)
 - Precisa cuidados domiciliarios
 - CITA EN SALA DE CURAS DE COT (Gabinete 7) en unos 3-5 días para valorar herida
 - Debe evitar fumar hasta que la herida esté cicatrizada, no obstante, aconsejamos el abandono definitivo del tabaco si es usted fumador
-- Solicitar cita para revisión con {DOCTOR} en 4 semanas
+
+REVISIÓN
+- Solicitar cita para revisión con ${DOCTOR} en 4 semanas
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con su Centro de Salud en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario
 - No es preciso retirar sutura. Puede ayudar a su caída frotando la herida durante el lavado a partir de la 3ª semana de la intervención
 - Una vez retirados los puntos, deberá masajear la zona de la cicatriz en círculos de forma enérgica, para evitar adherencias de la misma
@@ -3664,12 +3963,11 @@ PIE PLANO — OSTEOTOMÍA (KOUSTOGIANNIS + EVANS + COTTON)
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-PIE PLANO — ARTRODESIS SUBASTRAGALINA + TALONAVICULAR
 - Profilaxis antibiótica
 - Anestesia raquimedular
-- Isquemia preventiva de miembro inferior
+- Isquemia preventiva de miembro inferior ${LADO_M}
 - Decúbito supino, abordaje medial
 - Denudación de superficies articulares y artrodesis subastragalina + talonavicular
 - Corrección de eje del retropié en el plano coronal y sagital
@@ -3684,6 +3982,7 @@ PIE PLANO — ARTRODESIS SUBASTRAGALINA + TALONAVICULAR
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Mantener pierna en alto y moviendo dedos y tobillo como se explica
 - Puede ponerse frío local, nunca directamente sobre la piel, para el control de la inflamación
 - Descarga de la pierna intervenida hasta la revisión en consulta. Puede solicitar muletas/silla de ruedas en préstamo
@@ -3694,7 +3993,11 @@ PIE PLANO — ARTRODESIS SUBASTRAGALINA + TALONAVICULAR
 - Precisa cuidados domiciliarios
 - CITA EN SALA DE CURAS DE COT (Gabinete 7) en unos 3-5 días para valorar herida
 - Debe evitar fumar hasta que la herida esté cicatrizada, no obstante, aconsejamos el abandono definitivo del tabaco si es usted fumador
-- Solicitar cita para revisión con {DOCTOR} en 4 semanas
+
+REVISIÓN
+- Solicitar cita para revisión con ${DOCTOR} en 4 semanas
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con su Centro de Salud en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario
 - No es preciso retirar sutura. Puede ayudar a su caída frotando la herida durante el lavado a partir de la 3ª semana de la intervención
 - Una vez retirados los puntos, deberá masajear la zona de la cicatriz en círculos de forma enérgica, para evitar adherencias de la misma
@@ -3705,12 +4008,11 @@ PIE PLANO — ARTRODESIS SUBASTRAGALINA + TALONAVICULAR
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-PIE CAVO VARO — OSTEOTOMÍA (DWYER + JONES)
 - Profilaxis antibiótica
 - Anestesia raquimedular
-- Isquemia preventiva de miembro inferior
+- Isquemia preventiva de miembro inferior ${LADO_M}
 - Decúbito supino, abordaje lateral sobre calcáneo
 - Osteotomía tipo Dwyer + Koustogiannis inverso fijada con 2 tornillos ASNIS STRYKER de 6,5 mm / AUTOFIX STRYKER 6,5 mm
 - Abordaje dorsomedial sobre primer radio
@@ -3725,6 +4027,7 @@ PIE CAVO VARO — OSTEOTOMÍA (DWYER + JONES)
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Mantener pierna en alto y moviendo dedos y tobillo como se explica
 - Puede ponerse frío local, nunca directamente sobre la piel, para el control de la inflamación
 - Descarga de la pierna intervenida hasta la revisión en consulta. Puede solicitar muletas/silla de ruedas en préstamo
@@ -3735,7 +4038,11 @@ PIE CAVO VARO — OSTEOTOMÍA (DWYER + JONES)
 - Precisa cuidados domiciliarios
 - CITA EN SALA DE CURAS DE COT (Gabinete 7) en unos 3-5 días para valorar herida
 - Debe evitar fumar hasta que la herida esté cicatrizada, no obstante, aconsejamos el abandono definitivo del tabaco si es usted fumador
-- Solicitar cita para revisión con {DOCTOR} en 4 semanas
+
+REVISIÓN
+- Solicitar cita para revisión con ${DOCTOR} en 4 semanas
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con su Centro de Salud en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario
 - No es preciso retirar sutura. Puede ayudar a su caída frotando la herida durante el lavado a partir de la 3ª semana de la intervención
 - Una vez retirados los puntos, deberá masajear la zona de la cicatriz en círculos de forma enérgica, para evitar adherencias de la misma
@@ -3746,12 +4053,11 @@ PIE CAVO VARO — OSTEOTOMÍA (DWYER + JONES)
 **Nota Operatoria:**
 
 ```
-IQ {FECHA} ({DOCTOR}/{AYUDANTE})
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-PIE CAVO VARO — ARTRODESIS TRIPLE (SUBASTRAGALINA + TALONAVICULAR + CALCANEOCUBOIDEA)
 - Profilaxis antibiótica
 - Anestesia raquimedular
-- Isquemia preventiva de miembro inferior
+- Isquemia preventiva de miembro inferior ${LADO_M}
 - Decúbito supino, abordaje medial y lateral
 - Denudación de superficies articulares y artrodesis subastragalina + talonavicular + calcaneocuboidea
 - Corrección de eje del retropié en el plano coronal y sagital
@@ -3766,6 +4072,7 @@ PIE CAVO VARO — ARTRODESIS TRIPLE (SUBASTRAGALINA + TALONAVICULAR + CALCANEOCU
 **Tratamiento al Alta:**
 
 ```
+CUIDADOS POSTOPERATORIOS
 - Mantener pierna en alto y moviendo dedos y tobillo como se explica
 - Puede ponerse frío local, nunca directamente sobre la piel, para el control de la inflamación
 - Descarga de la pierna intervenida hasta la revisión en consulta. Puede solicitar muletas/silla de ruedas en préstamo
@@ -3776,19 +4083,27 @@ PIE CAVO VARO — ARTRODESIS TRIPLE (SUBASTRAGALINA + TALONAVICULAR + CALCANEOCU
 - Precisa cuidados domiciliarios
 - CITA EN SALA DE CURAS DE COT (Gabinete 7) en unos 3-5 días para valorar herida
 - Debe evitar fumar hasta que la herida esté cicatrizada, no obstante, aconsejamos el abandono definitivo del tabaco si es usted fumador
-- Solicitar cita para revisión con {DOCTOR} en 4 semanas
+
+REVISIÓN
+- Solicitar cita para revisión con ${DOCTOR} en 4 semanas
+
+SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con su Centro de Salud en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario
 - No es preciso retirar sutura. Puede ayudar a su caída frotando la herida durante el lavado a partir de la 3ª semana de la intervención
 - Una vez retirados los puntos, deberá masajear la zona de la cicatriz en círculos de forma enérgica, para evitar adherencias de la misma
 ```
 
----
+<a id="reglas-generales"></a>
 
 ## Reglas Generales
 
-1. **Header IQ**: Toda plantilla comienza con `IQ {FECHA} ({DOCTOR}/{AYUDANTE})`. Nunca incluir línea `INTERVENCIÓN (DRS. ...)`.
-2. **Formato con guiones**: La primera línea tras la línea en blanco es el título del procedimiento (sin guión). Todas las líneas de contenido siguientes llevan prefijo `- `.
-3. **Revisión en consulta**: Incluir siempre `{DOCTOR}` en la línea de revisión. Nunca hardcodear nombres ni fechas.
-4. **Variables dinámicas**: Usar `{FECHA}`, `{DOCTOR}`, `{AYUDANTE}` — nunca valores fijos.
-5. **Lateralidad**: Usar variables dinámicas según género y contexto: `{LADO_M}` (derecho/izquierdo), `{LADO_F}` (derecha/izquierda), `{LADO_M_UPPER}` (DERECHO/IZQUIERDO), `{LADO_F_UPPER}` (DERECHA/IZQUIERDA), `{LADO_ABR_F}` (DCHA/IZDA), `{LADO_ABR_M}` (DCHO/IZDO), `{DECUBITO}` (decúbito lateral contrario, minúscula), `{DECUBITO_UPPER}` (DECÚBITO LATERAL contrario, mayúscula). Usar `---` solo para placeholders no relacionados con lateralidad (ej: número de dedo).
-6. **Key de plantilla**: `snake_case` con prefijo de categoría (`hombro_`, `codo_`, `ms_`, `rodilla_`, `pt_`, etc.).
+Ver [CLAUDE.md](./CLAUDE.md) para las reglas detalladas del proyecto.
+
+Resumen:
+
+1. **Header:** Toda plantilla empieza con `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})`
+2. **Formato:** Líneas con guión (`- `), título del procedimiento sin guión
+3. **Revisión:** Siempre incluir `${DOCTOR}` en la línea de revisión
+4. **Variables:** Usar `${FECHA}`, `${DOCTOR}`, `${AYUDANTE}` — nunca hardcodear
+5. **Lateralidad:** Usar variables dinámicas (`${LADO_M}`, `${LADO_F}`, etc.) según género del sustantivo — nunca hardcodear
+6. **Key:** Formato `snake_case` con prefijo de categoría
