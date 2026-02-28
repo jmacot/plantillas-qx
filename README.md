@@ -1,9 +1,10 @@
 # 📋 Plantillas COT
 
-Aplicacion web de archivo unico para **Cirugia Ortopedica y Traumatologia (COT)** con tres modulos: **Quirofano** (notas operatorias y tratamientos al alta), **Urgencias** (anamnesis, exploracion y plan con campos dinamicos) y **Recomendaciones** (proximamente). Disenada para agilizar la documentacion clinica.
+Aplicacion web de archivo unico para **Cirugia Ortopedica y Traumatologia (COT)** con tres modulos: **Quirofano** (notas operatorias y tratamientos al alta), **Ejercicios** (protocolos SERMEF de ejercicios terapeuticos) y **Urgencias** (anamnesis, exploracion y plan con campos dinamicos). Disenada para agilizar la documentacion clinica.
 
 ![HTML5](https://img.shields.io/badge/HTML5-single--file-E34F26?logo=html5&logoColor=white)
 ![Plantillas](https://img.shields.io/badge/plantillas_qx-87-1a3a5c)
+![Ejercicios](https://img.shields.io/badge/ejercicios_SERMEF-23-16a34a)
 ![Urgencias](https://img.shields.io/badge/plantillas_urg-10-dc2626)
 ![Sin dependencias](https://img.shields.io/badge/dependencias-ninguna-grey)
 
@@ -35,20 +36,22 @@ No requiere instalacion. Funciona en cualquier navegador, incluyendo movil y tab
 - El texto se adapta automaticamente segun los campos seleccionados
 - Categorias: Cadera, Rodilla, Tobillo, Muneca, Hombro (ampliable)
 
-### Recomendaciones
+### Ejercicios
 
-- Proximamente — seccion preparada para recomendaciones postoperatorias y protocolos
+- **23 protocolos de ejercicios terapeuticos** de la SERMEF (Sociedad Espanola de Rehabilitacion y Medicina Fisica)
+- **7 regiones anatomicas**: Hombro (6), Codo (2), Columna (3), Rodilla (3), Tobillo (3), Cadera (4), Osteoporosis (2)
+- **Dos acciones por protocolo**: ver PDF del protocolo o personalizar programa en ejercicios.sermef.es
+- Sidebar vertical con pills por region y colores distintivos
 
 ---
 
 ## Como usar
 
 1. Abre `index.html` en tu navegador.
-2. Selecciona el **modulo** (Quirofano, Urgencias o Recomendaciones).
-3. **Quirofano**: escribe cirujano/ayudante, selecciona la intervencion.
-4. **Urgencias**: selecciona sexo, edad, lateralidad, conservador/quirurgico y diagnostico.
-5. Los textos se generan automaticamente.
-6. Pulsa **Copiar** y pega donde lo necesites.
+2. Selecciona el **modulo** (Quirofano, Ejercicios o Urgencias).
+3. **Quirofano**: escribe cirujano/ayudante, selecciona la intervencion. Pulsa **Copiar** y pega donde lo necesites.
+4. **Ejercicios**: selecciona la region anatomica, haz clic en el protocolo y elige **Protocolo** (PDF) o **Personalizar programa** (ejercicios.sermef.es).
+5. **Urgencias**: selecciona sexo, edad, lateralidad, conservador/quirurgico y diagnostico. Pulsa **Copiar**.
 
 ---
 
