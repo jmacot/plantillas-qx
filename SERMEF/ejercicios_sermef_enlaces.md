@@ -25,7 +25,7 @@ Cada enlace lleva directamente a la creación de un nuevo programa específico p
 
 - [Síndrome subacromial](https://ejercicios.sermef.es/#/programas/especifico?zona=6343e666d1c859edf64311ca&cuadro=6343e4a2d1c859edf64311b7)
 - [Rotura del supraespinoso](https://ejercicios.sermef.es/#/programas/especifico?zona=6343e666d1c859edf64311ca&cuadro=6343e4f8d1c859edf64311b8)
-- [Capsulitis retráctil](https://ejercicios.sermef.es/#/programas/especifico?zona=6343e666d1c859edf64311ca&cuadro=6343e511d1c859edf64311ba)
+- [Capsulitis retráctil](https://ejercicios.sermef.es/#/programas/especifico?zona=6343e666d1c859edf64311ca&cuadro=6343e515d1c859edf64311ba)
 - [Síndrome capsular posterior](https://ejercicios.sermef.es/#/programas/especifico?zona=6343e666d1c859edf64311ca&cuadro=6343e51fd1c859edf64311bb)
 - [Inestabilidad de hombro](https://ejercicios.sermef.es/#/programas/especifico?zona=6343e666d1c859edf64311ca&cuadro=6343e529d1c859edf64311bc)
 - [Rotura masiva del manguito rotador](https://ejercicios.sermef.es/#/programas/especifico?zona=6343e666d1c859edf64311ca&cuadro=6343e509d1c859edf64311b9)
