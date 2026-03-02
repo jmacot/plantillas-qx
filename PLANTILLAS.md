@@ -2106,7 +2106,7 @@ IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 - OBTENCIÓN  Y PREPARACIÓN DE PLASTIA AUTOLOGA  ST-RI.
 - FONDOS DE SACO  CUADRICIPITALES: SIN  ALTERACIONES.
 - COMPARTIMENTO  INTERNO: SIN LESIONES MENISCALES NI CONDRALES.
--  COMPARTIMENTO  EXTERNO: AVULSIÓN  DE  LA RAÍZ  MENISCAL  DE CPML TIPO  4 ((LESIÓN  OBLICUA COMPLETA CON  DESINSERCIÓN  DE LA RIAÍZ). SE REALIZA   REINSERCIÓN  ANATÓMICA  CON  PUNTO  DE SUTURA  TÉCNICA TRANSTIBIAL  Y  FIJACIÓN  DISTAL  EN  CORTICAL  ANTERIOR CON  BOTÓN.  
+-  COMPARTIMENTO  EXTERNO: AVULSIÓN  DE  LA RAÍZ  MENISCAL  DE CPML TIPO  4 (LESIÓN  OBLICUA COMPLETA CON  DESINSERCIÓN  DE LA RAÍZ). SE REALIZA   REINSERCIÓN  ANATÓMICA  CON  PUNTO  DE SUTURA  TÉCNICA TRANSTIBIAL  Y  FIJACIÓN  DISTAL  EN  CORTICAL  ANTERIOR CON  BOTÓN.  
 - LIGAMENTOPLASTIA LCA 4ST-RI CON ANCLAJE FEMORAL PROCINCH Y  TIBIAL CON TIF BIOSTEON 9*28 MM.
 - DRENAJE ASPIRATIVO INTRAARTICULAR.
 - CIERRE POR PLANOS DE LA FASCIA DEL  SARTORIO  Y TCS.
@@ -2930,7 +2930,7 @@ SÍNTOMAS DE ALERTA
 - Adducción: 30 grados.
 - Rotación interna en flexión: 20 grados.
 - Rotación externa en flexión : 70 grados.
-- RECUERDE: NO TODAS LAS ARTROSCOPIAS DE CADERAS SON IGULAES.
+- RECUERDE: NO TODAS LAS ARTROSCOPIAS DE CADERAS SON IGUALES.
 - Cada paciente evoluciona de forma diferente en función de la cirugía realizada, edad, el estado de salud previo y su
 - capacidad para adaptarse a la Rehabilitación.
 - Una complicación frecuente durante el programa de rehabilitación es la tendinitis del tendón del Psoas Iliaco. Cursa con dolor inguinal anterior y ocurre porque nos hemos excedido  en los ejercicios. En tal caso, debemos acudir al médico/fisioterapeuta para reconducir la rehabilitación.
