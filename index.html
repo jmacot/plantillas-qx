@@ -1217,23 +1217,54 @@
       subContainer.innerHTML = '';
       selectCategoria(region.catIds[0]);
     } else {
-      subContainer.innerHTML = region.catIds.map(catId => {
-        const cat = CATEGORIAS.find(c => c.id === catId);
-        if (!cat) return '';
-        return `<button class="cat-pill" data-cat="${cat.id}" onclick="selectCategoria('${cat.id}')">
-          ${cat.label} <span class="cat-count">${cat.procs.length}</span>
-        </button>`;
-      }).join('');
+      const allCount = region.catIds.reduce((s, id) => {
+        const c = CATEGORIAS.find(x => x.id === id);
+        return s + (c ? c.procs.length : 0);
+      }, 0);
+      subContainer.innerHTML =
+        `<button class="cat-pill active" data-cat="all" onclick="filterSubCat('all')">
+          Todas <span class="cat-count">${allCount}</span>
+        </button>` +
+        region.catIds.map(catId => {
+          const cat = CATEGORIAS.find(c => c.id === catId);
+          if (!cat) return '';
+          return `<button class="cat-pill" data-cat="${cat.id}" onclick="filterSubCat('${cat.id}')">
+            ${cat.label} <span class="cat-count">${cat.procs.length}</span>
+          </button>`;
+        }).join('');
       subContainer.style.display = 'flex';
       subContainer.classList.remove('animate-in');
       void subContainer.offsetWidth;
       subContainer.classList.add('animate-in');
-      activeCat = null;
-      const sel = document.getElementById('procedimiento');
-      sel.disabled = true;
-      sel.innerHTML = '<option value="">— Seleccione subcategoría —</option>';
-      document.getElementById('hojaOperatoria').value = '';
-      document.getElementById('tratamientoAlta').value = '';
+      populateAllProcs();
+    }
+  }
+
+  function populateAllProcs() {
+    const region = REGIONES.find(r => r.id === activeRegion);
+    if (!region) return;
+    const allProcs = region.catIds.flatMap(catId => {
+      const cat = CATEGORIAS.find(c => c.id === catId);
+      return cat ? cat.procs : [];
+    });
+    const sel = document.getElementById('procedimiento');
+    sel.disabled = false;
+    sel.innerHTML = '<option value="">— Seleccione procedimiento —</option>' +
+      [...allProcs].sort((a, b) => a.label.localeCompare(b.label, 'es'))
+        .map(p => `<option value="${p.value}">${p.label}</option>`).join('');
+    sel.value = '';
+    activeCat = null;
+    cargarPlantilla();
+  }
+
+  function filterSubCat(catId) {
+    document.querySelectorAll('#subCatPills .cat-pill').forEach(p => {
+      p.classList.toggle('active', p.dataset.cat === catId);
+    });
+    if (catId === 'all') {
+      populateAllProcs();
+    } else {
+      selectCategoria(catId);
     }
   }
 
@@ -1622,7 +1653,6 @@ MEDICACIÓN (según tarjeta sanitaria)
 - METAMIZOL 575mg cada 8 horas vía oral, que puede alternar con PARACETAMOL 1g/8h vía oral si precisa por dolor.
 - OMEPRAZOL 20mg cada 24 horas.
 - ENOXAPARINA 40mg cada 24 horas vía subcutánea.
-- HIERRO ORAL 1 comprimido vía oral en ayunas cada día durante un mes.
 - DEMILOS 600mg/2000 UI 1 comprimido al día
 
 CURAS LOCALES
@@ -1651,7 +1681,7 @@ hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 tratamiento: `CUIDADOS POSTOPERATORIOS
 - Mantener pie elevado cuando esté sentada, moviendo el pie como se le ha explicado.
-- Realizar los ejercicios que su médico le ha explicado, y seguir hoja de recomendaciones de pacientes con prótesis de cadera.
+- Realizar los ejercicios que su médico le ha explicado.
 - Vigilar coloración y sensibilidad del pie y los dedos.
 - Puede caminar con ayuda de andador, que solicitará en préstamo si precisa.
 - Requiere ayuda domiciliaria
@@ -1661,7 +1691,6 @@ MEDICACIÓN (según tarjeta sanitaria)
 - OMEPRAZOL 20mg cada 24 horas.
 - ENOXAPARINA 40mg cada 24 horas vía subcutánea.
 - DELTIUS 10.000UI/ML 1 FRASCO 10ML 4 GOTAS cada 24 horas vía oral.
-- HIERRO ORAL 1 comprimido vía oral en ayunas cada día durante un mes.
 
 CURAS LOCALES
 - Realizar curas locales en el centro de salud cada 24-48 horas, retirando grapas en 15-20 días, salvo mejor criterio de enfermería de zona.
@@ -1756,7 +1785,7 @@ hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 - FRACTURA TRANVERSAL   ROTULA ${LADO_F_UPPER}:
 - PROFILAXIS  ANTIBIÓTICA CON  2 GR DE  CEFAZOLINA.
-- ISQUEMIA EN  RAÍZ  DE  MUSLO (40 MINUTOS).
+- ISQUEMIA EN  RAÍZ  DE  MUSLO.
 - INCISIÓN LONGITUDINAL ANTERIOR DE RODILLA.
 - IDENTIFICACION  DE FRACTURA Y  OSTEOSINTESIS  EN OBENQUE  MEDIANTE  2 AGUJAS DE KIRSCHNER  PARALELAS  Y CERCLAJE  DE  ALAMBRE  EN  OCHO.
 -  SE PALPA  CONGRUENCIA ARTICULAR  A  TRAVES DE  MINIFICAT.
@@ -2056,7 +2085,7 @@ SÍNTOMAS DE ALERTA
 hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 - CAR ${LADO_F_UPPER}:
-- ISQUEMIA EN  RAÍZ  DE  MUSLO ( 89 MINUTOS).
+- ISQUEMIA EN  RAÍZ  DE  MUSLO.
 - PORTALES TRADICIONALES ANTEROMEDIAL  Y  ANTEROLATERAL. 
 - PORTALES  ACCESORIOS ANTEROMEDIAL  PARA  ZONA RECEPTORA Y  PARAPATELAR   MEDIAL  PARA ZONA DONANTE.
 - ARTICULACIÓN  FEMOROPATELAR Y  FONDOS DE SACO  CUADRICIPITALES:  SIN  ALTERACIONES.
@@ -2087,7 +2116,7 @@ SÍNTOMAS DE ALERTA
 hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 - CAR ${LADO_F_UPPER}:
-- ISQUEMIA EN  RAÍZ  DE  MUSLO ( 123 MINUTOS).
+- ISQUEMIA EN  RAÍZ  DE  MUSLO.
 - PORTALES TRADICIONALES ANTEROMEDIAL  Y  ANTEROLATERAL.
 - ARTICULACIÓN  FEMOROPATELAR Y  FONDOS DE SACO  CUADRICIPITALES:  SIN  ALTERACIONES.
 - COMPARTIMENTO  INTERNO : SIN  LESIONES  MENISCALES NI  CONDRALES.
@@ -2121,7 +2150,7 @@ SÍNTOMAS DE ALERTA
 hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 - CAR ${LADO_F_UPPER}:
-- ISQUEMIA EN  RAÍZ  DE  MUSLO (102 MINUTOS).
+- ISQUEMIA EN  RAÍZ  DE  MUSLO.
 - PORTALES TRADICIONALES ANTEROMEDIAL  Y  ANTEROLATERAL. PORTAL  MEDIAL  ACCESORIO.
 - ARTICULACIÓN  FEMOROPATELAR Y  FONDOS DE SACO  CUADRICIPITALES:  SIN  ALTERACIONES.
 - COMPARTIMENTO  INTERNO Y  EXT : SIN  LESIONES  MENISCALES NI  HUNDIMIENTO DE MESETA  TIBIALES.
@@ -2171,7 +2200,7 @@ SÍNTOMAS DE ALERTA
 hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 - CAR ${LADO_F_UPPER}:
-- ISQUEMIA EN  RAÍZ  DE  MUSLO (  55 MINUTOS).
+- ISQUEMIA EN  RAÍZ  DE  MUSLO.
 - PORTALES TRADICIONALES ANTEROMEDIAL  Y  ANTEROLATERAL.
 -  NO  SE APRECIA LESIONES  MENISCALES  NI LIGAMENTOSAS.  
 - ARTICULACIÓN  FEMOROPATELAR Y  FONDOS DE SACO  CUADRICIPITALES:  SUBLUXACIÓN  LATERAL  DE   ROTULA CON  CONDROPATIA   GRADO  3. 
@@ -2205,7 +2234,7 @@ SÍNTOMAS DE ALERTA
 hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 - CAR ${LADO_F_UPPER}:
-- ISQUEMIA EN  RAÍZ  DE  MUSLO ( 114 MINUTOS).
+- ISQUEMIA EN  RAÍZ  DE  MUSLO.
 - PORTALES TRADICIONALES ANTEROMEDIAL  Y  ANTEROLATERAL.
 - PORTAL  SUPEROEXTERNO ACCESORIO.
 - ARTICULACIÓN  FEMOROPATELAR Y  FONDOS DE SACO  CUADRICIPITALES: SUBLUXACIÓN   ROTULIANA EXTERNA SIN  CONDROPATIA.
@@ -2250,7 +2279,7 @@ SÍNTOMAS DE ALERTA
 hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 - CAR ${LADO_F_UPPER} + OSTEOTOMIA DE ADICCIÓN VALGUIZANTE DE TIBIA ${LADO_F_UPPER}:
-- ISQUEMIA EN  MUSLO  ${LADO_ABR_M}  (16 MIN DE CAR   Y  118  MIN  DE   OTV)
+- ISQUEMIA EN  MUSLO  ${LADO_ABR_M}
 - PORTALES TRADICIONALES ANTEROMEDIAL  Y  ANTEROLATERAL.
 - ARTICULACIÓN  FEMOROPATELAR Y  FONDOS DE SACO  CUADRICIPITALES:  CONDROPATIA DE LA TROCLEA FEMORAL  GRADO 4.
 - COMPARTIMENTO  INTERNO: ROTURA DEGANERATIVA DEL  CUERPO   Y CUERNO  POSTERIOR DEL  MENISCO  INTERNO QUE SE RESECA  Y  REGULARIZA  CON  PINZAS  Y  MOTOR. CONDROPATIA  GRADO 4 DE  TODA ZONA CARGA DE  CONDILO  FEMORAL  INT  Y  MESETA TIBIAL  INT
@@ -2287,7 +2316,7 @@ SÍNTOMAS DE ALERTA
 hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 - CAR ${LADO_F_UPPER} + OSTEOTOMIA DE SUSTRACCION  VALGUIZANTE DE TIBIA ${LADO_F_UPPER} TIPO  COVENTRY:
-- ISQUEMIA EN  MUSLO  ${LADO_ABR_M}  (126 MIN)
+- ISQUEMIA EN  MUSLO  ${LADO_ABR_M}
 - PORTALES TRADICIONALES ANTEROMEDIAL  Y  ANTEROLATERAL.
 - ARTICULACIÓN  FEMOROPATELAR Y  FONDOS DE SACO  CUADRICIPITALES:  CONDROPATIA  TROCLE A FEMORAL  GRADO 4.
 - COMPARTIMENTO  INTERNO: ROTURA DEGANERATIVA DEL  CUERPO   Y CUERNO  POSTERIOR DEL  MENISCO  INTERNO QUE SE RESECA  Y  REGULARIZA  CON  PINZAS  Y  MOTOR. CONDROPATIA  GRADO  III  DE  TODA ZONA CARGA DE  CONDILO  FEMORAL  INT  Y  MESETA TIBIAL  INT
@@ -2368,7 +2397,7 @@ SÍNTOMAS DE ALERTA
 hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 - OSTEOTOMIA DE ADICCIÓN VALGUIZANTE DE TIBIA ${LADO_F_UPPER}:
-- ISQUEMIA EN  MUSLO  ${LADO_ABR_M}  (102  MIN).
+- ISQUEMIA EN  MUSLO  ${LADO_ABR_M}.
 - INCISIÓN  OBLICUA  EN  TERCIO  PROXIMAL  Y  MEDIAL  DE TIBIA   SIGUIENDO  DIRECCION  DE LOS TENDONES ISQUIOTIALES EN SU  BORDE   ANTERIOR.  
 - DESINSERCION  PARCIAL  DE  LA INSERCIÓN  DISTAL  DEL  FASCICULO  SUPERFICIAL  DEL  LLI. 
 - OSTEOTOMIA BIPLANAR DE TIBIA  RESPETANDO LA TTA  CON  SIERRA Y  COMPLETADA CON ESCOPLO .
@@ -2400,7 +2429,7 @@ SÍNTOMAS DE ALERTA
 hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 - CAR ${LADO_F_UPPER}:
-- ISQUEMIA EN  RAÍZ  DE  MUSLO ( 40 MINUTOS).
+- ISQUEMIA EN  RAÍZ  DE  MUSLO.
 - PORTALES TRADICIONALES ANTEROMEDIAL  Y  ANTEROLATERAL.
 - ARTICULACIÓN  FEMOROPATELAR Y  FONDOS DE SACO  CUADRICIPITALES:  SIN  ALTERACIONES.
 - COMPARTIMENTO  INTERNO: ROTURA DEGENERATIVA DEL  CUERNO  POSTERIOR DEL  MENISCO  INTERNO QUE SE RESECA  Y  REGULARIZA  CON  PINZAS  Y  MOTOR.
@@ -2458,7 +2487,7 @@ SÍNTOMAS DE ALERTA
 hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 - CAR ${LADO_F_UPPER}:
-- ISQUEMIA EN  RAÍZ  DE  MUSLO ( 64 MINUTOS).
+- ISQUEMIA EN  RAÍZ  DE  MUSLO.
 - PORTALES TRADICIONALES ANTEROMEDIAL  Y  ANTEROLATERAL.
 - ARTICULACIÓN  FEMOROPATELAR Y  FONDOS DE SACO  CUADRICIPITALES:  SIN  ALTERACIONES.
 - COMPARTIMENTO  INTERNO: ROTURA EN  ASA DE CUBO  REDUCIDA EN ZONA ROJA DEL  CUERPO  Y  CUERNO  POSTERIOR DEL  MENISCO  INTERNO. REDUCCIÓN  Y  SUTURA  CON  4  PUNTOS  CON SISTEMA FAST-FIX  Y DOS  PUNTOS SUTURA FUERA DENTRO  CON  TICRON 2.
@@ -2503,7 +2532,7 @@ SÍNTOMAS DE ALERTA
 hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 - CAR ${LADO_F_UPPER} EN PACIENTE CON RIGUIDEZ  POSTOPERATORIA TRAS  ARTROPLASTIA RODILLA:
-- ISQUEMIA EN RAÍZ DE MUSLO ( 41 MINUTOS). 
+- ISQUEMIA EN RAÍZ DE MUSLO. 
 - PORTALES TRADICIONALES ANTEROMEDIAL Y ANTEROLATERAL. 
 - SE APRECIA MÚLTIPLES ADHERENCIAS Y  FIBROSIS A  NIVEL  DE FONDOS  DE SACO  SUBCUADRICIPITALES Y  DEL  HOFFA QUE SE RESECA  CON   SINOVIOTOMO. 
 - COAGULACIÓN  DE  PUNTOS  SANGRANTES  CON   VAPORIZADOR.  
@@ -2535,7 +2564,7 @@ SÍNTOMAS DE ALERTA
 hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 - CAR ${LADO_F_UPPER}:
-- ISQUEMIA EN  RAÍZ  DE  MUSLO ( 40 MINUTOS).
+- ISQUEMIA EN  RAÍZ  DE  MUSLO.
 - PORTALES TRADICIONALES ANTEROMEDIAL  Y  ANTEROLATERAL.
 - ARTICULACIÓN  FEMOROPATELAR Y  FONDOS DE SACO  CUADRICIPITALES:  SIN  ALTERACIONES.
 - COMPARTIMENTO  INTERNO: SIN  ALTERACIONES.
@@ -2564,7 +2593,7 @@ SÍNTOMAS DE ALERTA
     car_cuerpo_libre: {
 hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-- ISQUEMIA EN RAÍZ DE MUSLO ( 35 MINUTOS).
+- ISQUEMIA EN RAÍZ DE MUSLO.
 - PORTALES TRADICIONALES ANTEROMEDIAL Y ANTEROLATERAL.
 - ARTICULACIÓN FEMOROPATELAR Y FONDOS DE SACO CUADRICIPITALES: SIN ALTERACIONES.
 - COMPARTIMENTO INTERNO: SIN ALTERACIONES.
@@ -2595,7 +2624,7 @@ SÍNTOMAS DE ALERTA
 hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 - CAR ${LADO_F_UPPER}:
-- ISQUEMIA EN  RAÍZ  DE  MUSLO (  53 MINUTOS).
+- ISQUEMIA EN  RAÍZ  DE  MUSLO.
 - PORTALES TRADICIONALES ANTEROMEDIAL  Y  ANTEROLATERAL.
 - ARTICULACIÓN  FEMOROPATELAR Y  FONDOS DE SACO  CUADRICIPITALES:  SINDROME  DE  HIPERPRESIÓN  ROTULIANA EXTERNA SIN  CONDROPATIA. SE REALIZA  SECCIÓN  ALERÓN  ROTULIANO  EXTERNO ARTROSCÓPICO (FICAT) CON  VAPORIZADOR
 - COMPARTIMENTO  INTERNO: SIN  ALTERACIONES.
@@ -2626,7 +2655,7 @@ SÍNTOMAS DE ALERTA
 hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 - CAR ${LADO_F_UPPER}:
-- ISQUEMIA EN  RAÍZ  DE  MUSLO ( 45 MINUTOS).
+- ISQUEMIA EN  RAÍZ  DE  MUSLO.
 - PORTALES TRADICIONALES ANTEROMEDIAL  Y  ANTEROLATERAL.
 - ARTICULACIÓN  FEMOROPATELAR Y  FONDOS DE SACO  CUADRICIPITALES:  CONDROPATIA   FP  GRADO  4. 
 - COMPARTIMENTO  INTERNO: ROTURA DEGERATIVA DEL  CUERPO  Y  CUERNO POST DEL  MENISCO INT  QUE SE REGULARIZA CON  PINZAS  Y  SINOVIOTOMO. CONDROPATIA  CFI  GRADO 4.
@@ -2658,7 +2687,7 @@ SÍNTOMAS DE ALERTA
 hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 - CAR ${LADO_F_UPPER} EN PACIENTE CON DERRAME DE REPETICIÓN POR SOSPECHA  DE SINOVITIS VILLONODULAR  PIGMENTADA:
-- ISQUEMIA EN RAÍZ DE MUSLO ( 91 MINUTOS). 
+- ISQUEMIA EN RAÍZ DE MUSLO. 
 - PORTALES TRADICIONALES ANTEROMEDIAL Y ANTEROLATERAL. 
 - PORTAL ACCESORIO SUPEROLATERAL Y  SUPEROMEDIAL.
 - SE APRECIA SINOVIAL HIPERÉMICA E HIPERTRÓFICA EN TODA LA RODILLA FORMANDO VELLOSIDADES Y  CON TINCIÓN PARDUZCA POR HEMARTROS DE REPETICIÓN.
@@ -2709,8 +2738,7 @@ tratamiento: `CUIDADOS POSTOPERATORIOS
 - Mantener el pie elevado siempre que esté sentado con  movimientos de  flexoextensión  de  la rodilla.
 - Aplicar hielo sobre la rodilla operada 2-3 veces al día durante 20 minutos.
 - Mover activamente los dedos de la extremidad operada.
-- Realizar los ejercicios que su médico le ha explicado  y  seguir  hojas de recomendaciones de  pacientes con  prótesis de cadera
-- Puede  bajarse en  su  móvil/Tablet/PC  la aplicación gratuita “Mi  Prótesis” donde podrá encontrar  información  acerca de esta patología  y  procedimiento  quirúrgico  realizado,  así  como  recomendaciones  y  ejercicios  que  puede realizar.
+- Realizar los ejercicios que su médico le ha explicado.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
 - Puede  caminar con ayuda de un andador.
 - Puede requerir ayuda domiciliaria
@@ -2720,7 +2748,6 @@ MEDICACIÓN (según tarjeta sanitaria)
 - PARACETAMOL 1 gr/  8  horas, alterno  con anterior cada   4   horas si  dolor  intenso.
 - OMEPRAZOL 20 mg/ 24  horas.
 - ENOXAPARINA 40 mg  / 24 horas vía oral / 4 semanas
-- HIERRO (II), SULFATO 256, 30 en ayunas cada día durante un mes.
 
 REVISIÓN
 - Solicitar revisión en Admisión del  Hospital  para  CCEE Revisión Hospitalaria de COT (${DOCTOR}) en 4 semanas.
@@ -2744,8 +2771,6 @@ hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 - APÓSITO COMPRESIVO.`,
 
 tratamiento: `CUIDADOS POSTOPERATORIOS
-- Se entrega hoja de cuidados PTC.
-- Puede descargarse la aplicación gratuita "Mi PTC" para recomendaciones.
 - Mantener el pie elevado siempre que esté sentado.
 - Mover activamente los dedos de la extremidad operada.
 - Realizar los ejercicios que su médico le ha explicado.
@@ -2755,7 +2780,6 @@ tratamiento: `CUIDADOS POSTOPERATORIOS
 - PARACETAMOL 1gr/8 horas, alterno con anterior cada 4 horas si dolor intenso.
 - OMEPRAZOL 20mg/24 horas.
 - CLEXANE 40 mg/ cada 24 horas durante 30 dias.
-- HIERRO PROTEINSUCCINILATO 40 mg sol oral en ayunas cada día durante un mes.
 - Puede requerir ayuda domiciliaria.
 - Curas y retirada de puntos de sutura/agrafes según informe de Enfermería.
 
@@ -2882,7 +2906,7 @@ hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 - GENU  VARO  ARTROSICO   RODILLA ${LADO_F_UPPER}:
 - PROFILAXIS  ANTIBIÓTICA CON  2 GR DE  CEFAZOLINA.
-- ISQUEMIA EN  RAÍZ  DE  MUSLO (71 MINUTOS).
+- ISQUEMIA EN  RAÍZ  DE  MUSLO.
 - INCISIÓN LONGITUDINAL ANTERIOR DE RODILLA Y ARTROTOMIA PARARROTULIANA MEDIAL CON PROLONGACIÓN  SUBVASTO INT.
 - ARTROPLASTIA UNICOMPARTIMENTAL  DE  RODILLA MODELO PKR DE STRYKER:
 - COMPONENTE FEMORAL CEMENTADO Nº 2.
@@ -2901,7 +2925,6 @@ tratamiento: `CUIDADOS POSTOPERATORIOS
 - Aplicar hielo sobre la rodilla operada 2-3 veces al día durante 20 minutos.
 - Mover activamente los dedos de la extremidad operada.
 - Realizar los ejercicios que su médico le ha explicado.
-- Puede  bajarse en  su  móvil/Tablet/PC  la aplicación gratuita “Mi  Prótesis” donde podrá encontrar  información  acerca de esta patología  y  procedimiento  quirúrgico  realizado,  así  como  recomendaciones  y  ejercicios  que  puede realizar.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
 - Puede  caminar con ayuda de un andador.
 - Puede requerir ayuda domiciliaria
@@ -2911,7 +2934,6 @@ MEDICACIÓN (según tarjeta sanitaria)
 - PARACETAMOL 1 gr/  8  horas, alterno  con anterior cada   4   horas si  dolor  intenso.
 - OMEPRAZOL 20 mg/ 24  horas.
 - ENOXAPARINA 40 mg  / 24 horas vía oral / 4 semanas
-- HIERRO (II), SULFATO 256, 30 en ayunas cada día durante un mes.
 
 REVISIÓN
 - Solicitar revisión en Admisión del  Hospital  para  CCEE Revisión Hospitalaria de COT (${DOCTOR}) en 4 semanas.
@@ -2924,7 +2946,7 @@ hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 - RESCATE PUC ${LADO_F_UPPER} POR  PROTESIS  DOLOROSA:
 - PROFILAXIS  ANTIBIÓTICA CON  2 GR DE  CEFAZOLINA.
-- ISQUEMIA EN  RAÍZ  DE  MUSLO (65 MINUTOS).
+- ISQUEMIA EN  RAÍZ  DE  MUSLO.
 - INCISIÓN LONGITUDINAL ANTERIOR DE RODILLA  SOBRE CICATRIZ ANTERIOR Y ARTROTOMIA PARARROTULIANA MEDIAL.
 - RETIRADA DE   COMPONENTES   DE  PUC  ANTERIOR: COMPONENTE   TIBIAL Y  FEMORAL SIN  PÉRDIDA DE STOCK ÓSEO. 
 - COMPONENTE FEMORAL  CR Nº 3 NO  CEMENTADO.   
@@ -2951,7 +2973,6 @@ tratamiento: `CUIDADOS POSTOPERATORIOS
 - PARACETAMOL 1 gr/  8  horas, alterno  con anterior cada   4   horas si  dolor  intenso.
 - OMEPRAZOL 20 mg/ 24  horas.
 - ENOXAPARINA 40 mg  / 24 horas vía oral / 4 semanas
-- HIERRO PROTEINSUCCINILATO 40 mg sol  oral  en ayunas cada día durante un mes.
 - Revisión  en  CC EE de COT (${DOCTOR} ) en 4 semanas  para valoración y  seguimiento.
 - Solicitar cita en  CCEE  del  Servicio  de  Rehabilitación  para inicio fisioterapia
 
@@ -2964,7 +2985,7 @@ SÍNTOMAS DE ALERTA
 hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 - PROFILAXIS ANTIBIÓTICA CON  2  GR  DE CEFAZOLINA.
-- ISQUEMIA EN RAÍZ DE MUSLO (55 MINUTOS).
+- ISQUEMIA EN RAÍZ DE MUSLO.
 - SE REALIZA EXPLORACIÓN  BAJO  ANESTESIA PREVIA QUE  CONFIRMA  LA LESIÓN  DE  LCA.
 - OBTENCIÓN  Y PREPARACIÓN DE PLASTIA AUTOLOGA  ST-RI.
 - FONDOS DE SACO  CUADRICIPITALES: SIN  ALTERACIONES.
@@ -3004,7 +3025,7 @@ hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 - Rotura crónica LCA RD.
 - Anestesia raquídea.
 - Profilaxis con 2 gr cefazolina.
-- Isquemia muslo 250 mmHg (80 min).
+- Isquemia muslo 250 mmHg.
 - Abordaje longitudinal sobre pata de ganso. Disección por planos. Fasciotomía sartorio y obtención de plastia ST.
 - Preparación de plastia cuádruple de ST con 2 ProCinch (Stryker) de 7 cm longitud x 9 mm diámetro.
 - Tiempo artroscópico: portales artroscópicos habituales: AL, AM y AM accesorio.
@@ -3046,7 +3067,7 @@ SÍNTOMAS DE ALERTA
 hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 - PROFILAXIS ANTIBIÓTICA CON  2  GR  DE CEFAZOLINA.
-- ISQUEMIA EN RAÍZ DE MUSLO (148 MINUTOS).
+- ISQUEMIA EN RAÍZ DE MUSLO.
 - OBTENCIÓN DE PLASTIA AUTOLOGA  ST-RI.
 - FONDOS DE SACO  CUADRICIPITALES: SIN  ALTERACIONES.
 - COMPARTIMENTO  INTERNO: ROTURA EN ASA DE  CUBO  DEL CUERPO   Y  CPMI QUE SE SUTURA CON 3  PUNTOS DE FAST-FIX  Y  1  PUNTO  FUERA DENTRO  CON  TICRON 2.
@@ -3097,7 +3118,7 @@ SÍNTOMAS DE ALERTA
 hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 - PROFILAXIS ANTIBIÓTICA CON  2  GR  DE CEFAZOLINA.
-- ISQUEMIA EN RAÍZ DE MUSLO (55 MINUTOS).
+- ISQUEMIA EN RAÍZ DE MUSLO.
 - SE REALIZA EXPLORACIÓN  BAJO  ANESTESIA PREVIA QUE  CONFIRMA  LA LESIÓN  DE  LCA.
 - OBTENCIÓN  Y PREPARACIÓN DE PLASTIA AUTOLOGA  ST-RI.
 - FONDOS DE SACO  CUADRICIPITALES: SIN  ALTERACIONES.
@@ -3139,7 +3160,7 @@ SÍNTOMAS DE ALERTA
 hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 - PROFILAXIS ANTIBIÓTICA CON  2  GR  DE CEFAZOLINA.
-- ISQUEMIA EN RAÍZ DE MUSLO (120 MINUTOS).
+- ISQUEMIA EN RAÍZ DE MUSLO.
 - SE REALIZA CAR PREVIA BAJO QUE  CONFIRMA  LA LESIÓN  DE  LCA.
 - OBTENCIÓN  Y PREPARACIÓN DE PLASTIA AUTOLOGA  ST-RI.
 - FONDOS DE SACO  CUADRICIPITALES: SIN  ALTERACIONES.
@@ -3185,7 +3206,7 @@ hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 - ANESTESIA RAQUÍDEA.
 - PROFILAXIS ANTIBIÓTICA CON 2 GR DE CEFAZOLINA.
-- ISQUEMIA EN RAÍZ DE MUSLO 250 MMHG (85 MINUTOS).
+- ISQUEMIA EN RAÍZ DE MUSLO 250 MMHG.
 - ABORDAJE LONGITUDINAL SOBRE PATA DE GANSO. DISECCIÓN POR PLANOS. FASCIOTOMÍA SARTORIO Y OBTENCIÓN DE PLASTIA ST.
 - PREPARACIÓN DE PLASTIA CUÁDRUPLE DE ST CON 2 TIGHTROPE (Arthrex) DE 7 CM LONGITUD * 9 MM DIÁMETRO.
 - TIEMPO ARTROSCÓPICO: PORTALES ARTROSCÓPICOS HABITUALES: AL, AM Y AM ACCESORIO.
@@ -3227,7 +3248,7 @@ SÍNTOMAS DE ALERTA
 hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 - PROFILAXIS ANTIBIÓTICA CON 2 GR DE CAFAZOLINA. 
-- ISQUEMIA EN RAIZ DE MUSLO (100 MINUTOS).
+- ISQUEMIA EN RAIZ DE MUSLO.
 - CAR  DIAGNOSTICA QUE  CONFIRMA  ROTURA  COMPLETA DE  LCA. 
 - INCISIÓN  LONGITUDINAL DESDE POLO INFERIOR DE RÓTULA A BORME MEDIAL DE TTA. APERTURA DEL PARATENON Y OBTENCIÓN PLASTIA HTH DE 10 MM DE ANCHURA DELTENDÓN ROTULIANO Y 2 PASTILLAS ÓSEAS EN LOS EXTREMOS 8*25 MM EN  ROTULA  Y  9*30 MM EN  TTA.
 - LIGAMENTOPLASTIA LCA  CON AUTOINJERTO HTH HOMOLATERAL CON  TÉCNICA  ANATÓMICA:
@@ -3271,7 +3292,7 @@ SÍNTOMAS DE ALERTA
 hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 - PROFILAXIS ANTIBIÓTICA CON  2  GR  DE CEFAZOLINA.
-- ISQUEMIA EN RAÍZ DE MUSLO (65 MINUTOS).
+- ISQUEMIA EN RAÍZ DE MUSLO.
 - SE REALIZA  CAR DIAGNÓSTICA BAJO  ANESTESIA PREVIA APRECIÁNDOSE  ROTURA  DEL  FASCÍCULO  AM  DEL  LCA ,  CON  INTEGRIDAD DEL  FASCÍCULO  PL.
 - OBTENCIÓN DE PLASTIA AUTOLOGA CUÁDRUPLE DE TENDONES DE PATA DE GANSO ST A TRAVÉS DE INCISIÓN OBLICUA EN CARA ANTEROINTERNA DE TERCIO PROXIMAL DE TIBIA.
 - FONDOS DE SACO  CUADRICIPITALES: SIN  ALTERACIONES.
@@ -3310,7 +3331,7 @@ SÍNTOMAS DE ALERTA
 hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 - PROFILAXIS ANTIBIÓTICA CON  2  GR  DE CEFAZOLINA.
-- ISQUEMIA EN RAÍZ DE MUSLO (106 MINUTOS).
+- ISQUEMIA EN RAÍZ DE MUSLO.
 - SE REALIZA  CAR DIAGNÓSTICA BAJO  ANESTESIA PREVIA APRECIÁNDOSE  ROTURA  DEL  FASCÍCULO  PL  DEL  LCA ,  CON  INTEGRIDAD DEL  FASCÍCULO  AM.
 - OBTENCIÓN DE PLASTIA AUTOLOGA DE HTH  A TRAVÉS DE INCISIÓN CENTRAL DE POLO INF   RÓTULA A TTA.
 - FONDOS DE SACO  CUADRICIPITALES: SIN  ALTERACIONES.
@@ -3349,7 +3370,7 @@ SÍNTOMAS DE ALERTA
 hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 - PROFILAXIS ANTIBIÓTICA CON  2  GR  DE CEFAZOLINA.
-- ISQUEMIA EN RAÍZ DE MUSLO (105 MINUTOS).
+- ISQUEMIA EN RAÍZ DE MUSLO.
 -  SE  PREPARA  PLASTIA DE  BANCO  DE TEJIDOS  HTH  CON  PASTILLA  ÓSEA PARA  FÉMUR DE 9*25 MM Y  PARA TIBIA DE  11*30 MM. 
 - FONDOS DE SACO  CUADRICIPITALES: SIN ALTERACIONES DE  INTERÉS. 
 - COMPARTIMENTO  INTERNO: SECUELAS DE  MENISCECTOMIA PARCIAL  DEL CPMI  DE CIRUGIA  PREVIA.
@@ -3390,7 +3411,7 @@ hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 - RESCATE DE  LIGAMENTOPLASTIA DE   LCA DE LA RODILLA ${LADO_F_UPPER}:
 - PROFILAXIS ANTIBIÓTICA CON 2 GR DE CAFAZOLINA. 
-- ISQUEMIA EN RAIZ DE MUSLO (130 + 40 MINUTOS).
+- ISQUEMIA EN RAIZ DE MUSLO.
 - EXPLORACIÓN  BAJO  ANESTESIA  QUE  CONFIRMA  ROTURA  COMPLETA  DE  LA  PLASTIA AUTOLOGA PREVIA DE LCA.
 - ROTURA  LONGITUDINAL  EN  ASA DE CUBO  DEL  CPMI LUXADA QUE SE REDUCE Y  SE SUTURA  CON  3  PUNTOS DE  FAST-FIX.
 - PREPARACIÓN  DE  LA  PLASTIA DE HTH  DE BANCO  DE  TEJIDOS CON  PASTILLAS  EN  FÉMUR  7*25   Y  TIBIA  9*30 MM Y  RESCATE LIGAMENTOPLASTIA CON  TÉCNICA  ANATÓMICA:
@@ -3532,7 +3553,7 @@ SÍNTOMAS DE ALERTA
     ms_stc: {
 hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-- ISQUEMIA POR ELEVACIÓN EN RAÍZ BRAZO (5 MINUTOS).
+- ISQUEMIA POR ELEVACIÓN EN RAÍZ BRAZO.
 - ANESTESIA  LOCAL Y  SEDACIÓN.
 - MINIINCISIÓN  LONGITUDINAL EN  EJE DEL  4º DE  UNOS 2 CM
 - LIBERACIÓN  DEL  CANAL  DEL  CARPO MEDIANTE RETINACULOTOMIA SEGÚN TÉCNICA DE RAIMONDI  CON  SECCION  DEL  LIGAMENTO  TRANSVERSO  DEL CARPO.
@@ -3628,7 +3649,7 @@ tratamiento: `CUIDADOS POSTOPERATORIOS
 hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 - PROFILAXIS  ANTIBIÓTICA CON  2 GR DE  CEFAZOLINA.
-- ISQUEMIA EN  RAÍZ  DE  MUSLO ( 51 MINUTOS).
+- ISQUEMIA EN  RAÍZ  DE  MUSLO.
 - VIA  ABORDAJE DE  HENRY  EN  CARA  ANTERIOR  ANTABRAZO.
 -  SE IDENTIFICA  FRACTURA  CONMINUTA DE  4  FRAGMENTOS.
 -  REDUCCIÓN  ABIERTA  Y  OSTEOSINTESIS  CON  PLACA  DCP-LC  DE  8  ORIFICIOS (4  TORNILLOS  PROXIMALES  Y  3  DISTALES).
@@ -3655,7 +3676,7 @@ SÍNTOMAS DE ALERTA
 hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 - PROFILAXIS  ANTIBIÓTICA CON  2 GR DE  CEFAZOLINA.
-- ISQUEMIA EN  RAÍZ  DE  MUSLO ( 70 MINUTOS).
+- ISQUEMIA EN  RAÍZ  DE  MUSLO.
 - VIA  ABORDAJE DE  HENRY  EN  CARA  ANTERIOR  ANTEBRAZO: RAFI CON  PLACA  DCP-LC  DE  8  ORIFICIOS.
 -  VIA ABORDAJE  DORSAL  SOBRE   FRACTURA DE   CÚBITO:  RAFI  CON  PLACA  DCP-LC DE 8  ORIFICIOS (4 TORNILLOS PROXIMALES  Y  3   DISTALES).
 - SE COMPRUEBA   CON ESCOPIA REDUCCIÓN  DE LAS  FRACTURAS Y  LONGITUDES DE   TORNILLOS.
@@ -3707,7 +3728,7 @@ SÍNTOMAS DE ALERTA
 hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 - PROFILAXIS  ANTIBIÓTICA CON  2 GR DE  CEFAZOLINA.
-- ISQUEMIA EN  RAÍZ  DE  MUSLO ( 68 MINUTOS).
+- ISQUEMIA EN  RAÍZ  DE  MUSLO.
 - VIA  ABORDAJE DE  POSTERIOR   CODO.
 -  SE IDENTIFICA  FRACTURA  CONMINUTA  Y  SE   REALIZA  LIMPIEZA   FOCO.
 -  REDUCCIÓN  ABIERTA  Y  OSTEOSINTESIS  CON  PLACA  DE OLECRANON  PREFORMADA  PERI-LOC DE   8  ORIFICIOS
@@ -3734,7 +3755,7 @@ SÍNTOMAS DE ALERTA
 hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 - PROFILAXIS  ANTIBIÓTICA CON  2 GR DE  CEFAZOLINA.
-- ISQUEMIA EN  RAÍZ  DE  MUSLO ( 29 MINUTOS).
+- ISQUEMIA EN  RAÍZ  DE  MUSLO.
 - VIA  ABORDAJE DE  POSTERIOR   CODO.
 -  SE IDENTIFICA  FRACTURA  Y  SE   REALIZA  LIMPIEZA   FOCO.
 -  REDUCCIÓN  ABIERTA  Y  OSTEOSINTESIS  CON 2  AGUJAS  DE  KIRSCHNER DEL  Nº 2 Y  CERCLAJE EN  OBENQUE CON ALAMBRE DEL  1.
@@ -4138,7 +4159,6 @@ tratamiento: `CUIDADOS POSTOPERATORIOS
 - Realizar los ejercicios que su médico le ha explicado.
 - Vigilar coloración y sensibilidad de la mano y los dedos.
 - Evitar cargar peso sobre brazo intervenido hasta nuevo aviso y según plazos marcados.
-- Se adjunta RECOMENDACIONES AL ALTA DE CIRUGÍA ARTROSCÓPICA DE HOMBRO
 
 MEDICACIÓN (según tarjeta sanitaria)
 - METAMIZOL 575mg cada 8 horas vía oral, que puede alternar con PARACETAMOL 1g/8h vía oral si precisa por dolor.
@@ -4166,7 +4186,7 @@ hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 - Lavado articular, cierre de portales con agrafes e inmovilización con cabestrillo.`,
 
 tratamiento: `CUIDADOS POSTOPERATORIOS
-- Mantener el miembro superior operado en cabestrillo durante 4-5 semanas. Puede retirarlo para aseo personal y para realizar ejercicios de flexo-extensión de codo así como pendulares (se adjunta hoja de cuidados de cabestrillo)
+- Mantener el miembro superior operado en cabestrillo durante 4-5 semanas. Puede retirarlo para aseo personal y para realizar ejercicios de flexo-extensión de codo así como pendulares
 - Mover activamente los dedos de la extremidad operada
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos
 - Analgesia por elastómero prescrito por Servicio de Anestesia durante las primeras 24-48h. Continuar una vez retirado con Dexketoprofeno 25 mg v.o. 1/8 horas vía oral durante 4-5 días. Puede alternar con Metamizol caps. 1 c/8h si más dolor
@@ -4193,7 +4213,7 @@ hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 - Lavado articular, cierre de portales con agrafes e inmovilización con cabestrillo.`,
 
 tratamiento: `CUIDADOS POSTOPERATORIOS
-- Mantener el miembro superior operado en cabestrillo durante 4-5 semanas. Puede retirarlo para aseo personal y para realizar ejercicios de flexo-extensión de codo así como pendulares (se adjunta hoja de cuidados de cabestrillo)
+- Mantener el miembro superior operado en cabestrillo durante 4-5 semanas. Puede retirarlo para aseo personal y para realizar ejercicios de flexo-extensión de codo así como pendulares
 - Mover activamente los dedos de la extremidad operada
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos
 - Analgesia por elastómero prescrito por Servicio de Anestesia durante las primeras 24-48h. Continuar una vez retirado con Dexketoprofeno 25 mg v.o. 1/8 horas vía oral durante 4-5 días. Puede alternar con Metamizol caps. 1 c/8h si más dolor
@@ -4220,7 +4240,7 @@ hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 - Lavado articular, cierre de portales con agrafes e inmovilización con cabestrillo.`,
 
 tratamiento: `CUIDADOS POSTOPERATORIOS
-- Mantener el miembro superior operado en cabestrillo durante 4-5 semanas. Puede retirarlo para aseo personal y para realizar ejercicios de flexo-extensión de codo así como pendulares (se adjunta hoja de cuidados de cabestrillo)
+- Mantener el miembro superior operado en cabestrillo durante 4-5 semanas. Puede retirarlo para aseo personal y para realizar ejercicios de flexo-extensión de codo así como pendulares
 - Mover activamente los dedos de la extremidad operada
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos
 - Analgesia por elastómero prescrito por Servicio de Anestesia durante las primeras 24-48h. Continuar una vez retirado con Dexketoprofeno 25 mg v.o. 1/8 horas vía oral durante 4-5 días. Puede alternar con Metamizol caps. 1 c/8h si más dolor
@@ -4524,7 +4544,7 @@ SÍNTOMAS DE ALERTA
 hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 - Decúbito supino.
-- Isquemia en raíz del muslo (120 min).
+- Isquemia en raíz del muslo.
 
 - 1º TIEMPO CAR:
 - Portales tradicionales anteromedial y anterolateral
@@ -4567,7 +4587,7 @@ SÍNTOMAS DE ALERTA
     rodilla_fulkerson: {
 hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-- Manguito de isquemia en raíz del muslo (70 min).
+- Manguito de isquemia en raíz del muslo.
 - Profilaxis antibiótica con 2 g cefazolina iv.
 
 - 1º TIEMPO (CAR):
@@ -4612,7 +4632,7 @@ SÍNTOMAS DE ALERTA
 hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 - Decúbito supino con pernera en pierna ${LADO_F}.
-- Isquemia en raíz del muslo (125 min).
+- Isquemia en raíz del muslo.
 - Control por escopia.
 
 - 1º TIEMPO CAR:
@@ -4658,7 +4678,7 @@ hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 - LRR RÓTULA ${LADO_F}
 - Profilaxis antibiótica con 2 g de cefazolina
-- Isquemia en raíz de muslo (115 min)
+- Isquemia en raíz de muslo
 
 - 1º TIEMPO (CAR):
 - Portal AL y accesorio suprapatelar medial.
