@@ -1043,7 +1043,10 @@
       { value: 'lca_reparacion', label: 'LCA Reparación (InternalBrace)' },
     ]},
     { id: 'cac', label: 'Artroscopia Cadera', procs: [
-      { value: 'cac_labrum', label: 'Reinserción labrum acetabular' },
+      { value: 'cac_labrum', label: 'CAC: Reinserción labrum acetabular' },
+    ]},
+    { id: 'ifc', label: 'Infiltración Cadera', procs: [
+      { value: 'cadera_infiltracion', label: 'Infiltración Cadera' },
     ]},
     { id: 'ms', label: 'Mano y Antebrazo', procs: [
       { value: 'ms_stc', label: 'Síndrome del túnel carpiano (STC)' },
@@ -1096,7 +1099,7 @@
   const REGIONES = [
     { id: 'trauma',  label: 'Trauma',           catIds: ['trauma'] },
     { id: 'rodilla', label: 'Rodilla',          catIds: ['car', 'ptr', 'lca', 'rodilla_osteo'] },
-    { id: 'cadera',  label: 'Cadera',           catIds: ['ptc', 'cac'] },
+    { id: 'cadera',  label: 'Cadera',           catIds: ['ptc', 'cac', 'ifc'] },
     { id: 'ms',      label: 'Miembro Superior', catIds: ['hombro_mr', 'hombro_pthi', 'hombro_tumor', 'codo', 'ms'] },
     { id: 'pt',      label: 'Pie y Tobillo',    catIds: ['pt'] },
   ];
@@ -3589,6 +3592,27 @@ SÍNTOMAS DE ALERTA
 - Adducción: 45 grados.
 - Rotación interna en flexión: 30 grados.
 - Rotación externa en flexión : 90 grados.`
+},
+
+// ── INFILTRACIÓN CADERA (IFC) ─────────────
+    cadera_infiltracion: {
+hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+
+- Sedoanalgesia.
+- Paciente en decúbito supino.
+- Bajo condiciones de estricta asepsia y control radiográfico se procede a infiltración de cadera ${LADO_ABR_F} mediante mepivacaína + corticoide.
+- Apósito compresivo.`,
+
+tratamiento: `CUIDADOS POSTOPERATORIOS
+- Reposo relativo 24-48 horas.
+- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
+- Retirar apósito pasadas las 6-8 horas de la intervención.
+
+REVISIÓN
+- Solicitar cita para revisión en 3-4 semanas para ${DOCTOR}
+
+SÍNTOMAS DE ALERTA
+- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.`
 },
 
 // ── MIEMBRO SUPERIOR ─────────────────────

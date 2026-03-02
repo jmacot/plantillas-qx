@@ -3,7 +3,7 @@
 > Catálogo de todas las plantillas del proyecto `plantillas-qx`,
 > organizadas por región/categoría (quirófano) y módulo de urgencias.
 
-> **Total: 85 plantillas quirúrgicas + 7 plantillas de urgencias = 92 plantillas** en 13 categorías quirúrgicas, 5 regiones anatómicas y 1 módulo de urgencias.
+> **Total: 86 plantillas quirúrgicas + 7 plantillas de urgencias = 93 plantillas** en 14 categorías quirúrgicas, 5 regiones anatómicas y 1 módulo de urgencias.
 
 > **Variables dinámicas (quirófano):** `${FECHA}` (fecha DD/MM/YY), `${DOCTOR}` (cirujano), `${AYUDANTE}` (ayudante). **Lateralidad:** `${LADO_M}` (derecho/izquierdo), `${LADO_F}` (derecha/izquierda), `${LADO_M_UPPER}` (DERECHO/IZQUIERDO), `${LADO_F_UPPER}` (DERECHA/IZQUIERDA), `${LADO_ABR_F}` (DCHA/IZDA), `${LADO_ABR_M}` (DCHO/IZDO), `${DECUBITO}` (decúbito lateral contrario, minúscula), `${DECUBITO_UPPER}` (DECÚBITO LATERAL contrario, mayúscula).
 
@@ -23,6 +23,7 @@
 - [Cadera](#región-cadera)
   - [Prótesis Cadera (2)](#categoría-ptc)
   - [Artroscopia Cadera (1)](#categoría-cac)
+  - [Infiltración Cadera (1)](#categoría-ifc)
 - [Miembro Superior](#región-ms)
   - [Artroscopia Hombro (4)](#categoría-hombro_mr)
   - [Prótesis Hombro (4)](#categoría-hombro_pthi)
@@ -2860,7 +2861,7 @@ SÍNTOMAS DE ALERTA
 
 #### Artroscopia Cadera (1 plantillas)
 
-##### `cac_labrum` — Reinserción labrum acetabular
+##### `cac_labrum` — CAC: Reinserción labrum acetabular
 
 **Nota Operatoria:**
 
@@ -2957,6 +2958,38 @@ SÍNTOMAS DE ALERTA
 - Adducción: 45 grados.
 - Rotación interna en flexión: 30 grados.
 - Rotación externa en flexión : 90 grados.
+```
+
+<a id="categoría-ifc"></a>
+
+#### Infiltración Cadera (1 plantillas)
+
+##### `cadera_infiltracion` — Infiltración Cadera
+
+**Nota Operatoria:**
+
+```
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+
+- Sedoanalgesia.
+- Paciente en decúbito supino.
+- Bajo condiciones de estricta asepsia y control radiográfico se procede a infiltración de cadera ${LADO_ABR_F} mediante mepivacaína + corticoide.
+- Apósito compresivo.
+```
+
+**Tratamiento al Alta:**
+
+```
+CUIDADOS POSTOPERATORIOS
+- Reposo relativo 24-48 horas.
+- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
+- Retirar apósito pasadas las 6-8 horas de la intervención.
+
+REVISIÓN
+- Solicitar cita para revisión en 3-4 semanas para ${DOCTOR}
+
+SÍNTOMAS DE ALERTA
+- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
 ```
 
 <a id="región-ms"></a>
