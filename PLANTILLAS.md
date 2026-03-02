@@ -3,7 +3,7 @@
 > Catálogo de todas las plantillas del proyecto `plantillas-qx`,
 > organizadas por región/categoría (quirófano) y módulo de urgencias.
 
-> **Total: 84 plantillas quirúrgicas + 7 plantillas de urgencias = 91 plantillas** en 13 categorías quirúrgicas, 5 regiones anatómicas y 1 módulo de urgencias.
+> **Total: 85 plantillas quirúrgicas + 7 plantillas de urgencias = 92 plantillas** en 13 categorías quirúrgicas, 5 regiones anatómicas y 1 módulo de urgencias.
 
 > **Variables dinámicas (quirófano):** `${FECHA}` (fecha DD/MM/YY), `${DOCTOR}` (cirujano), `${AYUDANTE}` (ayudante). **Lateralidad:** `${LADO_M}` (derecho/izquierdo), `${LADO_F}` (derecha/izquierda), `${LADO_M_UPPER}` (DERECHO/IZQUIERDO), `${LADO_F_UPPER}` (DERECHA/IZQUIERDA), `${LADO_ABR_F}` (DCHA/IZDA), `${LADO_ABR_M}` (DCHO/IZDO), `${DECUBITO}` (decúbito lateral contrario, minúscula), `${DECUBITO_UPPER}` (DECÚBITO LATERAL contrario, mayúscula).
 
@@ -18,7 +18,7 @@
 - [Rodilla](#región-rodilla)
   - [Artroscopia Rodilla (17)](#categoría-car)
   - [Prótesis Rodilla (3)](#categoría-ptr)
-  - [LCA (11)](#categoría-lca)
+  - [LCA (12)](#categoría-lca)
   - [Osteotomías y Cartílago (5)](#categoría-rodilla_osteo)
 - [Cadera](#región-cadera)
   - [Prótesis Cadera (2)](#categoría-ptc)
@@ -1881,7 +1881,7 @@ SÍNTOMAS DE ALERTA
 
 <a id="categoría-lca"></a>
 
-#### LCA (11 plantillas)
+#### LCA (12 plantillas)
 
 ##### `lca_procinch` — LCA ProCinch anatómico ST-RI
 
@@ -1891,7 +1891,7 @@ SÍNTOMAS DE ALERTA
 IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 - PROFILAXIS ANTIBIÓTICA CON  2  GR  DE CEFAZOLINA.
-- ISQUEMIA EN RAÍZ DE MUSLO.
+- ISQUEMIA EN RAÍZ DE MUSLO ${LADO_ABR_M}.
 - SE REALIZA EXPLORACIÓN  BAJO  ANESTESIA PREVIA QUE  CONFIRMA  LA LESIÓN  DE  LCA.
 - OBTENCIÓN  Y PREPARACIÓN DE PLASTIA AUTOLOGA  ST-RI.
 - FONDOS DE SACO  CUADRICIPITALES: SIN  ALTERACIONES.
@@ -1914,7 +1914,6 @@ CUIDADOS POSTOPERATORIOS
 - Puede caminar con ayuda de 2 muletas apoyo parcial de la pierna intervenida y  movilidad   libre   según tolerancia.
 - Realizar ejercicios de cuádriceps y movilidad de la rodilla.
 - Movilizaciones pasivas de  rótula 4/5 veces al  día  durante  15 minutos.
-- Puede  bajarse en  su  móvil/Tablet/PC  la aplicación gratuita “LCA” donde podrá encontrar  información  acerca de esta patología  y  procedimiento  quirúrgico  realizado,  así  como  recomendaciones  y  ejercicios  que  puede realizar.
 - Puede requerir ayuda domiciliaria
 
 MEDICACIÓN (según tarjeta sanitaria)
@@ -1940,7 +1939,7 @@ IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 - Rotura crónica LCA RD.
 - Anestesia raquídea.
 - Profilaxis con 2 gr cefazolina.
-- Isquemia muslo 250 mmHg.
+- Isquemia muslo ${LADO_ABR_M} 250 mmHg.
 - Abordaje longitudinal sobre pata de ganso. Disección por planos. Fasciotomía sartorio y obtención de plastia ST.
 - Preparación de plastia cuádruple de ST con 2 ProCinch (Stryker) de 7 cm longitud x 9 mm diámetro.
 - Tiempo artroscópico: portales artroscópicos habituales: AL, AM y AM accesorio.
@@ -1967,7 +1966,6 @@ CUIDADOS POSTOPERATORIOS
 - Puede caminar con ayuda de 2 muletas apoyo parcial de la pierna intervenida y  movilidad   libre   según tolerancia.
 - Realizar ejercicios de cuádriceps y movilidad de la rodilla.
 - Movilizaciones pasivas de  rótula 4/5 veces al  día  durante  15 minutos.
-- Puede  bajarse en  su  móvil/Tablet/PC  la aplicación gratuita “LCA” donde podrá encontrar  información  acerca de esta patología  y  procedimiento  quirúrgico  realizado,  así  como  recomendaciones  y  ejercicios  que  puede realizar.
 - Puede requerir ayuda domiciliaria
 
 MEDICACIÓN (según tarjeta sanitaria)
@@ -1991,7 +1989,7 @@ SÍNTOMAS DE ALERTA
 IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 - PROFILAXIS ANTIBIÓTICA CON  2  GR  DE CEFAZOLINA.
-- ISQUEMIA EN RAÍZ DE MUSLO.
+- ISQUEMIA EN RAÍZ DE MUSLO ${LADO_ABR_M}.
 - OBTENCIÓN DE PLASTIA AUTOLOGA  ST-RI.
 - FONDOS DE SACO  CUADRICIPITALES: SIN  ALTERACIONES.
 - COMPARTIMENTO  INTERNO: ROTURA EN ASA DE  CUBO  DEL CUERPO   Y  CPMI QUE SE SUTURA CON 3  PUNTOS DE FAST-FIX  Y  1  PUNTO  FUERA DENTRO  CON  TICRON 2.
@@ -2051,7 +2049,7 @@ SÍNTOMAS DE ALERTA
 IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 - PROFILAXIS ANTIBIÓTICA CON  2  GR  DE CEFAZOLINA.
-- ISQUEMIA EN RAÍZ DE MUSLO.
+- ISQUEMIA EN RAÍZ DE MUSLO ${LADO_ABR_M}.
 - SE REALIZA EXPLORACIÓN  BAJO  ANESTESIA PREVIA QUE  CONFIRMA  LA LESIÓN  DE  LCA.
 - OBTENCIÓN  Y PREPARACIÓN DE PLASTIA AUTOLOGA  ST-RI.
 - FONDOS DE SACO  CUADRICIPITALES: SIN  ALTERACIONES.
@@ -2102,7 +2100,7 @@ SÍNTOMAS DE ALERTA
 IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 - PROFILAXIS ANTIBIÓTICA CON  2  GR  DE CEFAZOLINA.
-- ISQUEMIA EN RAÍZ DE MUSLO.
+- ISQUEMIA EN RAÍZ DE MUSLO ${LADO_ABR_M}.
 - SE REALIZA CAR PREVIA BAJO QUE  CONFIRMA  LA LESIÓN  DE  LCA.
 - OBTENCIÓN  Y PREPARACIÓN DE PLASTIA AUTOLOGA  ST-RI.
 - FONDOS DE SACO  CUADRICIPITALES: SIN  ALTERACIONES.
@@ -2153,8 +2151,8 @@ SÍNTOMAS DE ALERTA
 ```
 IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-- PROFILAXIS ANTIBIÓTICA CON 2 GR DE CAFAZOLINA. 
-- ISQUEMIA EN RAIZ DE MUSLO.
+- PROFILAXIS ANTIBIÓTICA CON 2 GR DE CAFAZOLINA.
+- ISQUEMIA EN RAÍZ DE MUSLO ${LADO_ABR_M}.
 - CAR  DIAGNOSTICA QUE  CONFIRMA  ROTURA  COMPLETA DE  LCA. 
 - INCISIÓN  LONGITUDINAL DESDE POLO INFERIOR DE RÓTULA A BORME MEDIAL DE TTA. APERTURA DEL PARATENON Y OBTENCIÓN PLASTIA HTH DE 10 MM DE ANCHURA DELTENDÓN ROTULIANO Y 2 PASTILLAS ÓSEAS EN LOS EXTREMOS 8*25 MM EN  ROTULA  Y  9*30 MM EN  TTA.
 - LIGAMENTOPLASTIA LCA  CON AUTOINJERTO HTH HOMOLATERAL CON  TÉCNICA  ANATÓMICA:
@@ -2207,7 +2205,7 @@ SÍNTOMAS DE ALERTA
 IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 - PROFILAXIS ANTIBIÓTICA CON  2  GR  DE CEFAZOLINA.
-- ISQUEMIA EN RAÍZ DE MUSLO.
+- ISQUEMIA EN RAÍZ DE MUSLO ${LADO_ABR_M}.
 - SE REALIZA  CAR DIAGNÓSTICA BAJO  ANESTESIA PREVIA APRECIÁNDOSE  ROTURA  DEL  FASCÍCULO  AM  DEL  LCA ,  CON  INTEGRIDAD DEL  FASCÍCULO  PL.
 - OBTENCIÓN DE PLASTIA AUTOLOGA CUÁDRUPLE DE TENDONES DE PATA DE GANSO ST A TRAVÉS DE INCISIÓN OBLICUA EN CARA ANTEROINTERNA DE TERCIO PROXIMAL DE TIBIA.
 - FONDOS DE SACO  CUADRICIPITALES: SIN  ALTERACIONES.
@@ -2255,7 +2253,7 @@ SÍNTOMAS DE ALERTA
 IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 - PROFILAXIS ANTIBIÓTICA CON  2  GR  DE CEFAZOLINA.
-- ISQUEMIA EN RAÍZ DE MUSLO.
+- ISQUEMIA EN RAÍZ DE MUSLO ${LADO_ABR_M}.
 - SE REALIZA  CAR DIAGNÓSTICA BAJO  ANESTESIA PREVIA APRECIÁNDOSE  ROTURA  DEL  FASCÍCULO  PL  DEL  LCA ,  CON  INTEGRIDAD DEL  FASCÍCULO  AM.
 - OBTENCIÓN DE PLASTIA AUTOLOGA DE HTH  A TRAVÉS DE INCISIÓN CENTRAL DE POLO INF   RÓTULA A TTA.
 - FONDOS DE SACO  CUADRICIPITALES: SIN  ALTERACIONES.
@@ -2303,7 +2301,7 @@ SÍNTOMAS DE ALERTA
 IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 - PROFILAXIS ANTIBIÓTICA CON  2  GR  DE CEFAZOLINA.
-- ISQUEMIA EN RAÍZ DE MUSLO.
+- ISQUEMIA EN RAÍZ DE MUSLO ${LADO_ABR_M}.
 -  SE  PREPARA  PLASTIA DE  BANCO  DE TEJIDOS  HTH  CON  PASTILLA  ÓSEA PARA  FÉMUR DE 9*25 MM Y  PARA TIBIA DE  11*30 MM. 
 - FONDOS DE SACO  CUADRICIPITALES: SIN ALTERACIONES DE  INTERÉS. 
 - COMPARTIMENTO  INTERNO: SECUELAS DE  MENISCECTOMIA PARCIAL  DEL CPMI  DE CIRUGIA  PREVIA.
@@ -2352,8 +2350,8 @@ SÍNTOMAS DE ALERTA
 IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 - RESCATE DE  LIGAMENTOPLASTIA DE   LCA DE LA RODILLA ${LADO_F_UPPER}:
-- PROFILAXIS ANTIBIÓTICA CON 2 GR DE CAFAZOLINA. 
-- ISQUEMIA EN RAIZ DE MUSLO.
+- PROFILAXIS ANTIBIÓTICA CON 2 GR DE CAFAZOLINA.
+- ISQUEMIA EN RAÍZ DE MUSLO ${LADO_ABR_M}.
 - EXPLORACIÓN  BAJO  ANESTESIA  QUE  CONFIRMA  ROTURA  COMPLETA  DE  LA  PLASTIA AUTOLOGA PREVIA DE LCA.
 - ROTURA  LONGITUDINAL  EN  ASA DE CUBO  DEL  CPMI LUXADA QUE SE REDUCE Y  SE SUTURA  CON  3  PUNTOS DE  FAST-FIX.
 - PREPARACIÓN  DE  LA  PLASTIA DE HTH  DE BANCO  DE  TEJIDOS CON  PASTILLAS  EN  FÉMUR  7*25   Y  TIBIA  9*30 MM Y  RESCATE LIGAMENTOPLASTIA CON  TÉCNICA  ANATÓMICA:
@@ -2403,6 +2401,56 @@ SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
 ```
 
+##### `lca_reparacion`
+**LCA Reparación (InternalBrace)**
+
+**Hoja operatoria:**
+
+```
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+
+- PROFILAXIS ANTIBIÓTICA CON 2 GR DE CEFAZOLINA.
+- ISQUEMIA EN RAÍZ DE MUSLO ${LADO_ABR_M}.
+- ABORDAJES AL Y AM.
+- FONDOS DE SACO CUADRICIPITALES: SIN ALTERACIONES.
+- COMPARTIMENTO INTERNO: SIN LESIONES MENISCALES NI CONDRALES.
+- COMPARTIMENTO EXTERNO: SIN LESIONES MENISCALES NI CONDRALES.
+- COMPARTIMENTO CENTRAL: SE APRECIA LESIÓN LCA (SHERMAN TIPO I-II) CON BUENA CALIDAD DE REMANENTE LIGAMENTOSO. FIJACION FEMORAL MEDIANTE SWIVELOCK CARGADO CON FIBERTAPE (INTERNALBRACE). FIJACION TIBIAL MEDIANTE SWIVELOCK TRAS TUNEL TRANSTIBIAL CON BROCA DE 3.5 (FLIPCUTTER).
+- CIERRE POR PLANOS.
+- PIEL CON GRAPAS Y VENDAJE COMPRESIVO.
+```
+
+**Tratamiento al alta:**
+
+```
+CUIDADOS POSTOPERATORIOS
+- Mover activamente los dedos de la extremidad operada.
+- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
+- Aplicar  hielo  sobre  vendaje  4 veces al  día  durante 30 minutos.
+- Puede caminar con ayuda de 2 muletas SIN  APOYO  inicial de la pierna intervenida:
+- Semana 0 – semana 3: descarga completa.
+- Semana 3 – semana 6: carga parcial ayudado  de bastones.
+- A partir  semana 6: puede caminar libremente sin  bastones (apoyo  completo).
+- Aumento  progresivo  de la  movilidad para protección de la reparación ligamentosa:
+- Semana 0 - semana 2: 0º a 60º.
+- Semana 2 - semana 4: 0º  a 90º.
+- Semana 4- semana 6: 90º a 120º.
+- A partir  semana 6: movilidad libre.
+- Realizar ejercicios isométricos de cuádriceps y elevación con  pierna extendida.
+- Movilizaciones pasivas de  rótula 4/5 veces al  día  durante  15 minutos.
+- Puede requerir ayuda domiciliaria
+- ENANPLUS  75 mg/25 mg  / 8 horas vía oral.
+- ENOXAPARINA 40 mg /24 horas vía subcutánea  durante 3 semanas.
+
+REVISIÓN
+- Antes de irse de alta  del  hospital:
+- Solicitar  cita en  Admisión  de  Consultas Externas para revisión en CC EE  de  COT (${DOCTOR})  en  2/3   semanas  para ver evolución.
+- Solicitar  cita en  Servicio de  Rehabilitación  para  seguimiento  postoperatorio.
+
+SÍNTOMAS DE ALERTA
+- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
+```
+
 ##### `lca_allinside_arthrex` — LCA All-Inside ST Arthrex (no registrada en UI)
 
 **Nota Operatoria:**
@@ -2412,7 +2460,7 @@ IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 - ANESTESIA RAQUÍDEA.
 - PROFILAXIS ANTIBIÓTICA CON 2 GR DE CEFAZOLINA.
-- ISQUEMIA EN RAÍZ DE MUSLO 250 MMHG.
+- ISQUEMIA EN RAÍZ DE MUSLO ${LADO_ABR_M} 250 MMHG.
 - ABORDAJE LONGITUDINAL SOBRE PATA DE GANSO. DISECCIÓN POR PLANOS. FASCIOTOMÍA SARTORIO Y OBTENCIÓN DE PLASTIA ST.
 - PREPARACIÓN DE PLASTIA CUÁDRUPLE DE ST CON 2 TIGHTROPE (Arthrex) DE 7 CM LONGITUD * 9 MM DIÁMETRO.
 - TIEMPO ARTROSCÓPICO: PORTALES ARTROSCÓPICOS HABITUALES: AL, AM Y AM ACCESORIO.
