@@ -5,7 +5,7 @@
 
 > **Total: 86 plantillas quirúrgicas + 7 plantillas de urgencias = 93 plantillas** en 14 categorías quirúrgicas, 5 regiones anatómicas y 1 módulo de urgencias.
 
-> **Variables dinámicas (quirófano):** `${FECHA}` (fecha DD/MM/YY), `${DOCTOR}` (cirujano), `${AYUDANTE}` (ayudante). **Lateralidad:** `${LADO_M}` (derecho/izquierdo), `${LADO_F}` (derecha/izquierda), `${LADO_M_UPPER}` (DERECHO/IZQUIERDO), `${LADO_F_UPPER}` (DERECHA/IZQUIERDA), `${LADO_ABR_F}` (DCHA/IZDA), `${LADO_ABR_M}` (DCHO/IZDO), `${DECUBITO}` (decúbito lateral contrario, minúscula), `${DECUBITO_UPPER}` (DECÚBITO LATERAL contrario, mayúscula).
+> **Variables dinámicas (quirófano):** `${FECHA}` (fecha DD/MM/YY), `${DOCTOR}` (cirujano), `${AYUDANTE}` (ayudante). **Lateralidad:** `${LADO_M}` (derecho/izquierdo), `${LADO_F}` (derecha/izquierda), `${LADO_M_UPPER}` (DERECHO/IZQUIERDO), `${LADO_F_UPPER}` (DERECHA/IZQUIERDA), `${LADO_ABR_F}` (DERECHA/IZQUIERDA), `${LADO_ABR_M}` (DERECHO/IZQUIERDO), `${DECUBITO}` (decúbito lateral contrario, minúscula), `${DECUBITO_UPPER}` (DECÚBITO LATERAL contrario, mayúscula).
 
 > **Variables dinámicas (urgencias):** `${COT}` (nombre del COT de guardia), `${ACUDO}` (fórmula "Acudo/Acudimos"), `${PARTE}` (fórmula "como parte/por orden"), `${SEXO}` (Varón/Mujer), `${EDAD}` (edad del paciente), `${LADO}` (D/I para lateralidad).
 
@@ -223,18 +223,18 @@ SÍNTOMAS DE ALERTA
 ```
 IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-- FRACTURA  PERIPROTÉSICA DE  FÉMUR  ${LADO_M_UPPER} EN  PACIENTE  CON  PRÓTESIS  CADERA:
-- PROFILAXIS  ANTIBIÓTICA CON  2 GR DE  CEFAZOLINA.
-- DECÚBITO  SUPINO
-- INCISIÓN LONGITUDINAL LATERAL  DEL  FÉMUR
--  VIA  ABORDAJE  SUBVASTO  EXTERNO  E  IDENTIFICACIÓN  DE  LA FRACTURA.
-- REDUCCIÓN  ABIERTA QUE SE REDUCE CON  PINZAS DE REDUCCIÓN
--  OSTEOSÍNTESIS  CON  2  TORNILLOS  INTERFRAGMENTARIOS  Y  PLACA PERIPROTÉSICA DE FÉMUR PROXIMAL NCB  CON  5  TORNILLOS  DISTALES DE 5 MM Y  3  PROXIMALES DE 4  MM + 3  CABLES  READY. 
- -  SE COMPRUEBA  BAJO  ESCOPIA  REDUCCIÓN  FRACTURA  Y  LONGITUDES DE TORNILLOS. 
--  LAVADO  ABUNDANTE  CON  SUERO.
--  CIERRE  POR  PLANOS
-- DRENAJE ASPIRATIVO.
-- PIEL  CON  GRAPAS.
+Fractura periprotésica de fémur ${LADO_M} en paciente con prótesis cadera
+- Profilaxis antibiótica con 2 gr de cefazolina.
+- Decúbito supino.
+- Incisión longitudinal lateral del fémur.
+- Vía abordaje subvasto externo e identificación de la fractura.
+- Reducción abierta que se reduce con pinzas de reducción.
+- Osteosíntesis con 2 tornillos interfragmentarios y placa periprotésica de fémur proximal NCB con 5 tornillos distales de 5 mm y 3 proximales de 4 mm + 3 cables ready.
+- Se comprueba bajo escopia reducción fractura y longitudes de tornillos.
+- Lavado abundante con suero.
+- Cierre por planos.
+- Drenaje aspirativo.
+- Piel con grapas.
 ```
 
 **Tratamiento al Alta:**
@@ -272,17 +272,17 @@ SÍNTOMAS DE ALERTA
 ```
 IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-- FRACTURA  SUPRAINTERCONDILEA DE FÉMUR ${LADO_M_UPPER}:
-- PROFILAXIS  ANTIBIÓTICA CON  2 GR DE  CEFAZOLINA.
-- DECÚBITO  SUPINO
-- INCISIÓN LONGITUDINAL LATERAL  DEL TERCIO  DISTAL  DEL  FÉMUR
--  VIA  ABORDAJE  SUBVASTO  EXTERNO  E  IDENTIFICACIÓN  DE  LA FRACTURA.
-- REDUCCIÓN DE LA FRACTURA  INTERCONDÍLEA  Y  OSTEOSÍNTESIS CON   UN   TORNILLO  INTERCONDÍLEO DE GRANDES  FRAGMENTOS. 
--  RAFI  CON  PLACA AXSOS DE TITANIO ,  TORNILLOS  DISTALES LOOKING  Y   PROXIMALES.
- -  SE COMPRUEBA  BAJO  ESCOPIA  REDUCCIÓN  FRACTURA Y LONGITUDES DE TORNILLOS.
--  LAVADO  ABUNDANTE  CON  SUERO
--  CIERRE  POR  PLANOS
-- PIEL  CON  GRAPAS.
+Fractura supraintercondílea de fémur ${LADO_M}
+- Profilaxis antibiótica con 2 gr de cefazolina.
+- Decúbito supino.
+- Incisión longitudinal lateral del tercio distal del fémur.
+- Vía abordaje subvasto externo e identificación de la fractura.
+- Reducción de la fractura intercondílea y osteosíntesis con un tornillo intercondíleo de grandes fragmentos.
+- RAFI con placa Axsos de titanio, tornillos distales looking y proximales.
+- Se comprueba bajo escopia reducción fractura y longitudes de tornillos.
+- Lavado abundante con suero.
+- Cierre por planos.
+- Piel con grapas.
 ```
 
 **Tratamiento al Alta:**
@@ -320,17 +320,17 @@ SÍNTOMAS DE ALERTA
 ```
 IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-- FRACTURA TRANSVERSAL   RÓTULA ${LADO_F_UPPER}:
-- PROFILAXIS  ANTIBIÓTICA CON  2 GR DE  CEFAZOLINA.
-- ISQUEMIA EN  RAÍZ  DE  MUSLO.
-- INCISIÓN LONGITUDINAL ANTERIOR DE RODILLA.
-- IDENTIFICACIÓN  DE FRACTURA Y  OSTEOSÍNTESIS  EN OBENQUE  MEDIANTE  2 AGUJAS DE KIRSCHNER  PARALELAS  Y CERCLAJE  DE  ALAMBRE  EN  OCHO.
--  SE PALPA  CONGRUENCIA ARTICULAR  A  TRAVES DE  MINIFICAT.
-- LAVADO  ABUNDANTE CON SF.
-- CIERRE  POR PLANOS.
--  DRENAJE  ASPIRATIVO INTRARTICULAR.
-- PIEL  CON  GRAPAS.
-- VENDAJE  COMPRESIVO.
+Fractura transversal rótula ${LADO_F}
+- Profilaxis antibiótica con 2 gr de cefazolina.
+- Isquemia en raíz de muslo.
+- Incisión longitudinal anterior de rodilla.
+- Identificación de fractura y osteosíntesis en obenque mediante 2 agujas de Kirschner paralelas y cerclaje de alambre en ocho.
+- Se palpa congruencia articular a través de minificat.
+- Lavado abundante con SF.
+- Cierre por planos.
+- Drenaje aspirativo intrarticular.
+- Piel con grapas.
+- Vendaje compresivo.
 ```
 
 **Tratamiento al Alta:**
@@ -691,14 +691,14 @@ SÍNTOMAS DE ALERTA
 ```
 IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-- PROFILAXIS  ANTIBIÓTICA CON  2 GR DE  CEFAZOLINA.
-- ISQUEMIA EN  RAÍZ  DE  MUSLO.
-- VIA  ABORDAJE DE  HENRY  EN  CARA  ANTERIOR  ANTEBRAZO.
--  SE IDENTIFICA  FRACTURA  CONMINUTA DE  4  FRAGMENTOS.
--  REDUCCIÓN  ABIERTA  Y  OSTEOSÍNTESIS  CON  PLACA  DCP-LC  DE  8  ORIFICIOS (4  TORNILLOS  PROXIMALES  Y  3  DISTALES).
-- CIERRE  DE  TCS Y  PIEL  CON  GRAPAS
-- SE LIBERA ISQUEMIA  Y  COAGULA  VASOS SANGRANTES.
-- FÉRULA  BRAQUIAL.
+- Profilaxis antibiótica con 2 gr de cefazolina.
+- Isquemia en raíz de muslo.
+- Vía abordaje de Henry en cara anterior antebrazo.
+- Se identifica fractura conminuta de 4 fragmentos.
+- Reducción abierta y osteosíntesis con placa DCP-LC de 8 orificios (4 tornillos proximales y 3 distales).
+- Cierre de TCS y piel con grapas.
+- Se libera isquemia y coagula vasos sangrantes.
+- Férula braquial.
 ```
 
 **Tratamiento al Alta:**
@@ -727,15 +727,15 @@ SÍNTOMAS DE ALERTA
 ```
 IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-- PROFILAXIS  ANTIBIÓTICA CON  2 GR DE  CEFAZOLINA.
-- ISQUEMIA EN  RAÍZ  DE  MUSLO.
-- VIA  ABORDAJE DE  HENRY  EN  CARA  ANTERIOR  ANTEBRAZO: RAFI CON  PLACA  DCP-LC  DE  8  ORIFICIOS.
--  VIA ABORDAJE  DORSAL  SOBRE   FRACTURA DE   CÚBITO:  RAFI  CON  PLACA  DCP-LC DE 8  ORIFICIOS (4 TORNILLOS PROXIMALES  Y  3   DISTALES).
-- SE COMPRUEBA   CON ESCOPIA REDUCCIÓN  DE LAS  FRACTURAS Y  LONGITUDES DE   TORNILLOS.
-- LAVADO  CON  SUERO  FISIOLÓGICO.
-- SE LIBERA ISQUEMIA  Y  COAGULA  VASOS SANGRANTES.
-- CIERRE  DE  TCS Y  PIEL  CON  GRAPAS
-- FÉRULA  BRAQUIAL.
+- Profilaxis antibiótica con 2 gr de cefazolina.
+- Isquemia en raíz de muslo.
+- Vía abordaje de Henry en cara anterior antebrazo: RAFI con placa DCP-LC de 8 orificios.
+- Vía abordaje dorsal sobre fractura de cúbito: RAFI con placa DCP-LC de 8 orificios (4 tornillos proximales y 3 distales).
+- Se comprueba con escopia reducción de las fracturas y longitudes de tornillos.
+- Lavado con suero fisiológico.
+- Se libera isquemia y coagula vasos sangrantes.
+- Cierre de TCS y piel con grapas.
+- Férula braquial.
 ```
 
 **Tratamiento al Alta:**
@@ -761,14 +761,14 @@ SÍNTOMAS DE ALERTA
 ```
 IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-- PROFILAXIS  ANTIBIÓTICA CON  2 GR DE  CEFAZOLINA.
-- NO  SE REALIZA  ISQUEMIA.
-- INCISIÓN  LINEA MEDIA  POSTERIOR CON VIA   DE ABORDAJE TRANSTRICIPITAL.
--  SE IDENTIFICA  FRACTURA  CON TERCER FRAGMENTO  Y  SE   REALIZA  LIMPIEZA   FOCO.
--  REDUCCIÓN  ABIERTA  Y  OSTEOSÍNTESIS  CON DOS  TORNILLOS  INTERFRAGMENTARIOS SOLIDARIZANDO  LOS   DOS  FRAGMENTOS MÁS   DISTALES  Y  LUEGO  PLACA  DE  NEUTRALIZACIÓN  DCP-LC DE   12   ORIFICIOS  CON  11 TORNILLOS (5  PROXIMALES  Y  6  DISTALES)
--  LAVADO  ABUNDANTE.
-- CIERRE POR  PLANOS Y  PIEL  CON  GRAPAS
-- VENDAJE   COMPRESIVO.
+- Profilaxis antibiótica con 2 gr de cefazolina.
+- No se realiza isquemia.
+- Incisión línea media posterior con vía de abordaje transtricipital.
+- Se identifica fractura con tercer fragmento y se realiza limpieza foco.
+- Reducción abierta y osteosíntesis con dos tornillos interfragmentarios solidarizando los dos fragmentos más distales y luego placa de neutralización DCP-LC de 12 orificios con 11 tornillos (5 proximales y 6 distales).
+- Lavado abundante.
+- Cierre por planos y piel con grapas.
+- Vendaje compresivo.
 ```
 
 **Tratamiento al Alta:**
@@ -797,15 +797,15 @@ SÍNTOMAS DE ALERTA
 ```
 IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-- PROFILAXIS  ANTIBIÓTICA CON  2 GR DE  CEFAZOLINA.
-- ISQUEMIA EN  RAÍZ  DE  MUSLO.
-- VIA  ABORDAJE DE  POSTERIOR   CODO.
--  SE IDENTIFICA  FRACTURA  CONMINUTA  Y  SE   REALIZA  LIMPIEZA   FOCO.
--  REDUCCIÓN  ABIERTA  Y  OSTEOSÍNTESIS  CON  PLACA  DE OLECRANON  PREFORMADA  PERI-LOC DE   8  ORIFICIOS
--  LAVADO  ABUNDANTE.
-- CIERRE  DE  TCS Y  PIEL  CON  GRAPAS
-- SE LIBERA ISQUEMIA.
-- FÉRULA  BRAQUIAL.
+- Profilaxis antibiótica con 2 gr de cefazolina.
+- Isquemia en raíz de muslo.
+- Vía abordaje posterior de codo.
+- Se identifica fractura conminuta y se realiza limpieza foco.
+- Reducción abierta y osteosíntesis con placa de olecranon preformada Peri-Loc de 8 orificios.
+- Lavado abundante.
+- Cierre de TCS y piel con grapas.
+- Se libera isquemia.
+- Férula braquial.
 ```
 
 **Tratamiento al Alta:**
@@ -833,16 +833,16 @@ SÍNTOMAS DE ALERTA
 ```
 IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-- PROFILAXIS  ANTIBIÓTICA CON  2 GR DE  CEFAZOLINA.
-- ISQUEMIA EN  RAÍZ  DE  MUSLO.
-- VIA  ABORDAJE DE  POSTERIOR   CODO.
--  SE IDENTIFICA  FRACTURA  Y  SE   REALIZA  LIMPIEZA   FOCO.
--  REDUCCIÓN  ABIERTA  Y  OSTEOSÍNTESIS  CON 2  AGUJAS  DE  KIRSCHNER DEL  Nº 2 Y  CERCLAJE EN  OBENQUE CON ALAMBRE DEL  1.
-- SE COMPRUEBA CON  ESCOPIA LA CORRECTA REDUCCIÓN  DE  LA   FRACTURA  Y  COLOCACIÓN DE  LAS AGUJAS.
--  LAVADO  ABUNDANTE.
-- CIERRE  POR   PLANOS Y  PIEL  CON  GRAPAS.
-- SE LIBERA ISQUEMIA.
-- FÉRULA  BRAQUIAL.
+- Profilaxis antibiótica con 2 gr de cefazolina.
+- Isquemia en raíz de muslo.
+- Vía abordaje posterior de codo.
+- Se identifica fractura y se realiza limpieza foco.
+- Reducción abierta y osteosíntesis con 2 agujas de Kirschner del n.º 2 y cerclaje en obenque con alambre del 1.
+- Se comprueba con escopia la correcta reducción de la fractura y colocación de las agujas.
+- Lavado abundante.
+- Cierre por planos y piel con grapas.
+- Se libera isquemia.
+- Férula braquial.
 ```
 
 **Tratamiento al Alta:**
@@ -879,17 +879,17 @@ SÍNTOMAS DE ALERTA
 IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 - CAR ${LADO_F_UPPER}:
-- ISQUEMIA EN  RAÍZ  DE  MUSLO.
-- PORTALES TRADICIONALES ANTEROMEDIAL  Y  ANTEROLATERAL. 
-- PORTALES  ACCESORIOS ANTEROMEDIAL  PARA  ZONA RECEPTORA Y  PARAPATELAR   MEDIAL  PARA ZONA DONANTE.
-- ARTICULACIÓN  FEMOROPATELAR Y  FONDOS DE SACO  CUADRICIPITALES:  SIN  ALTERACIONES.
-- COMPARTIMENTO  INTERNO: LESIÓN OSTEOCONDRAL  GRADO  3 INESTABLE EN  ZONA   LATERAL  DEL  CÓNDILO FEMORAL  INTERNO DE  APROXIMADAMENTE  2 CM DIÁMETRO.  DESBRIDAMIENTO DE LA MISMA  CON  SINOVIOTOMO,  FRESA ESFÉRICA  Y REGULARIZACIÓN  DE LOS  BORDES CON  CUCHARILLA.
-- PIVOTE CENTRAL: LCA ÍNTEGRO  Y  COMPETENTE.
--  COMPARTIMENTO EXTERNO: SIN  ALTERACIONES.
-- TOMA  DE 2  INJERTOS  OSTEOCONDRALES DE 8.5 MM DIÁMETRO EN  ZONA  MEDIAL  DE  TROCLEA FEMORAL  Y  1 INJERTO  DE 6.5 MM EN  ZONA LATERAL,  TODOS DE UNOS 17-18  MM LONGITUD.
-- PERFORACIÓN DE 3   TÚNELES CORRESPONDIENTES EN  ZONA  RECEPTORA  DE  UNOS 18-20 MM Y COLOCACIÓN  DE   LOS   3  INJERTOS OSTEOCONDRALES SEGÚN  TÉCNICA   HABITUAL DE MOSAICOPLASTIA. 
-- CIERRE PORTALES CON  GRAPAS.
-- DRENAJE ASPIRATIVO.
+- Isquemia en raíz de muslo.
+- Portales tradicionales anteromedial y anterolateral.
+- Portales accesorios anteromedial para zona receptora y parapatelar medial para zona donante.
+- Articulación femoropatelar y fondos de saco cuadricipitales: sin alteraciones.
+- Compartimento interno: lesión osteocondral grado 3 inestable en zona lateral del cóndilo femoral interno de aproximadamente 2 cm diámetro. Desbridamiento de la misma con sinoviotomo, fresa esférica y regularización de los bordes con cucharilla.
+- Pivote central: LCA íntegro y competente.
+- Compartimento externo: sin alteraciones.
+- Toma de 2 injertos osteocondrales de 8.5 mm diámetro en zona medial de troclea femoral y 1 injerto de 6.5 mm en zona lateral, todos de unos 17-18 mm longitud.
+- Perforación de 3 túneles correspondientes en zona receptora de unos 18-20 mm y colocación de los 3 injertos osteocondrales según técnica habitual de mosaicoplastia.
+- Cierre portales con grapas.
+- Drenaje aspirativo.
 ```
 
 **Tratamiento al Alta:**
@@ -919,19 +919,19 @@ SÍNTOMAS DE ALERTA
 IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 - CAR ${LADO_F_UPPER}:
-- ISQUEMIA EN  RAÍZ  DE  MUSLO.
-- PORTALES TRADICIONALES ANTEROMEDIAL  Y  ANTEROLATERAL.
-- ARTICULACIÓN  FEMOROPATELAR Y  FONDOS DE SACO  CUADRICIPITALES:  SIN  ALTERACIONES.
-- COMPARTIMENTO  INTERNO : SIN  LESIONES  MENISCALES NI  CONDRALES.
-- PIVOTE CENTRAL: LCA ÍNTEGRO  Y  COMPETENTE.
--  COMPARTIMENTO EXTERNO: NO  LESIONES  MENISCALES.  FRACTURA  DE BORDE  LATERAL  DE  MESETA TIBIAL  CON  HUNDIMIENTO Y  SEPARACIÓN.
-- LAVADO  ARTICULAR ABUNDANTE.
-- SE IDENTIFICA  FRACTURA,  CON  GUIA DE  LCA  SE REALIZA PERFORACIÓN  DE CORTICAL  MEDIAL  DE  TIBIA  Y  SE ASCIENDE  FRAGMENTO  FRACTURADO CON  IMPACTADOR.
-- OSTEOSÍNTESIS  CON  2  TORNILLOS  PERCUTÁNEOS DE ESPONJOSA ROSCA PARCIAL  LARGA DE  6.5 *60 MM CON  ARANDELAS MEDIANTE  CONTROL DE ESCOPIA.
-- SE RELLENA  TÚNEL TIBIAL  CON  PROSTEON  TACO  Y  GRÁNULOS.
--  CIERRE PORTALES.
-- DRENAJE  ASPIRATIVO.
-- VENDAJE COMPRESIVO.
+- Isquemia en raíz de muslo.
+- Portales tradicionales anteromedial y anterolateral.
+- Articulación femoropatelar y fondos de saco cuadricipitales: sin alteraciones.
+- Compartimento interno: sin lesiones meniscales ni condrales.
+- Pivote central: LCA íntegro y competente.
+- Compartimento externo: no lesiones meniscales. Fractura de borde lateral de meseta tibial con hundimiento y separación.
+- Lavado articular abundante.
+- Se identifica fractura, con guía de LCA se realiza perforación de cortical medial de tibia y se asciende fragmento fracturado con impactador.
+- Osteosíntesis con 2 tornillos percutáneos de esponjosa rosca parcial larga de 6.5 *60 mm con arandelas mediante control de escopia.
+- Se rellena túnel tibial con Prosteon taco y gránulos.
+- Cierre portales.
+- Drenaje aspirativo.
+- Vendaje compresivo.
 ```
 
 **Tratamiento al Alta:**
@@ -962,18 +962,18 @@ SÍNTOMAS DE ALERTA
 IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 - CAR ${LADO_F_UPPER}:
-- ISQUEMIA EN  RAÍZ  DE  MUSLO.
-- PORTALES TRADICIONALES ANTEROMEDIAL  Y  ANTEROLATERAL. PORTAL  MEDIAL  ACCESORIO.
-- ARTICULACIÓN  FEMOROPATELAR Y  FONDOS DE SACO  CUADRICIPITALES:  SIN  ALTERACIONES.
-- COMPARTIMENTO  INTERNO Y  EXT : SIN  LESIONES  MENISCALES NI  HUNDIMIENTO DE MESETA  TIBIALES.
-- PIVOTE CENTRAL: AVULSIÓN  DE  ESPINA TIBIAL  A NIVEL  DE LA INSERCIÓN  DEL  LCA CON  ÉSTE ÍNTEGRO. LCP  ÍNTEGRO  Y  COMPETENTE.  
-- LAVADO  ARTICULAR ABUNDANTE.
-- SE IDENTIFICA  FRACTURA, SE LIMPIA  LECHO  ÓSEO  Y  SE   RETIRA  LIGAMENTO  INTERMENISCAL  QUE   IMPEDÍA   LA REDUCCIÓN  DE LA  AVULSIÓN. 
-- SE  PASA DOBLE  SUTURA EN  MARCO  EN LA BASE DEL  LCA.  AMBAS   SE   PASAN  POR   DOS MINITÚNELES DESDE EL  LECHO  DE FRACTURA Y  SE ANUDAN  EN LA  CORTICCAL  ANTERIOR DE TIBIA  DEJANDO  UN  PUENTE  ÓSEO  DE  ALGO  MÁS DE 1 CM.
--  SE COMPRUEBA   CON ESCOPIA REDUCCIÓN  FRAGMENTO  Y  TENSIÓN  DEL  LCA.  
--  CIERRE PORTALES.
-- DRENAJE  ASPIRATIVO.
-- INMOVILIZACIÓN  CON ORTESIS EN  EXTENSIÓN.
+- Isquemia en raíz de muslo.
+- Portales tradicionales anteromedial y anterolateral. Portal medial accesorio.
+- Articulación femoropatelar y fondos de saco cuadricipitales: sin alteraciones.
+- Compartimento interno y ext: sin lesiones meniscales ni hundimiento de meseta tibiales.
+- Pivote central: avulsión de espina tibial a nivel de la inserción del LCA con éste íntegro. LCP íntegro y competente.
+- Lavado articular abundante.
+- Se identifica fractura, se limpia lecho óseo y se retira ligamento intermeniscal que impedía la reducción de la avulsión.
+- Se pasa doble sutura en marco en la base del LCA. Ambas se pasan por dos minitúneles desde el lecho de fractura y se anudan en la cortical anterior de tibia dejando un puente óseo de algo más de 1 cm.
+- Se comprueba con escopia reducción fragmento y tensión del LCA.
+- Cierre portales.
+- Drenaje aspirativo.
+- Inmovilización con ortesis en extensión.
 ```
 
 **Tratamiento al Alta:**
@@ -1021,17 +1021,17 @@ SÍNTOMAS DE ALERTA
 IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 - CAR ${LADO_F_UPPER}:
-- ISQUEMIA EN  RAÍZ  DE  MUSLO.
-- PORTALES TRADICIONALES ANTEROMEDIAL  Y  ANTEROLATERAL.
--  NO  SE APRECIA LESIONES  MENISCALES  NI LIGAMENTOSAS.  
-- ARTICULACIÓN  FEMOROPATELAR Y  FONDOS DE SACO  CUADRICIPITALES:  SUBLUXACIÓN  LATERAL  DE   RÓTULA CON  CONDROPATÍA   GRADO  3. 
- - SE REALIZA  SECCIÓN  ALERÓN  ROTULIANO  EXTERNO ARTROSCÓPICO (FICAT) CON  VAPORIZADOR. 
--  PLICATURA DE   ALERON  ROTULIANO  INTERNO  POR   TÉCNICA ARTROSCÓPICADE  LANNY  JONHSON  CON  3  PUNTOS DE  SUTURA CON  SAFIL  DEL Nº 2.
--  SE   COMPRUEBA  BUEN TRAKING   ROTULIANO POSTERIORMENTE A  REALINEACIÓN.
-- LAVADO  ARTICULAR ABUNDANTE.
-- CIERRE PORTALES CON  SEDA.
--  DRENAJE ASPIRATIVO.
-- FERULA  INGUINOMALEOLAR.
+- Isquemia en raíz de muslo.
+- Portales tradicionales anteromedial y anterolateral.
+- No se aprecia lesiones meniscales ni ligamentosas.
+- Articulación femoropatelar y fondos de saco cuadricipitales: subluxación lateral de rótula con condropatía grado 3.
+- Se realiza sección alerón rotuliano externo artroscópico (Ficat) con vaporizador.
+- Plicatura de alerón rotuliano interno por técnica artroscópica de Lanny Johnson con 3 puntos de sutura con Safil del nº 2.
+- Se comprueba buen tracking rotuliano posteriormente a realineación.
+- Lavado articular abundante.
+- Cierre portales con seda.
+- Drenaje aspirativo.
+- Férula inguinomaleolar.
 ```
 
 **Tratamiento al Alta:**
@@ -1064,20 +1064,20 @@ SÍNTOMAS DE ALERTA
 IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 - CAR ${LADO_F_UPPER}:
-- ISQUEMIA EN  RAÍZ  DE  MUSLO.
-- PORTALES TRADICIONALES ANTEROMEDIAL  Y  ANTEROLATERAL.
-- PORTAL  SUPEROEXTERNO ACCESORIO.
-- ARTICULACIÓN  FEMOROPATELAR Y  FONDOS DE SACO  CUADRICIPITALES: SUBLUXACIÓN   ROTULIANA EXTERNA SIN  CONDROPATÍA.
-- COMPARTIMENTO  INTERNO: SIN  ALTERACIONES.
-- PIVOTE CENTRAL: LCA ÍNTEGRO  Y  COMPETENTE.
--  COMPARTIMENTO EXTERNO: ROTURARADIAL  DEL CUERPO  DEL ME QUE SE REGULARIZA  CON  PINZAS  Y  MOTOR.
--REALINEAMIENTO PROXIMNAL  ROTULIANO  MEDIANTE  TÉCNICA ARTROSCÓPICA MODIFICADA DE   HALBRECHT:  PLICATURA DEL ALERON ROTULIANO INT CON  4 PUNTOS DE  SUTURA ALL INSIDE CON  PDS DEL Nº 1.
--  SE   COMPRUEBA  BUEN TRAKING   ROTULIANO POSTERIORMENTE A  REALINEACIÓN.
-- NO PRECISA   FICAT.
-- LAVADO  ARTICULAR ABUNDANTE.
-- CIERRE PORTALES CON  SEDA.
--  DRENAJE ASPIRATIVO.
-- FERULA  INGUINOMALEOLAR.
+- Isquemia en raíz de muslo.
+- Portales tradicionales anteromedial y anterolateral.
+- Portal superoexterno accesorio.
+- Articulación femoropatelar y fondos de saco cuadricipitales: subluxación rotuliana externa sin condropatía.
+- Compartimento interno: sin alteraciones.
+- Pivote central: LCA íntegro y competente.
+- Compartimento externo: rotura radial del cuerpo del ME que se regulariza con pinzas y motor.
+- Realineamiento proximal rotuliano mediante técnica artroscópica modificada de Halbrecht: plicatura del alerón rotuliano int con 4 puntos de sutura all inside con PDS del nº 1.
+- Se comprueba buen tracking rotuliano posteriormente a realineación.
+- No precisa Ficat.
+- Lavado articular abundante.
+- Cierre portales con seda.
+- Drenaje aspirativo.
+- Férula inguinomaleolar.
 ```
 
 **Tratamiento al Alta:**
@@ -1117,22 +1117,22 @@ SÍNTOMAS DE ALERTA
 ```
 IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-- CAR ${LADO_F_UPPER} + OSTEOTOMÍA DE ADICCIÓN VALGUIZANTE DE TIBIA ${LADO_F_UPPER}:
-- ISQUEMIA EN  MUSLO  ${LADO_ABR_M}
-- PORTALES TRADICIONALES ANTEROMEDIAL  Y  ANTEROLATERAL.
-- ARTICULACIÓN  FEMOROPATELAR Y  FONDOS DE SACO  CUADRICIPITALES:  CONDROPATÍA DE LA TROCLEA FEMORAL  GRADO 4.
-- COMPARTIMENTO  INTERNO: ROTURA DEGENERATIVA DEL  CUERPO   Y CUERNO  POSTERIOR DEL  MENISCO  INTERNO QUE SE RESECA  Y  REGULARIZA  CON  PINZAS  Y  MOTOR. CONDROPATÍA  GRADO 4 DE  TODA ZONA CARGA DE  CÓNDILO FEMORAL  INT  Y  MESETA TIBIAL  INT
-- PIVOTE CENTRAL: LCA  ÍNTEGRO  Y  COMPETENTE.  
--  COMPARTIMENTO EXTERNO: SIN  ALTERACIONES.
-- EXTRACIÓN  DE   INJERTO  BICORTICAL DE  CRESTA   ILIACA  Y  CHIPS DE ESPONJOSA.
-- INCISIÓN  OBLICUA  EN  TERCIO  PROXIMAL  Y  MEDIAL  DE TIBIA   SIGUIENDO  DIRECCION  DE LOS TENDONES ISQUIOTIALES. 
-- DESINSERCIÓN  PARCIAL  DE  LA INSERCIÓN  DISTAL  DEL  FASCÍCULO  SUPERFICIAL  DEL  LLI. 
-- OSTEOTOMÍA BIPLANAR DE TIBIA  RESPETANDO LA TTA  CON  SIERRA Y  COMPLETADA CON ESCOPLO .
-- APERTURA DE   LA CUÑA  DE FORMA  PROGRESIVA  HASTA  16º  Y  RELLENO  DE LA  MISMA  CON  EL INJERTO  AUTOLOGO  CORTICAL  Y  DE ESPONJOSA 
-- OSTEOSÍNTESIS  CON  PLACA DE OSTEOTOMÍA TIBIAL MEDIAL PROXIMAL TOMOFIX  FIJADA CON  4  TORNILLOS  PROXIMALES  Y  4   TORNILLOS DISTALES   FIJADOS A PLACA. 
-- CIERRE POR  PLANOS.
-- PIEL  CON  GRAPAS.
-- VENDAJE  COMPRESIVO.
+- CAR ${LADO_F_UPPER} + osteotomía de adicción valguizante de tibia ${LADO_F_UPPER}:
+- Isquemia en muslo ${LADO_M}.
+- Portales tradicionales anteromedial y anterolateral.
+- Articulación femoropatelar y fondos de saco cuadricipitales: condropatía de la tróclea femoral grado 4.
+- Compartimento interno: rotura degenerativa del cuerpo y cuerno posterior del menisco interno que se reseca y regulariza con pinzas y motor. Condropatía grado 4 de toda zona carga de cóndilo femoral int y meseta tibial int.
+- Pivote central: LCA íntegro y competente.
+- Compartimento externo: sin alteraciones.
+- Extracción de injerto bicortical de cresta iliaca y chips de esponjosa.
+- Incisión oblicua en tercio proximal y medial de tibia siguiendo dirección de los tendones isquiotibiales.
+- Desinserción parcial de la inserción distal del fascículo superficial del LLI.
+- Osteotomía biplanar de tibia respetando la TTA con sierra y completada con escoplo.
+- Apertura de la cuña de forma progresiva hasta 16º y relleno de la misma con el injerto autólogo cortical y de esponjosa.
+- Osteosíntesis con placa de osteotomía tibial medial proximal Tomofix fijada con 4 tornillos proximales y 4 tornillos distales fijados a placa.
+- Cierre por planos.
+- Piel con grapas.
+- Vendaje compresivo.
 ```
 
 **Tratamiento al Alta:**
@@ -1163,26 +1163,26 @@ SÍNTOMAS DE ALERTA
 ```
 IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-- CAR ${LADO_F_UPPER} + OSTEOTOMÍA DE SUSTRACCIÓN  VALGUIZANTE DE TIBIA ${LADO_F_UPPER} TIPO  COVENTRY:
-- ISQUEMIA EN  MUSLO  ${LADO_ABR_M}
-- PORTALES TRADICIONALES ANTEROMEDIAL  Y  ANTEROLATERAL.
-- ARTICULACIÓN  FEMOROPATELAR Y  FONDOS DE SACO  CUADRICIPITALES:  CONDROPATÍA  TRÓCLEA FEMORAL  GRADO 4.
-- COMPARTIMENTO  INTERNO: ROTURA DEGENERATIVA DEL  CUERPO   Y CUERNO  POSTERIOR DEL  MENISCO  INTERNO QUE SE RESECA  Y  REGULARIZA  CON  PINZAS  Y  MOTOR. CONDROPATÍA  GRADO  III  DE  TODA ZONA CARGA DE  CÓNDILO FEMORAL  INT  Y  MESETA TIBIAL  INT
-- PIVOTE CENTRAL: LCA  ÍNTEGRO  Y  COMPETENTE.  
--  COMPARTIMENTO EXTERNO: SIN  ALTERACIONES.
-- LAVADO  ARTICULAR ABUNDANTE.
--  CIERRE PORTALES CON  SEDA.
-- VENDAJE COMPRESIVO.
-- INCISIÓN  EN  L  DESDE  TTA, BORDE  LAT  TENDON  ROTULIANO E  INTERLINEA  EXTERNA.
-- DESINSERCIÓN  DEL  TIBIAL ANTERIOR  Y  EXPOSICIÓN  METÁFISIS  TIBIAL.
-- DESPEGAMIENTO  SINDESMOSIS  TIBIOPERONEAL.
-- OSTEOTOMÍA TIBIA Y  RESECCIÓN DE  CUÑA DE  SUSTRACCIÓN DE  BASE  LAT  DE  9º .
-- CIERRE DE LA CUÑA  MEDIANTE  OSTEOCLASIA  MEDIAL Y  OSTEOSÍNTESIS  CON  PLACA DE OSTEOTOMÍA TIBIAL  NEXGEN  DE  8 MM OFFSET FIJADA CON  2  TORNILLOS  DE ESPONJOSA  PROXIMALES  DE  65 Y  60  MM Y  2 DE CORTICAL  DE  4.5 MM  DE  44 Y 54 MM
-- REINSERCIÓN  MUSCULO  TIBIAL  ANTERIOR. 
-- DRENAJE ASPIRATIVO
-- CIERRE POR  PLANOS.
-- PIEL  CON  GRAPAS.
-- VENDAJE  COMPRESIVO.
+- CAR ${LADO_F_UPPER} + osteotomía de sustracción valguizante de tibia ${LADO_F_UPPER} tipo Coventry:
+- Isquemia en muslo ${LADO_M}.
+- Portales tradicionales anteromedial y anterolateral.
+- Articulación femoropatelar y fondos de saco cuadricipitales: condropatía tróclea femoral grado 4.
+- Compartimento interno: rotura degenerativa del cuerpo y cuerno posterior del menisco interno que se reseca y regulariza con pinzas y motor. Condropatía grado III de toda zona carga de cóndilo femoral int y meseta tibial int.
+- Pivote central: LCA íntegro y competente.
+- Compartimento externo: sin alteraciones.
+- Lavado articular abundante.
+- Cierre portales con seda.
+- Vendaje compresivo.
+- Incisión en L desde TTA, borde lat tendón rotuliano e interlínea externa.
+- Desinserción del tibial anterior y exposición metáfisis tibial.
+- Despegamiento sindesmosis tibioperoneal.
+- Osteotomía tibia y resección de cuña de sustracción de base lat de 9º.
+- Cierre de la cuña mediante osteoclasia medial y osteosíntesis con placa de osteotomía tibial Nexgen de 8 mm offset fijada con 2 tornillos de esponjosa proximales de 65 y 60 mm y 2 de cortical de 4.5 mm de 44 y 54 mm.
+- Reinserción músculo tibial anterior.
+- Drenaje aspirativo.
+- Cierre por planos.
+- Piel con grapas.
+- Vendaje compresivo.
 ```
 
 **Tratamiento al Alta:**
@@ -1213,25 +1213,25 @@ SÍNTOMAS DE ALERTA
 ```
 IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-- CAR ${LADO_F_UPPER} + OSTEOTOMÍA SUPRACONDILEA DE SUSTRACCIÓN  VARIZANTE DE FÉMUR ${LADO_ABR_M}:
-- NO  SE   REALIZA  ISQUEMIA.
-- PORTALES TRADICIONALES ANTEROMEDIAL  Y  ANTEROLATERAL.
-- ARTICULACIÓN  FEMOROPATELAR Y  FONDOS DE SACO  CUADRICIPITALES:  CONDROPATÍA  GRADO  3 CON  RESECCIÓN  PROTUBERANCIA  DE PARTES   BLANDAS A  NIVEL TROCLEA FEMORAL.
-- COMPARTIMENTO  INTERNO: SIN ALTERACIONES DE  INTERÉS.
-- PIVOTE CENTRAL: LCA  ÍNTEGRO  Y  COMPETENTE.  
--  COMPARTIMENTO EXTERNO: ROTURA DEGENERATIVA DEL  CUERPO   Y CUERNO ANTERIOR  DEL  MENISCO EXT QUE SE RESECA  Y  REGULARIZA  CON  PINZAS  Y  MOTOR. CONDROPATÍA  GRADO 2/3 DE  CÓNDILO FEMORAL EXT.
-- LAVADO  ARTICULAR ABUNDANTE.
-- CIERRE PORTALES CON  GRAPAS.
-- INCISIÓN  ANTEROMEDIAL  DE TERCIO  DISTAL  DE  FÉMUR  ${LADO_ABR_M}  Y  ABORDAJE   SUBVASTO INT.
-- OSTEOTOMÍA SUPRACONDÍLEA OBLICUA  BIPLANAR DE SUSTRACCIÓN  DE BASE INTERNA  DE  12º.
-- CIERRE DE LA CUÑA  MEDIANTE  OSTEOCLASIA  LATERAL  PROGRESIVA  Y  OSTEOSÍNTESIS  CON  PLACA TOMOFIX DE FÉMUR DISTAL  MEDIAL  ${LADO_ABR_M} CON  4   TORNILLOS EPIFISARIOS DISTALES  Y  4  TORNILLOS PROXIMALES TODOS CON  BLOQUEO  EN PLACA. 
--  SE COMPRUEBA CON ESCOPIA  CIERRE  OSTEOTOMÍA Y  LONGITUD Y SITUACIÓN  DE   LOS TORNILLOS.
-- LAVADO  HERIDA   QUIRÚRGICO  ABUNDANTE.
-- SUTURA DE  LA FASCIA DEL  VASTO INT.
-- DRENAJE ASPIRATIVO.
-- CIERRE  POR PLANOS.
-- PIEL  CON  GRAPAS.
-- VENDAJE  COMPRESIVO.
+- CAR ${LADO_F_UPPER} + osteotomía supracondílea de sustracción varizante de fémur ${LADO_M}:
+- No se realiza isquemia.
+- Portales tradicionales anteromedial y anterolateral.
+- Articulación femoropatelar y fondos de saco cuadricipitales: condropatía grado 3 con resección protuberancia de partes blandas a nivel tróclea femoral.
+- Compartimento interno: sin alteraciones de interés.
+- Pivote central: LCA íntegro y competente.
+- Compartimento externo: rotura degenerativa del cuerpo y cuerno anterior del menisco ext que se reseca y regulariza con pinzas y motor. Condropatía grado 2/3 de cóndilo femoral ext.
+- Lavado articular abundante.
+- Cierre portales con grapas.
+- Incisión anteromedial de tercio distal de fémur ${LADO_M} y abordaje subvasto int.
+- Osteotomía supracondílea oblicua biplanar de sustracción de base interna de 12º.
+- Cierre de la cuña mediante osteoclasia lateral progresiva y osteosíntesis con placa Tomofix de fémur distal medial ${LADO_M} con 4 tornillos epifisarios distales y 4 tornillos proximales todos con bloqueo en placa.
+- Se comprueba con escopia cierre osteotomía y longitud y situación de los tornillos.
+- Lavado herida quirúrgico abundante.
+- Sutura de la fascia del vasto int.
+- Drenaje aspirativo.
+- Cierre por planos.
+- Piel con grapas.
+- Vendaje compresivo.
 ```
 
 **Tratamiento al Alta:**
@@ -1262,17 +1262,17 @@ SÍNTOMAS DE ALERTA
 ```
 IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-- OSTEOTOMÍA DE ADICCIÓN VALGUIZANTE DE TIBIA ${LADO_F_UPPER}:
-- ISQUEMIA EN  MUSLO  ${LADO_ABR_M}.
-- INCISIÓN  OBLICUA  EN  TERCIO  PROXIMAL  Y  MEDIAL  DE TIBIA   SIGUIENDO  DIRECCION  DE LOS TENDONES ISQUIOTIALES EN SU  BORDE   ANTERIOR.  
-- DESINSERCIÓN  PARCIAL  DE  LA INSERCIÓN  DISTAL  DEL  FASCÍCULO  SUPERFICIAL  DEL  LLI. 
-- OSTEOTOMÍA BIPLANAR DE TIBIA  RESPETANDO LA TTA  CON  SIERRA Y  COMPLETADA CON ESCOPLO .
-- APERTURA DE   LA CUÑA  DE FORMA  PROGRESIVA  HASTA  12º  Y RELLENO  DE LA  MISMA  CON INJERTO AUTÓLOGO TRICORTICAL DE CRESTA ILIACA.  
-- OSTEOSÍNTESIS  CON  PLACA DE OSTEOTOMÍA TIBIAL MEDIAL PROXIMAL TOMOFIX  FIJADA CON  4  TORNILLOS  PROXIMALES  Y  4   TORNILLOS DISTALES FIJADOS A PLACA. 
-- CIERRE POR  PLANOS.
-- DRENAJE ASPIRATIVO 
-- PIEL  CON  GRAPAS.
-- VENDAJE  COMPRESIVO.
+- Osteotomía de adicción valguizante de tibia ${LADO_F_UPPER}:
+- Isquemia en muslo ${LADO_M}.
+- Incisión oblicua en tercio proximal y medial de tibia siguiendo dirección de los tendones isquiotibiales en su borde anterior.
+- Desinserción parcial de la inserción distal del fascículo superficial del LLI.
+- Osteotomía biplanar de tibia respetando la TTA con sierra y completada con escoplo.
+- Apertura de la cuña de forma progresiva hasta 12º y relleno de la misma con injerto autólogo tricortical de cresta iliaca.
+- Osteosíntesis con placa de osteotomía tibial medial proximal Tomofix fijada con 4 tornillos proximales y 4 tornillos distales fijados a placa.
+- Cierre por planos.
+- Drenaje aspirativo.
+- Piel con grapas.
+- Vendaje compresivo.
 ```
 
 **Tratamiento al Alta:**
@@ -1304,16 +1304,16 @@ SÍNTOMAS DE ALERTA
 IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 - CAR ${LADO_F_UPPER}:
-- ISQUEMIA EN  RAÍZ  DE  MUSLO.
-- PORTALES TRADICIONALES ANTEROMEDIAL  Y  ANTEROLATERAL.
-- ARTICULACIÓN  FEMOROPATELAR Y  FONDOS DE SACO  CUADRICIPITALES:  SIN  ALTERACIONES.
-- COMPARTIMENTO  INTERNO: ROTURA DEGENERATIVA DEL  CUERNO  POSTERIOR DEL  MENISCO  INTERNO QUE SE RESECA  Y  REGULARIZA  CON  PINZAS  Y  MOTOR.
-- PIVOTE CENTRAL: LCA ÍNTEGRO  Y  COMPETENTE.
--  COMPARTIMENTO EXTERNO: SIN  ALTERACIONES.
-- LAVADO  ARTICULAR ABUNDANTE.
-- SE  INFILTRA PORTALES  Y  REGION  INTRAARTICULAR  CON  ROPIVACAÍNA  Y  ÁCIDO HIALURÓNICO.
--  CIERRE PORTALES CON  SEDA.
-- VENDAJE COMPRESIVO.
+- Isquemia en raíz de muslo.
+- Portales tradicionales anteromedial y anterolateral.
+- Articulación femoropatelar y fondos de saco cuadricipitales: sin alteraciones.
+- Compartimento interno: rotura degenerativa del cuerno posterior del menisco interno que se reseca y regulariza con pinzas y motor.
+- Pivote central: LCA íntegro y competente.
+- Compartimento externo: sin alteraciones.
+- Lavado articular abundante.
+- Se infiltra portales y región intraarticular con ropivacaína y ácido hialurónico.
+- Cierre portales con seda.
+- Vendaje compresivo.
 - EVOLUCIÓN: Durante el postoperatorio el paciente se ha mantenido afebril y hemodinámicamente estable. Ha presentado buen control del dolor con la analgesia pautada, sin evidenciarse deficits vasculonerviosos ni signos de TVP en el miembro intervenido. Ha tolerado correctamente la sedestación y la deambulación asistida. La herida quirúrgica no ha presentado signos de complicación local.
 - Dada la evolución favorable la paciente es alta a domicilio.
 ```
@@ -1371,16 +1371,16 @@ SÍNTOMAS DE ALERTA
 IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 - CAR ${LADO_F_UPPER}:
-- ISQUEMIA EN  RAÍZ  DE  MUSLO.
-- PORTALES TRADICIONALES ANTEROMEDIAL  Y  ANTEROLATERAL.
-- ARTICULACIÓN  FEMOROPATELAR Y  FONDOS DE SACO  CUADRICIPITALES:  SIN  ALTERACIONES.
-- COMPARTIMENTO  INTERNO: ROTURA EN  ASA DE CUBO  REDUCIDA EN ZONA ROJA DEL  CUERPO  Y  CUERNO  POSTERIOR DEL  MENISCO  INTERNO. REDUCCIÓN  Y  SUTURA  CON  4  PUNTOS  CON SISTEMA FAST-FIX  Y DOS  PUNTOS SUTURA FUERA DENTRO  CON  TICRON 2.
-- PIVOTE CENTRAL: LCA ÍNTEGRO  Y  COMPETENTE.
--  COMPARTIMENTO EXTERNO: SIN  ALTERACIONES.
-- LAVADO  ARTICULAR ABUNDANTE.
-- SE  INFILTRA PORTALES  Y  REGION  INTRAARTICULAR  CON  ROPIVACAÍNA  +  AH
--  CIERRE PORTALES.
-- VENDAJE COMPRESIVO.
+- Isquemia en raíz de muslo.
+- Portales tradicionales anteromedial y anterolateral.
+- Articulación femoropatelar y fondos de saco cuadricipitales: sin alteraciones.
+- Compartimento interno: rotura en asa de cubo reducida en zona roja del cuerpo y cuerno posterior del menisco interno. Reducción y sutura con 4 puntos con sistema Fast-Fix y dos puntos sutura fuera dentro con Ticron 2.
+- Pivote central: LCA íntegro y competente.
+- Compartimento externo: sin alteraciones.
+- Lavado articular abundante.
+- Se infiltra portales y región intraarticular con ropivacaína + AH
+- Cierre portales.
+- Vendaje compresivo.
 ```
 
 **Tratamiento al Alta:**
@@ -1424,17 +1424,17 @@ SÍNTOMAS DE ALERTA
 ```
 IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-- CAR ${LADO_F_UPPER} EN PACIENTE CON RIGUIDEZ  POSTOPERATORIA TRAS  ARTROPLASTIA RODILLA:
-- ISQUEMIA EN RAÍZ DE MUSLO. 
-- PORTALES TRADICIONALES ANTEROMEDIAL Y ANTEROLATERAL. 
-- SE APRECIA MÚLTIPLES ADHERENCIAS Y  FIBROSIS A  NIVEL  DE FONDOS  DE SACO  SUBCUADRICIPITALES Y  DEL  HOFFA QUE SE RESECA  CON   SINOVIOTOMO. 
-- COAGULACIÓN  DE  PUNTOS  SANGRANTES  CON   VAPORIZADOR.  
-- NO  SE APRECIA ALTERACIONES  DE LA PRÓTESIS DE   RODILLA.
-- TRAS ARTROLISIS Y  MOVILIZACIÓN  BAJO  ANESTESIA SE CONSIGUE UN  BALANCE ARTICULAR DE  0-140º
-- LAVADO ARTICULAR ABUNDANTE. 
-- CIERRE PORTALES.  
-- DRENAJE ASPIRATIVO. 
-- VENDAJE COMPRESIVO.
+- CAR ${LADO_F_UPPER} en paciente con rigidez postoperatoria tras artroplastia rodilla:
+- Isquemia en raíz de muslo.
+- Portales tradicionales anteromedial y anterolateral.
+- Se aprecia múltiples adherencias y fibrosis a nivel de fondos de saco subcuadricipitales y del Hoffa que se reseca con sinoviotomo.
+- Coagulación de puntos sangrantes con vaporizador.
+- No se aprecia alteraciones de la prótesis de rodilla.
+- Tras artrolisis y movilización bajo anestesia se consigue un balance articular de 0-140º
+- Lavado articular abundante.
+- Cierre portales.
+- Drenaje aspirativo.
+- Vendaje compresivo.
 ```
 
 **Tratamiento al Alta:**
@@ -1466,16 +1466,16 @@ SÍNTOMAS DE ALERTA
 IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 - CAR ${LADO_F_UPPER}:
-- ISQUEMIA EN  RAÍZ  DE  MUSLO.
-- PORTALES TRADICIONALES ANTEROMEDIAL  Y  ANTEROLATERAL.
-- ARTICULACIÓN  FEMOROPATELAR Y  FONDOS DE SACO  CUADRICIPITALES:  SIN  ALTERACIONES.
-- COMPARTIMENTO  INTERNO: SIN  ALTERACIONES.
-- PIVOTE CENTRAL: LCA Y  LCP  ÍNTEGROS  Y  COMPETENTES.
--  COMPARTIMENTO EXTERNO: SIN  ALTERACIONES.
-- LAVADO  ARTICULAR ABUNDANTE.
-- SE  INFILTRA PORTALES  Y  REGION  INTRAARTICULAR  CON  ROPIVACAÍNA  Y  ÁCIDO HIALURÓNICO.
--  CIERRE PORTALES CON  SEDA.
-- VENDAJE COMPRESIVO.
+- Isquemia en raíz de muslo.
+- Portales tradicionales anteromedial y anterolateral.
+- Articulación femoropatelar y fondos de saco cuadricipitales: sin alteraciones.
+- Compartimento interno: sin alteraciones.
+- Pivote central: LCA y LCP íntegros y competentes.
+- Compartimento externo: sin alteraciones.
+- Lavado articular abundante.
+- Se infiltra portales y región intraarticular con ropivacaína y ácido hialurónico.
+- Cierre portales con seda.
+- Vendaje compresivo.
 ```
 
 **Tratamiento al Alta:**
@@ -1504,17 +1504,17 @@ SÍNTOMAS DE ALERTA
 ```
 IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-- ISQUEMIA EN RAÍZ DE MUSLO.
-- PORTALES TRADICIONALES ANTEROMEDIAL Y ANTEROLATERAL.
-- ARTICULACIÓN FEMOROPATELAR Y FONDOS DE SACO CUADRICIPITALES: SIN ALTERACIONES.
-- COMPARTIMENTO INTERNO: SIN ALTERACIONES.
-- PIVOTE CENTRAL: LCA Y LCP ÍNTEGROS Y COMPETENTES.
-- COMPARTIMENTO EXTERNO: SIN ALTERACIONES.
-- SE LOCALIZA Y EXTRAE CUERPO LIBRE INTRAARTICULAR DE APROXIMADAMENTE 1 CM DE DIÁMETRO EN FONDO DE SACO SUBCUADRICIPITAL.
-- LAVADO ARTICULAR ABUNDANTE.
-- SE INFILTRA PORTALES Y REGION INTRAARTICULAR CON ROPIVACAÍNA Y ÁCIDO HIALURÓNICO.
-- CIERRE PORTALES CON SEDA.
-- VENDAJE COMPRESIVO.
+- Isquemia en raíz de muslo.
+- Portales tradicionales anteromedial y anterolateral.
+- Articulación femoropatelar y fondos de saco cuadricipitales: sin alteraciones.
+- Compartimento interno: sin alteraciones.
+- Pivote central: LCA y LCP íntegros y competentes.
+- Compartimento externo: sin alteraciones.
+- Se localiza y extrae cuerpo libre intraarticular de aproximadamente 1 cm de diámetro en fondo de saco subcuadricipital.
+- Lavado articular abundante.
+- Se infiltra portales y región intraarticular con ropivacaína y ácido hialurónico.
+- Cierre portales con seda.
+- Vendaje compresivo.
 ```
 
 **Tratamiento al Alta:**
@@ -1544,17 +1544,17 @@ SÍNTOMAS DE ALERTA
 IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 - CAR ${LADO_F_UPPER}:
-- ISQUEMIA EN  RAÍZ  DE  MUSLO.
-- PORTALES TRADICIONALES ANTEROMEDIAL  Y  ANTEROLATERAL.
-- ARTICULACIÓN  FEMOROPATELAR Y  FONDOS DE SACO  CUADRICIPITALES:  SINDROME  DE  HIPERPRESIÓN  ROTULIANA EXTERNA SIN  CONDROPATÍA. SE REALIZA  SECCIÓN  ALERÓN  ROTULIANO  EXTERNO ARTROSCÓPICO (FICAT) CON  VAPORIZADOR
-- COMPARTIMENTO  INTERNO: SIN  ALTERACIONES.
-- PIVOTE CENTRAL: LCA ÍNTEGRO  Y  COMPETENTE.
--  COMPARTIMENTO EXTERNO:  SIN  ALTERACIONES.
-- LAVADO  ARTICULAR ABUNDANTE.
-- SE  INFILTRA PORTALES  Y  REGION  INTRAARTICULAR  CON  BUPIVACAÍNA 0.5 CON  VC.
--  CIERRE PORTALES CON  SEDA.
--  DRENAJE ASPIRATIVO.
-- VENDAJE COMPRESIVO.
+- Isquemia en raíz de muslo.
+- Portales tradicionales anteromedial y anterolateral.
+- Articulación femoropatelar y fondos de saco cuadricipitales: síndrome de hiperpresión rotuliana externa sin condropatía. Se realiza sección alerón rotuliano externo artroscópico (Ficat) con vaporizador.
+- Compartimento interno: sin alteraciones.
+- Pivote central: LCA íntegro y competente.
+- Compartimento externo: sin alteraciones.
+- Lavado articular abundante.
+- Se infiltra portales y región intraarticular con bupivacaína 0.5 con VC.
+- Cierre portales con seda.
+- Drenaje aspirativo.
+- Vendaje compresivo.
 ```
 
 **Tratamiento al Alta:**
@@ -1584,17 +1584,17 @@ SÍNTOMAS DE ALERTA
 IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 - CAR ${LADO_F_UPPER}:
-- ISQUEMIA EN  RAÍZ  DE  MUSLO.
-- PORTALES TRADICIONALES ANTEROMEDIAL  Y  ANTEROLATERAL.
-- ARTICULACIÓN  FEMOROPATELAR Y  FONDOS DE SACO  CUADRICIPITALES:  CONDROPATÍA   FP  GRADO  4. 
-- COMPARTIMENTO  INTERNO: ROTURA DEGENERATIVA DEL  CUERPO  Y  CUERNO POST DEL  MENISCO INT  QUE SE REGULARIZA CON  PINZAS  Y  SINOVIOTOMO. CONDROPATÍA  CFI  GRADO 4.
-- PIVOTE CENTRAL: LCA Y  LCP  ÍNTEGROS  Y  COMPETENTES.
--  COMPARTIMENTO EXTERNO: ROTURA DEGENERATIVA DEL  CUERPO Y  CUERNO ANT DEL MENISCO EXT QUE SE REGULARIZA. CONDROPATÍA MTE GRADO 4 Y  CFE GRADO 3. 
-- LAVADO  ARTICULAR  Y TOILETTE GENERAL  DE LA RODILLA.
-- EXTRACCIÓN DE 3-4 CUERPOS  LIBRES  POR CONDROMATOSIS  SINOVIAL ENTRE  0.5 -1 CM  DIÁMETRO.   
-- SE DEJA DRENAJE   ARTICULAR ASPIRATIVO.
--  CIERRE PORTALES CON  SEDA.
-- VENDAJE COMPRESIVO.
+- Isquemia en raíz de muslo.
+- Portales tradicionales anteromedial y anterolateral.
+- Articulación femoropatelar y fondos de saco cuadricipitales: condropatía FP grado 4.
+- Compartimento interno: rotura degenerativa del cuerpo y cuerno post del menisco int que se regulariza con pinzas y sinoviotomo. Condropatía CFI grado 4.
+- Pivote central: LCA y LCP íntegros y competentes.
+- Compartimento externo: rotura degenerativa del cuerpo y cuerno ant del menisco ext que se regulariza. Condropatía MTE grado 4 y CFE grado 3.
+- Lavado articular y toilette general de la rodilla.
+- Extracción de 3-4 cuerpos libres por condromatosis sinovial entre 0.5-1 cm diámetro.
+- Se deja drenaje articular aspirativo.
+- Cierre portales con seda.
+- Vendaje compresivo.
 ```
 
 **Tratamiento al Alta:**
@@ -1624,19 +1624,19 @@ SÍNTOMAS DE ALERTA
 ```
 IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-- CAR ${LADO_F_UPPER} EN PACIENTE CON DERRAME DE REPETICIÓN POR SOSPECHA  DE SINOVITIS VILLONODULAR  PIGMENTADA:
-- ISQUEMIA EN RAÍZ DE MUSLO. 
-- PORTALES TRADICIONALES ANTEROMEDIAL Y ANTEROLATERAL. 
-- PORTAL ACCESORIO SUPEROLATERAL Y  SUPEROMEDIAL.
-- SE APRECIA SINOVIAL HIPERÉMICA E HIPERTRÓFICA EN TODA LA RODILLA FORMANDO VELLOSIDADES Y  CON TINCIÓN PARDUZCA POR HEMARTROS DE REPETICIÓN.
-- SE TOMA MUESTRA DE SINOVIAL PARA ANATOMIA PATOLOGICA.
-- SINOVECTOMIA RADICAL  A TRAVÉS DE TODOS LOS PORTALES
-- NO LESIONES MENISCALES, CONDRALES NI LIGAMENTOSAS.
-- LAVADO ARTICULAR ABUNDANTE. 
-- SE INFILTRA PORTALES Y REGION INTRAARTICULAR CON ROPIVACAÍNA + CORTICOIDES. 
-- CIERRE PORTALES CON GRAPAS. 
-- DRENAJE ASPIRATIVO. 
-- VENDAJE COMPRESIVO.
+- CAR ${LADO_F_UPPER} en paciente con derrame de repetición por sospecha de sinovitis villonodular pigmentada:
+- Isquemia en raíz de muslo.
+- Portales tradicionales anteromedial y anterolateral.
+- Portal accesorio superolateral y superomedial.
+- Se aprecia sinovial hiperémica e hipertrófica en toda la rodilla formando vellosidades y con tinción parduzca por hemartros de repetición.
+- Se toma muestra de sinovial para anatomía patológica.
+- Sinovectomía radical a través de todos los portales.
+- No lesiones meniscales, condrales ni ligamentosas.
+- Lavado articular abundante.
+- Se infiltra portales y región intraarticular con ropivacaína + corticoides.
+- Cierre portales con grapas.
+- Drenaje aspirativo.
+- Vendaje compresivo.
 ```
 
 **Tratamiento al Alta:**
@@ -1790,19 +1790,19 @@ CUIDADOS POSTOPERATORIOS
 ```
 IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-- GENU  VARO  ARTROSICO   RODILLA ${LADO_F_UPPER}:
-- PROFILAXIS  ANTIBIÓTICA CON  2 GR DE  CEFAZOLINA.
-- ISQUEMIA EN  RAÍZ  DE  MUSLO.
-- INCISIÓN LONGITUDINAL ANTERIOR DE RODILLA Y ARTROTOMIA PARARROTULIANA MEDIAL CON PROLONGACIÓN  SUBVASTO INT.
-- ARTROPLASTIA UNICOMPARTIMENTAL  DE  RODILLA MODELO PKR DE STRYKER:
-- COMPONENTE FEMORAL CEMENTADO Nº 2.
-- COMPONENTE TIBIAL  CEMENTADO  Nº 2 E INSERTO DE  8  MM. 
-- CORRECTO  BALANCE  MEDIOLATERAL  EN  FLEXIÓN  Y  EXTENSIÓN Y ADECUADO TRACKING ROTULIANO.
-- SE  RETIRA ISQUEMIA,  HEMOSTASIA DE  VASOS SANGRANTES Y  LAVADO  ABUNDANTE CON SF.
-- CIERRE  POR PLANOS.
-- DRENAJE  ASPIRATIVO.
-- PIEL  CON  GRAPAS.
-- VENDAJE  COMPRESIVO.
+- Genu varo artrósico rodilla ${LADO_F_UPPER}:
+- Profilaxis antibiótica con 2 gr de CEFAZOLINA.
+- Isquemia en raíz de muslo.
+- Incisión longitudinal anterior de rodilla y artrotomía pararrotuliana medial con prolongación subvasto int.
+- Artroplastia unicompartimental de rodilla modelo PKR de Stryker:
+- Componente femoral cementado nº 2.
+- Componente tibial cementado nº 2 e inserto de 8 mm.
+- Correcto balance mediolateral en flexión y extensión y adecuado tracking rotuliano.
+- Se retira isquemia, hemostasia de vasos sangrantes y lavado abundante con SF.
+- Cierre por planos.
+- Drenaje aspirativo.
+- Piel con grapas.
+- Vendaje compresivo.
 - EVOLUCIÓN: Durante el postoperatorio el paciente se ha mantenido afebril y hemodinámicamente estable. Ha presentado buen control del dolor con la analgesia pautada, sin evidenciarse deficits vasculonerviosos ni signos de TVP en el miembro intervenido. Ha tolerado correctamente la sedestación y la deambulación asistida. La herida quirúrgica no ha presentado signos de complicación local.
 - Dada la evolución favorable la paciente es alta a domicilio.
 ```
@@ -1815,7 +1815,6 @@ CUIDADOS POSTOPERATORIOS
 - Aplicar hielo sobre la rodilla operada 2-3 veces al día durante 20 minutos.
 - Mover activamente los dedos de la extremidad operada.
 - Realizar los ejercicios que su médico le ha explicado.
-- Puede  bajarse en  su  móvil/Tablet/PC  la aplicación gratuita “Mi  Prótesis” donde podrá encontrar  información  acerca de esta patología  y  procedimiento  quirúrgico  realizado,  así  como  recomendaciones  y  ejercicios  que  puede realizar.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
 - Puede  caminar con ayuda de un andador.
 - Puede requerir ayuda domiciliaria
@@ -1840,22 +1839,22 @@ SÍNTOMAS DE ALERTA
 ```
 IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-- RESCATE PUC ${LADO_F_UPPER} POR  PRÓTESIS  DOLOROSA:
-- PROFILAXIS  ANTIBIÓTICA CON  2 GR DE  CEFAZOLINA.
-- ISQUEMIA EN  RAÍZ  DE  MUSLO.
-- INCISIÓN LONGITUDINAL ANTERIOR DE RODILLA  SOBRE CICATRIZ ANTERIOR Y ARTROTOMIA PARARROTULIANA MEDIAL.
-- RETIRADA DE   COMPONENTES   DE  PUC  ANTERIOR: COMPONENTE   TIBIAL Y  FEMORAL SIN  PÉRDIDA DE STOCK ÓSEO. 
-- COMPONENTE FEMORAL  CR Nº 3 NO  CEMENTADO.   
--  COMPONENTE TIBIAL Nº 3 CEMENTADO  MBT.
-- INSERTO TIBIAL RP  DE  Nº 3  DE 15 MM
-- ARTROPLASTIA DE RÓTULA DE CEMENTADA DE 35 MM.
-- CORRECTO  BALANCE  MEDIOLATERAL  EN  FLEXIÓN  Y  EXTENSIÓN Y ADECUADO TRACKING ROTULIANO QUE NO  PRECISA FICAT.
- - SE  RETIRA ISQUEMIA,  HEMOSTASIA DE  VASOS SANGRANTES Y  LAVADO  ABUNDANTE CON SF.
--  COCTEL  ANALGESICO
-- CIERRE  POR PLANOS.
--  DRENAJE  ASPIRATIVO.
-- PIEL  CON  GRAPAS.
-- VENDAJE  COMPRESIVO.
+- Rescate PUC ${LADO_F_UPPER} por prótesis dolorosa:
+- Profilaxis antibiótica con 2 gr de CEFAZOLINA.
+- Isquemia en raíz de muslo.
+- Incisión longitudinal anterior de rodilla sobre cicatriz anterior y artrotomía pararrotuliana medial.
+- Retirada de componentes de PUC anterior: componente tibial y femoral sin pérdida de stock óseo.
+- Componente femoral CR nº 3 no cementado.
+- Componente tibial nº 3 cementado MBT.
+- Inserto tibial RP de nº 3 de 15 mm.
+- Artroplastia de rótula cementada de 35 mm.
+- Correcto balance mediolateral en flexión y extensión y adecuado tracking rotuliano que no precisa Ficat.
+- Se retira isquemia, hemostasia de vasos sangrantes y lavado abundante con SF.
+- Cóctel analgésico.
+- Cierre por planos.
+- Drenaje aspirativo.
+- Piel con grapas.
+- Vendaje compresivo.
 ```
 
 **Tratamiento al Alta:**
@@ -1891,17 +1890,17 @@ SÍNTOMAS DE ALERTA
 ```
 IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-- PROFILAXIS ANTIBIÓTICA CON  2  GR  DE CEFAZOLINA.
-- ISQUEMIA EN RAÍZ DE MUSLO ${LADO_ABR_M}.
-- SE REALIZA EXPLORACIÓN  BAJO  ANESTESIA PREVIA QUE  CONFIRMA  LA LESIÓN  DE  LCA.
-- OBTENCIÓN  Y PREPARACIÓN DE PLASTIA AUTÓLOGA  ST-RI.
-- FONDOS DE SACO  CUADRICIPITALES: SIN  ALTERACIONES.
-- COMPARTIMENTO  INTERNO: SIN LESIONES MENISCALES NI CONDRALES.
--  COMPARTIMENTO  EXTERNO: SIN LESIONES MENISCALES  NI  CONDRALES.
-- LIGAMENTOPLASTIA LCA 4ST-RI CON ANCLAJE FEMORAL PROCINCH Y  TIBIAL CON TIF BIOSTEON 9*35 MM.
-- DRENAJE ASPIRATIVO INTRAARTICULAR.
-- CIERRE POR PLANOS DE LA FASCIA DEL  SARTORIO  Y TCS.
-- - PIEL CON GRAPAS Y VENDAJE COMPRESIVO.
+- Profilaxis antibiótica con 2 gr de cefazolina.
+- Isquemia en raíz de muslo ${LADO_M}.
+- Se realiza exploración bajo anestesia previa que confirma la lesión de LCA.
+- Obtención y preparación de plastia autóloga ST-RI.
+- Fondos de saco cuadricipitales: sin alteraciones.
+- Compartimento interno: sin lesiones meniscales ni condrales.
+- Compartimento externo: sin lesiones meniscales ni condrales.
+- Ligamentoplastia LCA 4ST-RI con anclaje femoral Procinch y tibial con TIF Biosteon 9*35 mm.
+- Drenaje aspirativo intraarticular.
+- Cierre por planos de la fascia del sartorio y TCS.
+- Piel con grapas y vendaje compresivo.
 ```
 
 **Tratamiento al Alta:**
@@ -1940,7 +1939,7 @@ IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 - Rotura crónica LCA RD.
 - Anestesia raquídea.
 - Profilaxis con 2 gr cefazolina.
-- Isquemia muslo ${LADO_ABR_M} 250 mmHg.
+- Isquemia muslo ${LADO_M} 250 mmHg.
 - Abordaje longitudinal sobre pata de ganso. Disección por planos. Fasciotomía sartorio y obtención de plastia ST.
 - Preparación de plastia cuádruple de ST con 2 ProCinch (Stryker) de 7 cm longitud x 9 mm diámetro.
 - Tiempo artroscópico: portales artroscópicos habituales: AL, AM y AM accesorio.
@@ -1989,18 +1988,18 @@ SÍNTOMAS DE ALERTA
 ```
 IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-- PROFILAXIS ANTIBIÓTICA CON  2  GR  DE CEFAZOLINA.
-- ISQUEMIA EN RAÍZ DE MUSLO ${LADO_ABR_M}.
-- OBTENCIÓN DE PLASTIA AUTÓLOGA  ST-RI.
-- FONDOS DE SACO  CUADRICIPITALES: SIN  ALTERACIONES.
-- COMPARTIMENTO  INTERNO: ROTURA EN ASA DE  CUBO  DEL CUERPO   Y  CPMI QUE SE SUTURA CON 3  PUNTOS DE FAST-FIX  Y  1  PUNTO  FUERA DENTRO  CON  TICRON 2.
--  COMPARTIMENTO  EXTERNO: SIN LESIONES MENISCALES  NI  CONDRALES.
-- LIGAMENTOPLASTIA 4 ST-RI CON ANCLAJE FEMORAL PROCINCH  Y  TIBIAL CON TORNILLO INTERFERENCIAL DE 9*28 MM.
-- DRENAJE ASPIRATIVO INTRAARTICULAR.
-- CIERRE POR PLANOS DE LA FASCIA DEL  SARTORIO  Y TCS.
-- SE INFILTRA PORTALES Y EN REGION  INTRAARTICULAR  CON ROPIVACAÍNA Y  5 MG DE CLORURO MÓRFICO.
-- PIEL CON GRAPAS Y VENDAJE COMPRESIVO.
-PLASTIA DE REFUERZO  EXTRAARTICULAR CON  TÉCNICA DE LEMAIRE MODIFICADA   MANTENIENDO  INSERCIÓN  DISTAL DE PLASTIA DE  BANDA ILIOTIBIAL  Y  FIJADA EN FÉMUR  CON  TIF BIOSTEON  7*28 MM
+- Profilaxis antibiótica con 2 gr de cefazolina.
+- Isquemia en raíz de muslo ${LADO_M}.
+- Obtención de plastia autóloga ST-RI.
+- Fondos de saco cuadricipitales: sin alteraciones.
+- Compartimento interno: rotura en asa de cubo del cuerpo y CPMI que se sutura con 3 puntos de fast-fix y 1 punto fuera dentro con ticron 2.
+- Compartimento externo: sin lesiones meniscales ni condrales.
+- Ligamentoplastia 4 ST-RI con anclaje femoral Procinch y tibial con tornillo interferencial de 9*28 mm.
+- Drenaje aspirativo intraarticular.
+- Cierre por planos de la fascia del sartorio y TCS.
+- Se infiltra portales y en región intraarticular con ropivacaína y 5 mg de cloruro mórfico.
+- Piel con grapas y vendaje compresivo.
+- Plastia de refuerzo extraarticular con técnica de Lemaire modificada manteniendo inserción distal de plastia de banda iliotibial y fijada en fémur con TIF Biosteon 7*28 mm.
 ```
 
 **Tratamiento al Alta:**
@@ -2049,17 +2048,17 @@ SÍNTOMAS DE ALERTA
 ```
 IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-- PROFILAXIS ANTIBIÓTICA CON  2  GR  DE CEFAZOLINA.
-- ISQUEMIA EN RAÍZ DE MUSLO ${LADO_ABR_M}.
-- SE REALIZA EXPLORACIÓN  BAJO  ANESTESIA PREVIA QUE  CONFIRMA  LA LESIÓN  DE  LCA.
-- OBTENCIÓN  Y PREPARACIÓN DE PLASTIA AUTÓLOGA  ST-RI.
-- FONDOS DE SACO  CUADRICIPITALES: SIN  ALTERACIONES.
-- COMPARTIMENTO  INTERNO: SIN LESIONES MENISCALES NI CONDRALES.
--  COMPARTIMENTO  EXTERNO: SIN LESIONES MENISCALES  NI  CONDRALES.
-- LIGAMENTOPLASTIA LCA 4ST-RI CON ANCLAJE FEMORAL PROCINCH Y  TIBIAL CON TIF BIOSTEON 9*35 MM.
-- DRENAJE ASPIRATIVO INTRAARTICULAR.
-- CIERRE POR PLANOS DE LA FASCIA DEL  SARTORIO  Y TCS.
-- - PIEL CON GRAPAS Y VENDAJE COMPRESIVO.
+- Profilaxis antibiótica con 2 gr de cefazolina.
+- Isquemia en raíz de muslo ${LADO_M}.
+- Se realiza exploración bajo anestesia previa que confirma la lesión de LCA.
+- Obtención y preparación de plastia autóloga ST-RI.
+- Fondos de saco cuadricipitales: sin alteraciones.
+- Compartimento interno: sin lesiones meniscales ni condrales.
+- Compartimento externo: sin lesiones meniscales ni condrales.
+- Ligamentoplastia LCA 4ST-RI con anclaje femoral Procinch y tibial con TIF Biosteon 9*35 mm.
+- Drenaje aspirativo intraarticular.
+- Cierre por planos de la fascia del sartorio y TCS.
+- Piel con grapas y vendaje compresivo.
 ```
 
 **Tratamiento al Alta:**
@@ -2100,17 +2099,17 @@ SÍNTOMAS DE ALERTA
 ```
 IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-- PROFILAXIS ANTIBIÓTICA CON  2  GR  DE CEFAZOLINA.
-- ISQUEMIA EN RAÍZ DE MUSLO ${LADO_ABR_M}.
-- SE REALIZA CAR PREVIA BAJO QUE  CONFIRMA  LA LESIÓN  DE  LCA.
-- OBTENCIÓN  Y PREPARACIÓN DE PLASTIA AUTÓLOGA  ST-RI.
-- FONDOS DE SACO  CUADRICIPITALES: SIN  ALTERACIONES.
-- COMPARTIMENTO  INTERNO: SIN LESIONES MENISCALES NI CONDRALES.
--  COMPARTIMENTO  EXTERNO: AVULSIÓN  DE  LA RAÍZ  MENISCAL  DE CPML TIPO  4 (LESIÓN  OBLICUA COMPLETA CON  DESINSERCIÓN  DE LA RAÍZ). SE REALIZA   REINSERCIÓN  ANATÓMICA  CON  PUNTO  DE SUTURA  TÉCNICA TRANSTIBIAL  Y  FIJACIÓN  DISTAL  EN  CORTICAL  ANTERIOR CON  BOTÓN.  
-- LIGAMENTOPLASTIA LCA 4ST-RI CON ANCLAJE FEMORAL PROCINCH Y  TIBIAL CON TIF BIOSTEON 9*28 MM.
-- DRENAJE ASPIRATIVO INTRAARTICULAR.
-- CIERRE POR PLANOS DE LA FASCIA DEL  SARTORIO  Y TCS.
-- PIEL CON GRAPAS Y VENDAJE COMPRESIVO.
+- Profilaxis antibiótica con 2 gr de cefazolina.
+- Isquemia en raíz de muslo ${LADO_M}.
+- Se realiza CAR previa bajo que confirma la lesión de LCA.
+- Obtención y preparación de plastia autóloga ST-RI.
+- Fondos de saco cuadricipitales: sin alteraciones.
+- Compartimento interno: sin lesiones meniscales ni condrales.
+- Compartimento externo: avulsión de la raíz meniscal de CPML tipo 4 (lesión oblicua completa con desinserción de la raíz). Se realiza reinserción anatómica con punto de sutura técnica transtibial y fijación distal en cortical anterior con botón.
+- Ligamentoplastia LCA 4ST-RI con anclaje femoral Procinch y tibial con TIF Biosteon 9*28 mm.
+- Drenaje aspirativo intraarticular.
+- Cierre por planos de la fascia del sartorio y TCS.
+- Piel con grapas y vendaje compresivo.
 ```
 
 **Tratamiento al Alta:**
@@ -2152,19 +2151,19 @@ SÍNTOMAS DE ALERTA
 ```
 IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-- PROFILAXIS ANTIBIÓTICA CON 2 GR DE CEFAZOLINA.
-- ISQUEMIA EN RAÍZ DE MUSLO ${LADO_ABR_M}.
-- CAR  DIAGNÓSTICA QUE  CONFIRMA  ROTURA  COMPLETA DE  LCA. 
-- INCISIÓN  LONGITUDINAL DESDE POLO INFERIOR DE RÓTULA A BORDE MEDIAL DE TTA. APERTURA DEL PARATENON Y OBTENCIÓN PLASTIA HTH DE 10 MM DE ANCHURA DEL TENDÓN ROTULIANO Y 2 PASTILLAS ÓSEAS EN LOS EXTREMOS 8*25 MM EN  RÓTULA  Y  9*30 MM EN  TTA.
-- LIGAMENTOPLASTIA LCA  CON AUTOINJERTO HTH HOMOLATERAL CON  TÉCNICA  ANATÓMICA:
-- TÚNEL  FEMORAL CIEGO  DE  8*30 MM  CON  FRESAS   FLEXIBLES DE CLANCY  DESDE PORTAL  AM ACCESORIO.
-- TÚNEL TIBIAL DE 9 MM * 35 MM REALIZADO A 55º.
-- ASCENSO DE LA PLASTIA HTH EN SENTIDO RETRÓGRADO Y FIJACIÓN TÚNEL FEMORAL CON TORNILLO INTERFERENCIAL BIORCI HA  7*25 MM Y DE 8*30 MM EN TÚNEL TIBIAL. 
-- SE COMPRUEBA ESTABILIDAD DEL  INJERTO  Y AUSENCIA DE ROCE EN ESCOTADURA INTERCONDÍLEA CON EXTENSIÓN COMPLETA.
-- LAVADO ARTICULAR. 
-- CIERRE POR PLANOS.
-- PIEL CON GRAPAS.
-- VENDAJE COMPRESIVO.
+- Profilaxis antibiótica con 2 gr de cefazolina.
+- Isquemia en raíz de muslo ${LADO_M}.
+- CAR diagnóstica que confirma rotura completa de LCA.
+- Incisión longitudinal desde polo inferior de rótula a borde medial de TTA. Apertura del paratenon y obtención plastia HTH de 10 mm de anchura del tendón rotuliano y 2 pastillas óseas en los extremos 8*25 mm en rótula y 9*30 mm en TTA.
+- Ligamentoplastia LCA con autoinjerto HTH homolateral con técnica anatómica:
+- Túnel femoral ciego de 8*30 mm con fresas flexibles de Clancy desde portal AM accesorio.
+- Túnel tibial de 9 mm * 35 mm realizado a 55º.
+- Ascenso de la plastia HTH en sentido retrógrado y fijación túnel femoral con tornillo interferencial Biorci HA 7*25 mm y de 8*30 mm en túnel tibial.
+- Se comprueba estabilidad del injerto y ausencia de roce en escotadura intercondílea con extensión completa.
+- Lavado articular.
+- Cierre por planos.
+- Piel con grapas.
+- Vendaje compresivo.
 ```
 
 **Tratamiento al Alta:**
@@ -2205,22 +2204,22 @@ SÍNTOMAS DE ALERTA
 ```
 IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-- PROFILAXIS ANTIBIÓTICA CON  2  GR  DE CEFAZOLINA.
-- ISQUEMIA EN RAÍZ DE MUSLO ${LADO_ABR_M}.
-- SE REALIZA  CAR DIAGNÓSTICA BAJO  ANESTESIA PREVIA APRECIÁNDOSE  ROTURA  DEL  FASCÍCULO  AM  DEL  LCA ,  CON  INTEGRIDAD DEL  FASCÍCULO  PL.
-- OBTENCIÓN DE PLASTIA AUTÓLOGA CUÁDRUPLE DE TENDONES DE PATA DE GANSO ST A TRAVÉS DE INCISIÓN OBLICUA EN CARA ANTEROINTERNA DE TERCIO PROXIMAL DE TIBIA.
-- FONDOS DE SACO  CUADRICIPITALES: SIN  ALTERACIONES.
-- COMPARTIMENTO  INTERNO: SIN LESIONES  MENISCALES  NI  CONDRALES.
--  COMPARTIMENTO  EXTERNO:  SIN LESIONES  MENISCALES  NI  CONDRALES. 
--  LIMPIEZA DE LA ESCOTADURA CONDILEA CON SINOVIOTOMO Y VAPORIZADOR  CONSERVANDO  FASCÍCULO  PL DEL LCA   NATIVO. 
-- REALIZACIÓN DE TÚNEL TIBIAL DE 8  MM.
-- REALIZACIÓN DE TÚNEL FEMORAL A  TRAVÉS DEL  TÚNEL  TIBIAL  CON GUÍA  OVER DE TOP  DE 8 MM * 35 MM (RESTO  HASTA 50 MM CON  BROCA DE 4,5 MM)
-- PLASTIA ST DOBLE CON ANCLAJE FEMORAL ENDOBUTTON 25 MM Y TIBIAL CON TORNILLO INTERFERENCIAL DE 9*20 MM.
-- DRENAJE ASPIRATIVO INTRAARTICULAR.
-- CIERRE POR PLANOS DE LA FASCIA DEL  SARTORIO  Y TCS.
-- SE INFILTRA PORTALES Y EN REGION  INTRAARTICULAR  CON ROPIVACAÍNA Y  5 MG DE CLORURO MÓRFICO.
-- PIEL CON GRAPAS. 
-- VENDAJE COMPRESIVO.
+- Profilaxis antibiótica con 2 gr de cefazolina.
+- Isquemia en raíz de muslo ${LADO_M}.
+- Se realiza CAR diagnóstica bajo anestesia previa apreciándose rotura del fascículo AM del LCA, con integridad del fascículo PL.
+- Obtención de plastia autóloga cuádruple de tendones de pata de ganso ST a través de incisión oblicua en cara anterointerna de tercio proximal de tibia.
+- Fondos de saco cuadricipitales: sin alteraciones.
+- Compartimento interno: sin lesiones meniscales ni condrales.
+- Compartimento externo: sin lesiones meniscales ni condrales.
+- Limpieza de la escotadura condílea con sinoviotomo y vaporizador conservando fascículo PL del LCA nativo.
+- Realización de túnel tibial de 8 mm.
+- Realización de túnel femoral a través del túnel tibial con guía over de top de 8 mm * 35 mm (resto hasta 50 mm con broca de 4,5 mm).
+- Plastia ST doble con anclaje femoral endobutton 25 mm y tibial con tornillo interferencial de 9*20 mm.
+- Drenaje aspirativo intraarticular.
+- Cierre por planos de la fascia del sartorio y TCS.
+- Se infiltra portales y en región intraarticular con ropivacaína y 5 mg de cloruro mórfico.
+- Piel con grapas.
+- Vendaje compresivo.
 ```
 
 **Tratamiento al Alta:**
@@ -2253,22 +2252,21 @@ SÍNTOMAS DE ALERTA
 ```
 IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-- PROFILAXIS ANTIBIÓTICA CON  2  GR  DE CEFAZOLINA.
-- ISQUEMIA EN RAÍZ DE MUSLO ${LADO_ABR_M}.
-- SE REALIZA  CAR DIAGNÓSTICA BAJO  ANESTESIA PREVIA APRECIÁNDOSE  ROTURA  DEL  FASCÍCULO  PL  DEL  LCA ,  CON  INTEGRIDAD DEL  FASCÍCULO  AM.
-- OBTENCIÓN DE PLASTIA AUTÓLOGA DE HTH  A TRAVÉS DE INCISIÓN CENTRAL DE POLO INF   RÓTULA A TTA.
-- FONDOS DE SACO  CUADRICIPITALES: SIN  ALTERACIONES.
-- COMPARTIMENTO  INTERNO: ROTURA LONGITUDINAL  PERIFÉRICA DEL  CPMI  QUE SE SUTURA  CON   3  PUNTOS DE FAST-FIX.
--  COMPARTIMENTO  EXTERNO: SIN LESIONES  MENISCALES  NI  CONDRALES. 
--  LIMPIEZA DE LA ESCOTADURA CONDILEA CON SINOVIOTOMO Y VAPORIZADOR  CONSERVANDO  FASCÍCULO  AM DEL LCA  NATIVO. 
-- REALIZACIÓN DE TÚNEL FEMORAL CIEGO DE   9*30 MM A  TRAVÉS DEL PORTAL  AM  ACCESORIO.
-- REALIZACIÓN DE TÚNEL TIBIAL DE 9  MM REALIZADO A 55º EN  REGIÓN  POST  DE LA  HUELLA TIBIAL  DEL  LCA. RESPETANDO  FIBRAS DEL FASCÍCULO  AM.
- - ASCENSO DE LA PLASTIA HTH EN SENTIDO RETRÓGRADO Y FIJACIÓN TÚNEL FEMORAL CON TORNILLO INTERFERENCIAL BIORCI HA  7*25 MM Y DE 8*30 MM EN TÚNEL TIBIAL. 
-- SE COMPRUEBA ESTABILIDAD DEL  INJERTO  Y AUSENCIA DE ROCE EN ESCOTADURA INTERCONDÍLEA CON EXTENSIÓN COMPLETA.
-- SE INFILTRA PORTALES Y EN REGION  INTRAARTICULAR  CON ROPIVACAÍNA Y  5 MG DE CLORURO MÓRFICO.
-- DRENAJE ASPIRATIVO INTRAARTICULAR.
-- LAVADO ARTICULAR, CIERRE POR PLANOS, PIEL CON GRAPAS Y VENDAJE COMPRESIVO.
-.
+- Profilaxis antibiótica con 2 gr de cefazolina.
+- Isquemia en raíz de muslo ${LADO_M}.
+- Se realiza CAR diagnóstica bajo anestesia previa apreciándose rotura del fascículo PL del LCA, con integridad del fascículo AM.
+- Obtención de plastia autóloga de HTH a través de incisión central de polo inf rótula a TTA.
+- Fondos de saco cuadricipitales: sin alteraciones.
+- Compartimento interno: rotura longitudinal periférica del CPMI que se sutura con 3 puntos de fast-fix.
+- Compartimento externo: sin lesiones meniscales ni condrales.
+- Limpieza de la escotadura condílea con sinoviotomo y vaporizador conservando fascículo AM del LCA nativo.
+- Realización de túnel femoral ciego de 9*30 mm a través del portal AM accesorio.
+- Realización de túnel tibial de 9 mm realizado a 55º en región post de la huella tibial del LCA. Respetando fibras del fascículo AM.
+- Ascenso de la plastia HTH en sentido retrógrado y fijación túnel femoral con tornillo interferencial Biorci HA 7*25 mm y de 8*30 mm en túnel tibial.
+- Se comprueba estabilidad del injerto y ausencia de roce en escotadura intercondílea con extensión completa.
+- Se infiltra portales y en región intraarticular con ropivacaína y 5 mg de cloruro mórfico.
+- Drenaje aspirativo intraarticular.
+- Lavado articular, cierre por planos, piel con grapas y vendaje compresivo.
 ```
 
 **Tratamiento al Alta:**
@@ -2301,23 +2299,23 @@ SÍNTOMAS DE ALERTA
 ```
 IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-- PROFILAXIS ANTIBIÓTICA CON  2  GR  DE CEFAZOLINA.
-- ISQUEMIA EN RAÍZ DE MUSLO ${LADO_ABR_M}.
--  SE  PREPARA  PLASTIA DE  BANCO  DE TEJIDOS  HTH  CON  PASTILLA  ÓSEA PARA  FÉMUR DE 9*25 MM Y  PARA TIBIA DE  11*30 MM. 
-- FONDOS DE SACO  CUADRICIPITALES: SIN ALTERACIONES DE  INTERÉS. 
-- COMPARTIMENTO  INTERNO: SECUELAS DE  MENISCECTOMÍA PARCIAL  DEL CPMI  DE CIRUGÍA  PREVIA.
--  COMPARTIMENTO  EXTERNO: SECUELAS DE MENISCECTOMÍA PARCIAL  DEL CAME  DE CIRUGÍA PREVIA. CONDROPATÍA  GRADO  2  DE ZONA DE CARGA  DEL  CÓNDILO  FEMORAL EXT.
--  LIMPIEZA DE LA ESCOTADURA CONDILEA CON SINOVIOTOMO Y VAPORIZADOR.
-- CONDILOPLASTIA  CON  FRESA  MOTORIZADA   POR  CIERRE DE LA MISMA. 
-- REALIZACIÓN DE TÚNEL FEMORAL  A  TRAVÉS DE  PORTAL  MEDIAL ACCESORIO DE 9 MM * 40 MM.
-- REALIZACIÓN DE TÚNEL TIBIAL DE 11*35 MM.
-- FIJACIÓN  DE LA  PLASTIA: FEMORAL CON TIF  BIORCI-HA 7*25 MM Y  TIBIAL CON TIF  BIORCI-HA 10*30 MM.
-- SE COMPRUEBA AUSENCIA DE   ROCE  DE LA PLASTIA  EN  BORDE DE  LA  ESCOTADURA FEMORAL  TRAS   CONDILOPLASTIA REALIZADA.   
-- DRENAJE ASPIRATIVO INTRAARTICULAR.
-- CIERRE POR PLANOS DE LA FASCIA DEL  SARTORIO  Y TCS.
-- SE INFILTRA PORTALES Y EN REGION  INTRAARTICULAR  CON ROPIVACAÍNA Y  5 MG DE CLORURO MÓRFICO.
-- PIEL CON GRAPAS. 
-- VENDAJE COMPRESIVO.
+- Profilaxis antibiótica con 2 gr de cefazolina.
+- Isquemia en raíz de muslo ${LADO_M}.
+- Se prepara plastia de banco de tejidos HTH con pastilla ósea para fémur de 9*25 mm y para tibia de 11*30 mm.
+- Fondos de saco cuadricipitales: sin alteraciones de interés.
+- Compartimento interno: secuelas de meniscectomía parcial del CPMI de cirugía previa.
+- Compartimento externo: secuelas de meniscectomía parcial del CAME de cirugía previa. Condropatía grado 2 de zona de carga del cóndilo femoral ext.
+- Limpieza de la escotadura condílea con sinoviotomo y vaporizador.
+- Condiloplastia con fresa motorizada por cierre de la misma.
+- Realización de túnel femoral a través de portal medial accesorio de 9 mm * 40 mm.
+- Realización de túnel tibial de 11*35 mm.
+- Fijación de la plastia: femoral con TIF Biorci-HA 7*25 mm y tibial con TIF Biorci-HA 10*30 mm.
+- Se comprueba ausencia de roce de la plastia en borde de la escotadura femoral tras condiloplastia realizada.
+- Drenaje aspirativo intraarticular.
+- Cierre por planos de la fascia del sartorio y TCS.
+- Se infiltra portales y en región intraarticular con ropivacaína y 5 mg de cloruro mórfico.
+- Piel con grapas.
+- Vendaje compresivo.
 ```
 
 **Tratamiento al Alta:**
@@ -2350,17 +2348,17 @@ SÍNTOMAS DE ALERTA
 ```
 IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-- RESCATE DE  LIGAMENTOPLASTIA DE   LCA DE LA RODILLA ${LADO_F_UPPER}:
-- PROFILAXIS ANTIBIÓTICA CON 2 GR DE CEFAZOLINA.
-- ISQUEMIA EN RAÍZ DE MUSLO ${LADO_ABR_M}.
-- EXPLORACIÓN  BAJO  ANESTESIA  QUE  CONFIRMA  ROTURA  COMPLETA  DE  LA  PLASTIA AUTÓLOGA PREVIA DE LCA.
-- ROTURA  LONGITUDINAL  EN  ASA DE CUBO  DEL  CPMI LUXADA QUE SE REDUCE Y  SE SUTURA  CON  3  PUNTOS DE  FAST-FIX.
-- PREPARACIÓN  DE  LA  PLASTIA DE HTH  DE BANCO  DE  TEJIDOS CON  PASTILLAS  EN  FÉMUR  7*25   Y  TIBIA  9*30 MM Y  RESCATE LIGAMENTOPLASTIA CON  TÉCNICA  ANATÓMICA:
-- TÚNEL FEMORAL  30* 9 MM 
-- TÚNEL TIBIAL PROGRESIVO HASTA 10  MM A 55º.
-- ASCENSO DE LA PLASTIA HTH EN SENTIDO RETRÓGRADO Y FIJACIÓN TÚNEL FEMORAL CON TORNILLO INTERFERENCIAL BIOSTEON  7*23 MM Y DE 9*28 MM EN TÚNEL TIBIAL. 
-- SE COMPRUEBA ESTABILIDAD DEL  INJERTO  Y AUSENCIA DE ROCE EN ESCOTADURA INTERCONDILEA CON EXTENSIÓN COMPLETA.
-- PLASTIA DE REFUERZO  EXTRAARTICULAR DE RODILLA  (LEMAIRE MODIFICADO) MANTENIENDO  INSERCIÓN  DISTAL  DE  BANDA ILIOTIBIAL  Y  FIJADA EN FÉMUR  CON  TIF BIOSTEON  7*28 MM
+- Rescate de ligamentoplastia de LCA de la rodilla ${LADO_F}.
+- Profilaxis antibiótica con 2 gr de cefazolina.
+- Isquemia en raíz de muslo ${LADO_M}.
+- Exploración bajo anestesia que confirma rotura completa de la plastia autóloga previa de LCA.
+- Rotura longitudinal en asa de cubo del CPMI luxada que se reduce y se sutura con 3 puntos de fast-fix.
+- Preparación de la plastia de HTH de banco de tejidos con pastillas en fémur 7*25 y tibia 9*30 mm y rescate ligamentoplastia con técnica anatómica:
+- Túnel femoral 30*9 mm.
+- Túnel tibial progresivo hasta 10 mm a 55º.
+- Ascenso de la plastia HTH en sentido retrógrado y fijación túnel femoral con tornillo interferencial Biosteon 7*23 mm y de 9*28 mm en túnel tibial.
+- Se comprueba estabilidad del injerto y ausencia de roce en escotadura intercondílea con extensión completa.
+- Plastia de refuerzo extraarticular de rodilla (Lemaire modificado) manteniendo inserción distal de banda iliotibial y fijada en fémur con TIF Biosteon 7*28 mm.
 ```
 
 **Tratamiento al Alta:**
@@ -2410,15 +2408,15 @@ SÍNTOMAS DE ALERTA
 ```
 IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-- PROFILAXIS ANTIBIÓTICA CON 2 GR DE CEFAZOLINA.
-- ISQUEMIA EN RAÍZ DE MUSLO ${LADO_ABR_M}.
-- ABORDAJES AL Y AM.
-- FONDOS DE SACO CUADRICIPITALES: SIN ALTERACIONES.
-- COMPARTIMENTO INTERNO: SIN LESIONES MENISCALES NI CONDRALES.
-- COMPARTIMENTO EXTERNO: SIN LESIONES MENISCALES NI CONDRALES.
-- COMPARTIMENTO CENTRAL: SE APRECIA LESIÓN LCA (SHERMAN TIPO I-II) CON BUENA CALIDAD DE REMANENTE LIGAMENTOSO. FIJACIÓN FEMORAL MEDIANTE SWIVELOCK CARGADO CON FIBERTAPE (INTERNALBRACE). FIJACIÓN TIBIAL MEDIANTE SWIVELOCK TRAS TÚNEL TRANSTIBIAL CON BROCA DE 3.5 (FLIPCUTTER).
-- CIERRE POR PLANOS.
-- PIEL CON GRAPAS Y VENDAJE COMPRESIVO.
+- Profilaxis antibiótica con 2 gr de cefazolina.
+- Isquemia en raíz de muslo ${LADO_M}.
+- Abordajes AL y AM.
+- Fondos de saco cuadricipitales: sin alteraciones.
+- Compartimento interno: sin lesiones meniscales ni condrales.
+- Compartimento externo: sin lesiones meniscales ni condrales.
+- Compartimento central: se aprecia lesión LCA (Sherman tipo I-II) con buena calidad de remanente ligamentoso. Fijación femoral mediante Swivelock cargado con Fibertape (Internalbrace). Fijación tibial mediante Swivelock tras túnel transtibial con broca de 3.5 (Flipcutter).
+- Cierre por planos.
+- Piel con grapas y vendaje compresivo.
 ```
 
 **Tratamiento al alta:**
@@ -2459,23 +2457,23 @@ SÍNTOMAS DE ALERTA
 ```
 IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-- ANESTESIA RAQUÍDEA.
-- PROFILAXIS ANTIBIÓTICA CON 2 GR DE CEFAZOLINA.
-- ISQUEMIA EN RAÍZ DE MUSLO ${LADO_ABR_M} 250 MMHG.
-- ABORDAJE LONGITUDINAL SOBRE PATA DE GANSO. DISECCIÓN POR PLANOS. FASCIOTOMÍA SARTORIO Y OBTENCIÓN DE PLASTIA ST.
-- PREPARACIÓN DE PLASTIA CUÁDRUPLE DE ST CON 2 TIGHTROPE (Arthrex) DE 7 CM LONGITUD * 9 MM DIÁMETRO.
-- TIEMPO ARTROSCÓPICO: PORTALES ARTROSCÓPICOS HABITUALES: AL, AM Y AM ACCESORIO.
-- NO LESIONES MENISCALES NI CONDRALES.
-- REALIZACIÓN DE TÚNEL FEMORAL FUERA DENTRO CON BROCA RETRÓGRADA FLIPCUTTER (Arthrex) DE 9 MM * 25 MM.
-- REALIZACIÓN DE TÚNEL TIBIAL FUERA DENTRO CON BROCA RETRÓGRADA FLIPCUTTER (Arthrex) DE 9 MM * 30 MM.
-- AMPLIACIÓN PORTAL AM ACCESORIO E INTRODUCCIÓN DE LA PLASTIA POR EL MISMO HACIA TF PRIMERO Y TT POSTERIORMENTE.
-- SE INTRODUCE 20 MM DE PLASTIA EN CADA TÚNEL Y SE TENSIONA BIDIRECCIONALMENTE A 20º FLEXIÓN Y CAJÓN POSTERIOR.
-- FIJACIÓN FEMORAL Y TIBIAL CON TIGHTROPE (Arthrex).
-- LAVADO ARTICULAR ABUNDANTE.
-- SE DEJA DRENAJE INTRAARTICULAR.
-- RETIRADA DE ISQUEMIA Y CIERRE POR PLANOS.
-- SE INFILTRA ZONA DONANTE Y PORTALES CON CÓCTEL ANALGÉSICO CON 5 MG CLORURO MÓRFICO Y 10 CC ROPIVACAÍNA.
-- VENDAJE COMPRESIVO.
+- Anestesia raquídea.
+- Profilaxis antibiótica con 2 gr de cefazolina.
+- Isquemia en raíz de muslo ${LADO_M} 250 mmHg.
+- Abordaje longitudinal sobre pata de ganso. Disección por planos. Fasciotomía sartorio y obtención de plastia ST.
+- Preparación de plastia cuádruple de ST con 2 Tightrope (Arthrex) de 7 cm longitud * 9 mm diámetro.
+- Tiempo artroscópico: portales artroscópicos habituales: AL, AM y AM accesorio.
+- No lesiones meniscales ni condrales.
+- Realización de túnel femoral fuera dentro con broca retrógrada Flipcutter (Arthrex) de 9 mm * 25 mm.
+- Realización de túnel tibial fuera dentro con broca retrógrada Flipcutter (Arthrex) de 9 mm * 30 mm.
+- Ampliación portal AM accesorio e introducción de la plastia por el mismo hacia TF primero y TT posteriormente.
+- Se introduce 20 mm de plastia en cada túnel y se tensiona bidireccionalmente a 20º flexión y cajón posterior.
+- Fijación femoral y tibial con Tightrope (Arthrex).
+- Lavado articular abundante.
+- Se deja drenaje intraarticular.
+- Retirada de isquemia y cierre por planos.
+- Se infiltra zona donante y portales con cóctel analgésico con 5 mg cloruro mórfico y 10 cc ropivacaína.
+- Vendaje compresivo.
 ```
 
 **Tratamiento al Alta:**
@@ -2775,17 +2773,17 @@ CUIDADOS POSTOPERATORIOS
 ```
 IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-- COXARTROSIS  CADERA ${LADO_ABR_F}:
-- PROFILAXIS  ANTIBIÓTICA CON  2 GRAMOS  DE CEFAZOLINA  Y  1  GRAMO IV DE TRANEXÁMICO.
-- DECÚBITO  LATERAL  ${DECUBITO_UPPER}.
-- INCISIÓN  LONGITUDINAL SOBRE REGIÓN  TROCANTÉRICA Y  VIA ABORDAJE  BAUER.
-- CAPSULECTOMÍA,  LUXACIÓN  DE  CABEZA  FEMORAL   Y  OSTEOTOMÍA DEL  CUELLO.
-- ARTROPLASTIA TOTAL CADERA ${LADO_ABR_F}  MODELO  SUMMIT CON  COTILO  PINACLE  SECTOR GRIPTION NO  CEMENTADO Nº  50, POLIETILENO  MARATHON Nº 50 +10º, VASTAGO  Nº 6 NO  CEMENTADO ESTÁNDAR CON  CABEZA DE  28 MM +5 DE CERÁMICA .
-- SE COMPRUEBA ESTABILIDAD DE LA  ARTROPLASTIA  TRAS REDUCCIÓN EN  TODOS LOS PLANOS.
-- CIERRE POR  PLANOS CON REINSERCIÓN  DE  MUSCULATURA  GLÚTEA.
-- SE ADMINISTRA   1   GRAMO  DE TRANEXÁMICO  EN  50 CC DE SF A  NIVEL  LOCAL.
-- PIEL  CON  GRAPAS.
-- APÓSITO COMPRESIVO.
+- Coxartrosis cadera ${LADO_F}.
+- Profilaxis antibiótica con 2 gramos de cefazolina y 1 gramo IV de tranexámico.
+- Decúbito lateral ${DECUBITO}.
+- Incisión longitudinal sobre región trocantérica y vía abordaje Bauer.
+- Capsulectomía, luxación de cabeza femoral y osteotomía del cuello.
+- Artroplastia total cadera ${LADO_F} modelo Summit con cotilo Pinacle sector Gription no cementado nº 50, polietileno Marathon nº 50 +10º, vástago nº 6 no cementado estándar con cabeza de 28 mm +5 de cerámica.
+- Se comprueba estabilidad de la artroplastia tras reducción en todos los planos.
+- Cierre por planos con reinserción de musculatura glútea.
+- Se administra 1 gramo de tranexámico en 50 cc de SF a nivel local.
+- Piel con grapas.
+- Apósito compresivo.
 ```
 
 **Tratamiento al Alta:**
@@ -2795,8 +2793,7 @@ CUIDADOS POSTOPERATORIOS
 - Mantener el pie elevado siempre que esté sentado con  movimientos de  flexoextensión  de  la rodilla.
 - Aplicar hielo sobre la rodilla operada 2-3 veces al día durante 20 minutos.
 - Mover activamente los dedos de la extremidad operada.
-- Realizar los ejercicios que su médico le ha explicado
-- Puede  bajarse en  su  móvil/Tablet/PC  la aplicación gratuita “Mi  Prótesis” donde podrá encontrar  información  acerca de esta patología  y  procedimiento  quirúrgico  realizado,  así  como  recomendaciones  y  ejercicios  que  puede realizar.
+- Realizar los ejercicios que su médico le ha explicado.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
 - Puede  caminar con ayuda de un andador.
 - Puede requerir ayuda domiciliaria
@@ -2821,17 +2818,17 @@ SÍNTOMAS DE ALERTA
 ```
 IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-- COXARTROSIS  CADERA   ${LADO_ABR_F}:
-- PROFILAXIS  ANTIBIÓTICA CON  2 GRAMOS  DE CEFAZOLINA.
-- DECÚBITO  LATERAL  ${DECUBITO_UPPER}.
-- INCISIÓN  LONGITUDINAL SOBRE REGIÓN  TROCANTÉRICA Y  VIA ABORDAJE  HARDINGE.
-- CAPSULECTOMÍA,  LUXACIÓN  DE  CABEZA  FEMORAL   Y  OSTEOTOMÍA DEL  CUELLO.
-- ARTROPLASTIA TOTAL CADERA ${LADO_ABR_F} ( ZIMMER): COTILO G7 Nº 48 PRESS-FIT, VÁSTAGO TAPERLOC Nº 7.5, INSERTO POLIETILENO  CON  CEJA 10º Y CABEZA CERÁMICA 32  +0 MM.
-- SE COMPRUEBA ESTABILIDAD DE LA  ARTROPLASTIA  TRAS REDUCCIÓN EN  TODOS LOS PLANOS.
-- CIERRE POR  PLANOS CON REINSERCIÓN  DE  MUSCULATURA  GLÚTEA.
-- DRENAJE ASPIRATIVO.
-- PIEL  CON  GRAPAS.
-- APÓSITO COMPRESIVO.
+- Coxartrosis cadera ${LADO_F}.
+- Profilaxis antibiótica con 2 gramos de cefazolina.
+- Decúbito lateral ${DECUBITO}.
+- Incisión longitudinal sobre región trocantérica y vía abordaje Hardinge.
+- Capsulectomía, luxación de cabeza femoral y osteotomía del cuello.
+- Artroplastia total cadera ${LADO_F} (Zimmer): cotilo G7 nº 48 press-fit, vástago Taperloc nº 7.5, inserto polietileno con ceja 10º y cabeza cerámica 32 +0 mm.
+- Se comprueba estabilidad de la artroplastia tras reducción en todos los planos.
+- Cierre por planos con reinserción de musculatura glútea.
+- Drenaje aspirativo.
+- Piel con grapas.
+- Apósito compresivo.
 ```
 
 **Tratamiento al Alta:**
@@ -2876,12 +2873,12 @@ IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 - Portales ALP, ALD y anterior.
 
 - Compartimento Central:
-- SOLO APERTURA LONGITUDINAL.
+- Solo apertura longitudinal.
 - Labrum ___________.
-- OSTEOPLASTIA ACETABULAR y REINSERCIÓN DE LABRUM CON 4 ANCLAJES.
-- OSTEOPLASTIA CABEZA FEMORAL con control de escopia.
-- Comprobación de maniobra de Choque.
-- SUTURA CAPSULAR CON ___________.
+- Osteoplastia acetabular y reinserción de labrum con 4 anclajes.
+- Osteoplastia cabeza femoral con control de escopia.
+- Comprobación de maniobra de choque.
+- Sutura capsular con ___________.
 - Tiempo de tracción ___ min.
 - Cierre de piel con prolene y grapa.
 - Infiltración anestésica.
@@ -2973,7 +2970,7 @@ IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 - Sedoanalgesia.
 - Paciente en decúbito supino.
-- Bajo condiciones de estricta asepsia y control radiográfico se procede a infiltración de cadera ${LADO_ABR_F} mediante mepivacaína + corticoide.
+- Bajo condiciones de estricta asepsia y control radiográfico se procede a infiltración de cadera ${LADO_F} mediante mepivacaína + corticoide.
 - Apósito compresivo.
 ```
 
@@ -2982,6 +2979,7 @@ IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 ```
 CUIDADOS POSTOPERATORIOS
 - Reposo relativo 24-48 horas.
+- Analgesia habitual si precisa.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
 - Retirar apósito pasadas las 6-8 horas de la intervención.
 
@@ -3612,15 +3610,15 @@ CUIDADOS POSTOPERATORIOS
 ```
 IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-- ISQUEMIA EN RAÍZ BRAZO.
-- ANESTESIA  GENERAL  CON MASCARILLA  LARÍNGEA.
-- AMPLIACIÓN  DE  LA HERIDA INICIAL A  NIVEL  DEL  PLIEGUE FLEXOR   DEL  LA  IFP DEL  DEDO.
-- IDENTIFICACIÓN  DE LA SECCIÓN  COMPLETA DEL  TENDÓN FLEXOR   PROFUNDO  Y  PARCIAL  DE LA BANDELETA  CUBITAL  DEL  FLEXOR  SUPERFICIAL.
-- SUTURA DEL  FLEXOR  PROFUNDO  CON  DOBLE MARCO  DE   KESSLER Y  PUNTOS   EN  CORONA. 
-- SUTURA  DE LA BANDELETA  SUPERFICIAL  CON DOS PUNTOS. AMBOS CON  MONOFILAMENTO  REABSORBIBLE.
-- LAVADO  HERIDA, SE  LIBERA  ISQUEMIA  Y  COAGULACIÓN  VASOS  SANGRANTES CON BIPOLAR.
-- SUTURA PIEL CON MONOFILAMENTO. 
-- FÉRULA DE INMOVILIZACIÓN.
+- Isquemia en raíz brazo.
+- Anestesia general con mascarilla laríngea.
+- Ampliación de la herida inicial a nivel del pliegue flexor de la IFP del dedo.
+- Identificación de la sección completa del tendón flexor profundo y parcial de la bandeleta cubital del flexor superficial.
+- Sutura del flexor profundo con doble marco de Kessler y puntos en corona.
+- Sutura de la bandeleta superficial con dos puntos. Ambos con monofilamento reabsorbible.
+- Lavado herida, se libera isquemia y coagulación vasos sangrantes con bipolar.
+- Sutura piel con monofilamento.
+- Férula de inmovilización.
 ```
 
 **Tratamiento al Alta:**
@@ -3637,9 +3635,9 @@ CUIDADOS POSTOPERATORIOS
 - Acudir a SALA DE CURAS DE  COT (GABINETE 7) para ver estado de herida y citar en función de la misma.
 
 REVISIÓN
-- Solicitar cita para revisión en 3 semanas  para ${DOCTOR}
-- UNA VEZ RETIRADOS LOS PUNTOS MASAJEAR ZONA DE CICATRIZ DE MANERA ENÉRGICA Y EN CÍRCULOS
-- EVITAR COGER PESO Y HACER FUERZA CON LA MANO INTERVENIDA DURANTE 8 SEMANAS
+- Solicitar cita para revisión en 3 semanas para ${DOCTOR}
+- Una vez retirados los puntos masajear zona de cicatriz de manera enérgica y en círculos.
+- Evitar coger peso y hacer fuerza con la mano intervenida durante 8 semanas.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
@@ -3866,7 +3864,7 @@ CUIDADOS POSTOPERATORIOS
 - Metamizol 575 mg cada 8h alterno con lo anterior si precisa
 - Omeprazol cada 24h
 - Enoxaparina sc 40 mg cada 24h
-- CITA EN SALA DE CURAS DE COT (Gabinete 7) en unos 3-5 días para valorar herida
+- Cita en sala de curas de COT (Gabinete 7) en unos 3-5 días para valorar herida
 - No es preciso retirar sutura. Puede ayudar a su caída frotando la herida durante el lavado a partir de la 3ª semana de la intervención
 - Una vez retirados los puntos, deberá masajear la zona de la cicatriz en círculos de forma enérgica, para evitar adherencias de la misma
 - Debe evitar fumar hasta que la herida esté cicatrizada, no obstante, aconsejamos el abandono definitivo del tabaco si es usted fumador
@@ -3911,7 +3909,7 @@ CUIDADOS POSTOPERATORIOS
 - Enoxaparina 40 mg 1 inyección cada 24h durante 30 días
 - Omeprazol 20 mg 1 comprimido cada 24 horas durante 30 días
 - Precisa cuidados domiciliarios
-- CITA EN SALA DE CURAS DE COT (Gabinete 7) en unos 3-5 días para valorar herida
+- Cita en sala de curas de COT (Gabinete 7) en unos 3-5 días para valorar herida
 - Debe evitar fumar hasta que la herida esté cicatrizada, no obstante, aconsejamos el abandono definitivo del tabaco si es usted fumador
 
 REVISIÓN
@@ -3956,7 +3954,7 @@ CUIDADOS POSTOPERATORIOS
 - Enoxaparina 40 mg 1 inyección cada 24h durante 30 días
 - Omeprazol 20 mg 1 comprimido cada 24 horas durante 30 días
 - Precisa cuidados domiciliarios
-- CITA EN SALA DE CURAS DE COT (Gabinete 7) en unos 3-5 días para valorar herida
+- Cita en sala de curas de COT (Gabinete 7) en unos 3-5 días para valorar herida
 - Debe evitar fumar hasta que la herida esté cicatrizada, no obstante, aconsejamos el abandono definitivo del tabaco si es usted fumador
 
 REVISIÓN
@@ -4001,7 +3999,7 @@ CUIDADOS POSTOPERATORIOS
 - Enoxaparina 40 mg 1 inyección cada 24h durante 30 días
 - Omeprazol 20 mg 1 comprimido cada 24 horas durante 30 días
 - Precisa cuidados domiciliarios
-- CITA EN SALA DE CURAS DE COT (Gabinete 7) en unos 3-5 días para valorar herida
+- Cita en sala de curas de COT (Gabinete 7) en unos 3-5 días para valorar herida
 - Debe evitar fumar hasta que la herida esté cicatrizada, no obstante, aconsejamos el abandono definitivo del tabaco si es usted fumador
 
 REVISIÓN
@@ -4046,7 +4044,7 @@ CUIDADOS POSTOPERATORIOS
 - Enoxaparina 40 mg 1 inyección cada 24h durante 30 días
 - Omeprazol 20 mg 1 comprimido cada 24 horas durante 30 días
 - Precisa cuidados domiciliarios
-- CITA EN SALA DE CURAS DE COT (Gabinete 7) en unos 3-5 días para valorar herida
+- Cita en sala de curas de COT (Gabinete 7) en unos 3-5 días para valorar herida
 - Debe evitar fumar hasta que la herida esté cicatrizada, no obstante, aconsejamos el abandono definitivo del tabaco si es usted fumador
 
 REVISIÓN
