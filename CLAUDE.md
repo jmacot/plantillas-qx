@@ -27,13 +27,15 @@ Las lineas de contenido de la `hoja` deben usar formato de listado con guiones (
 ```
 IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
-TITULO DEL PROCEDIMIENTO ---
+Titulo del procedimiento ---
 - Anestesia gral. + locorregional. Profilaxis ATB.
 - Abordaje deltopectoral.
 - Lavado, hemostasia, cierre por planos.
 ```
 
 **Nunca** escribir lineas de contenido sin el prefijo `- `.
+
+**Nunca** escribir contenido en MAYÚSCULAS enteras. Toda la hoja operatoria y el tratamiento deben usar formato en minúsculas (sentence case): primera palabra en mayúscula, resto en minúscula. Excepciones: abreviaturas médicas (LCA, CAR, DCP-LC, RAFI, TCS, SF, etc.), nombres de marca (Stryker, Zimmer, Tomofix, etc.), nombres de fármacos (METAMIZOL, PARACETAMOL, etc.) y encabezados de sección del tratamiento (CUIDADOS POSTOPERATORIOS, MEDICACIÓN, REVISIÓN, SÍNTOMAS DE ALERTA).
 
 ### 3. Revision en consulta
 
@@ -69,8 +71,8 @@ La lateralidad se controla con un selector (Derecho/Izquierdo) y **nunca** debe 
 | `${LADO_F}` | derecha | izquierda | femeninos minuscula: rodilla, tibia, pierna, mano, clavicula, rotula, cresta iliaca, cadera |
 | `${LADO_M_UPPER}` | DERECHO | IZQUIERDO | masculinos MAYUSCULA: FEMUR, HUMERO, RADIO, CODO, CARPIANO, MIEMBRO SUPERIOR |
 | `${LADO_F_UPPER}` | DERECHA | IZQUIERDA | femeninos MAYUSCULA: RODILLA, TIBIA, MANO, ROTULA, CAR, PUC, CADERA |
-| `${LADO_ABR_F}` | DCHA | IZDA | abreviatura femenina MAYUSCULA (solo PTC Summit/Zimmer: CADERA) |
-| `${LADO_ABR_M}` | DCHO | IZDO | abreviatura masculina MAYUSCULA (osteotomias: MUSLO, FEMUR DISTAL) |
+| `${LADO_ABR_F}` | DERECHA | IZQUIERDA | sinónimo de LADO_F_UPPER (legacy, preferir LADO_F o LADO_F_UPPER) |
+| `${LADO_ABR_M}` | DERECHO | IZQUIERDO | sinónimo de LADO_M_UPPER (legacy, preferir LADO_M o LADO_M_UPPER) |
 | `${DECUBITO}` | izquierdo | derecho | decubito lateral **contrario** (PTC y artroscopia hombro) |
 | `${DECUBITO_UPPER}` | IZQUIERDO | DERECHO | decubito lateral contrario en MAYUSCULA |
 
@@ -79,11 +81,11 @@ La lateralidad se controla con un selector (Derecho/Izquierdo) y **nunca** debe 
 Elegir la variable segun el **genero gramatical** del sustantivo que la precede:
 
 ```
-FRACTURA DE FEMUR ${LADO_M_UPPER}        ← femur es masculino → DERECHO/IZQUIERDO
-RODILLA ${LADO_F_UPPER}                  ← rodilla es femenino → DERECHA/IZQUIERDA
-Decubito lateral ${DECUBITO}             ← lado contrario → izquierdo/derecho
+Fractura de fémur ${LADO_M}              ← fémur es masculino → derecho/izquierdo
+Rodilla ${LADO_F}                        ← rodilla es femenino → derecha/izquierda
+Decúbito lateral ${DECUBITO}             ← lado contrario → izquierdo/derecho
 - Gonartrosis rodilla ${LADO_F}.         ← rodilla es femenino → derecha/izquierda
-- Isquemia en muslo ${LADO_ABR_M}        ← muslo es masculino → DCHO/IZDO
+- Isquemia en muslo ${LADO_M}.           ← muslo es masculino → derecho/izquierdo
 ```
 
 #### `---` como placeholder generico
@@ -91,9 +93,9 @@ Decubito lateral ${DECUBITO}             ← lado contrario → izquierdo/derech
 El placeholder `---` solo se debe usar cuando la lateralidad va junto a un sustantivo **masculino** y en minuscula (porque el sistema reemplaza `---` por "derecho"/"izquierdo" automaticamente). Para sustantivos femeninos o en mayusculas, usar **siempre** la variable explicita.
 
 ```
-Artroscopia de hombro ---                ← OK: hombro es masculino, minuscula
+Artroscopia de hombro ---                ← OK: hombro es masculino, minúscula
 Artroscopia de rodilla ${LADO_F}         ← OBLIGATORIO: rodilla es femenino
-CAR ${LADO_F_UPPER}                      ← OBLIGATORIO: mayuscula + femenino
+CAR rodilla ${LADO_F}                    ← OBLIGATORIO: rodilla es femenino
 ```
 
 **Nunca** hardcodear lateralidades como "derecho", "izquierdo", "DCHA", "IZQ", "DCHO", etc.

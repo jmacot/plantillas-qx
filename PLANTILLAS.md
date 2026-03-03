@@ -903,6 +903,7 @@ CUIDADOS POSTOPERATORIOS
 - Realizar ejercicios isométricos de cuádriceps y  movilidad libre de  la rodilla en  descarga.
 - Puede requerir ayuda domiciliaria
 - IBUPROFENO 600 mg / 8 horas vía oral.
+- PARACETAMOL 1 gr cada 8 horas
 - ENOXAPARINA  40 mg /24 horas vía subcutánea
 - Retirada de puntos por ATS DE ZONA en 12/15 días.
 - Revisión en CC EE  de  COT (${DOCTOR})  en  3 semanas  para ver evolución.
@@ -945,7 +946,7 @@ CUIDADOS POSTOPERATORIOS
 - Realizar ejercicios isométricos de cuádriceps y  movilidad limitada de la rodilla 0º-60º hasta nueva orden
 - Puede requerir ayuda domiciliaria
 - IBUPROFENO 600 mg / 8 horas vía oral.
-- PARACETAMOL  1  mg   /  8 horas (alterno  con anterior cada 4  horas,  si  dolor intenso)
+- PARACETAMOL 1 g / 8 horas (alterno con anterior cada 4 horas, si dolor intenso)
 - ENOXAPARINA  40 mg/24 horas - vía subcutánea
 - Retirada de puntos por ATS DE ZONA en 12/15 días.
 - Revisión en CC EE  de  COT (${DOCTOR})  en  3/4 semanas  para ver evolución.
@@ -988,6 +989,7 @@ CUIDADOS POSTOPERATORIOS
 - Puede requerir ayuda domiciliaria
 - IBUPROFENO 600 mg / 8 horas vía oral.
 - METAMIZOL 575  mg   /  8 horas (alterno  con anterior cada 4  horas,  si  dolor intenso)
+- PARACETAMOL 1 gr cada 8 horas
 - ENOXAPARINA  40 mg/24 horas - vía subcutánea
 - Retirada de puntos por ATS DE ZONA en 12/15 días.
 - Revisión en CC EE  de  COT (${DOCTOR})  en  3 semanas  para ver evolución(Forzar si  es preciso!!!)
@@ -1047,6 +1049,7 @@ CUIDADOS POSTOPERATORIOS
 - Puede requerir ayuda domiciliaria
 - NOLOTIL 1 cápsula / 8 horas vía oral.
 - Si  dolor  intenso  alternar cada  4  horas con  IBUPROFENO  600 mg/ 8  horas
+- PARACETAMOL 1 gr cada 8 horas
 - OMEPRAZOL 20 mg/ 24 horas.
 - BEMIPARINA  3500 UI / 24 horas vía subcutánea / 3 semanas.
 - Revisión en CC EE de COT (${DOCTOR}) en  2/3 semanas para retirar férula y seguimiento.
@@ -1101,6 +1104,7 @@ CUIDADOS POSTOPERATORIOS
 - Puede requerir ayuda domiciliaria
 - METAMIZOL 575 mg / 8 horas vía oral.
 - Si  dolor  intenso  alternar cada  4  horas con  IBUPROFENO  600 mg/ 8  horas.
+- PARACETAMOL 1 gr cada 8 horas
 - OMEPRAZOL 20 mg/ 24 horas.
 - BEMIPARINA  3500 UI / 24 horas vía subcutánea / 3 semanas.
 - Revisión en CC EE de COT (${DOCTOR}) en  2/3 semanas para seguimiento.
@@ -1147,6 +1151,7 @@ CUIDADOS POSTOPERATORIOS
 - Puede requerir ayuda domiciliaria
 - IBUPROFENO 600 mg / 8 horas vía oral.
 - METAMIZOL  1  cápsula/ 8 horas via oral  alterno  con  Ibuprofeno  cada  4  horas.
+- PARACETAMOL 1 gr cada 8 horas
 - OMEPRAZOL  20 mg/ 24  horas
 - BEMIPARINA 3500 UI /24 horas vía subcutánea
 - Curas por  ATS DE  ZONA con  Betadine  cada  48/72 horas.
@@ -1197,6 +1202,7 @@ CUIDADOS POSTOPERATORIOS
 - Puede requerir ayuda domiciliaria
 - IBUPROFENO 600 mg / 8 horas vía oral.
 - METAMIZOL  1  cápsula/ 8 horas via oral  alterno  con  Ibuprofeno  cada  4  horas.
+- PARACETAMOL 1 gr cada 8 horas
 - OMEPRAZOL  20 mg/ 24  horas
 - ENOXAPARINA 60 mg /24 horas vía subcutánea
 - Curas por  ATS DE  ZONA con  Betadine  cada  48/72 horas.
@@ -1246,6 +1252,7 @@ CUIDADOS POSTOPERATORIOS
 - Puede requerir ayuda domiciliaria
 - IBUPROFENO 600 mg / 8 horas vía oral.
 - METAMIZOL  1  cápsula/ 8 horas via oral  alterno  con  Ibuprofeno  cada  4  horas.
+- PARACETAMOL 1 gr cada 8 horas
 - OMEPRAZOL  20 mg/ 24  horas
 - ENOXAPARINA 60 mg /24 horas vía subcutánea
 - Curas por  ATS DE  ZONA con  Betadine  cada  48/72 horas.
@@ -1448,6 +1455,7 @@ CUIDADOS POSTOPERATORIOS
 - Realizar ejercicios isométricos de cuádriceps y movilidad libre de la rodilla.
 - Puede requerir ayuda domiciliaria
 - ENANPLUS 1   comp/ 8  h
+- PARACETAMOL 1 gr cada 8 horas
 - INHIXA 40 / 24 horas vía subcutánea durante  10  días
 
 REVISIÓN
@@ -1489,6 +1497,7 @@ CUIDADOS POSTOPERATORIOS
 - Realizar ejercicios isométricos de cuádriceps y  movilidad libre de  la rodilla
 - Puede requerir ayuda domiciliaria
 - METAMIZOL  575 mg /8 horas vía oral.
+- PARACETAMOL 1 gr cada 8 horas
 - BEMIPARINA  3500 UI /24 horas vía subcutánea  durante 10 días.
 - Retirada de puntos por ATS DE ZONA en 12/15 días.
 - Revisión en CC EE  de  COT (${DOCTOR})  en unas  4-5   semanas  para ver evolución.
@@ -1528,6 +1537,7 @@ CUIDADOS POSTOPERATORIOS
 - Realizar ejercicios isométricos de cuádriceps y movilidad libre de la rodilla.
 - Puede requerir ayuda domiciliaria
 - METAMIZOL 575 mg /8 horas vía oral.
+- PARACETAMOL 1 gr cada 8 horas
 - BEMIPARINA 3500 UI /24 horas vía subcutánea durante 10 días.
 - Retirada de puntos por ATS DE ZONA en 12/15 días.
 - Revisión en CC EE de COT (${DOCTOR}) en unas 4-5 semanas para ver evolución.
@@ -1568,6 +1578,7 @@ CUIDADOS POSTOPERATORIOS
 - Realizar ejercicios isométricos de cuádriceps y  movilidad libre de  la rodilla
 - Puede requerir ayuda domiciliaria
 - IBUPROFENO 600 mg / 8 horas vía oral.
+- PARACETAMOL 1 gr cada 8 horas
 - ENOXAPARINA 40 mg /24 horas vía subcutánea  durante 15 días.
 - Retirada de puntos por ATS DE ZONA en 12/15 días.
 - Revisión en CC EE  de  COT (${DOCTOR})  en  3 semanas  para ver evolución.
@@ -1608,6 +1619,7 @@ CUIDADOS POSTOPERATORIOS
 - Realizar ejercicios isométricos de cuádriceps y movilidad libre de la rodilla
 - Puede requerir ayuda domiciliaria
 - ENANPLUS  75 mg/25 mg  / 8 horas vía oral durante  una semana.
+- PARACETAMOL 1 gr cada 8 horas
 - ENOXAPARINA 40 mg /24 horas vía subcutánea  durante 10 días.
 
 REVISIÓN
@@ -1651,6 +1663,7 @@ CUIDADOS POSTOPERATORIOS
 - Puede requerir ayuda domiciliaria
 - IBUPROFENO  600 mg / 8 horas vía oral.
 - Alternar cada 4  horas con METAMIZOL 575 mg/8  horas si  dolor intenso
+- PARACETAMOL 1 gr cada 8 horas
 - ENOXAPARINA  40 mg  / 24 horas vía subcutánea.
 
 REVISIÓN
@@ -1918,6 +1931,7 @@ CUIDADOS POSTOPERATORIOS
 
 MEDICACIÓN (según tarjeta sanitaria)
 - ENANPLUS  75 mg/25 mg  / 8 horas vía oral.
+- PARACETAMOL 1 gr cada 8 horas
 - INHIXA 40 mg /24 horas vía subcutánea  durante 3 semanas.
 
 REVISIÓN
@@ -1970,6 +1984,7 @@ CUIDADOS POSTOPERATORIOS
 
 MEDICACIÓN (según tarjeta sanitaria)
 - ENANPLUS  75 mg/25 mg  / 8 horas vía oral.
+- PARACETAMOL 1 gr cada 8 horas
 - INHIXA 40 mg /24 horas vía subcutánea  durante 3 semanas.
 
 REVISIÓN
@@ -2030,6 +2045,7 @@ CUIDADOS POSTOPERATORIOS
 - 6º mes: Retorno  a la actividad deportiva, incluido deportes de  contacto.
 - Puede requerir ayuda domiciliaria
 - ENANPLUS  75 mg/25 mg  / 8 horas vía oral.
+- PARACETAMOL 1 gr cada 8 horas
 - ENOXAPARINA 40 mg /24 horas vía subcutánea  durante 3 semanas.
 
 REVISIÓN
@@ -2081,6 +2097,7 @@ CUIDADOS POSTOPERATORIOS
 - Movilizaciones pasivas de  rótula 4/5 veces al  día  durante  15 minutos.
 - Puede requerir ayuda domiciliaria
 - ENANPLUS  75 mg/25 mg  / 8 horas vía oral.
+- PARACETAMOL 1 gr cada 8 horas
 - ENOXAPARINA 40 mg /24 horas vía subcutánea  durante 3 semanas.
 
 REVISIÓN
@@ -2133,6 +2150,7 @@ CUIDADOS POSTOPERATORIOS
 - Retorno a la actividad deportiva a partir de los 6  meses de la cirugía.
 - Puede requerir ayuda domiciliaria
 - ENANPLUS  75 mg/25 mg  / 8 horas vía oral.
+- PARACETAMOL 1 gr cada 8 horas
 - ENOXAPARINA 40 mg /24 horas vía subcutánea  durante 3 semanas.
 
 REVISIÓN
@@ -2186,6 +2204,7 @@ CUIDADOS POSTOPERATORIOS
 - Movilizaciones pasivas de  rótula 4/5 veces al  día  durante  15 minutos.
 - Puede requerir ayuda domiciliaria
 - ENANPLUS  75 mg/25 mg  / 8 horas vía oral.
+- PARACETAMOL 1 gr cada 8 horas
 - ENOXAPARINA 40 mg /24 horas vía subcutánea  durante 3 semanas.
 
 REVISIÓN
@@ -2235,6 +2254,7 @@ CUIDADOS POSTOPERATORIOS
 - Puede requerir ayuda domiciliaria
 - IBUPROFENO 600 mg / 8 horas vía oral.
 - METAMIZOL  575 mg/ 8  horas  (alterno  con  anterior  cada  4   horas),  si dolor intenso.
+- PARACETAMOL 1 gr cada 8 horas
 - BEMIPARINA 3500 UI/24 horas vía subcutánea.
 
 REVISIÓN
@@ -2282,6 +2302,7 @@ CUIDADOS POSTOPERATORIOS
 - Puede requerir ayuda domiciliaria
 - IBUPROFENO 600 mg / 8 horas vía oral.
 - METAMIZOL  575 mg/ 8  horas  (alterno  con  anterior  cada  4   horas),  si dolor intenso.
+- PARACETAMOL 1 gr cada 8 horas
 - BEMIPARINA 3500 UI/24 horas vía subcutánea.
 
 REVISIÓN
@@ -2331,6 +2352,7 @@ CUIDADOS POSTOPERATORIOS
 - Puede requerir ayuda domiciliaria
 - IBUPROFENO 600 mg / 8 horas vía oral.
 - METAMIZOL  575 mg/ 8  horas  (alterno  con  anterior  cada  4   horas),  si dolor intenso.
+- PARACETAMOL 1 gr cada 8 horas
 - BEMIPARINA 3500 UI/24 horas vía subcutánea.
 
 REVISIÓN
@@ -2389,6 +2411,7 @@ CUIDADOS POSTOPERATORIOS
 - 6º mes: Retorno  a la actividad deportiva, incluido deportes de  contacto.
 - Puede requerir ayuda domiciliaria
 - ENANPLUS  75 mg/25 mg  / 8 horas vía oral.
+- PARACETAMOL 1 gr cada 8 horas
 - ENOXAPARINA 40 mg /24 horas vía subcutánea  durante 3 semanas.
 
 REVISIÓN
@@ -2439,6 +2462,7 @@ CUIDADOS POSTOPERATORIOS
 - Movilizaciones pasivas de  rótula 4/5 veces al  día  durante  15 minutos.
 - Puede requerir ayuda domiciliaria
 - ENANPLUS  75 mg/25 mg  / 8 horas vía oral.
+- PARACETAMOL 1 gr cada 8 horas
 - ENOXAPARINA 40 mg /24 horas vía subcutánea  durante 3 semanas.
 
 REVISIÓN
@@ -2491,6 +2515,7 @@ CUIDADOS POSTOPERATORIOS
 
 MEDICACIÓN (según tarjeta sanitaria)
 - ENANPLUS 75 mg/25 mg / 8 horas vía oral.
+- PARACETAMOL 1 gr cada 8 horas
 - INHIXA 40 mg /24 horas vía subcutánea durante 3 semanas.
 
 REVISIÓN
@@ -2640,6 +2665,7 @@ CUIDADOS POSTOPERATORIOS
 - Mantener ortesis de inmovilización con balance articular limitado de 0º a 45º durante 3 semanas y después movilidad libre
 - Metamizol 1 cápsula / 8 horas vía oral
 - Ibuprofeno 600 mg / 8 horas, alterno con anterior cada 4 horas si dolor intenso
+- PARACETAMOL 1 gr cada 8 horas
 - Omeprazol 20 mg / 24 horas
 - Bemiparina 3500 UI 1 jeringa / 24 horas vía subcutánea / 6 semanas
 - Solicitar cita con RHB al alta
@@ -2694,6 +2720,7 @@ CUIDADOS POSTOPERATORIOS
 - Realizar ejercicios isométricos de cuádriceps
 - MOVILIDAD LIBRE DE RODILLA SIN APOYO
 - Enanplus 1 comp / 8 horas vía oral alternando con Metamizol si persistencia del dolor
+- PARACETAMOL 1 gr cada 8 horas
 - Enoxaparina Rovi 40 mg / 24 horas vía subcutánea durante 4 semanas
 - Retirada de puntos por ATS DE ZONA en 12-15 días
 
@@ -2743,6 +2770,10 @@ CUIDADOS POSTOPERATORIOS
 - Realizar los ejercicios isométricos que su médico le ha explicado
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos
 - Retirada de puntos de sutura una vez cicatrizada la herida quirúrgica (12-14 días aproximadamente)
+
+MEDICACIÓN
+- PARACETAMOL 1 gr cada 8 horas
+
 - MOVILIDAD:
   * 0-2 semana: ejercicios pasivos de movilidad de rodilla con ortesis bloqueada a 0-30º
   * 2-3ª semana: aumento del balance articular a 0-60º
