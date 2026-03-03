@@ -1,6 +1,6 @@
 # 📋 Plantillas COT
 
-Aplicacion web de archivo unico para **Cirugia Ortopedica y Traumatologia (COT)** con dos modulos: **Quirofano** (notas operatorias y tratamientos al alta) y **Urgencias** (anamnesis, exploracion y plan con campos dinamicos). Disenada para agilizar la documentacion clinica.
+Mas de 60 notas operatorias y tratamientos al alta listos para usar. Elige el procedimiento, personaliza los datos y copia el texto directamente a la historia clinica. Incluye modulo de urgencias con anamnesis, exploracion y plan.
 
 ![HTML5](https://img.shields.io/badge/HTML5-single--file-E34F26?logo=html5&logoColor=white)
 ![Plantillas](https://img.shields.io/badge/plantillas_qx-87-1a3a5c)
