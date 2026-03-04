@@ -719,6 +719,9 @@ CUIDADOS POSTOPERATORIOS
 - NOLOTIL 1 cápsula / 8 horas vía oral.
 - OMEPRAZOL 20 mg/ 24  horas.
 
+CURAS LOCALES
+- Curas planas cada 48-72 horas.
+
 REVISIÓN
 - Revisión en CCEE de COT (${DOCTOR}) en 3-4 semanas para Rx, valoración y seguimiento.
 
@@ -756,6 +759,9 @@ CUIDADOS POSTOPERATORIOS
 - NOLOTIL 1 cápsula / 8 horas vía oral,  alternar cada  4  horas  con PARACETAMOL 1 gr/8h si  dolor intenso.
 - Revisión  en  CC EE de COT (${DOCTOR}) en 3 semanas aprox.  para Rx, valoración y  seguimiento.
 
+CURAS LOCALES
+- Curas planas cada 48-72 horas.
+
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias. Mover activamente los dedos de la extremidad operada.
 ```
@@ -791,6 +797,9 @@ CUIDADOS POSTOPERATORIOS
 - IBUPROFENO  600 mg/8  horas  via  oral  alterno  con  anterior   si  dolor  intenso
 - OMEPRAZOL 20 mg/ 24  horas.
 - Revisión  en  CC EE de COT (${DOCTOR}) en  3   semanas para Rx, valoración y  seguimiento.
+
+CURAS LOCALES
+- Curas planas cada 48-72 horas.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
@@ -828,6 +837,9 @@ CUIDADOS POSTOPERATORIOS
 - OMEPRAZOL 20 mg/ 24  horas.
 - Revisión  en  CC EE de COT (${DOCTOR}) en  3   semanas para Rx, valoración y  seguimiento.
 
+CURAS LOCALES
+- Curas planas cada 48-72 horas.
+
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias. Mover activamente los dedos de la extremidad operada.
 ```
@@ -864,6 +876,9 @@ CUIDADOS POSTOPERATORIOS
 - IBUPROFENO  600 mg/8  horas  via  oral  alterno  con  anterior cada  4  horas,  si  dolor  intenso
 - OMEPRAZOL 20 mg/ 24  horas.
 - Revisión  en  CC EE de COT (${DOCTOR}) en  2 semanas para Rx, cura herida qca y  seguimiento.
+
+CURAS LOCALES
+- Curas planas cada 48-72 horas.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias. Mover activamente los dedos de la extremidad operada.
@@ -914,6 +929,9 @@ CUIDADOS POSTOPERATORIOS
 - Retirada de puntos por ATS DE ZONA en 12/15 días.
 - Revisión en CC EE  de  COT (${DOCTOR})  en  3 semanas  para ver evolución.
 
+CURAS LOCALES
+- Curas planas cada 48-72 horas.
+
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
 ```
@@ -957,6 +975,9 @@ CUIDADOS POSTOPERATORIOS
 - Retirada de puntos por ATS DE ZONA en 12/15 días.
 - Revisión en CC EE  de  COT (${DOCTOR})  en  3/4 semanas  para ver evolución.
 
+CURAS LOCALES
+- Curas planas cada 48-72 horas.
+
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
 ```
@@ -999,6 +1020,9 @@ CUIDADOS POSTOPERATORIOS
 - ENOXAPARINA  40 mg/24 horas - vía subcutánea
 - Retirada de puntos por ATS DE ZONA en 12/15 días.
 - Revisión en CC EE  de  COT (${DOCTOR})  en  3 semanas  para ver evolución(Forzar si  es preciso!!!)
+
+CURAS LOCALES
+- Curas planas cada 48-72 horas.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
@@ -1062,6 +1086,9 @@ CUIDADOS POSTOPERATORIOS
 - Revisión en CC EE de COT (${DOCTOR}) en  2/3 semanas para retirar férula y seguimiento.
 - Al  alta  solicitar cita en  SERVICIO  DE  REHABILITACIÓN  para inicio  de fisioterapia tras retirada de   férula  de yeso
 
+CURAS LOCALES
+- Curas planas cada 48-72 horas.
+
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias. Mover activamente los dedos de la extremidad operada.
 ```
@@ -1117,6 +1144,9 @@ Movilidad  progresiva   a  razón  de  :
 - BEMIPARINA  3500 UI / 24 horas vía subcutánea / 3 semanas.
 - Revisión en CC EE de COT (${DOCTOR}) en  2/3 semanas para seguimiento.
 - Al  alta  solicitar cita en  SERVICIO  DE  REHABILITACIÓN  para inicio  de fisioterapia tras retirada de   férula  de yeso
+
+CURAS LOCALES
+- Curas planas cada 48-72 horas.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias. Mover activamente los dedos de la extremidad operada.
@@ -1355,6 +1385,9 @@ ANALGESIA BASAL:
 - Mientras dure el tratamiento con AINE: Omeprazol 20 mg/24h oral
 - -ANALGESIA DE RESCATE: Metamizol 575 mg/8h oral.
 
+CURAS LOCALES
+- Curas planas cada 48-72 horas.
+
 REVISIÓN
 - Antes de irse de alta  del  hospital  solicitar  en  Admisión  de  Consultas  revisión en CC EE  de  COT (${DOCTOR})  en   unas  3/4 semanas  para ver evolución.
 
@@ -1433,6 +1466,9 @@ ANALGESIA BASAL:
 - Si náuseas: Ondansetrón 4 mg/8h oral
 - -ANALGESIA DE RESCATE: Metamizol 575 mg/8h oral.
 
+CURAS LOCALES
+- Curas planas cada 48-72 horas.
+
 REVISIÓN
 - Revisión en CCEE de COT (${DOCTOR}) a  las  2 semanas  para ver evolución y ampliar  rango  de movilidad.
 
@@ -1473,6 +1509,9 @@ CUIDADOS POSTOPERATORIOS
 - ENANPLUS 1   comp/ 8  h
 - PARACETAMOL 1 gr cada 8 horas
 - INHIXA 40 / 24 horas vía subcutánea durante  10  días
+
+CURAS LOCALES
+- Curas planas cada 48-72 horas.
 
 REVISIÓN
 - Revisión en CCEE de COT (${DOCTOR}) en 3/4 semanas  para seguir  evolución.
@@ -1518,6 +1557,9 @@ CUIDADOS POSTOPERATORIOS
 - Retirada de puntos por ATS DE ZONA en 12/15 días.
 - Revisión en CC EE  de  COT (${DOCTOR})  en unas  4-5   semanas  para ver evolución.
 
+CURAS LOCALES
+- Curas planas cada 48-72 horas.
+
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
 ```
@@ -1557,6 +1599,9 @@ CUIDADOS POSTOPERATORIOS
 - BEMIPARINA 3500 UI /24 horas vía subcutánea durante 10 días.
 - Retirada de puntos por ATS DE ZONA en 12/15 días.
 - Revisión en CC EE de COT (${DOCTOR}) en unas 4-5 semanas para ver evolución.
+
+CURAS LOCALES
+- Curas planas cada 48-72 horas.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
@@ -1599,6 +1644,9 @@ CUIDADOS POSTOPERATORIOS
 - Retirada de puntos por ATS DE ZONA en 12/15 días.
 - Revisión en CC EE  de  COT (${DOCTOR})  en  3 semanas  para ver evolución.
 
+CURAS LOCALES
+- Curas planas cada 48-72 horas.
+
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
 ```
@@ -1637,6 +1685,9 @@ CUIDADOS POSTOPERATORIOS
 - ENANPLUS  75 mg/25 mg  / 8 horas vía oral durante  una semana.
 - PARACETAMOL 1 gr cada 8 horas
 - ENOXAPARINA 40 mg /24 horas vía subcutánea  durante 10 días.
+
+CURAS LOCALES
+- Curas planas cada 48-72 horas.
 
 REVISIÓN
 - Antes de irse de alta  del  hospital  solicitar  en  Admisión  de  Consultas  revisión en CC EE  de  COT (${DOCTOR})  en   unas  3/4 semanas  para ver evolución.
@@ -1681,6 +1732,9 @@ CUIDADOS POSTOPERATORIOS
 - Alternar cada 4  horas con METAMIZOL 575 mg/8  horas si  dolor intenso
 - PARACETAMOL 1 gr cada 8 horas
 - ENOXAPARINA  40 mg  / 24 horas vía subcutánea.
+
+CURAS LOCALES
+- Curas planas cada 48-72 horas.
 
 REVISIÓN
 - Revisión en CCEE de COT (${DOCTOR}) en 3 semanas  para seguir  evolución.
@@ -1866,6 +1920,9 @@ MEDICACIÓN (según tarjeta sanitaria)
 - OMEPRAZOL 20 mg/ 24  horas.
 - ENOXAPARINA 40 mg  / 24 horas vía oral / 4 semanas
 
+CURAS LOCALES
+- Curas planas cada 48-72 horas.
+
 REVISIÓN
 - Solicitar revisión en Admisión del  Hospital  para  CCEE Revisión Hospitalaria de COT (${DOCTOR}) en 4 semanas.
 
@@ -1916,6 +1973,9 @@ CUIDADOS POSTOPERATORIOS
 - Revisión  en  CC EE de COT (${DOCTOR} ) en 4 semanas  para valoración y  seguimiento.
 - Solicitar cita en  CCEE  del  Servicio  de  Rehabilitación  para inicio fisioterapia
 
+CURAS LOCALES
+- Curas planas cada 48-72 horas.
+
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias. Mover activamente los dedos de la extremidad operada.
 ```
@@ -1962,6 +2022,9 @@ MEDICACIÓN (según tarjeta sanitaria)
 - ENANPLUS  75 mg/25 mg  / 8 horas vía oral.
 - PARACETAMOL 1 gr cada 8 horas
 - INHIXA 40 mg /24 horas vía subcutánea  durante 3 semanas.
+
+CURAS LOCALES
+- Curas planas cada 48-72 horas.
 
 REVISIÓN
 
@@ -2017,6 +2080,9 @@ MEDICACIÓN (según tarjeta sanitaria)
 - ENANPLUS  75 mg/25 mg  / 8 horas vía oral.
 - PARACETAMOL 1 gr cada 8 horas
 - INHIXA 40 mg /24 horas vía subcutánea  durante 3 semanas.
+
+CURAS LOCALES
+- Curas planas cada 48-72 horas.
 
 REVISIÓN
 
@@ -2084,6 +2150,9 @@ Semana 8ª:
 - PARACETAMOL 1 gr cada 8 horas
 - ENOXAPARINA 40 mg /24 horas vía subcutánea  durante 3 semanas.
 
+CURAS LOCALES
+- Curas planas cada 48-72 horas.
+
 REVISIÓN
 
 Antes de irse de alta  del  hospital:
@@ -2136,6 +2205,9 @@ CUIDADOS POSTOPERATORIOS
 - ENANPLUS  75 mg/25 mg  / 8 horas vía oral.
 - PARACETAMOL 1 gr cada 8 horas
 - ENOXAPARINA 40 mg /24 horas vía subcutánea  durante 3 semanas.
+
+CURAS LOCALES
+- Curas planas cada 48-72 horas.
 
 REVISIÓN
 
@@ -2190,6 +2262,9 @@ CUIDADOS POSTOPERATORIOS
 - ENANPLUS  75 mg/25 mg  / 8 horas vía oral.
 - PARACETAMOL 1 gr cada 8 horas
 - ENOXAPARINA 40 mg /24 horas vía subcutánea  durante 3 semanas.
+
+CURAS LOCALES
+- Curas planas cada 48-72 horas.
 
 REVISIÓN
 
@@ -2246,6 +2321,9 @@ CUIDADOS POSTOPERATORIOS
 - PARACETAMOL 1 gr cada 8 horas
 - ENOXAPARINA 40 mg /24 horas vía subcutánea  durante 3 semanas.
 
+CURAS LOCALES
+- Curas planas cada 48-72 horas.
+
 REVISIÓN
 
 Antes de irse de alta  del  hospital:
@@ -2297,6 +2375,9 @@ CUIDADOS POSTOPERATORIOS
 - PARACETAMOL 1 gr cada 8 horas
 - BEMIPARINA 3500 UI/24 horas vía subcutánea.
 
+CURAS LOCALES
+- Curas planas cada 48-72 horas.
+
 REVISIÓN
 - Revisión en CCEE de COT (TRAP) a  las  2 semanas,  6  semanas  y  4  meses  desde la cirugía   para seguimiento.
 - Solicitar  cita en Servicio  de  Rehabilitación de su  área de referencia para inicio de fisioterapia.
@@ -2344,6 +2425,9 @@ CUIDADOS POSTOPERATORIOS
 - METAMIZOL  575 mg/ 8  horas  (alterno  con  anterior  cada  4   horas),  si dolor intenso.
 - PARACETAMOL 1 gr cada 8 horas
 - BEMIPARINA 3500 UI/24 horas vía subcutánea.
+
+CURAS LOCALES
+- Curas planas cada 48-72 horas.
 
 REVISIÓN
 - Revisión en CCEE de COT (TRAP) a  las  2 semanas,  6  semanas  y  4  meses  desde la cirugía   para seguimiento.
@@ -2393,6 +2477,9 @@ CUIDADOS POSTOPERATORIOS
 - IBUPROFENO 600 mg / 8 horas vía oral.
 - METAMIZOL  575 mg/ 8  horas  (alterno  con  anterior  cada  4   horas),  si dolor intenso.
 - BEMIPARINA 3500 UI/24 horas vía subcutánea.
+
+CURAS LOCALES
+- Curas planas cada 48-72 horas.
 
 REVISIÓN
 - Revisión en CCEE de COT (${DOCTOR}) en  2/3 semanas  para ver evolución y retirar puntos.
@@ -2456,6 +2543,9 @@ Semana 8ª:
 - ENANPLUS  75 mg/25 mg  / 8 horas vía oral.
 - PARACETAMOL 1 gr cada 8 horas
 - ENOXAPARINA 40 mg /24 horas vía subcutánea  durante 3 semanas.
+
+CURAS LOCALES
+- Curas planas cada 48-72 horas.
 
 REVISIÓN
 
@@ -2567,6 +2657,9 @@ CUIDADOS POSTOPERATORIOS
 - PARACETAMOL 1 gr cada 8 horas
 - ENOXAPARINA 40 mg /24 horas vía subcutánea  durante 3 semanas.
 
+CURAS LOCALES
+- Curas planas cada 48-72 horas.
+
 REVISIÓN
 
 Antes de irse de alta  del  hospital:
@@ -2614,6 +2707,9 @@ CUIDADOS POSTOPERATORIOS
 - Omeprazol 20 mg / 24 horas
 - Bemiparina 3500 UI / 24 horas vía subcutánea / 6 semanas
 - Hierro proteinsuccinilato 40 mg sol oral en ayunas cada día durante un mes
+
+CURAS LOCALES
+- Curas planas cada 48-72 horas.
 
 REVISIÓN
 - Solicitar cita para revisión en 3 semanas para ${DOCTOR}
@@ -2666,6 +2762,9 @@ CUIDADOS POSTOPERATORIOS
 - Omeprazol 20 mg / 24 horas
 - Bemiparina 3500 UI / 24 horas vía subcutánea / 6 semanas
 - Hierro proteinsuccinilato 40 mg sol oral en ayunas cada día durante un mes
+
+CURAS LOCALES
+- Curas planas cada 48-72 horas.
 
 REVISIÓN
 - Solicitar cita para revisión en 3 semanas para ${DOCTOR}
@@ -2720,6 +2819,9 @@ CUIDADOS POSTOPERATORIOS
 - Bemiparina 3500 UI 1 jeringa / 24 horas vía subcutánea / 6 semanas
 - Solicitar cita con RHB al alta
 
+CURAS LOCALES
+- Curas planas cada 48-72 horas.
+
 REVISIÓN
 - Revisión en CCEE de COT (${DOCTOR}) en 3 semanas para ampliar arco movilidad y seguimiento
 
@@ -2773,6 +2875,9 @@ CUIDADOS POSTOPERATORIOS
 - PARACETAMOL 1 gr cada 8 horas
 - Enoxaparina Rovi 40 mg / 24 horas vía subcutánea durante 4 semanas
 - Retirada de puntos por ATS DE ZONA en 12-15 días
+
+CURAS LOCALES
+- Curas planas cada 48-72 horas.
 
 REVISIÓN
 - Revisión en CCEE de COT (${DOCTOR}) en 3 semanas para ver evolución
@@ -2839,6 +2944,9 @@ INICIO ACTIVIDAD DEPORTIVA:
   * Bicicleta: 2º mes
   * Natación: 3º mes
   * Retorno actividad deportiva: 6º mes
+
+CURAS LOCALES
+- Curas planas cada 48-72 horas.
 ```
 
 <a id="región-cadera"></a>
@@ -2886,6 +2994,9 @@ MEDICACIÓN (según tarjeta sanitaria)
 - PARACETAMOL 1 gr/  8  horas, alterno  con anterior cada   4   horas si  dolor  intenso.
 - OMEPRAZOL 20 mg/ 24  horas.
 - ENOXAPARINA 40 mg  / 24 horas vía oral / 4 semanas
+
+CURAS LOCALES
+- Curas planas cada 48-72 horas.
 
 REVISIÓN
 - Solicitar revisión en Admisión del  Hospital  para  CCEE Revisión Hospitalaria de COT (${DOCTOR}) en 4 semanas.
@@ -2981,6 +3092,9 @@ CUIDADOS POSTOPERATORIOS
 - ENOXAPARINA 40 mg 1 jeringa / 24 horas vía subcutánea / 3 semanas.
 - Retirada de puntos por su enfermero/a de referencia en el centro de salud en 7-10 días.
 
+CURAS LOCALES
+- Curas planas cada 48-72 horas.
+
 REVISIÓN
 - Solicitar cita para revisión en 3 semanas para ${DOCTOR}  y  en  Servicio de  REHABILITACIÓN
 
@@ -3073,6 +3187,9 @@ CUIDADOS POSTOPERATORIOS
 - Analgesia habitual si precisa.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
 - Retirar apósito pasadas las 6-8 horas de la intervención.
+
+CURAS LOCALES
+- Curas planas cada 48-72 horas.
 
 REVISIÓN
 - Solicitar cita para revisión en 3-4 semanas para ${DOCTOR}
@@ -3491,6 +3608,9 @@ CUIDADOS POSTOPERATORIOS
 - NO CURAR HASTA REVISIÓN EN SALA DE CURAS TRAUMATOLOGÍA EN 12-14 DÍAS SALVO INCIDENCIA CLÍNICA, debiendo recolocar férula (PEDIR CITA PARA SALA DE CURAS TRAUMATOLOGÍA)
 - Pedir cita con Servicio de RHB antes de marcharse de alta
 
+CURAS LOCALES
+- Curas planas cada 48-72 horas.
+
 REVISIÓN
 - Solicitar cita para revisión en 3 semanas para ${DOCTOR}
 
@@ -3528,6 +3648,9 @@ CUIDADOS POSTOPERATORIOS
 - Curar pequeña herida de la pierna c/72h y retirar puntos en 10 días
 - Requiere ayuda y reposo domiciliario
 - Pedir cita con Servicio de RHB antes de marcharse de alta
+
+CURAS LOCALES
+- Curas planas cada 48-72 horas.
 
 REVISIÓN
 - Solicitar cita para revisión en 3 semanas para ${DOCTOR}
@@ -3637,6 +3760,9 @@ CUIDADOS POSTOPERATORIOS
 - Realizar masajes sobre cicatriz una vez retirados los puntos.
 - Retirada de puntos por su enfermero/a de referencia en el centro de salud en 12-15 días. Curas locales en su Centro de Salud cada 48h.
 
+CURAS LOCALES
+- Curas planas cada 48-72 horas.
+
 REVISIÓN
 - Solicitar cita para revisión en 4 semanas para ${DOCTOR}
 
@@ -3702,6 +3828,9 @@ Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o
 ```
 CUIDADOS POSTOPERATORIOS
 - Puede requerir ayuda domiciliaria
+
+CURAS LOCALES
+- Curas planas cada 48-72 horas.
 ```
 
 ##### `ms_seccion_tendon` — Sección tendón flexor mano
@@ -3734,6 +3863,9 @@ CUIDADOS POSTOPERATORIOS
 - METAMIZOL 575mg/ 8 horas vía oral
 - PARACETAMOL 1 g/vo/8h
 - Acudir a SALA DE CURAS DE  COT (GABINETE 7) para ver estado de herida y citar en función de la misma.
+
+CURAS LOCALES
+- Curas planas cada 48-72 horas.
 
 REVISIÓN
 - Solicitar cita para revisión en 3 semanas para ${DOCTOR}
@@ -3881,6 +4013,9 @@ CUIDADOS POSTOPERATORIOS
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
 - Retirar apósito pasadas las 6-8 horas de la intervención.
 
+CURAS LOCALES
+- Curas planas cada 48-72 horas.
+
 REVISIÓN
 - Solicitar cita para revisión en 3-4 semanas para ${DOCTOR}
 
@@ -3971,6 +4106,9 @@ CUIDADOS POSTOPERATORIOS
 - Una vez retirados los puntos, deberá masajear la zona de la cicatriz en círculos de forma enérgica, para evitar adherencias de la misma
 - Debe evitar fumar hasta que la herida esté cicatrizada, no obstante, aconsejamos el abandono definitivo del tabaco si es usted fumador
 
+CURAS LOCALES
+- Curas planas cada 48-72 horas.
+
 REVISIÓN
 - Solicitar cita para revisión con ${DOCTOR} en 4 semanas
 
@@ -4013,6 +4151,9 @@ CUIDADOS POSTOPERATORIOS
 - Precisa cuidados domiciliarios
 - Cita en sala de curas de COT (Gabinete 7) en unos 3-5 días para valorar herida
 - Debe evitar fumar hasta que la herida esté cicatrizada, no obstante, aconsejamos el abandono definitivo del tabaco si es usted fumador
+
+CURAS LOCALES
+- Curas planas cada 48-72 horas.
 
 REVISIÓN
 - Solicitar cita para revisión con ${DOCTOR} en 4 semanas
@@ -4059,6 +4200,9 @@ CUIDADOS POSTOPERATORIOS
 - Cita en sala de curas de COT (Gabinete 7) en unos 3-5 días para valorar herida
 - Debe evitar fumar hasta que la herida esté cicatrizada, no obstante, aconsejamos el abandono definitivo del tabaco si es usted fumador
 
+CURAS LOCALES
+- Curas planas cada 48-72 horas.
+
 REVISIÓN
 - Solicitar cita para revisión con ${DOCTOR} en 4 semanas
 
@@ -4104,6 +4248,9 @@ CUIDADOS POSTOPERATORIOS
 - Cita en sala de curas de COT (Gabinete 7) en unos 3-5 días para valorar herida
 - Debe evitar fumar hasta que la herida esté cicatrizada, no obstante, aconsejamos el abandono definitivo del tabaco si es usted fumador
 
+CURAS LOCALES
+- Curas planas cada 48-72 horas.
+
 REVISIÓN
 - Solicitar cita para revisión con ${DOCTOR} en 4 semanas
 
@@ -4148,6 +4295,9 @@ CUIDADOS POSTOPERATORIOS
 - Precisa cuidados domiciliarios
 - Cita en sala de curas de COT (Gabinete 7) en unos 3-5 días para valorar herida
 - Debe evitar fumar hasta que la herida esté cicatrizada, no obstante, aconsejamos el abandono definitivo del tabaco si es usted fumador
+
+CURAS LOCALES
+- Curas planas cada 48-72 horas.
 
 REVISIÓN
 - Solicitar cita para revisión con ${DOCTOR} en 4 semanas
