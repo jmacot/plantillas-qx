@@ -3,7 +3,7 @@
 > Catálogo de todas las plantillas del proyecto `plantillas-qx`,
 > organizadas por región/categoría (quirófano) y módulo de urgencias.
 
-> **Total: 86 plantillas quirúrgicas + 7 plantillas de urgencias = 93 plantillas** en 14 categorías quirúrgicas, 5 regiones anatómicas y 1 módulo de urgencias.
+> **Total: 87 plantillas quirúrgicas + 7 plantillas de urgencias = 94 plantillas** en 14 categorías quirúrgicas, 5 regiones anatómicas y 1 módulo de urgencias.
 
 > **Variables dinámicas (quirófano):** `${FECHA}` (fecha DD/MM/YY), `${DOCTOR}` (cirujano), `${AYUDANTE}` (ayudante). **Lateralidad:** `${LADO_M}` (derecho/izquierdo), `${LADO_F}` (derecha/izquierda), `${LADO_M_UPPER}` (DERECHO/IZQUIERDO), `${LADO_F_UPPER}` (DERECHA/IZQUIERDA), `${LADO_ABR_F}` (DERECHA/IZQUIERDA), `${LADO_ABR_M}` (DERECHO/IZQUIERDO), `${DECUBITO}` (decúbito lateral contrario, minúscula), `${DECUBITO_UPPER}` (DECÚBITO LATERAL contrario, mayúscula).
 
@@ -21,7 +21,7 @@
   - [LCA (12)](#categoría-lca)
   - [Osteotomías y Cartílago (5)](#categoría-rodilla_osteo)
 - [Cadera](#región-cadera)
-  - [Prótesis Cadera (2)](#categoría-ptc)
+  - [Prótesis Cadera (3)](#categoría-ptc)
   - [Artroscopia Cadera (1)](#categoría-cac)
   - [Infiltración Cadera (1)](#categoría-ifc)
 - [Miembro Superior](#región-ms)
@@ -2955,7 +2955,7 @@ CURAS LOCALES
 
 <a id="categoría-ptc"></a>
 
-#### Prótesis Cadera (2 plantillas)
+#### Prótesis Cadera (3 plantillas)
 
 ##### `ptc_summit` — PTC Summit (DePuy)
 
@@ -2981,8 +2981,8 @@ IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 ```
 CUIDADOS POSTOPERATORIOS
-- Mantener el pie elevado siempre que esté sentado con  movimientos de  flexoextensión  de  la rodilla.
-- Aplicar hielo sobre la rodilla operada 2-3 veces al día durante 20 minutos.
+- Mantener el pie elevado siempre que esté sentado.
+- Aplicar hielo sobre la cadera operada 2-3 veces al día durante 20 minutos.
 - Mover activamente los dedos de la extremidad operada.
 - Realizar los ejercicios que su médico le ha explicado.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
@@ -3044,6 +3044,56 @@ Curas y retirada de puntos de sutura/agrafes según informe de Enfermería.
 
 REVISIÓN
 - Antes de irse de alta, el paciente deberá solicitar revisión en Admisión del Hospital para CCEE Revisión Hospitalaria de COT (${DOCTOR}) en 4 semanas.
+
+SÍNTOMAS DE ALERTA
+- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
+```
+
+##### `ptc_stryker` — PTC Stryker (Trident + Accolade)
+
+**Nota Operatoria:**
+
+```
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+
+Artroplastia total de cadera ${LADO_F} (Stryker: Trident + Accolade)
+- Coxartrosis cadera ${LADO_F}.
+- Decúbito lateral ${DECUBITO}. Anestesia raquimedular y sedación.
+- Profilaxis ATB IV con cefazolina 2 g. Ác. tranexámico IV 1 g.
+- Abordaje de Hardinge sobre cadera ${LADO_F}. Capsulectomía anterior.
+- Artroplastia total de cadera con par polietileno-cerámica:
+- Cotilo Trident de __ mm, estabilidad primaria con técnica line-to-line.
+- Inserto de polietileno neutro.
+- Vástago femoral Accolade nº 7, offset STD.
+- Cabeza de cerámica de 32 mm, cuello +0.
+- Lavado con abundante SSF. Infiltración con ác. tranexámico.
+- Cierre por planos. Agrafes en piel.
+- Apósito compresivo estéril.
+- La intervención cursa sin incidencias. Simetría de MMII en decúbito supino.
+```
+
+**Tratamiento al Alta:**
+
+```
+CUIDADOS POSTOPERATORIOS
+- Mantener el pie elevado siempre que esté sentado.
+- Mover activamente los dedos de la extremidad operada.
+- Realizar los ejercicios que su médico le ha explicado.
+- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
+- Puede caminar con ayuda de un andador o dos muletas.
+- Puede requerir ayuda domiciliaria.
+
+MEDICACIÓN
+- METAMIZOL 575 mg / 8 horas vía oral.
+- PARACETAMOL 1 g / 8 horas, alterno con anterior cada 4 horas si dolor intenso.
+- OMEPRAZOL 20 mg / 24 horas.
+- ENOXAPARINA 40 mg / 24 horas vía subcutánea / 4 semanas.
+
+CURAS LOCALES
+- Curas planas cada 48-72 horas.
+
+REVISIÓN
+- Solicitar revisión en Admisión del Hospital para CCEE Revisión Hospitalaria de COT (${DOCTOR}) en 4 semanas.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
