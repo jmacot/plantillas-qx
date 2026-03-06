@@ -1762,6 +1762,7 @@ IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 - Componente femoral CR no cementado nº 4.
 - Componente tibial cementado nº 4.
 - Inserto tibial CR 9mm.
+- Patela:
 - Se comprueba adecuado balance mediolateral en flexión y extensión, y adecuado tracking rotuliano.
 - Cierre por planos.
 - Piel con grapas.
@@ -1772,7 +1773,7 @@ IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 ```
 CUIDADOS POSTOPERATORIOS
-- Aplicar hielo sobre la rodilla 3-4 veces al día durante  10-15 minutos.
+- Aplicar hielo sobre la rodilla 3-4 veces al día durante 10-15 minutos.
 - Mover activamente los dedos de la extremidad operada.
 - Puede requerir ayuda domiciliaria
 
@@ -1802,70 +1803,86 @@ CURAS LOCALES
 
 REVISIÓN
 - Con este informe solicitará cita en consultas del ${DOCTOR} en 4 semanas. La primera revisión se realizará sin Rx control salvo petición por su Doctor.
+```
 
+**Tratamiento al Alta — Ejercicios (opcional, toggle en UI):**
+
+```
 EJERCICIOS POSTOPERATORIOS
-- Encamado (primeros días tras intervención)
-- Mover el tobillo
-- Objetivo: Facilitar el retorno venoso y reducir la inflamación.
-- Cómo hacerlo: Acostado(a) en la cama, mueva ambos tobillos hacia arriba y hacia abajo repetidamente.
-- Frecuencia: Realice el mayor número de veces posible durante el día.
-- Contracción del cuádriceps
-- Objetivo: Fortalecer el músculo del muslo y mejorar la extensión de la rodilla.
-- Cómo hacerlo: Coloque una toalla enrollada debajo de la rodilla. Contraiga el cuádriceps (músculo del muslo) intentando "aplastar" la toalla contra la cama.
-- Duración: Mantenga la contracción durante 5 segundos.
-- Repeticiones: Hágalo de 10 a 20 veces, 2-3 veces al día.
-- Elevación de pierna recta
-- Objetivo: Fortalecer los músculos de la pierna operada.
-- Cómo hacerlo: Con la pierna sana doblada, mantenga la pierna operada recta, elévela unos 20-30 cm de la cama, mantenga por 5 segundos y bájela lentamente.
-- Repeticiones: Realice de 100 a 300 elevaciones a lo largo del día.
-- Flexión de rodilla en cama
-- Objetivo: Mejorar el rango de movimiento de la rodilla.
-- Cómo hacerlo: Deslice el talón de la pierna operada hacia los glúteos doblando la rodilla. Mantenga la flexión máxima por 5 segundos y luego vuelva a estirar la pierna.
-- Repeticiones: Realice de 10 a 15 veces, 2-3 veces al día.
-- Ejercicios Sentado(a) en Silla
-- Flexión de rodilla
-- Objetivo: Mejorar la flexión de la rodilla.
-- Cómo hacerlo: Sentado(a) en el borde de una silla, con el pie en el suelo, flexione la rodilla operada lo máximo posible. Ayúdese con la pierna sana para aumentar la flexión. Mantenga la posición durante 5-10 segundos y luego estire la pierna.
-- Repeticiones: Hágalo de 10 a 15 veces, 2-3 veces al día.
-- Extensión de rodilla
-- Objetivo: Mejorar la extensión completa de la rodilla.
-- Cómo hacerlo: Sentado(a) en el borde de la silla, estire la pierna operada lo máximo posible. Ayúdese con la pierna sana para lograr una extensión máxima. Mantenga la posición durante 5-10 segundos y luego vuelva a la posición inicial.
-- Repeticiones: Realice de 10 a 15 veces, 2-3 veces al día.
-- Extensión pasiva de rodilla
-- Objetivo: Mejorar la movilidad y reducir la rigidez.
-- Cómo hacerlo: Coloque una silla frente a usted y extienda la pierna operada sobre ella, dejando que la rodilla se relaje y se extienda de forma pasiva durante 5-10 minutos.
-- Frecuencia: Hágalo después de los ejercicios de flexión-extensión.
-- Potenciación de aductores
-- Objetivo: Fortalecer los músculos aductores del muslo.
-- Cómo hacerlo: Coloque un cojín entre los muslos y presione hacia el centro con ambas piernas.
-- Duración: Mantenga la presión por 10 segundos.
-- Repeticiones: Realice 10 veces, 2-3 veces al día.
+
+Encamado (primeros días tras intervención)
+
+- Mover el tobillo:
+  Objetivo: Facilitar el retorno venoso y reducir la inflamación.
+  Cómo hacerlo: Acostado(a) en la cama, mueva ambos tobillos hacia arriba y hacia abajo repetidamente.
+  Frecuencia: Realice el mayor número de veces posible durante el día.
+
+- Contracción del cuádriceps:
+  Objetivo: Fortalecer el músculo del muslo y mejorar la extensión de la rodilla.
+  Cómo hacerlo: Coloque una toalla enrollada debajo de la rodilla. Contraiga el cuádriceps (músculo del muslo) intentando "aplastar" la toalla contra la cama.
+  Duración: Mantenga la contracción durante 5 segundos.
+  Repeticiones: Hágalo de 10 a 20 veces, 2-3 veces al día.
+
+- Elevación de pierna recta:
+  Objetivo: Fortalecer los músculos de la pierna operada.
+  Cómo hacerlo: Con la pierna sana doblada, mantenga la pierna operada recta, elévela unos 20-30 cm de la cama, mantenga por 5 segundos y bájela lentamente.
+  Repeticiones: Realice de 100 a 300 elevaciones a lo largo del día.
+
+- Flexión de rodilla en cama:
+  Objetivo: Mejorar el rango de movimiento de la rodilla.
+  Cómo hacerlo: Deslice el talón de la pierna operada hacia los glúteos doblando la rodilla. Mantenga la flexión máxima por 5 segundos y luego vuelva a estirar la pierna.
+  Repeticiones: Realice de 10 a 15 veces, 2-3 veces al día.
+
+Ejercicios sentado(a) en silla
+
+- Flexión de rodilla:
+  Objetivo: Mejorar la flexión de la rodilla.
+  Cómo hacerlo: Sentado(a) en el borde de una silla, con el pie en el suelo, flexione la rodilla operada lo máximo posible. Ayúdese con la pierna sana para aumentar la flexión. Mantenga la posición durante 5-10 segundos y luego estire la pierna.
+  Repeticiones: Hágalo de 10 a 15 veces, 2-3 veces al día.
+
+- Extensión de rodilla:
+  Objetivo: Mejorar la extensión completa de la rodilla.
+  Cómo hacerlo: Sentado(a) en el borde de la silla, estire la pierna operada lo máximo posible. Ayúdese con la pierna sana para lograr una extensión máxima. Mantenga la posición durante 5-10 segundos y luego vuelva a la posición inicial.
+  Repeticiones: Realice de 10 a 15 veces, 2-3 veces al día.
+
+- Extensión pasiva de rodilla:
+  Objetivo: Mejorar la movilidad y reducir la rigidez.
+  Cómo hacerlo: Coloque una silla frente a usted y extienda la pierna operada sobre ella, dejando que la rodilla se relaje y se extienda de forma pasiva durante 5-10 minutos.
+  Frecuencia: Hágalo después de los ejercicios de flexión-extensión.
+
+- Potenciación de aductores:
+  Objetivo: Fortalecer los músculos aductores del muslo.
+  Cómo hacerlo: Coloque un cojín entre los muslos y presione hacia el centro con ambas piernas.
+  Duración: Mantenga la presión por 10 segundos.
+  Repeticiones: Realice 10 veces, 2-3 veces al día.
 
 CAMINAR CON MULETAS
 - Primer paso: Avance las muletas.
-- Segundo paso: Adelante la pierna operada (por ejemplo, la derecha) hasta el nivel de las muletas.
+- Segundo paso: Adelante la pierna operada hasta el nivel de las muletas.
 - Tercer paso: Avance la pierna sana.
-- Uso de una sola muleta
+
+Uso de una sola muleta
 - Cuando pase a usar una sola muleta, esta debe estar en el lado contrario a la pierna operada, avanzando a la vez que la pierna intervenida.
 
 CAMINAR CON ANDADOR
-- Objetivo: Proporcionar mayor estabilidad y soporte al caminar durante la fase de recuperación.
-- Cómo hacerlo:
-- Posicionamiento inicial: Coloque el andador frente a usted, con las cuatro patas del andador firmemente apoyadas en el suelo. Asegúrese de que el andador esté bien ajustado a su altura para evitar tensiones en los hombros y brazos.
-- Paso 1 - Mover el andador: Desplace el andador un paso hacia adelante, asegurándose de que permanezca siempre a una distancia cómoda y segura (aproximadamente un brazo de distancia).
-- Paso 2 - Mover la pierna operada: Avance la pierna operada (o la más débil) hacia el centro del andador, colocándola entre las patas delanteras del andador. De esta manera, se asegura de que la mayor parte del peso se distribuye hacia el andador y no hacia su pierna.
-- Paso 3 - Mover la pierna sana: Luego, avance la pierna sana hasta alcanzar la misma posición que la pierna operada, o más allá de esta si se siente seguro(a). Asegúrese de mantener un ritmo constante y equilibrado.
-- Repetir el ciclo: Repita este ciclo de movimientos mientras camina, manteniendo siempre el andador delante de usted y utilizando sus brazos para apoyarse si es necesario.
-- Consejos:
-- Evite inclinarse demasiado hacia adelante o hacia atrás al caminar. Mantenga una postura erguida para reducir el riesgo de caídas.
-- Avance el andador siempre antes de dar el paso con la pierna operada, para que sirva de soporte.
+- Coloque el andador frente a usted, con las cuatro patas firmemente apoyadas en el suelo. Ajústelo a su altura.
+- Paso 1: Desplace el andador un paso hacia adelante (aproximadamente un brazo de distancia).
+- Paso 2: Avance la pierna operada hacia el centro del andador, entre las patas delanteras.
+- Paso 3: Avance la pierna sana hasta alcanzar la posición de la pierna operada.
+- Repita el ciclo manteniendo el andador siempre delante de usted.
+
+Consejos
+- Mantenga una postura erguida para reducir el riesgo de caídas.
+- Avance el andador siempre antes de dar el paso con la pierna operada.
 - No se apresure. Camine a un ritmo que le permita sentirse seguro(a) y estable.
 
 SUBIR Y BAJAR ESCALERAS
-- Para subir escaleras:
+
+Para subir escaleras
 - Coloque la pierna sana en el escalón superior.
 - Apóyese en las muletas y la pierna sana para levantar la pierna operada.
-- Para bajar escaleras:
+
+Para bajar escaleras
 - Coloque las muletas en el escalón inferior.
 - Baje la pierna operada.
 - Luego, baje la pierna sana.
@@ -1892,6 +1909,7 @@ IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 - Artroplastia unicompartimental de rodilla modelo PKR de Stryker:
 - Componente femoral cementado nº 2.
 - Componente tibial cementado nº 2 e inserto de 8 mm.
+- Patela:
 - Correcto balance mediolateral en flexión y extensión y adecuado tracking rotuliano.
 - Se retira isquemia, hemostasia de vasos sangrantes y lavado abundante con SF.
 - Cierre por planos.
@@ -1929,6 +1947,10 @@ REVISIÓN
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
 ```
+
+**Tratamiento al Alta — Ejercicios (opcional, toggle en UI):**
+
+> Mismo bloque de ejercicios compartido por todas las prótesis de rodilla. Ver contenido completo en PTR Triathlon arriba.
 
 ##### `rpuc` — Revisión PUC (RPUC)
 
@@ -1979,6 +2001,10 @@ CURAS LOCALES
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias. Mover activamente los dedos de la extremidad operada.
 ```
+
+**Tratamiento al Alta — Ejercicios (opcional, toggle en UI):**
+
+> Mismo bloque de ejercicios compartido por todas las prótesis de rodilla. Ver contenido completo en PTR Triathlon arriba.
 
 <a id="categoría-lca"></a>
 
@@ -4632,6 +4658,84 @@ PLAN:
 - Se cursa ingreso en planta.
 ```
 
+##### `urg_fx_rotula` — Fx Rótula
+
+> Con tipo (conservador / quirúrgico).
+
+**Anamnesis:**
+
+```
+CONSULTA URGENCIAS COT
+${FECHA_HOY}
+${COT}
+
+Interconsulta desde puerta de urgencias para valoración y tratamiento de fractura de rótula ${LADO_F}.
+
+AP:
+- NAMC
+- AP: ___
+- Situación basal: IABVD. Autonomía para la deambulación.
+
+EA:
+${SEXO} de ${EDAD} años que acude a urgencias por dolor e impotencia funcional en rodilla ${LADO_F} tras traumatismo casual.
+```
+
+**Exploración:**
+
+```
+EF:
+- Tumefacción de rodilla ${LADO_F} moderada sin signos de sufrimiento de partes blandas.
+- Sin derrame articular a tensión. Sin hematoma prerrotuliano.
+- Dolor a la movilidad activa y pasiva de rodilla, así como a la palpación.
+- Incapacidad para la extensión activa de rodilla.
+- Incapacidad para mantenimiento isométrico de extensión.
+- Movilidad distal conservada sin signos de alteraciones NV.
+
+Rx:
+- Fractura de rótula ${LADO_F}.
+```
+
+**Plan (conservador):**
+
+```
+PLAN:
+- Inmovilización con férula inguinomaleolar posterior.
+- Rx de control ok.
+- Explico plan terapéutico.
+
+TRATAMIENTO:
+- Mantener el pie elevado siempre que esté sentado.
+- Mover activamente los dedos de la extremidad.
+- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
+- Deambulación por domicilio con férula en extensión.
+- Paracetamol 1g/8h alterno con Metamizol 575 mg/8h si dolor intenso.
+- Omeprazol 20 mg/24h.
+- Enoxaparina 40 mg/24h sc.
+- Puede requerir ayuda domiciliaria.
+- Revisión en CCEE de COT (RUCOT) en 2 semanas con Rx (acudir 30 minutos antes de cita para realización de radiografía).
+```
+
+**Plan (quirúrgico):**
+
+```
+PLAN:
+- Inmovilización con férula inguinomaleolar posterior.
+- Rx de control ok.
+- Cursamos analítica con perfil preoperatorio.
+- Entrego CI que entiende, acepta y firma.
+- Solicitará cita para consultas de Preanestesia en Admisión.
+- Su caso se presentará en Sesión Clínica de Traumatología. Contactaremos telefónicamente para comunicar decisión tomada.
+
+TRATAMIENTO:
+- Mantener el pie elevado siempre que esté sentado.
+- Mover activamente los dedos de la extremidad.
+- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
+- Paracetamol 1g/8h alterno con Metamizol 575 mg/8h si dolor intenso.
+- Omeprazol 20 mg/24h.
+- Enoxaparina 40 mg/24h sc.
+- Puede requerir ayuda domiciliaria.
+```
+
 ##### `urg_fx_vertebral` — Fx Vertebral
 
 > Sin lateralidad (no aplica selector de lado).
@@ -4643,43 +4747,82 @@ CONSULTA URGENCIAS COT
 ${FECHA_HOY}
 ${COT}
 
-${ACUDO} a paciente remitido desde puerta de urgencias para valoración y tratamiento de fractura vertebral ${PARTE}.
+${ACUDO} a paciente tras interconsulta de puerta de urgencias por fractura vertebral ${PARTE}.
+${SEXO} de ${EDAD} años que acude a urgencias por dolor en zona dorsolumbar de nueva aparición tras traumatismo en el día de hoy. No refiere pérdida de control de esfínteres. No refiere debilidad en MMII ni alteraciones en la sensibilidad.
 
 AP:
 - NAMC
 - AP: ___
-
-EA:
-${SEXO} de ${EDAD} años que acude a urgencias por dolor dorsolumbar de nueva aparición tras traumatismo.
 ```
 
 **Exploración:**
 
 ```
 EF:
-- Dolor a la palpación de línea media con irradiación paravertebral.
-- Balance muscular 5/5 en MMII bilateral.
-- Sensibilidad conservada. Reflejos normales.
-- Control de esfínteres conservado.
+- Se explora en decúbito supino y lateral para palpación.
+- Dolor a punta de dedo en línea media de zona dorsolumbar con irradiación a musculatura paravertebral.
+- MMII: fuerza conservada 5/5 sin alteraciones en la sensibilidad.
+- Sin clínica de afectación vascular.
 
 Rx / TAC:
-- Fractura vertebral ___.
+- Fractura vertebral ___ tipo ___.
 ```
 
 **Plan (conservador):**
 
 ```
-PLAN (conservadora):
-- Tratamiento conservador: reposo.
-- Explico plan terapéutico y signos de alarma.
+PLAN: manejo conservador.
 
 RECOMENDACIONES:
-- Reposo absoluto en cama 2 semanas (puede ir al baño y a comer con el corsé prescrito).
-- Pasadas las 2 semanas: cama-sillón con apoyo de corsé.
-- Enoxaparina 40 mg/24h sc hasta revisión.
-- Analgesia pautada si dolor.
-- SIGNOS DE ALARMA: pérdida de fuerza en extremidades, alteraciones de sensibilidad, pérdida de control de esfínteres → acudir a Urgencias.
-- Revisión en CCEE de COT en 1 mes con Rx control.
+- Reposo absoluto en cama durante 2 semanas. Puede levantarse solo para ir al baño e incorporarse para comer, pero siempre usando corsé recetado. El corsé no es necesario mientras esté tumbado en horizontal.
+- Tras dichas 2 semanas, podrá realizar vida cama-sillón usando el corsé siempre que no esté acostado.
+- Enoxaparina 40 mg/24h sc (1 inyección al día hasta revisión en consultas).
+- Analgesia habitual si dolor. Si no dispone: Paracetamol 1g/8h alternando con Metamizol 575 mg/8h.
+- SIGNOS DE ALARMA: pérdida de fuerza en miembros inferiores, alteraciones en la sensibilidad o pérdida de control de esfínteres → acudir a Urgencias.
+- Revisión en CCEE de COT (RUCOT) en 1 mes con Rx (acudir 30 minutos antes de la cita para realización de la radiografía).
+```
+
+##### `urg_herida_tendon` — Herida con tendón
+
+**Anamnesis:**
+
+```
+CONSULTA URGENCIAS COT
+${FECHA_HOY}
+${COT}
+
+${SEXO} de ${EDAD} años que acude a urgencias por herida inciso-contusa en ___ ${LADO_M}.
+```
+
+**Exploración:**
+
+```
+EF:
+- Extensión completa.
+- NV distal ok.
+
+Bajo condiciones de asepsia y anestesia local con mepivacaína 2% se procede a exploración tendinosa, apreciándose sección parcial/total de tendón extensor/flexor ___.
+- Sutura tipo marco Kessler con Monosyn 3.0.
+- Sutura piel con Prolene 3.0.
+
+Rx:
+- ___.
+```
+
+**Plan (conservador):**
+
+```
+PLAN:
+- Férula volar en extensión.
+- Curas de la herida cada 48-72h por enfermería de su centro de salud.
+- Retirada de puntos a criterio de atención primaria.
+
+MEDICACIÓN:
+- Paracetamol 1g/8h alterno con Metamizol 575 mg/8h si dolor intenso.
+- Omeprazol 20 mg/24h.
+- Amoxicilina/Clavulánico 875/125 mg cada 8 horas durante 10 días.
+
+- Revisión en CCEE de COT (RUCOT) en 3 semanas.
 ```
 
 ##### `urg_lux_hombro` — Luxación Hombro
