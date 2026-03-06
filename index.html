@@ -442,6 +442,8 @@
     .btn-copy.blue:hover { background: var(--accent); color: white; }
     .btn-copy.green { color: var(--green); }
     .btn-copy.green:hover { background: var(--green); color: white; }
+    .btn-copy.amber { color: var(--amber); border-color: var(--amber); }
+    .btn-copy.amber:hover { background: var(--amber); color: white; }
 
     /* ── PANELS ── */
     .panels-grid {
@@ -682,9 +684,11 @@
     .panel.panel-urg .panel-title { color: #e07a5f; }
     [data-theme="dark"] .panel.panel-urg .panel-header { background: rgba(232,151,127,0.06); }
     [data-theme="dark"] .panel.panel-urg .panel-title { color: #e8977f; }
-    .panel.panel-amber .panel-header { background: rgba(192,84,10,0.04); }
+    .panel.panel-amber { border-color: rgba(192,84,10,0.2); }
+    .panel.panel-amber .panel-header { background: rgba(192,84,10,0.04); border-bottom-color: rgba(192,84,10,0.15); }
     .panel.panel-amber .panel-title { color: var(--amber); }
-    [data-theme="dark"] .panel.panel-amber .panel-header { background: rgba(251,191,36,0.06); }
+    [data-theme="dark"] .panel.panel-amber { border-color: rgba(251,191,36,0.15); }
+    [data-theme="dark"] .panel.panel-amber .panel-header { background: rgba(251,191,36,0.06); border-bottom-color: rgba(251,191,36,0.12); }
     [data-theme="dark"] .panel.panel-amber .panel-title { color: #fbbf24; }
 
     /* ── URGENCIAS SEXO TOGGLE ── */
@@ -731,6 +735,13 @@
     [data-theme="dark"] .btn-copy.urg { color: #e8977f; border-color: #e8977f; }
     [data-theme="dark"] .btn-copy.urg:hover { background: #e8977f; color: #1f2937; }
 
+    #urgFerulaPanel {
+      margin-top: 14px;
+    }
+    #urgFerulaPanel textarea {
+      min-height: 250px;
+    }
+
     /* ── 3-COLUMN PANELS GRID ── */
     .panels-grid-3 {
       display: grid;
@@ -768,8 +779,9 @@
         justify-content: center;
       }
       #seccion-quirofano .form-row > div:last-child .btn-danger { width: 100%; }
-      #ejerciciosToggleWrap .toggle-check { width: fit-content; }
-      .panels-grid, .panels-grid-3 { grid-template-columns: 1fr; flex: none; }
+      #ejerciciosToggleWrap .toggle-check,
+      #seccion-quirofano .form-row .toggle-check { width: fit-content; }
+      .panels-grid, .panels-grid-3 { grid-template-columns: 1fr !important; flex: none; }
       .panel textarea { min-height: 200px; }
       .theme-toggle { width: 34px; height: 34px; font-size: 1rem; top: 8px; right: 8px; }
       .modulo-nav { gap: 4px; }
@@ -780,6 +792,7 @@
       #seccion-urgencias .form-group select { width: 100% !important; }
       .urg-sexo-toggle { min-width: 100%; }
       .urg-sexo-btn { padding: 8px 10px; font-size: 12px; }
+      #urgFerulaToggleWrap .toggle-check { width: fit-content; }
     }
   </style>
 </head>
@@ -854,6 +867,13 @@
             <span>Ejercicios</span>
           </label>
         </div>
+        <div class="form-group" style="flex:none;">
+          <label>Evolución</label>
+          <label class="toggle-check">
+            <input type="checkbox" id="incluirEvolucion" onchange="toggleEvolucion()">
+            <span>Evolución</span>
+          </label>
+        </div>
         <div>
           <button onclick="limpiar()" class="btn-danger">Limpiar</button>
         </div>
@@ -877,6 +897,24 @@
         </div>
         <textarea id="hojaOperatoria"
           placeholder="Seleccione una categoría y procedimiento para generar la hoja operatoria..."></textarea>
+      </div>
+      <!-- EVOLUCIÓN (oculto por defecto) -->
+      <div id="evolucionPanel" class="panel panel-amber" style="display:none;">
+        <div class="panel-header">
+          <span class="panel-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 6v6l4 2"/></svg>
+            Evolución
+          </span>
+          <div class="copy-wrap">
+            <button onclick="copiarTexto('evolucionTexto')" class="btn-copy amber">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              Copiar
+            </button>
+            <span class="copy-tooltip">✓ Copiado</span>
+          </div>
+        </div>
+        <textarea id="evolucionTexto"
+          placeholder="Active el toggle de Evolución para generar el texto..."></textarea>
       </div>
       <div class="panel panel-green">
         <div class="panel-header">
@@ -961,6 +999,13 @@
             <option value="Q">Quirúrgico</option>
           </select>
         </div>
+        <div class="form-group" id="urgFerulaToggleWrap" style="flex:none;">
+          <label>Extras</label>
+          <label class="toggle-check">
+            <input type="checkbox" id="incluirFerula" onchange="toggleFerula()">
+            <span>Férula/Yeso</span>
+          </label>
+        </div>
         <div>
           <button onclick="limpiarUrg()" class="btn-danger">Limpiar</button>
         </div>
@@ -1001,6 +1046,25 @@
         <textarea id="urgPlan"
           placeholder="Aquí aparecerá el plan de actuación..."></textarea>
       </div>
+    </div>
+
+    <!-- Panel Férula/Yeso (oculto por defecto) -->
+    <div id="urgFerulaPanel" class="panel panel-amber" style="display:none; animation: fadeInUp 0.4s ease-out both;">
+      <div class="panel-header">
+        <span class="panel-title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"/><path d="M16 2v4"/><rect x="4" y="4" width="16" height="18" rx="2"/><path d="M4 10h16"/><path d="M10 14h4"/></svg>
+          Cuidados Férula / Yeso
+        </span>
+        <div class="copy-wrap">
+          <button onclick="copiarTextoUrg('urgFerulaTexto')" class="btn-copy amber">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            Copiar
+          </button>
+          <span class="copy-tooltip">✓ Copiado</span>
+        </div>
+      </div>
+      <textarea id="urgFerulaTexto" readonly
+        placeholder="Instrucciones de cuidados de férula/yeso..."></textarea>
     </div>
 
     <div class="urg-copy-row">
@@ -1207,6 +1271,10 @@
     document.getElementById('tratamientoAlta').value = '';
     document.getElementById('incluirEjercicios').checked = false;
     document.getElementById('ejerciciosToggleWrap').style.display = 'none';
+    document.getElementById('incluirEvolucion').checked = false;
+    document.getElementById('evolucionPanel').style.display = 'none';
+    document.getElementById('evolucionTexto').value = '';
+    document.querySelector('#seccion-quirofano .panels-grid').style.gridTemplateColumns = '1fr 1fr';
     activeCat = null;
     activeRegion = null;
     document.querySelectorAll('#regionPills .cat-pill').forEach(p => p.classList.remove('active'));
@@ -1223,6 +1291,8 @@
     if (!text) return;
     const msg = id === 'tratamientoAlta'
       ? '✓  Tratamiento copiado al portapapeles'
+      : id === 'evolucionTexto'
+      ? '✓  Evolución copiada al portapapeles'
       : '✓  Hoja operatoria copiada al portapapeles';
     navigator.clipboard.writeText(text).then(() => {
       mostrarToast(msg, 'green');
@@ -1602,6 +1672,93 @@
     const ladoGroup = document.getElementById('urgLadoGroup');
     ladoGroup.style.opacity = '1';
     ladoGroup.style.pointerEvents = '';
+    // Restaurar férula toggle
+    document.getElementById('incluirFerula').checked = false;
+    document.getElementById('urgFerulaPanel').style.display = 'none';
+    document.getElementById('urgFerulaTexto').value = '';
+  }
+
+  // ─────────────────────────────────────────────
+  //  FÉRULA / YESO — TEXTO Y TOGGLE
+  // ─────────────────────────────────────────────
+  const CUIDADOS_FERULA = `CÓMO ACOSTUMBRARSE A UNA FÉRULA O A UN YESO
+- La hinchazón causada por su lesión puede generar presión sobre su férula o yeso durante las primeras 48 a 72 horas.
+- Esto puede causar la sensación de que la férula o el yeso están demasiado apretados o ajustados a la pierna o brazo.
+
+PARA REDUCIR LA HINCHAZÓN
+- Eleve el brazo o la pierna sobre la altura de su corazón y apóyelos sobre almohadas u otro elemento de soporte. Si la férula o el yeso se encuentran en la pierna, deberá reclinarse.
+- Mueva suavemente y con frecuencia los dedos de la mano o del pie.
+
+SIGNOS DE ALERTA TRAS LA APLICACIÓN DE UNA FÉRULA O YESO
+- Si observa alguno de los siguientes signos de alerta, acuda a su Médico de Cabecera o al Servicio de Urgencias:
+- Aumento del dolor, que puede ser causado por la hinchazón, y la sensación de que la férula o el yeso están demasiado ajustados.
+- Entumecimiento y hormigueo en la mano o en el pie, que pueden ser causados por demasiada presión sobre los nervios.
+- Ardor y escozor, que pueden ser causados por demasiada presión sobre la piel.
+- Excesiva hinchazón por debajo del yeso, que puede indicar que el yeso está reduciendo la circulación sanguínea.
+- Pérdida del movimiento activo de los dedos de la mano o del pie.
+- Fiebre o drenaje y mal olor proveniente del yeso.
+
+CÓMO CUIDAR SU FÉRULA Y YESO
+- Mantenga la férula o el yeso secos. La humedad debilita el yeso y puede causar irritación de la piel. Coloque bolsas de plástico o protectores impermeables mientras se ducha o se baña.
+- No camine con la "bota de yeso" hasta que esté completamente seca y dura. No camine con el yeso sin tacón de apoyo. El yeso necesita 48-72 horas para endurecerse lo suficiente como para poder caminar.
+- Mantenga el interior de la férula o del yeso libre de suciedad, arena y polvo.
+- No retire el algodón de la férula o yeso.
+- No utilice objetos como ganchos de ropa para rascarse la piel dentro de la férula o yeso. No aplique talco ni desodorante sobre la piel con escozor. Si la picazón persiste, comuníquese con su médico.
+- No arranque ni recorte los bordes ásperos del yeso antes de consultar a su médico.`;
+
+  function toggleFerula() {
+    const checked = document.getElementById('incluirFerula').checked;
+    const panel = document.getElementById('urgFerulaPanel');
+    const ta = document.getElementById('urgFerulaTexto');
+    if (checked) {
+      panel.style.display = '';
+      ta.value = CUIDADOS_FERULA;
+      ta.style.height = 'auto';
+      ta.style.height = ta.scrollHeight + 'px';
+      ta.classList.remove('flash');
+      void ta.offsetWidth;
+      ta.classList.add('flash');
+    } else {
+      panel.style.display = 'none';
+      ta.value = '';
+    }
+  }
+
+  function copiarTextoUrg(id) {
+    const text = document.getElementById(id).value;
+    if (!text) return;
+    navigator.clipboard.writeText(text).then(() => {
+      mostrarToast('✓  Cuidados férula/yeso copiado al portapapeles', 'green');
+    });
+  }
+
+  // ─────────────────────────────────────────────
+  //  EVOLUCIÓN (quirófano)
+  // ─────────────────────────────────────────────
+  const EVOLUCION_TEXTO = `EVOLUCIÓN
+- Durante el postoperatorio el paciente se ha mantenido afebril y hemodinámicamente estable.
+- Ha presentado buen control del dolor con la analgesia pautada, sin evidenciarse deficits vasculonerviosos ni signos de TVP en el miembro intervenido.
+- Ha tolerado correctamente la sedestación y la deambulación asistida.
+- La herida quirúrgica no ha presentado signos de complicación local.
+- Dada la evolución favorable el paciente es alta a domicilio.`;
+
+  function toggleEvolucion() {
+    const checked = document.getElementById('incluirEvolucion').checked;
+    const panel = document.getElementById('evolucionPanel');
+    const ta = document.getElementById('evolucionTexto');
+    const grid = document.querySelector('#seccion-quirofano .panels-grid');
+    if (checked) {
+      panel.style.display = '';
+      ta.value = EVOLUCION_TEXTO;
+      grid.style.gridTemplateColumns = '1fr 1fr 1fr';
+      ta.classList.remove('flash');
+      void ta.offsetWidth;
+      ta.classList.add('flash');
+    } else {
+      panel.style.display = 'none';
+      ta.value = '';
+      grid.style.gridTemplateColumns = '1fr 1fr';
+    }
   }
 
   // ─────────────────────────────────────────────
