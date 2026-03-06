@@ -1393,28 +1393,33 @@ REVISIÓN
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
-- Objetivo: recuperar movilidad, fuerza y reincorporarse progresivamente a las actividades habituales sin dolor ni inflamación.
-- Indicaciones generales:
-- Puede apoyar la pierna operada desde el primer día según tolerancia.
-- Utilice muletas si tiene dolor o cojea. Normalmente se retiran en 3-5 días.
+
+EJERCICIOS POSTOPERATORIOS
+- Objetivo: recuperar movilidad, fuerza y reincorporarse progresivamente a las actividades habituales sin dolor ni inflamación.
+
+Indicaciones generales
+- Puede apoyar la pierna operada desde el primer día según tolerancia.
+- Utilice muletas si tiene dolor o cojea. Normalmente se retiran en 3-5 días.
 - Puede mover la rodilla libremente desde el principio.
 - No es necesario el uso de rodillera.
-- Ejercicios recomendados:
-- Realizar 2 veces al día, 10 repeticiones cada uno:
-- Contracciones del cuádriceps (apretar el muslo contra la cama)
-- Elevación de pierna recta (tumbado, elevar pierna estirada)
-- Movilidad de rodilla: flexionar y extender en cama sin dolor
-- Puente glúteo (elevar la pelvis con ambos pies apoyados)
-- Ejercicios de tobillo (movimientos arriba-abajo y circulares)
-- Evitar:
-- Saltos o carrera antes de las 4 semanas
-- Sentadillas profundas o escaleras si hay dolor
-- Deportes de impacto antes de la revisión médica
-- Progresión esperada:
-- Caminar sin muletas: 5-10 días
-- Recuperar flexión completa: 2-3 semanas
-- Actividad física moderada: a partir de 4 semanas
-- Retorno al deporte: según evaluación clínica (aprox. 6 semanas)
+
+Ejercicios recomendados (2 veces al día, 10 repeticiones cada uno)
+- Contracciones del cuádriceps (apretar el muslo contra la cama).
+- Elevación de pierna recta (tumbado, elevar pierna estirada).
+- Movilidad de rodilla: flexionar y extender en cama sin dolor.
+- Puente glúteo (elevar la pelvis con ambos pies apoyados).
+- Ejercicios de tobillo (movimientos arriba-abajo y circulares).
+
+Evitar
+- Saltos o carrera antes de las 4 semanas.
+- Sentadillas profundas o escaleras si hay dolor.
+- Deportes de impacto antes de la revisión médica.
+
+Progresión esperada
+- Caminar sin muletas: 5-10 días.
+- Recuperar flexión completa: 2-3 semanas.
+- Actividad física moderada: a partir de 4 semanas.
+- Retorno al deporte: según evaluación clínica (aprox. 6 semanas).
 ```
 
 ##### `car_sutura_meniscal` — CAR Sutura meniscal
@@ -2732,7 +2737,7 @@ CUIDADOS POSTOPERATORIOS
 - Metamizol 575 mg 1 caps / 8 horas, alterno con anterior cada 4 horas si dolor intenso
 - Omeprazol 20 mg / 24 horas
 - Bemiparina 3500 UI / 24 horas vía subcutánea / 6 semanas
-- Hierro proteinsuccinilato 40 mg sol oral en ayunas cada día durante un mes
+
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
@@ -2787,7 +2792,7 @@ CUIDADOS POSTOPERATORIOS
 - Metamizol 575 mg 1 caps / 8 horas, alterno con anterior cada 4 horas si dolor intenso
 - Omeprazol 20 mg / 24 horas
 - Bemiparina 3500 UI / 24 horas vía subcutánea / 6 semanas
-- Hierro proteinsuccinilato 40 mg sol oral en ayunas cada día durante un mes
+
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
