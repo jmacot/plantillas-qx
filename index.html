@@ -307,6 +307,12 @@
       letter-spacing: 0.5px;
       margin-bottom: 4px;
     }
+    .form-group label.toggle-check {
+      font-size: 13px;
+      margin-bottom: 0;
+      text-transform: none;
+      letter-spacing: 0;
+    }
     .form-group input,
     .form-group select {
       border: 1.5px solid var(--border);
@@ -707,7 +713,8 @@
     .panels-grid-3 .panel textarea {
       flex: none;
       min-height: 80px;
-      overflow-y: hidden;
+      overflow-y: auto;
+      max-height: 60vh;
     }
     .panel.panel-urg .panel-header { background: rgba(224,122,95,0.05); }
     .panel.panel-urg .panel-title { color: #e07a5f; }
@@ -1246,7 +1253,7 @@
     const lado = document.getElementById('lateralidad').value;
     // Mostrar/ocultar toggle de ejercicios para prótesis de rodilla
     const ejWrap = document.getElementById('ejerciciosToggleWrap');
-    const esPTR = CATEGORIAS.find(c => c.id === 'ptr')?.procs.some(p => p.value === proc);
+    const esPTR = activeCat === 'ptr' || CATEGORIAS.find(c => c.id === 'ptr')?.procs.some(p => p.value === proc);
     ejWrap.style.display = esPTR ? '' : 'none';
     if (!proc) return;
     const t = obtenerPlantillas(doc, ayu, lado);
@@ -1304,11 +1311,15 @@
   function copiarTexto(id) {
     const text = document.getElementById(id).value;
     if (!text) return;
-    const msg = id === 'tratamientoAlta'
-      ? '✓  Tratamiento copiado al portapapeles'
-      : id === 'evolucionTexto'
-      ? '✓  Evolución copiada al portapapeles'
-      : '✓  Hoja operatoria copiada al portapapeles';
+    const msgs = {
+      tratamientoAlta: '✓  Tratamiento copiado',
+      evolucionTexto: '✓  Evolución copiada',
+      hojaOperatoria: '✓  Hoja operatoria copiada',
+      urgAnamnesis: '✓  Anamnesis copiada',
+      urgExploracion: '✓  Exploración copiada',
+      urgPlan: '✓  Plan copiado',
+    };
+    const msg = msgs[id] || '✓  Copiado al portapapeles';
     navigator.clipboard.writeText(text).then(() => {
       mostrarToast(msg, 'green');
     }).catch(() => {
@@ -1434,6 +1445,59 @@
     cargarPlantilla();
   }
 
+  // Diccionario de abreviaturas → palabras clave que las activan
+  const ABREV = {
+    'car':   ['artroscopia rodilla', 'artroscopia'],
+    'cah':   ['artroscopia hombro'],
+    'cac':   ['artroscopia cadera'],
+    'ovt':   ['osteotomia valguizante', 'osteotomia tibia', 'osteotomia'],
+    'otv':   ['osteotomia varizante', 'osteotomia'],
+    'dlo':   ['doble nivel', 'osteotomia doble'],
+    'tta':   ['tuberosidad tibial anterior', 'tuberosidad'],
+    'lca':   ['ligamento cruzado anterior', 'cruzado anterior', 'ligamento'],
+    'lfpm':  ['ligamento femoropatelar medial', 'ligamento femoropatelar', 'femoropatelar', 'ligamento'],
+    'lli':   ['ligamento lateral interno', 'lateral interno'],
+    'ptc':   ['protesis total cadera', 'protesis cadera'],
+    'ptr':   ['protesis total rodilla', 'protesis rodilla'],
+    'puc':   ['protesis unicompartimental', 'unicompartimental'],
+    'rpuc':  ['revision protesis unicompartimental', 'revision puc'],
+    'pthi':  ['protesis total hombro inversa', 'protesis hombro', 'protesis inversa'],
+    'ppc':   ['protesis parcial cadera', 'parcial cadera', 'hemiartroplastia'],
+    'rafi':  ['reduccion abierta fijacion interna', 'osteosintesis', 'placa tornillos', 'fijacion'],
+    'stc':   ['sindrome tunel carpiano', 'tunel carpiano', 'carpiano'],
+    'tcg':   ['tumor celulas gigantes', 'quiste sinovial', 'quiste'],
+    'fr':    ['fractura'],
+    'hth':   ['hueso tendon hueso'],
+    'ari':   ['alerones', 'retinaculares'],
+    'sher':  ['shaving', 'regularizacion'],
+    'psi':   ['plantilla personalizada', 'guia corte'],
+    'biorsa': ['augmento biologico', 'injerto oseo'],
+    'scarf': ['osteotomia hallux', 'hallux valgus', 'juanete'],
+    'akin':  ['osteotomia falange', 'hallux'],
+    'weil':  ['metatarsalgia', 'osteotomia metatarso'],
+  };
+
+  // Construir mapa inverso: palabra clave → [abreviaturas que matchea]
+  const _abrevIndex = {};
+  for (const [abr, keywords] of Object.entries(ABREV)) {
+    for (const kw of keywords) {
+      const nkw = normalizar(kw);
+      if (!_abrevIndex[nkw]) _abrevIndex[nkw] = [];
+      _abrevIndex[nkw].push(normalizar(abr));
+    }
+  }
+
+  function expandirQuery(q) {
+    // Devuelve array de términos extra que deben matchear
+    const extras = new Set();
+    for (const [keyword, abrs] of Object.entries(_abrevIndex)) {
+      if (keyword.includes(q) || q.includes(keyword)) {
+        abrs.forEach(a => extras.add(a));
+      }
+    }
+    return [...extras];
+  }
+
   function filtrarProcedimientos() {
     const query = normalizar(document.getElementById('buscarProc').value.trim());
     const sel = document.getElementById('procedimiento');
@@ -1454,9 +1518,15 @@
       cargarPlantilla();
       return;
     }
+    // Expandir query con abreviaturas
+    const extras = expandirQuery(query);
     // Buscar en TODAS las categorías
     const allProcs = CATEGORIAS.flatMap(c => c.procs);
-    const matches = allProcs.filter(p => normalizar(p.label).includes(query));
+    const matches = allProcs.filter(p => {
+      const lab = normalizar(p.label);
+      if (lab.includes(query)) return true;
+      return extras.some(ex => lab.includes(ex));
+    });
     sel.disabled = false;
     sel.innerHTML = '<option value="">— ' + matches.length + ' resultado' + (matches.length !== 1 ? 's' : '') + ' —</option>' +
       matches.sort((a, b) => a.label.localeCompare(b.label, 'es'))
