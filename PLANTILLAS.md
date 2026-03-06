@@ -3,7 +3,7 @@
 > Catálogo de todas las plantillas del proyecto `plantillas-qx`,
 > organizadas por región/categoría (quirófano) y módulo de urgencias.
 
-> **Total: 87 plantillas quirúrgicas + 7 plantillas de urgencias = 94 plantillas** en 14 categorías quirúrgicas, 5 regiones anatómicas y 1 módulo de urgencias.
+> **Total: 90 plantillas quirúrgicas + 7 plantillas de urgencias = 97 plantillas** en 14 categorías quirúrgicas, 5 regiones anatómicas y 1 módulo de urgencias.
 
 > **Variables dinámicas (quirófano):** `${FECHA}` (fecha DD/MM/YY), `${DOCTOR}` (cirujano), `${AYUDANTE}` (ayudante). **Lateralidad:** `${LADO_M}` (derecho/izquierdo), `${LADO_F}` (derecha/izquierda), `${LADO_M_UPPER}` (DERECHO/IZQUIERDO), `${LADO_F_UPPER}` (DERECHA/IZQUIERDA), `${LADO_ABR_F}` (DERECHA/IZQUIERDA), `${LADO_ABR_M}` (DERECHO/IZQUIERDO), `${DECUBITO}` (decúbito lateral contrario, minúscula), `${DECUBITO_UPPER}` (DECÚBITO LATERAL contrario, mayúscula).
 
@@ -19,7 +19,7 @@
   - [Artroscopia Rodilla (17)](#categoría-car)
   - [Prótesis Rodilla (3)](#categoría-ptr)
   - [LCA (12)](#categoría-lca)
-  - [Osteotomías y Cartílago (5)](#categoría-rodilla_osteo)
+  - [Osteotomías y Cartílago (8)](#categoría-rodilla_osteo)
 - [Cadera](#región-cadera)
   - [Prótesis Cadera (3)](#categoría-ptc)
   - [Artroscopia Cadera (1)](#categoría-cac)
@@ -2703,7 +2703,7 @@ SÍNTOMAS DE ALERTA
 
 <a id="categoría-rodilla_osteo"></a>
 
-#### Osteotomías y Cartílago (5 plantillas)
+#### Osteotomías y Cartílago (8 plantillas)
 
 ##### `rodilla_ovt` — Osteotomía valguizante de tibia (apertura medial)
 
@@ -2978,6 +2978,133 @@ INICIO ACTIVIDAD DEPORTIVA:
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
+```
+
+##### `rodilla_car_dlo_newclip` — CAR + DLO (doble nivel) — Actimotion S (New Clip/PSI)
+
+**Nota Operatoria:**
+
+```
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+
+CAR ${LADO_F_UPPER} + osteotomía a doble nivel (fémur y tibia) por genu varo severo MII realizada con plantillas personalizadas de corte PSI de New Clip
+- CAR ${LADO_F_UPPER} sin isquemia:
+- Portales tradicionales anteromedial y anterolateral.
+- Articulación femoropatelar y fondos de saco cuadricipitales: condropatía de la tróclea femoral y patela grado 2.
+- Compartimento interno: condropatía grado 4 de toda zona carga de cóndilo femoral int y meseta tibial int. Ausencia casi completa menisco medial.
+- Pivote central: LCA íntegro y competente.
+- Compartimento externo: sin alteraciones.
+- Osteotomía biplanar lateral de fémur distal ${LADO_M} de sustracción (6º) fijada con placa Actimotion S con 4 tornillos bloqueados distales, 3 proximales y 1 tornillo que cruza osteotomía.
+- Isquemia en raíz muslo ${LADO_M}:
+- OVT biplanar de adición interna (8º) fijada con placa Actimotion S con 4 tornillos bloqueados distales y 4 proximales. Relleno de la cuña de apertura con injerto autólogo tricortical de cresta iliaca y chips de esponjosa.
+```
+
+**Tratamiento al Alta:**
+
+```
+CUIDADOS POSTOPERATORIOS
+- Aplicar hielo sobre la articulación operada 2 - 3 veces al día durante 20 minutos.
+- Mover activamente los dedos, tobillo y rodilla de la extremidad operada.
+- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
+- Puede caminar con ayuda de 2 muletas SIN APOYO de la pierna intervenida.
+- Realizar ejercicios isométricos de cuádriceps y movilidad libre de la rodilla.
+- Puede requerir ayuda domiciliaria.
+- Naproxeno 550 mg / 8 horas vía oral.
+- Paracetamol 1 g cada 8 horas vía oral alterno con Naproxeno cada 4 horas.
+- Omeprazol 20 mg / 24 horas.
+- Bemiparina 3500 UI / 24 horas vía subcutánea.
+- Curas por DUE de zona cada 48/72 horas.
+- Revisión en CCEE de COT (${DOCTOR}) en 3 semanas para ver evolución.
+
+SÍNTOMAS DE ALERTA
+- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
+```
+
+##### `rodilla_car_ovt_newclip` — CAR + OVT adición — Actimotion S (New Clip)
+
+**Nota Operatoria:**
+
+```
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+
+CAR ${LADO_F_UPPER} + osteotomía de adición valguizante de tibia ${LADO_F_UPPER}
+- Isquemia en muslo ${LADO_M}.
+- Portales tradicionales anteromedial y anterolateral.
+- Articulación femoropatelar y fondos de saco cuadricipitales: condropatía de la tróclea femoral grado 4.
+- Compartimento interno: rotura degenerativa del cuerpo y cuerno posterior del menisco interno que se reseca y regulariza con pinzas y motor. Condropatía grado 4 de toda zona carga de cóndilo femoral int y meseta tibial int.
+- Pivote central: LCA íntegro y competente.
+- Compartimento externo: sin alteraciones.
+- Extracción de injerto bicortical de cresta iliaca y chips de esponjosa.
+- Incisión oblicua en tercio proximal y medial de tibia siguiendo dirección de los tendones isquiotibiales.
+- Desinserción parcial de la inserción distal del fascículo superficial del LLI.
+- Osteotomía biplanar de tibia respetando la TTA con sierra y completada con escoplo.
+- Apertura de la cuña de forma progresiva hasta 16º y relleno de la misma con el injerto autólogo cortical y de esponjosa.
+- Osteosíntesis con placa de osteotomía tibial medial proximal Actimotion S (New Clip) fijada con 4 tornillos proximales y 4 tornillos distales fijados a placa.
+- Cierre por planos.
+- Piel con grapas.
+- Vendaje compresivo.
+```
+
+**Tratamiento al Alta:**
+
+```
+CUIDADOS POSTOPERATORIOS
+- Aplicar hielo sobre la articulación operada 2 - 3 veces al día durante 20 minutos.
+- Mover activamente los dedos, tobillo y rodilla de la extremidad operada.
+- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
+- Puede caminar con ayuda de 2 muletas SIN APOYO de la pierna intervenida.
+- Realizar ejercicios isométricos de cuádriceps y movilidad libre de la rodilla.
+- Puede requerir ayuda domiciliaria.
+- Naproxeno 550 mg / 8 horas vía oral.
+- Paracetamol 1 g cada 8 horas vía oral alterno con Naproxeno cada 4 horas.
+- Omeprazol 20 mg / 24 horas.
+- Bemiparina 3500 UI / 24 horas vía subcutánea.
+- Curas por DUE de zona cada 48/72 horas.
+- Revisión en CCEE de COT (${DOCTOR}) en 3 semanas para ver evolución.
+
+SÍNTOMAS DE ALERTA
+- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
+```
+
+##### `rodilla_car_ovt_lca_medcontech` — CAR + OVT adición (Medcontech) + LCA
+
+**Nota Operatoria:**
+
+```
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+
+CAR + osteotomía de adición valguizante de tibia + ligamentoplastia LCA rodilla ${LADO_F}
+- Isquemia en muslo ${LADO_M}.
+- Portales tradicionales anteromedial y anterolateral.
+- Articulación femoropatelar y fondos de saco cuadricipitales: condropatía grado 2 CFI, rotura degenerativa del asta post del menisco medial (meniscectomía parcial con pinzas y sinoviotomo), rotura completa LCA, y compartimento ext sin lesiones meniscales ni condrales.
+- Incisión oblicua en tercio proximal y medial de tibia siguiendo dirección de los tendones isquiotibiales. Extracción de tendones recto int y semitendinoso.
+- Desinserción parcial de la inserción distal del fascículo superficial del LLI.
+- Osteotomía biplanar de tibia respetando la TTA con sierra y completada con escoplo.
+- Apertura de la cuña de forma progresiva hasta 8º y relleno de la misma con hueso sintético.
+- Osteosíntesis con placa de osteotomía tibial medial proximal de reconstrucción LCA de Medcontech fijada con 3 tornillos proximales y 3 tornillos distales fijados a placa.
+- Ligamentoplastia LCA con 4ST-RI fijada en fémur con ProCinch y en tibia con TIF 10x35 mm.
+- Cierre por planos, drenaje aspirativo, piel con grapas y vendaje compresivo.
+```
+
+**Tratamiento al Alta:**
+
+```
+CUIDADOS POSTOPERATORIOS
+- Aplicar hielo sobre la articulación operada 2 - 3 veces al día durante 20 minutos.
+- Mover activamente los dedos, tobillo y rodilla de la extremidad operada.
+- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
+- Puede caminar con ayuda de 2 muletas SIN APOYO de la pierna intervenida.
+- Realizar ejercicios isométricos de cuádriceps y movilidad libre de la rodilla.
+- Puede requerir ayuda domiciliaria.
+- Ibuprofeno 600 mg / 8 horas vía oral.
+- Metamizol 575 mg cada 8 horas vía oral alterno con Ibuprofeno cada 4 horas.
+- Omeprazol 20 mg / 24 horas.
+- Bemiparina 3500 UI / 24 horas vía subcutánea.
+- Curas por ATS de zona con Betadine cada 48/72 horas.
+- Revisión en CCEE de COT (${DOCTOR}) en 3 semanas para ver evolución.
+
+SÍNTOMAS DE ALERTA
+- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
 ```
 
 <a id="región-cadera"></a>

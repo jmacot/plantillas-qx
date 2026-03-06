@@ -358,6 +358,35 @@
       color: var(--text);
       padding: 4px 16px;
     }
+
+    /* ── BUSCADOR INTERVENCIONES (pill compacto) ── */
+    .search-pill-wrap {
+      flex-shrink: 0;
+      margin-right: 2px;
+    }
+    .search-proc-input {
+      border: 1.5px solid var(--border);
+      border-radius: 999px;
+      padding: 7px 14px;
+      font-size: 12px;
+      font-weight: 500;
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--surface);
+      width: 150px;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .search-proc-input:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(26,58,92,0.10);
+      width: 200px;
+    }
+    .search-proc-input::placeholder {
+      color: var(--text-light);
+      font-weight: 400;
+    }
+
     select#urgDiagnostico {
       background: #f5ddd5;
       color: #8b4532;
@@ -735,12 +764,7 @@
     [data-theme="dark"] .btn-copy.urg { color: #e8977f; border-color: #e8977f; }
     [data-theme="dark"] .btn-copy.urg:hover { background: #e8977f; color: #1f2937; }
 
-    #urgFerulaPanel {
-      margin-top: 14px;
-    }
-    #urgFerulaPanel textarea {
-      min-height: 250px;
-    }
+
 
     /* ── 3-COLUMN PANELS GRID ── */
     .panels-grid-3 {
@@ -833,7 +857,9 @@
   <div id="seccion-quirofano" class="seccion">
 
     <nav class="cat-nav">
-      <div id="regionPills" class="cat-pills"></div>
+      <div id="regionPills" class="cat-pills">
+        <!-- pills se generan por JS, search se añade al final -->
+      </div>
       <div id="subCatPills" class="cat-pills sub-pills" style="display:none;"></div>
     </nav>
 
@@ -1048,25 +1074,6 @@
       </div>
     </div>
 
-    <!-- Panel Férula/Yeso (oculto por defecto) -->
-    <div id="urgFerulaPanel" class="panel panel-amber" style="display:none; animation: fadeInUp 0.4s ease-out both;">
-      <div class="panel-header">
-        <span class="panel-title">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"/><path d="M16 2v4"/><rect x="4" y="4" width="16" height="18" rx="2"/><path d="M4 10h16"/><path d="M10 14h4"/></svg>
-          Cuidados Férula / Yeso
-        </span>
-        <div class="copy-wrap">
-          <button onclick="copiarTextoUrg('urgFerulaTexto')" class="btn-copy amber">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-            Copiar
-          </button>
-          <span class="copy-tooltip">✓ Copiado</span>
-        </div>
-      </div>
-      <textarea id="urgFerulaTexto" readonly
-        placeholder="Instrucciones de cuidados de férula/yeso..."></textarea>
-    </div>
-
     <div class="urg-copy-row">
       <button onclick="copiarTodoUrg()" class="btn-copy urg">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
@@ -1200,6 +1207,9 @@
       { value: 'rodilla_fulkerson', label: 'Osteotomía TTA tipo Fulkerson' },
       { value: 'rodilla_mosaico_ovt', label: 'Mosaicoplastia + OVT' },
       { value: 'rodilla_lfpm_tta', label: 'Reconstrucción LFPM + osteotomía TTA (luxación rótula)' },
+      { value: 'rodilla_car_dlo_newclip', label: 'CAR + DLO (doble nivel) — Actimotion S (New Clip/PSI)' },
+      { value: 'rodilla_car_ovt_newclip', label: 'CAR + OVT adición — Actimotion S (New Clip)' },
+      { value: 'rodilla_car_ovt_lca_medcontech', label: 'CAR + OVT adición (Medcontech) + LCA' },
     ]},
   ];
 
@@ -1217,6 +1227,10 @@
   // ─────────────────────────────────────────────
   //  UTILIDADES
   // ─────────────────────────────────────────────
+  function normalizar(str) {
+    return str.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  }
+
   function hoy() {
     const d = new Date();
     const dd = String(d.getDate()).padStart(2, '0');
@@ -1264,6 +1278,7 @@
 
   function limpiar() {
     document.getElementById('procedimiento').value = '';
+    document.getElementById('buscarProc').value = '';
     document.getElementById('doctor').value = '';
     document.getElementById('ayudante').value = '';
     document.getElementById('lateralidad').value = '';
@@ -1331,6 +1346,11 @@
         ${region.label} <span class="cat-count">${total}</span>
       </button>`;
     }).join('');
+    // Append search pill at end
+    const wrap = document.createElement('div');
+    wrap.className = 'search-pill-wrap';
+    wrap.innerHTML = '<input type="text" id="buscarProc" class="search-proc-input" placeholder="🔍 Buscar..." oninput="filtrarProcedimientos()" autocomplete="off" />';
+    container.prepend(wrap);
   }
 
   function selectRegion(regionId) {
@@ -1382,6 +1402,7 @@
       [...allProcs].sort((a, b) => a.label.localeCompare(b.label, 'es'))
         .map(p => `<option value="${p.value}">${p.label}</option>`).join('');
     sel.value = '';
+    document.getElementById('buscarProc').value = '';
     activeCat = null;
     cargarPlantilla();
   }
@@ -1409,7 +1430,42 @@
     sel.innerHTML = '<option value="">— Seleccione procedimiento —</option>' +
       [...cat.procs].sort((a, b) => a.label.localeCompare(b.label, 'es')).map(p => `<option value="${p.value}">${p.label}</option>`).join('');
     sel.value = '';
+    document.getElementById('buscarProc').value = '';
     cargarPlantilla();
+  }
+
+  function filtrarProcedimientos() {
+    const query = normalizar(document.getElementById('buscarProc').value.trim());
+    const sel = document.getElementById('procedimiento');
+    if (!query) {
+      // Restaurar lista de la categoría/región actual
+      if (activeCat) {
+        const cat = CATEGORIAS.find(c => c.id === activeCat);
+        if (cat) {
+          sel.innerHTML = '<option value="">— Seleccione procedimiento —</option>' +
+            [...cat.procs].sort((a, b) => a.label.localeCompare(b.label, 'es'))
+              .map(p => `<option value="${p.value}">${p.label}</option>`).join('');
+        }
+      } else if (activeRegion) {
+        populateAllProcs();
+        return;
+      }
+      sel.value = '';
+      cargarPlantilla();
+      return;
+    }
+    // Buscar en TODAS las categorías
+    const allProcs = CATEGORIAS.flatMap(c => c.procs);
+    const matches = allProcs.filter(p => normalizar(p.label).includes(query));
+    sel.disabled = false;
+    sel.innerHTML = '<option value="">— ' + matches.length + ' resultado' + (matches.length !== 1 ? 's' : '') + ' —</option>' +
+      matches.sort((a, b) => a.label.localeCompare(b.label, 'es'))
+        .map(p => `<option value="${p.value}">${p.label}</option>`).join('');
+    // Si solo hay un resultado, seleccionarlo automáticamente
+    if (matches.length === 1) {
+      sel.value = matches[0].value;
+      cargarPlantilla();
+    }
   }
 
   // ─────────────────────────────────────────────
@@ -1625,6 +1681,12 @@
       planEl.value = t.plan_conservador(cot, acudo, parte, sexo, e, lado);
     }
 
+    // Re-append férula si el toggle está activo
+    if (document.getElementById('incluirFerula').checked) {
+      const sep = planEl.value.trim() ? '\n\n' : '';
+      planEl.value = planEl.value.trimEnd() + sep + CUIDADOS_FERULA;
+    }
+
     [anamEl, expoEl, planEl].forEach(el => {
       el.style.height = 'auto';
       el.style.height = el.scrollHeight + 'px';
@@ -1674,14 +1736,14 @@
     ladoGroup.style.pointerEvents = '';
     // Restaurar férula toggle
     document.getElementById('incluirFerula').checked = false;
-    document.getElementById('urgFerulaPanel').style.display = 'none';
-    document.getElementById('urgFerulaTexto').value = '';
   }
 
   // ─────────────────────────────────────────────
   //  FÉRULA / YESO — TEXTO Y TOGGLE
   // ─────────────────────────────────────────────
-  const CUIDADOS_FERULA = `CÓMO ACOSTUMBRARSE A UNA FÉRULA O A UN YESO
+  const CUIDADOS_FERULA = `RECOMENDACIONES FÉRULA/YESO
+
+CÓMO ACOSTUMBRARSE A UNA FÉRULA O A UN YESO
 - La hinchazón causada por su lesión puede generar presión sobre su férula o yeso durante las primeras 48 a 72 horas.
 - Esto puede causar la sensación de que la férula o el yeso están demasiado apretados o ajustados a la pierna o brazo.
 
@@ -1708,35 +1770,28 @@ CÓMO CUIDAR SU FÉRULA Y YESO
 
   function toggleFerula() {
     const checked = document.getElementById('incluirFerula').checked;
-    const panel = document.getElementById('urgFerulaPanel');
-    const ta = document.getElementById('urgFerulaTexto');
+    const planEl = document.getElementById('urgPlan');
     if (checked) {
-      panel.style.display = '';
-      ta.value = CUIDADOS_FERULA;
-      ta.style.height = 'auto';
-      ta.style.height = ta.scrollHeight + 'px';
-      ta.classList.remove('flash');
-      void ta.offsetWidth;
-      ta.classList.add('flash');
+      // Añadir al final del plan
+      const sep = planEl.value.trim() ? '\n\n' : '';
+      planEl.value = planEl.value.trimEnd() + sep + CUIDADOS_FERULA;
+      planEl.style.height = 'auto';
+      planEl.style.height = planEl.scrollHeight + 'px';
+      planEl.classList.remove('flash');
+      void planEl.offsetWidth;
+      planEl.classList.add('flash');
     } else {
-      panel.style.display = 'none';
-      ta.value = '';
+      // Quitar el bloque de férula del plan
+      planEl.value = planEl.value.replace(/\n?\n?RECOMENDACIONES FÉRULA\/YESO[\s\S]*$/, '').trimEnd();
+      planEl.style.height = 'auto';
+      planEl.style.height = planEl.scrollHeight + 'px';
     }
-  }
-
-  function copiarTextoUrg(id) {
-    const text = document.getElementById(id).value;
-    if (!text) return;
-    navigator.clipboard.writeText(text).then(() => {
-      mostrarToast('✓  Cuidados férula/yeso copiado al portapapeles', 'green');
-    });
   }
 
   // ─────────────────────────────────────────────
   //  EVOLUCIÓN (quirófano)
   // ─────────────────────────────────────────────
-  const EVOLUCION_TEXTO = `EVOLUCIÓN
-- Durante el postoperatorio el paciente se ha mantenido afebril y hemodinámicamente estable.
+  const EVOLUCION_TEXTO = `- Durante el postoperatorio el paciente se ha mantenido afebril y hemodinámicamente estable.
 - Ha presentado buen control del dolor con la analgesia pautada, sin evidenciarse deficits vasculonerviosos ni signos de TVP en el miembro intervenido.
 - Ha tolerado correctamente la sedestación y la deambulación asistida.
 - La herida quirúrgica no ha presentado signos de complicación local.
@@ -2769,6 +2824,106 @@ tratamiento: `CUIDADOS POSTOPERATORIOS
 
 Curas por  ATS DE  ZONA cada  48/72 horas.
 - Revisión en CC EE  de  COT (${DOCTOR})  en  3 semanas  para ver evolución.
+
+SÍNTOMAS DE ALERTA
+- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.`
+},
+    rodilla_car_dlo_newclip: {
+hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+
+CAR ${LADO_F_UPPER} + osteotomía a doble nivel (fémur y tibia) por genu varo severo MII realizada con plantillas personalizadas de corte PSI de New Clip
+- CAR ${LADO_F_UPPER} sin isquemia:
+- Portales tradicionales anteromedial y anterolateral.
+- Articulación femoropatelar y fondos de saco cuadricipitales: condropatía de la tróclea femoral y patela grado 2.
+- Compartimento interno: condropatía grado 4 de toda zona carga de cóndilo femoral int y meseta tibial int. Ausencia casi completa menisco medial.
+- Pivote central: LCA íntegro y competente.
+- Compartimento externo: sin alteraciones.
+- Osteotomía biplanar lateral de fémur distal ${LADO_M} de sustracción (6º) fijada con placa Actimotion S con 4 tornillos bloqueados distales, 3 proximales y 1 tornillo que cruza osteotomía.
+- Isquemia en raíz muslo ${LADO_M}:
+- OVT biplanar de adición interna (8º) fijada con placa Actimotion S con 4 tornillos bloqueados distales y 4 proximales. Relleno de la cuña de apertura con injerto autólogo tricortical de cresta iliaca y chips de esponjosa.`,
+
+tratamiento: `CUIDADOS POSTOPERATORIOS
+- Aplicar hielo sobre la articulación operada 2 - 3 veces al día durante 20 minutos.
+- Mover activamente los dedos, tobillo y rodilla de la extremidad operada.
+- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
+- Puede caminar con ayuda de 2 muletas SIN APOYO de la pierna intervenida.
+- Realizar ejercicios isométricos de cuádriceps y movilidad libre de la rodilla.
+- Puede requerir ayuda domiciliaria.
+- Naproxeno 550 mg / 8 horas vía oral.
+- Paracetamol 1 g cada 8 horas vía oral alterno con Naproxeno cada 4 horas.
+- Omeprazol 20 mg / 24 horas.
+- Bemiparina 3500 UI / 24 horas vía subcutánea.
+- Curas por DUE de zona cada 48/72 horas.
+- Revisión en CCEE de COT (${DOCTOR}) en 3 semanas para ver evolución.
+
+SÍNTOMAS DE ALERTA
+- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.`
+},
+    rodilla_car_ovt_newclip: {
+hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+
+CAR ${LADO_F_UPPER} + osteotomía de adición valguizante de tibia ${LADO_F_UPPER}
+- Isquemia en muslo ${LADO_M}.
+- Portales tradicionales anteromedial y anterolateral.
+- Articulación femoropatelar y fondos de saco cuadricipitales: condropatía de la tróclea femoral grado 4.
+- Compartimento interno: rotura degenerativa del cuerpo y cuerno posterior del menisco interno que se reseca y regulariza con pinzas y motor. Condropatía grado 4 de toda zona carga de cóndilo femoral int y meseta tibial int.
+- Pivote central: LCA íntegro y competente.
+- Compartimento externo: sin alteraciones.
+- Extracción de injerto bicortical de cresta iliaca y chips de esponjosa.
+- Incisión oblicua en tercio proximal y medial de tibia siguiendo dirección de los tendones isquiotibiales.
+- Desinserción parcial de la inserción distal del fascículo superficial del LLI.
+- Osteotomía biplanar de tibia respetando la TTA con sierra y completada con escoplo.
+- Apertura de la cuña de forma progresiva hasta 16º y relleno de la misma con el injerto autólogo cortical y de esponjosa.
+- Osteosíntesis con placa de osteotomía tibial medial proximal Actimotion S (New Clip) fijada con 4 tornillos proximales y 4 tornillos distales fijados a placa.
+- Cierre por planos.
+- Piel con grapas.
+- Vendaje compresivo.`,
+
+tratamiento: `CUIDADOS POSTOPERATORIOS
+- Aplicar hielo sobre la articulación operada 2 - 3 veces al día durante 20 minutos.
+- Mover activamente los dedos, tobillo y rodilla de la extremidad operada.
+- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
+- Puede caminar con ayuda de 2 muletas SIN APOYO de la pierna intervenida.
+- Realizar ejercicios isométricos de cuádriceps y movilidad libre de la rodilla.
+- Puede requerir ayuda domiciliaria.
+- Naproxeno 550 mg / 8 horas vía oral.
+- Paracetamol 1 g cada 8 horas vía oral alterno con Naproxeno cada 4 horas.
+- Omeprazol 20 mg / 24 horas.
+- Bemiparina 3500 UI / 24 horas vía subcutánea.
+- Curas por DUE de zona cada 48/72 horas.
+- Revisión en CCEE de COT (${DOCTOR}) en 3 semanas para ver evolución.
+
+SÍNTOMAS DE ALERTA
+- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.`
+},
+    rodilla_car_ovt_lca_medcontech: {
+hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+
+CAR + osteotomía de adición valguizante de tibia + ligamentoplastia LCA rodilla ${LADO_F}
+- Isquemia en muslo ${LADO_M}.
+- Portales tradicionales anteromedial y anterolateral.
+- Articulación femoropatelar y fondos de saco cuadricipitales: condropatía grado 2 CFI, rotura degenerativa del asta post del menisco medial (meniscectomía parcial con pinzas y sinoviotomo), rotura completa LCA, y compartimento ext sin lesiones meniscales ni condrales.
+- Incisión oblicua en tercio proximal y medial de tibia siguiendo dirección de los tendones isquiotibiales. Extracción de tendones recto int y semitendinoso.
+- Desinserción parcial de la inserción distal del fascículo superficial del LLI.
+- Osteotomía biplanar de tibia respetando la TTA con sierra y completada con escoplo.
+- Apertura de la cuña de forma progresiva hasta 8º y relleno de la misma con hueso sintético.
+- Osteosíntesis con placa de osteotomía tibial medial proximal de reconstrucción LCA de Medcontech fijada con 3 tornillos proximales y 3 tornillos distales fijados a placa.
+- Ligamentoplastia LCA con 4ST-RI fijada en fémur con ProCinch y en tibia con TIF 10x35 mm.
+- Cierre por planos, drenaje aspirativo, piel con grapas y vendaje compresivo.`,
+
+tratamiento: `CUIDADOS POSTOPERATORIOS
+- Aplicar hielo sobre la articulación operada 2 - 3 veces al día durante 20 minutos.
+- Mover activamente los dedos, tobillo y rodilla de la extremidad operada.
+- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
+- Puede caminar con ayuda de 2 muletas SIN APOYO de la pierna intervenida.
+- Realizar ejercicios isométricos de cuádriceps y movilidad libre de la rodilla.
+- Puede requerir ayuda domiciliaria.
+- Ibuprofeno 600 mg / 8 horas vía oral.
+- Metamizol 575 mg cada 8 horas vía oral alterno con Ibuprofeno cada 4 horas.
+- Omeprazol 20 mg / 24 horas.
+- Bemiparina 3500 UI / 24 horas vía subcutánea.
+- Curas por ATS de zona con Betadine cada 48/72 horas.
+- Revisión en CCEE de COT (${DOCTOR}) en 3 semanas para ver evolución.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.`
