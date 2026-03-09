@@ -103,6 +103,16 @@
       0% { background-color: var(--accent-light); }
       100% { background-color: var(--surface2); }
     }
+    @keyframes focusPulse {
+      0% { box-shadow: 0 0 0 0 rgba(26,58,92,0.25); }
+      70% { box-shadow: 0 0 0 6px rgba(26,58,92,0); }
+      100% { box-shadow: 0 0 0 0 rgba(26,58,92,0); }
+    }
+    @keyframes focusPulseDark {
+      0% { box-shadow: 0 0 0 0 rgba(147,197,253,0.3); }
+      70% { box-shadow: 0 0 0 6px rgba(147,197,253,0); }
+      100% { box-shadow: 0 0 0 0 rgba(147,197,253,0); }
+    }
 
     /* ── BACK HOME ── */
     .back-home {
@@ -339,10 +349,12 @@
       outline: none;
       border-color: var(--accent);
       box-shadow: 0 0 0 3px rgba(26,58,92,0.10);
+      animation: focusPulse 0.6s ease-out;
     }
     [data-theme="dark"] .form-group input:focus,
     [data-theme="dark"] .form-group select:focus {
       box-shadow: 0 0 0 3px rgba(147,197,253,0.15);
+      animation: focusPulseDark 0.6s ease-out;
     }
 
     /* ── SELECT DESTACADO ── */
