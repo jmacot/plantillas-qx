@@ -78,7 +78,7 @@ CUIDADOS POSTOPERATORIOS
 - Evitar carga de peso sobre la pierna intervenida hasta nuevo aviso. Puede solicitar silla de ruedas en préstamo.
 - Requiere ayuda domiciliaria para facilitar la movilidad y realizar las actividades diarias.
 
-MEDICACIÓN (según tarjeta sanitaria)
+MEDICACIÓN
 - METAMIZOL 575 mg cada 8 horas vía oral, alternando con PARACETAMOL 1g/8h si es necesario para el control del dolor.
 - OMEPRAZOL 20 mg cada 24 horas.
 - ENOXAPARINA 40 mg cada 24 horas vía subcutánea.
@@ -154,7 +154,7 @@ CUIDADOS POSTOPERATORIOS
 - Evitar cargar peso sobre pierna intervenida hasta nuevo aviso, puede solicitar silla de ruedas en préstamo.
 - Puede requerir ayuda domiciliaria
 
-MEDICACIÓN (según tarjeta sanitaria)
+MEDICACIÓN
 - METAMIZOL 575mg cada 8 horas vía oral, que puede alternar con PARACETAMOL 1g/8h vía oral si precisa por dolor.
 - OMEPRAZOL 20mg cada 24 horas.
 - ENOXAPARINA 40mg cada 24 horas vía subcutánea.
@@ -200,7 +200,7 @@ CUIDADOS POSTOPERATORIOS
 - Puede caminar con ayuda de andador, que solicitará en préstamo si precisa.
 - Requiere ayuda domiciliaria
 
-MEDICACIÓN (según tarjeta sanitaria)
+MEDICACIÓN
 - METAMIZOL 575mg cada 8 horas vía oral, que puede alternar con PARACETAMOL 1g/8h vía oral si precisa por dolor.
 - OMEPRAZOL 20mg cada 24 horas.
 - ENOXAPARINA 40mg cada 24 horas vía subcutánea.
@@ -249,7 +249,7 @@ CUIDADOS POSTOPERATORIOS
 - Puede requerir ayuda domiciliaria
 - Movilización en silla de ruedas que se entregará a préstamo
 
-MEDICACIÓN (según tarjeta sanitaria)
+MEDICACIÓN
 - PARACETAMOL 1 gr cada 8 horas alternando con METAMIZOL 575 mg cada 8 horas si dolor
 - OMEPRAZOL 20 mg cada 24 horas vía oral
 - ENOXAPARINA 40 mg cada 24 horas vía subcutánea
@@ -297,7 +297,7 @@ CUIDADOS POSTOPERATORIOS
 - Puede requerir ayuda domiciliaria
 - Movilización en silla de ruedas que se entregará a préstamo
 
-MEDICACIÓN (según tarjeta sanitaria)
+MEDICACIÓN
 - PARACETAMOL 1 gr cada 8 horas alternando con METAMIZOL 575 mg cada 8 horas si dolor
 - OMEPRAZOL 20 mg cada 24 horas vía oral
 - ENOXAPARINA 40 mg cada 24 horas vía subcutánea
@@ -345,7 +345,7 @@ CUIDADOS POSTOPERATORIOS
 - Puede requerir ayuda domiciliaria
 - Movilización en silla de ruedas que se entregará a préstamo
 
-MEDICACIÓN (según tarjeta sanitaria)
+MEDICACIÓN
 - PARACETAMOL 1 gr cada 8 horas alternando con METAMIZOL 575 mg cada 8 horas si dolor
 - OMEPRAZOL 20 mg cada 24 horas vía oral
 - ENOXAPARINA 40 mg cada 24 horas vía subcutánea
@@ -392,7 +392,7 @@ CUIDADOS POSTOPERATORIOS
 - Puede caminar con ayuda de muletas con carga parcial progresiva según le ha explicado su médico, que podrá solicitar en préstamo si precisa.
 - Puede requerir ayuda domiciliaria
 
-MEDICACIÓN (según tarjeta sanitaria)
+MEDICACIÓN
 - METAMIZOL 575mg cada 8 horas vía oral, que puede alternar con PARACETAMOL 1g/8h vía oral si precisa por dolor.
 - NAPROXENO 500 / ESOMEPRAZOL 20 mg cada 12 horas vía oral añadido a lo anterior si precisa por dolor.
 - ENOXAPARINA 40 mg cada 24 horas vía subcutánea.
@@ -437,7 +437,7 @@ CUIDADOS POSTOPERATORIOS
 - Descarga de pie intervenido hasta nuevo aviso en consultas.
 - Puede requerir ayuda domiciliaria
 
-MEDICACIÓN (según tarjeta sanitaria)
+MEDICACIÓN
 - ENOXAPARINA 40 mg cada 24 horas vía subcutánea.
 - METAMIZOL 575mg cada 8 horas vía oral, que puede alternar con PARACETAMOL 1g/8h vía oral si precisa por dolor.
 - OMEPRAZOL 20 mg cada 24h vía oral
@@ -538,7 +538,7 @@ CUIDADOS POSTOPERATORIOS
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
 - Puede requerir ayuda domiciliaria
 
-MEDICACIÓN (según tarjeta sanitaria)
+MEDICACIÓN
 - METAMIZOL 575mg cada 8 horas vía oral, que puede alternar con PARACETAMOL 1g/8h vía oral si precisa por dolor.
 - Si no control del dolor añadir DEXKETOPROFENO 25 mg cada 8 horas
 - OMEPRAZOL 20mg cada 24 horas mientras precise medicación analgésica de forma continuada.
@@ -585,7 +585,7 @@ CUIDADOS POSTOPERATORIOS
 - Evitar cargar peso sobre brazo intervenido hasta nuevo aviso y según plazos marcados.
 - Puede requerir ayuda domiciliaria
 
-MEDICACIÓN (según tarjeta sanitaria)
+MEDICACIÓN
 - METAMIZOL 575mg cada 8 horas vía oral, que puede alternar con PARACETAMOL 1g/8h vía oral si precisa por dolor.
 - NAPROXENO 500/ ESOMEPRAZOL 20 mg cada 12 horas vía oral añadido a lo anterior si precisa por dolor.
 
@@ -629,7 +629,7 @@ CUIDADOS POSTOPERATORIOS
 - Evitar cargar peso sobre brazo intervenido hasta nuevo aviso y según plazos marcados.
 - Puede requerir ayuda domiciliaria
 
-MEDICACIÓN (según tarjeta sanitaria)
+MEDICACIÓN
 - METAMIZOL 575mg cada 8 horas vía oral, que puede alternar con PARACETAMOL 1g/8h vía oral si precisa por dolor.
 - NAPROXENO 500 / ESOMEPRAZOL 20 mg cada 12 horas vía oral añadido a lo anterior si precisa por dolor.
 
@@ -674,7 +674,7 @@ CUIDADOS POSTOPERATORIOS
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
 - Puede requerir ayuda domiciliaria
 
-MEDICACIÓN (según tarjeta sanitaria)
+MEDICACIÓN
 - METAMIZOL 575mg cada 8 horas vía oral durante 5 días, que puede alternar con PARACETAMOL 1g/8h vía oral si precisa por dolor.
 - OMEPRAZOL 20mg cada 24 horas durante 5 días.
 
@@ -711,13 +711,13 @@ IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 ```
 CUIDADOS POSTOPERATORIOS
-- Mantener el brazo  elevado  en cabestrillo
+- Mantener el brazo elevado en cabestrillo
 - Mover activamente los dedos de la extremidad operada.
 - Realizar los ejercicios que su médico le ha explicado.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
 - Puede requerir ayuda domiciliaria
 - NOLOTIL 1 cápsula / 8 horas vía oral.
-- OMEPRAZOL 20 mg/ 24  horas.
+- OMEPRAZOL 20 mg / 24 horas.
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
@@ -751,13 +751,13 @@ IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 ```
 CUIDADOS POSTOPERATORIOS
-- Mantener el brazo  elevado  en cabestrillo
+- Mantener el brazo elevado en cabestrillo
 - Mover activamente los dedos de la extremidad operada.
 - Realizar los ejercicios que su médico le ha explicado.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
 - Puede requerir ayuda domiciliaria
-- NOLOTIL 1 cápsula / 8 horas vía oral,  alternar cada  4  horas  con PARACETAMOL 1 gr/8h si  dolor intenso.
-- Revisión  en  CC EE de COT (${DOCTOR}) en 3 semanas aprox.  para Rx, valoración y  seguimiento.
+- NOLOTIL 1 cápsula / 8 horas vía oral, alternar cada 4 horas con PARACETAMOL 1 gr/8h si dolor intenso.
+- Revisión en CCEE de COT (${DOCTOR}) en 3 semanas aprox. para Rx, valoración y seguimiento.
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
@@ -787,16 +787,16 @@ IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 ```
 CUIDADOS POSTOPERATORIOS
-- Mantener el brazo  elevado  en cabestrillo
-- Mover activamente los dedos de la extremidad operada  y  flexoextensión  del  codo
+- Mantener el brazo elevado en cabestrillo
+- Mover activamente los dedos de la extremidad operada y flexoextensión del codo
 - Realizar los ejercicios que su médico le ha explicado.
-- Prohibido hacer   ejercicios de   rotación  del  brazo, coger peso  y  realizar   actividades   de riesgo.
+- Prohibido hacer ejercicios de rotación del brazo, coger peso y realizar actividades de riesgo.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
 - Puede requerir ayuda domiciliaria
-- METAMIZOL  575 mg / 8 horas vía oral.
-- IBUPROFENO  600 mg/8  horas  via  oral  alterno  con  anterior   si  dolor  intenso
-- OMEPRAZOL 20 mg/ 24  horas.
-- Revisión  en  CC EE de COT (${DOCTOR}) en  3   semanas para Rx, valoración y  seguimiento.
+- METAMIZOL 575 mg / 8 horas vía oral.
+- IBUPROFENO 600 mg / 8 horas vía oral alterno con anterior si dolor intenso
+- OMEPRAZOL 20 mg / 24 horas.
+- Revisión en CCEE de COT (${DOCTOR}) en 3 semanas para Rx, valoración y seguimiento.
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
@@ -827,15 +827,15 @@ IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 ```
 CUIDADOS POSTOPERATORIOS
-- Mantener el brazo  elevado  en cabestrillo
+- Mantener el brazo elevado en cabestrillo
 - Mover activamente los dedos de la extremidad operada.
 - Realizar los ejercicios que su médico le ha explicado.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
 - Puede requerir ayuda domiciliaria
-- METAMIZOL  575 mg / 8 horas vía oral.
-- IBUPROFENO  600 mg/8  horas  via  oral  alterno  con  anterior   si  dolor  intenso
-- OMEPRAZOL 20 mg/ 24  horas.
-- Revisión  en  CC EE de COT (${DOCTOR}) en  3   semanas para Rx, valoración y  seguimiento.
+- METAMIZOL 575 mg / 8 horas vía oral.
+- IBUPROFENO 600 mg / 8 horas vía oral alterno con anterior si dolor intenso
+- OMEPRAZOL 20 mg / 24 horas.
+- Revisión en CCEE de COT (${DOCTOR}) en 3 semanas para Rx, valoración y seguimiento.
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
@@ -867,15 +867,15 @@ IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 ```
 CUIDADOS POSTOPERATORIOS
-- Mantener el brazo  elevado  en cabestrillo
+- Mantener el brazo elevado en cabestrillo
 - Mover activamente los dedos de la extremidad operada.
 - Realizar los ejercicios que su médico le ha explicado.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
 - Puede requerir ayuda domiciliaria
 - METAMIZOL 575 mg / 8 horas vía oral.
-- IBUPROFENO  600 mg/8  horas  via  oral  alterno  con  anterior cada  4  horas,  si  dolor  intenso
-- OMEPRAZOL 20 mg/ 24  horas.
-- Revisión  en  CC EE de COT (${DOCTOR}) en  2 semanas para Rx, cura herida qca y  seguimiento.
+- IBUPROFENO 600 mg / 8 horas vía oral alterno con anterior cada 4 horas, si dolor intenso
+- OMEPRAZOL 20 mg / 24 horas.
+- Revisión en CCEE de COT (${DOCTOR}) en 2 semanas para Rx, cura herida qca y seguimiento.
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
@@ -920,14 +920,14 @@ CUIDADOS POSTOPERATORIOS
 - Aplicar hielo sobre la articulación operada 2 - 3 veces al día durante 20 minutos.
 - Mover activamente los dedos de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
-- Puede caminar con ayuda de 2 muletas  SIN  APOYO de  la pierna intervenida  hasta  nueva orden  (aproximadamente 6  semanas).
-- Realizar ejercicios isométricos de cuádriceps y  movilidad libre de  la rodilla en  descarga.
+Puede caminar con ayuda de 2 muletas SIN APOYO de la pierna intervenida hasta nueva orden (aproximadamente 6 semanas).
+- Realizar ejercicios isométricos de cuádriceps y movilidad libre de la rodilla en descarga.
 - Puede requerir ayuda domiciliaria
 - IBUPROFENO 600 mg / 8 horas vía oral.
 - PARACETAMOL 1 gr cada 8 horas
-- ENOXAPARINA  40 mg /24 horas vía subcutánea
+- ENOXAPARINA 40 mg / 24 horas vía subcutánea.
 - Retirada de puntos por ATS DE ZONA en 12/15 días.
-- Revisión en CC EE  de  COT (${DOCTOR})  en  3 semanas  para ver evolución.
+- Revisión en CCEE de COT (${DOCTOR}) en 3 semanas para ver evolución.
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
@@ -966,14 +966,14 @@ CUIDADOS POSTOPERATORIOS
 - Aplicar hielo sobre la articulación operada 2 - 3 veces al día durante 20 minutos.
 - Mover activamente los dedos de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
-- Puede caminar con ayuda de 2 muletas  SIN APOYO  de  la pierna intervenida.
-- Realizar ejercicios isométricos de cuádriceps y  movilidad limitada de la rodilla 0º-60º hasta nueva orden
+Puede caminar con ayuda de 2 muletas SIN APOYO de la pierna intervenida.
+- Realizar ejercicios isométricos de cuádriceps y movilidad limitada de la rodilla 0º-60º hasta nueva orden
 - Puede requerir ayuda domiciliaria
 - IBUPROFENO 600 mg / 8 horas vía oral.
 - PARACETAMOL 1 g / 8 horas (alterno con anterior cada 4 horas, si dolor intenso)
-- ENOXAPARINA  40 mg/24 horas - vía subcutánea
+- ENOXAPARINA 40 mg / 24 horas vía subcutánea.
 - Retirada de puntos por ATS DE ZONA en 12/15 días.
-- Revisión en CC EE  de  COT (${DOCTOR})  en  3/4 semanas  para ver evolución.
+- Revisión en CCEE de COT (${DOCTOR}) en 3/4 semanas para ver evolución.
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
@@ -1011,15 +1011,15 @@ CUIDADOS POSTOPERATORIOS
 - Aplicar hielo sobre la articulación operada 2 - 3 veces al día durante 20 minutos.
 - Mover activamente los dedos de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
-- Puede caminar con ayuda de 2 muletas  SIN APOYO  de  la pierna intervenida.
-- Realizar ejercicios isométricos de cuádriceps e  isquiotibiales.
+Puede caminar con ayuda de 2 muletas SIN APOYO de la pierna intervenida.
+- Realizar ejercicios isométricos de cuádriceps e isquiotibiales.
 - Puede requerir ayuda domiciliaria
 - IBUPROFENO 600 mg / 8 horas vía oral.
-- METAMIZOL 575  mg   /  8 horas (alterno  con anterior cada 4  horas,  si  dolor intenso)
+- METAMIZOL 575 mg / 8 horas (alterno con anterior cada 4 horas, si dolor intenso)
 - PARACETAMOL 1 gr cada 8 horas
-- ENOXAPARINA  40 mg/24 horas - vía subcutánea
+- ENOXAPARINA 40 mg / 24 horas vía subcutánea.
 - Retirada de puntos por ATS DE ZONA en 12/15 días.
-- Revisión en CC EE  de  COT (${DOCTOR})  en  3 semanas  para ver evolución(Forzar si  es preciso!!!)
+- Revisión en CCEE de COT (${DOCTOR}) en 3 semanas para ver evolución (Forzar si es preciso!!!)
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
@@ -1029,21 +1029,21 @@ SÍNTOMAS DE ALERTA
 
 Postoperatorio:
 - 0-2 semanas:
-- Rodillera   bloqueada en  extensión  y  descarga.
-- Isométricos de   cuádriceps e  isquiotibiales.
+- Rodillera bloqueada en extensión y descarga.
+- Isométricos de cuádriceps e isquiotibiales.
 - EPE.
 - Movilizaciones de la patela.
 - 2-4 semanas:
-- Carga  progresiva con  rodilla en  extensión ayudado  por  muletas.
-- Retirada   de la inmovilización  y  comiezo  de protocolo de  RHB  para conseguir   rango  de  movilidad  0-90º
+- Carga progresiva con rodilla en extensión ayudado por muletas.
+- Retirada de la inmovilización y comienzo de protocolo de RHB para conseguir rango de movilidad 0-90º
 - 6ª semana:
-- Ejercicios   activos de movilidad.
-- Se retiran  las  muletas.
+- Ejercicios activos de movilidad.
+- Se retiran las muletas.
 - 8ª semana:
-- Movilidad activa  y  pasiva completos.
-- Bicicleta estática  y  natación.
-- 16ª  semana:
-- Running  y  retorno  a actividades deportivas.
+- Movilidad activa y pasiva completos.
+- Bicicleta estática y natación.
+- 16ª semana:
+- Running y retorno a actividades deportivas.
 ```
 
 ##### `car_lrr_ficat_plicatura` — CAR Ficat + plicatura ARI (Lanny Johnson)
@@ -1079,12 +1079,12 @@ CUIDADOS POSTOPERATORIOS
 - Puede caminar con ayuda bastones con apoyo de la pierna intervenida.
 - Puede requerir ayuda domiciliaria
 - NOLOTIL 1 cápsula / 8 horas vía oral.
-- Si  dolor  intenso  alternar cada  4  horas con  IBUPROFENO  600 mg/ 8  horas
+- Si dolor intenso alternar cada 4 horas con IBUPROFENO 600 mg / 8 horas
 - PARACETAMOL 1 gr cada 8 horas
-- OMEPRAZOL 20 mg/ 24 horas.
-- BEMIPARINA  3500 UI / 24 horas vía subcutánea / 3 semanas.
-- Revisión en CC EE de COT (${DOCTOR}) en  2/3 semanas para retirar férula y seguimiento.
-- Al  alta  solicitar cita en  SERVICIO  DE  REHABILITACIÓN  para inicio  de fisioterapia tras retirada de   férula  de yeso
+- OMEPRAZOL 20 mg / 24 horas.
+- ENOXAPARINA 40 mg / 24 horas vía subcutánea durante 3 semanas.
+- Revisión en CCEE de COT (${DOCTOR}) en 2/3 semanas para retirar férula y seguimiento.
+- Al alta solicitar cita en SERVICIO DE REHABILITACIÓN para inicio de fisioterapia tras retirada de férula de yeso
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
@@ -1126,24 +1126,24 @@ CUIDADOS POSTOPERATORIOS
 - Mover activamente los dedos de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
 - Puede caminar con ayuda bastones con apoyo parcial de la pierna intervenida.
-- Ejercicios  isométricos de cuádriceps y de elevación  con  pierna   extendida  (EPE) aproximadamente  unas  15-20 veces cada  hora.
-- Mantener   la ortesis   bloqueada  en  extensión completa  durante   primera semana.
+- Ejercicios isométricos de cuádriceps y de elevación con pierna extendida (EPE) aproximadamente unas 15-20 veces cada hora.
+- Mantener la ortesis bloqueada en extensión completa durante primera semana.
 
-Movilidad  progresiva   a  razón  de  :
-- 2º semana: BA de  0º  a 30º.
-- 3º y  4º semanas:  BA de  0º a 60º.
-- 5º  y  6º semanas:  BA  de  0º a  90º. (No  está  permitido  flexionar   más de  90º  en  las  primeras  4  semanas).
-- A partir de las   6 semanas  movilidad  libre sin ortesis.
-- Reincorporación  a  la actividad deportiva  de forma progresiva comenzando  con carrera suave a partir de los 3 meses.
-- Deportes de impacto  con   cambios de ritmo  y  dirección  más bruscos   entre  los 4  y  6  meses.
+Movilidad progresiva a razón de:
+- 2º semana: BA de 0º a 30º.
+- 3º y 4º semanas: BA de 0º a 60º.
+- 5º y 6º semanas: BA de 0º a 90º. (No está permitido flexionar más de 90º en las primeras 4 semanas).
+- A partir de las 6 semanas movilidad libre sin ortesis.
+- Reincorporación a la actividad deportiva de forma progresiva comenzando con carrera suave a partir de los 3 meses.
+- Deportes de impacto con cambios de ritmo y dirección más bruscos entre los 4 y 6 meses.
 - Puede requerir ayuda domiciliaria
 - METAMIZOL 575 mg / 8 horas vía oral.
-- Si  dolor  intenso  alternar cada  4  horas con  IBUPROFENO  600 mg/ 8  horas.
+- Si dolor intenso alternar cada 4 horas con IBUPROFENO 600 mg / 8 horas.
 - PARACETAMOL 1 gr cada 8 horas
-- OMEPRAZOL 20 mg/ 24 horas.
-- BEMIPARINA  3500 UI / 24 horas vía subcutánea / 3 semanas.
-- Revisión en CC EE de COT (${DOCTOR}) en  2/3 semanas para seguimiento.
-- Al  alta  solicitar cita en  SERVICIO  DE  REHABILITACIÓN  para inicio  de fisioterapia tras retirada de   férula  de yeso
+- OMEPRAZOL 20 mg / 24 horas.
+- ENOXAPARINA 40 mg / 24 horas vía subcutánea durante 3 semanas.
+- Revisión en CCEE de COT (${DOCTOR}) en 2/3 semanas para seguimiento.
+- Al alta solicitar cita en SERVICIO DE REHABILITACIÓN para inicio de fisioterapia tras retirada de férula de yeso
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
@@ -1182,19 +1182,19 @@ IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 ```
 CUIDADOS POSTOPERATORIOS
 - Aplicar hielo sobre la articulación operada 2 - 3 veces al día durante 20 minutos.
-- Mover activamente los dedos,  tobillo y  rodilla  de la extremidad operada.
+- Mover activamente los dedos, tobillo y rodilla de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
-- Puede caminar con ayuda de 2 muletas  SIN  APOYO  de  la pierna intervenida.
-- Realizar ejercicios isométricos de cuádriceps y  movilidad libre de  la rodilla
+Puede caminar con ayuda de 2 muletas SIN APOYO de la pierna intervenida.
+- Realizar ejercicios isométricos de cuádriceps y movilidad libre de la rodilla
 - Puede requerir ayuda domiciliaria
 - IBUPROFENO 600 mg / 8 horas vía oral.
-- METAMIZOL  1  cápsula/ 8 horas via oral  alterno  con  Ibuprofeno  cada  4  horas.
+- METAMIZOL 1 cápsula / 8 horas vía oral alterno con Ibuprofeno cada 4 horas.
 - PARACETAMOL 1 gr cada 8 horas
-- OMEPRAZOL  20 mg/ 24  horas
-- BEMIPARINA 3500 UI /24 horas vía subcutánea
+- OMEPRAZOL 20 mg / 24 horas
+- ENOXAPARINA 40 mg / 24 horas vía subcutánea.
 
-Curas por  ATS DE  ZONA con  Betadine  cada  48/72 horas.
-- Revisión en CC EE  de  COT (${DOCTOR})  en  3 semanas  para ver evolución.
+Curas por ATS DE ZONA con Betadine cada 48/72 horas.
+- Revisión en CCEE de COT (${DOCTOR}) en 3 semanas para ver evolución.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
@@ -1234,19 +1234,19 @@ IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 ```
 CUIDADOS POSTOPERATORIOS
 - Aplicar hielo sobre la articulación operada 2 - 3 veces al día durante 20 minutos.
-- Mover activamente los dedos,  tobillo y  rodilla  de la extremidad operada.
+- Mover activamente los dedos, tobillo y rodilla de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
-- Puede caminar con ayuda de 2 muletas  SIN  APOYO  de  la pierna intervenida.
-- Realizar ejercicios isométricos de cuádriceps y  movilidad libre de  la rodilla
+Puede caminar con ayuda de 2 muletas SIN APOYO de la pierna intervenida.
+- Realizar ejercicios isométricos de cuádriceps y movilidad libre de la rodilla
 - Puede requerir ayuda domiciliaria
 - IBUPROFENO 600 mg / 8 horas vía oral.
-- METAMIZOL  1  cápsula/ 8 horas via oral  alterno  con  Ibuprofeno  cada  4  horas.
+- METAMIZOL 1 cápsula / 8 horas vía oral alterno con Ibuprofeno cada 4 horas.
 - PARACETAMOL 1 gr cada 8 horas
-- OMEPRAZOL  20 mg/ 24  horas
-- ENOXAPARINA 60 mg /24 horas vía subcutánea
+- OMEPRAZOL 20 mg / 24 horas
+- ENOXAPARINA 60 mg / 24 horas vía subcutánea
 
-Curas por  ATS DE  ZONA con  Betadine  cada  48/72 horas.
-- Revisión en CC EE  de  COT (${DOCTOR})  en  3 semanas  para ver evolución.
+Curas por ATS DE ZONA con Betadine cada 48/72 horas.
+- Revisión en CCEE de COT (${DOCTOR}) en 3 semanas para ver evolución.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
@@ -1285,19 +1285,19 @@ IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 ```
 CUIDADOS POSTOPERATORIOS
 - Aplicar hielo sobre la articulación operada 2 - 3 veces al día durante 20 minutos.
-- Mover activamente los dedos,  tobillo y  rodilla  de la extremidad operada.
+- Mover activamente los dedos, tobillo y rodilla de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
-- Puede caminar con ayuda de 2 muletas  SIN  APOYO  de  la pierna intervenida.
-- Realizar ejercicios isométricos de cuádriceps y  movilidad libre de  la rodilla
+Puede caminar con ayuda de 2 muletas SIN APOYO de la pierna intervenida.
+- Realizar ejercicios isométricos de cuádriceps y movilidad libre de la rodilla
 - Puede requerir ayuda domiciliaria
 - IBUPROFENO 600 mg / 8 horas vía oral.
-- METAMIZOL  1  cápsula/ 8 horas via oral  alterno  con  Ibuprofeno  cada  4  horas.
+- METAMIZOL 1 cápsula / 8 horas vía oral alterno con Ibuprofeno cada 4 horas.
 - PARACETAMOL 1 gr cada 8 horas
-- OMEPRAZOL  20 mg/ 24  horas
-- ENOXAPARINA 60 mg /24 horas vía subcutánea
+- OMEPRAZOL 20 mg / 24 horas
+- ENOXAPARINA 60 mg / 24 horas vía subcutánea
 
-Curas por  ATS DE  ZONA con  Betadine  cada  48/72 horas.
-- Revisión en CC EE  de  COT (${DOCTOR})  en  3 semanas  para ver evolución.
+Curas por ATS DE ZONA con Betadine cada 48/72 horas.
+- Revisión en CCEE de COT (${DOCTOR}) en 3 semanas para ver evolución.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
@@ -1328,18 +1328,18 @@ IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 ```
 CUIDADOS POSTOPERATORIOS
 - Aplicar hielo sobre la articulación operada 2 - 3 veces al día durante 20 minutos.
-- Mover activamente los dedos,  tobillo y  rodilla  de la extremidad operada.
+- Mover activamente los dedos, tobillo y rodilla de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
-- Puede caminar con ayuda de 2 muletas  SIN  APOYO  de  la pierna intervenida.
-- Realizar ejercicios isométricos de cuádriceps y  movilidad libre de  la rodilla
+Puede caminar con ayuda de 2 muletas SIN APOYO de la pierna intervenida.
+- Realizar ejercicios isométricos de cuádriceps y movilidad libre de la rodilla
 - Puede requerir ayuda domiciliaria
 - IBUPROFENO 600 mg / 8 horas vía oral.
-- PARACETAMOL  1 gra/ 8 horas via oral  alterno  con  Ibuprofeno  cada  4  horas.
-- OMEPRAZOL  20 mg/ 24  horas
-- CLEXANE 40 mg /24 horas vía subcutánea hasta deambulación  normal con carga completa.
+- PARACETAMOL 1 gra / 8 horas vía oral alterno con Ibuprofeno cada 4 horas.
+- OMEPRAZOL 20 mg / 24 horas
+- ENOXAPARINA 40 mg / 24 horas vía subcutánea hasta deambulación normal con carga completa.
 
-Curas por  ATS DE  ZONA cada  48/72 horas.
-- Revisión en CC EE  de  COT (${DOCTOR})  en  3 semanas  para ver evolución.
+Curas por ATS DE ZONA cada 48/72 horas.
+- Revisión en CCEE de COT (${DOCTOR}) en 3 semanas para ver evolución.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
@@ -1374,22 +1374,22 @@ CUIDADOS POSTOPERATORIOS
 - Aplicar hielo sobre la articulación operada 3 - 4 veces al día durante 20 minutos.
 - Mover activamente los dedos de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
-- Puede caminar con ayuda de 2 muletas con apoyo de la pierna intervenida
+Puede caminar con ayuda de 2 muletas con apoyo de la pierna intervenida
 - Puede requerir ayuda domiciliaria
 
-MEDICACION
-- ENOXAPARINA 40 mg /24 horas vía subcutánea  durante 10 días.
+MEDICACIÓN
+- ENOXAPARINA 40 mg / 24 horas vía subcutánea durante 10 días.
 
-ANALGESIA BASAL:
-- -PARACETAMOL 1 g/8h oral alterno con combinación de Dexketoprofeno 25 mg y Tramadol 75 mg (Enanplus) cada 8 horas oral durante 3 días.
+ANALGESIA BASAL
+- PARACETAMOL 1 g/8h oral alterno con combinación de Dexketoprofeno 25 mg y Tramadol 75 mg (Enanplus) cada 8 horas oral durante 3 días.
 - Mientras dure el tratamiento con AINE: Omeprazol 20 mg/24h oral
-- -ANALGESIA DE RESCATE: Metamizol 575 mg/8h oral.
+- ANALGESIA DE RESCATE: Metamizol 575 mg/8h oral.
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
 
 REVISIÓN
-- Antes de irse de alta  del  hospital  solicitar  en  Admisión  de  Consultas  revisión en CC EE  de  COT (${DOCTOR})  en   unas  3/4 semanas  para ver evolución.
+- Antes de irse de alta del hospital solicitar en Admisión de Consultas revisión en CCEE de COT (${DOCTOR}) en unas 3/4 semanas para ver evolución.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
@@ -1448,34 +1448,40 @@ IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 CUIDADOS POSTOPERATORIOS
 - Mover activamente los dedos de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
-- Aplicar  hielo  sobre  vendaje  4 veces al  día  durante 30 minutos.
-- Puede caminar con ayuda de 2 muletas SIN  APOYO  inicial de la pierna intervenida:
-- Semana 0 – semana 3: descarga completa.
-- Semana 3 – semana 6: carga parcial con ayuda de bastones.
-- A partir  semana 6: puede caminar libremente sin  bastones (apoyo  completo).
-- Aumento  progresivo  de la  movilidad para protección de la sutura meniscal:
-- Semana 0 - semana 2: 0º a 60º.
-- Semana 2 - semana 4:  0º  a 90º.
-- Semana 4- semana 6: 90º a 120º.
-- A partir  semana 6:  movilidad libre.
-- Realizar ejercicios isométricos de cuádriceps y elevación con  pierna extendida.
-- Movilizaciones pasivas de  rótula 4/5 veces al  día  durante  15 minutos.
+- Aplicar hielo sobre rodilla 4 veces al día durante 30 minutos.
 - Puede requerir ayuda domiciliaria
 
-MEDICACION:
-- ENOXAPARINA 40 mg /24 horas vía subcutánea  durante 10 días.
+CARGA
+Puede caminar con ayuda de 2 muletas SIN APOYO inicial de la pierna intervenida:
+- Semana 0 – semana 3: descarga completa.
+- Semana 3 – semana 6: carga parcial con ayuda de bastones.
+- A partir semana 6: puede caminar libremente sin bastones (apoyo completo).
 
-ANALGESIA BASAL:
-- -PARACETAMOL 1 g/8h oral alterno con combinación de Dexketoprofeno 25 mg y Tramadol 75 mg (Enanplus) cada 8 horas oral durante 3 días.
+MOVILIDAD
+Aumento progresivo de la movilidad para protección de la sutura meniscal:
+- Semana 0 - semana 2: 0º a 60º.
+- Semana 2 - semana 4: 0º a 90º.
+- Semana 4- semana 6: 90º a 120º.
+- A partir semana 6: movilidad libre.
+
+REHABILITACIÓN
+- Realizar ejercicios isométricos de cuádriceps y elevación con pierna extendida.
+- Movilizaciones pasivas de rótula 4/5 veces al día durante 15 minutos.
+
+MEDICACIÓN
+- ENOXAPARINA 40 mg / 24 horas vía subcutánea durante 10 días.
+
+ANALGESIA BASAL
+- PARACETAMOL 1 g/8h oral alterno con combinación de Dexketoprofeno 25 mg y Tramadol 75 mg (Enanplus) cada 8 horas oral durante 3 días.
 - Mientras dure el tratamiento con AINE: Omeprazol 20 mg/24h oral
 - Si náuseas: Ondansetrón 4 mg/8h oral
-- -ANALGESIA DE RESCATE: Metamizol 575 mg/8h oral.
+- ANALGESIA DE RESCATE: Metamizol 575 mg/8h oral.
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
 
 REVISIÓN
-- Revisión en CCEE de COT (${DOCTOR}) a  las  2 semanas  para ver evolución y ampliar  rango  de movilidad.
+- Revisión en CCEE de COT (${DOCTOR}) a las 2 semanas para ver evolución y ampliar rango de movilidad.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
@@ -1508,19 +1514,19 @@ CUIDADOS POSTOPERATORIOS
 - Aplicar hielo sobre la articulación operada 3 - 4 veces al día durante 20 minutos.
 - Mover activamente los dedos de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
-- Puede caminar con ayuda de 2 muletas con apoyo de la pierna intervenida
+Puede caminar con ayuda de 2 muletas con apoyo de la pierna intervenida
 - Realizar ejercicios isométricos de cuádriceps y movilidad libre de la rodilla.
 - Puede requerir ayuda domiciliaria
-- ENANPLUS 1   comp/ 8  h
+- ENANPLUS 1 comp / 8 h
 - PARACETAMOL 1 gr cada 8 horas
-- INHIXA 40 / 24 horas vía subcutánea durante  10  días
+- ENOXAPARINA 40 mg / 24 horas vía subcutánea durante 10 días.
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
 
 REVISIÓN
-- Revisión en CCEE de COT (${DOCTOR}) en 3/4 semanas  para seguir  evolución.
-- Continuar  con sesiones de Rehabilitación  para tratar de   mantener  la  movilidad (SOLICITAR CITA  ANTES DEL  ALTA)
+- Revisión en CCEE de COT (${DOCTOR}) en 3/4 semanas para seguir evolución.
+- Continuar con sesiones de Rehabilitación para tratar de mantener la movilidad (SOLICITAR CITA ANTES DEL ALTA)
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
@@ -1553,14 +1559,14 @@ CUIDADOS POSTOPERATORIOS
 - Aplicar hielo sobre la articulación operada 2 - 3 veces al día durante 20 minutos.
 - Mover activamente los dedos de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
-- Puede caminar con ayuda de 2 muletas  con  apoyo  de  la pierna intervenida.
-- Realizar ejercicios isométricos de cuádriceps y  movilidad libre de  la rodilla
+Puede caminar con ayuda de 2 muletas con apoyo de la pierna intervenida.
+- Realizar ejercicios isométricos de cuádriceps y movilidad libre de la rodilla
 - Puede requerir ayuda domiciliaria
-- METAMIZOL  575 mg /8 horas vía oral.
+- METAMIZOL 575 mg / 8 horas vía oral.
 - PARACETAMOL 1 gr cada 8 horas
-- BEMIPARINA  3500 UI /24 horas vía subcutánea  durante 10 días.
+- ENOXAPARINA 40 mg / 24 horas vía subcutánea durante 10 días.
 - Retirada de puntos por ATS DE ZONA en 12/15 días.
-- Revisión en CC EE  de  COT (${DOCTOR})  en unas  4-5   semanas  para ver evolución.
+- Revisión en CCEE de COT (${DOCTOR}) en unas 4-5 semanas para ver evolución.
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
@@ -1596,14 +1602,14 @@ CUIDADOS POSTOPERATORIOS
 - Aplicar hielo sobre la articulación operada 2 - 3 veces al día durante 20 minutos.
 - Mover activamente los dedos de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
-- Puede caminar con ayuda de 2 muletas con apoyo de la pierna intervenida.
+Puede caminar con ayuda de 2 muletas con apoyo de la pierna intervenida.
 - Realizar ejercicios isométricos de cuádriceps y movilidad libre de la rodilla.
 - Puede requerir ayuda domiciliaria
 - METAMIZOL 575 mg /8 horas vía oral.
 - PARACETAMOL 1 gr cada 8 horas
-- BEMIPARINA 3500 UI /24 horas vía subcutánea durante 10 días.
+- ENOXAPARINA 40 mg / 24 horas vía subcutánea durante 10 días.
 - Retirada de puntos por ATS DE ZONA en 12/15 días.
-- Revisión en CC EE de COT (${DOCTOR}) en unas 4-5 semanas para ver evolución.
+- Revisión en CCEE de COT (${DOCTOR}) en unas 4-5 semanas para ver evolución.
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
@@ -1640,14 +1646,14 @@ CUIDADOS POSTOPERATORIOS
 - Aplicar hielo sobre la articulación operada 2 - 3 veces al día durante 20 minutos.
 - Mover activamente los dedos de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
-- Puede caminar con ayuda de 2 muletas  con  apoyo  de  la pierna intervenida.
-- Realizar ejercicios isométricos de cuádriceps y  movilidad libre de  la rodilla
+Puede caminar con ayuda de 2 muletas con apoyo de la pierna intervenida.
+- Realizar ejercicios isométricos de cuádriceps y movilidad libre de la rodilla
 - Puede requerir ayuda domiciliaria
 - IBUPROFENO 600 mg / 8 horas vía oral.
 - PARACETAMOL 1 gr cada 8 horas
-- ENOXAPARINA 40 mg /24 horas vía subcutánea  durante 15 días.
+- ENOXAPARINA 40 mg / 24 horas vía subcutánea durante 15 días.
 - Retirada de puntos por ATS DE ZONA en 12/15 días.
-- Revisión en CC EE  de  COT (${DOCTOR})  en  3 semanas  para ver evolución.
+- Revisión en CCEE de COT (${DOCTOR}) en 3 semanas para ver evolución.
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
@@ -1684,18 +1690,18 @@ CUIDADOS POSTOPERATORIOS
 - Aplicar hielo sobre la articulación operada 3 - 4 veces al día durante 20 minutos.
 - Mover activamente los dedos de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
-- Puede caminar con ayuda de 2 muletas con apoyo de la pierna intervenida
+Puede caminar con ayuda de 2 muletas con apoyo de la pierna intervenida
 - Realizar ejercicios isométricos de cuádriceps y movilidad libre de la rodilla
 - Puede requerir ayuda domiciliaria
-- ENANPLUS  75 mg/25 mg  / 8 horas vía oral durante  una semana.
+- ENANPLUS 75 mg/25 mg / 8 horas vía oral durante una semana.
 - PARACETAMOL 1 gr cada 8 horas
-- ENOXAPARINA 40 mg /24 horas vía subcutánea  durante 10 días.
+- ENOXAPARINA 40 mg / 24 horas vía subcutánea durante 10 días.
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
 
 REVISIÓN
-- Antes de irse de alta  del  hospital  solicitar  en  Admisión  de  Consultas  revisión en CC EE  de  COT (${DOCTOR})  en   unas  3/4 semanas  para ver evolución.
+- Antes de irse de alta del hospital solicitar en Admisión de Consultas revisión en CCEE de COT (${DOCTOR}) en unas 3/4 semanas para ver evolución.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
@@ -1730,19 +1736,19 @@ CUIDADOS POSTOPERATORIOS
 - Aplicar hielo sobre la articulación operada 3 - 4 veces al día durante 20 minutos.
 - Mover activamente los dedos de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
-- Puede caminar con ayuda de 2 muletas con apoyo de la pierna intervenida
+Puede caminar con ayuda de 2 muletas con apoyo de la pierna intervenida
 - Realizar ejercicios isométricos de cuádriceps y movilidad libre de la rodilla
 - Puede requerir ayuda domiciliaria
-- IBUPROFENO  600 mg / 8 horas vía oral.
-- Alternar cada 4  horas con METAMIZOL 575 mg/8  horas si  dolor intenso
+- IBUPROFENO 600 mg / 8 horas vía oral.
+- Alternar cada 4 horas con METAMIZOL 575 mg / 8 horas si dolor intenso
 - PARACETAMOL 1 gr cada 8 horas
-- ENOXAPARINA  40 mg  / 24 horas vía subcutánea.
+- ENOXAPARINA 40 mg / 24 horas vía subcutánea.
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
 
 REVISIÓN
-- Revisión en CCEE de COT (${DOCTOR}) en 3 semanas  para seguir  evolución.
+- Revisión en CCEE de COT (${DOCTOR}) en 3 semanas para seguir evolución.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
@@ -1782,26 +1788,16 @@ CUIDADOS POSTOPERATORIOS
 - Mover activamente los dedos de la extremidad operada.
 - Puede requerir ayuda domiciliaria
 
-MEDICACION (incluida en su tarjeta sanitaria):
+MEDICACIÓN
 - METAMIZOL 1 cápsula / 8 horas vía oral.
 - PARACETAMOL 1 g / 8 horas, alterno con anterior cada 4 horas si dolor intenso.
 - TRAMADOL 50 mg cada 12 horas como rescate durante 10 días
-- ENOXAPARINA 3500UI / 24 horas vía subcutánea durante 6 semanas.
+- ENOXAPARINA 40 mg / 24 horas vía subcutánea durante 6 semanas.
 
-Signos de alarma de infección
-- Fiebre persistente (mayor de 38 °C)
-- Escalofríos intensos
-- Enrojecimiento, sensibilidad o hinchazón crecientes en la herida
-- Secreción por la herida
-Signos de alarma de trombosis venosa
-- Dolor en la pierna o pantorrilla no relacionado con la incisión
-- Sensibilidad o enrojecimiento por encima o por debajo de la rodilla
-- Hinchazón creciente en pantorrilla, tobillo o pie
-- En casos muy raros, un coágulo puede desplazarse al pulmón y ser potencialmente mortal. Signos de embolia pulmonar:
-- Dificultad respiratoria
-- Dolor torácico repentino
-- Dolor localizado en el pecho al toser
-- Informa a tu médico de inmediato si presentas alguno de estos síntomas.
+SÍNTOMAS DE ALERTA
+- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, mala evolución de la herida (enrojecimiento, hinchazón, secreción), o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
+- Signos de trombosis venosa: dolor en la pierna o pantorrilla no relacionado con la incisión, hinchazón creciente en pantorrilla, tobillo o pie.
+- Signos de embolia pulmonar: dificultad respiratoria, dolor torácico repentino.
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
@@ -1934,20 +1930,20 @@ CUIDADOS POSTOPERATORIOS
 - Mover activamente los dedos de la extremidad operada.
 - Realizar los ejercicios que su médico le ha explicado.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
-- Puede  caminar con ayuda de un andador.
+- Puede caminar con ayuda de un andador.
 - Puede requerir ayuda domiciliaria
 
-MEDICACIÓN (según tarjeta sanitaria)
+MEDICACIÓN
 - NAPROXENO 550 mg / 8 horas vía oral.
-- PARACETAMOL 1 gr/  8  horas, alterno  con anterior cada   4   horas si  dolor  intenso.
-- OMEPRAZOL 20 mg/ 24  horas.
-- ENOXAPARINA 40 mg  / 24 horas vía oral / 4 semanas
+- PARACETAMOL 1 gr / 8 horas, alterno con anterior cada 4 horas si dolor intenso.
+- OMEPRAZOL 20 mg / 24 horas.
+- ENOXAPARINA 40 mg / 24 horas vía oral / 4 semanas
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
 
 REVISIÓN
-- Solicitar revisión en Admisión del  Hospital  para  CCEE Revisión Hospitalaria de COT (${DOCTOR}) en 4 semanas.
+- Solicitar revisión en Admisión del Hospital para CCEE Revisión Hospitalaria de COT (${DOCTOR}) en 4 semanas.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
@@ -1991,14 +1987,14 @@ CUIDADOS POSTOPERATORIOS
 - Mover activamente los dedos de la extremidad operada.
 - Realizar los ejercicios que su médico le ha explicado.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
-- Puede  caminar con ayuda de un andador.
+- Puede caminar con ayuda de un andador.
 - Puede requerir ayuda domiciliaria
-- METAMIZOL  1 cápsula / 8 horas vía oral.
-- PARACETAMOL 1 gr/  8  horas, alterno  con anterior cada   4   horas si  dolor  intenso.
-- OMEPRAZOL 20 mg/ 24  horas.
-- ENOXAPARINA 40 mg  / 24 horas vía oral / 4 semanas
-- Revisión  en  CC EE de COT (${DOCTOR} ) en 4 semanas  para valoración y  seguimiento.
-- Solicitar cita en  CCEE  del  Servicio  de  Rehabilitación  para inicio fisioterapia
+- METAMIZOL 1 cápsula / 8 horas vía oral.
+- PARACETAMOL 1 gr / 8 horas, alterno con anterior cada 4 horas si dolor intenso.
+- OMEPRAZOL 20 mg / 24 horas.
+- ENOXAPARINA 40 mg / 24 horas vía oral / 4 semanas
+- Revisión en CCEE de COT (${DOCTOR}) en 4 semanas para valoración y seguimiento.
+- Solicitar cita en CCEE del Servicio de Rehabilitación para inicio fisioterapia
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
@@ -2043,25 +2039,24 @@ CUIDADOS POSTOPERATORIOS
 Recomendaciones:
 - Mover activamente los dedos de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
-- Aplicar  hielo  sobre  vendaje  4 veces al  día  durante 30 minutos.
-- Puede caminar con ayuda de 2 muletas apoyo parcial de la pierna intervenida y  movilidad   libre   según tolerancia.
+- Aplicar hielo sobre rodilla 4 veces al día durante 30 minutos.
+Puede caminar con ayuda de 2 muletas apoyo parcial de la pierna intervenida y movilidad libre según tolerancia.
 - Realizar ejercicios de cuádriceps y movilidad de la rodilla.
-- Movilizaciones pasivas de  rótula 4/5 veces al  día  durante  15 minutos.
+- Movilizaciones pasivas de rótula 4/5 veces al día durante 15 minutos.
 - Puede requerir ayuda domiciliaria
 
-MEDICACIÓN (según tarjeta sanitaria)
-- ENANPLUS  75 mg/25 mg  / 8 horas vía oral.
+MEDICACIÓN
+- ENANPLUS 75 mg/25 mg / 8 horas vía oral.
 - PARACETAMOL 1 gr cada 8 horas
-- INHIXA 40 mg /24 horas vía subcutánea  durante 3 semanas.
+- ENOXAPARINA 40 mg / 24 horas vía subcutánea durante 3 semanas.
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
 
 REVISIÓN
-
-Antes de irse de alta  del  hospital:
-- Solicitar  cita en  Admisión  de  Consultas Externas para revisión en CC EE  de  COT (${DOCTOR})  en  2/3   semanas  para ver evolución.
-- Solicitar  cita en  Servicio de  Rehabilitación  para  seguimiento  postoperatorio.
+Antes de irse de alta del hospital:
+- Solicitar cita en Admisión de Consultas Externas para revisión en CCEE de COT (${DOCTOR}) en 2/3 semanas para ver evolución.
+- Solicitar cita en Servicio de Rehabilitación para seguimiento postoperatorio.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
@@ -2101,25 +2096,24 @@ CUIDADOS POSTOPERATORIOS
 Recomendaciones:
 - Mover activamente los dedos de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
-- Aplicar  hielo  sobre  vendaje  4 veces al  día  durante 30 minutos.
-- Puede caminar con ayuda de 2 muletas apoyo parcial de la pierna intervenida y  movilidad   libre   según tolerancia.
+- Aplicar hielo sobre rodilla 4 veces al día durante 30 minutos.
+Puede caminar con ayuda de 2 muletas apoyo parcial de la pierna intervenida y movilidad libre según tolerancia.
 - Realizar ejercicios de cuádriceps y movilidad de la rodilla.
-- Movilizaciones pasivas de  rótula 4/5 veces al  día  durante  15 minutos.
+- Movilizaciones pasivas de rótula 4/5 veces al día durante 15 minutos.
 - Puede requerir ayuda domiciliaria
 
-MEDICACIÓN (según tarjeta sanitaria)
-- ENANPLUS  75 mg/25 mg  / 8 horas vía oral.
+MEDICACIÓN
+- ENANPLUS 75 mg/25 mg / 8 horas vía oral.
 - PARACETAMOL 1 gr cada 8 horas
-- INHIXA 40 mg /24 horas vía subcutánea  durante 3 semanas.
+- ENOXAPARINA 40 mg / 24 horas vía subcutánea durante 3 semanas.
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
 
 REVISIÓN
-
-Antes de irse de alta  del  hospital:
-- Solicitar  cita en  Admisión  de  Consultas Externas para revisión en CC EE  de  COT (${DOCTOR})  en  3   semanas  para ver evolución.
-- Solicitar  cita en  Servicio de  Rehabilitación  para  seguimiento  postoperatorio.
+Antes de irse de alta del hospital:
+- Solicitar cita en Admisión de Consultas Externas para revisión en CCEE de COT (${DOCTOR}) en 3 semanas para ver evolución.
+- Solicitar cita en Servicio de Rehabilitación para seguimiento postoperatorio.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
@@ -2154,41 +2148,40 @@ CUIDADOS POSTOPERATORIOS
 Semana 0º-2ª:
 - Mover activamente los dedos de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
-- Aplicar  hielo  sobre  vendaje  4 veces al  día  durante 30 minutos.
-- Ejercicios isométricos, de cuádriceps  y  EPE desde el  inicio.
+- Aplicar hielo sobre rodilla 4 veces al día durante 30 minutos.
+- Ejercicios isométricos, de cuádriceps y EPE desde el inicio.
 - Movilidad rodilla libre según tolerancia.
-- Movilizaciones pasivas de  rótula 4/5 veces al  día  durante  15 minutos.
-- Descarga  sin  apoyo  haciendo  hincapié  en la obtención  de  la extensión  completa de la rodilla en la fase postoperatoria  temprana.
-- A la semana  cura de la herida y   las 2 semanas retirada de  puntos de sutura.
+- Movilizaciones pasivas de rótula 4/5 veces al día durante 15 minutos.
+- Descarga sin apoyo haciendo hincapié en la obtención de la extensión completa de la rodilla en la fase postoperatoria temprana.
+- A la semana cura de la herida y las 2 semanas retirada de puntos de sutura.
 
 Semana 3ª:
-- Apoyo  del  50% del  peso  corporal  con aumento progresivo.
-- Ejercicios de  flexo-extensión con  incremento  gradual.
+- Apoyo del 50% del peso corporal con aumento progresivo.
+- Ejercicios de flexo-extensión con incremento gradual.
 - Bicicleta estática
 
 Semana 4ª:
 - Carga total.
-- BA  mínimo 0º-90º.
+- BA mínimo 0º-90º.
 - Conducción.
 
 Semana 8ª:
-- Se debe haber conseguido  BA  completo.
-- Seguir fortalecimiento muscular  en  gimnasio.
-- 4º mes: Inicio  de carrera  continua suave.
-- 6º mes: Retorno  a la actividad deportiva, incluido deportes de  contacto.
+- Se debe haber conseguido BA completo.
+- Seguir fortalecimiento muscular en gimnasio.
+- 4º mes: Inicio de carrera continua suave.
+- 6º mes: Retorno a la actividad deportiva, incluido deportes de contacto.
 - Puede requerir ayuda domiciliaria
-- ENANPLUS  75 mg/25 mg  / 8 horas vía oral.
+- ENANPLUS 75 mg/25 mg / 8 horas vía oral.
 - PARACETAMOL 1 gr cada 8 horas
-- ENOXAPARINA 40 mg /24 horas vía subcutánea  durante 3 semanas.
+- ENOXAPARINA 40 mg / 24 horas vía subcutánea durante 3 semanas.
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
 
 REVISIÓN
-
-Antes de irse de alta  del  hospital:
-- Solicitar  cita en  Admisión  de  Consultas Externas para revisión en CC EE  de  COT (${DOCTOR})  en  2/3   semanas  para ver evolución.
-- Solicitar  cita en  Servicio de  Rehabilitación  para  seguimiento  postoperatorio.
+Antes de irse de alta del hospital:
+- Solicitar cita en Admisión de Consultas Externas para revisión en CCEE de COT (${DOCTOR}) en 2/3 semanas para ver evolución.
+- Solicitar cita en Servicio de Rehabilitación para seguimiento postoperatorio.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
@@ -2220,31 +2213,38 @@ IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 CUIDADOS POSTOPERATORIOS
 - Mover activamente los dedos de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
-- Aplicar  hielo  sobre  vendaje  4 veces al  día  durante 30 minutos.
-- Puede caminar con ayuda de 2 muletas SIN  APOYO  inicial de la pierna intervenida:
-- Semana 0 – semana 3: descarga completa.
-- Semana 3 – semana 6: carga parcial ayudado  de bastones.
-- A partir  semana 6: puede caminar libremente sin  bastones (apoyo  completo).
-- Aumento  progresivo  de la  movilidad para protección de la sutura meniscal:
-- Semana 0 - semana 2: 0º a 60º.
-- Semana 2 - semana 4: 0º  a 90º.
-- Semana 4- semana 6: 90º a 120º.
-- A partir  semana 6: movilidad libre.
-- Realizar ejercicios isométricos de cuádriceps y elevación con  pierna extendida.
-- Movilizaciones pasivas de  rótula 4/5 veces al  día  durante  15 minutos.
+- Aplicar hielo sobre rodilla 4 veces al día durante 30 minutos.
 - Puede requerir ayuda domiciliaria
-- ENANPLUS  75 mg/25 mg  / 8 horas vía oral.
+
+CARGA
+Puede caminar con ayuda de 2 muletas SIN APOYO inicial de la pierna intervenida:
+- Semana 0 – semana 3: descarga completa.
+- Semana 3 – semana 6: carga parcial ayudado de bastones.
+- A partir semana 6: puede caminar libremente sin bastones (apoyo completo).
+
+MOVILIDAD
+Aumento progresivo de la movilidad para protección de la sutura meniscal:
+- Semana 0 - semana 2: 0º a 60º.
+- Semana 2 - semana 4: 0º a 90º.
+- Semana 4- semana 6: 90º a 120º.
+- A partir semana 6: movilidad libre.
+
+REHABILITACIÓN
+- Realizar ejercicios isométricos de cuádriceps y elevación con pierna extendida.
+- Movilizaciones pasivas de rótula 4/5 veces al día durante 15 minutos.
+
+MEDICACIÓN
+- ENANPLUS 75 mg/25 mg / 8 horas vía oral.
 - PARACETAMOL 1 gr cada 8 horas
-- ENOXAPARINA 40 mg /24 horas vía subcutánea  durante 3 semanas.
+- ENOXAPARINA 40 mg / 24 horas vía subcutánea durante 3 semanas.
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
 
 REVISIÓN
-
-Antes de irse de alta  del  hospital:
-- Solicitar  cita en  Admisión  de  Consultas Externas para revisión en CC EE  de  COT (${DOCTOR})  en  2/3   semanas  para ver evolución.
-- Solicitar  cita en  Servicio de  Rehabilitación  para  seguimiento  postoperatorio.
+Antes de irse de alta del hospital:
+- Solicitar cita en Admisión de Consultas Externas para revisión en CCEE de COT (${DOCTOR}) en 2/3 semanas para ver evolución.
+- Solicitar cita en Servicio de Rehabilitación para seguimiento postoperatorio.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
@@ -2276,32 +2276,39 @@ IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 CUIDADOS POSTOPERATORIOS
 - Mover activamente los dedos de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
-- Aplicar  hielo  sobre  vendaje  4 veces al  día  durante 30 minutos.
-- Se va a proceder de protección  de la reparación  quirúrgica y  posteriormente a un  protocolo  de carga  progresiva de la rodilla intervenida.
-- Puede caminar con ayuda de 2 muletas SIN  APOYO  inicial de la pierna intervenida:
-- Semana 0 – semana 6: descarga completa.
-- Semana 6 – semana 8: carga parcial ayudada  de bastones.
-- A partir  semana 8: puede caminar libremente sin  bastones (apoyo  completo).
-- Aumento  progresivo  de la  movilidad para protección de la sutura meniscal:
-- Semana 0 - semana 2: 0º a 90º.
-- A partir de la semana 2 se procede a un  incremento  progresivo  de la movilidad según   tolerancia.
-- Realizar ejercicios isométricos de cuádriceps y elevación con  pierna extendida.
-- Movilizaciones pasivas de  rótula 4/5 veces al  día  durante  15 minutos.
-- Evitar  los ejercicios de flexión  profunda de la rodilla,  como  la prensa o  sentadillas,  por  un  periodo  no  menor a  4  meses.
-- Retorno a la actividad deportiva a partir de los 6  meses de la cirugía.
+- Aplicar hielo sobre rodilla 4 veces al día durante 30 minutos.
+- Se va a proceder de protección de la reparación quirúrgica y posteriormente a un protocolo de carga progresiva de la rodilla intervenida.
 - Puede requerir ayuda domiciliaria
-- ENANPLUS  75 mg/25 mg  / 8 horas vía oral.
+
+CARGA
+Puede caminar con ayuda de 2 muletas SIN APOYO inicial de la pierna intervenida:
+- Semana 0 – semana 6: descarga completa.
+- Semana 6 – semana 8: carga parcial ayudada de bastones.
+- A partir semana 8: puede caminar libremente sin bastones (apoyo completo).
+
+MOVILIDAD
+Aumento progresivo de la movilidad para protección de la sutura meniscal:
+- Semana 0 - semana 2: 0º a 90º.
+- A partir de la semana 2 se procede a un incremento progresivo de la movilidad según tolerancia.
+
+REHABILITACIÓN
+- Realizar ejercicios isométricos de cuádriceps y elevación con pierna extendida.
+- Movilizaciones pasivas de rótula 4/5 veces al día durante 15 minutos.
+- Evitar los ejercicios de flexión profunda de la rodilla, como la prensa o sentadillas, por un periodo no menor a 4 meses.
+- Retorno a la actividad deportiva a partir de los 6 meses de la cirugía.
+
+MEDICACIÓN
+- ENANPLUS 75 mg/25 mg / 8 horas vía oral.
 - PARACETAMOL 1 gr cada 8 horas
-- ENOXAPARINA 40 mg /24 horas vía subcutánea  durante 3 semanas.
+- ENOXAPARINA 40 mg / 24 horas vía subcutánea durante 3 semanas.
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
 
 REVISIÓN
-
-Antes de irse de alta  del  hospital:
-- Solicitar  cita en  Admisión  de  Consultas Externas para revisión en CC EE  de  COT (${DOCTOR})  en  2/3   semanas  para ver evolución.
-- Solicitar  cita en  Servicio de  Rehabilitación  para inicio  de la fisioterapia lo  antes posible a fin  de trabajar la movilidad pasiva de la rodilla intervenida y  seguimiento  postoperatorio.
+Antes de irse de alta del hospital:
+- Solicitar cita en Admisión de Consultas Externas para revisión en CCEE de COT (${DOCTOR}) en 2/3 semanas para ver evolución.
+- Solicitar cita en Servicio de Rehabilitación para inicio de la fisioterapia lo antes posible a fin de trabajar la movilidad pasiva de la rodilla intervenida y seguimiento postoperatorio.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
@@ -2335,31 +2342,38 @@ IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 CUIDADOS POSTOPERATORIOS
 - Mover activamente los dedos de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
-- Aplicar  hielo  sobre  vendaje  4 veces al  día  durante 30 minutos.
-- Puede caminar con ayuda de 2 muletas SIN  APOYO  inicial de la pierna intervenida:
-- Semana 0 – semana 3: descarga completa.
-- Semana 3 – semana 6: carga parcial ayudado  de bastones.
-- A partir  semana 6: puede caminar libremente sin  bastones (apoyo  completo).
-- Aumento  progresivo  de la  movilidad para protección de la sutura meniscal:
-- Semana 0 - semana 2: 0º a 60º.
-- Semana 2 - semana 4: 0º  a 90º.
-- Semana 4- semana 6: 90º a 120º.
-- A partir  semana 6: movilidad libre.
-- Realizar ejercicios isométricos de cuádriceps y elevación con  pierna extendida.
-- Movilizaciones pasivas de  rótula 4/5 veces al  día  durante  15 minutos.
+- Aplicar hielo sobre rodilla 4 veces al día durante 30 minutos.
 - Puede requerir ayuda domiciliaria
-- ENANPLUS  75 mg/25 mg  / 8 horas vía oral.
+
+CARGA
+Puede caminar con ayuda de 2 muletas SIN APOYO inicial de la pierna intervenida:
+- Semana 0 – semana 3: descarga completa.
+- Semana 3 – semana 6: carga parcial ayudado de bastones.
+- A partir semana 6: puede caminar libremente sin bastones (apoyo completo).
+
+MOVILIDAD
+Aumento progresivo de la movilidad para protección de la sutura meniscal:
+- Semana 0 - semana 2: 0º a 60º.
+- Semana 2 - semana 4: 0º a 90º.
+- Semana 4- semana 6: 90º a 120º.
+- A partir semana 6: movilidad libre.
+
+REHABILITACIÓN
+- Realizar ejercicios isométricos de cuádriceps y elevación con pierna extendida.
+- Movilizaciones pasivas de rótula 4/5 veces al día durante 15 minutos.
+
+MEDICACIÓN
+- ENANPLUS 75 mg/25 mg / 8 horas vía oral.
 - PARACETAMOL 1 gr cada 8 horas
-- ENOXAPARINA 40 mg /24 horas vía subcutánea  durante 3 semanas.
+- ENOXAPARINA 40 mg / 24 horas vía subcutánea durante 3 semanas.
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
 
 REVISIÓN
-
-Antes de irse de alta  del  hospital:
-- Solicitar  cita en  Admisión  de  Consultas Externas para revisión en CC EE  de  COT (${DOCTOR})  en  2/3   semanas  para ver evolución.
-- Solicitar  cita en  Servicio de  Rehabilitación  para  seguimiento  postoperatorio.
+Antes de irse de alta del hospital:
+- Solicitar cita en Admisión de Consultas Externas para revisión en CCEE de COT (${DOCTOR}) en 2/3 semanas para ver evolución.
+- Solicitar cita en Servicio de Rehabilitación para seguimiento postoperatorio.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
@@ -2396,22 +2410,22 @@ IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 CUIDADOS POSTOPERATORIOS
 - Mover activamente los dedos de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
-- Aplicar  hielo  sobre  vendaje  4 veces al  día  durante 30 minutos.
-- Puede caminar con ayuda de 2 muletas apoyo parcial de la pierna intervenida y  movilidad   libre   según tolerancia.
+- Aplicar hielo sobre rodilla 4 veces al día durante 30 minutos.
+Puede caminar con ayuda de 2 muletas apoyo parcial de la pierna intervenida y movilidad libre según tolerancia.
 - Realizar ejercicios de cuádriceps y movilidad de la rodilla.
-- Movilizaciones pasivas de  rótula 4/5 veces al  día  durante  15 minutos.
+- Movilizaciones pasivas de rótula 4/5 veces al día durante 15 minutos.
 - Puede requerir ayuda domiciliaria
 - IBUPROFENO 600 mg / 8 horas vía oral.
-- METAMIZOL  575 mg/ 8  horas  (alterno  con  anterior  cada  4   horas),  si dolor intenso.
+- METAMIZOL 575 mg / 8 horas (alterno con anterior cada 4 horas), si dolor intenso.
 - PARACETAMOL 1 gr cada 8 horas
-- BEMIPARINA 3500 UI/24 horas vía subcutánea.
+- ENOXAPARINA 40 mg / 24 horas vía subcutánea.
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
 
 REVISIÓN
-- Revisión en CCEE de COT (TRAP) a  las  2 semanas,  6  semanas  y  4  meses  desde la cirugía   para seguimiento.
-- Solicitar  cita en Servicio  de  Rehabilitación de su  área de referencia para inicio de fisioterapia.
+- Revisión en CCEE de COT (TRAP) a las 2 semanas, 6 semanas y 4 meses desde la cirugía para seguimiento.
+- Solicitar cita en Servicio de Rehabilitación de su área de referencia para inicio de fisioterapia.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
@@ -2447,22 +2461,22 @@ IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 CUIDADOS POSTOPERATORIOS
 - Mover activamente los dedos de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
-- Aplicar  hielo  sobre  vendaje  4 veces al  día  durante 30 minutos.
-- Puede caminar con ayuda de 2 muletas apoyo parcial de la pierna intervenida y  movilidad   libre   según tolerancia.
+- Aplicar hielo sobre rodilla 4 veces al día durante 30 minutos.
+Puede caminar con ayuda de 2 muletas apoyo parcial de la pierna intervenida y movilidad libre según tolerancia.
 - Realizar ejercicios de cuádriceps y movilidad de la rodilla.
-- Movilizaciones pasivas de  rótula 4/5 veces al  día  durante  15 minutos.
+- Movilizaciones pasivas de rótula 4/5 veces al día durante 15 minutos.
 - Puede requerir ayuda domiciliaria
 - IBUPROFENO 600 mg / 8 horas vía oral.
-- METAMIZOL  575 mg/ 8  horas  (alterno  con  anterior  cada  4   horas),  si dolor intenso.
+- METAMIZOL 575 mg / 8 horas (alterno con anterior cada 4 horas), si dolor intenso.
 - PARACETAMOL 1 gr cada 8 horas
-- BEMIPARINA 3500 UI/24 horas vía subcutánea.
+- ENOXAPARINA 40 mg / 24 horas vía subcutánea.
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
 
 REVISIÓN
-- Revisión en CCEE de COT (TRAP) a  las  2 semanas,  6  semanas  y  4  meses  desde la cirugía   para seguimiento.
-- Solicitar  cita en Servicio  de  Rehabilitación de su  área de referencia para inicio de fisioterapia.
+- Revisión en CCEE de COT (TRAP) a las 2 semanas, 6 semanas y 4 meses desde la cirugía para seguimiento.
+- Solicitar cita en Servicio de Rehabilitación de su área de referencia para inicio de fisioterapia.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
@@ -2500,21 +2514,21 @@ IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 CUIDADOS POSTOPERATORIOS
 - Mover activamente los dedos de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
-- Aplicar  hielo  sobre  vendaje  4 veces al  día  durante 30 minutos.
-- Puede caminar con ayuda de 2 muletas apoyo parcial de la pierna intervenida y  movilidad   libre   según tolerancia.
+- Aplicar hielo sobre rodilla 4 veces al día durante 30 minutos.
+Puede caminar con ayuda de 2 muletas apoyo parcial de la pierna intervenida y movilidad libre según tolerancia.
 - Realizar ejercicios de cuádriceps y movilidad de la rodilla.
-- Movilizaciones pasivas de  rótula 4/5 veces al  día  durante  15 minutos.
+- Movilizaciones pasivas de rótula 4/5 veces al día durante 15 minutos.
 - Puede requerir ayuda domiciliaria
 - IBUPROFENO 600 mg / 8 horas vía oral.
-- METAMIZOL  575 mg/ 8  horas  (alterno  con  anterior  cada  4   horas),  si dolor intenso.
-- BEMIPARINA 3500 UI/24 horas vía subcutánea.
+- METAMIZOL 575 mg / 8 horas (alterno con anterior cada 4 horas), si dolor intenso.
+- ENOXAPARINA 40 mg / 24 horas vía subcutánea.
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
 
 REVISIÓN
-- Revisión en CCEE de COT (${DOCTOR}) en  2/3 semanas  para ver evolución y retirar puntos.
-- Al  alta solicitar  cita en  Servicio de  Rehabilitación  para  seguimiento  postoperatorio.
+- Revisión en CCEE de COT (${DOCTOR}) en 2/3 semanas para ver evolución y retirar puntos.
+- Al alta solicitar cita en Servicio de Rehabilitación para seguimiento postoperatorio.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
@@ -2548,41 +2562,40 @@ CUIDADOS POSTOPERATORIOS
 Semana 0º-2ª:
 - Mover activamente los dedos de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
-- Aplicar  hielo  sobre  vendaje  4 veces al  día  durante 30 minutos.
-- Ejercicios isométricos, de cuádriceps  y  EPE desde el  inicio.
+- Aplicar hielo sobre rodilla 4 veces al día durante 30 minutos.
+- Ejercicios isométricos, de cuádriceps y EPE desde el inicio.
 - Movilidad rodilla libre según tolerancia.
-- Movilizaciones pasivas de  rótula 4/5 veces al  día  durante  15 minutos.
-- Descarga  sin  apoyo  haciendo  hincapié  en la obtención  de  la extensión  completa de la rodilla en la fase postoperatoria  temprana.
-- A la semana  cura de la herida y   las 2 semanas retirada de  puntos de sutura.
+- Movilizaciones pasivas de rótula 4/5 veces al día durante 15 minutos.
+- Descarga sin apoyo haciendo hincapié en la obtención de la extensión completa de la rodilla en la fase postoperatoria temprana.
+- A la semana cura de la herida y las 2 semanas retirada de puntos de sutura.
 
 Semana 3ª:
-- Apoyo  del  50% del  peso  corporal  con aumento progresivo.
-- Ejercicios de  flexo-extensión con  incremento  gradual.
+- Apoyo del 50% del peso corporal con aumento progresivo.
+- Ejercicios de flexo-extensión con incremento gradual.
 - Bicicleta estática
 
 Semana 4ª:
 - Carga total.
-- BA  mínimo 0º-90º.
+- BA mínimo 0º-90º.
 - Conducción.
 
 Semana 8ª:
-- Se debe haber conseguido  BA  completo.
-- Seguir fortalecimiento muscular  en  gimnasio.
-- 4º mes: Inicio  de carrera  continua suave.
-- 6º mes: Retorno  a la actividad deportiva, incluido deportes de  contacto.
+- Se debe haber conseguido BA completo.
+- Seguir fortalecimiento muscular en gimnasio.
+- 4º mes: Inicio de carrera continua suave.
+- 6º mes: Retorno a la actividad deportiva, incluido deportes de contacto.
 - Puede requerir ayuda domiciliaria
-- ENANPLUS  75 mg/25 mg  / 8 horas vía oral.
+- ENANPLUS 75 mg/25 mg / 8 horas vía oral.
 - PARACETAMOL 1 gr cada 8 horas
-- ENOXAPARINA 40 mg /24 horas vía subcutánea  durante 3 semanas.
+- ENOXAPARINA 40 mg / 24 horas vía subcutánea durante 3 semanas.
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
 
 REVISIÓN
-
-Antes de irse de alta  del  hospital:
-- Solicitar  cita en  Admisión  de  Consultas Externas para revisión en CC EE  de  COT (${DOCTOR})  en  2/3   semanas  para ver evolución.
-- Solicitar  cita en  Servicio de  Rehabilitación  para  seguimiento  postoperatorio.
+Antes de irse de alta del hospital:
+- Solicitar cita en Admisión de Consultas Externas para revisión en CCEE de COT (${DOCTOR}) en 2/3 semanas para ver evolución.
+- Solicitar cita en Servicio de Rehabilitación para seguimiento postoperatorio.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
@@ -2613,27 +2626,35 @@ IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 CUIDADOS POSTOPERATORIOS
 - Mover activamente los dedos de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
-- Aplicar  hielo  sobre  vendaje  4 veces al  día  durante 30 minutos.
-- Puede caminar con ayuda de 2 muletas SIN  APOYO  inicial de la pierna intervenida:
-- Semana 0 – semana 3: descarga completa.
-- Semana 3 – semana 6: carga parcial ayudado  de bastones.
-- A partir  semana 6: puede caminar libremente sin  bastones (apoyo  completo).
-- Aumento  progresivo  de la  movilidad para protección de la reparación ligamentosa:
-- Semana 0 - semana 2: 0º a 60º.
-- Semana 2 - semana 4: 0º  a 90º.
-- Semana 4- semana 6: 90º a 120º.
-- A partir  semana 6: movilidad libre.
-- Realizar ejercicios isométricos de cuádriceps y elevación con  pierna extendida.
-- Movilizaciones pasivas de  rótula 4/5 veces al  día  durante  15 minutos.
+- Aplicar hielo sobre rodilla 4 veces al día durante 30 minutos.
 - Puede requerir ayuda domiciliaria
-- ENANPLUS  75 mg/25 mg  / 8 horas vía oral.
+
+CARGA
+Puede caminar con ayuda de 2 muletas SIN APOYO inicial de la pierna intervenida:
+- Semana 0 – semana 3: descarga completa.
+- Semana 3 – semana 6: carga parcial ayudado de bastones.
+- A partir semana 6: puede caminar libremente sin bastones (apoyo completo).
+
+MOVILIDAD
+Aumento progresivo de la movilidad para protección de la reparación ligamentosa:
+- Semana 0 - semana 2: 0º a 60º.
+- Semana 2 - semana 4: 0º a 90º.
+- Semana 4- semana 6: 90º a 120º.
+- A partir semana 6: movilidad libre.
+
+REHABILITACIÓN
+- Realizar ejercicios isométricos de cuádriceps y elevación con pierna extendida.
+- Movilizaciones pasivas de rótula 4/5 veces al día durante 15 minutos.
+
+MEDICACIÓN
+- ENANPLUS 75 mg/25 mg / 8 horas vía oral.
 - PARACETAMOL 1 gr cada 8 horas
-- ENOXAPARINA 40 mg /24 horas vía subcutánea  durante 3 semanas.
+- ENOXAPARINA 40 mg / 24 horas vía subcutánea durante 3 semanas.
 
 REVISIÓN
-- Antes de irse de alta  del  hospital:
-- Solicitar  cita en  Admisión  de  Consultas Externas para revisión en CC EE  de  COT (${DOCTOR})  en  2/3   semanas  para ver evolución.
-- Solicitar  cita en  Servicio de  Rehabilitación  para  seguimiento  postoperatorio.
+- Antes de irse de alta del hospital:
+- Solicitar cita en Admisión de Consultas Externas para revisión en CCEE de COT (${DOCTOR}) en 2/3 semanas para ver evolución.
+- Solicitar cita en Servicio de Rehabilitación para seguimiento postoperatorio.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
@@ -2671,31 +2692,38 @@ IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 CUIDADOS POSTOPERATORIOS
 - Mover activamente los dedos de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
-- Aplicar  hielo  sobre  vendaje  4 veces al  día  durante 30 minutos.
-- Puede caminar con ayuda de 2 muletas SIN  APOYO  inicial de la pierna intervenida:
-- Semana 0 – semana 3: descarga completa.
-- Semana 3 – semana 6: carga parcial ayudado  de bastones.
-- A partir  semana 6: puede caminar libremente sin  bastones (apoyo  completo).
-- Aumento  progresivo  de la  movilidad para protección de la reparación ligamentosa:
-- Semana 0 - semana 2: 0º a 60º.
-- Semana 2 - semana 4: 0º  a 90º.
-- Semana 4- semana 6: 90º a 120º.
-- A partir  semana 6: movilidad libre.
-- Realizar ejercicios isométricos de cuádriceps y elevación con  pierna extendida.
-- Movilizaciones pasivas de  rótula 4/5 veces al  día  durante  15 minutos.
+- Aplicar hielo sobre rodilla 4 veces al día durante 30 minutos.
 - Puede requerir ayuda domiciliaria
-- ENANPLUS  75 mg/25 mg  / 8 horas vía oral.
+
+CARGA
+Puede caminar con ayuda de 2 muletas SIN APOYO inicial de la pierna intervenida:
+- Semana 0 – semana 3: descarga completa.
+- Semana 3 – semana 6: carga parcial ayudado de bastones.
+- A partir semana 6: puede caminar libremente sin bastones (apoyo completo).
+
+MOVILIDAD
+Aumento progresivo de la movilidad para protección de la reparación ligamentosa:
+- Semana 0 - semana 2: 0º a 60º.
+- Semana 2 - semana 4: 0º a 90º.
+- Semana 4- semana 6: 90º a 120º.
+- A partir semana 6: movilidad libre.
+
+REHABILITACIÓN
+- Realizar ejercicios isométricos de cuádriceps y elevación con pierna extendida.
+- Movilizaciones pasivas de rótula 4/5 veces al día durante 15 minutos.
+
+MEDICACIÓN
+- ENANPLUS 75 mg/25 mg / 8 horas vía oral.
 - PARACETAMOL 1 gr cada 8 horas
-- ENOXAPARINA 40 mg /24 horas vía subcutánea  durante 3 semanas.
+- ENOXAPARINA 40 mg / 24 horas vía subcutánea durante 3 semanas.
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
 
 REVISIÓN
-
-Antes de irse de alta  del  hospital:
-- Solicitar  cita en  Admisión  de  Consultas Externas para revisión en CC EE  de  COT (${DOCTOR})  en  2/3   semanas  para ver evolución.
-- Solicitar  cita en  Servicio de  Rehabilitación  para  seguimiento  postoperatorio.
+Antes de irse de alta del hospital:
+- Solicitar cita en Admisión de Consultas Externas para revisión en CCEE de COT (${DOCTOR}) en 2/3 semanas para ver evolución.
+- Solicitar cita en Servicio de Rehabilitación para seguimiento postoperatorio.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
@@ -2897,14 +2925,14 @@ CUIDADOS POSTOPERATORIOS
 - Aplicar hielo sobre la articulación operada 2-3 veces al día durante 20 minutos
 - Mover activamente los dedos de la extremidad operada
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos
-- Puede caminar con ayuda de 2 muletas SIN APOYO de la pierna intervenida hasta nueva orden
+Puede caminar con ayuda de 2 muletas SIN APOYO de la pierna intervenida hasta nueva orden
   * Semana 0-6: NO PUEDE APOYAR. Descarga completa
   * Semana 6-12: inicio parcial y progresivo de la carga
 - Realizar ejercicios isométricos de cuádriceps
 - Movilidad libre de rodilla sin apoyo
 - Enanplus 1 comp / 8 horas vía oral alternando con Metamizol si persistencia del dolor
 - PARACETAMOL 1 gr cada 8 horas
-- Enoxaparina Rovi 40 mg / 24 horas vía subcutánea durante 4 semanas
+- ENOXAPARINA 40 mg / 24 horas vía subcutánea durante 4 semanas.
 - Retirada de puntos por ATS DE ZONA en 12-15 días
 
 CURAS LOCALES
@@ -3006,7 +3034,7 @@ CUIDADOS POSTOPERATORIOS
 - Aplicar hielo sobre la articulación operada 2 - 3 veces al día durante 20 minutos.
 - Mover activamente los dedos, tobillo y rodilla de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
-- Puede caminar con ayuda de 2 muletas SIN APOYO de la pierna intervenida.
+Puede caminar con ayuda de 2 muletas SIN APOYO de la pierna intervenida.
 - Realizar ejercicios isométricos de cuádriceps y movilidad libre de la rodilla.
 - Puede requerir ayuda domiciliaria.
 - Naproxeno 550 mg / 8 horas vía oral.
@@ -3052,7 +3080,7 @@ CUIDADOS POSTOPERATORIOS
 - Aplicar hielo sobre la articulación operada 2 - 3 veces al día durante 20 minutos.
 - Mover activamente los dedos, tobillo y rodilla de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
-- Puede caminar con ayuda de 2 muletas SIN APOYO de la pierna intervenida.
+Puede caminar con ayuda de 2 muletas SIN APOYO de la pierna intervenida.
 - Realizar ejercicios isométricos de cuádriceps y movilidad libre de la rodilla.
 - Puede requerir ayuda domiciliaria.
 - Naproxeno 550 mg / 8 horas vía oral.
@@ -3093,7 +3121,7 @@ CUIDADOS POSTOPERATORIOS
 - Aplicar hielo sobre la articulación operada 2 - 3 veces al día durante 20 minutos.
 - Mover activamente los dedos, tobillo y rodilla de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
-- Puede caminar con ayuda de 2 muletas SIN APOYO de la pierna intervenida.
+Puede caminar con ayuda de 2 muletas SIN APOYO de la pierna intervenida.
 - Realizar ejercicios isométricos de cuádriceps y movilidad libre de la rodilla.
 - Puede requerir ayuda domiciliaria.
 - Ibuprofeno 600 mg / 8 horas vía oral.
@@ -3144,20 +3172,20 @@ CUIDADOS POSTOPERATORIOS
 - Mover activamente los dedos de la extremidad operada.
 - Realizar los ejercicios que su médico le ha explicado.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
-- Puede  caminar con ayuda de un andador.
+- Puede caminar con ayuda de un andador.
 - Puede requerir ayuda domiciliaria
 
-MEDICACIÓN (según tarjeta sanitaria)
+MEDICACIÓN
 - METAMIZOL 575 mg / 8 horas vía oral.
-- PARACETAMOL 1 gr/  8  horas, alterno  con anterior cada   4   horas si  dolor  intenso.
-- OMEPRAZOL 20 mg/ 24  horas.
-- ENOXAPARINA 40 mg  / 24 horas vía oral / 4 semanas
+- PARACETAMOL 1 gr / 8 horas, alterno con anterior cada 4 horas si dolor intenso.
+- OMEPRAZOL 20 mg / 24 horas.
+- ENOXAPARINA 40 mg / 24 horas vía oral / 4 semanas
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
 
 REVISIÓN
-- Solicitar revisión en Admisión del  Hospital  para  CCEE Revisión Hospitalaria de COT (${DOCTOR}) en 4 semanas.
+- Solicitar revisión en Admisión del Hospital para CCEE Revisión Hospitalaria de COT (${DOCTOR}) en 4 semanas.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
@@ -3195,7 +3223,7 @@ CUIDADOS POSTOPERATORIOS
 - ENANTYUM 1 cápsula /8 horas vía oral.
 - PARACETAMOL 1gr/8 horas, alterno con anterior cada 4 horas si dolor intenso.
 - OMEPRAZOL 20mg/24 horas.
-- CLEXANE 40 mg/ cada 24 horas durante 30 dias.
+- ENOXAPARINA 40 mg / 24 horas vía subcutánea durante 30 días.
 - Puede requerir ayuda domiciliaria.
 
 Curas y retirada de puntos de sutura/agrafes según informe de Enfermería.
@@ -3296,7 +3324,7 @@ CUIDADOS POSTOPERATORIOS
 - Mover activamente los dedos de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
 - Puede requerir ayuda domiciliaria
-- IBUPROFENO 600 mg alternando con PARACETAMOL 1gr/ 8 horas vía oral según dolor.
+- IBUPROFENO 600 mg alternando con PARACETAMOL 1gr / 8 horas vía oral según dolor.
 - ENOXAPARINA 40 mg 1 jeringa / 24 horas vía subcutánea / 3 semanas.
 - Retirada de puntos por su enfermero/a de referencia en el centro de salud en 7-10 días.
 
@@ -3304,7 +3332,7 @@ CURAS LOCALES
 - Curas planas cada 48-72 horas.
 
 REVISIÓN
-- Solicitar cita para revisión en 3 semanas para ${DOCTOR}  y  en  Servicio de  REHABILITACIÓN
+- Solicitar cita para revisión en 3 semanas para ${DOCTOR} y en Servicio de REHABILITACIÓN
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
@@ -3312,7 +3340,7 @@ SÍNTOMAS DE ALERTA
 SIGA LAS SIGUIENTES RECOMENDACIONES DOMICILIARIAS:
 - 1ª y 2ª SEMANAS
 - Carga parcial con dos muletas.
-- Frío local  durante 15min / varias veces al día. Nunca directamente sobre la piel.
+- Frío local durante 15min / varias veces al día. Nunca directamente sobre la piel.
 - Todos los ejercicios deben realizarse en un rango de movilidad sin dolor.
 - Realizar 10 repeticiones de cada grupo muscular de 3 a 4 veces al día.
 
@@ -3340,10 +3368,10 @@ Limitación del rango de movilidad:
 RECUERDE: NO TODAS LAS ARTROSCOPIAS DE CADERAS SON IGUALES.
 - Cada paciente evoluciona de forma diferente en función de la cirugía realizada, edad, el estado de salud previo y su
 - capacidad para adaptarse a la Rehabilitación.
-- Una complicación frecuente durante el programa de rehabilitación es la tendinitis del tendón del Psoas Iliaco. Cursa con dolor inguinal anterior y ocurre porque nos hemos excedido  en los ejercicios. En tal caso, debemos acudir al médico/fisioterapeuta para reconducir la rehabilitación.
+- Una complicación frecuente durante el programa de rehabilitación es la tendinitis del tendón del Psoas Iliaco. Cursa con dolor inguinal anterior y ocurre porque nos hemos excedido en los ejercicios. En tal caso, debemos acudir al médico/fisioterapeuta para reconducir la rehabilitación.
 - 3ª y 4ª SEMANAS
 - Ir aumentando progresivamente la carga parcial con dos muletas de la pierna operada para conseguir soltar una muleta al final de la 3ª semana y sin muletas sobre la 4ª o 5ª semana.
-- Frío local  durante 15min / varias veces al día. Nunca directamente sobre la piel.
+- Frío local durante 15min / varias veces al día. Nunca directamente sobre la piel.
 - Todos los ejercicios deben realizarse en un rango de movilidad sin dolor.
 - Realizar 10 repeticiones de cada grupo muscular de 3 a 4 veces al día.
 
@@ -3424,8 +3452,8 @@ IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 - Anestesia gral. + locorregional. Profilaxis ATB. Decúbito lateral ${DECUBITO}.
 - CAH ---.
 - Portales habituales
-- Glenohumeral: PLB, labrum y subescapular ok. Rotura supraespinoso grado  de Patte (porción anterolateral).
-- Subacromial: bursectomía, se localiza rotura supraespinoso. Preparación footprint y reinserción supraespinoso con  Iconix Speed 2,3 (2 suturas). Acromioplastia anterior.
+- Glenohumeral: PLB, labrum y subescapular ok. Rotura supraespinoso grado de Patte (porción anterolateral).
+- Subacromial: bursectomía, se localiza rotura supraespinoso. Preparación footprint y reinserción supraespinoso con Iconix Speed 2,3 (2 suturas). Acromioplastia anterior.
 - Lavado articular, cierre de portales con agrafes e inmovilización con cabestrillo.
 ```
 
@@ -3549,7 +3577,7 @@ CUIDADOS POSTOPERATORIOS
 - Vigilar coloración y sensibilidad de la mano y los dedos.
 - Evitar cargar peso sobre brazo intervenido hasta nuevo aviso y según plazos marcados.
 
-MEDICACIÓN (según tarjeta sanitaria)
+MEDICACIÓN
 - METAMIZOL 575mg cada 8 horas vía oral, que puede alternar con PARACETAMOL 1g/8h vía oral si precisa por dolor.
 - IBUPROFENO 400 mg cada 8 horas vía oral añadido a lo anterior si precisa por dolor.
 - OMEPRAZOL 20mg cada 24 horas.
@@ -3851,7 +3879,7 @@ CUIDADOS POSTOPERATORIOS
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos
 - Enanplus 75 mg v.o. 1/12 horas vía oral durante 4-5 días. Puede alternar con Metamizol caps. 1 c/8h si más dolor
 - Omeprazol 20 mg v.o. 1 c/24h
-- Enoxaparina Rovi 40 mg 1 iny. s.c c/24h 10 días
+- ENOXAPARINA 40 mg / 24 horas vía subcutánea durante 10 días.
 - NO CURAR HERIDA DEL BRAZO INTERVENIDO HASTA REVISIÓN EN SALA DE CURAS TRAUMATOLOGÍA EN 12-14 DÍAS SALVO INCIDENCIA CLÍNICA, debiendo recolocar férula (PEDIR CITA PARA SALA DE CURAS TRAUMATOLOGÍA)
 - Curar pequeña herida de la pierna c/72h y retirar puntos en 10 días
 - Requiere ayuda y reposo domiciliario
@@ -3911,11 +3939,11 @@ SÍNTOMAS DE ALERTA
 IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 
 - ISQUEMIA POR ELEVACIÓN EN RAÍZ BRAZO.
-- ANESTESIA  LOCAL Y  SEDACIÓN.
-- MINIINCISIÓN  LONGITUDINAL EN  EJE DEL  4º DE  UNOS 2 CM
-- LIBERACIÓN  DEL  CANAL  DEL  CARPO MEDIANTE RETINACULOTOMÍA SEGÚN TÉCNICA DE RAIMONDI  CON  SECCIÓN DEL  LIGAMENTO  TRANSVERSO  DEL CARPO.
-- SE  LIBERA  ISQUEMIA  Y  SE COAGULA  VASOS  SANGRANTES  CON  BIPOLAR.
-- CIERRE DE PIEL  CON  MONOFILAMENTO.
+- ANESTESIA LOCAL Y SEDACIÓN.
+- MINIINCISIÓN LONGITUDINAL EN EJE DEL 4º DE UNOS 2 CM
+- LIBERACIÓN DEL CANAL DEL CARPO MEDIANTE RETINACULOTOMÍA SEGÚN TÉCNICA DE RAIMONDI CON SECCIÓN DEL LIGAMENTO TRANSVERSO DEL CARPO.
+- SE LIBERA ISQUEMIA Y SE COAGULA VASOS SANGRANTES CON BIPOLAR.
+- CIERRE DE PIEL CON MONOFILAMENTO.
 - VENDAJE CORRECTOR.
 ```
 
@@ -3927,7 +3955,7 @@ CUIDADOS POSTOPERATORIOS
 - Mover activamente los dedos de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
 - Puede requerir ayuda domiciliaria
-- METAMIZOL 575mg/ 8 horas vía oral/5 dias
+- METAMIZOL 575mg / 8 horas vía oral/5 dias
 - PARACETAMOL 1 g/vo/8h/7 dias
 - Retirada de puntos por su enfermero/a de referencia en el centro de salud en 12-15 días.
 
@@ -3999,7 +4027,7 @@ CUIDADOS POSTOPERATORIOS
 - Mover activamente los dedos de la extremidad operada, según se le ha explicado.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
 
-MEDICACIÓN (según tarjeta sanitaria)
+MEDICACIÓN
 - METAMIZOL 575mg cada 8 horas vía oral durante 5 días, que puede alternar con PARACETAMOL 1g/8h vía oral si precisa por dolor.
 - OMEPRAZOL 20mg cada 24 horas durante 5 días.
 
@@ -4064,13 +4092,13 @@ IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 ```
 CUIDADOS POSTOPERATORIOS
 - Mantener la extremidad en alto (brazo en cabestrillo y/o pie en alto) durante las primeras 48 horas.
-- Mover activamente los dedos de la mano  libres.
+- Mover activamente los dedos de la mano libres.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
 - Puede requerir ayuda domiciliaria
-- CIPROFLOXACINO  750 mg/ 12 h durante una semana
-- METAMIZOL 575mg/ 8 horas vía oral
+- CIPROFLOXACINO 750 mg / 12 h durante una semana
+- METAMIZOL 575mg / 8 horas vía oral
 - PARACETAMOL 1 g/vo/8h
-- Acudir a SALA DE CURAS DE  COT (GABINETE 7) para ver estado de herida y citar en función de la misma.
+- Acudir a SALA DE CURAS DE COT (GABINETE 7) para ver estado de herida y citar en función de la misma.
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
@@ -4113,7 +4141,7 @@ CUIDADOS POSTOPERATORIOS
 - Vigilar coloración y sensibilidad de la mano y los dedos.
 - Evitar cargar peso sobre brazo intervenido hasta nuevo aviso y según plazos marcados.
 
-MEDICACIÓN (según tarjeta sanitaria)
+MEDICACIÓN
 - METAMIZOL 575mg cada 8 horas vía oral, que puede alternar con PARACETAMOL 1g/8h vía oral si precisa por dolor.
 - IBUPROFENO 400 mg cada 8 horas vía oral añadido a lo anterior si precisa por dolor.
 - OMEPRAZOL 20mg cada 24 horas.
@@ -4150,7 +4178,7 @@ CUIDADOS POSTOPERATORIOS
 - Mover activamente los dedos de la extremidad operada, según se le ha explicado.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
 
-MEDICACIÓN (según tarjeta sanitaria)
+MEDICACIÓN
 - METAMIZOL 575mg cada 8 horas vía oral durante 5 días, que puede alternar con PARACETAMOL 1g/8h vía oral si precisa por dolor.
 - OMEPRAZOL 20mg cada 24 horas durante 5 días.
 
