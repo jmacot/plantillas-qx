@@ -1363,7 +1363,7 @@ IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 - Se infiltra portales y región intraarticular con ropivacaína y ácido hialurónico.
 - Cierre portales con seda.
 - Vendaje compresivo.
-- EVOLUCIÓN: Durante el postoperatorio el paciente se ha mantenido afebril y hemodinámicamente estable. Ha presentado buen control del dolor con la analgesia pautada, sin evidenciarse deficits vasculonerviosos ni signos de TVP en el miembro intervenido. Ha tolerado correctamente la sedestación y la deambulación asistida. La herida quirúrgica no ha presentado signos de complicación local.
+- EVOLUCIÓN: Durante el postoperatorio el paciente se ha mantenido afebril y hemodinámicamente estable. Ha presentado buen control del dolor con la analgesia pautada, sin evidenciarse deficits vasculonerviosos ni signos de TVP en el miembro intervenido. La herida quirúrgica no ha presentado signos de complicación local.
 - Dada la evolución favorable la paciente es alta a domicilio.
 ```
 
@@ -1917,7 +1917,7 @@ IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 - Drenaje aspirativo.
 - Piel con grapas.
 - Vendaje compresivo.
-- EVOLUCIÓN: Durante el postoperatorio el paciente se ha mantenido afebril y hemodinámicamente estable. Ha presentado buen control del dolor con la analgesia pautada, sin evidenciarse deficits vasculonerviosos ni signos de TVP en el miembro intervenido. Ha tolerado correctamente la sedestación y la deambulación asistida. La herida quirúrgica no ha presentado signos de complicación local.
+- EVOLUCIÓN: Durante el postoperatorio el paciente se ha mantenido afebril y hemodinámicamente estable. Ha presentado buen control del dolor con la analgesia pautada, sin evidenciarse deficits vasculonerviosos ni signos de TVP en el miembro intervenido. La herida quirúrgica no ha presentado signos de complicación local.
 - Dada la evolución favorable la paciente es alta a domicilio.
 ```
 
