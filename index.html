@@ -1351,11 +1351,11 @@
     void hojaEl.offsetWidth;
     hojaEl.classList.add('flash');
     trataEl.classList.add('flash');
-    // Botón postoperatorio (rehabilitación)
+    // Botón postoperatorio
     const rehabWrap = document.getElementById('rehabWrap');
-    const rehabId = REHAB_MAP[proc];
-    if (rehabId) {
-      document.getElementById('btnRehab').href = 'https://jmacot.github.io/rehabilitacion-cot/?p=' + rehabId;
+    const postopId = POSTOP_MAP[proc];
+    if (postopId) {
+      document.getElementById('btnRehab').href = 'https://jmacot.github.io/rehabilitacion-cot/?m=postoperatorio&doc=' + postopId;
       rehabWrap.style.display = '';
     } else {
       rehabWrap.style.display = 'none';
@@ -1946,78 +1946,47 @@ CÓMO CUIDAR SU FÉRULA Y YESO
   // ─────────────────────────────────────────────
   //  REHABILITACIÓN — mapeo plantilla → protocolo
   // ─────────────────────────────────────────────
-  const REHAB_MAP = {
+  // Mapeo de procedimientos a doc postoperatorio en rehabilitacion-cot
+  // IDs corresponden a POSTOP_ID_MAP: ptc, ptr, puc, lca, sutura_meniscal, car
+  const POSTOP_MAP = {
     // LCA
-    lca_procinch: 'rodilla_lca',
-    lca_procinch_allinside: 'rodilla_lca',
-    lca_procinch_lemaire: 'rodilla_lca',
-    lca_procinch_sutura: 'rodilla_lca',
-    lca_procinch_reinsercion: 'rodilla_lca',
-    lca_hth: 'rodilla_lca',
-    lca_aum_am: 'rodilla_lca',
-    lca_aum_pl: 'rodilla_lca',
-    lca_rescate: 'rodilla_lca',
-    lca_rescate_hth_lemaire: 'rodilla_lca',
-    lca_reparacion: 'rodilla_lca',
+    lca_procinch: 'lca',
+    lca_procinch_allinside: 'lca',
+    lca_procinch_lemaire: 'lca',
+    lca_procinch_sutura: 'lca',
+    lca_procinch_reinsercion: 'lca',
+    lca_hth: 'lca',
+    lca_aum_am: 'lca',
+    lca_aum_pl: 'lca',
+    lca_rescate: 'lca',
+    lca_rescate_hth_lemaire: 'lca',
+    lca_reparacion: 'lca',
     // PTR / PUC
-    ptr_triathlon: 'rodilla_ptr',
-    puc_pkr: 'rodilla_ptr',
-    rpuc: 'rodilla_ptr',
+    ptr_triathlon: 'ptr',
+    puc_pkr: 'puc',
+    rpuc: 'puc',
     // PTC
-    ptc_summit: 'cadera_pta',
-    ptc_zimmer: 'cadera_pta',
-    ptc_stryker: 'cadera_pta',
-    ptc_exeter: 'cadera_pta',
-    // CAR
-    car_mosaicoplastia: 'rodilla_mosaicoplastia',
-    car_meniscectomia: 'rodilla_meniscectomia',
-    car_sutura_meniscal: 'rodilla_sutura_meniscal',
-    car_fr_meseta: 'rodilla_meseta_tibial',
-    car_lrr_ficat_plicatura: 'rodilla_microfractura',
-    car_sher_plicatura: 'rodilla_microfractura',
-    car_otv_adiccion: 'rodilla_hto',
-    car_otv_sustraccion: 'rodilla_hto',
-    car_otv_varizante_femur: 'rodilla_hto',
-    car_otv_tomofix: 'rodilla_hto',
-    car_artrolisis: 'rodilla_meniscectomia',
-    car_diagnostica: 'rodilla_meniscectomia',
-    car_ficat: 'rodilla_microfractura',
-    car_toilette: 'rodilla_meniscectomia',
-    car_sinovectomia: 'rodilla_meniscectomia',
-    // Osteotomías rodilla
-    rodilla_ovt: 'rodilla_hto',
-    rodilla_ovt_slope: 'rodilla_hto',
-    rodilla_fulkerson: 'rodilla_mpfl',
-    rodilla_mosaico_ovt: 'rodilla_mosaicoplastia',
-    rodilla_lfpm_tta: 'rodilla_mpfl',
-    rodilla_car_dlo_newclip: 'rodilla_hto',
-    rodilla_car_ovt_newclip: 'rodilla_hto',
-    rodilla_car_ovt_lca_medcontech: 'rodilla_lca',
-    // Hombro artroscopia
-    hombro_cah: 'hombro_manguito_rotador_pequeno_mediano',
-    hombro_cah_subescapular: 'hombro_subescapular',
-    hombro_balon: 'hombro_manguito_grande',
-    hombro_cah_luxac: 'hombro_bankart_anterior',
-    // Prótesis hombro
-    hombro_pthi_aequalis: 'hombro_protesis_inversa',
-    hombro_pthi_ascend: 'hombro_protesis_inversa',
-    hombro_pthi_biorsa: 'hombro_protesis_inversa',
-    hombro_pthi_revive: 'hombro_protesis_inversa',
-    // Cadera artroscopia
-    cac_labrum: 'cadera_labral',
-    // Codo
-    codo_biceps_agudo: 'codo_biceps_distal',
-    codo_biceps_cronico: 'codo_biceps_distal',
-    codo_epicondilitis: 'codo_epicondilitis',
-    // Trauma
-    aquiles: 'pie_aquiles',
-    rafi_tobillo: 'pie_fractura_tobillo',
-    rafi_rotula_cerclaje: 'rodilla_fractura_rotula',
-    rafi_clavicula: 'hombro_clavicula_orif',
-    rafi_edr_aculoc2: 'mano_radio_distal',
-    rafi_humero_axsos: 'hombro_humero_proximal',
-    ms_fr_radio: 'mano_radio_distal',
-    ms_fr_humero: 'hombro_humero_proximal',
+    ptc_summit: 'ptc',
+    ptc_zimmer: 'ptc',
+    ptc_stryker: 'ptc',
+    ptc_exeter: 'ptc',
+    // CAR (artroscopia rodilla)
+    car_mosaicoplastia: 'car',
+    car_meniscectomia: 'car',
+    car_sutura_meniscal: 'sutura_meniscal',
+    car_lrr_ficat_plicatura: 'car',
+    car_sher_plicatura: 'car',
+    car_otv_adiccion: 'car',
+    car_otv_sustraccion: 'car',
+    car_otv_varizante_femur: 'car',
+    car_otv_tomofix: 'car',
+    car_artrolisis: 'car',
+    car_diagnostica: 'car',
+    car_ficat: 'car',
+    car_toilette: 'car',
+    car_sinovectomia: 'car',
+    // Osteotomías + LCA combinada
+    rodilla_car_ovt_lca_medcontech: 'lca',
   };
 
   // ─────────────────────────────────────────────
