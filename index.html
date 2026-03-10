@@ -1954,7 +1954,7 @@ CÓMO CUIDAR SU FÉRULA Y YESO
   // ─────────────────────────────────────────────
   function obtenerPlantillas(DOCTOR, AYUDANTE, LADO) {
     const FECHA = hoy();
-    const EQUIPO = (!AYUDANTE || AYUDANTE === 'AYUDANTE') ? DOCTOR : `${EQUIPO}`;
+    const EQUIPO = (!AYUDANTE || AYUDANTE === 'AYUDANTE') ? DOCTOR : `${DOCTOR}/${AYUDANTE}`;
     // Lateralidad — todas las formas necesarias
     const LADO_M = LADO === 'D' ? 'derecho' : LADO === 'I' ? 'izquierdo' : '---';
     const LADO_F = LADO === 'D' ? 'derecha' : LADO === 'I' ? 'izquierda' : '---';
@@ -2089,7 +2089,7 @@ CURAS LOCALES
 - Retiro de grapas en 15-20 días, salvo mejor criterio de enfermería.
 
 REVISIÓN
-- Solicitar cita para revisión en CCEE COT ${DOCTOR} en 2-3 semanas, para control evolutivo y radiológico. Acudir media hora antes de cita para realización de RX.
+- Solicitar cita para revisión en CCEE COT Dr. ${DOCTOR} en 2-3 semanas, para control evolutivo y radiológico. Acudir media hora antes de cita para realización de RX.
 
 SÍNTOMAS DE ALERTA
 Acuda a Urgencias si presenta alguno de los siguientes síntomas:
@@ -2154,7 +2154,7 @@ CURAS LOCALES
 - Realizar curas locales en el centro de salud cada 48-72 horas, retirando grapas en 15-20 días, salvo mejor criterio de enfermería de zona.
 
 REVISIÓN
-- Solicitar cita para revisión en CCEE COT ${DOCTOR} en 3-4 semanas, para control evolutivo y radiológico. Acudir media hora antes de cita para realización de RX.
+- Solicitar cita para revisión en CCEE COT Dr. ${DOCTOR} en 3-4 semanas, para control evolutivo y radiológico. Acudir media hora antes de cita para realización de RX.
 
 SÍNTOMAS DE ALERTA
 - Si aparece fiebre (>38º), dolor intenso que no se alivia con analgésicos, mala evolución de la herida, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.`
@@ -2191,7 +2191,7 @@ CURAS LOCALES
 - Realizar curas locales en el centro de salud cada 48-72 horas, retirando grapas en 15-20 días, salvo mejor criterio de enfermería de zona.
 
 REVISIÓN
-- Solicitar cita para revisión en CCEE COT ${DOCTOR} en un mes, para control evolutivo y radiológico. Acudir media hora antes de cita para realización de RX.
+- Solicitar cita para revisión en CCEE COT Dr. ${DOCTOR} en un mes, para control evolutivo y radiológico. Acudir media hora antes de cita para realización de RX.
 
 SÍNTOMAS DE ALERTA
 - Si aparece fiebre (>38º), dolor intenso que no se alivia con analgésicos, mala evolución de la herida, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.`
@@ -2231,7 +2231,7 @@ CURAS LOCALES
 - Realizar curas locales en el centro de salud cada 48-72 horas, retirando grapas en 15-17 días, salvo mejor criterio de enfermería de zona.
 
 REVISIÓN
-- Solicitar cita para revisión en CCEE COT ${DOCTOR} en 3-4 semanas, para control evolutivo y radiológico. Acudir media hora antes de cita para realización de RX.
+- Solicitar cita para revisión en CCEE COT Dr. ${DOCTOR} en 3-4 semanas, para control evolutivo y radiológico. Acudir media hora antes de cita para realización de RX.
 
 SÍNTOMAS DE ALERTA
 - Si aparece fiebre (>38º), dolor intenso que no se alivia con analgésicos, mala evolución de la herida o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.`
@@ -2270,7 +2270,7 @@ CURAS LOCALES
 - Realizar curas locales en el centro de salud cada 48-72 horas, retirando grapas en 15-17 días, salvo mejor criterio de enfermería de zona.
 
 REVISIÓN
-- Solicitar cita para revisión en CCEE COT ${DOCTOR} en 3-4 semanas, para control evolutivo y radiológico. Acudir media hora antes de cita para realización de RX.
+- Solicitar cita para revisión en CCEE COT Dr. ${DOCTOR} en 3-4 semanas, para control evolutivo y radiológico. Acudir media hora antes de cita para realización de RX.
 
 SÍNTOMAS DE ALERTA
 - Si aparece fiebre (>38º), dolor intenso que no se alivia con analgésicos, mala evolución de la herida o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.`
@@ -2309,7 +2309,7 @@ CURAS LOCALES
 - Realizar curas locales en el centro de salud cada 48-72 horas, retirando grapas en 15-17 días, salvo mejor criterio de enfermería de zona.
 
 REVISIÓN
-- Solicitar cita para revisión en CCEE COT ${DOCTOR} en 3-4 semanas, para control evolutivo y radiológico. Acudir media hora antes de cita para realización de RX.
+- Solicitar cita para revisión en CCEE COT Dr. ${DOCTOR} en 3-4 semanas, para control evolutivo y radiológico. Acudir media hora antes de cita para realización de RX.
 
 SÍNTOMAS DE ALERTA
 - Si aparece fiebre (>38º), dolor intenso que no se alivia con analgésicos, mala evolución de la herida o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.`
@@ -2346,7 +2346,7 @@ CURAS LOCALES
 - Realizar curas locales en el centro de salud cada 48-72 horas, retirando grapas en 15-20 días, salvo mejor criterio de enfermería de zona.
 
 REVISIÓN
-- Solicitar cita para revisión en CCEE COT ${DOCTOR} en 3-4 semanas, para control evolutivo y radiológico. Acudir media hora antes de cita para realización de RX.
+- Solicitar cita para revisión en CCEE COT Dr. ${DOCTOR} en 3-4 semanas, para control evolutivo y radiológico. Acudir media hora antes de cita para realización de RX.
 
 SÍNTOMAS DE ALERTA
 - Si aparece fiebre (>38º), dolor intenso que no se alivia con analgésicos, mala evolución de heridas, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.`
@@ -2383,7 +2383,7 @@ CURAS LOCALES
 - Realizar curas locales en el centro de salud cada 48-72 horas, retirando grapas en 15-17 días, salvo mejor criterio de enfermería de zona.
 
 REVISIÓN
-- Solicitar cita para revisión en CCEE COT ${DOCTOR} en 3-4 semanas, para control evolutivo y radiológico. Acudir media hora antes de cita para realización de RX.
+- Solicitar cita para revisión en CCEE COT Dr. ${DOCTOR} en 3-4 semanas, para control evolutivo y radiológico. Acudir media hora antes de cita para realización de RX.
 
 SÍNTOMAS DE ALERTA
 - Si aparece fiebre (>38º), dolor intenso que no se alivia con analgésicos, mala evolución de la herida o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.`
@@ -2464,7 +2464,7 @@ CURAS LOCALES
 - Una vez retirados los puntos, deberá masajear la zona de la cicatriz en círculos de forma enérgica, para evitar adherencias de la misma.
 
 REVISIÓN
-- Solicitar cita para revisión en CCEE COT ${DOCTOR} en 3-4 semanas, para control evolutivo.
+- Solicitar cita para revisión en CCEE COT Dr. ${DOCTOR} en 3-4 semanas, para control evolutivo.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, mala evolución de la herida o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.`
@@ -2499,7 +2499,7 @@ CURAS LOCALES
 - Realizar curas locales en el centro de salud cada 48-72 horas, retirando grapas en 15-17 días, salvo mejor criterio de enfermería de zona.
 
 REVISIÓN
-- Solicitar cita para revisión en CCEE COT ${DOCTOR} en 3-4 semanas, para control evolutivo y radiológico. Acudir media hora antes de cita para realización de RX.
+- Solicitar cita para revisión en CCEE COT Dr. ${DOCTOR} en 3-4 semanas, para control evolutivo y radiológico. Acudir media hora antes de cita para realización de RX.
 
 SÍNTOMAS DE ALERTA
 - Si aparece fiebre (>38º), dolor intenso que no se alivia con analgésicos, mala evolución de la herida o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.`
@@ -2534,7 +2534,7 @@ CURAS LOCALES
 - Realizar curas locales en el centro de salud cada 48-72 horas, retirando grapas en 15-17 días, salvo mejor criterio de enfermería de zona.
 
 REVISIÓN
-- Solicitar cita para revisión en CCEE COT ${DOCTOR} en 3-4 semanas, para control evolutivo y radiológico. Acudir media hora antes de cita para realización de RX.
+- Solicitar cita para revisión en CCEE COT Dr. ${DOCTOR} en 3-4 semanas, para control evolutivo y radiológico. Acudir media hora antes de cita para realización de RX.
 
 SÍNTOMAS DE ALERTA
 - Si aparece fiebre (>38º), dolor intenso que no se alivia con analgésicos, mala evolución de la herida o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.`
@@ -2572,7 +2572,7 @@ CURAS LOCALES
 - Evitar coger peso y hacer fuerza con el brazo intervenido hasta nuevo aviso.
 
 REVISIÓN
-- Solicitar cita para revisión en CCEE COT ${DOCTOR} en 2-3 semanas, para control evolutivo.
+- Solicitar cita para revisión en CCEE COT Dr. ${DOCTOR} en 2-3 semanas, para control evolutivo.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, mala evolución de la herida, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.`
@@ -2615,7 +2615,7 @@ CURAS LOCALES
 - Retirada de puntos por ATS DE ZONA en 12/15 días.
 
 REVISIÓN
-- Revisión en CCEE de COT ${DOCTOR} en 3 semanas para ver evolución.
+- Revisión en CCEE de COT Dr. ${DOCTOR} en 3 semanas para ver evolución.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.`
@@ -2658,7 +2658,7 @@ CURAS LOCALES
 - Retirada de puntos por ATS DE ZONA en 12/15 días.
 
 REVISIÓN
-- Revisión en CCEE de COT ${DOCTOR} en 3/4 semanas para ver evolución.
+- Revisión en CCEE de COT Dr. ${DOCTOR} en 3/4 semanas para ver evolución.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.`
@@ -2701,7 +2701,7 @@ CURAS LOCALES
 - Retirada de puntos por ATS DE ZONA en 12/15 días.
 
 REVISIÓN
-- Revisión en CCEE de COT ${DOCTOR} en 3 semanas para ver evolución.
+- Revisión en CCEE de COT Dr. ${DOCTOR} en 3 semanas para ver evolución.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
@@ -2760,7 +2760,7 @@ CURAS LOCALES
 - Curas planas cada 48-72 horas.
 
 REVISIÓN
-- Revisión en CCEE de COT ${DOCTOR} en 2/3 semanas para retirar férula y seguimiento.
+- Revisión en CCEE de COT Dr. ${DOCTOR} en 2/3 semanas para retirar férula y seguimiento.
 - Al alta solicitar cita en SERVICIO DE REHABILITACIÓN para inicio de fisioterapia tras retirada de férula de yeso
 
 SÍNTOMAS DE ALERTA
@@ -2816,7 +2816,7 @@ CURAS LOCALES
 - Curas planas cada 48-72 horas.
 
 REVISIÓN
-- Revisión en CCEE de COT ${DOCTOR} en 2/3 semanas para seguimiento.
+- Revisión en CCEE de COT Dr. ${DOCTOR} en 2/3 semanas para seguimiento.
 - Al alta solicitar cita en SERVICIO DE REHABILITACIÓN para inicio de fisioterapia tras retirada de férula de yeso
 
 SÍNTOMAS DE ALERTA
@@ -2863,7 +2863,7 @@ CURAS LOCALES
 - Curas por ATS DE ZONA con Betadine cada 48/72 horas.
 
 REVISIÓN
-- Revisión en CCEE de COT ${DOCTOR} en 3 semanas para ver evolución.
+- Revisión en CCEE de COT Dr. ${DOCTOR} en 3 semanas para ver evolución.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.`
@@ -2913,7 +2913,7 @@ CURAS LOCALES
 - Curas por ATS DE ZONA con Betadine cada 48/72 horas.
 
 REVISIÓN
-- Revisión en CCEE de COT ${DOCTOR} en 3 semanas para ver evolución.
+- Revisión en CCEE de COT Dr. ${DOCTOR} en 3 semanas para ver evolución.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.`
@@ -2962,7 +2962,7 @@ CURAS LOCALES
 - Curas por ATS DE ZONA con Betadine cada 48/72 horas.
 
 REVISIÓN
-- Revisión en CCEE de COT ${DOCTOR} en 3 semanas para ver evolución.
+- Revisión en CCEE de COT Dr. ${DOCTOR} en 3 semanas para ver evolución.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.`
@@ -3002,7 +3002,7 @@ CURAS LOCALES
 - Curas por ATS DE ZONA cada 48/72 horas.
 
 REVISIÓN
-- Revisión en CCEE de COT ${DOCTOR} en 3 semanas para ver evolución.
+- Revisión en CCEE de COT Dr. ${DOCTOR} en 3 semanas para ver evolución.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.`
@@ -3041,7 +3041,7 @@ CURAS LOCALES
 - Curas por DUE de zona cada 48/72 horas.
 
 REVISIÓN
-- Revisión en CCEE de COT ${DOCTOR} en 3 semanas para ver evolución.
+- Revisión en CCEE de COT Dr. ${DOCTOR} en 3 semanas para ver evolución.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.`
@@ -3086,7 +3086,7 @@ CURAS LOCALES
 - Curas por DUE de zona cada 48/72 horas.
 
 REVISIÓN
-- Revisión en CCEE de COT ${DOCTOR} en 3 semanas para ver evolución.
+- Revisión en CCEE de COT Dr. ${DOCTOR} en 3 semanas para ver evolución.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.`
@@ -3126,7 +3126,7 @@ CURAS LOCALES
 - Curas por ATS de zona con Betadine cada 48/72 horas.
 
 REVISIÓN
-- Revisión en CCEE de COT ${DOCTOR} en 3 semanas para ver evolución.
+- Revisión en CCEE de COT Dr. ${DOCTOR} en 3 semanas para ver evolución.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.`
@@ -3162,7 +3162,7 @@ CURAS LOCALES
 - Curas planas cada 48-72 horas.
 
 REVISIÓN
-- Antes de irse de alta del hospital solicitar en Admisión de Consultas revisión en CCEE de COT ${DOCTOR} en unas 3/4 semanas para ver evolución.
+- Antes de irse de alta del hospital solicitar en Admisión de Consultas revisión en CCEE de COT Dr. ${DOCTOR} en unas 3/4 semanas para ver evolución.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
@@ -3243,7 +3243,7 @@ CURAS LOCALES
 - Curas planas cada 48-72 horas.
 
 REVISIÓN
-- Revisión en CCEE de COT ${DOCTOR} a las 2 semanas para ver evolución y ampliar rango de movilidad.
+- Revisión en CCEE de COT Dr. ${DOCTOR} a las 2 semanas para ver evolución y ampliar rango de movilidad.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.`
@@ -3282,7 +3282,7 @@ CURAS LOCALES
 - Curas planas cada 48-72 horas.
 
 REVISIÓN
-- Revisión en CCEE de COT ${DOCTOR} en 3/4 semanas para seguir evolución.
+- Revisión en CCEE de COT Dr. ${DOCTOR} en 3/4 semanas para seguir evolución.
 - Continuar con sesiones de Rehabilitación para tratar de mantener la movilidad (SOLICITAR CITA ANTES DEL ALTA)
 
 SÍNTOMAS DE ALERTA
@@ -3323,7 +3323,7 @@ CURAS LOCALES
 - Retirada de puntos por ATS DE ZONA en 12/15 días.
 
 REVISIÓN
-- Revisión en CCEE de COT ${DOCTOR} en unas 4-5 semanas para ver evolución.
+- Revisión en CCEE de COT Dr. ${DOCTOR} en unas 4-5 semanas para ver evolución.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.`
@@ -3363,7 +3363,7 @@ CURAS LOCALES
 - Retirada de puntos por ATS DE ZONA en 12/15 días.
 
 REVISIÓN
-- Revisión en CCEE de COT ${DOCTOR} en unas 4-5 semanas para ver evolución.
+- Revisión en CCEE de COT Dr. ${DOCTOR} en unas 4-5 semanas para ver evolución.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.`
@@ -3404,7 +3404,7 @@ CURAS LOCALES
 - Retirada de puntos por ATS DE ZONA en 12/15 días.
 
 REVISIÓN
-- Revisión en CCEE de COT ${DOCTOR} en 3 semanas para ver evolución.
+- Revisión en CCEE de COT Dr. ${DOCTOR} en 3 semanas para ver evolución.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.`
@@ -3444,7 +3444,7 @@ CURAS LOCALES
 - Curas planas cada 48-72 horas.
 
 REVISIÓN
-- Antes de irse de alta del hospital solicitar en Admisión de Consultas revisión en CCEE de COT ${DOCTOR} en unas 3/4 semanas para ver evolución.
+- Antes de irse de alta del hospital solicitar en Admisión de Consultas revisión en CCEE de COT Dr. ${DOCTOR} en unas 3/4 semanas para ver evolución.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.`
@@ -3484,7 +3484,7 @@ CURAS LOCALES
 - Curas planas cada 48-72 horas.
 
 REVISIÓN
-Revisión en CCEE de COT ${DOCTOR} en 3 semanas para seguir evolución.
+Revisión en CCEE de COT Dr. ${DOCTOR} en 3 semanas para seguir evolución.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.`
@@ -3525,7 +3525,7 @@ CURAS LOCALES
 - Curas planas cada 48-72 horas.
 
 REVISIÓN
-- Solicitar revisión en Admisión del Hospital para CCEE Revisión Hospitalaria de COT ${DOCTOR} en 4 semanas.
+- Solicitar revisión en Admisión del Hospital para CCEE Revisión Hospitalaria de COT Dr. ${DOCTOR} en 4 semanas.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.`
@@ -3563,7 +3563,7 @@ CURAS LOCALES
 - Curas y retirada de puntos de sutura/agrafes según informe de Enfermería.
 
 REVISIÓN
-- Antes de irse de alta, el paciente deberá solicitar revisión en Admisión del Hospital para CCEE Revisión Hospitalaria de COT ${DOCTOR} en 4 semanas.
+- Antes de irse de alta, el paciente deberá solicitar revisión en Admisión del Hospital para CCEE Revisión Hospitalaria de COT Dr. ${DOCTOR} en 4 semanas.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.`
@@ -3604,7 +3604,7 @@ CURAS LOCALES
 - Curas planas cada 48-72 horas.
 
 REVISIÓN
-- Solicitar revisión en Admisión del Hospital para CCEE Revisión Hospitalaria de COT ${DOCTOR} en 4 semanas.
+- Solicitar revisión en Admisión del Hospital para CCEE Revisión Hospitalaria de COT Dr. ${DOCTOR} en 4 semanas.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.`
@@ -3691,7 +3691,7 @@ CURAS LOCALES
 - Curas planas cada 48-72 horas.
 
 REVISIÓN
-- Solicitar revisión en Admisión del Hospital para CCEE Revisión Hospitalaria de COT ${DOCTOR} en 4 semanas.
+- Solicitar revisión en Admisión del Hospital para CCEE Revisión Hospitalaria de COT Dr. ${DOCTOR} en 4 semanas.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.`,
@@ -3737,7 +3737,7 @@ CURAS LOCALES
 - Curas planas cada 48-72 horas.
 
 REVISIÓN
-- Revisión en CCEE de COT (${DOCTOR}) en 4 semanas para valoración y seguimiento.
+- Revisión en CCEE de COT (Dr. ${DOCTOR}) en 4 semanas para valoración y seguimiento.
 - Solicitar cita en CCEE del Servicio de Rehabilitación para inicio fisioterapia
 
 SÍNTOMAS DE ALERTA
@@ -3781,7 +3781,7 @@ CURAS LOCALES
 
 REVISIÓN
 Antes de irse de alta del hospital:
-- Solicitar cita en Admisión de Consultas Externas para revisión en CCEE de COT ${DOCTOR} en 2/3 semanas para ver evolución.
+- Solicitar cita en Admisión de Consultas Externas para revisión en CCEE de COT Dr. ${DOCTOR} en 2/3 semanas para ver evolución.
 - Solicitar cita en Servicio de Rehabilitación para seguimiento postoperatorio.
 
 SÍNTOMAS DE ALERTA
@@ -3827,7 +3827,7 @@ CURAS LOCALES
 
 REVISIÓN
 Antes de irse de alta del hospital:
-- Solicitar cita en Admisión de Consultas Externas para revisión en CCEE de COT ${DOCTOR} en 3 semanas para ver evolución.
+- Solicitar cita en Admisión de Consultas Externas para revisión en CCEE de COT Dr. ${DOCTOR} en 3 semanas para ver evolución.
 - Solicitar cita en Servicio de Rehabilitación para seguimiento postoperatorio.
 
 SÍNTOMAS DE ALERTA
@@ -3888,7 +3888,7 @@ CURAS LOCALES
 
 REVISIÓN
 Antes de irse de alta del hospital:
-- Solicitar cita en Admisión de Consultas Externas para revisión en CCEE de COT ${DOCTOR} en 2/3 semanas para ver evolución.
+- Solicitar cita en Admisión de Consultas Externas para revisión en CCEE de COT Dr. ${DOCTOR} en 2/3 semanas para ver evolución.
 - Solicitar cita en Servicio de Rehabilitación para seguimiento postoperatorio.
 
 SÍNTOMAS DE ALERTA
@@ -3942,7 +3942,7 @@ CURAS LOCALES
 
 REVISIÓN
 Antes de irse de alta del hospital:
-- Solicitar cita en Admisión de Consultas Externas para revisión en CCEE de COT ${DOCTOR} en 2/3 semanas para ver evolución.
+- Solicitar cita en Admisión de Consultas Externas para revisión en CCEE de COT Dr. ${DOCTOR} en 2/3 semanas para ver evolución.
 - Solicitar cita en Servicio de Rehabilitación para seguimiento postoperatorio.
 
 SÍNTOMAS DE ALERTA
@@ -3997,7 +3997,7 @@ CURAS LOCALES
 
 REVISIÓN
 Antes de irse de alta del hospital:
-- Solicitar cita en Admisión de Consultas Externas para revisión en CCEE de COT ${DOCTOR} en 2/3 semanas para ver evolución.
+- Solicitar cita en Admisión de Consultas Externas para revisión en CCEE de COT Dr. ${DOCTOR} en 2/3 semanas para ver evolución.
 - Solicitar cita en Servicio de Rehabilitación para inicio de la fisioterapia lo antes posible a fin de trabajar la movilidad pasiva de la rodilla intervenida y seguimiento postoperatorio.
 
 SÍNTOMAS DE ALERTA
@@ -4045,7 +4045,7 @@ CURAS LOCALES
 
 REVISIÓN
 Antes de irse de alta del hospital:
-- Solicitar cita en Admisión de Consultas Externas para revisión en CCEE de COT ${DOCTOR} en 3 semanas para ver evolución.
+- Solicitar cita en Admisión de Consultas Externas para revisión en CCEE de COT Dr. ${DOCTOR} en 3 semanas para ver evolución.
 - Solicitar cita en Servicio de Rehabilitación para seguimiento postoperatorio.
 
 SÍNTOMAS DE ALERTA
@@ -4101,7 +4101,7 @@ CURAS LOCALES
 
 REVISIÓN
 Antes de irse de alta del hospital:
-- Solicitar cita en Admisión de Consultas Externas para revisión en CCEE de COT ${DOCTOR} en 2/3 semanas para ver evolución.
+- Solicitar cita en Admisión de Consultas Externas para revisión en CCEE de COT Dr. ${DOCTOR} en 2/3 semanas para ver evolución.
 - Solicitar cita en Servicio de Rehabilitación para seguimiento postoperatorio.
 
 SÍNTOMAS DE ALERTA
@@ -4235,7 +4235,7 @@ CURAS LOCALES
 - Curas planas cada 48-72 horas.
 
 REVISIÓN
-- Revisión en CCEE de COT ${DOCTOR} en 2/3 semanas para ver evolución y retirar puntos.
+- Revisión en CCEE de COT Dr. ${DOCTOR} en 2/3 semanas para ver evolución y retirar puntos.
 - Al alta solicitar cita en Servicio de Rehabilitación para seguimiento postoperatorio.
 
 SÍNTOMAS DE ALERTA
@@ -4295,7 +4295,7 @@ CURAS LOCALES
 
 REVISIÓN
 Antes de irse de alta del hospital:
-- Solicitar cita en Admisión de Consultas Externas para revisión en CCEE de COT ${DOCTOR} en 2/3 semanas para ver evolución.
+- Solicitar cita en Admisión de Consultas Externas para revisión en CCEE de COT Dr. ${DOCTOR} en 2/3 semanas para ver evolución.
 - Solicitar cita en Servicio de Rehabilitación para seguimiento postoperatorio.
 
 SÍNTOMAS DE ALERTA
@@ -4349,7 +4349,7 @@ CURAS LOCALES
 
 REVISIÓN
 Antes de irse de alta del hospital:
-- Solicitar cita en Admisión de Consultas Externas para revisión en CCEE de COT ${DOCTOR} en 2/3 semanas para ver evolución.
+- Solicitar cita en Admisión de Consultas Externas para revisión en CCEE de COT Dr. ${DOCTOR} en 2/3 semanas para ver evolución.
 - Solicitar cita en Servicio de Rehabilitación para seguimiento postoperatorio.
 
 SÍNTOMAS DE ALERTA
@@ -4624,7 +4624,7 @@ CURAS LOCALES
 - Curas planas cada 48-72 horas.
 
 REVISIÓN
-- Revisión en CCEE de COT ${DOCTOR} en 3-4 semanas para Rx, valoración y seguimiento.
+- Revisión en CCEE de COT Dr. ${DOCTOR} en 3-4 semanas para Rx, valoración y seguimiento.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias. Mover activamente los dedos de la extremidad operada.`
@@ -4656,7 +4656,7 @@ CURAS LOCALES
 - Curas planas cada 48-72 horas.
 
 REVISIÓN
-- Revisión en CCEE de COT ${DOCTOR} en 3 semanas aprox. para Rx, valoración y seguimiento.
+- Revisión en CCEE de COT Dr. ${DOCTOR} en 3 semanas aprox. para Rx, valoración y seguimiento.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias. Mover activamente los dedos de la extremidad operada.`
@@ -4690,7 +4690,7 @@ CURAS LOCALES
 - Curas planas cada 48-72 horas.
 
 REVISIÓN
-- Revisión en CCEE de COT ${DOCTOR} en 3 semanas para Rx, valoración y seguimiento.
+- Revisión en CCEE de COT Dr. ${DOCTOR} en 3 semanas para Rx, valoración y seguimiento.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.`
@@ -4724,7 +4724,7 @@ CURAS LOCALES
 - Curas planas cada 48-72 horas.
 
 REVISIÓN
-- Revisión en CCEE de COT ${DOCTOR} en 3 semanas para Rx, valoración y seguimiento.
+- Revisión en CCEE de COT Dr. ${DOCTOR} en 3 semanas para Rx, valoración y seguimiento.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias. Mover activamente los dedos de la extremidad operada.`
@@ -4759,7 +4759,7 @@ CURAS LOCALES
 - Curas planas cada 48-72 horas.
 
 REVISIÓN
-- Revisión en CCEE de COT ${DOCTOR} en 2 semanas para Rx, cura herida quirúrgica y seguimiento.
+- Revisión en CCEE de COT Dr. ${DOCTOR} en 2 semanas para Rx, cura herida quirúrgica y seguimiento.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.`
@@ -5712,7 +5712,7 @@ CURAS LOCALES
 - Curas planas cada 48-72 horas.
 
 REVISIÓN
-- Revisión en CCEE de COT ${DOCTOR} en 3 semanas para ampliar arco movilidad y seguimiento
+- Revisión en CCEE de COT Dr. ${DOCTOR} en 3 semanas para ampliar arco movilidad y seguimiento
 - Solicitar cita con RHB al alta
 
 SÍNTOMAS DE ALERTA
@@ -5766,7 +5766,7 @@ CURAS LOCALES
 - Retirada de puntos por ATS DE ZONA en 12-15 días
 
 REVISIÓN
-- Revisión en CCEE de COT ${DOCTOR} en 3 semanas para ver evolución
+- Revisión en CCEE de COT Dr. ${DOCTOR} en 3 semanas para ver evolución
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario`
@@ -5827,7 +5827,7 @@ CURAS LOCALES
 - Retirada de puntos de sutura una vez cicatrizada la herida quirúrgica (12-14 días aproximadamente)
 
 REVISIÓN
-- Solicitar cita para revisión en CCEE de COT ${DOCTOR} en 3-4 semanas para ver evolución
+- Solicitar cita para revisión en CCEE de COT Dr. ${DOCTOR} en 3-4 semanas para ver evolución
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.`
