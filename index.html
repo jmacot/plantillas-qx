@@ -351,6 +351,9 @@
       box-shadow: 0 0 0 3px rgba(26,58,92,0.10);
       animation: focusPulse 0.6s ease-out;
     }
+    [data-theme="dark"] .form-group input,
+    [data-theme="dark"] .form-group select { background: var(--surface2); }
+    [data-theme="dark"] .form-group input::placeholder { color: var(--text-light); }
     [data-theme="dark"] .form-group input:focus,
     [data-theme="dark"] .form-group select:focus {
       box-shadow: 0 0 0 3px rgba(147,197,253,0.15);
