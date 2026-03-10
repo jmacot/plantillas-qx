@@ -495,8 +495,10 @@
     }
     .btn-copy svg { width: 14px; height: 14px; }
     .btn-copy:hover { transform: translateY(-1px); }
-    .btn-copy.blue { color: var(--accent); }
-    .btn-copy.blue:hover { background: var(--accent); color: white; }
+    .btn-copy.blue { color: #7c3aed; border-color: #7c3aed; }
+    .btn-copy.blue:hover { background: #7c3aed; color: white; }
+    [data-theme="dark"] .btn-copy.blue { color: #a78bfa; border-color: #a78bfa; }
+    [data-theme="dark"] .btn-copy.blue:hover { background: #a78bfa; color: #111827; }
     .btn-copy.green { color: var(--green); }
     .btn-copy.green:hover { background: var(--green); color: white; }
     .btn-copy.amber { color: var(--amber); border-color: var(--amber); }
@@ -513,13 +515,20 @@
     }
     .panel {
       background: var(--surface);
-      border: 1px solid var(--border);
+      border: 1.5px solid var(--border);
+      border-left: 3px solid #7c3aed;
       border-radius: var(--radius);
       box-shadow: var(--shadow);
       display: flex;
       flex-direction: column;
       overflow: hidden;
       transition: box-shadow 0.3s, transform 0.3s;
+    }
+    .panel.panel-green {
+      border-left-color: var(--green);
+    }
+    .panel.panel-amber {
+      border-left-color: var(--amber);
     }
     .panel:hover {
       box-shadow: var(--shadow-hover);
@@ -530,29 +539,37 @@
       align-items: center;
       justify-content: space-between;
       padding: 12px 18px;
-      background: rgba(26,58,92,0.04);
-      border-bottom: 1px solid var(--border);
-      backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+      background: #f3f0ff;
+      border-bottom: 1.5px solid rgba(124,58,237,0.15);
       flex-shrink: 0;
     }
     .panel.panel-green .panel-header {
-      background: rgba(22,163,74,0.04);
+      background: var(--green-light);
+      border-bottom-color: rgba(22,163,74,0.20);
     }
     [data-theme="dark"] .panel-header {
-      background: rgba(147,197,253,0.06);
+      background: rgba(167,139,250,0.12);
+      border-bottom-color: rgba(167,139,250,0.15);
+    }
+    [data-theme="dark"] .panel {
+      border-left-color: #a78bfa;
     }
     [data-theme="dark"] .panel.panel-green .panel-header {
-      background: rgba(74,222,128,0.06);
+      background: rgba(74,222,128,0.12);
+      border-bottom-color: rgba(74,222,128,0.15);
     }
     .panel-title {
       font-family: 'Lora', serif;
       font-size: 1rem;
       font-weight: 700;
-      color: var(--accent);
+      color: #7c3aed;
       letter-spacing: 0.02em;
       display: flex;
       align-items: center;
       gap: 8px;
+    }
+    [data-theme="dark"] .panel-title {
+      color: #a78bfa;
     }
     .panel-title svg {
       width: 18px;
@@ -738,15 +755,17 @@
       overflow-y: auto;
       max-height: 60vh;
     }
-    .panel.panel-urg .panel-header { background: rgba(224,122,95,0.05); }
+    .panel.panel-urg { border-left-color: #e07a5f; }
+    .panel.panel-urg .panel-header { background: #fef0ec; border-bottom-color: rgba(224,122,95,0.20); }
     .panel.panel-urg .panel-title { color: #e07a5f; }
-    [data-theme="dark"] .panel.panel-urg .panel-header { background: rgba(232,151,127,0.06); }
+    [data-theme="dark"] .panel.panel-urg { border-left-color: #e8977f; }
+    [data-theme="dark"] .panel.panel-urg .panel-header { background: rgba(232,151,127,0.14); border-bottom-color: rgba(232,151,127,0.15); }
     [data-theme="dark"] .panel.panel-urg .panel-title { color: #e8977f; }
-    .panel.panel-amber { border-color: rgba(192,84,10,0.2); }
-    .panel.panel-amber .panel-header { background: rgba(192,84,10,0.04); border-bottom-color: rgba(192,84,10,0.15); }
+    .panel.panel-amber { border-color: rgba(192,84,10,0.2); border-left-color: var(--amber); }
+    .panel.panel-amber .panel-header { background: var(--amber-light); border-bottom-color: rgba(192,84,10,0.20); }
     .panel.panel-amber .panel-title { color: var(--amber); }
-    [data-theme="dark"] .panel.panel-amber { border-color: rgba(251,191,36,0.15); }
-    [data-theme="dark"] .panel.panel-amber .panel-header { background: rgba(251,191,36,0.06); border-bottom-color: rgba(251,191,36,0.12); }
+    [data-theme="dark"] .panel.panel-amber { border-color: rgba(251,191,36,0.15); border-left-color: #fbbf24; }
+    [data-theme="dark"] .panel.panel-amber .panel-header { background: rgba(251,191,36,0.14); border-bottom-color: rgba(251,191,36,0.15); }
     [data-theme="dark"] .panel.panel-amber .panel-title { color: #fbbf24; }
 
     /* ── URGENCIAS SEXO TOGGLE ── */
@@ -1932,6 +1951,7 @@ CÓMO CUIDAR SU FÉRULA Y YESO
   // ─────────────────────────────────────────────
   function obtenerPlantillas(DOCTOR, AYUDANTE, LADO) {
     const FECHA = hoy();
+    const EQUIPO = (!AYUDANTE || AYUDANTE === 'AYUDANTE') ? DOCTOR : `${EQUIPO}`;
     // Lateralidad — todas las formas necesarias
     const LADO_M = LADO === 'D' ? 'derecho' : LADO === 'I' ? 'izquierdo' : '---';
     const LADO_F = LADO === 'D' ? 'derecha' : LADO === 'I' ? 'izquierda' : '---';
@@ -2033,7 +2053,7 @@ CUIDADOS DE LA HERIDA
     return {
 // ── TRAUMA ──────────────────────────────
     canulados_cadera: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Anestesia: Regional.
 - Profilaxis antibiótica: 2g de cefazolina intravenosa.
@@ -2066,7 +2086,7 @@ CURAS LOCALES
 - Retiro de grapas en 15-20 días, salvo mejor criterio de enfermería.
 
 REVISIÓN
-- Solicitar cita para revisión en consultas externas (${DOCTOR}) en 2-3 semanas para control evolutivo y radiológico.
+- Solicitar cita para revisión en CCEE COT ${DOCTOR} en 2-3 semanas, para control evolutivo y radiológico. Acudir media hora antes de cita para realización de RX.
 
 SÍNTOMAS DE ALERTA
 Acuda a Urgencias si presenta alguno de los siguientes síntomas:
@@ -2101,7 +2121,7 @@ Prevención de complicaciones:
 - Asegúrese de que el paciente mantenga la pierna elevada siempre que sea posible para reducir la hinchazón.`
 },
     gamma3: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Fractura pertrocantérea fémur ${LADO_M}.
 - Anestesia regional.
@@ -2128,16 +2148,16 @@ MEDICACIÓN (según tarjeta sanitaria)
 - DEMILOS 600mg/2000 UI 1 comprimido al día
 
 CURAS LOCALES
-- Realizar curas locales en el centro de salud cada 24-48 horas, retirando grapas en 15-20 días, salvo mejor criterio de enfermería de zona.
+- Realizar curas locales en el centro de salud cada 48-72 horas, retirando grapas en 15-20 días, salvo mejor criterio de enfermería de zona.
 
 REVISIÓN
-- Solicitar cita para revisión en CCEE COT ${DOCTOR} en 3-4 semanas, para control evolutivo y radiológico.
+- Solicitar cita para revisión en CCEE COT ${DOCTOR} en 3-4 semanas, para control evolutivo y radiológico. Acudir media hora antes de cita para realización de RX.
 
 SÍNTOMAS DE ALERTA
 - Si aparece fiebre (>38º), dolor intenso que no se alivia con analgésicos, mala evolución de la herida, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.`
 },
     ptc_exeter: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Fractura subcapital fémur ${LADO_M}
 - Anestesia regional.
@@ -2165,16 +2185,16 @@ MEDICACIÓN (según tarjeta sanitaria)
 - DELTIUS 10.000UI/ML 1 FRASCO 10ML 4 GOTAS cada 24 horas vía oral.
 
 CURAS LOCALES
-- Realizar curas locales en el centro de salud cada 24-48 horas, retirando grapas en 15-20 días, salvo mejor criterio de enfermería de zona.
+- Realizar curas locales en el centro de salud cada 48-72 horas, retirando grapas en 15-20 días, salvo mejor criterio de enfermería de zona.
 
 REVISIÓN
-- Solicitar cita para revisión en CCEE COT ${DOCTOR} en un mes, para control evolutivo y radiológico (ACUDIR MEDIA HORA ANTES DE CITA PARA REALIZAR RX)
+- Solicitar cita para revisión en CCEE COT ${DOCTOR} en un mes, para control evolutivo y radiológico. Acudir media hora antes de cita para realización de RX.
 
 SÍNTOMAS DE ALERTA
 - Si aparece fiebre (>38º), dolor intenso que no se alivia con analgésicos, mala evolución de la herida, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.`
 },
     rafi_periprotesica: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 Fractura periprotésica de fémur ${LADO_M} en paciente con prótesis cadera
 - Profilaxis antibiótica con 2 gr de cefazolina.
@@ -2205,16 +2225,16 @@ MEDICACIÓN (según tarjeta sanitaria)
 - DEMILOS 600 mg / 1000 UI 1 comprimido cada 24 horas
 
 CURAS LOCALES
-- Realizar curas locales en el centro de salud cada 24-48 horas, retirando grapas en 15-17 días, salvo mejor criterio de enfermería de zona.
+- Realizar curas locales en el centro de salud cada 48-72 horas, retirando grapas en 15-17 días, salvo mejor criterio de enfermería de zona.
 
 REVISIÓN
-- Solicitar cita para revisión en CCEE COT ${DOCTOR} en 3-4 semanas, para control evolutivo y radiológico.
+- Solicitar cita para revisión en CCEE COT ${DOCTOR} en 3-4 semanas, para control evolutivo y radiológico. Acudir media hora antes de cita para realización de RX.
 
 SÍNTOMAS DE ALERTA
 - Si aparece fiebre (>38º), dolor intenso que no se alivia con analgésicos, mala evolución de la herida o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.`
 },
     rafi_supracondilea: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 Fractura supraintercondílea de fémur ${LADO_M}
 - Profilaxis antibiótica con 2 gr de cefazolina.
@@ -2244,16 +2264,16 @@ MEDICACIÓN (según tarjeta sanitaria)
 - DEMILOS 600 mg / 1000 UI 1 comprimido cada 24 horas
 
 CURAS LOCALES
-- Realizar curas locales en el centro de salud cada 24-48 horas, retirando grapas en 15-17 días, salvo mejor criterio de enfermería de zona.
+- Realizar curas locales en el centro de salud cada 48-72 horas, retirando grapas en 15-17 días, salvo mejor criterio de enfermería de zona.
 
 REVISIÓN
-- Solicitar cita para revisión en CCEE COT ${DOCTOR} en 3-4 semanas, para control evolutivo y radiológico.
+- Solicitar cita para revisión en CCEE COT ${DOCTOR} en 3-4 semanas, para control evolutivo y radiológico. Acudir media hora antes de cita para realización de RX.
 
 SÍNTOMAS DE ALERTA
 - Si aparece fiebre (>38º), dolor intenso que no se alivia con analgésicos, mala evolución de la herida o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.`
 },
     rafi_rotula_cerclaje: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 Fractura transversal rótula ${LADO_F}
 - Profilaxis antibiótica con 2 gr de cefazolina.
@@ -2283,16 +2303,16 @@ MEDICACIÓN (según tarjeta sanitaria)
 - DEMILOS 600 mg / 1000 UI 1 comprimido cada 24 horas
 
 CURAS LOCALES
-- Realizar curas locales en el centro de salud cada 24-48 horas, retirando grapas en 15-17 días, salvo mejor criterio de enfermería de zona.
+- Realizar curas locales en el centro de salud cada 48-72 horas, retirando grapas en 15-17 días, salvo mejor criterio de enfermería de zona.
 
 REVISIÓN
-- Solicitar cita para revisión en CCEE COT ${DOCTOR} en 3-4 semanas, para control evolutivo y radiológico.
+- Solicitar cita para revisión en CCEE COT ${DOCTOR} en 3-4 semanas, para control evolutivo y radiológico. Acudir media hora antes de cita para realización de RX.
 
 SÍNTOMAS DE ALERTA
 - Si aparece fiebre (>38º), dolor intenso que no se alivia con analgésicos, mala evolución de la herida o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.`
 },
     clavo_tibia_t2_stryker: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Fractura diafisaria multifragmentaria tibia ${LADO_F}.
 - Anestesia regional.
@@ -2320,16 +2340,16 @@ MEDICACIÓN (según tarjeta sanitaria)
 - ENOXAPARINA 40 mg cada 24 horas vía subcutánea.
 
 CURAS LOCALES
-- Realizar curas locales en el centro de salud cada 24-48 horas, retirando grapas en 15-20 días, salvo mejor criterio de enfermería de zona.
+- Realizar curas locales en el centro de salud cada 48-72 horas, retirando grapas en 15-20 días, salvo mejor criterio de enfermería de zona.
 
 REVISIÓN
-- Solicitar cita para revisión en CCEE COT ${DOCTOR} en 3-4 semanas, para control evolutivo y radiológico.
+- Solicitar cita para revisión en CCEE COT ${DOCTOR} en 3-4 semanas, para control evolutivo y radiológico. Acudir media hora antes de cita para realización de RX.
 
 SÍNTOMAS DE ALERTA
 - Si aparece fiebre (>38º), dolor intenso que no se alivia con analgésicos, mala evolución de heridas, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.`
 },
     rafi_tobillo: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Fractura transindesmal peroné ${LADO_M}.
 - Anestesia raquídea.
@@ -2357,16 +2377,16 @@ MEDICACIÓN (según tarjeta sanitaria)
 - Vit D3 2000UI cada 24h vo
 
 CURAS LOCALES
-- Realizar curas locales en el centro de salud cada 24-48 horas, retirando grapas en 15-17 días, salvo mejor criterio de enfermería de zona.
+- Realizar curas locales en el centro de salud cada 48-72 horas, retirando grapas en 15-17 días, salvo mejor criterio de enfermería de zona.
 
 REVISIÓN
-- Solicitar cita para revisión en CCEE COT ${DOCTOR} en 3-4 semanas, para control evolutivo y radiológico.
+- Solicitar cita para revisión en CCEE COT ${DOCTOR} en 3-4 semanas, para control evolutivo y radiológico. Acudir media hora antes de cita para realización de RX.
 
 SÍNTOMAS DE ALERTA
 - Si aparece fiebre (>38º), dolor intenso que no se alivia con analgésicos, mala evolución de la herida o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.`
 },
     aquiles: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Intervenido por el ${DOCTOR}
 - Tipo de anestesia: Raquídea
@@ -2419,7 +2439,7 @@ Curas
 - Si necesita ayuda para dejar de fumar, consulte con su médico o farmacéutico.`
 },
     rafi_edr_aculoc2: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Bajo anestesia local y sedación, en decúbito supino, con manguito de isquemia en raíz de miembro superior ${LADO_M}, y con control por escopia.
 - Abordaje de Henry sobre radio distal.
@@ -2450,7 +2470,7 @@ SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, mala evolución de la herida o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.`
 },
     rafi_humero_axsos: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Fractura extremo proximal / diafisaria húmero ${LADO_M}.
 - Anestesia general e IOT.
@@ -2476,16 +2496,16 @@ MEDICACIÓN (según tarjeta sanitaria)
 - NAPROXENO 500/ ESOMEPRAZOL 20 mg cada 12 horas vía oral añadido a lo anterior si precisa por dolor.
 
 CURAS LOCALES
-- Realizar curas locales en el centro de salud cada 24-48 horas, retirando grapas en 15-17 días, salvo mejor criterio de enfermería de zona.
+- Realizar curas locales en el centro de salud cada 48-72 horas, retirando grapas en 15-17 días, salvo mejor criterio de enfermería de zona.
 
 REVISIÓN
-- Solicitar cita para revisión en CCEE COT ${DOCTOR} en 3-4 semanas, para control evolutivo y radiológico.
+- Solicitar cita para revisión en CCEE COT ${DOCTOR} en 3-4 semanas, para control evolutivo y radiológico. Acudir media hora antes de cita para realización de RX.
 
 SÍNTOMAS DE ALERTA
 - Si aparece fiebre (>38º), dolor intenso que no se alivia con analgésicos, mala evolución de la herida o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.`
 },
     rafi_clavicula: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Fractura diafisaria desplazada y con acortamiento clavícula ${LADO_F}.
 - Anestesia general e IOT.
@@ -2514,13 +2534,13 @@ CURAS LOCALES
 - Realizar curas locales en el centro de salud cada 48-72 horas, retirando grapas en 15-17 días, salvo mejor criterio de enfermería de zona.
 
 REVISIÓN
-- Solicitar cita para revisión en CCEE COT ${DOCTOR} en 3-4 semanas, para control evolutivo y radiológico.
+- Solicitar cita para revisión en CCEE COT ${DOCTOR} en 3-4 semanas, para control evolutivo y radiológico. Acudir media hora antes de cita para realización de RX.
 
 SÍNTOMAS DE ALERTA
 - Si aparece fiebre (>38º), dolor intenso que no se alivia con analgésicos, mala evolución de la herida o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.`
 },
     monteggia: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Fractura luxación Monteggia codo ${LADO_M}.
 - Anestesia regional.
@@ -2560,7 +2580,7 @@ SÍNTOMAS DE ALERTA
 
 // ── CAR — ARTROSCOPIA RODILLA ───────────
     car_mosaicoplastia: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - CAR ${LADO_F_UPPER}:
 - Isquemia en raíz de muslo ${LADO_M}.
@@ -2586,7 +2606,7 @@ tratamiento: `CUIDADOS POSTOPERATORIOS
 - PARACETAMOL 1 gr cada 8 horas
 - ENOXAPARINA  40 mg /24 horas vía subcutánea
 - Retirada de puntos por ATS DE ZONA en 12/15 días.
-- Revisión en CC EE  de  COT (${DOCTOR})  en  3 semanas  para ver evolución.
+- Revisión en CC EE  de  COT ${DOCTOR}  en  3 semanas  para ver evolución.
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
@@ -2595,7 +2615,7 @@ SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.`
 },
     car_fr_meseta: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - CAR ${LADO_F_UPPER}:
 - Isquemia en raíz de muslo ${LADO_M}.
@@ -2623,7 +2643,7 @@ tratamiento: `CUIDADOS POSTOPERATORIOS
 - PARACETAMOL 1 g / 8 horas (alterno con anterior cada 4 horas, si dolor intenso)
 - ENOXAPARINA  40 mg/24 horas - vía subcutánea
 - Retirada de puntos por ATS DE ZONA en 12/15 días.
-- Revisión en CC EE  de  COT (${DOCTOR})  en  3/4 semanas  para ver evolución.
+- Revisión en CC EE  de  COT ${DOCTOR}  en  3/4 semanas  para ver evolución.
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
@@ -2632,7 +2652,7 @@ SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.`
 },
     car_reinsercion_espina: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - CAR ${LADO_F_UPPER}:
 - Isquemia en raíz de muslo ${LADO_M}.
@@ -2660,7 +2680,7 @@ tratamiento: `CUIDADOS POSTOPERATORIOS
 - PARACETAMOL 1 gr cada 8 horas
 - ENOXAPARINA  40 mg/24 horas - vía subcutánea
 - Retirada de puntos por ATS DE ZONA en 12/15 días.
-- Revisión en CC EE  de  COT (${DOCTOR})  en  3 semanas  para ver evolución(Forzar si  es preciso!!!)
+- Revisión en CC EE  de  COT ${DOCTOR}  en  3 semanas  para ver evolución(Forzar si  es preciso!!!)
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
@@ -2687,7 +2707,7 @@ Postoperatorio:
 - Running  y  retorno  a actividades deportivas.`
 },
     car_lrr_ficat_plicatura: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - CAR ${LADO_F_UPPER}:
 - Isquemia en raíz de muslo ${LADO_M}.
@@ -2715,7 +2735,7 @@ tratamiento: `CUIDADOS POSTOPERATORIOS
 - PARACETAMOL 1 gr cada 8 horas
 - OMEPRAZOL 20 mg/ 24 horas.
 - BEMIPARINA  3500 UI / 24 horas vía subcutánea / 3 semanas.
-- Revisión en CC EE de COT (${DOCTOR}) en  2/3 semanas para retirar férula y seguimiento.
+- Revisión en CC EE de COT ${DOCTOR} en  2/3 semanas para retirar férula y seguimiento.
 - Al  alta  solicitar cita en  SERVICIO  DE  REHABILITACIÓN  para inicio  de fisioterapia tras retirada de   férula  de yeso
 
 CURAS LOCALES
@@ -2725,7 +2745,7 @@ SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias. Mover activamente los dedos de la extremidad operada.`
 },
     car_sher_plicatura: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - CAR ${LADO_F_UPPER}:
 - Isquemia en raíz de muslo ${LADO_M}.
@@ -2765,7 +2785,7 @@ Movilidad  progresiva   a  razón  de  :
 - PARACETAMOL 1 gr cada 8 horas
 - OMEPRAZOL 20 mg/ 24 horas.
 - BEMIPARINA  3500 UI / 24 horas vía subcutánea / 3 semanas.
-- Revisión en CC EE de COT (${DOCTOR}) en  2/3 semanas para seguimiento.
+- Revisión en CC EE de COT ${DOCTOR} en  2/3 semanas para seguimiento.
 - Al  alta  solicitar cita en  SERVICIO  DE  REHABILITACIÓN  para inicio  de fisioterapia tras retirada de   férula  de yeso
 
 CURAS LOCALES
@@ -2775,7 +2795,7 @@ SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias. Mover activamente los dedos de la extremidad operada.`
 },
     car_otv_adiccion: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - CAR ${LADO_F_UPPER} + osteotomía de adicción valguizante de tibia ${LADO_F_UPPER}:
 - Isquemia en muslo ${LADO_M}.
@@ -2808,13 +2828,13 @@ tratamiento: `CUIDADOS POSTOPERATORIOS
 - BEMIPARINA 3500 UI /24 horas vía subcutánea
 
 Curas por  ATS DE  ZONA con  Betadine  cada  48/72 horas.
-- Revisión en CC EE  de  COT (${DOCTOR})  en  3 semanas  para ver evolución.
+- Revisión en CC EE  de  COT ${DOCTOR}  en  3 semanas  para ver evolución.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.`
 },
     car_otv_sustraccion: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - CAR ${LADO_F_UPPER} + osteotomía de sustracción valguizante de tibia ${LADO_F_UPPER} tipo Coventry:
 - Isquemia en muslo ${LADO_M}.
@@ -2851,13 +2871,13 @@ tratamiento: `CUIDADOS POSTOPERATORIOS
 - ENOXAPARINA 60 mg /24 horas vía subcutánea
 
 Curas por  ATS DE  ZONA con  Betadine  cada  48/72 horas.
-- Revisión en CC EE  de  COT (${DOCTOR})  en  3 semanas  para ver evolución.
+- Revisión en CC EE  de  COT ${DOCTOR}  en  3 semanas  para ver evolución.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.`
 },
     car_otv_varizante_femur: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - CAR ${LADO_F_UPPER} + osteotomía supracondílea de sustracción varizante de fémur ${LADO_M}:
 - No se realiza isquemia.
@@ -2893,13 +2913,13 @@ tratamiento: `CUIDADOS POSTOPERATORIOS
 - ENOXAPARINA 60 mg /24 horas vía subcutánea
 
 Curas por  ATS DE  ZONA con  Betadine  cada  48/72 horas.
-- Revisión en CC EE  de  COT (${DOCTOR})  en  3 semanas  para ver evolución.
+- Revisión en CC EE  de  COT ${DOCTOR}  en  3 semanas  para ver evolución.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.`
 },
     car_otv_tomofix: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Osteotomía de adicción valguizante de tibia ${LADO_F_UPPER}:
 - Isquemia en muslo ${LADO_M}.
@@ -2926,13 +2946,13 @@ tratamiento: `CUIDADOS POSTOPERATORIOS
 - CLEXANE 40 mg /24 horas vía subcutánea hasta deambulación  normal con carga completa.
 
 Curas por  ATS DE  ZONA cada  48/72 horas.
-- Revisión en CC EE  de  COT (${DOCTOR})  en  3 semanas  para ver evolución.
+- Revisión en CC EE  de  COT ${DOCTOR}  en  3 semanas  para ver evolución.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.`
 },
     rodilla_car_dlo_newclip: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 CAR ${LADO_F_UPPER} + osteotomía a doble nivel (fémur y tibia) por genu varo severo MII realizada con plantillas personalizadas de corte PSI de New Clip
 - CAR ${LADO_F_UPPER} sin isquemia:
@@ -2957,13 +2977,13 @@ tratamiento: `CUIDADOS POSTOPERATORIOS
 - Omeprazol 20 mg / 24 horas.
 - Bemiparina 3500 UI / 24 horas vía subcutánea.
 - Curas por DUE de zona cada 48/72 horas.
-- Revisión en CCEE de COT (${DOCTOR}) en 3 semanas para ver evolución.
+- Revisión en CCEE de COT ${DOCTOR} en 3 semanas para ver evolución.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.`
 },
     rodilla_car_ovt_newclip: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 CAR ${LADO_F_UPPER} + osteotomía de adición valguizante de tibia ${LADO_F_UPPER}
 - Isquemia en muslo ${LADO_M}.
@@ -2994,13 +3014,13 @@ tratamiento: `CUIDADOS POSTOPERATORIOS
 - Omeprazol 20 mg / 24 horas.
 - Bemiparina 3500 UI / 24 horas vía subcutánea.
 - Curas por DUE de zona cada 48/72 horas.
-- Revisión en CCEE de COT (${DOCTOR}) en 3 semanas para ver evolución.
+- Revisión en CCEE de COT ${DOCTOR} en 3 semanas para ver evolución.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.`
 },
     rodilla_car_ovt_lca_medcontech: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 CAR + osteotomía de adición valguizante de tibia + ligamentoplastia LCA rodilla ${LADO_F}
 - Isquemia en muslo ${LADO_M}.
@@ -3026,13 +3046,13 @@ tratamiento: `CUIDADOS POSTOPERATORIOS
 - Omeprazol 20 mg / 24 horas.
 - Bemiparina 3500 UI / 24 horas vía subcutánea.
 - Curas por ATS de zona con Betadine cada 48/72 horas.
-- Revisión en CCEE de COT (${DOCTOR}) en 3 semanas para ver evolución.
+- Revisión en CCEE de COT ${DOCTOR} en 3 semanas para ver evolución.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.`
 },
     car_meniscectomia: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - CAR ${LADO_F_UPPER}:
 - Isquemia en raíz de muslo ${LADO_M}.
@@ -3064,7 +3084,7 @@ CURAS LOCALES
 - Curas planas cada 48-72 horas.
 
 REVISIÓN
-- Antes de irse de alta  del  hospital  solicitar  en  Admisión  de  Consultas  revisión en CC EE  de  COT (${DOCTOR})  en   unas  3/4 semanas  para ver evolución.
+- Antes de irse de alta  del  hospital  solicitar  en  Admisión  de  Consultas  revisión en CC EE  de  COT ${DOCTOR}  en   unas  3/4 semanas  para ver evolución.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
@@ -3097,7 +3117,7 @@ Progresión esperada
 - Retorno al deporte: según evaluación clínica (aprox. 6 semanas).`
 },
     car_sutura_meniscal: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - CAR ${LADO_F_UPPER}:
 - Isquemia en raíz de muslo ${LADO_M}.
@@ -3141,13 +3161,13 @@ CURAS LOCALES
 - Curas planas cada 48-72 horas.
 
 REVISIÓN
-- Revisión en CCEE de COT (${DOCTOR}) a  las  2 semanas  para ver evolución y ampliar  rango  de movilidad.
+- Revisión en CCEE de COT ${DOCTOR} a  las  2 semanas  para ver evolución y ampliar  rango  de movilidad.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.`
 },
     car_artrolisis: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - CAR ${LADO_F_UPPER} en paciente con rigidez postoperatoria tras artroplastia rodilla:
 - Isquemia en raíz de muslo ${LADO_M}.
@@ -3176,14 +3196,14 @@ CURAS LOCALES
 - Curas planas cada 48-72 horas.
 
 REVISIÓN
-- Revisión en CCEE de COT (${DOCTOR}) en 3/4 semanas  para seguir  evolución.
+- Revisión en CCEE de COT ${DOCTOR} en 3/4 semanas  para seguir  evolución.
 - Continuar  con sesiones de Rehabilitación  para tratar de   mantener  la  movilidad (SOLICITAR CITA  ANTES DEL  ALTA)
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.`
 },
     car_diagnostica: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - CAR ${LADO_F_UPPER}:
 - Isquemia en raíz de muslo ${LADO_M}.
@@ -3208,7 +3228,7 @@ tratamiento: `CUIDADOS POSTOPERATORIOS
 - PARACETAMOL 1 gr cada 8 horas
 - BEMIPARINA  3500 UI /24 horas vía subcutánea  durante 10 días.
 - Retirada de puntos por ATS DE ZONA en 12/15 días.
-- Revisión en CC EE  de  COT (${DOCTOR})  en unas  4-5   semanas  para ver evolución.
+- Revisión en CC EE  de  COT ${DOCTOR}  en unas  4-5   semanas  para ver evolución.
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
@@ -3217,7 +3237,7 @@ SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.`
 },
     car_cuerpo_libre: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Isquemia en raíz de muslo ${LADO_M}.
 - Portales tradicionales anteromedial y anterolateral.
@@ -3242,7 +3262,7 @@ tratamiento: `CUIDADOS POSTOPERATORIOS
 - PARACETAMOL 1 gr cada 8 horas
 - BEMIPARINA 3500 UI /24 horas vía subcutánea durante 10 días.
 - Retirada de puntos por ATS DE ZONA en 12/15 días.
-- Revisión en CC EE de COT (${DOCTOR}) en unas 4-5 semanas para ver evolución.
+- Revisión en CC EE de COT ${DOCTOR} en unas 4-5 semanas para ver evolución.
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
@@ -3251,7 +3271,7 @@ SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.`
 },
     car_ficat: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - CAR ${LADO_F_UPPER}:
 - Isquemia en raíz de muslo ${LADO_M}.
@@ -3277,7 +3297,7 @@ tratamiento: `CUIDADOS POSTOPERATORIOS
 - PARACETAMOL 1 gr cada 8 horas
 - ENOXAPARINA 40 mg /24 horas vía subcutánea  durante 15 días.
 - Retirada de puntos por ATS DE ZONA en 12/15 días.
-- Revisión en CC EE  de  COT (${DOCTOR})  en  3 semanas  para ver evolución.
+- Revisión en CC EE  de  COT ${DOCTOR}  en  3 semanas  para ver evolución.
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
@@ -3286,7 +3306,7 @@ SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.`
 },
     car_toilette: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - CAR ${LADO_F_UPPER}:
 - Isquemia en raíz de muslo ${LADO_M}.
@@ -3316,13 +3336,13 @@ CURAS LOCALES
 - Curas planas cada 48-72 horas.
 
 REVISIÓN
-- Antes de irse de alta  del  hospital  solicitar  en  Admisión  de  Consultas  revisión en CC EE  de  COT (${DOCTOR})  en   unas  3/4 semanas  para ver evolución.
+- Antes de irse de alta  del  hospital  solicitar  en  Admisión  de  Consultas  revisión en CC EE  de  COT ${DOCTOR}  en   unas  3/4 semanas  para ver evolución.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.`
 },
     car_sinovectomia: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - CAR ${LADO_F_UPPER} en paciente con derrame de repetición por sospecha de sinovitis villonodular pigmentada:
 - Isquemia en raíz de muslo ${LADO_M}.
@@ -3354,7 +3374,7 @@ CURAS LOCALES
 - Curas planas cada 48-72 horas.
 
 REVISIÓN
-- Revisión en CCEE de COT (${DOCTOR}) en 3 semanas  para seguir  evolución.
+- Revisión en CCEE de COT ${DOCTOR} en 3 semanas  para seguir  evolución.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.`
@@ -3362,7 +3382,7 @@ SÍNTOMAS DE ALERTA
 
 // ── PRÓTESIS DE CADERA (PTC) ────────────
     ptc_summit: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Coxartrosis cadera ${LADO_F}.
 - Profilaxis antibiótica con 2 gramos de cefazolina y 1 gramo IV de tranexámico.
@@ -3395,13 +3415,13 @@ CURAS LOCALES
 - Curas planas cada 48-72 horas.
 
 REVISIÓN
-- Solicitar revisión en Admisión del  Hospital  para  CCEE Revisión Hospitalaria de COT (${DOCTOR}) en 4 semanas.
+- Solicitar revisión en Admisión del  Hospital  para  CCEE Revisión Hospitalaria de COT ${DOCTOR} en 4 semanas.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.`
 },
     ptc_zimmer: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Coxartrosis cadera ${LADO_F}.
 - Profilaxis antibiótica con 2 gramos de cefazolina.
@@ -3430,13 +3450,13 @@ tratamiento: `CUIDADOS POSTOPERATORIOS
 Curas y retirada de puntos de sutura/agrafes según informe de Enfermería.
 
 REVISIÓN
-- Antes de irse de alta, el paciente deberá solicitar revisión en Admisión del Hospital para CCEE Revisión Hospitalaria de COT (${DOCTOR}) en 4 semanas.
+- Antes de irse de alta, el paciente deberá solicitar revisión en Admisión del Hospital para CCEE Revisión Hospitalaria de COT ${DOCTOR} en 4 semanas.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.`
 },
     ptc_stryker: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 Artroplastia total de cadera ${LADO_F} (Stryker: Trident + Accolade)
 - Coxartrosis cadera ${LADO_F}.
@@ -3471,7 +3491,7 @@ CURAS LOCALES
 - Curas planas cada 48-72 horas.
 
 REVISIÓN
-- Solicitar revisión en Admisión del Hospital para CCEE Revisión Hospitalaria de COT (${DOCTOR}) en 4 semanas.
+- Solicitar revisión en Admisión del Hospital para CCEE Revisión Hospitalaria de COT ${DOCTOR} en 4 semanas.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.`
@@ -3479,7 +3499,7 @@ SÍNTOMAS DE ALERTA
 
 // ── PRÓTESIS DE RODILLA ─────────────────
     ptr_triathlon: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Gonartrosis rodilla ${LADO_F}.
 - Profilaxis antibiótica con 2g de Cefazolina.
@@ -3530,7 +3550,7 @@ REVISIÓN
 tratamiento_ejercicios: EJERCICIOS_PTR
 },
     puc_pkr: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Genu varo artrósico rodilla ${LADO_F_UPPER}:
 - Profilaxis antibiótica con 2 gr de CEFAZOLINA.
@@ -3568,7 +3588,7 @@ CURAS LOCALES
 - Curas planas cada 48-72 horas.
 
 REVISIÓN
-- Solicitar revisión en Admisión del  Hospital  para  CCEE Revisión Hospitalaria de COT (${DOCTOR}) en 4 semanas.
+- Solicitar revisión en Admisión del  Hospital  para  CCEE Revisión Hospitalaria de COT ${DOCTOR} en 4 semanas.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.`,
@@ -3576,7 +3596,7 @@ SÍNTOMAS DE ALERTA
 tratamiento_ejercicios: EJERCICIOS_PTR
 },
     rpuc: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Rescate PUC ${LADO_F_UPPER} por prótesis dolorosa:
 - Profilaxis antibiótica con 2 gr de CEFAZOLINA.
@@ -3621,7 +3641,7 @@ tratamiento_ejercicios: EJERCICIOS_PTR
 
 // ── LCA — Stryker ───────────────────────
     lca_procinch: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Profilaxis antibiótica con 2 gr de cefazolina.
 - Isquemia en raíz de muslo ${LADO_M}.
@@ -3657,14 +3677,14 @@ CURAS LOCALES
 REVISIÓN
 
 Antes de irse de alta  del  hospital:
-- Solicitar  cita en  Admisión  de  Consultas Externas para revisión en CC EE  de  COT (${DOCTOR})  en  2/3   semanas  para ver evolución.
+- Solicitar  cita en  Admisión  de  Consultas Externas para revisión en CC EE  de  COT ${DOCTOR}  en  2/3   semanas  para ver evolución.
 - Solicitar  cita en  Servicio de  Rehabilitación  para  seguimiento  postoperatorio.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.`
 },
     lca_procinch_allinside: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Rotura crónica LCA RD.
 - Anestesia raquídea.
@@ -3706,14 +3726,14 @@ CURAS LOCALES
 REVISIÓN
 
 Antes de irse de alta  del  hospital:
-- Solicitar  cita en  Admisión  de  Consultas Externas para revisión en CC EE  de  COT (${DOCTOR})  en  3   semanas  para ver evolución.
+- Solicitar  cita en  Admisión  de  Consultas Externas para revisión en CC EE  de  COT ${DOCTOR}  en  3   semanas  para ver evolución.
 - Solicitar  cita en  Servicio de  Rehabilitación  para  seguimiento  postoperatorio.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.`
 },
     lca_procinch_lemaire: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Profilaxis antibiótica con 2 gr de cefazolina.
 - Isquemia en raíz de muslo ${LADO_M}.
@@ -3766,14 +3786,14 @@ CURAS LOCALES
 REVISIÓN
 
 Antes de irse de alta  del  hospital:
-- Solicitar  cita en  Admisión  de  Consultas Externas para revisión en CC EE  de  COT (${DOCTOR})  en  2/3   semanas  para ver evolución.
+- Solicitar  cita en  Admisión  de  Consultas Externas para revisión en CC EE  de  COT ${DOCTOR}  en  2/3   semanas  para ver evolución.
 - Solicitar  cita en  Servicio de  Rehabilitación  para  seguimiento  postoperatorio.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.`
 },
     lca_procinch_sutura: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Profilaxis antibiótica con 2 gr de cefazolina.
 - Isquemia en raíz de muslo ${LADO_M}.
@@ -3813,14 +3833,14 @@ CURAS LOCALES
 REVISIÓN
 
 Antes de irse de alta  del  hospital:
-- Solicitar  cita en  Admisión  de  Consultas Externas para revisión en CC EE  de  COT (${DOCTOR})  en  2/3   semanas  para ver evolución.
+- Solicitar  cita en  Admisión  de  Consultas Externas para revisión en CC EE  de  COT ${DOCTOR}  en  2/3   semanas  para ver evolución.
 - Solicitar  cita en  Servicio de  Rehabilitación  para  seguimiento  postoperatorio.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.`
 },
     lca_procinch_reinsercion: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Profilaxis antibiótica con 2 gr de cefazolina.
 - Isquemia en raíz de muslo ${LADO_M}.
@@ -3861,7 +3881,7 @@ CURAS LOCALES
 REVISIÓN
 
 Antes de irse de alta  del  hospital:
-- Solicitar  cita en  Admisión  de  Consultas Externas para revisión en CC EE  de  COT (${DOCTOR})  en  2/3   semanas  para ver evolución.
+- Solicitar  cita en  Admisión  de  Consultas Externas para revisión en CC EE  de  COT ${DOCTOR}  en  2/3   semanas  para ver evolución.
 - Solicitar  cita en  Servicio de  Rehabilitación  para inicio  de la fisioterapia lo  antes posible a fin  de trabajar la movilidad pasiva de la rodilla intervenida y  seguimiento  postoperatorio.
 
 SÍNTOMAS DE ALERTA
@@ -3870,7 +3890,7 @@ SÍNTOMAS DE ALERTA
 
 // ── LCA — Otros / Revisión ──────────────
     lca_allinside_arthrex: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Anestesia raquídea.
 - Profilaxis antibiótica con 2 gr de cefazolina.
@@ -3912,14 +3932,14 @@ CURAS LOCALES
 REVISIÓN
 
 Antes de irse de alta del hospital:
-- Solicitar cita en Admisión de Consultas Externas para revisión en CC EE de COT (${DOCTOR}) en 3 semanas para ver evolución.
+- Solicitar cita en Admisión de Consultas Externas para revisión en CC EE de COT ${DOCTOR} en 3 semanas para ver evolución.
 - Solicitar cita en Servicio de Rehabilitación para seguimiento postoperatorio.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.`
 },
     lca_hth: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Profilaxis antibiótica con 2 gr de cefazolina.
 - Isquemia en raíz de muslo ${LADO_M}.
@@ -3961,14 +3981,14 @@ CURAS LOCALES
 REVISIÓN
 
 Antes de irse de alta  del  hospital:
-- Solicitar  cita en  Admisión  de  Consultas Externas para revisión en CC EE  de  COT (${DOCTOR})  en  2/3   semanas  para ver evolución.
+- Solicitar  cita en  Admisión  de  Consultas Externas para revisión en CC EE  de  COT ${DOCTOR}  en  2/3   semanas  para ver evolución.
 - Solicitar  cita en  Servicio de  Rehabilitación  para  seguimiento  postoperatorio.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.`
 },
     lca_aum_am: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Profilaxis antibiótica con 2 gr de cefazolina.
 - Isquemia en raíz de muslo ${LADO_M}.
@@ -4011,7 +4031,7 @@ SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.`
 },
     lca_aum_pl: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Profilaxis antibiótica con 2 gr de cefazolina.
 - Isquemia en raíz de muslo ${LADO_M}.
@@ -4053,7 +4073,7 @@ SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.`
 },
     lca_rescate: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Profilaxis antibiótica con 2 gr de cefazolina.
 - Isquemia en raíz de muslo ${LADO_M}.
@@ -4089,14 +4109,14 @@ CURAS LOCALES
 - Curas planas cada 48-72 horas.
 
 REVISIÓN
-- Revisión en CCEE de COT (${DOCTOR}) en  2/3 semanas  para ver evolución y retirar puntos.
+- Revisión en CCEE de COT ${DOCTOR} en  2/3 semanas  para ver evolución y retirar puntos.
 - Al  alta solicitar  cita en  Servicio de  Rehabilitación  para  seguimiento  postoperatorio.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.`
 },
     lca_rescate_hth_lemaire: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Rescate de ligamentoplastia de LCA de la rodilla ${LADO_F}.
 - Profilaxis antibiótica con 2 gr de cefazolina.
@@ -4148,7 +4168,7 @@ CURAS LOCALES
 REVISIÓN
 
 Antes de irse de alta  del  hospital:
-- Solicitar  cita en  Admisión  de  Consultas Externas para revisión en CC EE  de  COT (${DOCTOR})  en  2/3   semanas  para ver evolución.
+- Solicitar  cita en  Admisión  de  Consultas Externas para revisión en CC EE  de  COT ${DOCTOR}  en  2/3   semanas  para ver evolución.
 - Solicitar  cita en  Servicio de  Rehabilitación  para  seguimiento  postoperatorio.
 
 SÍNTOMAS DE ALERTA
@@ -4157,7 +4177,7 @@ SÍNTOMAS DE ALERTA
 
 // ── LCA REPARACIÓN ────────────
     lca_reparacion: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Profilaxis antibiótica con 2 gr de cefazolina.
 - Isquemia en raíz de muslo ${LADO_M}.
@@ -4195,7 +4215,7 @@ CURAS LOCALES
 REVISIÓN
 
 Antes de irse de alta  del  hospital:
-- Solicitar  cita en  Admisión  de  Consultas Externas para revisión en CC EE  de  COT (${DOCTOR})  en  2/3   semanas  para ver evolución.
+- Solicitar  cita en  Admisión  de  Consultas Externas para revisión en CC EE  de  COT ${DOCTOR}  en  2/3   semanas  para ver evolución.
 - Solicitar  cita en  Servicio de  Rehabilitación  para  seguimiento  postoperatorio.
 
 SÍNTOMAS DE ALERTA
@@ -4204,7 +4224,7 @@ SÍNTOMAS DE ALERTA
 
 // ── ARTROSCOPIA CADERA (CAC) ────────────
     cac_labrum: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Decúbito supino.
 - Profilaxis ATB.
@@ -4306,7 +4326,7 @@ Limitación del rango de movilidad:
 
 // ── INFILTRACIÓN CADERA (IFC) ─────────────
     cadera_infiltracion: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Sedoanalgesia.
 - Paciente en decúbito supino.
@@ -4331,7 +4351,7 @@ SÍNTOMAS DE ALERTA
 
 // ── MIEMBRO SUPERIOR ─────────────────────
     ms_stc: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Isquemia por elevación en raíz brazo.
 - Anestesia local y sedación.
@@ -4361,7 +4381,7 @@ SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.`
 },
     ms_tcg: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Bajo anestesia general, decúbito supino, isquemia de miembro superior ${LADO_M}.
 - Se realiza abordaje sobre tumoración.
@@ -4388,7 +4408,7 @@ SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.`
 },
     ms_dedo_resorte: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Bajo anestesia local y sedación, en decúbito supino, con manguito de isquemia en raíz de miembro superior ${LADO_M}.
 - Se realiza poleotomía tras incisión en cara volar base --- dedo.
@@ -4405,7 +4425,7 @@ MEDICACIÓN (según tarjeta sanitaria)
 - OMEPRAZOL 20mg cada 24 horas durante 5 días.
 
 CURAS LOCALES
-- Realizar curas locales en el centro de salud cada 24-48 horas, retirando puntos de sutura en 12-15 días, salvo mejor criterio de enfermería de zona.
+- Realizar curas locales en el centro de salud cada 48-72 horas, retirando puntos de sutura en 12-15 días, salvo mejor criterio de enfermería de zona.
 - Una vez retirados los puntos, deberá masajear la zona de la cicatriz en círculos de forma enérgica, para evitar adherencias de la misma.
 - Evitar coger peso y hacer fuerza con la mano intervenida durante 4 semanas desde la fecha de la intervención.
 
@@ -4416,7 +4436,7 @@ SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.`
 },
     ms_dedo_resorte_tenolisis: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Bajo anestesia local, decúbito supino, isquemia de miembro superior ${LADO_M}.
 - Abordaje transversal sobre pliegue proximal de articulación MCF --- dedo mano ${LADO_F}.
@@ -4433,7 +4453,7 @@ CURAS LOCALES
 - Curas planas cada 48-72 horas.`
 },
     ms_fr_radio: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Profilaxis antibiótica con 2 gr de cefazolina.
 - Isquemia en raíz de miembro superior ${LADO_M}.
@@ -4457,13 +4477,13 @@ CURAS LOCALES
 - Curas planas cada 48-72 horas.
 
 REVISIÓN
-- Revisión en CCEE de COT (${DOCTOR}) en 3-4 semanas para Rx, valoración y seguimiento.
+- Revisión en CCEE de COT ${DOCTOR} en 3-4 semanas para Rx, valoración y seguimiento.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias. Mover activamente los dedos de la extremidad operada.`
 },
     ms_fr_cubito_radio: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Profilaxis antibiótica con 2 gr de cefazolina.
 - Isquemia en raíz de miembro superior ${LADO_M}.
@@ -4482,7 +4502,7 @@ tratamiento: `CUIDADOS POSTOPERATORIOS
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
 - Puede requerir ayuda domiciliaria
 - NOLOTIL 1 cápsula / 8 horas vía oral,  alternar cada  4  horas  con PARACETAMOL 1 gr/8h si  dolor intenso.
-- Revisión  en  CC EE de COT (${DOCTOR}) en 3 semanas aprox.  para Rx, valoración y  seguimiento.
+- Revisión  en  CC EE de COT ${DOCTOR} en 3 semanas aprox.  para Rx, valoración y  seguimiento.
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
@@ -4491,7 +4511,7 @@ SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias. Mover activamente los dedos de la extremidad operada.`
 },
     ms_fr_humero: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Profilaxis antibiótica con 2 gr de cefazolina.
 - No se realiza isquemia.
@@ -4512,7 +4532,7 @@ tratamiento: `CUIDADOS POSTOPERATORIOS
 - METAMIZOL  575 mg / 8 horas vía oral.
 - IBUPROFENO  600 mg/8  horas  via  oral  alterno  con  anterior   si  dolor  intenso
 - OMEPRAZOL 20 mg/ 24  horas.
-- Revisión  en  CC EE de COT (${DOCTOR}) en  3   semanas para Rx, valoración y  seguimiento.
+- Revisión  en  CC EE de COT ${DOCTOR} en  3   semanas para Rx, valoración y  seguimiento.
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
@@ -4521,7 +4541,7 @@ SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.`
 },
     ms_fr_olecranon_placa: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Profilaxis antibiótica con 2 gr de cefazolina.
 - Isquemia en raíz de miembro superior ${LADO_M}.
@@ -4542,7 +4562,7 @@ tratamiento: `CUIDADOS POSTOPERATORIOS
 - METAMIZOL  575 mg / 8 horas vía oral.
 - IBUPROFENO  600 mg/8  horas  via  oral  alterno  con  anterior   si  dolor  intenso
 - OMEPRAZOL 20 mg/ 24  horas.
-- Revisión  en  CC EE de COT (${DOCTOR}) en  3   semanas para Rx, valoración y  seguimiento.
+- Revisión  en  CC EE de COT ${DOCTOR} en  3   semanas para Rx, valoración y  seguimiento.
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
@@ -4551,7 +4571,7 @@ SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias. Mover activamente los dedos de la extremidad operada.`
 },
     ms_fr_olecranon_cerclaje: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Profilaxis antibiótica con 2 gr de cefazolina.
 - Isquemia en raíz de miembro superior ${LADO_M}.
@@ -4573,7 +4593,7 @@ tratamiento: `CUIDADOS POSTOPERATORIOS
 - METAMIZOL 575 mg / 8 horas vía oral.
 - IBUPROFENO  600 mg/8  horas  via  oral  alterno  con  anterior cada  4  horas,  si  dolor  intenso
 - OMEPRAZOL 20 mg/ 24  horas.
-- Revisión  en  CC EE de COT (${DOCTOR}) en  2 semanas para Rx, cura herida qca y  seguimiento.
+- Revisión  en  CC EE de COT ${DOCTOR} en  2 semanas para Rx, cura herida qca y  seguimiento.
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
@@ -4582,7 +4602,7 @@ SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias. Mover activamente los dedos de la extremidad operada.`
 },
     ms_seccion_tendon: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Isquemia en raíz brazo.
 - Anestesia general con mascarilla laríngea.
@@ -4617,7 +4637,7 @@ SÍNTOMAS DE ALERTA
 },
 
     ms_cerclaje_clavicula: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Luxación acromioclavicular / fractura distal clavícula ${LADO_F}.
 - Anestesia general e IOT. Profilaxis antibiótica con 2g de cefazolina.
@@ -4653,7 +4673,7 @@ SÍNTOMAS DE ALERTA
 },
 
     ms_dupuytren: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Bajo anestesia regional y sedación, en decúbito supino, con manguito de isquemia en raíz de miembro superior ${LADO_M}.
 - Abordaje en zigzag sobre cordón fibroso --- radio.
@@ -4671,7 +4691,7 @@ MEDICACIÓN (según tarjeta sanitaria)
 - OMEPRAZOL 20mg cada 24 horas durante 5 días.
 
 CURAS LOCALES
-- Realizar curas locales en el centro de salud cada 24-48 horas, retirando puntos de sutura en 12-15 días, salvo mejor criterio de enfermería de zona.
+- Realizar curas locales en el centro de salud cada 48-72 horas, retirando puntos de sutura en 12-15 días, salvo mejor criterio de enfermería de zona.
 - Una vez retirados los puntos, deberá masajear la zona de la cicatriz en círculos de forma enérgica, para evitar adherencias de la misma.
 - Evitar coger peso y hacer fuerza con la mano intervenida durante 4 semanas desde la fecha de la intervención.
 
@@ -4683,7 +4703,7 @@ SÍNTOMAS DE ALERTA
 },
 
     ms_ganglion: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Bajo anestesia local y sedación, en decúbito supino, con manguito de isquemia en raíz de miembro superior ${LADO_M}.
 - Incisión en cara dorsal de mano.
@@ -4710,7 +4730,7 @@ SÍNTOMAS DE ALERTA
 },
 
     ms_infiltracion_tmct: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Infiltración bajo escopia TMTC-STT mano ${LADO_F} con AL+CE.
 - Inmediata mejoría del dolor.`,
@@ -4732,7 +4752,7 @@ SÍNTOMAS DE ALERTA
 },
 
     ms_rizartrosis: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Bajo anestesia locorregional + sedación, decúbito supino, isquemia de miembro superior ${LADO_M}.
 - Abordaje dorsal de TMC primer dedo y técnica de Welby modificada.
@@ -4765,7 +4785,7 @@ SÍNTOMAS DE ALERTA
     // ─────────────────────────────────────────────
 
     pt_antepie: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Profilaxis antibiótica
 - Isquemia preventiva de miembro inferior ${LADO_M}
@@ -4805,7 +4825,7 @@ SÍNTOMAS DE ALERTA
 },
 
     pt_pie_plano_osteo: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Profilaxis antibiótica
 - Anestesia raquimedular
@@ -4845,7 +4865,7 @@ SÍNTOMAS DE ALERTA
 },
 
     pt_pie_plano_artrodesis: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Profilaxis antibiótica
 - Anestesia raquimedular
@@ -4885,7 +4905,7 @@ SÍNTOMAS DE ALERTA
 },
 
     pt_pie_cavo_osteo: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Profilaxis antibiótica
 - Anestesia raquimedular
@@ -4925,7 +4945,7 @@ SÍNTOMAS DE ALERTA
 },
 
     pt_pie_cavo_artrodesis: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Profilaxis antibiótica
 - Anestesia raquimedular
@@ -4966,7 +4986,7 @@ SÍNTOMAS DE ALERTA
 
 // ── HOMBRO — MANGUITO ROTADOR ──────────────────────
     hombro_cah_luxac: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Anestesia general e IOT. Profilaxis antibiótica con 2g de cefazolina.
 - En posición de silla de playa.
@@ -5000,7 +5020,7 @@ SÍNTOMAS DE ALERTA
 },
 
     hombro_cah: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Anestesia gral. + locorregional. Profilaxis ATB. Decúbito lateral ${DECUBITO}.
 - CAH ---.
@@ -5028,7 +5048,7 @@ SÍNTOMAS DE ALERTA
 },
 
     hombro_cah_subescapular: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Anestesia gral. + locorregional. Profilaxis ATB. Decúbito lateral ${DECUBITO}.
 - CAH ---.
@@ -5056,7 +5076,7 @@ SÍNTOMAS DE ALERTA
 },
 
     hombro_balon: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Anestesia gral. + locorregional. Profilaxis ATB. Decúbito lateral ${DECUBITO}.
 - CAH ---.
@@ -5085,7 +5105,7 @@ SÍNTOMAS DE ALERTA
 
 // ── HOMBRO — PRÓTESIS ──────────────────────
     hombro_pthi_aequalis: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Anestesia gral. + bloqueo locorregional. Profilaxis ATB.
 - Silla de playa. Abordaje deltopectoral.
@@ -5120,7 +5140,7 @@ SÍNTOMAS DE ALERTA
 },
 
     hombro_pthi_ascend: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Anestesia gral. + bloqueo locorregional. Profilaxis ATB.
 - Silla de playa. Abordaje deltopectoral. Tenodesis PLB a pectoral mayor. Desinserción subescapular con pastilla ósea.
@@ -5155,7 +5175,7 @@ SÍNTOMAS DE ALERTA
 },
 
     hombro_pthi_biorsa: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Anestesia gral. + bloqueo locorregional. Profilaxis ATB.
 - Silla de playa. Abordaje deltopectoral. Tenotomía PLB. Desinserción subescapular.
@@ -5191,7 +5211,7 @@ SÍNTOMAS DE ALERTA
 },
 
     hombro_pthi_revive: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Anestesia gral. + bloqueo locorregional. Profilaxis ATB.
 - Silla de playa. Incisión sobre cicatriz previa. Abordaje deltopectoral. Desinserción subescapular y troquíter. Se libera subescapular y supraespinoso. Exéresis de tejido fibrótico previo que se manda a microbiología, así como muestras de interfase de cemento, y tejido blando de glena y canal endomedular.
@@ -5227,7 +5247,7 @@ SÍNTOMAS DE ALERTA
 
 // ── HOMBRO — TUMORES / PARTES BLANDAS ──────────────
     hombro_elastofibroma: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Anestesia gral. Decúbito prono.
 - Abordaje paraescapular oblicuo.
@@ -5259,7 +5279,7 @@ SÍNTOMAS DE ALERTA
 
 // ── CODO ──────────────────────────────────
     codo_biceps_agudo: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Anestesia gral. + locorregional. Profilaxis ATB. Isquemia preventiva. Mesa de mano.
 - Abordaje anterior. Localización cabo tendinoso. Se referencia con cintas de alta resistencia (Arthrex).
@@ -5289,7 +5309,7 @@ SÍNTOMAS DE ALERTA
 },
 
     codo_biceps_cronico: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Anestesia gral. Profilaxis ATB. Mesa de mano.
 - 1ºT Extracción ST autólogo por posterior de MI. Grosor plastia 7 mm.
@@ -5322,7 +5342,7 @@ SÍNTOMAS DE ALERTA
 },
 
     codo_epicondilitis: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Anestesia gral. Supino. Isquemia preventiva. Mesa de mano.
 - Técnica de Nirschl. Perforaciones con AK en epicóndilo.
@@ -5347,7 +5367,7 @@ SÍNTOMAS DE ALERTA
 
 // ── RODILLA — OSTEOTOMÍAS Y CARTÍLAGO ──────────────
     rodilla_ovt: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Abordaje medial oblicuo anterior a los isquiotibiales. Localización de pata de ganso y LLI
 - Sección de tercio anterior y distal de LLI
@@ -5383,7 +5403,7 @@ SÍNTOMAS DE ALERTA
 },
 
     rodilla_ovt_slope: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Decúbito supino.
 - Isquemia en raíz del muslo ${LADO_M}.
@@ -5430,7 +5450,7 @@ SÍNTOMAS DE ALERTA
 },
 
     rodilla_fulkerson: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Manguito de isquemia en raíz del muslo ${LADO_M}.
 - Profilaxis antibiótica con 2 g cefazolina iv.
@@ -5471,14 +5491,14 @@ CURAS LOCALES
 - Curas planas cada 48-72 horas.
 
 REVISIÓN
-- Revisión en CCEE de COT (${DOCTOR}) en 3 semanas para ampliar arco movilidad y seguimiento
+- Revisión en CCEE de COT ${DOCTOR} en 3 semanas para ampliar arco movilidad y seguimiento
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias`
 },
 
     rodilla_mosaico_ovt: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Decúbito supino con pernera en pierna ${LADO_F}.
 - Isquemia en raíz del muslo ${LADO_M}.
@@ -5520,14 +5540,14 @@ CURAS LOCALES
 - Curas planas cada 48-72 horas.
 
 REVISIÓN
-- Revisión en CCEE de COT (${DOCTOR}) en 3 semanas para ver evolución
+- Revisión en CCEE de COT ${DOCTOR} en 3 semanas para ver evolución
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario`
 },
 
     rodilla_lfpm_tta: {
-hoja: `IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+hoja: `IQ ${FECHA} (${EQUIPO})
 
 - LRR RÓTULA ${LADO_F}
 - Profilaxis antibiótica con 2 g de cefazolina
