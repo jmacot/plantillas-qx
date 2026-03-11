@@ -213,8 +213,8 @@
       background: rgba(255,255,255,0.12);
       border: 1.5px solid rgba(255,255,255,0.2);
       border-radius: 50%;
-      width: 38px;
-      height: 38px;
+      width: 40px;
+      height: 40px;
       font-size: 1.15rem;
       cursor: pointer;
       display: flex;
@@ -871,7 +871,7 @@
       #seccion-quirofano .form-row .toggle-check { width: fit-content; }
       .panels-grid, .panels-grid-3 { grid-template-columns: 1fr !important; flex: none; }
       .panel textarea { min-height: 200px; }
-      .theme-toggle { width: 34px; height: 34px; font-size: 1rem; top: 8px; right: 8px; }
+      .theme-toggle { width: 36px; height: 36px; font-size: 1.1rem; top: 8px; right: 8px; }
       .modulo-nav { gap: 4px; }
       .modulo-pill { padding: 9px 8px; font-size: 11px; gap: 4px; }
       .modulo-pill svg { width: 14px; height: 14px; }
@@ -882,6 +882,10 @@
       .urg-sexo-btn { padding: 8px 10px; font-size: 12px; }
       #urgFerulaToggleWrap .toggle-check { width: fit-content; }
     }
+    /* Accesibilidad — focus visible para navegacion por teclado */
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    input:focus-visible, select:focus-visible, textarea:focus-visible { outline: none; }
+
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after {
         animation-duration: 0.01ms !important;
