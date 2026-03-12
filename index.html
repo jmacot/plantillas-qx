@@ -960,26 +960,28 @@
             <option value="I">Izquierdo</option>
           </select>
         </div>
-        <div class="form-group" id="isquemiaToggleWrap" style="display:none; flex:none;">
-          <label>Extras</label>
-          <label class="toggle-check">
-            <input type="checkbox" id="incluirIsquemia" onchange="cargarPlantilla()">
-            <span>Isquemia</span>
-          </label>
-        </div>
-        <div class="form-group" id="drenajeToggleWrap" style="display:none; flex:none;">
-          <label>&nbsp;</label>
-          <label class="toggle-check">
-            <input type="checkbox" id="incluirDrenaje" onchange="cargarPlantilla()">
-            <span>Drenaje</span>
-          </label>
-        </div>
-        <div class="form-group" id="ejerciciosToggleWrap" style="display:none; flex:none;">
-          <label>&nbsp;</label>
-          <label class="toggle-check">
-            <input type="checkbox" id="incluirEjercicios" onchange="cargarPlantilla()">
-            <span>Ejercicios</span>
-          </label>
+        <div class="form-group extras-group" id="extrasToggleWrap" style="display:none; flex:none;">
+          <label style="text-align:center; width:100%">Extras</label>
+          <div style="display:flex; gap:8px;">
+            <span id="isquemiaToggleWrap" style="display:none;">
+              <label class="toggle-check">
+                <input type="checkbox" id="incluirIsquemia" onchange="cargarPlantilla()">
+                <span>Isquemia</span>
+              </label>
+            </span>
+            <span id="drenajeToggleWrap" style="display:none;">
+              <label class="toggle-check">
+                <input type="checkbox" id="incluirDrenaje" onchange="cargarPlantilla()">
+                <span>Drenaje</span>
+              </label>
+            </span>
+            <span id="ejerciciosToggleWrap" style="display:none;">
+              <label class="toggle-check">
+                <input type="checkbox" id="incluirEjercicios" onchange="cargarPlantilla(); if(this.checked) mostrarToast('✓  Ejercicios añadidos a tratamiento al alta')">
+                <span>Ejercicios</span>
+              </label>
+            </span>
+          </div>
         </div>
         <div class="form-group" style="flex:none;">
           <label>Evolución</label>
@@ -1348,6 +1350,8 @@
     // Mostrar/ocultar toggles isquemia y drenaje
     document.getElementById('isquemiaToggleWrap').style.display = esPTR ? '' : 'none';
     document.getElementById('drenajeToggleWrap').style.display = (esPTR || esPTC) ? '' : 'none';
+    // Mostrar contenedor extras si algún toggle es visible
+    document.getElementById('extrasToggleWrap').style.display = (esPTR || esPTC) ? '' : 'none';
     // Aplicar defaults al cambiar de procedimiento
     if (proc && proc !== lastProc) {
       const defs = TOGGLE_DEFAULTS[proc];
@@ -1413,6 +1417,7 @@
     document.getElementById('ejerciciosToggleWrap').style.display = 'none';
     document.getElementById('isquemiaToggleWrap').style.display = 'none';
     document.getElementById('drenajeToggleWrap').style.display = 'none';
+    document.getElementById('extrasToggleWrap').style.display = 'none';
     lastProc = '';
     document.getElementById('rehabWrap').style.display = 'none';
     document.getElementById('incluirEvolucion').checked = false;
