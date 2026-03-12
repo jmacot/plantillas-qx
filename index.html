@@ -868,6 +868,8 @@
       }
       #seccion-quirofano .form-row > div:last-child .btn-danger { width: 100%; }
       #ejerciciosToggleWrap .toggle-check,
+      #isquemiaToggleWrap .toggle-check,
+      #drenajeToggleWrap .toggle-check,
       #seccion-quirofano .form-row .toggle-check { width: fit-content; }
       .panels-grid, .panels-grid-3 { grid-template-columns: 1fr !important; flex: none; }
       .panel textarea { min-height: 200px; }
@@ -939,6 +941,12 @@
 
     <div class="card">
       <div class="form-row">
+        <div class="form-group" style="flex:1; min-width:180px">
+          <label>Intervención</label>
+          <select id="procedimiento" onchange="cargarPlantilla()" disabled>
+            <option value="">— Seleccione categoría primero —</option>
+          </select>
+        </div>
         <div class="form-group" style="flex:none; width:120px">
           <label>Cirujano</label>
           <input id="doctor" type="text" placeholder="Apellido" oninput="cargarPlantilla()" />
@@ -954,14 +962,22 @@
             <option value="I">Izquierdo</option>
           </select>
         </div>
-        <div class="form-group" style="flex:2">
-          <label>Intervención</label>
-          <select id="procedimiento" onchange="cargarPlantilla()" disabled>
-            <option value="">— Seleccione categoría primero —</option>
-          </select>
+        <div class="form-group" id="isquemiaToggleWrap" style="display:none; flex:none;">
+          <label>Extras</label>
+          <label class="toggle-check">
+            <input type="checkbox" id="incluirIsquemia" onchange="cargarPlantilla()">
+            <span>Isquemia</span>
+          </label>
+        </div>
+        <div class="form-group" id="drenajeToggleWrap" style="display:none; flex:none;">
+          <label>&nbsp;</label>
+          <label class="toggle-check">
+            <input type="checkbox" id="incluirDrenaje" onchange="cargarPlantilla()">
+            <span>Drenaje</span>
+          </label>
         </div>
         <div class="form-group" id="ejerciciosToggleWrap" style="display:none; flex:none;">
-          <label>Extras</label>
+          <label>&nbsp;</label>
           <label class="toggle-check">
             <input type="checkbox" id="incluirEjercicios" onchange="cargarPlantilla()">
             <span>Ejercicios</span>
@@ -1221,6 +1237,7 @@
     ]},
     { id: 'ptr', label: 'Prótesis Rodilla', procs: [
       { value: 'ptr_triathlon', label: 'PTR Triathlon (Stryker)' },
+      { value: 'ptr_evolution', label: 'PTR Evolution (Palex)' },
       { value: 'puc_pkr', label: 'PUC PKR (Stryker)' },
       { value: 'rpuc', label: 'Revisión PUC (RPUC)' },
     ]},
@@ -1328,9 +1345,27 @@
     // Mostrar/ocultar toggle de ejercicios para prótesis de rodilla
     const ejWrap = document.getElementById('ejerciciosToggleWrap');
     const esPTR = activeCat === 'ptr' || CATEGORIAS.find(c => c.id === 'ptr')?.procs.some(p => p.value === proc);
+    const esPTC = activeCat === 'ptc' || CATEGORIAS.find(c => c.id === 'ptc')?.procs.some(p => p.value === proc);
     ejWrap.style.display = esPTR ? '' : 'none';
+    // Mostrar/ocultar toggles isquemia y drenaje
+    document.getElementById('isquemiaToggleWrap').style.display = esPTR ? '' : 'none';
+    document.getElementById('drenajeToggleWrap').style.display = (esPTR || esPTC) ? '' : 'none';
+    // Aplicar defaults al cambiar de procedimiento
+    if (proc && proc !== lastProc) {
+      const defs = TOGGLE_DEFAULTS[proc];
+      if (defs) {
+        document.getElementById('incluirIsquemia').checked = defs.isquemia;
+        document.getElementById('incluirDrenaje').checked = defs.drenaje;
+      } else {
+        document.getElementById('incluirIsquemia').checked = false;
+        document.getElementById('incluirDrenaje').checked = false;
+      }
+      lastProc = proc;
+    }
     if (!proc) return;
-    const t = obtenerPlantillas(doc, ayu, lado);
+    const isquemia = document.getElementById('incluirIsquemia').checked;
+    const drenaje = document.getElementById('incluirDrenaje').checked;
+    const t = obtenerPlantillas(doc, ayu, lado, isquemia, drenaje);
     const datos = t[proc];
     if (!datos) return;
     const hojaEl = document.getElementById('hojaOperatoria');
@@ -1375,7 +1410,12 @@
     document.getElementById('hojaOperatoria').value = '';
     document.getElementById('tratamientoAlta').value = '';
     document.getElementById('incluirEjercicios').checked = false;
+    document.getElementById('incluirIsquemia').checked = false;
+    document.getElementById('incluirDrenaje').checked = false;
     document.getElementById('ejerciciosToggleWrap').style.display = 'none';
+    document.getElementById('isquemiaToggleWrap').style.display = 'none';
+    document.getElementById('drenajeToggleWrap').style.display = 'none';
+    lastProc = '';
     document.getElementById('rehabWrap').style.display = 'none';
     document.getElementById('incluirEvolucion').checked = false;
     document.getElementById('evolucionPanel').style.display = 'none';
@@ -1967,6 +2007,7 @@ CÓMO CUIDAR SU FÉRULA Y YESO
     lca_reparacion: 'lca',
     // PTR / PUC
     ptr_triathlon: 'ptr',
+    ptr_evolution: 'ptr',
     puc_pkr: 'puc',
     rpuc: 'puc',
     // PTC
@@ -1992,6 +2033,20 @@ CÓMO CUIDAR SU FÉRULA Y YESO
     // Osteotomías + LCA combinada
     rodilla_car_ovt_lca_medcontech: 'lca',
   };
+
+  // ─────────────────────────────────────────────
+  //  DEFAULTS ISQUEMIA / DRENAJE por plantilla
+  // ─────────────────────────────────────────────
+  const TOGGLE_DEFAULTS = {
+    ptr_triathlon:  { isquemia: false, drenaje: false },
+    ptr_evolution:  { isquemia: false, drenaje: false },
+    puc_pkr:        { isquemia: true,  drenaje: true },
+    rpuc:           { isquemia: true,  drenaje: true },
+    ptc_summit:     { isquemia: false, drenaje: false },
+    ptc_zimmer:     { isquemia: false, drenaje: true },
+    ptc_stryker:    { isquemia: false, drenaje: false },
+  };
+  let lastProc = '';
 
   // ─────────────────────────────────────────────
   //  EVOLUCIÓN (quirófano)
@@ -2031,7 +2086,7 @@ CÓMO CUIDAR SU FÉRULA Y YESO
   // ─────────────────────────────────────────────
   //  PLANTILLAS
   // ─────────────────────────────────────────────
-  function obtenerPlantillas(DOCTOR, AYUDANTE, LADO) {
+  function obtenerPlantillas(DOCTOR, AYUDANTE, LADO, ISQUEMIA, DRENAJE) {
     const FECHA = hoy();
     const EQUIPO = (!AYUDANTE || AYUDANTE === 'AYUDANTE') ? DOCTOR : `${DOCTOR}/${AYUDANTE}`;
     // Lateralidad — todas las formas necesarias
@@ -2044,6 +2099,14 @@ CÓMO CUIDAR SU FÉRULA Y YESO
     // Decúbito contrario (PPC/PTC/artroscopia hombro)
     const DECUBITO = LADO === 'D' ? 'izquierdo' : LADO === 'I' ? 'derecho' : '---';
     const DECUBITO_UPPER = DECUBITO.toUpperCase();
+    // Isquemia y drenaje — variables dinámicas para PTR/PTC
+    const ISQUEMIA_INICIO = ISQUEMIA
+      ? `- Isquemia en raíz de miembro inferior ${LADO_M}.`
+      : `- La intervención se realiza sin isquemia.`;
+    const ISQUEMIA_FIN = ISQUEMIA
+      ? `\n- Se retira isquemia, hemostasia de vasos sangrantes y lavado abundante con SF.`
+      : '';
+    const DRENAJE_LINE = DRENAJE ? `- Drenaje aspirativo.\n` : '';
 
     // ── Bloque de ejercicios compartido por todas las prótesis de rodilla ──
     const EJERCICIOS_PTR = `EJERCICIOS POSTOPERATORIOS
@@ -2359,7 +2422,7 @@ hoja: `IQ ${FECHA} (${EQUIPO})
 
 Fractura transversal rótula ${LADO_F}
 - Profilaxis antibiótica con 2 gr de cefazolina.
-- Isquemia en raíz de muslo ${LADO_M}.
+- Isquemia en raíz de miembro inferior ${LADO_M}.
 - Incisión longitudinal anterior de rodilla.
 - Identificación de fractura y osteosíntesis en obenque mediante 2 agujas de Kirschner paralelas y cerclaje de alambre en ocho.
 - Se palpa congruencia articular a través de minificat.
@@ -2662,7 +2725,7 @@ SÍNTOMAS DE ALERTA
 hoja: `IQ ${FECHA} (${EQUIPO})
 
 - CAR ${LADO_F_UPPER}:
-- Isquemia en raíz de muslo ${LADO_M}.
+- Isquemia en raíz de miembro inferior ${LADO_M}.
 - Portales tradicionales anteromedial y anterolateral.
 - Portales accesorios anteromedial para zona receptora y parapatelar medial para zona donante.
 - Articulación femoropatelar y fondos de saco cuadricipitales: sin alteraciones.
@@ -2703,7 +2766,7 @@ SÍNTOMAS DE ALERTA
 hoja: `IQ ${FECHA} (${EQUIPO})
 
 - CAR ${LADO_F_UPPER}:
-- Isquemia en raíz de muslo ${LADO_M}.
+- Isquemia en raíz de miembro inferior ${LADO_M}.
 - Portales tradicionales anteromedial y anterolateral.
 - Articulación femoropatelar y fondos de saco cuadricipitales: sin alteraciones.
 - Compartimento interno: sin lesiones meniscales ni condrales.
@@ -2746,7 +2809,7 @@ SÍNTOMAS DE ALERTA
 hoja: `IQ ${FECHA} (${EQUIPO})
 
 - CAR ${LADO_F_UPPER}:
-- Isquemia en raíz de muslo ${LADO_M}.
+- Isquemia en raíz de miembro inferior ${LADO_M}.
 - Portales tradicionales anteromedial y anterolateral. Portal medial accesorio.
 - Articulación femoropatelar y fondos de saco cuadricipitales: sin alteraciones.
 - Compartimento interno y ext: sin lesiones meniscales ni hundimiento de meseta tibiales.
@@ -2807,7 +2870,7 @@ Postoperatorio:
 hoja: `IQ ${FECHA} (${EQUIPO})
 
 - CAR ${LADO_F_UPPER}:
-- Isquemia en raíz de muslo ${LADO_M}.
+- Isquemia en raíz de miembro inferior ${LADO_M}.
 - Portales tradicionales anteromedial y anterolateral.
 - No se aprecia lesiones meniscales ni ligamentosas.
 - Articulación femoropatelar y fondos de saco cuadricipitales: subluxación lateral de rótula con condropatía grado 3.
@@ -2849,7 +2912,7 @@ SÍNTOMAS DE ALERTA
 hoja: `IQ ${FECHA} (${EQUIPO})
 
 - CAR ${LADO_F_UPPER}:
-- Isquemia en raíz de muslo ${LADO_M}.
+- Isquemia en raíz de miembro inferior ${LADO_M}.
 - Portales tradicionales anteromedial y anterolateral.
 - Portal superoexterno accesorio.
 - Articulación femoropatelar y fondos de saco cuadricipitales: subluxación rotuliana externa sin condropatía.
@@ -3214,7 +3277,7 @@ SÍNTOMAS DE ALERTA
 hoja: `IQ ${FECHA} (${EQUIPO})
 
 - CAR ${LADO_F_UPPER}:
-- Isquemia en raíz de muslo ${LADO_M}.
+- Isquemia en raíz de miembro inferior ${LADO_M}.
 - Portales tradicionales anteromedial y anterolateral.
 - Articulación femoropatelar y fondos de saco cuadricipitales: sin alteraciones.
 - Compartimento interno: rotura degenerativa del cuerno posterior del menisco interno que se reseca y regulariza con pinzas y motor.
@@ -3277,7 +3340,7 @@ Progresión esperada
 hoja: `IQ ${FECHA} (${EQUIPO})
 
 - CAR ${LADO_F_UPPER}:
-- Isquemia en raíz de muslo ${LADO_M}.
+- Isquemia en raíz de miembro inferior ${LADO_M}.
 - Portales tradicionales anteromedial y anterolateral.
 - Articulación femoropatelar y fondos de saco cuadricipitales: sin alteraciones.
 - Compartimento interno: rotura en asa de cubo reducida en zona roja del cuerpo y cuerno posterior del menisco interno. Reducción y sutura con 4 puntos con sistema Fast-Fix y dos puntos sutura fuera dentro con Ticron 2.
@@ -3331,7 +3394,7 @@ SÍNTOMAS DE ALERTA
 hoja: `IQ ${FECHA} (${EQUIPO})
 
 - CAR ${LADO_F_UPPER} en paciente con rigidez postoperatoria tras artroplastia rodilla:
-- Isquemia en raíz de muslo ${LADO_M}.
+- Isquemia en raíz de miembro inferior ${LADO_M}.
 - Portales tradicionales anteromedial y anterolateral.
 - Se aprecia múltiples adherencias y fibrosis a nivel de fondos de saco subcuadricipitales y del Hoffa que se reseca con sinoviotomo.
 - Coagulación de puntos sangrantes con vaporizador.
@@ -3371,7 +3434,7 @@ SÍNTOMAS DE ALERTA
 hoja: `IQ ${FECHA} (${EQUIPO})
 
 - CAR ${LADO_F_UPPER}:
-- Isquemia en raíz de muslo ${LADO_M}.
+- Isquemia en raíz de miembro inferior ${LADO_M}.
 - Portales tradicionales anteromedial y anterolateral.
 - Articulación femoropatelar y fondos de saco cuadricipitales: sin alteraciones.
 - Compartimento interno: sin alteraciones.
@@ -3410,7 +3473,7 @@ SÍNTOMAS DE ALERTA
     car_cuerpo_libre: {
 hoja: `IQ ${FECHA} (${EQUIPO})
 
-- Isquemia en raíz de muslo ${LADO_M}.
+- Isquemia en raíz de miembro inferior ${LADO_M}.
 - Portales tradicionales anteromedial y anterolateral.
 - Articulación femoropatelar y fondos de saco cuadricipitales: sin alteraciones.
 - Compartimento interno: sin alteraciones.
@@ -3451,7 +3514,7 @@ SÍNTOMAS DE ALERTA
 hoja: `IQ ${FECHA} (${EQUIPO})
 
 - CAR ${LADO_F_UPPER}:
-- Isquemia en raíz de muslo ${LADO_M}.
+- Isquemia en raíz de miembro inferior ${LADO_M}.
 - Portales tradicionales anteromedial y anterolateral.
 - Articulación femoropatelar y fondos de saco cuadricipitales: síndrome de hiperpresión rotuliana externa sin condropatía. Se realiza sección alerón rotuliano externo artroscópico (Ficat) con vaporizador.
 - Compartimento interno: sin alteraciones.
@@ -3492,7 +3555,7 @@ SÍNTOMAS DE ALERTA
 hoja: `IQ ${FECHA} (${EQUIPO})
 
 - CAR ${LADO_F_UPPER}:
-- Isquemia en raíz de muslo ${LADO_M}.
+- Isquemia en raíz de miembro inferior ${LADO_M}.
 - Portales tradicionales anteromedial y anterolateral.
 - Articulación femoropatelar y fondos de saco cuadricipitales: condropatía FP grado 4.
 - Compartimento interno: rotura degenerativa del cuerpo y cuerno post del menisco int que se regulariza con pinzas y sinoviotomo. Condropatía CFI grado 4.
@@ -3532,7 +3595,7 @@ SÍNTOMAS DE ALERTA
 hoja: `IQ ${FECHA} (${EQUIPO})
 
 - CAR ${LADO_F_UPPER} en paciente con derrame de repetición por sospecha de sinovitis villonodular pigmentada:
-- Isquemia en raíz de muslo ${LADO_M}.
+- Isquemia en raíz de miembro inferior ${LADO_M}.
 - Portales tradicionales anteromedial y anterolateral.
 - Portal accesorio superolateral y superomedial.
 - Se aprecia sinovial hiperémica e hipertrófica en toda la rodilla formando vellosidades y con tinción parduzca por hemartros de repetición.
@@ -3580,7 +3643,7 @@ hoja: `IQ ${FECHA} (${EQUIPO})
 - Capsulectomía, luxación de cabeza femoral y osteotomía del cuello.
 - Artroplastia total cadera ${LADO_F} modelo Summit con cotilo Pinacle sector Gription no cementado nº 50, polietileno Marathon nº 50 +10º, vástago nº 6 no cementado estándar con cabeza de 28 mm +5 de cerámica.
 - Se comprueba estabilidad de la artroplastia tras reducción en todos los planos.
-- Cierre por planos con reinserción de musculatura glútea.
+${DRENAJE_LINE}- Cierre por planos con reinserción de musculatura glútea.
 - Se administra 1 gramo de tranexámico en 50 cc de SF a nivel local.
 - Piel con grapas.
 - Apósito compresivo.`,
@@ -3619,8 +3682,7 @@ hoja: `IQ ${FECHA} (${EQUIPO})
 - Capsulectomía, luxación de cabeza femoral y osteotomía del cuello.
 - Artroplastia total cadera ${LADO_F} (Zimmer): cotilo G7 nº 48 press-fit, vástago Taperloc nº 7.5, inserto polietileno con ceja 10º y cabeza cerámica 32 +0 mm.
 - Se comprueba estabilidad de la artroplastia tras reducción en todos los planos.
-- Cierre por planos con reinserción de musculatura glútea.
-- Drenaje aspirativo.
+${DRENAJE_LINE}- Cierre por planos con reinserción de musculatura glútea.
 - Piel con grapas.
 - Apósito compresivo.`,
 
@@ -3661,7 +3723,7 @@ Artroplastia total de cadera ${LADO_F} (Stryker: Trident + Accolade)
 - Vástago femoral Accolade nº 7, offset STD.
 - Cabeza de cerámica de 32 mm, cuello +0.
 - Lavado con abundante SSF. Infiltración con ác. tranexámico.
-- Cierre por planos. Agrafes en piel.
+${DRENAJE_LINE}- Cierre por planos. Agrafes en piel.
 - Apósito compresivo estéril.
 - La intervención cursa sin incidencias. Simetría de MMII en decúbito supino.`,
 
@@ -3695,15 +3757,58 @@ hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Gonartrosis rodilla ${LADO_F}.
 - Profilaxis antibiótica con 2g de Cefazolina.
-- La intervención se realiza sin isquemia.
+${ISQUEMIA_INICIO}
 - Abordaje longitudinal anterior y artrotomía pararrotuliana medial.
 - Prótesis total rodilla modelo Triathlon (STRYKER):
 - Componente femoral CR no cementado nº 4.
 - Componente tibial cementado nº 4.
 - Inserto tibial CR 9mm.
 - Patela:
-- Se comprueba adecuado balance mediolateral en flexión y extensión, y adecuado tracking rotuliano.
-- Cierre por planos.
+- Se comprueba adecuado balance mediolateral en flexión y extensión, y adecuado tracking rotuliano.${ISQUEMIA_FIN}
+${DRENAJE_LINE}- Cierre por planos.
+- Piel con grapas.
+- Vendaje compresivo.`,
+
+tratamiento: `CUIDADOS POSTOPERATORIOS
+- Aplicar hielo sobre la rodilla 3-4 veces al día durante 10-15 minutos.
+- Mover activamente los dedos de la extremidad operada.
+- Puede requerir ayuda domiciliaria
+
+MEDICACIÓN
+- METAMIZOL 1 cápsula / 8 horas vía oral.
+- PARACETAMOL 1 g / 8 horas, alterno con anterior cada 4 horas si dolor intenso.
+- TRAMADOL 50 mg cada 12 horas como rescate durante 10 días
+- ENOXAPARINA 40 mg /24 horas vía subcutánea durante 6 semanas.
+
+CURAS LOCALES
+- Curas planas cada 48-72 horas.
+
+REVISIÓN
+- Con este informe solicitará cita en consultas del ${DOCTOR} en 4 semanas. La primera revisión se realizará sin Rx control salvo petición por su Doctor.
+
+SÍNTOMAS DE ALERTA
+- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, mala evolución de la herida (enrojecimiento, hinchazón, secreción), o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
+- Signos de trombosis venosa: dolor en la pierna o pantorrilla no relacionado con la incisión, hinchazón creciente en pantorrilla, tobillo o pie.
+- Signos de embolia pulmonar: dificultad respiratoria, dolor torácico repentino.`,
+
+tratamiento_ejercicios: EJERCICIOS_PTR
+},
+
+// ── PTR Evolution (Palex) ─────────────────
+    ptr_evolution: {
+hoja: `IQ ${FECHA} (${EQUIPO})
+
+- Gonartrosis rodilla ${LADO_F}.
+- Profilaxis antibiótica con 2g de Cefazolina.
+${ISQUEMIA_INICIO}
+- Abordaje longitudinal anterior y artrotomía pararrotuliana medial.
+- Prótesis total rodilla modelo Evolution (PALEX):
+- Componente femoral CS no cementado nº 4.
+- Componente tibial cementado nº 4.
+- Inserto tibial CS 9mm.
+- Patela:
+- Se comprueba adecuado balance mediolateral en flexión y extensión, y adecuado tracking rotuliano.${ISQUEMIA_FIN}
+${DRENAJE_LINE}- Cierre por planos.
 - Piel con grapas.
 - Vendaje compresivo.`,
 
@@ -3736,16 +3841,14 @@ hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Genu varo artrósico rodilla ${LADO_F_UPPER}:
 - Profilaxis antibiótica con 2 gr de CEFAZOLINA.
-- Isquemia en raíz de muslo ${LADO_M}.
+${ISQUEMIA_INICIO}
 - Incisión longitudinal anterior de rodilla y artrotomía pararrotuliana medial con prolongación subvasto int.
 - Artroplastia unicompartimental de rodilla modelo PKR de Stryker:
 - Componente femoral cementado nº 2.
 - Componente tibial cementado nº 2 e inserto de 8 mm.
 - Patela:
-- Correcto balance mediolateral en flexión y extensión y adecuado tracking rotuliano.
-- Se retira isquemia, hemostasia de vasos sangrantes y lavado abundante con SF.
-- Cierre por planos.
-- Drenaje aspirativo.
+- Correcto balance mediolateral en flexión y extensión y adecuado tracking rotuliano.${ISQUEMIA_FIN}
+${DRENAJE_LINE}- Cierre por planos.
 - Piel con grapas.
 - Vendaje compresivo.
 - EVOLUCIÓN: Durante el postoperatorio el paciente se ha mantenido afebril y hemodinámicamente estable. Ha presentado buen control del dolor con la analgesia pautada, sin evidenciarse deficits vasculonerviosos ni signos de TVP en el miembro intervenido. La herida quirúrgica no ha presentado signos de complicación local.
@@ -3782,18 +3885,16 @@ hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Rescate PUC ${LADO_F_UPPER} por prótesis dolorosa:
 - Profilaxis antibiótica con 2 gr de CEFAZOLINA.
-- Isquemia en raíz de muslo ${LADO_M}.
+${ISQUEMIA_INICIO}
 - Incisión longitudinal anterior de rodilla sobre cicatriz anterior y artrotomía pararrotuliana medial.
 - Retirada de componentes de PUC anterior: componente tibial y femoral sin pérdida de stock óseo.
 - Componente femoral CR nº 3 no cementado.
 - Componente tibial nº 3 cementado MBT.
 - Inserto tibial RP de nº 3 de 15 mm.
 - Artroplastia de rótula cementada de 35 mm.
-- Correcto balance mediolateral en flexión y extensión y adecuado tracking rotuliano que no precisa Ficat.
-- Se retira isquemia, hemostasia de vasos sangrantes y lavado abundante con SF.
+- Correcto balance mediolateral en flexión y extensión y adecuado tracking rotuliano que no precisa Ficat.${ISQUEMIA_FIN}
 - Cóctel analgésico.
-- Cierre por planos.
-- Drenaje aspirativo.
+${DRENAJE_LINE}- Cierre por planos.
 - Piel con grapas.
 - Vendaje compresivo.`,
 
@@ -3830,7 +3931,7 @@ tratamiento_ejercicios: EJERCICIOS_PTR
 hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Profilaxis antibiótica con 2 gr de cefazolina.
-- Isquemia en raíz de muslo ${LADO_M}.
+- Isquemia en raíz de miembro inferior ${LADO_M}.
 - Se realiza exploración bajo anestesia previa que confirma la lesión de LCA.
 - Obtención y preparación de plastia autóloga ST-RI.
 - Fondos de saco cuadricipitales: sin alteraciones.
@@ -3916,7 +4017,7 @@ SÍNTOMAS DE ALERTA
 hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Profilaxis antibiótica con 2 gr de cefazolina.
-- Isquemia en raíz de muslo ${LADO_M}.
+- Isquemia en raíz de miembro inferior ${LADO_M}.
 - Obtención de plastia autóloga ST-RI.
 - Fondos de saco cuadricipitales: sin alteraciones.
 - Compartimento interno: rotura en asa de cubo del cuerpo y CPMI que se sutura con 3 puntos de fast-fix y 1 punto fuera dentro con ticron 2.
@@ -3977,7 +4078,7 @@ SÍNTOMAS DE ALERTA
 hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Profilaxis antibiótica con 2 gr de cefazolina.
-- Isquemia en raíz de muslo ${LADO_M}.
+- Isquemia en raíz de miembro inferior ${LADO_M}.
 - Se realiza exploración bajo anestesia previa que confirma la lesión de LCA.
 - Obtención y preparación de plastia autóloga ST-RI.
 - Fondos de saco cuadricipitales: sin alteraciones.
@@ -4031,7 +4132,7 @@ SÍNTOMAS DE ALERTA
 hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Profilaxis antibiótica con 2 gr de cefazolina.
-- Isquemia en raíz de muslo ${LADO_M}.
+- Isquemia en raíz de miembro inferior ${LADO_M}.
 - Se realiza CAR previa bajo que confirma la lesión de LCA.
 - Obtención y preparación de plastia autóloga ST-RI.
 - Fondos de saco cuadricipitales: sin alteraciones.
@@ -4089,7 +4190,7 @@ hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Anestesia raquídea.
 - Profilaxis antibiótica con 2 gr de cefazolina.
-- Isquemia en raíz de muslo ${LADO_M} 250 mmHg.
+- Isquemia en raíz de miembro inferior ${LADO_M} 250 mmHg.
 - Abordaje longitudinal sobre pata de ganso. Disección por planos. Fasciotomía sartorio y obtención de plastia ST.
 - Preparación de plastia cuádruple de ST con 2 Tightrope (Arthrex) de 7 cm longitud * 9 mm diámetro.
 - Tiempo artroscópico: portales artroscópicos habituales: AL, AM y AM accesorio.
@@ -4134,7 +4235,7 @@ SÍNTOMAS DE ALERTA
 hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Profilaxis antibiótica con 2 gr de cefazolina.
-- Isquemia en raíz de muslo ${LADO_M}.
+- Isquemia en raíz de miembro inferior ${LADO_M}.
 - CAR diagnóstica que confirma rotura completa de LCA.
 - Incisión longitudinal desde polo inferior de rótula a borde medial de TTA. Apertura del paratenon y obtención plastia HTH de 10 mm de anchura del tendón rotuliano y 2 pastillas óseas en los extremos 8*25 mm en rótula y 9*30 mm en TTA.
 - Ligamentoplastia LCA con autoinjerto HTH homolateral con técnica anatómica:
@@ -4190,7 +4291,7 @@ SÍNTOMAS DE ALERTA
 hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Profilaxis antibiótica con 2 gr de cefazolina.
-- Isquemia en raíz de muslo ${LADO_M}.
+- Isquemia en raíz de miembro inferior ${LADO_M}.
 - Se realiza CAR diagnóstica bajo anestesia previa apreciándose rotura del fascículo AM del LCA, con integridad del fascículo PL.
 - Obtención de plastia autóloga cuádruple de tendones de pata de ganso ST a través de incisión oblicua en cara anterointerna de tercio proximal de tibia.
 - Fondos de saco cuadricipitales: sin alteraciones.
@@ -4235,7 +4336,7 @@ SÍNTOMAS DE ALERTA
 hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Profilaxis antibiótica con 2 gr de cefazolina.
-- Isquemia en raíz de muslo ${LADO_M}.
+- Isquemia en raíz de miembro inferior ${LADO_M}.
 - Se realiza CAR diagnóstica bajo anestesia previa apreciándose rotura del fascículo PL del LCA, con integridad del fascículo AM.
 - Obtención de plastia autóloga de HTH a través de incisión central de polo inf rótula a TTA.
 - Fondos de saco cuadricipitales: sin alteraciones.
@@ -4279,7 +4380,7 @@ SÍNTOMAS DE ALERTA
 hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Profilaxis antibiótica con 2 gr de cefazolina.
-- Isquemia en raíz de muslo ${LADO_M}.
+- Isquemia en raíz de miembro inferior ${LADO_M}.
 - Se prepara plastia de banco de tejidos HTH con pastilla ósea para fémur de 9*25 mm y para tibia de 11*30 mm.
 - Fondos de saco cuadricipitales: sin alteraciones de interés.
 - Compartimento interno: secuelas de meniscectomía parcial del CPMI de cirugía previa.
@@ -4325,7 +4426,7 @@ hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Rescate de ligamentoplastia de LCA de la rodilla ${LADO_F}.
 - Profilaxis antibiótica con 2 gr de cefazolina.
-- Isquemia en raíz de muslo ${LADO_M}.
+- Isquemia en raíz de miembro inferior ${LADO_M}.
 - Exploración bajo anestesia que confirma rotura completa de la plastia autóloga previa de LCA.
 - Rotura longitudinal en asa de cubo del CPMI luxada que se reduce y se sutura con 3 puntos de fast-fix.
 - Preparación de la plastia de HTH de banco de tejidos con pastillas en fémur 7*25 y tibia 9*30 mm y rescate ligamentoplastia con técnica anatómica:
@@ -4386,7 +4487,7 @@ SÍNTOMAS DE ALERTA
 hoja: `IQ ${FECHA} (${EQUIPO})
 
 - Profilaxis antibiótica con 2 gr de cefazolina.
-- Isquemia en raíz de muslo ${LADO_M}.
+- Isquemia en raíz de miembro inferior ${LADO_M}.
 - Abordajes AL y AM.
 - Fondos de saco cuadricipitales: sin alteraciones.
 - Compartimento interno: sin lesiones meniscales ni condrales.
@@ -5856,7 +5957,7 @@ hoja: `IQ ${FECHA} (${EQUIPO})
 
 - LRR RÓTULA ${LADO_F}
 - Profilaxis antibiótica con 2 g de cefazolina
-- Isquemia en raíz de muslo ${LADO_M}
+- Isquemia en raíz de miembro inferior ${LADO_M}
 
 - 1º TIEMPO (CAR):
 - Portal AL y accesorio suprapatelar medial.

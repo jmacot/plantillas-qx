@@ -3,7 +3,7 @@
 > Catálogo de todas las plantillas del proyecto `plantillas-qx`,
 > organizadas por región/categoría (quirófano) y módulo de urgencias.
 
-> **Total: 90 plantillas quirúrgicas + 7 plantillas de urgencias = 97 plantillas** en 14 categorías quirúrgicas, 5 regiones anatómicas y 1 módulo de urgencias.
+> **Total: 91 plantillas quirúrgicas + 7 plantillas de urgencias = 98 plantillas** en 14 categorías quirúrgicas, 5 regiones anatómicas y 1 módulo de urgencias.
 
 > **Variables dinámicas (quirófano):** `${FECHA}` (fecha DD/MM/YY), `${DOCTOR}` (cirujano), `${AYUDANTE}` (ayudante). **Lateralidad:** `${LADO_M}` (derecho/izquierdo), `${LADO_F}` (derecha/izquierda), `${LADO_M_UPPER}` (DERECHO/IZQUIERDO), `${LADO_F_UPPER}` (DERECHA/IZQUIERDA), `${LADO_ABR_F}` (DERECHA/IZQUIERDA), `${LADO_ABR_M}` (DERECHO/IZQUIERDO), `${DECUBITO}` (decúbito lateral contrario, minúscula), `${DECUBITO_UPPER}` (DECÚBITO LATERAL contrario, mayúscula).
 
@@ -1756,7 +1756,7 @@ SÍNTOMAS DE ALERTA
 
 <a id="categoría-ptr"></a>
 
-#### Prótesis Rodilla (3 plantillas)
+#### Prótesis Rodilla (4 plantillas)
 
 ##### `ptr_triathlon` — PTR Triathlon (Stryker)
 
@@ -1895,6 +1895,34 @@ CUIDADOS DE LA HERIDA
 - NO FUMAR. El tabaco compromete la cicatrización, aumenta el riesgo de infección y retrasa la recuperación. Se recomienda evitarlo completamente durante el proceso de recuperación.
 - Ante complicaciones en la herida: NO tomar antibióticos por cuenta propia. Acuda a urgencias para valoración médica.
 ```
+
+##### `ptr_evolution` — PTR Evolution (Palex)
+
+**Nota Operatoria:**
+
+```
+IQ ${FECHA} (${EQUIPO})
+
+- Gonartrosis rodilla ${LADO_F}.
+- Profilaxis antibiótica con 2g de Cefazolina.
+${ISQUEMIA_INICIO}
+- Abordaje longitudinal anterior y artrotomía pararrotuliana medial.
+- Prótesis total rodilla modelo Evolution (PALEX):
+- Componente femoral CS no cementado nº 4.
+- Componente tibial cementado nº 4.
+- Inserto tibial CS 9mm.
+- Patela:
+- Se comprueba adecuado balance mediolateral en flexión y extensión, y adecuado tracking rotuliano.${ISQUEMIA_FIN}
+- Cierre por planos.
+- Piel con grapas.${DRENAJE_LINE}
+- Vendaje compresivo.
+```
+
+**Tratamiento al Alta:** Mismo que PTR Triathlon.
+
+**Toggles:** Isquemia (default OFF), Drenaje (default OFF), Ejercicios (EJERCICIOS_PTR).
+
+---
 
 ##### `puc_pkr` — PUC PKR (Stryker)
 
