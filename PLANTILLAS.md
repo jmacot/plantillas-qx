@@ -3,7 +3,7 @@
 > Catálogo de todas las plantillas del proyecto `plantillas-qx`,
 > organizadas por región/categoría (quirófano) y módulo de urgencias.
 
-> **Total: 91 plantillas quirúrgicas + 7 plantillas de urgencias = 98 plantillas** en 14 categorías quirúrgicas, 5 regiones anatómicas y 1 módulo de urgencias.
+> **Total: 92 plantillas quirúrgicas + 7 plantillas de urgencias = 99 plantillas** en 14 categorías quirúrgicas, 5 regiones anatómicas y 1 módulo de urgencias.
 
 > **Variables dinámicas (quirófano):** `${FECHA}` (fecha DD/MM/YY), `${DOCTOR}` (cirujano), `${AYUDANTE}` (ayudante). **Lateralidad:** `${LADO_M}` (derecho/izquierdo), `${LADO_F}` (derecha/izquierda), `${LADO_M_UPPER}` (DERECHO/IZQUIERDO), `${LADO_F_UPPER}` (DERECHA/IZQUIERDA), `${LADO_ABR_F}` (DERECHA/IZQUIERDA), `${LADO_ABR_M}` (DERECHO/IZQUIERDO), `${DECUBITO}` (decúbito lateral contrario, minúscula), `${DECUBITO_UPPER}` (DECÚBITO LATERAL contrario, mayúscula).
 
@@ -18,7 +18,7 @@
 - [Rodilla](#región-rodilla)
   - [Artroscopia Rodilla (17)](#categoría-car)
   - [Prótesis Rodilla (3)](#categoría-ptr)
-  - [LCA (12)](#categoría-lca)
+  - [LCA (13)](#categoría-lca)
   - [Osteotomías y Cartílago (8)](#categoría-rodilla_osteo)
 - [Cadera](#región-cadera)
   - [Prótesis Cadera (3)](#categoría-ptc)
@@ -2037,7 +2037,7 @@ SÍNTOMAS DE ALERTA
 
 <a id="categoría-lca"></a>
 
-#### LCA (12 plantillas)
+#### LCA (13 plantillas)
 
 ##### `lca_procinch` — LCA ProCinch anatómico ST-RI
 
@@ -2084,6 +2084,56 @@ CURAS LOCALES
 REVISIÓN
 Antes de irse de alta del hospital:
 - Solicitar cita en Admisión de Consultas Externas para revisión en CCEE de COT (${DOCTOR}) en 2/3 semanas para ver evolución.
+- Solicitar cita en Servicio de Rehabilitación para seguimiento postoperatorio.
+
+SÍNTOMAS DE ALERTA
+- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
+```
+
+##### `lca_procinch_rf` — LCA ProCinch anatómico RF
+
+**Nota Operatoria:**
+
+```
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+
+- Profilaxis antibiótica con 2 gr de cefazolina.
+- Isquemia en raíz de miembro inferior ${LADO_M}.
+- Se realiza exploración bajo anestesia previa que confirma la lesión de LCA.
+- Obtención y preparación de plastia autóloga recto femoral (8 mm diámetro).
+- Cierre por planos de capa superficial del cuádriceps y tejido celular subcutáneo.
+- Fondos de saco cuadricipitales: sin alteraciones.
+- Compartimento interno: sin lesiones meniscales ni condrales.
+- Compartimento externo: sin lesiones meniscales ni condrales.
+- Ligamentoplastia LCA 2RF: túnel femoral anclaje femoral Procinch (Stryker) y tibial con TIF Biosteon 9x35 mm.
+- Drenaje aspirativo intraarticular. ← toggle DRENAJE
+- Piel con grapas y vendaje compresivo.
+```
+
+**Tratamiento al Alta:**
+
+```
+CUIDADOS POSTOPERATORIOS
+- Mover activamente los dedos de la extremidad operada.
+- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
+- Aplicar hielo sobre rodilla 4 veces al día durante 30 minutos.
+Puede caminar con ayuda de 2 muletas apoyo parcial de la pierna intervenida y movilidad libre según tolerancia.
+- Realizar ejercicios de cuádriceps y movilidad de la rodilla.
+- Movilizaciones pasivas de rótula 4/5 veces al día durante 15 minutos.
+- Puede requerir ayuda domiciliaria
+
+MEDICACIÓN
+- ENANPLUS 75 mg / 25 mg / 8 horas vía oral.
+- PARACETAMOL 1 gr cada 8 horas
+- ENOXAPARINA 40 mg / 24 horas vía subcutánea durante 3 semanas.
+
+CURAS LOCALES
+- Curas planas cada 48-72 horas.
+- Retirada de puntos/agrafes a los 15 días aproximadamente, salvo mejor criterio de Enfermería.
+
+REVISIÓN
+Antes de irse de alta del hospital:
+- Solicitar cita en Admisión de Consultas Externas para revisión en CCEE de COT Dr. ${DOCTOR} en 2/3 semanas para ver evolución.
 - Solicitar cita en Servicio de Rehabilitación para seguimiento postoperatorio.
 
 SÍNTOMAS DE ALERTA
@@ -5076,3 +5126,9 @@ Resumen:
 4. **Variables:** Usar `${FECHA}`, `${DOCTOR}`, `${AYUDANTE}` — nunca hardcodear
 5. **Lateralidad:** Usar variables dinámicas (`${LADO_M}`, `${LADO_F}`, etc.) según género del sustantivo — nunca hardcodear
 6. **Key:** Formato `snake_case` con prefijo de categoría
+7. **Toggles dinámicos:**
+   - **Drenaje:** Toggle disponible para PTR, PTC, LCA (`${DRENAJE_INTRA_LINE}` — "Drenaje aspirativo intraarticular") y CAR (`${DRENAJE_LINE}` — "Drenaje aspirativo")
+   - **Férula:** Toggle disponible para trauma: `rafi_edr_aculoc2` (antebraquial), `rafi_tobillo` (suropédica), `ms_fr_olecranon_placa`/`ms_fr_olecranon_cerclaje`/`ms_fr_cubito_radio` (braquial), `aquiles` (suropédica en equino). Default: desmarcado
+   - **Isquemia:** Toggle disponible para PTR
+   - **Ejercicios:** Toggle disponible para PTR
+8. **Curas locales:** Todas las plantillas incluyen "Retirada de puntos/agrafes a los 15 días aproximadamente, salvo mejor criterio de Enfermería" (excepto las que tienen instrucciones específicas de retirada)
