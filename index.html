@@ -975,6 +975,12 @@
                 <span>Drenaje</span>
               </label>
             </span>
+            <span id="ferulaTraumaToggleWrap" style="display:none;">
+              <label class="toggle-check">
+                <input type="checkbox" id="incluirFerulaTrauma" onchange="cargarPlantilla()">
+                <span>Férula</span>
+              </label>
+            </span>
             <span id="ejerciciosToggleWrap" style="display:none;">
               <label class="toggle-check">
                 <input type="checkbox" id="incluirEjercicios" onchange="cargarPlantilla(); if(this.checked) mostrarToast('✓  Ejercicios añadidos a tratamiento al alta')">
@@ -1243,6 +1249,7 @@
     ]},
     { id: 'lca', label: 'LCA', procs: [
       { value: 'lca_procinch', label: 'LCA ProCinch anatómico ST-RI' },
+      { value: 'lca_procinch_rf', label: 'LCA ProCinch anatómico RF' },
       { value: 'lca_procinch_allinside', label: 'LCA ProCinch anatómico ALL-INSIDE' },
       { value: 'lca_procinch_lemaire', label: 'LCA ProCinch + Lemaire' },
       { value: 'lca_procinch_sutura', label: 'LCA ProCinch + sutura meniscal' },
@@ -1346,28 +1353,36 @@
     const ejWrap = document.getElementById('ejerciciosToggleWrap');
     const esPTR = activeCat === 'ptr' || CATEGORIAS.find(c => c.id === 'ptr')?.procs.some(p => p.value === proc);
     const esPTC = activeCat === 'ptc' || CATEGORIAS.find(c => c.id === 'ptc')?.procs.some(p => p.value === proc);
+    const esLCA = activeCat === 'lca' || CATEGORIAS.find(c => c.id === 'lca')?.procs.some(p => p.value === proc);
+    const esCAR = activeCat === 'car' || CATEGORIAS.find(c => c.id === 'car')?.procs.some(p => p.value === proc);
+    const FERULA_PROCS = ['rafi_edr_aculoc2', 'rafi_tobillo', 'ms_fr_olecranon_placa', 'ms_fr_olecranon_cerclaje', 'ms_fr_cubito_radio', 'aquiles'];
+    const necesitaFerula = FERULA_PROCS.includes(proc);
     ejWrap.style.display = esPTR ? '' : 'none';
-    // Mostrar/ocultar toggles isquemia y drenaje
+    // Mostrar/ocultar toggles isquemia, drenaje y férula
     document.getElementById('isquemiaToggleWrap').style.display = esPTR ? '' : 'none';
-    document.getElementById('drenajeToggleWrap').style.display = (esPTR || esPTC) ? '' : 'none';
+    document.getElementById('drenajeToggleWrap').style.display = (esPTR || esPTC || esLCA || esCAR) ? '' : 'none';
+    document.getElementById('ferulaTraumaToggleWrap').style.display = necesitaFerula ? '' : 'none';
     // Mostrar contenedor extras si algún toggle es visible
-    document.getElementById('extrasToggleWrap').style.display = (esPTR || esPTC) ? '' : 'none';
+    document.getElementById('extrasToggleWrap').style.display = (esPTR || esPTC || esLCA || esCAR || necesitaFerula) ? '' : 'none';
     // Aplicar defaults al cambiar de procedimiento
     if (proc && proc !== lastProc) {
       const defs = TOGGLE_DEFAULTS[proc];
       if (defs) {
         document.getElementById('incluirIsquemia').checked = defs.isquemia;
         document.getElementById('incluirDrenaje').checked = defs.drenaje;
+        document.getElementById('incluirFerulaTrauma').checked = defs.ferula !== undefined ? defs.ferula : false;
       } else {
         document.getElementById('incluirIsquemia').checked = false;
         document.getElementById('incluirDrenaje').checked = false;
+        document.getElementById('incluirFerulaTrauma').checked = false;
       }
       lastProc = proc;
     }
     if (!proc) return;
     const isquemia = document.getElementById('incluirIsquemia').checked;
     const drenaje = document.getElementById('incluirDrenaje').checked;
-    const t = obtenerPlantillas(doc, ayu, lado, isquemia, drenaje);
+    const ferula = document.getElementById('incluirFerulaTrauma').checked;
+    const t = obtenerPlantillas(doc, ayu, lado, isquemia, drenaje, ferula);
     const datos = t[proc];
     if (!datos) return;
     const hojaEl = document.getElementById('hojaOperatoria');
@@ -1998,6 +2013,7 @@ CÓMO CUIDAR SU FÉRULA Y YESO
   const POSTOP_MAP = {
     // LCA
     lca_procinch: 'lca',
+    lca_procinch_rf: 'lca',
     lca_procinch_allinside: 'lca',
     lca_procinch_lemaire: 'lca',
     lca_procinch_sutura: 'lca',
@@ -2048,6 +2064,43 @@ CÓMO CUIDAR SU FÉRULA Y YESO
     ptc_summit:     { isquemia: false, drenaje: false },
     ptc_zimmer:     { isquemia: false, drenaje: true },
     ptc_stryker:    { isquemia: false, drenaje: false },
+    // LCA
+    lca_procinch:             { isquemia: false, drenaje: true },
+    lca_procinch_rf:          { isquemia: false, drenaje: true },
+    lca_procinch_allinside:   { isquemia: false, drenaje: true },
+    lca_procinch_lemaire:     { isquemia: false, drenaje: true },
+    lca_procinch_sutura:      { isquemia: false, drenaje: true },
+    lca_procinch_reinsercion: { isquemia: false, drenaje: true },
+    lca_hth:                  { isquemia: false, drenaje: false },
+    lca_aum_am:               { isquemia: false, drenaje: true },
+    lca_aum_pl:               { isquemia: false, drenaje: true },
+    lca_rescate:              { isquemia: false, drenaje: true },
+    lca_rescate_hth_lemaire:  { isquemia: false, drenaje: false },
+    lca_reparacion:           { isquemia: false, drenaje: false },
+    // CAR
+    car_mosaicoplastia:       { isquemia: false, drenaje: true },
+    car_fr_meseta:            { isquemia: false, drenaje: true },
+    car_reinsercion_espina:   { isquemia: false, drenaje: true },
+    car_lrr_ficat_plicatura:  { isquemia: false, drenaje: true },
+    car_sher_plicatura:       { isquemia: false, drenaje: true },
+    car_otv_adiccion:         { isquemia: false, drenaje: false },
+    car_otv_sustraccion:      { isquemia: false, drenaje: true },
+    car_otv_varizante_femur:  { isquemia: false, drenaje: true },
+    car_otv_tomofix:          { isquemia: false, drenaje: true },
+    car_meniscectomia:        { isquemia: false, drenaje: false },
+    car_sutura_meniscal:      { isquemia: false, drenaje: false },
+    car_artrolisis:           { isquemia: false, drenaje: true },
+    car_diagnostica:          { isquemia: false, drenaje: false },
+    car_ficat:                { isquemia: false, drenaje: true },
+    car_toilette:             { isquemia: false, drenaje: true },
+    car_sinovectomia:         { isquemia: false, drenaje: true },
+    // Trauma — férula
+    rafi_edr_aculoc2:         { isquemia: false, drenaje: false, ferula: true },
+    rafi_tobillo:             { isquemia: false, drenaje: false, ferula: true },
+    ms_fr_olecranon_placa:    { isquemia: false, drenaje: false, ferula: true },
+    ms_fr_olecranon_cerclaje: { isquemia: false, drenaje: false, ferula: true },
+    ms_fr_cubito_radio:       { isquemia: false, drenaje: false, ferula: true },
+    aquiles:                  { isquemia: false, drenaje: false, ferula: true },
   };
   let lastProc = '';
 
@@ -2089,7 +2142,7 @@ CÓMO CUIDAR SU FÉRULA Y YESO
   // ─────────────────────────────────────────────
   //  PLANTILLAS
   // ─────────────────────────────────────────────
-  function obtenerPlantillas(DOCTOR, AYUDANTE, LADO, ISQUEMIA, DRENAJE) {
+  function obtenerPlantillas(DOCTOR, AYUDANTE, LADO, ISQUEMIA, DRENAJE, FERULA) {
     const FECHA = hoy();
     const EQUIPO = (!AYUDANTE || AYUDANTE === 'AYUDANTE') ? DOCTOR : `${DOCTOR}/${AYUDANTE}`;
     // Lateralidad — todas las formas necesarias
@@ -2110,6 +2163,7 @@ CÓMO CUIDAR SU FÉRULA Y YESO
       ? `\n- Se retira isquemia, hemostasia de vasos sangrantes y lavado abundante con SF.`
       : '';
     const DRENAJE_LINE = DRENAJE ? `- Drenaje aspirativo.\n` : '';
+    const DRENAJE_INTRA_LINE = DRENAJE ? `- Drenaje aspirativo intraarticular.\n` : '';
 
     // ── Bloque de ejercicios compartido por todas las prótesis de rodilla ──
     const EJERCICIOS_PTR = `EJERCICIOS POSTOPERATORIOS
@@ -2509,7 +2563,7 @@ hoja: `IQ ${FECHA} (${EQUIPO})
 - Comprobamos adecuada reducción y colocación de material de osteosíntesis.
 - Lavado abundante con suero fisiológico.
 - Cierre por planos con sutura reabsorbible, y piel con grapas.
-- Apósito y férula suropédica.`,
+- Apósito${FERULA ? ' y férula suropédica' : ''}.`,
 
 tratamiento: `CUIDADOS POSTOPERATORIOS
 - Mantener pie elevado el mayor tiempo posible, moviendo dedos como se le ha explicado.
@@ -2543,8 +2597,7 @@ hoja: `IQ ${FECHA} (${EQUIPO})
 - Abordaje mini-open
 - Sutura según técnica de Ma-Griffith con hilo PDS 1
 - Isquemia profiláctica en pierna ${LADO_F}
-- Cierre por planos
-- Inmovilización con férula anterior en equino`,
+- Cierre por planos${FERULA ? '\n- Inmovilización con férula suropédica en equino' : ''}`,
 
 tratamiento: `CUIDADOS POSTOPERATORIOS
 - Puede requerir ayuda domiciliaria
@@ -2589,8 +2642,7 @@ hoja: `IQ ${FECHA} (${EQUIPO})
 - Bajo anestesia local y sedación, en decúbito supino, con manguito de isquemia en raíz de miembro superior ${LADO_M}, y con control por escopia.
 - Abordaje de Henry sobre radio distal.
 - Localización de fractura, reducción abierta y fijación interna con placa Aculoc-2 (Acumed).
-- Lavado, hemostasia y cierre.
-- Férula antebraquial.`,
+- Lavado, hemostasia y cierre.${FERULA ? '\n- Férula antebraquial.' : ''}`,
 
 tratamiento: `CUIDADOS POSTOPERATORIOS
 - Mantener la mano elevada, con el brazo en cabestrillo. Puede retirarlo cuando esté sentado y con la mano apoyada. Evitar declive.
@@ -2737,8 +2789,7 @@ hoja: `IQ ${FECHA} (${EQUIPO})
 - Compartimento externo: sin alteraciones.
 - Toma de 2 injertos osteocondrales de 8.5 mm diámetro en zona medial de troclea femoral y 1 injerto de 6.5 mm en zona lateral, todos de unos 17-18 mm longitud.
 - Perforación de 3 túneles correspondientes en zona receptora de unos 18-20 mm y colocación de los 3 injertos osteocondrales según técnica habitual de mosaicoplastia.
-- Cierre portales con grapas.
-- Drenaje aspirativo.`,
+- Cierre portales con grapas.${DRENAJE ? '\n- Drenaje aspirativo.' : ''}`,
 
 tratamiento: `CUIDADOS POSTOPERATORIOS
 - Aplicar hielo sobre la articulación operada 2 - 3 veces al día durante 20 minutos.
@@ -2780,8 +2831,7 @@ hoja: `IQ ${FECHA} (${EQUIPO})
 - Osteosíntesis con 2 tornillos percutáneos de esponjosa rosca parcial larga de 6.5 *60 mm con arandelas mediante control de escopia.
 - Se rellena túnel tibial con Prosteon taco y gránulos.
 - Cierre portales.
-- Drenaje aspirativo.
-- Vendaje compresivo.`,
+${DRENAJE_LINE}- Vendaje compresivo.`,
 
 tratamiento: `CUIDADOS POSTOPERATORIOS
 - Aplicar hielo sobre la articulación operada 2 - 3 veces al día durante 20 minutos.
@@ -2822,8 +2872,7 @@ hoja: `IQ ${FECHA} (${EQUIPO})
 - Se pasa doble sutura en marco en la base del LCA. Ambas se pasan por dos minitúneles desde el lecho de fractura y se anudan en la cortical anterior de tibia dejando un puente óseo de algo más de 1 cm.
 - Se comprueba con escopia reducción fragmento y tensión del LCA.
 - Cierre portales.
-- Drenaje aspirativo.
-- Inmovilización con ortesis en extensión.`,
+${DRENAJE_LINE}- Inmovilización con ortesis en extensión.`,
 
 tratamiento: `CUIDADOS POSTOPERATORIOS
 - Aplicar hielo sobre la articulación operada 2 - 3 veces al día durante 20 minutos.
@@ -2882,8 +2931,7 @@ hoja: `IQ ${FECHA} (${EQUIPO})
 - Se comprueba buen tracking rotuliano posteriormente a realineación.
 - Lavado articular abundante.
 - Cierre portales.
-- Drenaje aspirativo.
-- Férula inguinomaleolar.`,
+${DRENAJE_LINE}- Férula inguinomaleolar.`,
 
 tratamiento: `CUIDADOS POSTOPERATORIOS
 - Mantener el pie elevado siempre que esté sentado.
@@ -2903,6 +2951,7 @@ MEDICACIÓN
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
+- Retirada de puntos/agrafes a los 15 días aproximadamente, salvo mejor criterio de Enfermería.
 
 REVISIÓN
 - Revisión en CCEE de COT Dr. ${DOCTOR} en 2/3 semanas para retirar férula y seguimiento.
@@ -2927,8 +2976,7 @@ hoja: `IQ ${FECHA} (${EQUIPO})
 - No precisa Ficat.
 - Lavado articular abundante.
 - Cierre portales.
-- Drenaje aspirativo.
-- Férula inguinomaleolar.`,
+${DRENAJE_LINE}- Férula inguinomaleolar.`,
 
 tratamiento: `CUIDADOS POSTOPERATORIOS
 - Mantener el pie elevado siempre que esté sentado.
@@ -2959,6 +3007,7 @@ MEDICACIÓN
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
+- Retirada de puntos/agrafes a los 15 días aproximadamente, salvo mejor criterio de Enfermería.
 
 REVISIÓN
 - Revisión en CCEE de COT Dr. ${DOCTOR} en 2/3 semanas para seguimiento.
@@ -2983,7 +3032,7 @@ hoja: `IQ ${FECHA} (${EQUIPO})
 - Osteotomía biplanar de tibia respetando la TTA con sierra y completada con escoplo.
 - Apertura de la cuña de forma progresiva hasta 16º y relleno de la misma con el injerto autólogo cortical y de esponjosa.
 - Osteosíntesis con placa de osteotomía tibial medial proximal Tomofix fijada con 4 tornillos proximales y 4 tornillos distales fijados a placa.
-- Cierre por planos.
+${DRENAJE_LINE}- Cierre por planos.
 - Piel con grapas.
 - Vendaje compresivo.`,
 
@@ -3032,8 +3081,7 @@ hoja: `IQ ${FECHA} (${EQUIPO})
 - Osteotomía tibia y resección de cuña de sustracción de base lat de 9º.
 - Cierre de la cuña mediante osteoclasia medial y osteosíntesis con placa de osteotomía tibial Nexgen de 8 mm offset fijada con 2 tornillos de esponjosa proximales de 65 y 60 mm y 2 de cortical de 4.5 mm de 44 y 54 mm.
 - Reinserción músculo tibial anterior.
-- Drenaje aspirativo.
-- Cierre por planos.
+${DRENAJE_LINE}- Cierre por planos.
 - Piel con grapas.
 - Vendaje compresivo.`,
 
@@ -3081,8 +3129,7 @@ hoja: `IQ ${FECHA} (${EQUIPO})
 - Se comprueba con escopia cierre osteotomía y longitud y situación de los tornillos.
 - Lavado herida quirúrgico abundante.
 - Sutura de la fascia del vasto int.
-- Drenaje aspirativo.
-- Cierre por planos.
+${DRENAJE_LINE}- Cierre por planos.
 - Piel con grapas.
 - Vendaje compresivo.`,
 
@@ -3123,8 +3170,7 @@ hoja: `IQ ${FECHA} (${EQUIPO})
 - Apertura de la cuña de forma progresiva hasta 12º y relleno de la misma con injerto autólogo tricortical de cresta iliaca.
 - Osteosíntesis con placa de osteotomía tibial medial proximal Tomofix fijada con 4 tornillos proximales y 4 tornillos distales fijados a placa.
 - Cierre por planos.
-- Drenaje aspirativo.
-- Piel con grapas.
+${DRENAJE_LINE}- Piel con grapas.
 - Vendaje compresivo.`,
 
 tratamiento: `CUIDADOS POSTOPERATORIOS
@@ -3287,7 +3333,7 @@ hoja: `IQ ${FECHA} (${EQUIPO})
 - Pivote central: LCA íntegro y competente.
 - Compartimento externo: sin alteraciones.
 - Lavado articular abundante.
-- Cierre portales.
+${DRENAJE_LINE}- Cierre portales.
 - Vendaje compresivo.`,
 
 tratamiento: `CUIDADOS POSTOPERATORIOS
@@ -3305,6 +3351,7 @@ MEDICACIÓN
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
+- Retirada de puntos/agrafes a los 15 días aproximadamente, salvo mejor criterio de Enfermería.
 
 REVISIÓN
 - Antes de irse de alta del hospital solicitar en Admisión de Consultas revisión en CCEE de COT Dr. ${DOCTOR} en unas 3/4 semanas para ver evolución.
@@ -3351,7 +3398,7 @@ hoja: `IQ ${FECHA} (${EQUIPO})
 - Compartimento externo: sin alteraciones.
 - Lavado articular abundante.
 - Se infiltra portales y región intraarticular con ropivacaína + AH
-- Cierre portales.
+${DRENAJE_LINE}- Cierre portales.
 - Vendaje compresivo.`,
 
 tratamiento: `CUIDADOS POSTOPERATORIOS
@@ -3386,6 +3433,7 @@ MEDICACIÓN
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
+- Retirada de puntos/agrafes a los 15 días aproximadamente, salvo mejor criterio de Enfermería.
 
 REVISIÓN
 - Revisión en CCEE de COT Dr. ${DOCTOR} a las 2 semanas para ver evolución y ampliar rango de movilidad.
@@ -3405,8 +3453,7 @@ hoja: `IQ ${FECHA} (${EQUIPO})
 - Tras artrolisis y movilización bajo anestesia se consigue un balance articular de 0-140º
 - Lavado articular abundante.
 - Cierre portales.
-- Drenaje aspirativo.
-- Vendaje compresivo.`,
+${DRENAJE_LINE}- Vendaje compresivo.`,
 
 tratamiento: `CUIDADOS POSTOPERATORIOS
 - Aplicar hielo sobre la articulación operada 3 - 4 veces al día durante 20 minutos.
@@ -3425,6 +3472,7 @@ MEDICACIÓN
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
+- Retirada de puntos/agrafes a los 15 días aproximadamente, salvo mejor criterio de Enfermería.
 
 REVISIÓN
 - Revisión en CCEE de COT Dr. ${DOCTOR} en 3/4 semanas para seguir evolución.
@@ -3444,7 +3492,7 @@ hoja: `IQ ${FECHA} (${EQUIPO})
 - Pivote central: LCA y LCP íntegros y competentes.
 - Compartimento externo: sin alteraciones.
 - Lavado articular abundante.
-
+${DRENAJE_LINE}
 - Cierre portales.
 - Vendaje compresivo.`,
 
@@ -3526,8 +3574,7 @@ hoja: `IQ ${FECHA} (${EQUIPO})
 - Lavado articular abundante.
 - Se infiltra portales y región intraarticular con bupivacaína 0.5 con VC.
 - Cierre portales.
-- Drenaje aspirativo.
-- Vendaje compresivo.`,
+${DRENAJE_LINE}- Vendaje compresivo.`,
 
 tratamiento: `CUIDADOS POSTOPERATORIOS
 - Aplicar hielo sobre la articulación operada 2 - 3 veces al día durante 20 minutos.
@@ -3566,8 +3613,7 @@ hoja: `IQ ${FECHA} (${EQUIPO})
 - Compartimento externo: rotura degenerativa del cuerpo y cuerno ant del menisco ext que se regulariza. Condropatía MTE grado 4 y CFE grado 3.
 - Lavado articular y toilette general de la rodilla.
 - Extracción de 3-4 cuerpos libres por condromatosis sinovial entre 0.5-1 cm diámetro.
-- Se deja drenaje articular aspirativo.
-- Cierre portales.
+${DRENAJE_LINE}- Cierre portales.
 - Vendaje compresivo.`,
 
 tratamiento: `CUIDADOS POSTOPERATORIOS
@@ -3587,6 +3633,7 @@ MEDICACIÓN
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
+- Retirada de puntos/agrafes a los 15 días aproximadamente, salvo mejor criterio de Enfermería.
 
 REVISIÓN
 - Antes de irse de alta del hospital solicitar en Admisión de Consultas revisión en CCEE de COT Dr. ${DOCTOR} en unas 3/4 semanas para ver evolución.
@@ -3608,8 +3655,7 @@ hoja: `IQ ${FECHA} (${EQUIPO})
 - Lavado articular abundante.
 - Se infiltra portales y región intraarticular con ropivacaína + corticoides.
 - Cierre portales con grapas.
-- Drenaje aspirativo.
-- Vendaje compresivo.`,
+${DRENAJE_LINE}- Vendaje compresivo.`,
 
 tratamiento: `CUIDADOS POSTOPERATORIOS
 - Aplicar hielo sobre la articulación operada 3 - 4 veces al día durante 20 minutos.
@@ -3627,6 +3673,7 @@ MEDICACIÓN
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
+- Retirada de puntos/agrafes a los 15 días aproximadamente, salvo mejor criterio de Enfermería.
 
 REVISIÓN
 Revisión en CCEE de COT Dr. ${DOCTOR} en 3 semanas para seguir evolución.
@@ -3668,6 +3715,7 @@ MEDICACIÓN
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
+- Retirada de puntos/agrafes a los 15 días aproximadamente, salvo mejor criterio de Enfermería.
 
 REVISIÓN
 - Solicitar revisión en Admisión del Hospital para CCEE Revisión Hospitalaria de COT Dr. ${DOCTOR} en 4 semanas.
@@ -3746,6 +3794,7 @@ MEDICACIÓN
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
+- Retirada de puntos/agrafes a los 15 días aproximadamente, salvo mejor criterio de Enfermería.
 
 REVISIÓN
 - Solicitar revisión en Admisión del Hospital para CCEE Revisión Hospitalaria de COT Dr. ${DOCTOR} en 4 semanas.
@@ -3785,6 +3834,7 @@ MEDICACIÓN
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
+- Retirada de puntos/agrafes a los 15 días aproximadamente, salvo mejor criterio de Enfermería.
 
 REVISIÓN
 - Con este informe solicitará cita en consultas del ${DOCTOR} en 4 semanas. La primera revisión se realizará sin Rx control salvo petición por su Doctor.
@@ -3828,6 +3878,7 @@ MEDICACIÓN
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
+- Retirada de puntos/agrafes a los 15 días aproximadamente, salvo mejor criterio de Enfermería.
 
 REVISIÓN
 - Con este informe solicitará cita en consultas del ${DOCTOR} en 4 semanas. La primera revisión se realizará sin Rx control salvo petición por su Doctor.
@@ -3874,6 +3925,7 @@ MEDICACIÓN
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
+- Retirada de puntos/agrafes a los 15 días aproximadamente, salvo mejor criterio de Enfermería.
 
 REVISIÓN
 - Solicitar revisión en Admisión del Hospital para CCEE Revisión Hospitalaria de COT Dr. ${DOCTOR} en 4 semanas.
@@ -3918,6 +3970,7 @@ MEDICACIÓN
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
+- Retirada de puntos/agrafes a los 15 días aproximadamente, salvo mejor criterio de Enfermería.
 
 REVISIÓN
 - Revisión en CCEE de COT (Dr. ${DOCTOR}) en 4 semanas para valoración y seguimiento.
@@ -3941,8 +3994,7 @@ hoja: `IQ ${FECHA} (${EQUIPO})
 - Compartimento interno: sin lesiones meniscales ni condrales.
 - Compartimento externo: sin lesiones meniscales ni condrales.
 - Ligamentoplastia LCA 4ST-RI con anclaje femoral Procinch y tibial con TIF Biosteon 9*35 mm.
-- Drenaje aspirativo intraarticular.
-- Cierre por planos de la fascia del sartorio y TCS.
+${DRENAJE_INTRA_LINE}- Cierre por planos de la fascia del sartorio y TCS.
 - Piel con grapas y vendaje compresivo.`,
 
 tratamiento: `CUIDADOS POSTOPERATORIOS
@@ -3961,6 +4013,47 @@ MEDICACIÓN
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
+- Retirada de puntos/agrafes a los 15 días aproximadamente, salvo mejor criterio de Enfermería.
+
+REVISIÓN
+Antes de irse de alta del hospital:
+- Solicitar cita en Admisión de Consultas Externas para revisión en CCEE de COT Dr. ${DOCTOR} en 2/3 semanas para ver evolución.
+- Solicitar cita en Servicio de Rehabilitación para seguimiento postoperatorio.
+
+SÍNTOMAS DE ALERTA
+- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.`
+},
+    lca_procinch_rf: {
+hoja: `IQ ${FECHA} (${EQUIPO})
+
+- Profilaxis antibiótica con 2 gr de cefazolina.
+- Isquemia en raíz de miembro inferior ${LADO_M}.
+- Se realiza exploración bajo anestesia previa que confirma la lesión de LCA.
+- Obtención y preparación de plastia autóloga recto femoral (8 mm diámetro).
+- Cierre por planos de capa superficial del cuádriceps y tejido celular subcutáneo.
+- Fondos de saco cuadricipitales: sin alteraciones.
+- Compartimento interno: sin lesiones meniscales ni condrales.
+- Compartimento externo: sin lesiones meniscales ni condrales.
+- Ligamentoplastia LCA 2RF: túnel femoral anclaje femoral Procinch (Stryker) y tibial con TIF Biosteon 9x35 mm.
+${DRENAJE_INTRA_LINE}- Piel con grapas y vendaje compresivo.`,
+
+tratamiento: `CUIDADOS POSTOPERATORIOS
+- Mover activamente los dedos de la extremidad operada.
+- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
+- Aplicar hielo sobre rodilla 4 veces al día durante 30 minutos.
+Puede caminar con ayuda de 2 muletas apoyo parcial de la pierna intervenida y movilidad libre según tolerancia.
+- Realizar ejercicios de cuádriceps y movilidad de la rodilla.
+- Movilizaciones pasivas de rótula 4/5 veces al día durante 15 minutos.
+- Puede requerir ayuda domiciliaria
+
+MEDICACIÓN
+- ENANPLUS 75 mg / 25 mg / 8 horas vía oral.
+- PARACETAMOL 1 gr cada 8 horas
+- ENOXAPARINA 40 mg / 24 horas vía subcutánea durante 3 semanas.
+
+CURAS LOCALES
+- Curas planas cada 48-72 horas.
+- Retirada de puntos/agrafes a los 15 días aproximadamente, salvo mejor criterio de Enfermería.
 
 REVISIÓN
 Antes de irse de alta del hospital:
@@ -3986,8 +4079,7 @@ hoja: `IQ ${FECHA} (${EQUIPO})
 - Ampliación portal AM accesorio e introducción de la plastia por el mismo hacia TF primero y TT posteriormente.
 - Se introduce 20 mm de plastia en cada túnel y se tensiona bidireccionalmente a 20º flexión y cajón posterior.
 - Lavado articular abundante.
-- Se deja drenaje intraarticular.
-- Retirada de isquemia y cierre por planos.
+${DRENAJE_INTRA_LINE}- Retirada de isquemia y cierre por planos.
 - Se infiltra zona donante y portales con cóctel analgésico con 5 mg cloruro mórfico y 10 cc ropivacaína.
 - Vendaje compresivo.`,
 
@@ -4007,6 +4099,7 @@ MEDICACIÓN
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
+- Retirada de puntos/agrafes a los 15 días aproximadamente, salvo mejor criterio de Enfermería.
 
 REVISIÓN
 Antes de irse de alta del hospital:
@@ -4026,8 +4119,7 @@ hoja: `IQ ${FECHA} (${EQUIPO})
 - Compartimento interno: rotura en asa de cubo del cuerpo y CPMI que se sutura con 3 puntos de fast-fix y 1 punto fuera dentro con ticron 2.
 - Compartimento externo: sin lesiones meniscales ni condrales.
 - Ligamentoplastia 4 ST-RI con anclaje femoral Procinch y tibial con tornillo interferencial de 9*28 mm.
-- Drenaje aspirativo intraarticular.
-- Cierre por planos de la fascia del sartorio y TCS.
+${DRENAJE_INTRA_LINE}- Cierre por planos de la fascia del sartorio y TCS.
 - Se infiltra portales y en región intraarticular con ropivacaína y 5 mg de cloruro mórfico.
 - Piel con grapas y vendaje compresivo.
 - Plastia de refuerzo extraarticular con técnica de Lemaire modificada manteniendo inserción distal de plastia de banda iliotibial y fijada en fémur con TIF Biosteon 7*28 mm.`,
@@ -4068,6 +4160,7 @@ MEDICACIÓN
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
+- Retirada de puntos/agrafes a los 15 días aproximadamente, salvo mejor criterio de Enfermería.
 
 REVISIÓN
 Antes de irse de alta del hospital:
@@ -4088,8 +4181,7 @@ hoja: `IQ ${FECHA} (${EQUIPO})
 - Compartimento interno: sin lesiones meniscales ni condrales.
 - Compartimento externo: sin lesiones meniscales ni condrales.
 - Ligamentoplastia LCA 4ST-RI con anclaje femoral Procinch y tibial con TIF Biosteon 9*35 mm.
-- Drenaje aspirativo intraarticular.
-- Cierre por planos de la fascia del sartorio y TCS.
+${DRENAJE_INTRA_LINE}- Cierre por planos de la fascia del sartorio y TCS.
 - Piel con grapas y vendaje compresivo.`,
 
 tratamiento: `CUIDADOS POSTOPERATORIOS
@@ -4122,6 +4214,7 @@ MEDICACIÓN
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
+- Retirada de puntos/agrafes a los 15 días aproximadamente, salvo mejor criterio de Enfermería.
 
 REVISIÓN
 Antes de irse de alta del hospital:
@@ -4142,8 +4235,7 @@ hoja: `IQ ${FECHA} (${EQUIPO})
 - Compartimento interno: sin lesiones meniscales ni condrales.
 - Compartimento externo: avulsión de la raíz meniscal de CPML tipo 4 (lesión oblicua completa con desinserción de la raíz). Se realiza reinserción anatómica con punto de sutura técnica transtibial y fijación distal en cortical anterior con botón.
 - Ligamentoplastia LCA 4ST-RI con anclaje femoral Procinch y tibial con TIF Biosteon 9*28 mm.
-- Drenaje aspirativo intraarticular.
-- Cierre por planos de la fascia del sartorio y TCS.
+${DRENAJE_INTRA_LINE}- Cierre por planos de la fascia del sartorio y TCS.
 - Piel con grapas y vendaje compresivo.`,
 
 tratamiento: `CUIDADOS POSTOPERATORIOS
@@ -4177,6 +4269,7 @@ MEDICACIÓN
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
+- Retirada de puntos/agrafes a los 15 días aproximadamente, salvo mejor criterio de Enfermería.
 
 REVISIÓN
 Antes de irse de alta del hospital:
@@ -4204,8 +4297,7 @@ hoja: `IQ ${FECHA} (${EQUIPO})
 - Se introduce 20 mm de plastia en cada túnel y se tensiona bidireccionalmente a 20º flexión y cajón posterior.
 - Fijación femoral y tibial con Tightrope (Arthrex).
 - Lavado articular abundante.
-- Se deja drenaje intraarticular.
-- Retirada de isquemia y cierre por planos.
+${DRENAJE_INTRA_LINE}- Retirada de isquemia y cierre por planos.
 - Se infiltra zona donante y portales con cóctel analgésico con 5 mg cloruro mórfico y 10 cc ropivacaína.
 - Vendaje compresivo.`,
 
@@ -4225,6 +4317,7 @@ MEDICACIÓN
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
+- Retirada de puntos/agrafes a los 15 días aproximadamente, salvo mejor criterio de Enfermería.
 
 REVISIÓN
 Antes de irse de alta del hospital:
@@ -4247,7 +4340,7 @@ hoja: `IQ ${FECHA} (${EQUIPO})
 - Ascenso de la plastia HTH en sentido retrógrado y fijación túnel femoral con tornillo interferencial Biorci HA 7*25 mm y de 8*30 mm en túnel tibial.
 - Se comprueba estabilidad del injerto y ausencia de roce en escotadura intercondílea con extensión completa.
 - Lavado articular.
-- Cierre por planos.
+${DRENAJE_INTRA_LINE}- Cierre por planos.
 - Piel con grapas.
 - Vendaje compresivo.`,
 
@@ -4281,6 +4374,7 @@ MEDICACIÓN
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
+- Retirada de puntos/agrafes a los 15 días aproximadamente, salvo mejor criterio de Enfermería.
 
 REVISIÓN
 Antes de irse de alta del hospital:
@@ -4304,8 +4398,7 @@ hoja: `IQ ${FECHA} (${EQUIPO})
 - Realización de túnel tibial de 8 mm.
 - Realización de túnel femoral a través del túnel tibial con guía over de top de 8 mm * 35 mm (resto hasta 50 mm con broca de 4,5 mm).
 - Plastia ST doble con anclaje femoral endobutton 25 mm y tibial con tornillo interferencial de 9*20 mm.
-- Drenaje aspirativo intraarticular.
-- Cierre por planos de la fascia del sartorio y TCS.
+${DRENAJE_INTRA_LINE}- Cierre por planos de la fascia del sartorio y TCS.
 - Se infiltra portales y en región intraarticular con ropivacaína y 5 mg de cloruro mórfico.
 - Piel con grapas.
 - Vendaje compresivo.`,
@@ -4327,6 +4420,7 @@ MEDICACIÓN
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
+- Retirada de puntos/agrafes a los 15 días aproximadamente, salvo mejor criterio de Enfermería.
 
 REVISIÓN
 - Revisión en CCEE de COT (TRAP) a las 2 semanas, 6 semanas y 4 meses desde la cirugía para seguimiento.
@@ -4351,8 +4445,7 @@ hoja: `IQ ${FECHA} (${EQUIPO})
 - Ascenso de la plastia HTH en sentido retrógrado y fijación túnel femoral con tornillo interferencial Biorci HA 7*25 mm y de 8*30 mm en túnel tibial.
 - Se comprueba estabilidad del injerto y ausencia de roce en escotadura intercondílea con extensión completa.
 - Se infiltra portales y en región intraarticular con ropivacaína y 5 mg de cloruro mórfico.
-- Drenaje aspirativo intraarticular.
-- Lavado articular, cierre por planos, piel con grapas y vendaje compresivo.`,
+${DRENAJE_INTRA_LINE}- Lavado articular, cierre por planos, piel con grapas y vendaje compresivo.`,
 
 tratamiento: `CUIDADOS POSTOPERATORIOS
 - Mover activamente los dedos de la extremidad operada.
@@ -4371,6 +4464,7 @@ MEDICACIÓN
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
+- Retirada de puntos/agrafes a los 15 días aproximadamente, salvo mejor criterio de Enfermería.
 
 REVISIÓN
 - Revisión en CCEE de COT (TRAP) a las 2 semanas, 6 semanas y 4 meses desde la cirugía para seguimiento.
@@ -4394,8 +4488,7 @@ hoja: `IQ ${FECHA} (${EQUIPO})
 - Realización de túnel tibial de 11*35 mm.
 - Fijación de la plastia: femoral con TIF Biorci-HA 7*25 mm y tibial con TIF Biorci-HA 10*30 mm.
 - Se comprueba ausencia de roce de la plastia en borde de la escotadura femoral tras condiloplastia realizada.
-- Drenaje aspirativo intraarticular.
-- Cierre por planos de la fascia del sartorio y TCS.
+${DRENAJE_INTRA_LINE}- Cierre por planos de la fascia del sartorio y TCS.
 - Se infiltra portales y en región intraarticular con ropivacaína y 5 mg de cloruro mórfico.
 - Piel con grapas.
 - Vendaje compresivo.`,
@@ -4416,6 +4509,7 @@ MEDICACIÓN
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
+- Retirada de puntos/agrafes a los 15 días aproximadamente, salvo mejor criterio de Enfermería.
 
 REVISIÓN
 - Revisión en CCEE de COT Dr. ${DOCTOR} en 2/3 semanas para ver evolución y retirar puntos.
@@ -4475,6 +4569,7 @@ MEDICACIÓN
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
+- Retirada de puntos/agrafes a los 15 días aproximadamente, salvo mejor criterio de Enfermería.
 
 REVISIÓN
 Antes de irse de alta del hospital:
@@ -4496,7 +4591,7 @@ hoja: `IQ ${FECHA} (${EQUIPO})
 - Compartimento interno: sin lesiones meniscales ni condrales.
 - Compartimento externo: sin lesiones meniscales ni condrales.
 - Compartimento central: se aprecia lesión LCA (Sherman tipo I-II) con buena calidad de remanente ligamentoso. Fijación femoral mediante Swivelock cargado con Fibertape (Internalbrace). Fijación tibial mediante Swivelock tras túnel transtibial con broca de 3.5 (Flipcutter).
-- Cierre por planos.
+${DRENAJE_INTRA_LINE}- Cierre por planos.
 - Piel con grapas y vendaje compresivo.`,
 
 tratamiento: `CUIDADOS POSTOPERATORIOS
@@ -4529,6 +4624,7 @@ MEDICACIÓN
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
+- Retirada de puntos/agrafes a los 15 días aproximadamente, salvo mejor criterio de Enfermería.
 
 REVISIÓN
 Antes de irse de alta del hospital:
@@ -4660,6 +4756,7 @@ tratamiento: `CUIDADOS POSTOPERATORIOS
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
+- Retirada de puntos/agrafes a los 15 días aproximadamente, salvo mejor criterio de Enfermería.
 
 REVISIÓN
 - Solicitar cita para revisión en 3-4 semanas para ${DOCTOR}
@@ -4805,6 +4902,7 @@ MEDICACIÓN
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
+- Retirada de puntos/agrafes a los 15 días aproximadamente, salvo mejor criterio de Enfermería.
 
 REVISIÓN
 - Revisión en CCEE de COT Dr. ${DOCTOR} en 3-4 semanas para Rx, valoración y seguimiento.
@@ -4822,8 +4920,7 @@ hoja: `IQ ${FECHA} (${EQUIPO})
 - Se comprueba con escopia reducción de las fracturas y longitudes de tornillos.
 - Lavado con suero fisiológico.
 - Se libera isquemia y coagula vasos sangrantes.
-- Cierre de TCS y piel con grapas.
-- Férula braquial.`,
+- Cierre de TCS y piel con grapas.${FERULA ? '\n- Férula braquial.' : ''}`,
 
 tratamiento: `CUIDADOS POSTOPERATORIOS
 - Mantener el brazo elevado en cabestrillo
@@ -4837,6 +4934,7 @@ MEDICACIÓN
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
+- Retirada de puntos/agrafes a los 15 días aproximadamente, salvo mejor criterio de Enfermería.
 
 REVISIÓN
 - Revisión en CCEE de COT Dr. ${DOCTOR} en 3 semanas aprox. para Rx, valoración y seguimiento.
@@ -4871,6 +4969,7 @@ MEDICACIÓN
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
+- Retirada de puntos/agrafes a los 15 días aproximadamente, salvo mejor criterio de Enfermería.
 
 REVISIÓN
 - Revisión en CCEE de COT Dr. ${DOCTOR} en 3 semanas para Rx, valoración y seguimiento.
@@ -4888,8 +4987,7 @@ hoja: `IQ ${FECHA} (${EQUIPO})
 - Reducción abierta y osteosíntesis con placa de olecranon preformada Peri-Loc de 8 orificios.
 - Lavado abundante.
 - Cierre de TCS y piel con grapas.
-- Se libera isquemia.
-- Férula braquial.`,
+- Se libera isquemia.${FERULA ? '\n- Férula braquial.' : ''}`,
 
 tratamiento: `CUIDADOS POSTOPERATORIOS
 - Mantener el brazo elevado en cabestrillo
@@ -4905,6 +5003,7 @@ MEDICACIÓN
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
+- Retirada de puntos/agrafes a los 15 días aproximadamente, salvo mejor criterio de Enfermería.
 
 REVISIÓN
 - Revisión en CCEE de COT Dr. ${DOCTOR} en 3 semanas para Rx, valoración y seguimiento.
@@ -4923,8 +5022,7 @@ hoja: `IQ ${FECHA} (${EQUIPO})
 - Se comprueba con escopia la correcta reducción de la fractura y colocación de las agujas.
 - Lavado abundante.
 - Cierre por planos y piel con grapas.
-- Se libera isquemia.
-- Férula braquial.`,
+- Se libera isquemia.${FERULA ? '\n- Férula braquial.' : ''}`,
 
 tratamiento: `CUIDADOS POSTOPERATORIOS
 - Mantener el brazo elevado en cabestrillo
@@ -4940,6 +5038,7 @@ MEDICACIÓN
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
+- Retirada de puntos/agrafes a los 15 días aproximadamente, salvo mejor criterio de Enfermería.
 
 REVISIÓN
 - Revisión en CCEE de COT Dr. ${DOCTOR} en 2 semanas para Rx, cura herida quirúrgica y seguimiento.
@@ -5093,6 +5192,7 @@ tratamiento: `CUIDADOS POSTOPERATORIOS
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
+- Retirada de puntos/agrafes a los 15 días aproximadamente, salvo mejor criterio de Enfermería.
 
 REVISIÓN
 - Solicitar cita para revisión en 3-4 semanas para ${DOCTOR}
@@ -5790,6 +5890,7 @@ MEDICACIÓN
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
+- Retirada de puntos/agrafes a los 15 días aproximadamente, salvo mejor criterio de Enfermería.
 
 REVISIÓN
 - Solicitar cita para revisión en 3 semanas para ${DOCTOR}
@@ -5840,6 +5941,7 @@ MEDICACIÓN
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
+- Retirada de puntos/agrafes a los 15 días aproximadamente, salvo mejor criterio de Enfermería.
 
 REVISIÓN
 - Solicitar cita para revisión en 3 semanas para ${DOCTOR}
@@ -5893,6 +5995,7 @@ MEDICACIÓN
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
+- Retirada de puntos/agrafes a los 15 días aproximadamente, salvo mejor criterio de Enfermería.
 
 REVISIÓN
 - Revisión en CCEE de COT Dr. ${DOCTOR} en 3 semanas para ampliar arco movilidad y seguimiento
