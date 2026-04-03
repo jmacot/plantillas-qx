@@ -459,9 +459,13 @@
 
     /* ── TOGGLE CHECK ── */
     .toggle-check {
+      --cb-size: 22px;
+      --cb-color: var(--accent);
+      --cb-shadow: rgba(26, 58, 92, 0.25);
+      --cb-border: var(--border);
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
       cursor: pointer;
       padding: 10px 16px;
       border: 1.5px solid var(--border);
@@ -474,20 +478,81 @@
       white-space: nowrap;
       text-transform: none;
       letter-spacing: 0;
+      position: relative;
     }
     .toggle-check:hover {
       border-color: var(--accent);
       color: var(--accent);
     }
     .toggle-check input[type="checkbox"] {
-      width: 16px;
-      height: 16px;
-      accent-color: var(--accent);
+      position: absolute;
+      opacity: 0;
+      width: 0;
+      height: 0;
       cursor: pointer;
-      margin: 0;
     }
-    .toggle-check input[type="checkbox"]:checked + span {
+    .toggle-check .checkmark {
+      position: relative;
+      width: var(--cb-size);
+      height: var(--cb-size);
+      border: 2px solid var(--accent);
+      border-radius: 6px;
+      transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #ffffff;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .toggle-check .checkmark::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+      opacity: 0;
+      transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      transform: scale(0) rotate(-45deg);
+    }
+    .toggle-check input:checked ~ .checkmark::before {
+      opacity: 1;
+      transform: scale(1) rotate(0);
+    }
+    .toggle-check .checkmark svg {
+      width: 0;
+      height: 0;
+      color: white;
+      z-index: 1;
+      transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    .toggle-check input:checked ~ .checkmark svg {
+      width: 14px;
+      height: 14px;
+      transform: rotate(360deg);
+    }
+    .toggle-check:hover .checkmark {
+      border-color: var(--accent-hover);
+      transform: scale(1.08);
+    }
+    .toggle-check input:checked ~ .checkmark {
+      border-color: var(--accent);
+      animation: cbPulse 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    @keyframes cbPulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(0.85); }
+      100% { transform: scale(1); }
+    }
+    .toggle-check input:checked ~ span {
       color: var(--accent);
+    }
+    [data-theme="dark"] .toggle-check .checkmark {
+      background: var(--surface2);
+      border-color: var(--accent);
+    }
+    [data-theme="dark"] .toggle-check .checkmark::before {
+      background: linear-gradient(135deg, var(--accent), #60a5fa);
     }
 
     /* ── BUTTONS ── */
@@ -1004,24 +1069,28 @@
             <span id="isquemiaToggleWrap" style="display:none;">
               <label class="toggle-check">
                 <input type="checkbox" id="incluirIsquemia" onchange="cargarPlantilla()">
+                <span class="checkmark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
                 <span>Isquemia</span>
               </label>
             </span>
             <span id="drenajeToggleWrap" style="display:none;">
               <label class="toggle-check">
                 <input type="checkbox" id="incluirDrenaje" onchange="cargarPlantilla()">
+                <span class="checkmark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
                 <span>Drenaje</span>
               </label>
             </span>
             <span id="ferulaTraumaToggleWrap" style="display:none;">
               <label class="toggle-check">
                 <input type="checkbox" id="incluirFerulaTrauma" onchange="cargarPlantilla()">
+                <span class="checkmark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
                 <span>Férula</span>
               </label>
             </span>
             <span id="ejerciciosToggleWrap" style="display:none;">
               <label class="toggle-check">
                 <input type="checkbox" id="incluirEjercicios" onchange="cargarPlantilla(); if(this.checked) mostrarToast('✓  Ejercicios añadidos a tratamiento al alta')">
+                <span class="checkmark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
                 <span>Ejercicios</span>
               </label>
             </span>
@@ -1031,6 +1100,7 @@
           <label>Evolución</label>
           <label class="toggle-check">
             <input type="checkbox" id="incluirEvolucion" onchange="toggleEvolucion()">
+            <span class="checkmark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
             <span>Evolución</span>
           </label>
         </div>
@@ -1170,6 +1240,7 @@
           <label>Extras</label>
           <label class="toggle-check">
             <input type="checkbox" id="incluirFerula" onchange="toggleFerula()">
+            <span class="checkmark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
             <span>Férula/Yeso</span>
           </label>
         </div>
