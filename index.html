@@ -1271,16 +1271,11 @@
         </div>
         <div class="form-group" style="flex:none">
           <label>Sexo</label>
-          <div class="urg-sexo-toggle">
-            <button type="button" class="urg-sexo-btn" data-sexo="H" onclick="selectSexo(this)">
-              <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="8" r="5"/><path d="M15 3h5v5"/><path d="M20 3l-6.5 6.5"/></svg>
-              Hombre
-            </button>
-            <button type="button" class="urg-sexo-btn" data-sexo="M" onclick="selectSexo(this)">
-              <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M12 13v8"/><path d="M9 18h6"/></svg>
-              Mujer
-            </button>
-          </div>
+          <label class="lat-switch">
+            <input type="checkbox" id="urgSexo" onchange="cargarPlantillaUrg()">
+            <span>Hombre</span>
+            <span>Mujer</span>
+          </label>
         </div>
         <div class="form-group" style="flex:none; width:60px">
           <label>Edad</label>
@@ -2034,11 +2029,7 @@
 
   // ─── Funciones de UI urgencias ───
 
-  function selectSexo(btn) {
-    document.querySelectorAll('.urg-sexo-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    cargarPlantillaUrg();
-  }
+  // selectSexo removed — now using lat-switch checkbox #urgSexo
 
   function onUrgDiagnosticoChange() {
     const diag = document.getElementById('urgDiagnostico').value;
@@ -2056,8 +2047,7 @@
 
   function cargarPlantillaUrg() {
     const diag = document.getElementById('urgDiagnostico').value;
-    const sexoBtn = document.querySelector('.urg-sexo-btn.active');
-    const sexo = sexoBtn ? sexoBtn.dataset.sexo : '';
+    const sexo = document.getElementById('urgSexo').checked ? 'M' : 'H';
     const edad = document.getElementById('urgEdad').value;
     const lado = document.getElementById('urgLado').checked ? 'I' : 'D';
     const tipo = document.getElementById('urgTipo').value;
@@ -2130,7 +2120,7 @@
   function limpiarUrg() {
     document.getElementById('urgCot1').value = '';
     document.getElementById('urgCot2').value = '';
-    document.querySelectorAll('.urg-sexo-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('urgSexo').checked = false;
     document.getElementById('urgEdad').value = '';
     document.getElementById('urgLado').checked = false;
     document.getElementById('urgTipo').value = 'C';
