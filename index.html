@@ -574,7 +574,7 @@
     .lat-switch input { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
     .lat-switch > span {
       display: grid; place-content: center;
-      padding: 8px 14px;
+      padding: 12px 14px;
       font-size: 12px; font-weight: 600; font-family: 'Inter', sans-serif;
       color: var(--accent); white-space: nowrap;
       transition: opacity 0.3s ease-in-out 0.15s;
@@ -1134,7 +1134,6 @@
           <input id="ayudante" type="text" placeholder="Apellido" oninput="cargarPlantilla()" />
         </div>
         <div class="form-group" style="flex:none">
-          <label>Lateralidad</label>
           <label class="lat-switch">
             <input type="checkbox" id="lateralidad" onchange="cargarPlantilla()">
             <span>Dcho</span>
@@ -1270,7 +1269,6 @@
           <input id="urgCot2" type="text" placeholder="Apellido" oninput="cargarPlantillaUrg()" />
         </div>
         <div class="form-group" style="flex:none">
-          <label>Sexo</label>
           <label class="lat-switch">
             <input type="checkbox" id="urgSexo" onchange="cargarPlantillaUrg()">
             <span>Hombre</span>
@@ -1282,7 +1280,6 @@
           <input id="urgEdad" type="number" min="0" max="120" placeholder="Años" oninput="cargarPlantillaUrg()" />
         </div>
         <div class="form-group" id="urgLadoGroup" style="flex:none">
-          <label>Lateralidad</label>
           <label class="lat-switch">
             <input type="checkbox" id="urgLado" onchange="cargarPlantillaUrg()">
             <span>Dcho</span>
