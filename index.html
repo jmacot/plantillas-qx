@@ -556,19 +556,31 @@
     }
 
     /* ── BUTTONS ── */
-    .btn-danger {
-      background: transparent;
-      color: #dc2626;
-      border: 1.5px solid #dc2626;
+    .bin-button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
       border-radius: 8px;
-      padding: 8px 18px;
-      font-size: 13px;
-      font-weight: 700;
+      background-color: rgb(255, 95, 95);
       cursor: pointer;
-      transition: all 0.2s;
-      font-family: 'Inter', Arial, sans-serif;
+      border: 1.5px solid rgb(255, 201, 201);
+      transition: all 0.3s;
+      flex-shrink: 0;
+      padding: 0;
     }
-    .btn-danger:hover { background: #dc2626; color: white; }
+    .bin-button .bin-top {
+      width: 13px;
+      transform-origin: right;
+      transition: transform 0.3s;
+    }
+    .bin-button .bin-bottom { width: 11px; }
+    .bin-button .bin-top, .bin-button .bin-bottom { stroke: white; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .bin-button:hover .bin-top { transform: rotate(45deg); }
+    .bin-button:hover { background-color: rgb(220, 38, 38); border-color: rgb(252, 165, 165); }
+    .bin-button:active { transform: scale(0.9); }
 
     .btn-copy {
       display: inline-flex;
@@ -850,7 +862,9 @@
     #seccion-urgencias .urg-sexo-toggle { padding: 2px; }
     #seccion-urgencias .urg-sexo-btn { padding: 7px 10px; font-size: 12px; gap: 4px; }
     #seccion-urgencias .urg-sexo-btn svg { width: 14px; height: 14px; }
-    #seccion-urgencias .btn-danger { padding: 7px 14px; font-size: 12px; }
+    #seccion-urgencias .bin-button { width: 32px; height: 32px; }
+    #seccion-urgencias .bin-button .bin-top { width: 12px; }
+    #seccion-urgencias .bin-button .bin-bottom { width: 10px; }
 
     /* ── URGENCIAS ACCENT OVERRIDES ── */
     .panels-grid-3 .panel textarea {
@@ -954,7 +968,7 @@
         display: flex;
         justify-content: center;
       }
-      #seccion-quirofano .form-row > div:last-child .btn-danger { width: 100%; }
+      #seccion-quirofano .form-row > div:last-child .bin-button { margin: 0 auto; }
       #ejerciciosToggleWrap .toggle-check,
       #isquemiaToggleWrap .toggle-check,
       #drenajeToggleWrap .toggle-check,
@@ -1112,7 +1126,10 @@
           </a>
         </div>
         <div>
-          <button onclick="limpiar()" class="btn-danger">Limpiar</button>
+          <button onclick="limpiar()" class="bin-button" title="Limpiar">
+            <svg class="bin-top" viewBox="0 0 39 7"><line x1="5" y1="2" x2="33" y2="2"/><line x1="20" y1="0" x2="20" y2="2"/></svg>
+            <svg class="bin-bottom" viewBox="0 0 33 39" ><path d="M2 2h29l-3 34H5z"/></svg>
+          </button>
         </div>
       </div>
     </div>
@@ -1245,7 +1262,10 @@
           </label>
         </div>
         <div>
-          <button onclick="limpiarUrg()" class="btn-danger">Limpiar</button>
+          <button onclick="limpiarUrg()" class="bin-button" title="Limpiar">
+            <svg class="bin-top" viewBox="0 0 39 7"><line x1="5" y1="2" x2="33" y2="2"/><line x1="20" y1="0" x2="20" y2="2"/></svg>
+            <svg class="bin-bottom" viewBox="0 0 33 39"><path d="M2 2h29l-3 34H5z"/></svg>
+          </button>
         </div>
       </div>
     </div>
