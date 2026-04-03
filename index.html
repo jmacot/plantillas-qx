@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <script>(function(){if(location.hostname==='localhost'||location.hostname==='127.0.0.1')return;var a=localStorage.getItem('cot_auth');if(!a||(Date.now()-parseInt(a))>86400000){localStorage.removeItem('cot_auth');window.location.replace('https://jmacot.github.io/');}})();</script>
+  <script>(function(){var h=location.hostname;if(h==='localhost'||h==='127.0.0.1'||h==='0.0.0.0'||h.endsWith('.localhost'))return;var a=localStorage.getItem('cot_auth');if(!a||(Date.now()-parseInt(a))>86400000){localStorage.removeItem('cot_auth');window.location.replace('https://jmacot.github.io/');}})();</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Plantillas COT</title>
@@ -1762,7 +1762,7 @@
   skyCheck.addEventListener('change', function() {
       var isDark = skyCheck.checked;
       applyTheme(isDark);
-    localStorage.setItem('pqx-theme', isDark ? 'light' : 'dark');
+    localStorage.setItem('pqx-theme', isDark ? 'dark' : 'light');
     localStorage.setItem('pqx-theme-date', new Date().toDateString());
   });
 
@@ -1805,7 +1805,7 @@
   function urgLadoF(lado) { return lado === 'D' ? 'derecha' : lado === 'I' ? 'izquierda' : '___'; }
   function urgLadoM(lado) { return lado === 'D' ? 'derecho' : lado === 'I' ? 'izquierdo' : '___'; }
   function urgCotLabel(c1, c2) {
-    const a = c1.trim(), b = c2.trim();
+    const a = c1.trim().toUpperCase(), b = c2.trim().toUpperCase();
     if (a && b && a !== b) return `COT (${a}/${b})`;
     if (a) return `COT (${a})`;
     return 'COT';
