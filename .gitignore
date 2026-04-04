@@ -12,4 +12,12 @@ Desktop.ini
 
 # Logs
 *.log
+
+# Firebase
+firebase-debug.log
+
+# Word temp files
+~$*
+
+# Claude Code
 .claude/

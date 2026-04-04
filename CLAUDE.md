@@ -1,3 +1,48 @@
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
+## Desarrollo
+
+- **Abrir en navegador:** `open index.html` (no hay build, server ni dependencias)
+- **No hay tests, linter ni CI** — verificar manualmente en navegador (Chrome + Safari iOS)
+- **Diseño sistema B** (Clínico): fuentes Inter + Lora, ver `@STYLE-GUIDE.md` del repo padre
+
+## Arquitectura del archivo único (`index.html`, ~6350 líneas)
+
+| Sección | Líneas aprox. | Contenido |
+|---------|--------------|-----------|
+| Auth check | 4 | Redirect al hub si no autenticado (skip en localhost) |
+| `<style>` | 25–1419 | CSS completo con dark mode (`[data-theme="dark"]`) |
+| `<script>` | 1420–6347 | Todo el JS vanilla |
+| `CATEGORIAS[]` | 1424 | Array de 14 categorías con `id`, `label`, `procs[]` |
+| `REGIONES[]` | 1545 | 5 regiones anatómicas que agrupan categorías |
+| Utilidades | 1559+ | `normalizar()`, `hoy()`, `copiarTexto()` |
+| `cargarPlantilla()` | 1571 | Orquesta selección quirófano → llama `obtenerPlantillas()` |
+| `renderRegionPills()` | 1723 | Render de pills de región anatómica |
+| `selectRegion()` | 1741 | Filtra categorías por región |
+| `initTheme()` | 1943 | Dark mode toggle (sky CSS puro) |
+| `selectModulo()` | 1981 | Cambia entre módulos Quirófano / Urgencias |
+| `cargarPlantillaUrg()` | 2093 | Orquesta módulo urgencias |
+| `obtenerPlantillas()` | 2368 | **Función central**: retorna objeto con todas las plantillas (`hoja` + `tratamiento`) |
+| Plantillas | 2368–6346 | ~87 plantillas dentro de `obtenerPlantillas()` |
+
+### Parámetros de `obtenerPlantillas(DOCTOR, AYUDANTE, LADO, ISQUEMIA, DRENAJE, FERULA)`
+
+- `LADO`: `'D'` o `'I'` → genera todas las variables de lateralidad
+- `ISQUEMIA`/`DRENAJE`/`FERULA`: booleanos → generan líneas condicionales en las plantillas
+
+### Dos módulos
+
+- **Quirófano**: navega por región → categoría → procedimiento → muestra hoja + tratamiento
+- **Urgencias**: anamnesis + exploración + plan, con campos dinámicos (sexo, edad, lateralidad)
+
+### Archivos de referencia
+
+- `PLANTILLAS.md` (~221 KB): volcado de todas las plantillas — actualizar al añadir/modificar plantillas
+
+---
+
 # Plantillas Quirurgicas — Reglas del proyecto
 
 ## Reglas obligatorias para plantillas quirurgicas
@@ -61,42 +106,7 @@ Usar siempre variables para datos que cambian por paciente:
 
 ### 5. Lateralidad dinamica
 
-La lateralidad se controla con un selector (Derecho/Izquierdo) y **nunca** debe estar hardcodeada en las plantillas. Usar siempre variables de lateralidad en lugar de escribir "derecho", "izquierdo", "DCHA", "IZQ", etc.
-
-#### Variables de lateralidad disponibles
-
-| Variable | Valor con "Derecho" | Valor con "Izquierdo" | Usar con sustantivos... |
-|----------|--------------------|-----------------------|------------------------|
-| `${LADO_M}` | derecho | izquierdo | masculinos minuscula: hombro, femur, humero, radio, codo, perone, muslo, brazo |
-| `${LADO_F}` | derecha | izquierda | femeninos minuscula: rodilla, tibia, pierna, mano, clavicula, rotula, cresta iliaca, cadera |
-| `${LADO_M_UPPER}` | DERECHO | IZQUIERDO | masculinos MAYUSCULA: FEMUR, HUMERO, RADIO, CODO, CARPIANO, MIEMBRO SUPERIOR |
-| `${LADO_F_UPPER}` | DERECHA | IZQUIERDA | femeninos MAYUSCULA: RODILLA, TIBIA, MANO, ROTULA, CAR, PUC, CADERA |
-| `${LADO_ABR_F}` | DERECHA | IZQUIERDA | sinónimo de LADO_F_UPPER (legacy, preferir LADO_F o LADO_F_UPPER) |
-| `${LADO_ABR_M}` | DERECHO | IZQUIERDO | sinónimo de LADO_M_UPPER (legacy, preferir LADO_M o LADO_M_UPPER) |
-| `${DECUBITO}` | izquierdo | derecho | decubito lateral **contrario** (PTC y artroscopia hombro) |
-| `${DECUBITO_UPPER}` | IZQUIERDO | DERECHO | decubito lateral contrario en MAYUSCULA |
-
-#### Reglas de concordancia de genero
-
-Elegir la variable segun el **genero gramatical** del sustantivo que la precede:
-
-```
-Fractura de fémur ${LADO_M}              ← fémur es masculino → derecho/izquierdo
-Rodilla ${LADO_F}                        ← rodilla es femenino → derecha/izquierda
-Decúbito lateral ${DECUBITO}             ← lado contrario → izquierdo/derecho
-- Gonartrosis rodilla ${LADO_F}.         ← rodilla es femenino → derecha/izquierda
-- Isquemia en muslo ${LADO_M}.           ← muslo es masculino → derecho/izquierdo
-```
-
-#### `---` como placeholder generico
-
-El placeholder `---` solo se debe usar cuando la lateralidad va junto a un sustantivo **masculino** y en minuscula (porque el sistema reemplaza `---` por "derecho"/"izquierdo" automaticamente). Para sustantivos femeninos o en mayusculas, usar **siempre** la variable explicita.
-
-```
-Artroscopia de hombro ---                ← OK: hombro es masculino, minúscula
-Artroscopia de rodilla ${LADO_F}         ← OBLIGATORIO: rodilla es femenino
-CAR rodilla ${LADO_F}                    ← OBLIGATORIO: rodilla es femenino
-```
+Ver reglas completas en `.claude/rules/lateralidad.md` (variables, concordancia de género, placeholder `---`).
 
 **Nunca** hardcodear lateralidades como "derecho", "izquierdo", "DCHA", "IZQ", "DCHO", etc.
 
@@ -115,15 +125,7 @@ Formato `snake_case` con prefijo de categoria:
 | `rpuc_` / `rpub_` | Recambio protesico |
 | `tumores_` | Tumores |
 
-### 7. Estructura del archivo
-
-- Archivo unico: `index.html`
-- Array `CATEGORIAS` (~linea 668): definicion de categorias con `id`, `label`, `procs`
-- Array `REGIONES` (~linea 782): agrupacion anatomica de categorias
-- Funcion `obtenerPlantillas(DOCTOR, AYUDANTE, LADO)`: retorna objeto con todas las plantillas (LADO = 'D' o 'I')
-- Cada plantilla tiene `hoja` (nota operatoria) y `tratamiento` (tratamiento al alta)
-
-### 8. Al anadir una plantilla nueva
+### 7. Al anadir una plantilla nueva
 
 1. Anadir entrada en `CATEGORIAS[].procs` con `{ id, label }`
 2. Anadir objeto `{ hoja, tratamiento }` en `obtenerPlantillas()`
