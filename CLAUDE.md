@@ -8,25 +8,25 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **No hay tests, linter ni CI** — verificar manualmente en navegador (Chrome + Safari iOS)
 - **Diseño sistema B** (Clínico): fuentes Inter + Lora, ver `@STYLE-GUIDE.md` del repo padre
 
-## Arquitectura del archivo único (`index.html`, ~6350 líneas)
+## Arquitectura del archivo único (`index.html`, ~6395 líneas)
 
 | Sección | Líneas aprox. | Contenido |
 |---------|--------------|-----------|
 | Auth check | 4 | Redirect al hub si no autenticado (skip en localhost) |
-| FAB "Envíanos tu plantilla" | tras `<body>` | Botón flotante inferior derecho (solo desktop), abre Gmail compose |
-| `<style>` | 25–1419 | CSS completo con dark mode (`[data-theme="dark"]`) |
-| `<script>` | 1420–6347 | Todo el JS vanilla |
-| `CATEGORIAS[]` | 1424 | Array de 14 categorías con `id`, `label`, `procs[]` |
-| `REGIONES[]` | 1545 | 5 regiones anatómicas que agrupan categorías |
-| Utilidades | 1559+ | `normalizar()`, `hoy()`, `copiarTexto()` |
-| `cargarPlantilla()` | 1571 | Orquesta selección quirófano → llama `obtenerPlantillas()` |
-| `renderRegionPills()` | 1723 | Render de pills de región anatómica |
-| `selectRegion()` | 1741 | Filtra categorías por región |
-| `initTheme()` | 1943 | Dark mode toggle (sky CSS puro) |
-| `selectModulo()` | 1981 | Cambia entre módulos Quirófano / Urgencias |
-| `cargarPlantillaUrg()` | 2093 | Orquesta módulo urgencias |
-| `obtenerPlantillas()` | 2368 | **Función central**: retorna objeto con todas las plantillas (`hoja` + `tratamiento`) |
-| Plantillas | 2368–6346 | ~87 plantillas dentro de `obtenerPlantillas()` |
+| `<style>` | 25–1124 | CSS completo con dark mode (`[data-theme="dark"]`) |
+| FAB "Envíanos tu plantilla" | 1127–1136 | Botón flotante inferior derecho (solo desktop), abre Gmail compose |
+| `<script>` | 1465–6392 | Todo el JS vanilla |
+| `CATEGORIAS[]` | 1469 | Array de 14 categorías con `id`, `label`, `procs[]` |
+| `REGIONES[]` | 1590 | 5 regiones anatómicas que agrupan categorías |
+| Utilidades | 1604+ | `normalizar()`, `hoy()`, `copiarTexto()` |
+| `cargarPlantilla()` | 1616 | Orquesta selección quirófano → llama `obtenerPlantillas()` |
+| `renderRegionPills()` | 1768 | Render de pills de región anatómica |
+| `selectRegion()` | 1786 | Filtra categorías por región |
+| `initTheme()` | 1988 | Dark mode toggle (sky CSS puro) |
+| `selectModulo()` | 2026 | Cambia entre módulos Quirófano / Urgencias |
+| `cargarPlantillaUrg()` | 2138 | Orquesta módulo urgencias |
+| `obtenerPlantillas()` | 2413 | **Función central**: retorna objeto con todas las plantillas (`hoja` + `tratamiento`) |
+| Plantillas | 2523–6390 | ~92 plantillas dentro de `obtenerPlantillas()` |
 
 ### Parámetros de `obtenerPlantillas(DOCTOR, AYUDANTE, LADO, ISQUEMIA, DRENAJE, FERULA)`
 
