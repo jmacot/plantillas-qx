@@ -13,6 +13,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 | Sección | Líneas aprox. | Contenido |
 |---------|--------------|-----------|
 | Auth check | 4 | Redirect al hub si no autenticado (skip en localhost) |
+| FAB "Envíanos tu plantilla" | tras `<body>` | Botón flotante inferior derecho (solo desktop), abre Gmail compose |
 | `<style>` | 25–1419 | CSS completo con dark mode (`[data-theme="dark"]`) |
 | `<script>` | 1420–6347 | Todo el JS vanilla |
 | `CATEGORIAS[]` | 1424 | Array de 14 categorías con `id`, `label`, `procs[]` |
