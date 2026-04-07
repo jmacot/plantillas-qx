@@ -1047,6 +1047,73 @@
     :focus-visible { outline: 2px solid var(--sky, var(--accent)); outline-offset: 2px; }
     input:focus-visible, select:focus-visible, textarea:focus-visible { outline: none; }
 
+    /* ── FAB ENVIAR PLANTILLA (solo desktop) ── */
+    .fab-enviar {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 9990;
+      display: flex;
+      align-items: center;
+      gap: 0;
+      height: 56px;
+      border-radius: 28px;
+      background: linear-gradient(135deg, #38bdf8, #7c3aed);
+      color: #fff;
+      text-decoration: none;
+      box-shadow: 0 8px 32px rgba(124, 58, 237, 0.35), 0 0 0 1px rgba(255,255,255,0.15) inset;
+      overflow: hidden;
+      cursor: pointer;
+      transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+      width: 56px;
+      animation: fabPulse 3s ease-in-out infinite;
+    }
+    .fab-enviar:hover, .fab-enviar:focus-visible {
+      width: 240px;
+      box-shadow: 0 12px 40px rgba(124, 58, 237, 0.45), 0 0 0 1px rgba(255,255,255,0.2) inset;
+      animation: none;
+    }
+    .fab-enviar__icon {
+      flex-shrink: 0;
+      width: 56px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .fab-enviar__icon svg {
+      width: 24px;
+      height: 24px;
+      fill: none;
+      stroke: #fff;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .fab-enviar__text {
+      white-space: nowrap;
+      font-family: 'Source Sans 3', Arial, sans-serif;
+      font-size: 0.92rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      opacity: 0;
+      transform: translateX(-8px);
+      transition: opacity 0.3s ease 0.1s, transform 0.3s ease 0.1s;
+      padding-right: 20px;
+    }
+    .fab-enviar:hover .fab-enviar__text,
+    .fab-enviar:focus-visible .fab-enviar__text {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    @keyframes fabPulse {
+      0%, 100% { box-shadow: 0 8px 32px rgba(124, 58, 237, 0.35), 0 0 0 1px rgba(255,255,255,0.15) inset; }
+      50% { box-shadow: 0 8px 32px rgba(56, 189, 248, 0.4), 0 0 0 1px rgba(255,255,255,0.2) inset; }
+    }
+    @media (max-width: 600px) {
+      .fab-enviar { display: none; }
+    }
+
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after {
         animation-duration: 0.01ms !important;
@@ -1057,6 +1124,17 @@
   </style>
 </head>
 <body>
+  <!-- FAB Enviar Plantilla (solo desktop) -->
+  <a class="fab-enviar"
+     href="mailto:plantillasqx.synthetic178@passmail.net?subject=Nueva%20plantilla%20%E2%80%94%20Plantillas%20QX&body=Hola%2C%0A%0AMe%20gustar%C3%ADa%20contribuir%20con%20una%20plantilla%3A%0A%0AProcedimiento%3A%0ACategor%C3%ADa%20(ej%3A%20Rodilla%2C%20Hombro%2C%20Cadera...)%3A%0A%0AHoja%20operatoria%3A%0A(pegar%20aqu%C3%AD)%0A%0ATratamiento%20de%20alta%3A%0A(pegar%20aqu%C3%AD)"
+     title="Envíanos tu plantilla"
+     aria-label="Envíanos tu plantilla por email">
+    <span class="fab-enviar__icon">
+      <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+    </span>
+    <span class="fab-enviar__text">Envíanos tu plantilla</span>
+  </a>
+
   <a href="#main" class="skip-link">Saltar al contenido</a>
 <div class="mesh-bg" aria-hidden="true">
   <div class="mesh-orb mesh-orb-1"></div>
