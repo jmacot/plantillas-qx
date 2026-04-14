@@ -2204,7 +2204,7 @@ SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
 ```
 
-##### `lca_tightrope_rf` — LCA TightRope RF asimétrico + LAL
+##### `lca_tightrope_rf` — LCA TightRope RF asimétrico
 
 **Nota Operatoria:**
 
