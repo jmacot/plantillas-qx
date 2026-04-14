@@ -3,7 +3,7 @@
 > Catálogo de todas las plantillas del proyecto `plantillas-qx`,
 > organizadas por región/categoría (quirófano) y módulo de urgencias.
 
-> **Total: 92 plantillas quirúrgicas + 7 plantillas de urgencias = 99 plantillas** en 14 categorías quirúrgicas, 5 regiones anatómicas y 1 módulo de urgencias.
+> **Total: 95 plantillas quirúrgicas + 7 plantillas de urgencias = 102 plantillas** en 14 categorías quirúrgicas, 5 regiones anatómicas y 1 módulo de urgencias.
 
 > **Variables dinámicas (quirófano):** `${FECHA}` (fecha DD/MM/YY), `${DOCTOR}` (cirujano), `${AYUDANTE}` (ayudante). **Lateralidad:** `${LADO_M}` (derecho/izquierdo), `${LADO_F}` (derecha/izquierda), `${LADO_M_UPPER}` (DERECHO/IZQUIERDO), `${LADO_F_UPPER}` (DERECHA/IZQUIERDA), `${LADO_ABR_F}` (DERECHA/IZQUIERDA), `${LADO_ABR_M}` (DERECHO/IZQUIERDO), `${DECUBITO}` (decúbito lateral contrario, minúscula), `${DECUBITO_UPPER}` (DECÚBITO LATERAL contrario, mayúscula).
 
@@ -17,11 +17,11 @@
   - [Trauma (18)](#categoría-trauma)
 - [Rodilla](#región-rodilla)
   - [Artroscopia Rodilla (17)](#categoría-car)
-  - [Prótesis Rodilla (3)](#categoría-ptr)
-  - [LCA (13)](#categoría-lca)
+  - [Prótesis Rodilla (5)](#categoría-ptr)
+  - [LCA (14)](#categoría-lca)
   - [Osteotomías y Cartílago (8)](#categoría-rodilla_osteo)
 - [Cadera](#región-cadera)
-  - [Prótesis Cadera (3)](#categoría-ptc)
+  - [Prótesis Cadera (4)](#categoría-ptc)
   - [Artroscopia Cadera (1)](#categoría-cac)
   - [Infiltración Cadera (1)](#categoría-ifc)
 - [Miembro Superior](#región-ms)
@@ -1756,7 +1756,7 @@ SÍNTOMAS DE ALERTA
 
 <a id="categoría-ptr"></a>
 
-#### Prótesis Rodilla (4 plantillas)
+#### Prótesis Rodilla (5 plantillas)
 
 ##### `ptr_triathlon` — PTR Triathlon (Stryker)
 
@@ -1981,6 +1981,70 @@ SÍNTOMAS DE ALERTA
 
 > Mismo bloque de ejercicios compartido por todas las prótesis de rodilla. Ver contenido completo en PTR Triathlon arriba.
 
+##### `puc_journey_cori` — PUC Journey II UK (Smith - CORI)
+
+**Nota Operatoria:**
+
+```
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+
+Artroplastia unicompartimental medial rodilla ${LADO_F} asistida por CORI (Smith & Nephew: Journey II UK)
+- Genu varo artrósico rodilla ${LADO_F}.
+- Profilaxis antibiótica con 2 g de cefazolina.
+- Isquemia en raíz de miembro inferior ${LADO_M}.
+- Incisión longitudinal anterior de rodilla y artrotomía pararrotuliana medial con prolongación subvasto interno.
+- Resección de osteofitos femorales y tibiales mediales.
+- Colocación de trackers femoral (anteromedial, fuera de herida) y tibial. Registro en sistema robótico CORI (Smith & Nephew).
+- Registro de landmarks: centro de tobillo, centro de cadera, posición neutra, eje cinemático femoral, ROM estresado en valgo, landmarks femorales (tidemark, centro de rodilla, punto posterior) y tibiales (centro tibial, low point, punto más posterior, más anterior, más medial y cresta de eminencia intercondílea).
+- Planificación robótica del componente femoral: centrado ML, surface match distal y posterior, verificación de labio anterior dentro del tidemark, sin overhang en vista axial.
+- Planificación robótica del componente tibial: resección de __ mm, slope de __°, tamaño máximo sin socavar LCA ni overhang.
+- Verificación de gap balance 1-2 mm en todo el ROM. Alineación postoperatoria: varo __° corregido a __°.
+- Fresado femoral y cortes tibiales asistidos por robot CORI.
+- Artroplastia unicompartimental medial de rodilla modelo Journey II UK (Smith & Nephew):
+- Componente femoral cementado nº __.
+- Componente tibial medial cementado nº __ e inserto de __ mm.
+- Patela: no se sustituye.
+- Correcto balance mediolateral en flexión y extensión y adecuado tracking rotuliano.
+- Se retira isquemia, hemostasia de vasos sangrantes y lavado abundante con SF.
+- Cierre por planos.
+- Piel con grapas.
+- Vendaje compresivo.
+```
+
+**Tratamiento al Alta:**
+
+```
+CUIDADOS POSTOPERATORIOS
+- Mantener el pie elevado siempre que esté sentado.
+- Aplicar hielo sobre la rodilla operada 2-3 veces al día durante 20 minutos.
+- Mover activamente los dedos de la extremidad operada.
+- Realizar los ejercicios que su médico le ha explicado.
+- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
+- Puede caminar con ayuda de un andador o dos muletas. Carga parcial progresiva según tolerancia.
+- Puede requerir ayuda domiciliaria.
+
+MEDICACIÓN
+- METAMIZOL 1 cápsula / 8 horas vía oral.
+- PARACETAMOL 1 g / 8 horas, alterno con anterior cada 4 horas si dolor intenso.
+- TRAMADOL 50 mg cada 12 horas como rescate durante 10 días.
+- ENOXAPARINA 40 mg / 24 horas vía subcutánea durante 4 semanas.
+
+CURAS LOCALES
+- Curas planas cada 48-72 horas.
+
+REVISIÓN
+- Con este informe solicitará cita en consultas del Dr. ${DOCTOR} en 4 semanas. La primera revisión se realizará sin Rx control salvo petición por su Doctor.
+
+SÍNTOMAS DE ALERTA
+- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, mala evolución de la herida (enrojecimiento, hinchazón, secreción), o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
+- Signos de trombosis venosa: dolor en la pierna o pantorrilla no relacionado con la incisión, hinchazón creciente en pantorrilla, tobillo o pie.
+- Signos de embolia pulmonar: dificultad respiratoria, dolor torácico repentino.
+```
+
+**Tratamiento al Alta — Ejercicios (opcional, toggle en UI):**
+
+> Mismo bloque de ejercicios compartido por todas las prótesis de rodilla. Ver contenido completo en PTR Triathlon arriba.
+
 ##### `rpuc` — Revisión PUC (RPUC)
 
 **Nota Operatoria:**
@@ -2037,7 +2101,7 @@ SÍNTOMAS DE ALERTA
 
 <a id="categoría-lca"></a>
 
-#### LCA (13 plantillas)
+#### LCA (14 plantillas)
 
 ##### `lca_procinch` — LCA ProCinch anatómico ST-RI
 
@@ -2106,6 +2170,57 @@ IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 - Compartimento interno: sin lesiones meniscales ni condrales.
 - Compartimento externo: sin lesiones meniscales ni condrales.
 - Ligamentoplastia LCA 2RF: túnel femoral anclaje femoral Procinch (Stryker) y tibial con TIF Biosteon 9x35 mm.
+- Drenaje aspirativo intraarticular. ← toggle DRENAJE
+- Piel con grapas y vendaje compresivo.
+```
+
+**Tratamiento al Alta:**
+
+```
+CUIDADOS POSTOPERATORIOS
+- Mover activamente los dedos de la extremidad operada.
+- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
+- Aplicar hielo sobre rodilla 4 veces al día durante 30 minutos.
+Puede caminar con ayuda de 2 muletas apoyo parcial de la pierna intervenida y movilidad libre según tolerancia.
+- Realizar ejercicios de cuádriceps y movilidad de la rodilla.
+- Movilizaciones pasivas de rótula 4/5 veces al día durante 15 minutos.
+- Puede requerir ayuda domiciliaria
+
+MEDICACIÓN
+- ENANPLUS 75 mg / 25 mg / 8 horas vía oral.
+- PARACETAMOL 1 gr cada 8 horas
+- ENOXAPARINA 40 mg / 24 horas vía subcutánea durante 3 semanas.
+
+CURAS LOCALES
+- Curas planas cada 48-72 horas.
+- Retirada de puntos/agrafes a los 15 días aproximadamente, salvo mejor criterio de Enfermería.
+
+REVISIÓN
+Antes de irse de alta del hospital:
+- Solicitar cita en Admisión de Consultas Externas para revisión en CCEE de COT Dr. ${DOCTOR} en 2/3 semanas para ver evolución.
+- Solicitar cita en Servicio de Rehabilitación para seguimiento postoperatorio.
+
+SÍNTOMAS DE ALERTA
+- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
+```
+
+##### `lca_tightrope_rf` — LCA TightRope RF asimétrico + LAL
+
+**Nota Operatoria:**
+
+```
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+
+- Profilaxis antibiótica con 2 gr de cefazolina y 1 gr de ác. tranexámico.
+- Isquemia en raíz de miembro inferior ${LADO_M}.
+- Se realiza CAR ${LADO_F_UPPER} previa que confirma la lesión de LCA.
+- Obtención y preparación de plastia autóloga recto femoral (9 mm diámetro).
+- Cierre por planos de capa superficial del cuádriceps y tejido celular subcutáneo.
+- Fondos de saco cuadricipitales: condropatía rótula grado 2.
+- Compartimento interno: sin lesiones meniscales ni condrales.
+- Compartimento externo: sin lesiones meniscales ni condrales.
+- Ligamentoplastia LCA 2 RF asimétrico: fijación túnel tibial con ACL TightRope RT y femoral con TIF Biosteon 9x30 mm.
+- Prolongación RF por debajo de fascia lata para reconstrucción LAL y fijación en tibia con Double Knotless Knee FiberTak 2.6 mm.
 - Drenaje aspirativo intraarticular. ← toggle DRENAJE
 - Piel con grapas y vendaje compresivo.
 ```
@@ -3219,7 +3334,7 @@ SÍNTOMAS DE ALERTA
 
 <a id="categoría-ptc"></a>
 
-#### Prótesis Cadera (3 plantillas)
+#### Prótesis Cadera (4 plantillas)
 
 ##### `ptc_summit` — PTC Summit (DePuy)
 
@@ -3358,6 +3473,61 @@ CURAS LOCALES
 
 REVISIÓN
 - Solicitar revisión en Admisión del Hospital para CCEE Revisión Hospitalaria de COT (${DOCTOR}) en 4 semanas.
+
+SÍNTOMAS DE ALERTA
+- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
+```
+
+##### `ptc_smith_cori` — PTC Smith (G3 + PolarStem - CORI)
+
+**Nota Operatoria:**
+
+```
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+
+Artroplastia total de cadera ${LADO_F} asistida por CORI (Smith & Nephew: G3 + PolarStem)
+- Coxartrosis cadera ${LADO_F}.
+- Profilaxis antibiótica con 2 g de cefazolina. Ác. tranexámico IV 1 g.
+- Decúbito lateral ${DECUBITO}. Anestesia raquimedular y sedación.
+- Incisión longitudinal sobre región trocantérica y abordaje DSA (direct superior approach).
+- Capsulectomía, luxación de cabeza femoral y osteotomía del cuello.
+- Registro de trackers y planificación asistida por CORI (Smith & Nephew).
+- Artroplastia total de cadera con par polietileno-cerámica:
+- Cotilo G3 nº __ press-fit.
+- Inserto de polietileno neutro.
+- Vástago femoral PolarStem nº __.
+- Cabeza de cerámica de 32 mm, cuello +0.
+- Se comprueba estabilidad de la artroplastia tras reducción en todos los planos.
+- Lavado con abundante SSF. Infiltración con ác. tranexámico.
+- Cierre por planos con reinserción de musculatura glútea.
+- Piel con grapas.
+- Apósito compresivo estéril.
+- La intervención cursa sin incidencias. Simetría de MMII en decúbito supino.
+```
+
+**Tratamiento al Alta:**
+
+```
+CUIDADOS POSTOPERATORIOS
+- Mantener el pie elevado siempre que esté sentado.
+- Mover activamente los dedos de la extremidad operada.
+- Realizar los ejercicios que su médico le ha explicado.
+- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
+- Puede caminar con ayuda de un andador o dos muletas.
+- Puede requerir ayuda domiciliaria.
+
+MEDICACIÓN
+- METAMIZOL 575 mg / 8 horas vía oral.
+- PARACETAMOL 1 g / 8 horas, alterno con anterior cada 4 horas si dolor intenso.
+- OMEPRAZOL 20 mg / 24 horas.
+- ENOXAPARINA 40 mg / 24 horas vía subcutánea / 4 semanas.
+
+CURAS LOCALES
+- Curas planas cada 48-72 horas.
+- Retirada de puntos/agrafes a los 15 días aproximadamente, salvo mejor criterio de Enfermería.
+
+REVISIÓN
+- Solicitar revisión en Admisión del Hospital para CCEE Revisión Hospitalaria de COT Dr. ${DOCTOR} en 4 semanas.
 
 SÍNTOMAS DE ALERTA
 - Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.

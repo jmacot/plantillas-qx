@@ -8,7 +8,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **No hay tests, linter ni CI** — verificar manualmente en navegador (Chrome + Safari iOS)
 - **Diseño sistema B** (Clínico): fuentes Inter + Lora, ver `@STYLE-GUIDE.md` del repo padre
 
-## Arquitectura del archivo único (`index.html`, ~6395 líneas)
+## Arquitectura del archivo único (`index.html`, ~6615 líneas)
 
 | Sección | Líneas aprox. | Contenido |
 |---------|--------------|-----------|
@@ -26,7 +26,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 | `selectModulo()` | 2026 | Cambia entre módulos Quirófano / Urgencias |
 | `cargarPlantillaUrg()` | 2138 | Orquesta módulo urgencias |
 | `obtenerPlantillas()` | 2413 | **Función central**: retorna objeto con todas las plantillas (`hoja` + `tratamiento`) |
-| Plantillas | 2523–6390 | ~92 plantillas dentro de `obtenerPlantillas()` |
+| Plantillas | 2523–6600 | ~95 plantillas dentro de `obtenerPlantillas()` |
 
 ### Parámetros de `obtenerPlantillas(DOCTOR, AYUDANTE, LADO, ISQUEMIA, DRENAJE, FERULA)`
 
