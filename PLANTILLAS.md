@@ -5300,5 +5300,6 @@ Resumen:
    - **Drenaje:** Toggle disponible para PTR, PTC, LCA (`${DRENAJE_INTRA_LINE}` — "Drenaje aspirativo intraarticular") y CAR (`${DRENAJE_LINE}` — "Drenaje aspirativo")
    - **Férula:** Toggle disponible para trauma: `rafi_edr_aculoc2` (antebraquial), `rafi_tobillo` (suropédica), `ms_fr_olecranon_placa`/`ms_fr_olecranon_cerclaje`/`ms_fr_cubito_radio` (braquial), `aquiles` (suropédica en equino). Default: desmarcado
    - **Isquemia:** Toggle disponible para PTR
+   - **Sutura meniscal:** Toggle disponible para plantillas LCA (excepto `lca_procinch_sutura`). Al activarlo, sustituye el bloque genérico de carga/movilidad/ejercicios del tratamiento al alta por el protocolo protegido (descarga 0-3 sem, carga parcial 3-6 sem, movilidad progresiva 0-60°/90°/120°)
    - **Ejercicios:** Toggle disponible para PTR
 8. **Curas locales:** Todas las plantillas incluyen "Retirada de puntos/agrafes a los 15 días aproximadamente, salvo mejor criterio de Enfermería" (excepto las que tienen instrucciones específicas de retirada)

@@ -32,6 +32,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 - `LADO`: `'D'` o `'I'` → genera todas las variables de lateralidad
 - `ISQUEMIA`/`DRENAJE`/`FERULA`: booleanos → generan líneas condicionales en las plantillas
+- **Toggle "Sutura meniscal"** (LCA): no se pasa a `obtenerPlantillas()`; se aplica en `cargarPlantilla()` como sustitución del bloque carga/movilidad/ejercicios del tratamiento por el protocolo protegido (copiado de `lca_procinch_sutura`)
 
 ### Dos módulos
 
