@@ -1028,6 +1028,7 @@
       #ejerciciosToggleWrap .toggle-check,
       #isquemiaToggleWrap .toggle-check,
       #drenajeToggleWrap .toggle-check,
+      #suturaToggleWrap .toggle-check,
       #seccion-quirofano .form-row .toggle-check { width: fit-content; }
       .panels-grid, .panels-grid-3 { grid-template-columns: 1fr !important; flex: none; }
       .panel textarea { min-height: 200px; }
@@ -1237,6 +1238,13 @@
                 <input type="checkbox" id="incluirDrenaje" onchange="cargarPlantilla()">
                 <span class="checkmark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
                 <span>Drenaje</span>
+              </label>
+            </span>
+            <span id="suturaToggleWrap" style="display:none;">
+              <label class="toggle-check">
+                <input type="checkbox" id="incluirSuturaMeniscal" onchange="cargarPlantilla()">
+                <span class="checkmark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                <span>Sutura meniscal</span>
               </label>
             </span>
             <span id="ferulaTraumaToggleWrap" style="display:none;">
@@ -1633,6 +1641,9 @@
     // Mostrar/ocultar toggles isquemia, drenaje y férula
     document.getElementById('isquemiaToggleWrap').style.display = esPTR ? '' : 'none';
     document.getElementById('drenajeToggleWrap').style.display = (esPTR || esPTC || esLCA || esCAR) ? '' : 'none';
+    // Toggle Sutura meniscal solo en LCA (excepto en la propia plantilla de sutura)
+    const mostrarSutura = esLCA && proc !== 'lca_procinch_sutura';
+    document.getElementById('suturaToggleWrap').style.display = mostrarSutura ? '' : 'none';
     document.getElementById('ferulaTraumaToggleWrap').style.display = necesitaFerula ? '' : 'none';
     // Mostrar contenedor extras si algún toggle es visible
     document.getElementById('extrasToggleWrap').style.display = (esPTR || esPTC || esLCA || esCAR || necesitaFerula) ? '' : 'none';
@@ -1648,6 +1659,7 @@
         document.getElementById('incluirDrenaje').checked = false;
         document.getElementById('incluirFerulaTrauma').checked = false;
       }
+      document.getElementById('incluirSuturaMeniscal').checked = false;
       lastProc = proc;
     }
     if (!proc) return;
@@ -1671,6 +1683,26 @@
     let trat = datos.tratamiento;
     if (datos.tratamiento_ejercicios && document.getElementById('incluirEjercicios').checked) {
       trat += '\n\n' + datos.tratamiento_ejercicios;
+    }
+    // Sutura meniscal: sustituir bloque de carga/movilidad/ejercicios por el protocolo protegido
+    if (esLCA && mostrarSutura && document.getElementById('incluirSuturaMeniscal').checked) {
+      const bloqueSutura = `CARGA
+Puede caminar con ayuda de 2 muletas SIN APOYO inicial de la pierna intervenida:
+- Semana 0 – semana 3: descarga completa.
+- Semana 3 – semana 6: carga parcial ayudado de bastones.
+- A partir semana 6: puede caminar libremente sin bastones (apoyo completo).
+
+MOVILIDAD
+Aumento progresivo de la movilidad para protección de la sutura meniscal:
+- Semana 0 - semana 2: 0º a 60º.
+- Semana 2 - semana 4: 0º a 90º.
+- Semana 4- semana 6: 90º a 120º.
+- A partir semana 6: movilidad libre.
+
+REHABILITACIÓN
+- Realizar ejercicios isométricos de cuádriceps y elevación con pierna extendida.
+- Movilizaciones pasivas de rótula 4/5 veces al día durante 15 minutos.`;
+      trat = trat.replace(/Puede caminar con ayuda de 2 muletas apoyo parcial de la pierna intervenida y movilidad libre según tolerancia\.\n- Realizar ejercicios de cuádriceps y movilidad de la rodilla\.\n- Movilizaciones pasivas de rótula 4\/5 veces al día durante 15 minutos\./, bloqueSutura);
     }
     trataEl.value = reemplazarLado(trat);
     // Flash animation
@@ -1701,9 +1733,11 @@
     document.getElementById('incluirEjercicios').checked = false;
     document.getElementById('incluirIsquemia').checked = false;
     document.getElementById('incluirDrenaje').checked = false;
+    document.getElementById('incluirSuturaMeniscal').checked = false;
     document.getElementById('ejerciciosToggleWrap').style.display = 'none';
     document.getElementById('isquemiaToggleWrap').style.display = 'none';
     document.getElementById('drenajeToggleWrap').style.display = 'none';
+    document.getElementById('suturaToggleWrap').style.display = 'none';
     document.getElementById('extrasToggleWrap').style.display = 'none';
     lastProc = '';
     document.getElementById('rehabWrap').style.display = 'none';
