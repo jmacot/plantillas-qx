@@ -1962,10 +1962,10 @@ CUIDADOS POSTOPERATORIOS
 - Puede requerir ayuda domiciliaria
 
 MEDICACIÓN
-- NAPROXENO 550 mg / 8 horas vía oral.
-- PARACETAMOL 1 gr / 8 horas, alterno con anterior cada 4 horas si dolor intenso.
-- OMEPRAZOL 20 mg / 24 horas.
-- ENOXAPARINA 40 mg / 24 horas vía oral / 4 semanas
+- METAMIZOL 1 cápsula / 8 horas vía oral.
+- PARACETAMOL 1 g / 8 horas, alterno con anterior cada 4 horas si dolor intenso.
+- TRAMADOL 50 mg cada 12 horas como rescate durante 10 días.
+- ENOXAPARINA 40 mg / 24 horas vía subcutánea durante 6 semanas.
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
@@ -2027,7 +2027,7 @@ MEDICACIÓN
 - METAMIZOL 1 cápsula / 8 horas vía oral.
 - PARACETAMOL 1 g / 8 horas, alterno con anterior cada 4 horas si dolor intenso.
 - TRAMADOL 50 mg cada 12 horas como rescate durante 10 días.
-- ENOXAPARINA 40 mg / 24 horas vía subcutánea durante 4 semanas.
+- ENOXAPARINA 40 mg / 24 horas vía subcutánea durante 6 semanas.
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
@@ -2081,18 +2081,22 @@ CUIDADOS POSTOPERATORIOS
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
 - Puede caminar con ayuda de un andador.
 - Puede requerir ayuda domiciliaria
+
+MEDICACIÓN
 - METAMIZOL 1 cápsula / 8 horas vía oral.
-- PARACETAMOL 1 gr / 8 horas, alterno con anterior cada 4 horas si dolor intenso.
-- OMEPRAZOL 20 mg / 24 horas.
-- ENOXAPARINA 40 mg / 24 horas vía oral / 4 semanas
-- Revisión en CCEE de COT (${DOCTOR}) en 4 semanas para valoración y seguimiento.
-- Solicitar cita en CCEE del Servicio de Rehabilitación para inicio fisioterapia
+- PARACETAMOL 1 g / 8 horas, alterno con anterior cada 4 horas si dolor intenso.
+- TRAMADOL 50 mg cada 12 horas como rescate durante 10 días.
+- ENOXAPARINA 40 mg / 24 horas vía subcutánea durante 6 semanas.
 
 CURAS LOCALES
 - Curas planas cada 48-72 horas.
 
+REVISIÓN
+- Revisión en CCEE de COT (Dr. ${DOCTOR}) en 4 semanas para valoración y seguimiento.
+- Solicitar cita en CCEE del Servicio de Rehabilitación para inicio fisioterapia.
+
 SÍNTOMAS DE ALERTA
-- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias. Mover activamente los dedos de la extremidad operada.
+- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada acudirá a Urgencias.
 ```
 
 **Tratamiento al Alta — Ejercicios (opcional, toggle en UI):**
