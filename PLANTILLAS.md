@@ -1461,8 +1461,9 @@ MOVILIDAD
 Aumento progresivo de la movilidad para protección de la sutura meniscal:
 - Semana 0 - semana 2: 0º a 60º.
 - Semana 2 - semana 4: 0º a 90º.
-- Semana 4- semana 6: 90º a 120º.
-- A partir semana 6: movilidad libre.
+- Semana 4 - semana 6: 0º a 90º (mantener protección).
+- Semana 6 - semana 8: progresión a 120º.
+- A partir semana 8: movilidad libre.
 
 REHABILITACIÓN
 - Realizar ejercicios isométricos de cuádriceps y elevación con pierna extendida.
@@ -2136,10 +2137,19 @@ Recomendaciones:
 - Mover activamente los dedos de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
 - Aplicar hielo sobre rodilla 4 veces al día durante 30 minutos.
-Puede caminar con ayuda de 2 muletas apoyo parcial de la pierna intervenida y movilidad libre según tolerancia.
+- Puede requerir ayuda domiciliaria.
+
+CARGA
+- Semana 0 – 2: carga completa según tolerancia con 2 muletas.
+- Semana 2 – 4: retirar muletas progresivamente cuando la marcha sea simétrica y sin dolor.
+
+MOVILIDAD
+- Libre según tolerancia desde el día 0.
+- Objetivo: 90° a las 2 semanas, rango completo a las 4-6 semanas.
+
+REHABILITACIÓN
 - Realizar ejercicios de cuádriceps y movilidad de la rodilla.
 - Movilizaciones pasivas de rótula 4/5 veces al día durante 15 minutos.
-- Puede requerir ayuda domiciliaria
 
 MEDICACIÓN
 - ENANPLUS 75 mg/25 mg / 8 horas vía oral.
@@ -2185,10 +2195,19 @@ CUIDADOS POSTOPERATORIOS
 - Mover activamente los dedos de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
 - Aplicar hielo sobre rodilla 4 veces al día durante 30 minutos.
-Puede caminar con ayuda de 2 muletas apoyo parcial de la pierna intervenida y movilidad libre según tolerancia.
+- Puede requerir ayuda domiciliaria.
+
+CARGA
+- Semana 0 – 2: carga completa según tolerancia con 2 muletas.
+- Semana 2 – 4: retirar muletas progresivamente cuando la marcha sea simétrica y sin dolor.
+
+MOVILIDAD
+- Libre según tolerancia desde el día 0.
+- Objetivo: 90° a las 2 semanas, rango completo a las 4-6 semanas.
+
+REHABILITACIÓN
 - Realizar ejercicios de cuádriceps y movilidad de la rodilla.
 - Movilizaciones pasivas de rótula 4/5 veces al día durante 15 minutos.
-- Puede requerir ayuda domiciliaria
 
 MEDICACIÓN
 - ENANPLUS 75 mg / 25 mg / 8 horas vía oral.
@@ -2236,10 +2255,19 @@ CUIDADOS POSTOPERATORIOS
 - Mover activamente los dedos de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
 - Aplicar hielo sobre rodilla 4 veces al día durante 30 minutos.
-Puede caminar con ayuda de 2 muletas apoyo parcial de la pierna intervenida y movilidad libre según tolerancia.
+- Puede requerir ayuda domiciliaria.
+
+CARGA
+- Semana 0 – 2: carga completa según tolerancia con 2 muletas.
+- Semana 2 – 4: retirar muletas progresivamente cuando la marcha sea simétrica y sin dolor.
+
+MOVILIDAD
+- Libre según tolerancia desde el día 0.
+- Objetivo: 90° a las 2 semanas, rango completo a las 4-6 semanas.
+
+REHABILITACIÓN
 - Realizar ejercicios de cuádriceps y movilidad de la rodilla.
 - Movilizaciones pasivas de rótula 4/5 veces al día durante 15 minutos.
-- Puede requerir ayuda domiciliaria
 
 MEDICACIÓN
 - ENANPLUS 75 mg / 25 mg / 8 horas vía oral.
@@ -2294,10 +2322,19 @@ Recomendaciones:
 - Mover activamente los dedos de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
 - Aplicar hielo sobre rodilla 4 veces al día durante 30 minutos.
-Puede caminar con ayuda de 2 muletas apoyo parcial de la pierna intervenida y movilidad libre según tolerancia.
+- Puede requerir ayuda domiciliaria.
+
+CARGA
+- Semana 0 – 2: carga completa según tolerancia con 2 muletas.
+- Semana 2 – 4: retirar muletas progresivamente cuando la marcha sea simétrica y sin dolor.
+
+MOVILIDAD
+- Libre según tolerancia desde el día 0.
+- Objetivo: 90° a las 2 semanas, rango completo a las 4-6 semanas.
+
+REHABILITACIÓN
 - Realizar ejercicios de cuádriceps y movilidad de la rodilla.
 - Movilizaciones pasivas de rótula 4/5 veces al día durante 15 minutos.
-- Puede requerir ayuda domiciliaria
 
 MEDICACIÓN
 - ENANPLUS 75 mg/25 mg / 8 horas vía oral.
@@ -2349,7 +2386,7 @@ Semana 0º-2ª:
 - Ejercicios isométricos, de cuádriceps y EPE desde el inicio.
 - Movilidad rodilla libre según tolerancia.
 - Movilizaciones pasivas de rótula 4/5 veces al día durante 15 minutos.
-- Descarga sin apoyo haciendo hincapié en la obtención de la extensión completa de la rodilla en la fase postoperatoria temprana.
+- Carga parcial con 2 muletas, haciendo hincapié en la obtención de la extensión completa de la rodilla en la fase postoperatoria temprana.
 - A la semana cura de la herida y las 2 semanas retirada de puntos de sutura.
 
 Semana 3ª:
@@ -2365,8 +2402,8 @@ Semana 4ª:
 Semana 8ª:
 - Se debe haber conseguido BA completo.
 - Seguir fortalecimiento muscular en gimnasio.
-- 4º mes: Inicio de carrera continua suave.
-- 6º mes: Retorno a la actividad deportiva, incluido deportes de contacto.
+- 4º mes: inicio de carrera continua suave.
+- 9-12 meses: retorno progresivo al deporte tras cumplir criterios objetivos (fuerza cuádriceps/isquiotibiales LSI ≥90%, hop tests ≥90%, ACL-RSI adecuado, ausencia de derrame y síntomas).
 - Puede requerir ayuda domiciliaria
 - ENANPLUS 75 mg/25 mg / 8 horas vía oral.
 - PARACETAMOL 1 gr cada 8 horas
@@ -2423,8 +2460,9 @@ MOVILIDAD
 Aumento progresivo de la movilidad para protección de la sutura meniscal:
 - Semana 0 - semana 2: 0º a 60º.
 - Semana 2 - semana 4: 0º a 90º.
-- Semana 4- semana 6: 90º a 120º.
-- A partir semana 6: movilidad libre.
+- Semana 4 - semana 6: 0º a 90º (mantener protección).
+- Semana 6 - semana 8: progresión a 120º.
+- A partir semana 8: movilidad libre.
 
 REHABILITACIÓN
 - Realizar ejercicios isométricos de cuádriceps y elevación con pierna extendida.
@@ -2484,9 +2522,10 @@ Puede caminar con ayuda de 2 muletas SIN APOYO inicial de la pierna intervenida:
 - A partir semana 8: puede caminar libremente sin bastones (apoyo completo).
 
 MOVILIDAD
-Aumento progresivo de la movilidad para protección de la sutura meniscal:
-- Semana 0 - semana 2: 0º a 90º.
-- A partir de la semana 2 se procede a un incremento progresivo de la movilidad según tolerancia.
+Aumento progresivo de la movilidad para protección de la reinserción de la raíz meniscal:
+- Semana 0 - semana 6: 0º a 90º estricto.
+- Semana 6 - semana 8: progresión a 120º.
+- A partir semana 8: movilidad libre.
 
 REHABILITACIÓN
 - Realizar ejercicios isométricos de cuádriceps y elevación con pierna extendida.
@@ -2540,23 +2579,18 @@ CUIDADOS POSTOPERATORIOS
 - Mover activamente los dedos de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
 - Aplicar hielo sobre rodilla 4 veces al día durante 30 minutos.
-- Puede requerir ayuda domiciliaria
+- Puede requerir ayuda domiciliaria.
 
 CARGA
-Puede caminar con ayuda de 2 muletas SIN APOYO inicial de la pierna intervenida:
-- Semana 0 – semana 3: descarga completa.
-- Semana 3 – semana 6: carga parcial ayudado de bastones.
-- A partir semana 6: puede caminar libremente sin bastones (apoyo completo).
+- Semana 0 – 2: carga completa según tolerancia con 2 muletas.
+- Semana 2 – 4: retirar muletas progresivamente cuando la marcha sea simétrica y sin dolor.
 
 MOVILIDAD
-Aumento progresivo de la movilidad para protección de la sutura meniscal:
-- Semana 0 - semana 2: 0º a 60º.
-- Semana 2 - semana 4: 0º a 90º.
-- Semana 4- semana 6: 90º a 120º.
-- A partir semana 6: movilidad libre.
+- Libre según tolerancia desde el día 0.
+- Objetivo: 90° a las 2 semanas, rango completo a las 4-6 semanas.
 
 REHABILITACIÓN
-- Realizar ejercicios isométricos de cuádriceps y elevación con pierna extendida.
+- Realizar ejercicios de cuádriceps y movilidad de la rodilla.
 - Movilizaciones pasivas de rótula 4/5 veces al día durante 15 minutos.
 
 MEDICACIÓN
@@ -2608,10 +2642,19 @@ CUIDADOS POSTOPERATORIOS
 - Mover activamente los dedos de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
 - Aplicar hielo sobre rodilla 4 veces al día durante 30 minutos.
-Puede caminar con ayuda de 2 muletas apoyo parcial de la pierna intervenida y movilidad libre según tolerancia.
+- Puede requerir ayuda domiciliaria.
+
+CARGA
+- Semana 0 – 2: carga completa según tolerancia con 2 muletas.
+- Semana 2 – 4: retirar muletas progresivamente cuando la marcha sea simétrica y sin dolor.
+
+MOVILIDAD
+- Libre según tolerancia desde el día 0.
+- Objetivo: 90° a las 2 semanas, rango completo a las 4-6 semanas.
+
+REHABILITACIÓN
 - Realizar ejercicios de cuádriceps y movilidad de la rodilla.
 - Movilizaciones pasivas de rótula 4/5 veces al día durante 15 minutos.
-- Puede requerir ayuda domiciliaria
 - IBUPROFENO 600 mg / 8 horas vía oral.
 - METAMIZOL 575 mg / 8 horas (alterno con anterior cada 4 horas), si dolor intenso.
 - PARACETAMOL 1 gr cada 8 horas
@@ -2659,10 +2702,19 @@ CUIDADOS POSTOPERATORIOS
 - Mover activamente los dedos de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
 - Aplicar hielo sobre rodilla 4 veces al día durante 30 minutos.
-Puede caminar con ayuda de 2 muletas apoyo parcial de la pierna intervenida y movilidad libre según tolerancia.
+- Puede requerir ayuda domiciliaria.
+
+CARGA
+- Semana 0 – 2: carga completa según tolerancia con 2 muletas.
+- Semana 2 – 4: retirar muletas progresivamente cuando la marcha sea simétrica y sin dolor.
+
+MOVILIDAD
+- Libre según tolerancia desde el día 0.
+- Objetivo: 90° a las 2 semanas, rango completo a las 4-6 semanas.
+
+REHABILITACIÓN
 - Realizar ejercicios de cuádriceps y movilidad de la rodilla.
 - Movilizaciones pasivas de rótula 4/5 veces al día durante 15 minutos.
-- Puede requerir ayuda domiciliaria
 - IBUPROFENO 600 mg / 8 horas vía oral.
 - METAMIZOL 575 mg / 8 horas (alterno con anterior cada 4 horas), si dolor intenso.
 - PARACETAMOL 1 gr cada 8 horas
@@ -2712,10 +2764,19 @@ CUIDADOS POSTOPERATORIOS
 - Mover activamente los dedos de la extremidad operada.
 - Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
 - Aplicar hielo sobre rodilla 4 veces al día durante 30 minutos.
-Puede caminar con ayuda de 2 muletas apoyo parcial de la pierna intervenida y movilidad libre según tolerancia.
+- Puede requerir ayuda domiciliaria.
+
+CARGA
+- Semana 0 – 2: carga completa según tolerancia con 2 muletas.
+- Semana 2 – 4: retirar muletas progresivamente cuando la marcha sea simétrica y sin dolor.
+
+MOVILIDAD
+- Libre según tolerancia desde el día 0.
+- Objetivo: 90° a las 2 semanas, rango completo a las 4-6 semanas.
+
+REHABILITACIÓN
 - Realizar ejercicios de cuádriceps y movilidad de la rodilla.
 - Movilizaciones pasivas de rótula 4/5 veces al día durante 15 minutos.
-- Puede requerir ayuda domiciliaria
 - IBUPROFENO 600 mg / 8 horas vía oral.
 - METAMIZOL 575 mg / 8 horas (alterno con anterior cada 4 horas), si dolor intenso.
 - ENOXAPARINA 40 mg / 24 horas vía subcutánea.
@@ -2763,7 +2824,7 @@ Semana 0º-2ª:
 - Ejercicios isométricos, de cuádriceps y EPE desde el inicio.
 - Movilidad rodilla libre según tolerancia.
 - Movilizaciones pasivas de rótula 4/5 veces al día durante 15 minutos.
-- Descarga sin apoyo haciendo hincapié en la obtención de la extensión completa de la rodilla en la fase postoperatoria temprana.
+- Carga parcial con 2 muletas, haciendo hincapié en la obtención de la extensión completa de la rodilla en la fase postoperatoria temprana.
 - A la semana cura de la herida y las 2 semanas retirada de puntos de sutura.
 
 Semana 3ª:
@@ -2779,8 +2840,8 @@ Semana 4ª:
 Semana 8ª:
 - Se debe haber conseguido BA completo.
 - Seguir fortalecimiento muscular en gimnasio.
-- 4º mes: Inicio de carrera continua suave.
-- 6º mes: Retorno a la actividad deportiva, incluido deportes de contacto.
+- 4º mes: inicio de carrera continua suave.
+- 9-12 meses: retorno progresivo al deporte tras cumplir criterios objetivos (fuerza cuádriceps/isquiotibiales LSI ≥90%, hop tests ≥90%, ACL-RSI adecuado, ausencia de derrame y síntomas).
 - Puede requerir ayuda domiciliaria
 - ENANPLUS 75 mg/25 mg / 8 horas vía oral.
 - PARACETAMOL 1 gr cada 8 horas
