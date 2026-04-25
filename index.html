@@ -1714,7 +1714,17 @@ REHABILITACIÓN
     trataEl.classList.add('flash');
     // Botón postoperatorio
     const rehabWrap = document.getElementById('rehabWrap');
-    const postopId = POSTOP_MAP[proc];
+    let postopId = POSTOP_MAP[proc];
+    // LCA combinada con sutura meniscal → activar también el chip menisco en postop.
+    // Aplica a procedimientos LCA con sutura/raíz intrínseca o cuando el toggle
+    // "Sutura meniscal" está marcado.
+    if (postopId === 'lca') {
+      const procImplicaMenisco = proc === 'lca_procinch_sutura' || proc === 'lca_procinch_reinsercion';
+      const sutChecked = mostrarSutura && document.getElementById('incluirSuturaMeniscal').checked;
+      if (procImplicaMenisco || sutChecked) {
+        postopId = 'lca,sutura_meniscal';
+      }
+    }
     if (postopId) {
       document.getElementById('btnRehab').href = 'https://jmacot.github.io/rehabilitacion-cot/?m=postoperatorio&doc=' + postopId;
       rehabWrap.style.display = '';
