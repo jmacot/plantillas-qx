@@ -1718,15 +1718,31 @@ REHABILITACIÓN
     // LCA combinada con sutura meniscal → activar también el chip menisco en postop.
     // Aplica a procedimientos LCA con sutura/raíz intrínseca o cuando el toggle
     // "Sutura meniscal" está marcado.
+    let comboMenisco = false;
     if (postopId === 'lca') {
-      const procImplicaMenisco = proc === 'lca_procinch_sutura' || proc === 'lca_procinch_reinsercion';
+      const procImplicaMenisco = proc === 'lca_procinch_sutura'
+        || proc === 'lca_procinch_reinsercion'
+        || proc === 'rodilla_car_ovt_lca_medcontech';
       const sutChecked = mostrarSutura && document.getElementById('incluirSuturaMeniscal').checked;
       if (procImplicaMenisco || sutChecked) {
         postopId = 'lca,sutura_meniscal';
+        comboMenisco = true;
       }
     }
     if (postopId) {
-      document.getElementById('btnRehab').href = 'https://jmacot.github.io/rehabilitacion-cot/?m=postoperatorio&doc=' + postopId;
+      const qs = new URLSearchParams();
+      qs.set('m', 'postoperatorio');
+      qs.set('doc', postopId);
+      const lcaPreset = LCA_PRESETS[proc];
+      if (lcaPreset && (postopId === 'lca' || comboMenisco)) {
+        if (lcaPreset.lca_tipo)    qs.set('lca_tipo', lcaPreset.lca_tipo);
+        if (lcaPreset.lca_injerto) qs.set('lca_injerto', lcaPreset.lca_injerto);
+      }
+      const menPreset = MENISCO_PRESETS[proc];
+      if (menPreset && comboMenisco && menPreset.menisco_proc) {
+        qs.set('menisco_proc', menPreset.menisco_proc);
+      }
+      document.getElementById('btnRehab').href = 'https://jmacot.github.io/rehabilitacion-cot/?' + qs.toString();
       rehabWrap.style.display = '';
     } else {
       rehabWrap.style.display = 'none';
@@ -2392,6 +2408,36 @@ CÓMO CUIDAR SU FÉRULA Y YESO
     car_sinovectomia: 'car',
     // Osteotomías + LCA combinada
     rodilla_car_ovt_lca_medcontech: 'lca',
+  };
+
+  // Presets de sub-selects en el configurador de postop, aplicados como
+  // query params adicionales (lca_tipo, lca_injerto, menisco_proc).
+  // Los IDs corresponden a las opciones de los <select> en
+  // rehabilitacion-cot (alta-tpl-lca, alta-tpl-menisco).
+  const LCA_PRESETS = {
+    lca_procinch:             { lca_tipo: 'reconstruccion',          lca_injerto: 'isquiotibiales' },
+    lca_procinch_rf:          { lca_tipo: 'reconstruccion',          lca_injerto: 'recto_femoral' },
+    lca_tightrope_rf:         { lca_tipo: 'reconstruccion',          lca_injerto: 'recto_femoral' },
+    lca_procinch_allinside:   { lca_tipo: 'reconstruccion',          lca_injerto: 'isquiotibiales' },
+    lca_procinch_lemaire:     { lca_tipo: 'reconstruccion',          lca_injerto: 'isquiotibiales' },
+    lca_procinch_sutura:      { lca_tipo: 'reconstruccion',          lca_injerto: 'isquiotibiales' },
+    lca_procinch_reinsercion: { lca_tipo: 'reconstruccion',          lca_injerto: 'isquiotibiales' },
+    lca_hth:                  { lca_tipo: 'reconstruccion',          lca_injerto: 'hth' },
+    lca_aum_am:               { lca_tipo: 'reconstruccion',          lca_injerto: 'isquiotibiales' },
+    lca_aum_pl:               { lca_tipo: 'reconstruccion',          lca_injerto: 'isquiotibiales' },
+    lca_rescate:              { lca_tipo: 'reconstruccion_revision', lca_injerto: 'hth' },
+    lca_rescate_hth_lemaire:  { lca_tipo: 'reconstruccion_revision', lca_injerto: 'hth' },
+    lca_reparacion:           { lca_tipo: 'reparacion_primaria',     lca_injerto: 'no_aplica' },
+    rodilla_car_ovt_lca_medcontech: { lca_tipo: 'reconstruccion',    lca_injerto: 'isquiotibiales' },
+  };
+
+  // Presets meniscales por procedimiento. Solo se pre-seleccionan los casos
+  // en que el procedimiento es deterministicamente un único patrón (p.ej.
+  // reinserción de raíz, meniscectomía). Las suturas genéricas se dejan sin
+  // pre-seleccionar para que el cirujano elija el patrón real.
+  const MENISCO_PRESETS = {
+    lca_procinch_reinsercion:       { menisco_proc: 'reinsercion_raiz' },
+    rodilla_car_ovt_lca_medcontech: { menisco_proc: 'meniscectomia_parcial' },
   };
 
   // ─────────────────────────────────────────────
