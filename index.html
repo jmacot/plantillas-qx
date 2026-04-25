@@ -2213,7 +2213,7 @@ REHABILITACIÓN
     // Re-append férula si el toggle está activo
     if (document.getElementById('incluirFerula').checked) {
       const sep = planEl.value.trim() ? '\n\n' : '';
-      planEl.value = planEl.value.trimEnd() + sep + CUIDADOS_FERULA;
+      planEl.value = planEl.value.trimEnd() + sep + getCuidadosFerula(diag);
     }
 
     [anamEl, expoEl, planEl].forEach(el => {
@@ -2264,40 +2264,62 @@ REHABILITACIÓN
   // ─────────────────────────────────────────────
   //  FÉRULA / YESO — TEXTO Y TOGGLE
   // ─────────────────────────────────────────────
-  const CUIDADOS_FERULA = `RECOMENDACIONES FÉRULA/YESO
+  // Diagnósticos de miembro superior (no aplicar recomendaciones de carga/bota de yeso)
+  const URG_DIAG_MS = ['urg_fx_edr', 'urg_fx_5mtc', 'urg_fx_eph', 'urg_herida_tendon', 'urg_lux_hombro'];
+
+  function getCuidadosFerula(diag) {
+    const esMS = URG_DIAG_MS.includes(diag);
+    const lineaExtremidad = esMS
+      ? '- Eleve el brazo lesionado por encima de la altura del corazón y apóyelo sobre almohadas u otro elemento de soporte. Use el cabestrillo si se le ha indicado.'
+      : '- Eleve la pierna lesionada por encima de la altura del corazón y apóyela sobre almohadas u otro elemento de soporte; deberá reclinarse para mantener la elevación.';
+    const lineaDedos = esMS
+      ? '- Mueva suavemente y con frecuencia los dedos de la mano.'
+      : '- Mueva suavemente y con frecuencia los dedos del pie.';
+    const lineaHormigueo = esMS
+      ? '- Entumecimiento y hormigueo en la mano, que pueden ser causados por demasiada presión sobre los nervios.'
+      : '- Entumecimiento y hormigueo en el pie, que pueden ser causados por demasiada presión sobre los nervios.';
+    const lineaMovActivo = esMS
+      ? '- Pérdida del movimiento activo de los dedos de la mano.'
+      : '- Pérdida del movimiento activo de los dedos del pie.';
+    const lineaBota = esMS
+      ? ''
+      : '\n- No camine con la "bota de yeso" hasta que esté completamente seca y dura. No camine con el yeso sin tacón de apoyo. El yeso necesita 48-72 horas para endurecerse lo suficiente como para poder caminar.';
+
+    return `RECOMENDACIONES FÉRULA/YESO
 
 CÓMO ACOSTUMBRARSE A UNA FÉRULA O A UN YESO
 - La hinchazón causada por su lesión puede generar presión sobre su férula o yeso durante las primeras 48 a 72 horas.
-- Esto puede causar la sensación de que la férula o el yeso están demasiado apretados o ajustados a la pierna o brazo.
+- Esto puede causar la sensación de que la férula o el yeso están demasiado apretados.
 
 PARA REDUCIR LA HINCHAZÓN
-- Eleve el brazo o la pierna sobre la altura de su corazón y apóyelos sobre almohadas u otro elemento de soporte. Si la férula o el yeso se encuentran en la pierna, deberá reclinarse.
-- Mueva suavemente y con frecuencia los dedos de la mano o del pie.
+${lineaExtremidad}
+${lineaDedos}
 
 SIGNOS DE ALERTA TRAS LA APLICACIÓN DE UNA FÉRULA O YESO
 - Si observa alguno de los siguientes signos de alerta, acuda a su Médico de Cabecera o al Servicio de Urgencias:
 - Aumento del dolor, que puede ser causado por la hinchazón, y la sensación de que la férula o el yeso están demasiado ajustados.
-- Entumecimiento y hormigueo en la mano o en el pie, que pueden ser causados por demasiada presión sobre los nervios.
+${lineaHormigueo}
 - Ardor y escozor, que pueden ser causados por demasiada presión sobre la piel.
 - Excesiva hinchazón por debajo del yeso, que puede indicar que el yeso está reduciendo la circulación sanguínea.
-- Pérdida del movimiento activo de los dedos de la mano o del pie.
+${lineaMovActivo}
 - Fiebre o drenaje y mal olor proveniente del yeso.
 
 CÓMO CUIDAR SU FÉRULA Y YESO
-- Mantenga la férula o el yeso secos. La humedad debilita el yeso y puede causar irritación de la piel. Coloque bolsas de plástico o protectores impermeables mientras se ducha o se baña.
-- No camine con la "bota de yeso" hasta que esté completamente seca y dura. No camine con el yeso sin tacón de apoyo. El yeso necesita 48-72 horas para endurecerse lo suficiente como para poder caminar.
+- Mantenga la férula o el yeso secos. La humedad debilita el yeso y puede causar irritación de la piel. Coloque bolsas de plástico o protectores impermeables mientras se ducha o se baña.${lineaBota}
 - Mantenga el interior de la férula o del yeso libre de suciedad, arena y polvo.
 - No retire el algodón de la férula o yeso.
 - No utilice objetos como ganchos de ropa para rascarse la piel dentro de la férula o yeso. No aplique talco ni desodorante sobre la piel con escozor. Si la picazón persiste, comuníquese con su médico.
 - No arranque ni recorte los bordes ásperos del yeso antes de consultar a su médico.`;
+  }
 
   function toggleFerula() {
     const checked = document.getElementById('incluirFerula').checked;
     const planEl = document.getElementById('urgPlan');
     if (checked) {
       // Añadir al final del plan
+      const diag = document.getElementById('urgDiagnostico').value;
       const sep = planEl.value.trim() ? '\n\n' : '';
-      planEl.value = planEl.value.trimEnd() + sep + CUIDADOS_FERULA;
+      planEl.value = planEl.value.trimEnd() + sep + getCuidadosFerula(diag);
       planEl.style.height = 'auto';
       planEl.style.height = planEl.scrollHeight + 'px';
       planEl.classList.remove('flash');
