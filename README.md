@@ -1,10 +1,10 @@
 # 📋 Plantillas COT
 
-Mas de 60 notas operatorias y tratamientos al alta listos para usar. Elige el procedimiento, personaliza los datos y copia el texto directamente a la historia clinica. Incluye modulo de urgencias con anamnesis, exploracion y plan.
+Mas de 100 notas operatorias y tratamientos al alta listos para usar. Elige el procedimiento, personaliza los datos y copia el texto directamente a la historia clinica. Incluye modulo de urgencias con anamnesis, exploracion y plan, y enlace directo al folleto postoperatorio personalizado.
 
 ![HTML5](https://img.shields.io/badge/HTML5-single--file-E34F26?logo=html5&logoColor=white)
-![Plantillas](https://img.shields.io/badge/plantillas_qx-87-1a3a5c)
-![Urgencias](https://img.shields.io/badge/plantillas_urg-10-dc2626)
+![Plantillas](https://img.shields.io/badge/plantillas_qx-95-1a3a5c)
+![Urgencias](https://img.shields.io/badge/plantillas_urg-7-dc2626)
 ![Sin dependencias](https://img.shields.io/badge/dependencias-ninguna-grey)
 
 ---
@@ -23,17 +23,23 @@ No requiere instalacion. Funciona en cualquier navegador, incluyendo movil y tab
 
 ### Quirofano
 
-- **87 plantillas quirurgicas** organizadas en 13 categorias y 5 regiones anatomicas
-- **Campos dinamicos**: fecha, cirujano y ayudante se insertan automaticamente
+- **95 plantillas quirurgicas** organizadas en 14 categorias y 5 regiones anatomicas
+- **Campos dinamicos**: fecha, cirujano, ayudante, lateralidad (D/I) y decubito se insertan automaticamente
 - **Dos paneles**: hoja operatoria + tratamiento al alta
-- **Copia rapida** al portapapeles con un clic
+- **Toggle "Sutura meniscal"** en plantillas LCA para añadir o quitar la sutura sin cambiar de plantilla
+- **Folleto postoperatorio personalizado** — boton al final del tratamiento abre `rehabilitacion-cot` con presets de injerto LCA y patron de menisco segun el procedimiento
+- **Copia rapida** al portapapeles con un clic, con feedback visual de copiado
 
 ### Urgencias
 
-- **Campos dinamicos**: sexo, edad, lateralidad y tipo de tratamiento (conservador/quirurgico)
+- **Campos dinamicos**: sexo, edad, lateralidad, COT de guardia y tipo de tratamiento (conservador/quirurgico)
 - **Tres paneles**: anamnesis, exploracion y plan de actuacion
 - El texto se adapta automaticamente segun los campos seleccionados
 - Categorias: Cadera, Rodilla, Tobillo, Muneca, Hombro (ampliable)
+
+### FAB "Envianos tu plantilla"
+
+- Boton flotante en la esquina inferior derecha (desktop) que abre Gmail compose pre-rellenado con el contexto de la plantilla activa, para sugerir mejoras o reportar erratas
 
 ---
 
@@ -52,21 +58,23 @@ No requiere instalacion. Funciona en cualquier navegador, incluyendo movil y tab
 
 Canulados cadera, Gamma3, PPC Exeter, RAFI periprotesica NCB, RAFI supracondilea AXSOS, RAFI rotula cerclaje, Clavo T2 tibia, RAFI tobillo, Sutura Aquiles, RAFI EDR Aculoc-2, RAFI humero AxSOS, RAFI clavicula Variax, Monteggia Peri-Loc
 
-### Region: Rodilla (36)
+### Region: Rodilla (44)
 
-**Artroscopia (CAR)** — Mosaicoplastia, Fr meseta tibial, Reinsercion espina tibial, Ficat + plicatura ARI, SHER plicatura, Meniscectomia, Sutura meniscal, Artrolisis, Diagnostica, Cuerpo libre, Ficat, Toilette, Sinovectomia
+**Artroscopia (CAR, 17)** — Mosaicoplastia, Fr meseta tibial, Reinsercion espina tibial, Ficat + plicatura ARI, SHER plicatura, Meniscectomia, Sutura meniscal, Artrolisis, Diagnostica, Cuerpo libre, Ficat, Toilette, Sinovectomia, etc.
 
-**Protesis (PTR)** — Triathlon, PUC PKR, Revision PUC
+**Protesis (PTR, 5)** — Triathlon, PUC PKR, Revision PUC, **PUC Journey II UK (CORI)**
 
-**LCA** — ProCinch ST-RI, ProCinch ALL-INSIDE, ProCinch + Lemaire, ProCinch + sutura meniscal, ProCinch + reinsercion raiz, ALL-INSIDE Arthrex, HTH, Aumentacion AM, Aumentacion PL, Rescate revision, Rescate HTH banco + Lemaire
+**LCA (14)** — ProCinch ST-RI, ProCinch ALL-INSIDE, ProCinch + Lemaire, ProCinch + sutura meniscal, ProCinch + reinsercion raiz, ALL-INSIDE Arthrex, HTH, **TightRope RF asimetrico**, Aumentacion AM, Aumentacion PL, Rescate revision, Rescate HTH banco + Lemaire
 
-**Osteotomias y Cartilago** — CAR + OTV adiccion, CAR + OTV sustraccion Coventry, CAR + OTV varizante femur, OTV Tomofix, OVT apertura medial, OVT + correccion pendiente posterior, Fulkerson, Mosaico + OTV, LFPM + TTA
+**Osteotomias y Cartilago (8)** — CAR + OTV adiccion, CAR + OTV sustraccion Coventry, CAR + OTV varizante femur, OTV Tomofix, OVT apertura medial, OVT + correccion pendiente posterior, Fulkerson, Mosaico + OTV, LFPM + TTA
 
-### Region: Cadera (3)
+### Region: Cadera (6)
 
-**Protesis (PTC)** — Summit DePuy, Zimmer G7 + Taperloc
+**Protesis (PTC, 4)** — Summit DePuy, Zimmer G7 + Taperloc, **PTC Smith (CORI)**
 
-**Artroscopia (CAC)** — Reinsercion labrum acetabular
+**Artroscopia (CAC, 1)** — Reinsercion labrum acetabular
+
+**Infiltracion (IFC, 1)**
 
 ### Region: Miembro Superior (30)
 
@@ -94,8 +102,10 @@ Antepie, Pie plano osteotomia, Pie plano artrodesis, Pie cavo osteotomia, Pie ca
 
 ## Tecnologia
 
-- **HTML5 + CSS3 + JavaScript vanilla** en un solo archivo.
-- Tipografias: [Inter](https://fonts.google.com/specimen/Inter) y [Lora](https://fonts.google.com/specimen/Lora) (Google Fonts).
+- **HTML5 + CSS3 + JavaScript vanilla** en un solo archivo (Sistema B "Radiologia Glass").
+- Tipografias: Source Serif 4 + Source Sans 3 + Source Code Pro (Google Fonts).
+- Glassmorphism con `backdrop-filter`, mesh gradient animado de fondo y sky toggle CSS puro para modo oscuro.
+- Accesibilidad: skip link, focus-visible, smooth scroll, reduced-motion, aria-labels.
 - Sin frameworks, sin build tools, sin backend.
 - Compatible con cualquier navegador moderno (Chrome, Firefox, Safari, Edge).
 
