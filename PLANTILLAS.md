@@ -18,7 +18,7 @@
 - [Rodilla](#región-rodilla)
   - [Artroscopia Rodilla (17)](#categoría-car)
   - [Prótesis Rodilla (5)](#categoría-ptr)
-  - [LCA (14)](#categoría-lca)
+  - [LCA (15)](#categoría-lca)
   - [Osteotomías y Cartílago (8)](#categoría-rodilla_osteo)
 - [Cadera](#región-cadera)
   - [Prótesis Cadera (4)](#categoría-ptc)
@@ -2106,7 +2106,7 @@ SÍNTOMAS DE ALERTA
 
 <a id="categoría-lca"></a>
 
-#### LCA (14 plantillas)
+#### LCA (15 plantillas)
 
 ##### `lca_procinch` — LCA ProCinch anatómico ST-RI
 
@@ -2184,6 +2184,70 @@ IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
 - Compartimento interno: sin lesiones meniscales ni condrales.
 - Compartimento externo: sin lesiones meniscales ni condrales.
 - Ligamentoplastia LCA 2RF: túnel femoral anclaje femoral Procinch (Stryker) y tibial con TIF Biosteon 9x35 mm.
+- Drenaje aspirativo intraarticular. ← toggle DRENAJE
+- Piel con grapas y vendaje compresivo.
+```
+
+**Tratamiento al Alta:**
+
+```
+CUIDADOS POSTOPERATORIOS
+- Mover activamente los dedos de la extremidad operada.
+- Vigilar la coloración y la sensibilidad de la extremidad y sus dedos.
+- Aplicar hielo sobre rodilla 4 veces al día durante 30 minutos.
+- Puede requerir ayuda domiciliaria.
+
+CARGA
+- Semana 0 – 2: carga completa según tolerancia con 2 muletas.
+- Semana 2 – 4: retirar muletas progresivamente cuando la marcha sea simétrica y sin dolor.
+
+MOVILIDAD
+- Libre según tolerancia desde el día 0.
+- Objetivo: 90° a las 2 semanas, rango completo a las 4-6 semanas.
+
+REHABILITACIÓN
+- Realizar ejercicios de cuádriceps y movilidad de la rodilla.
+- Movilizaciones pasivas de rótula 4/5 veces al día durante 15 minutos.
+
+MEDICACIÓN
+- ENANPLUS 75 mg / 25 mg / 8 horas vía oral.
+- PARACETAMOL 1 gr cada 8 horas
+- ENOXAPARINA 40 mg / 24 horas vía subcutánea durante 3 semanas.
+
+CURAS LOCALES
+- Curas planas cada 48-72 horas.
+- Retirada de puntos/agrafes a los 15 días aproximadamente, salvo mejor criterio de Enfermería.
+
+REVISIÓN
+Antes de irse de alta del hospital:
+- Solicitar cita en Admisión de Consultas Externas para revisión en CCEE de COT Dr. ${DOCTOR} en 2/3 semanas para ver evolución.
+- Solicitar cita en Servicio de Rehabilitación para seguimiento postoperatorio.
+
+SÍNTOMAS DE ALERTA
+- Si apareciera fiebre (>38º), dolor intenso que no se alivia con analgésicos, o alteraciones en la sensibilidad y/o la coloración de la extremidad operada se pondrá en contacto con el Hospital de Día en su horario de actividad o bien acudirá a Urgencias si ocurriera fuera de este horario.
+```
+
+##### `lca_procinch_rf_asimetrico` — LCA ProCinch asimétrico RF
+
+**Nota Operatoria:**
+
+```
+IQ ${FECHA} (${DOCTOR}/${AYUDANTE})
+
+- Profilaxis antibiótica con 2 gr de cefazolina.
+- Isquemia en raíz de miembro inferior ${LADO_M}.
+- Se realiza CAR ${LADO_F_UPPER} previa bajo anestesia que confirma la lesión de LCA e integridad LCP.
+- Obtención y preparación de plastia autóloga recto femoral (9 mm diámetro y 29 cm longitud).
+- Cierre por planos de capa superficial del cuádriceps y tejido celular subcutáneo.
+- Fondos de saco cuadricipitales: sin alteraciones.
+- Compartimento interno: sin lesiones meniscales ni condrales.
+- Compartimento externo: sin lesiones meniscales ni condrales.
+- Ligamentoplastia LCA RF asimétrico: 2 RF para LCA y 1 RF para LAL.
+- Túnel tibial con broca retrógrada 9x25 mm.
+- Túnel femoral fuera-dentro completo de 9 mm.
+- Pase de plastia de proximal a distal: fijación tibial Procinch (Stryker) y femoral TIF Biosteon 9x30 mm.
+- Se comprueba ausencia de roce en escotadura intercondílea en todo el recorrido articular.
+- Plastia de refuerzo con prolongación de fascículo único de RF que se pasa por debajo de la cintilla iliotibial y se fija en tibia con TIF Biosteon 6x23 mm en extensión y rotación neutra.
 - Drenaje aspirativo intraarticular. ← toggle DRENAJE
 - Piel con grapas y vendaje compresivo.
 ```
